@@ -40,6 +40,25 @@
     -->
 
     <listitem>
+      <para>January 4th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - general.ent: Update copyright year.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 2nd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Toxikuu] - dev-tools/*: Added. PR
+          <ulink url="&lfs-qol-pull;/12">(#12)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 30th, 2024</para>
       <itemizedlist>
         <listitem>
