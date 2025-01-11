@@ -87,8 +87,10 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>ninja install &amp;&amp;
+<screen role="root" revision="sysv"><userinput>ninja install &amp;&amp;
 rm -rvf /usr/lib/systemd</userinput></screen>
+
+<screen role="root" revision="systemd"><userinput>make install</userinput></screen>
 
   </sect2>
   
@@ -100,7 +102,7 @@ rm -rvf /usr/lib/systemd</userinput></screen>
       vendored source code that FTBFS.
     </para>
 
-    <para>
+    <para revision="sysv">
       <command>rm -rvf /usr/lib/systemd</command>: This command removes
       unnecessary Systemd files.
     </para>

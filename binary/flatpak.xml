@@ -103,12 +103,14 @@ make</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make install &amp;&amp;
+<screen role="root" revision="sysv"><userinput>make install &amp;&amp;
 rm -rvf /usr/lib/systemd</userinput></screen>
+
+<screen role="root" revision="systemd"><userinput>make install</userinput></screen>
 
   </sect2>
 
-  <sect2 role="commands">
+  <sect2 role="commands" revision="sysv">
     <title>Command Explanations</title>
 
     <para>

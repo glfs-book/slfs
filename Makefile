@@ -20,14 +20,34 @@ else
   Q = @
 endif
 
-BASEDIR         ?= $(HOME)/public_html/lfs-qol
+ifndef REV
+	REV = sysv
+endif
+
+ifneq ($(REV), sysv)
+	ifneq ($(REV), systemd)
+		$(error REV must be 'sysv' (default) or 'systemd'.)
+	endif
+endif
+
 LFS_QOL_THEME      ?= dark
-PDF_OUTPUT      ?= lfs-qol.pdf
-NOCHUNKS_OUTPUT ?= lfs-qol.html
-DUMPDIR         ?= ~/lfs-qol-commands
-LFS_QOLHTML        ?= lfs-qol-html.xml
-LFS_QOLHTML2       ?= lfs-qol-html2.xml
-LFS_QOLFULL        ?= lfs-qol-full.xml
+ifeq ($(REV), sysv)
+	BASEDIR         ?= $(HOME)/public_html/lfs-qol
+	PDF_OUTPUT      ?= lfs-qol.pdf
+	NOCHUNKS_OUTPUT ?= lfs-qol.html
+	DUMPDIR         ?= ~/lfs-qol-commands
+	LFS_QOLHTML        ?= lfs-qol-html.xml
+	LFS_QOLHTML2       ?= lfs-qol-html2.xml
+	LFS_QOLFULL        ?= lfs-qol-full.xml
+else
+	BASEDIR         ?= $(HOME)/public_html/lfs-qol-systemd
+	PDF_OUTPUT      ?= lfs-qol-sysd.pdf
+	NOCHUNKS_OUTPUT ?= lfs-qol-sysd.html
+	DUMPDIR         ?= ~/lfs-qol-sysd-commands
+	LFS_QOLHTML        ?= lfs-qol-systemd-html.xml
+	LFS_QOLHTML2       ?= lfs-qol-systemd-html2.xml
+	LFS_QOLFULL        ?= lfs-qol-systemd-full.xml
+endif
 
 lfs-qol: html wget-list
 
@@ -36,9 +56,17 @@ help:
 	@echo "make <parameters> <targets>"
 	@echo ""
 	@echo "Parameters:"
+	@echo "  REV=<rev>            Build variation of book"
+	@echo "                       Valid values for REV are:"
+	@echo "                       * sysv    - Build book for SysV"
+	@echo "                       * systemd - Build book for systemd"
+	@echo "                       Defaults to 'sysv'"
 	@echo ""
 	@echo "  BASEDIR=<dir>        Put the output in directory <dir>."
-	@echo "                       Defaults to '$(HOME)/public_html/lfs-qol'"
+	@echo "                       Defaults to"
+	@echo "                       '$(HOME)/public_html/lfs-qol' if REV=sysv (or unset)"
+	@echo "                       or to"
+	@echo "                       '$(HOME)/public_html/lfs-qol-systemd' if REV=systemd"
 	@echo ""
 	@echo "  V=<val>              If <val> is a non-empty value, all"
 	@echo "                       steps to produce the output is shown."
@@ -175,11 +203,11 @@ validate: $(RENDERTMP)/$(LFS_QOLFULL)
 $(RENDERTMP)/$(LFS_QOLFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
 	$(Q)[ -d $(RENDERTMP) ] || mkdir -p $(RENDERTMP)
 
-	@echo "Rendering the book..."
+	@echo "Rendering the book for $(REV)..."
 	$(Q)xsltproc --nonet                               \
                 --xinclude                            \
-                --output $(RENDERTMP)/$(LFS_QOLHTML2)    \
-                --stringparam profile.revision sysv   \
+                --output $(RENDERTMP)/$(LFS_QOLHTML2) \
+                --stringparam profile.revision $(REV) \
                 stylesheets/lfs-xsl/profile.xsl       \
                 index.xml
 
@@ -213,7 +241,7 @@ lfs-qol-patches.sh: $(RENDERTMP)/$(LFS_QOLFULL) version
 
 wget-list: $(BASEDIR)/wget-list
 $(BASEDIR)/wget-list: $(RENDERTMP)/$(LFS_QOLFULL) version
-	@echo "Generating wget list at $(BASEDIR)/wget-list ..."
+	@echo "Generating wget list for $(REV) at $(BASEDIR)/wget-list ..."
 	$(Q)mkdir -p $(BASEDIR)
 	$(Q)xsltproc --nonet                       \
                 --output $(BASEDIR)/wget-list \
@@ -262,6 +290,16 @@ bootscripts:
      tar  -cJhf $$BOOTSCRIPTS.tar.xz -C $(RENDERTMP) $$BOOTSCRIPTS;   \
    fi
 
+systemd-units:
+		@VERSION=`grep "systemd-units-version " general.ent | cut -d\" -f2`; \
+	UNITS="blfs-systemd-units-$$VERSION";                                \
+	if [ ! -e $$UNITS.tar.xz ]; then                                     \
+		rm -rf $(RENDERTMP)/$$UNITS;                                       \
+		mkdir $(RENDERTMP)/$$UNITS;                                        \
+		cp -a ../systemd-units/* $(RENDERTMP)/$$UNITS;                     \
+		tar -cJhf $$UNITS.tar.xz -C $(RENDERTMP) $$UNITS;                  \
+	fi
+
 test-options:
 	$(Q)xsltproc --xinclude --nonet stylesheets/test-options.xsl index.xml
 
@@ -275,7 +313,7 @@ $(DUMPDIR): $(RENDERTMP)/$(LFS_QOLFULL) version
 
 .PHONY: lfs-qol all world html nochunks tmpdir clean             \
    validate profile-html lfs-qol-patch-list wget-list test-links \
-   dump-commands  bootscripts version test-options
+   dump-commands bootscripts systemd-units version test-options
 
 version:
-	$(Q)./git-version.sh sysv
+	$(Q)./git-version.sh $(REV)

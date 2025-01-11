@@ -36,13 +36,20 @@
   <sect2>
     <title>Init System</title>
 
-    <para>
-      This book doesn't have instructions for Systemd. It is meant for SysV
-      LFS systems, but if you find or make your own bootscripts, you can
-      use the instructions in this book on a system that has Runit or
-      OpenRC. Systemd will take more work. There aren't many packages that
-      require this process except ones that may need to be started as a
-      service.
+    <para revision="sysv">
+      This version of this book is meant for SysV/non-Systemd LFS systems,
+      although there is a Systemd version of this book. However, due to Github
+      Pages restraints, this version of the book is not rendered anywhere
+      online by &copyholder;. Thus, you will need to render it yourself.
+      Follow the <ulink url="&lfs-qol-repo;">LFS QOL rendering
+      instructions</ulink> in order to render the book yourself. You will need
+      <ulink url="&blfs-svn;/general/git.html">Git</ulink> to clone the
+      repository.
+    </para>
+
+    <para revision="systemd">
+      This version of this book is meant for Systemd LFS systems. You probably
+      have rendered this version of the book yourself.
     </para>
 
   </sect2>

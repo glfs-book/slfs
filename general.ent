@@ -120,7 +120,12 @@
 <!ENTITY systemd-units-version        "20240205">
 
 <!ENTITY blfs-wiki                    "https://wiki.&lfs-domainname;/blfs/wiki">
-<!ENTITY blfs-svn		      "https://&lfs-domainname;/blfs/view/svn">
+<![ %sysv; [
+<!ENTITY blfs-svn                     "https://&lfs-domainname;/blfs/view/svn">
+]]>
+<![ %systemd; [
+<!ENTITY blfs-svn                     "https://&lfs-domainname;/blfs/view/systemd">
+]]>
 
 <!ENTITY arch-pkgs                    "https://archlinux.org/packages">
 

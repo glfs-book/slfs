@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>January 10th, 2024</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Systemd revision: Added. Fixes
+          <ulink url="&lfs-qol-issues;/14">#14</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 4th, 2025</para>
       <itemizedlist>
         <listitem>
