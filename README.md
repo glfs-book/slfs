@@ -26,13 +26,14 @@ install that software.
 
 After that, you can build the html with a simple `make` command.
 You can change the revision, ie. systemd vs sysv by adding `REV=<rev>` to the
-`make` command. `REV` can be:
+`make` command. `<rev>` can be:
 - `sysv` (default)
 - `systemd`
+
 Example: `make REV=systemd`.
 
 The default target (sysv) builds the html in `$(HOME)/public_html/lfs-qol`,
-whereas for systemd, it would be in `$(HOME)/public_html/lfs-qol/systemd`.
+whereas for systemd, it would be in `$(HOME)/public_html/lfs-qol-systemd`.
 It will by default make each package and section its own page then link
 everything together for a smooth experience.
 
