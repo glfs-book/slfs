@@ -46,7 +46,11 @@
     <para role="recommended">
       <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>
       (for generating documentation) and
+      <phrase revision="sysv">
       <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>
+      </phrase><phrase revision="systemd">
+      <ulink url="&blfs-svn;/general/systemd.html">Systemd</ulink>
+      </phrase>
     </para>
 
   </sect2>
