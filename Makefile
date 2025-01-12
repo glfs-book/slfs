@@ -293,7 +293,7 @@ bootscripts:
 
 systemd-units:
 		@VERSION=`grep "systemd-units-version " general.ent | cut -d\" -f2`; \
-	UNITS="blfs-systemd-units-$$VERSION";                                \
+	UNITS="lfs-qol-systemd-units-$$VERSION";                                \
 	if [ ! -e $$UNITS.tar.xz ]; then                                     \
 		rm -rf $(RENDERTMP)/$$UNITS;                                       \
 		mkdir $(RENDERTMP)/$$UNITS;                                        \
