@@ -56,6 +56,7 @@ help:
 	@echo "make <parameters> <targets>"
 	@echo ""
 	@echo "Parameters:"
+	@echo ""
 	@echo "  REV=<rev>            Build variation of book"
 	@echo "                       Valid values for REV are:"
 	@echo "                       * sysv    - Build book for SysV"
