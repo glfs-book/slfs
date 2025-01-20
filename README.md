@@ -32,8 +32,8 @@ You can change the revision, ie. systemd vs sysv by adding `REV=<rev>` to the
 
 Example: `make REV=systemd`.
 
-The default target (sysv) builds the html in `$(HOME)/public_html/lfs-qol`,
-whereas for systemd, it would be in `$(HOME)/public_html/lfs-qol-systemd`.
+The default target (sysv) builds the html in `~/public_html/lfs-qol`,
+whereas for systemd, it would be in `~/public_html/lfs-qol-systemd`.
 It will by default make each package and section its own page then link
 everything together for a smooth experience.
 

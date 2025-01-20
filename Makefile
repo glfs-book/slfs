@@ -1,13 +1,20 @@
 # vim:ts=3
 # Makefile for LFS_QOL Book generation.
 # By Tushar Teredesai <tushar@linuxfromscratch.org>
+# Edited by Zeckma <zeckma.tech@gmail.com>
 # 2004-01-31
 
-# Adjust these to suit your installation
-RENDERTMP   ?= $(HOME)/tmp
-CHUNK_QUIET  = 1
-ROOT_ID      =
-SHELL        = /bin/bash
+-include local.mk
+
+# Adjust these to suit your installation, or include the variables
+# you wish to change in local.mk, which must be created manually.
+LFS_QOL_THEME  ?= dark
+RENDERTMP      := $(shell mktemp -d)
+HTML_ROOT      ?= $(HOME)/public_html
+DUMP_ROOT      ?= $(HOME)
+CHUNK_QUIET    ?= 1
+ROOT_ID         =
+SHELL           = /bin/bash
 
 ALLXML := $(filter-out $(RENDERTMP)/%, \
 	$(wildcard *.xml */*.xml */*/*.xml */*/*/*.xml */*/*/*/*.xml))
@@ -30,23 +37,22 @@ ifneq ($(REV), sysv)
 	endif
 endif
 
-LFS_QOL_THEME      ?= dark
 ifeq ($(REV), sysv)
-	BASEDIR         ?= $(HOME)/public_html/lfs-qol
+	BASEDIR         ?= $(HTML_ROOT)/lfs-qol
 	PDF_OUTPUT      ?= lfs-qol.pdf
 	NOCHUNKS_OUTPUT ?= lfs-qol.html
-	DUMPDIR         ?= ~/lfs-qol-commands
-	LFS_QOLHTML        ?= lfs-qol-html.xml
-	LFS_QOLHTML2       ?= lfs-qol-html2.xml
-	LFS_QOLFULL        ?= lfs-qol-full.xml
+	DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-commands
+	LFS_QOLHTML     ?= lfs-qol-html.xml
+	LFS_QOLHTML2    ?= lfs-qol-html2.xml
+	LFS_QOLFULL     ?= lfs-qol-full.xml
 else
-	BASEDIR         ?= $(HOME)/public_html/lfs-qol-systemd
+	BASEDIR         ?= $(HTML_ROOT)/lfs-qol-systemd
 	PDF_OUTPUT      ?= lfs-qol-sysd.pdf
 	NOCHUNKS_OUTPUT ?= lfs-qol-sysd.html
-	DUMPDIR         ?= ~/lfs-qol-sysd-commands
-	LFS_QOLHTML        ?= lfs-qol-systemd-html.xml
-	LFS_QOLHTML2       ?= lfs-qol-systemd-html2.xml
-	LFS_QOLFULL        ?= lfs-qol-systemd-full.xml
+	DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-sysd-commands
+	LFS_QOLHTML     ?= lfs-qol-systemd-html.xml
+	LFS_QOLHTML2    ?= lfs-qol-systemd-html2.xml
+	LFS_QOLFULL     ?= lfs-qol-systemd-full.xml
 endif
 
 lfs-qol: html wget-list
@@ -65,9 +71,9 @@ help:
 	@echo ""
 	@echo "  BASEDIR=<dir>        Put the output in directory <dir>."
 	@echo "                       Defaults to"
-	@echo "                       '$(HOME)/public_html/lfs-qol' if REV=sysv (or unset)"
+	@echo "                       '$(HTML_ROOT)/lfs-qol' if REV=sysv (or unset)"
 	@echo "                       or to"
-	@echo "                       '$(HOME)/public_html/lfs-qol-systemd' if REV=systemd"
+	@echo "                       '$(HTML_ROOT)/lfs-qol-systemd' if REV=systemd"
 	@echo ""
 	@echo "  V=<val>              If <val> is a non-empty value, all"
 	@echo "                       steps to produce the output is shown."
@@ -83,7 +89,7 @@ help:
 	@echo ""
 	@echo "  html                 Builds the HTML pages of the book."
 	@echo ""
-	@echo "	pdf						Builds the book as a PDF file."
+	@echo "  pdf                  Builds the book as a PDF file."
 	@echo ""
 	@echo "  wget-list            Produces a list of all packages to download."
 	@echo "                       Output is BASEDIR/wget-list"
@@ -107,7 +113,7 @@ all: lfs-qol nochunks
 world: all lfs-qol-patch-list dump-commands test-links
 
 html: $(BASEDIR)/index.html
-$(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version
+$(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
 	@echo "Generating chunked XHTML files..."
 	$(Q)xsltproc --nonet                                    \
                 --stringparam chunk.quietly $(CHUNK_QUIET) \
@@ -147,13 +153,15 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version
       sed -i -e "1,20s@text/html@application/xhtml+xml@g" $$filename; \
    done;
 
-pdf: validate
+	$(Q)rm -rf $(RENDERTMP)
+
+pdf: validate wget-list
 	@echo "Generating profiled XML for PDF..."
 	$(Q)xsltproc --nonet \
 						--stringparam profile.condition pdf   \
 						--output $(RENDERTMP)/lfs-qol-pdf.xml \
 						stylesheets/lfs-xsl/profile.xsl       \
-						$(RENDERTMP)/lfs-qol-full.xml
+						$(RENDERTMP)/$(LFS_QOLFULL).xml
 
 	@echo "Generating FO file..."
 	$(Q)xsltproc --nonet										 \
@@ -177,6 +185,8 @@ pdf: validate
 	$(Q)rm fop.log
 	@echo "fop.log destroyed"
 
+	$(Q)rm -rf $(RENDERTMP)
+
 nochunks: $(BASEDIR)/$(NOCHUNKS_OUTPUT)
 $(BASEDIR)/$(NOCHUNKS_OUTPUT): $(RENDERTMP)/$(LFS_QOLHTML) version
 	@echo "Generating non-chunked XHTML file..."
@@ -190,15 +200,6 @@ $(BASEDIR)/$(NOCHUNKS_OUTPUT): $(RENDERTMP)/$(LFS_QOLHTML) version
 	$(Q)tidy -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || true
 	$(Q)bash obfuscate.sh $(BASEDIR)/$(NOCHUNKS_OUTPUT)
 	$(Q)sed -i -e "1,20s@text/html@application/xhtml+xml@g" $(BASEDIR)/$(NOCHUNKS_OUTPUT)
-
-tmpdir: $(RENDERTMP)
-$(RENDERTMP):
-	@echo "Creating $(RENDERTMP)"
-	$(Q)[ -d $(RENDERTMP) ] || mkdir -p $(RENDERTMP)
-
-clean:
-	@echo "Cleaning $(RENDERTMP)"
-	$(Q)rm -f $(RENDERTMP)/lfs-qol*
 
 validate: $(RENDERTMP)/$(LFS_QOLFULL)
 $(RENDERTMP)/$(LFS_QOLFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
@@ -311,6 +312,7 @@ $(DUMPDIR): $(RENDERTMP)/$(LFS_QOLFULL) version
                 stylesheets/dump-commands.xsl \
                 $(RENDERTMP)/$(LFS_QOLFULL)
 	$(Q)touch $(DUMPDIR)
+	$(Q)rm -rf $(RENDERTMP)
 
 .PHONY: lfs-qol all world html nochunks tmpdir clean             \
    validate profile-html lfs-qol-patch-list wget-list test-links \
