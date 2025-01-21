@@ -62,5 +62,47 @@ ninja</userinput></screen>
 <screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libliftoff.so
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libliftoff-lib">
+        <term><filename class="libraryfile">libliftoff.so</filename></term>
+        <listitem>
+          <para>
+            provides functions that can work with KMS planes
+          </para>
+          <indexterm zone="libliftoff libliftoff-lib">
+            <primary sortas="c-libliftoff-lib">libliftoff.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
   
 </sect1>

@@ -319,9 +319,9 @@ EOF</userinput></screen>
     <title>Contents</title>
 
     <segmentedlist>
-      <segtitle>Installed Program(s)</segtitle>
-      <segtitle>Installed Librar(y,ies)</segtitle>
-      <segtitle>Installed Director(y,ies)</segtitle>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
 
       <!-- If there were no programs, libraries, or directories created, then
            we would list the section as "None". However, a decision must have
@@ -356,7 +356,7 @@ EOF</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <!-- If the program or library name conflicts with (is the same as) the
-      package name, add -prog or -lib to the varlistentry entity id
+      package name, add -bin, -lib, or -prog to the varlistentry entity id
       and the 2nd entry of the indexterm zone entity -->
 
       <varlistentry id="PROGRAM1">

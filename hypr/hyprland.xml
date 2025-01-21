@@ -109,6 +109,12 @@ make release PREFIX=/usr</userinput></screen>
 <screen role="root"><userinput>make install &amp;&amp;
 rm -fv /usr/include/hyprland/src/version.h.in</userinput></screen>
 
+    <para revision="sysv">
+      Finally, remove an a unnecessary Systemd file as the &root; user:
+    </para>
+
+<screen role="root" revision="sysv"><userinput>rm -rvf /usr/lib/systemd</userinput></screen>
+
   </sect2>
   
   <sect2 role="commands">
@@ -132,22 +138,101 @@ rm -fv /usr/include/hyprland/src/version.h.in</userinput></screen>
   <sect2 role="configuration">
     <title>Configuring Hyprland</title>
 
-    <sect3><title>Configuration Information</title>
+    <para>
+      Hyprland can be configured via
+      <filename>~/.config/hypr/hyprland.conf</filename>. First create
+      the directory then copy the file to it:
+    </para>
 
-      <para>
-        Hyprland can be configured via
-        <filename>"$HOME"/.config/hypr/hyprland.conf</filename>. First create
-        the directory then copy the file to it:
-      </para>
+<screen><userinput>mkdir -pv ~/.config/hypr &amp;&amp;
+cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
 
-<screen><userinput>mkdir -pv "$HOME"/.config/hypr &amp;&amp;
-cp /usr/share/hypr/hyprland.conf "$HOME"/.config/hypr</userinput></screen>
+    <para>
+      Now inspect the file and make any changes to suit your workflow.
+    </para>
 
-      <para>
-        Now inspect the file and make any changes to suit your workflow.
-      </para>
+  </sect2>
 
-    </sect3>
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          hyprctl,
+          hyprland (link to Hyprland),
+          Hyprland, and
+          hyprpm
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/include/hyprland, /usr/share/hypr, and
+          /usr/share/wayland-sessions
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="hyprctl">
+        <term><command>hyprctl</command></term>
+        <listitem>
+          <para>
+            retrieves and configures information about the current instance of
+            <command>Hyprland</command>
+          </para>
+          <indexterm zone="hyprland hyprctl">
+            <primary sortas="b-hyprctl">hyprctl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprland-link">
+        <term><command>hyprland</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>Hyprland</command>
+          </para>
+          <indexterm zone="hyprland hyprland-link">
+            <primary sortas="b-hyprland-link">hyprland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="Hyprland">
+        <term><command>Hyprland</command></term>
+        <listitem>
+          <para>
+            is the <application>Hyprland</application> compositor
+          </para>
+          <indexterm zone="hyprland Hyprland">
+            <primary sortas="b-Hyprland">Hyprland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprpm">
+        <term><command>hyprpm</command></term>
+        <listitem>
+          <para>
+            is the plugin manager for <command>Hyprland</command>
+          </para>
+          <indexterm zone="hyprland hyprpm">
+            <primary sortas="b-hyprpm">hyprpm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
   </sect2>
 

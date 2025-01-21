@@ -83,4 +83,58 @@ ninja</userinput></screen>
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          hyprcursor-util
+        </seg>
+        <seg>
+          libhyprcursor.so
+        </seg>
+        <seg>
+          /usr/include/hyprcursor
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="hyprcursor-util">
+        <term><command>hyprcursor-util</command></term>
+        <listitem>
+          <para>
+            compiles, packs, and unpacks hyprcursor and xcursor themes
+          </para>
+          <indexterm zone="hyprcursor hyprcursor-util">
+            <primary sortas="b-hyprcursor-util">hyprcursor-util</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprcursor">
+        <term><filename class="libraryfile">libhyprcursor.so</filename></term>
+        <listitem>
+          <para>
+            provides API functions for the hyprcursor format
+          </para>
+          <indexterm zone="hyprcursor libhyprcursor">
+            <primary sortas="c-libhyprcursor">libhyprcursor.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>

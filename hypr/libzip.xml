@@ -78,4 +78,84 @@ ninja</userinput></screen>
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          zipcmp,
+          zipmerge, and
+          ziptool
+        </seg>
+        <seg>
+          libzip.so
+        </seg>
+        <seg>
+          /usr/lib/cmake/libzip
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="zipcmp">
+        <term><command>zipcmp</command></term>
+        <listitem>
+          <para>
+            compares contents of zip archives
+          </para>
+          <indexterm zone="libzip zipcmp">
+            <primary sortas="b-zipcmp">zipcmp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zipmerge">
+        <term><command>zipmerge</command></term>
+        <listitem>
+          <para>
+            merges zip archives
+          </para>
+          <indexterm zone="libzip zipmerge">
+            <primary sortas="b-zipmerge">zipmerge</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ziptool">
+        <term><command>ziptool</command></term>
+        <listitem>
+          <para>
+            modifies zip archives
+          </para>
+          <indexterm zone="libzip ziptool">
+            <primary sortas="b-ziptool">ziptool</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libzip-lib">
+        <term><filename class="libraryfile">libzip.so</filename></term>
+        <listitem>
+          <para>
+            contains functions that can modify and compare zip archives
+          </para>
+          <indexterm zone="libzip libzip-lib">
+            <primary sortas="c-libzip-lib">libzip.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>

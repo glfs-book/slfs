@@ -78,4 +78,46 @@ ninja</userinput></screen>
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libhyprutils.so
+        </seg>
+        <seg>
+          /usr/include/hyprutils
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libhyprutils">
+        <term><filename class="libraryfile">libhyprutils.so</filename></term>
+        <listitem>
+          <para>
+            provides utility functions for the Hypr ecoysystem
+          </para>
+          <indexterm zone="hyprutils libhyprutils">
+            <primary sortas="c-libhyprutils">libhyprutils.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>
