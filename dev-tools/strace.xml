@@ -101,7 +101,7 @@ make</userinput></screen>
         <term><command>strace</command></term>
         <listitem>
          <para>
-           is the diagnostic, debugging, and instructional userpace tracer
+           traces system calls and signals, most often used for debugging
          </para>
           <indexterm zone="strace strace-prog">
             <primary sortas="b-strace">strace</primary>
@@ -113,7 +113,8 @@ make</userinput></screen>
         <term><command>strace-log-merge</command></term>
         <listitem>
          <para>
-           is a utility for handling strace logs
+           merges the output of <command>strace -ff -tt</command>, prepends PID
+           to each lines, then sorts the result using time stamps
          </para>
           <indexterm zone="strace strace-log-merge">
             <primary sortas="b-strace-log-merge">strace-log-merge</primary>

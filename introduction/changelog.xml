@@ -43,6 +43,9 @@
       <para>January 21st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - strace: Reworded Contents.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Hypr/*: Added Contents.</para>
         </listitem>
       </itemizedlist>
