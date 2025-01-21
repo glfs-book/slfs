@@ -67,6 +67,6 @@ if [ "$(git diff HEAD | wc -l)" != "0" ]; then
 fi
 
 echo "<!ENTITY year              \"$year\">"               >  version.ent
-echo "<!ENTITY version           \"$version\">"            >> version.ent
+echo "<!ENTITY version           \"$version\">"            >> conditional.ent
 echo "<!ENTITY releasedate       \"$full_date\">"          >> version.ent
 echo "<!ENTITY pubdate           \"$short_date\">"         >> version.ent

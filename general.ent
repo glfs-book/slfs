@@ -1,11 +1,8 @@
-<!-- Editing up to the line of ==== should be enough
+<!-- Editing down to the line of ==== should be enough
      to generate a book for development, release, or rc.
-     Change these for the stable release, relnum should
-     be of the first four hexadecimal numbers of the
-     latest git hash in the stable branch, prefixed with
-     a # -->
+
+     Change these for the stable release. -->
 <!ENTITY % relyear    "2025">
-<!ENTITY % relnum     "#eab86">
 <!ENTITY % reldate    "January 21, 2025">
 <!ENTITY % relpubdate "2025-01-21">
 <!-- ================================================================== -->
@@ -46,7 +43,6 @@
 ]]>
 
 <!ENTITY year           "%relyear;">
-<!ENTITY version        "%relnum;">
 <!ENTITY releasedate    "%reldate;">
 <!ENTITY pubdate        "%relpubdate;">
 ]]><!-- End %release -->
