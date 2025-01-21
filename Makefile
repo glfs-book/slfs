@@ -4,6 +4,8 @@
 # Edited by Zeckma <zeckma.tech@gmail.com>
 # 2004-01-31
 
+# When rendering for the stable release from the stable branch, invoke
+# STAB=release to make.
 -include local.mk
 
 # Adjust these to suit your installation, or include the variables
@@ -36,6 +38,8 @@ ifneq ($(REV), sysv)
 	endif
 endif
 
+# Used in the book, does not actually change if the book will render for the
+# stable git hash, just changes if text for stable release is rendered or not.
 ifndef STAB
 	STAB = development
 endif

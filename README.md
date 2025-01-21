@@ -17,6 +17,15 @@ Such packages that are included are, but not limited to:
 
 Go to https://glfs-book.github.io/lfs-qol/ and start going through the book!
 
+The book online is rolling release but there is a stable version in the LFS QOL
+source via the stable branch.
+
+You can switch to it by running the following command:
+
+git checkout stable
+
+Then render the book with `make STAB=release [other options]`.
+
 # Installation
 
 How do I convert these XML files to HTML myself? You need to have some software
