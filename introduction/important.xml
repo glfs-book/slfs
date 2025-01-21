@@ -23,13 +23,7 @@
   <sect2>
     <title>Stability</title>
 
-    <para>
-      This book is in a constant flux of updates, including package updates,
-      and can be akin to the BLFS Git version. Right now, there is no stable
-      version of LFS QOL. This won't cause issues usually as packages in this
-      book do not show up in any of the LFS books, but it is something to keep
-      in mind.
-    </para>
+    &important-stability;
 
   </sect2>
 

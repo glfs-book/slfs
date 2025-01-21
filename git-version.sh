@@ -1,18 +1,33 @@
 #!/bin/sh
 
-if [ "$1" = sysv ]; then
+if test $REV = "sysv"; then
     SYSV="INCLUDE"
-    SYSTEMD="IGNORE "
-elif [ "$1" = systemd ]; then
-    SYSV="IGNORE "
+    SYSTEMD="IGNORE"
+elif test $REV = "systemd"; then
+    SYSV="IGNORE"
     SYSTEMD="INCLUDE"
 else
-    echo You must provide either \"sysv\" or \"systemd\" as argument
+    echo You must provide either \"sysv\" or \"systemd\" as argument for
+    echo \"REV\"
     exit 1
 fi
 
-echo "<!ENTITY % sysv    \"$SYSV\">"     >  conditional.ent
-echo "<!ENTITY % systemd \"$SYSTEMD\">"  >> conditional.ent
+if test $STAB = "development"; then
+    DEVELOPMENT="INCLUDE"
+    RELEASE="IGNORE"
+elif test $STAB = "release"; then
+    DEVELOPMENT="IGNORE"
+    RELEASE="INCLUDE"
+else
+    echo You must provide either \"development\" or \"release\" as argument for
+    echo \"STAB\"
+    exit 1
+fi
+
+echo "<!ENTITY % sysv        \"$SYSV\">"        >  conditional.ent
+echo "<!ENTITY % systemd     \"$SYSTEMD\">"     >> conditional.ent
+echo "<!ENTITY % development \"$DEVELOPMENT\">" >>  conditional.ent
+echo "<!ENTITY % release     \"$RELEASE\">"     >> conditional.ent
 
 if ! git status > /dev/null; then
     # Either it's not a git repository, or git is unavaliable.

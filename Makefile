@@ -30,10 +30,18 @@ endif
 ifndef REV
 	REV = sysv
 endif
-
 ifneq ($(REV), sysv)
 	ifneq ($(REV), systemd)
 		$(error REV must be 'sysv' (default) or 'systemd'.)
+	endif
+endif
+
+ifndef STAB
+	STAB = development
+endif
+ifneq ($(STAB), development)
+	ifneq ($(STAB), release)
+		$(error STAB must be 'development' (default) or 'release'.)
 	endif
 endif
 
@@ -319,4 +327,4 @@ $(DUMPDIR): $(RENDERTMP)/$(LFS_QOLFULL) version
    dump-commands bootscripts systemd-units version test-options
 
 version:
-	$(Q)./git-version.sh $(REV)
+	$(Q)REV=$(REV) STAB=$(STAB) ./git-version.sh
