@@ -138,18 +138,35 @@ rm -fv /usr/include/hyprland/src/version.h.in</userinput></screen>
   <sect2 role="configuration">
     <title>Configuring Hyprland</title>
 
-    <para>
-      Hyprland can be configured via
-      <filename>~/.config/hypr/hyprland.conf</filename>. First create
-      the directory then copy the file to it:
-    </para>
+    <sect3 id="hyprland-config">
+      <title>Config Files</title>
+      <para>
+        <filename>~/.config/hypr/hyprland.conf</filename>. The default version
+        is in <filename class="directory">/usr/share/hypr</filename> and will
+        not be used and must be copied to
+        <filename class="directory">~/.config/hypr</filename>
+      </para>
+
+      <indexterm zone="hyprland hyprland-config">
+        <primary sortas="e-AA.config">~/.config/hypr/hyprland.conf</primary>
+      </indexterm>
+
+    </sect3>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        Create the config file:
+      </para>
 
 <screen><userinput>mkdir -pv ~/.config/hypr &amp;&amp;
 cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
 
-    <para>
-      Now inspect the file and make any changes to suit your workflow.
-    </para>
+      <para>
+        Now inspect the file and make any changes to suit your workflow.
+      </para>
+
+    </sect3>
 
   </sect2>
 

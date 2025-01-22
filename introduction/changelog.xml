@@ -43,6 +43,10 @@
       <para>January 21st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - i3/*: Added Contents. Part of
+          <ulink url="&lfs-qol-issues;/11">#11</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - strace: Reworded Contents.</para>
         </listitem>
         <listitem>

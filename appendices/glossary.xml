@@ -235,6 +235,17 @@
       </glossdef>
     </glossentry>
 
+    <glossentry id="gJSON">
+      <glossterm>
+        <acronym>JSON</acronym>
+      </glossterm>
+      <glossdef>
+        <para>
+          JavaScript Object Notation
+        </para>
+      </glossdef>
+    </glossentry>
+
     <glossentry id="gLFS">
       <glossterm>
         <acronym>LFS</acronym>
@@ -407,6 +418,17 @@
       <glossdef>
         <para>
           Secure Sockets Layer
+        </para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry id="gSTDIN">
+      <glossterm>
+        <acronym>STDIN</acronym>
+      </glossterm>
+      <glossdef>
+        <para>
+          STanDard INput
         </para>
       </glossdef>
     </glossentry>
