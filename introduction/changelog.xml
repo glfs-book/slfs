@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>January 24th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - com-emu: Add p20-emu. PR
+          <ulink url="&lfs-qol-pull;/16">(#16)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 21st, 2025</para>
       <itemizedlist>
         <listitem>
