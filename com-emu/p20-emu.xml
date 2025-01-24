@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY p20-emu-download-http "https://github.com/Spritetm/plexus_20_emu/archive/&p20-emu-version;.zip">
+]>
+
+<sect1 id="p20-emu" xreflabel="p20-emu-&p20-emu-minor-version;">
+  <?dbhtml filename="p20-emu.html"?>
+
+
+  <title>p20-emu-&p20-emu-minor-version;</title>
+
+  <indexterm zone="p20-emu">
+    <primary sortas="a-p20-emu">p20-emu</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to p20-emu</title>
+
+    <para>
+      The <application>p20-emu</application> package is a Plexus P/20
+      emulator.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&p20-emu-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required ROM 1:
+          <ulink url="https://github.com/misterblack1/plexus-p20/raw/refs/heads/main/ROMs/U15-MERGED.BIN"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required ROM 2:
+          <ulink url="https://github.com/misterblack1/plexus-p20/raw/refs/heads/main/ROMs/U17-MERGED.BIN"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Recommended patch:
+          <ulink url="&patch-root;/com-emu/p20-emu/p20-emu-&p20-emu-minor-version;-no-debug.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Recommended patch:
+          <ulink url="&patch-root;/com-emu/p20-emu/p20-emu-&p20-emu-minor-version;-system-roms.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">p20-emu Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/unzip.html">UnZip</ulink>
+      (to unpack the distribution)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of p20-emu</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../xincludes/extraction-lchmod.xml"/>
+
+    <para>
+      Apply a patch to build without any debugging information, which allows
+      for a slightly faster binary:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../p20-emu-&p20-emu-minor-version;-no-debug.patch</userinput></screen>
+
+    <para>
+      Optionally, apply a patch to search for the ROMs in a system-wide
+      location and not the current directory:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../p20-emu-&p20-emu-minor-version;-system-roms.patch</userinput></screen>
+
+    <para>
+      Install <application>p20-emu</application> by running the following
+      command:
+    </para>
+
+<screen><userinput>make Musashi/m68kops.h &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -v -Dm755 emu /usr/bin/p20-emu</userinput></screen>
+
+    <para>
+      If you have applied the systemwide ROMs patch, install those ROMs as the
+      &root; user:
+    </para>
+
+<screen role="root"><userinput>install -v -m755 -d /usr/share/p20-emu &amp;&amp;
+install -v -m644 ../U15-MERGED.BIN /usr/share/p20-emu &amp;&amp;
+install -v -m644 ../U17-MERGED.BIN /usr/share/p20-emu</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>make Musashi/m68kops.h</command>: This command explicitly
+      generates a header file used during build time to avoid a race condition.
+    </para>
+
+  </sect2>
+
+</sect1>
