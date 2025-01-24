@@ -87,8 +87,10 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>ninja install &amp;&amp;
+<screen role="root" revision="sysv"><userinput>ninja install &amp;&amp;
 rm -rvf /usr/lib/systemd</userinput></screen>
+
+<screen role="root" revision="systemd"><userinput>make install</userinput></screen>
 
   </sect2>
   
@@ -100,10 +102,65 @@ rm -rvf /usr/lib/systemd</userinput></screen>
       vendored source code that FTBFS.
     </para>
 
-    <para>
+    <para revision="sysv">
       <command>rm -rvf /usr/lib/systemd</command>: This command removes
       unnecessary Systemd files.
     </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          hyprland-share-picker and xdg-desktop-portal-hyprland
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="hyprland-share-picker">
+        <term><command>hyprland-share-picker</command></term>
+        <listitem>
+          <para>
+            allows you to pick what screen and region to share
+          </para>
+          <indexterm zone="xdg-desktop-portal-hyprland hyprland-share-picker">
+            <primary sortas="b-hyprland-share-picker">hyprland-share-picker</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xdg-desktop-portal-hyprland-bin">
+        <term><command>xdg-desktop-portal-hyprland</command></term>
+        <listitem>
+          <para>
+            allows you to access portals in a
+            <application>Hyprland</application> session
+          </para>
+          <indexterm zone="xdg-desktop-portal-hyprland xdg-desktop-portal-hyprland-bin">
+            <primary sortas="b-xdg-desktop-portal-hyprland-bin">xdg-desktop-portal-hyprland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
   </sect2>
 

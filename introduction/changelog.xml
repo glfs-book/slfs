@@ -40,6 +40,60 @@
     -->
 
     <listitem>
+      <para>January 21st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - i3/*: Added Contents. Part of
+          <ulink url="&lfs-qol-issues;/11">#11</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - strace: Reworded Contents.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hypr/*: Added Contents.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 11th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Sysd rev: Fixed elogind vs Systemd.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 10th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Systemd revision: Added. Fixes
+          <ulink url="&lfs-qol-issues;/14">#14</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 4th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - general.ent: Update copyright year.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 2nd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Toxikuu] - dev-tools/*: Added. PR
+          <ulink url="&lfs-qol-pull;/12">(#12)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 30th, 2024</para>
       <itemizedlist>
         <listitem>

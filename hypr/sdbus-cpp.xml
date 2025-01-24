@@ -46,7 +46,11 @@
     <para role="recommended">
       <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>
       (for generating documentation) and
+      <phrase revision="sysv">
       <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>
+      </phrase><phrase revision="systemd">
+      <ulink url="&blfs-svn;/general/systemd.html">Systemd</ulink>
+      </phrase>
     </para>
 
   </sect2>
@@ -73,7 +77,8 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>ninja install</userinput></screen>
+<screen role="root"><userinput>ninja install &amp;&amp;
+mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</userinput></screen>
 
   </sect2>
   
@@ -82,6 +87,55 @@ ninja</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <command>mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</command>:
+      This command makes the docs numbered and consistent with every other
+      packages in the docs.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libsdbus-c++.so
+        </seg>
+        <seg>
+          /usr/include/sdbus-c++, /usr/lib/cmake/sdbus-c++, and
+          /usr/share/doc/sdbus-c++-&sdbus-cpp-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libsdbus-cpp">
+        <term><filename class="libraryfile">libsdbus-c++.so</filename></term>
+        <listitem>
+          <para>
+            provides API functions for <application>D-Bus</application> in C++
+          </para>
+          <indexterm zone="sdbus-cpp libsdbus-cpp">
+            <primary sortas="c-libsdbus-cpp">libsdbus-c++.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
   </sect2>
 

@@ -11,6 +11,8 @@
 
   <title>
     Linux<superscript>&reg;</superscript> From Scratch - Quality of Life
+    <phrase revision="systemd">(Systemd</phrase>
+    <phrase revision="sysv">(System V</phrase> Edition)
   </title>
   <subtitle>Version &version;</subtitle>
   <subtitle>Published &releasedate;</subtitle>

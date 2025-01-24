@@ -5,7 +5,7 @@
     <!-- https://wiki.debian.org/RpathIssue/
          https://security.stackexchange.com/questions/161799/ -->
     <para>
-      <parameter>-DCMAKE_SKIP_INSTALL_RPATH=ON</parameter>: This switch
+      <parameter>-D CMAKE_SKIP_INSTALL_RPATH=ON</parameter>: This switch
       makes <command>cmake</command> remove hardcoded library search paths
       (rpath) when installing a binary executable file or a shared library.
       This package does not need rpath once it's installed into the standard

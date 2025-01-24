@@ -51,3 +51,7 @@
 <!ENTITY gkermit-version                     "2.01">
 <!ENTITY p20-emu-minor-version               "d75a83">
 <!ENTITY p20-emu-version                     "d75a83ca9b107e1ae1a54598e4045c2843bd823e">
+=======
+
+<!-- 7. DEV-TOOLS -->
+<!ENTITY strace-version                      "6.12">

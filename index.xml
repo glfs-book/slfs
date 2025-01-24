@@ -20,6 +20,7 @@ $Date$
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="i3/i3.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="svr4-tools/svr4-tools.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="com-emu/com-emu.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="dev-tools/dev-tools.xml"/>
 
   <!-- Appendices -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendices/creat-comm.xml"/>
