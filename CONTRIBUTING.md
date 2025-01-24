@@ -195,7 +195,7 @@ XML. Rarely needs changing unless a new section is added.
 Beyond knowing where files are, the text inside those files also counts, and
 there are standards to keep in mind.
 
-1. No tabs except in the Makefile. Use spaces. Unless after a setence, use two
+1. No tabs except in the Makefile. Use spaces. Unless after a sentence, use two
 at a time.
 2. Keep character count on any given line a maximum of 80 characters and do not
 go over that limit. This keeps the XML from getting ugly and out of hand. There
