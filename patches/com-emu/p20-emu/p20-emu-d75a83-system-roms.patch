@@ -1,0 +1,14 @@
+diff -Naur plexus_20_emu-d75a83ca9b107e1ae1a54598e4045c2843bd823e-orig/main.c plexus_20_emu-d75a83ca9b107e1ae1a54598e4045c2843bd823e/main.c
+--- plexus_20_emu-d75a83ca9b107e1ae1a54598e4045c2843bd823e-orig/main.c	2025-01-02 09:10:02.476689674 +0300
++++ plexus_20_emu-d75a83ca9b107e1ae1a54598e4045c2843bd823e/main.c	2025-01-02 09:36:38.978537557 +0300
+@@ -75,8 +75,8 @@
+ 	static_assert(sizeof(level_str)/sizeof(level_str[0])==LOG_LVL_MAX,
+ 					"level_str array out of sync");
+ 	emu_cfg_t cfg={
+-		.u15_rom="U15-MERGED.BIN",
+-		.u17_rom="U17-MERGED.BIN",
++		.u15_rom="/usr/share/p20-emu/U15-MERGED.BIN",
++		.u17_rom="/usr/share/p20-emu/U17-MERGED.BIN",
+ #ifdef __EMSCRIPTEN__
+ 		.cow_dir="persist/cow",
+ 		.rtcram="persist/rtcram.bin",

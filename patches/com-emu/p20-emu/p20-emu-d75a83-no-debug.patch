@@ -1,0 +1,21 @@
+diff -Naur plexus_20_emu-d75a83ca9b107e1ae1a54598e4045c2843bd823e-orig/Makefile plexus_20_emu-d75a83ca9b107e1ae1a54598e4045c2843bd823e/Makefile
+--- plexus_20_emu-d75a83ca9b107e1ae1a54598e4045c2843bd823e-orig/Makefile	2025-01-02 09:10:02.460689675 +0300
++++ plexus_20_emu-d75a83ca9b107e1ae1a54598e4045c2843bd823e/Makefile	2025-01-02 09:57:36.825417708 +0300
+@@ -3,8 +3,8 @@
+ SRC += emu.c scsi_dev_hd.c rtcram.c
+ SRC += sysvr2-strace.c
+ 
+-DEPFLAGS = -MT $@ -MMD -MP
+-CFLAGS=-ggdb -Og -Wall $(DEPFLAGS)
++DEPFLAGS =
++CFLAGS=-O2 -Wall $(DEPFLAGS)
+ 
+ default: emu
+ 
+@@ -49,4 +49,4 @@
+ -include $(SRC:.c=.d)
+ 
+ 
+-.PHONY: clean webdeploy
+\ No newline at end of file
++.PHONY: clean webdeploy
