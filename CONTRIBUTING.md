@@ -219,7 +219,7 @@ Now that you have cloned the repo, you can make changes to the default branch
 git checkout --track origin -b <branch_name>
 ```
 Now make an edit as you see fit. If it isn't an edit to an internal file that
-isn't `packages.ent` or fixing a simple title, make a changelog entry (see
+isn't `packages.ent` or fixing a simple typo, make a changelog entry (see
 section 3.1.2.9). Once you have made one, copy the text you made, reformat that
 text you copied into plain text that won't get messed up in a git commit
 message, then do a test render. See if the render looks fine, if it rendered.
