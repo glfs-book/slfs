@@ -186,7 +186,7 @@ typos and internal changes (not counting changes to `packages.ent`, those count
 as updates that need to have a changelog entry).
 #### 3.1.2.10. `index.xml`
 This file is an XML file that determines which main XML files to include for
-rendering. Think of it as the master XML file, or your `int main(), but for
+rendering. Think of it as the master XML file, or your `int main()`, but for
 XML. Rarely needs changing unless a new section is added.
 
 ***
