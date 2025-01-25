@@ -1,0 +1,20 @@
+--- heirloom-doctools-orig/mk.config	2025-01-25 23:44:37.876562793 +0300
++++ heirloom-doctools-new/mk.config	2025-01-25 23:49:47.268555898 +0300
+@@ -6,7 +6,7 @@
+ #
+ # Packaging prefix.
+ #
+-PREFIX=/usr/local
++PREFIX=/usr
+ 
+ #
+ # Where to place binaries.
+@@ -26,7 +26,7 @@
+ #
+ # Where to place manual pages.
+ #
+-MANDIR=$(PREFIX)/share/heirloom-doctools/man
++MANDIR=$(PREFIX)/share/man/5man
+ 
+ #
+ # Where to place the troff macro packages.

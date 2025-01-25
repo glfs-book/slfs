@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>January 26th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - svr4-tools: Switch upstream for heirloom-doctools.
+          PR <ulink url="&lfs-qol-pull;/19">(#19)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 24th, 2025</para>
       <itemizedlist>
         <listitem>
