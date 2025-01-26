@@ -37,16 +37,6 @@
       </listitem>
     </itemizedlist>
    
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
-    <itemizedlist spacing="compact">
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&patch-root;/svr4-tools/heirloom-doctools/heirloom-doctools-&heirloom-doctools-minor-version;-paths.patch"/>
-        </para>
-      </listitem>
-    </itemizedlist>
-
     <bridgehead renderas="sect3">heirloom-doctools Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
@@ -63,36 +53,20 @@
     <title>Installation of heirloom-doctools</title>
 
     <para>
-      Apply a patch to make the installation paths conform with the others in this category:
-    </para>
-
-<screen><userinput>patch -Np1 -i ../heirloom-doctools-&heirloom-doctools-minor-version;-paths.patch</userinput></screen>
-
-    <para>
       Install <application>heirloom-doctools</application> by running the following
       command:
     </para>
 
-<screen><userinput>export YACC=/usr/ccs/bin/yacc &amp;&amp;
-./configure &amp;&amp;
-make</userinput></screen>
+<screen><userinput>./configure &amp;&amp;
+make PREFIX=/usr MANDIR=/usr/share/man/5man \
+YACC=/usr/ccs/bin/yacc</userinput></screen>
 
     <para>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make install</userinput></screen>
-
-  </sect2>
-
-  <sect2 role="commands">
-    <title>Command Explanations</title>
-
-    <para>
-      <command>export YACC=/usr/ccs/bin/yacc</command>: <command>bison</command>
-      does not work with this package, <command>yacc</command>
-      compatibility mode or not, so force use of an SVR4 yacc.
-    </para>
+<screen role="root"><userinput>make PREFIX=/usr MANDIR=/usr/share/man/5man \
+install</userinput></screen>
 
   </sect2>
 
