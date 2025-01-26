@@ -28,7 +28,8 @@
 <!ENTITY heirloom-ng-version                 "59f7cc870f72adc4a2df8a64acc75ab425d8ff6b">
 <!ENTITY schilytools-version                 "2024-03-21">
 <!ENTITY heirloom-sh-version                 "050706">
-<!ENTITY heirloom-doctools-version           "080407">
+<!ENTITY heirloom-doctools-minor-version     "2e9b0c">
+<!ENTITY heirloom-doctools-version           "2e9b0c67ed0f8efcf81c376e067d5256370dbc23">
 <!ENTITY heirloom-devtools-version           "070527">
 <!ENTITY s-nail-version                      "14.9.25">
 <!ENTITY pkgsuite-minor-version              "ea4286">
