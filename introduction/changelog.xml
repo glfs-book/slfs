@@ -43,6 +43,10 @@
       <para>January 26th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - libev: Remove <filename>event.h</filename>. Fixes
+          <ulink url="&lfs-qol-issues;/20">#20</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[seal331] - svr4-tools: Switch upstream for heirloom-doctools.
           PR <ulink url="&lfs-qol-pull;/19">(#19)</ulink>.</para>
         </listitem>
