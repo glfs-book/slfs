@@ -43,6 +43,10 @@
       <para>January 29th, 2024</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - hyprcursor: 0.1.10 -&gt; 0.1.11. Fixes
+          <ulink url="&lfs-qol-issues;/27">#27</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libzip: 1.11.2 -&gt; 1.11.3. Fixes
           <ulink url="&lfs-qol-issues;/26">#26</ulink>.</para>
         </listitem>
