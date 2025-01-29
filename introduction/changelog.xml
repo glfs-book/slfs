@@ -43,6 +43,10 @@
       <para>January 29th, 2024</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - pugixml: 1.14 -&gt; 1.15. Fixes
+          <ulink url="&lfs-qol-issues;/28">#28</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - hyprcursor: 0.1.10 -&gt; 0.1.11. Fixes
           <ulink url="&lfs-qol-issues;/27">#27</ulink>.</para>
         </listitem>
