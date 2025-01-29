@@ -43,6 +43,10 @@
       <para>January 29th, 2024</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - strace: 6.12 -&gt; 6.13. Fixes
+          <ulink url="&lfs-qol-issues;/33">#33</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - xdg-desktop-portal-hyprland: 1.3.8 -&gt; 1.3.9.
           Fixes <ulink url="&lfs-qol-issues;/32">#32</ulink>.</para>
         </listitem>
