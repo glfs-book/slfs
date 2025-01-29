@@ -51,7 +51,6 @@
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>,
       <ulink url="&blfs-svn;/general/json-glib.html">json-glib</ulink>,
-      <ulink url="&blfs-svn;/general/libseccomp.html">libseccomp</ulink>,
       <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
       <xref linkend="ostree"/>,
       <ulink url="&blfs-svn;/postlfs/p11-kit.html">p11-kit</ulink>,
@@ -73,6 +72,7 @@
       <ulink url="&blfs-svn;/pst/docbook-xsl.html">docbook-xsl-nons</ulink>,
       <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
       <ulink url="&blfs-svn;/general/libarchive.html">libarchive</ulink>,
+      <ulink url="&blfs-svn;/general/libseccomp.html">libseccomp</ulink>,
       <ulink url="&blfs-svn;/x/libXau.html">libXau</ulink>,
       <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
       <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>,
@@ -84,7 +84,9 @@
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="https://gitlab.freedesktop.org/pwithnall/malcontent">malcontent</ulink>
-      (for parental features) and
+      (for parental features),
+      <ulink url="&arch-pkgs;/extra/x86_64/socat/">socat</ulink>
+      (for tests), and
       <ulink url="&blfs-svn;/general/valgrind.html">Valgrind</ulink>
     </para>
 
@@ -98,29 +100,40 @@
       commands:
     </para>
 
-<screen><userinput>./configure --prefix=/usr     \
-            --sysconfdir=/etc \
-            --localstatedir=/var &amp;&amp;
+<screen><userinput>mkdir build    &amp;&amp;
+cd    build    &amp;&amp;
 
-make</userinput></screen>
+meson setup --prefix=/usr       \
+            --buildtype=release \</userinput><userinput revision="sysv">
+            -D systemd=disabled \</userinput><userinput>
+            -D tests=false      \
+            .. &amp;&amp;
+
+ninja</userinput></screen>
 
     <para>
       Now, as the &root; user:
     </para>
 
-<screen role="root" revision="sysv"><userinput>make install &amp;&amp;
-rm -rvf /usr/lib/systemd</userinput></screen>
-
-<screen role="root" revision="systemd"><userinput>make install</userinput></screen>
+<screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
 
-  <sect2 role="commands" revision="sysv">
+  <sect2 role="commands">
     <title>Command Explanations</title>
 
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../xincludes/meson-buildtype-release.xml"/>
+
+    <para revision="sysv">
+      <parameter>-D systemd=disabled</parameter>: This parameter disables
+      Systemd support.
+    </para>
+
     <para>
-      <command>rm -rvf /usr/lib/systemd</command>: This command removes
-      unnecessary Systemd files.
+      <parameter>-D tests=false</parameter>: This parameter disables tests.
+      Remove this parameter if you have <application>socat</application>
+      installed.
     </para>
 
   </sect2>

@@ -43,6 +43,10 @@
       <para>January 29th, 2024</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Flatpak: 1.14.10 -&gt; 1.16.0. Fixes
+          <ulink url="&lfs-qol-issues;/23">#23</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - OSTree: 2024.9 -&gt; 2025.1. Fixes
           <ulink url="&lfs-qol-issues;/22">#22</ulink>.</para>
         </listitem>

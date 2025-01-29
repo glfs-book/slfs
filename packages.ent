@@ -1,7 +1,7 @@
 <!-- 2. BINARY -->
 <!ENTITY fuse2-version                       "2.9.9">
 <!ENTITY ostree-version                      "2025.1">
-<!ENTITY flatpak-version                     "1.14.10">
+<!ENTITY flatpak-version                     "1.16.0">
 
 <!-- 3. HYPRLAND -->
 <!ENTITY hyprutils-version                   "0.2.6">
