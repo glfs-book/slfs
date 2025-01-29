@@ -43,6 +43,10 @@
       <para>January 29th, 2024</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - hyprlang: 0.5.3 -&gt; 0.6.0. Fixes
+          <ulink url="&lfs-qol-issues;/25">#25</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - hyprutils: 0.2.6 -&gt; 0.5.0. Fixes
           <ulink url="&lfs-qol-issues;/24">#24</ulink>.</para>
         </listitem>

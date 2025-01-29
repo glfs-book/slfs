@@ -5,7 +5,7 @@
 
 <!-- 3. HYPRLAND -->
 <!ENTITY hyprutils-version                   "0.5.0">
-<!ENTITY hyprlang-version                    "0.5.3">
+<!ENTITY hyprlang-version                    "0.6.0">
 <!ENTITY tomlplusplus-version                "3.4.0">
 <!ENTITY libzip-version                      "1.11.2">
 <!ENTITY hyprcursor-version                  "0.1.10">
