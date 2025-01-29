@@ -45,6 +45,7 @@
       <phrase revision="sysv">
       <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>,
       </phrase>
+      <xref linkend="glaze"/>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
       <xref linkend="hyprcursor"/>,
