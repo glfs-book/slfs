@@ -175,6 +175,9 @@ export -f as_root</userinput></screen>
 <!ENTITY not-katamari         "<para>This package is provided for testing the
                                completed Xorg installation.</para>">
 
+<!ENTITY abi-break            "<important><para>Updating this package is known
+                               to break ABI.</para></important>">
+
 <!ENTITY % package-entities SYSTEM      "packages.ent">
 %package-entities;
 
