@@ -11,7 +11,7 @@
 <!ENTITY hyprcursor-version                  "0.1.11">
 <!ENTITY pugixml-version                     "1.15">
 <!ENTITY hyprwayland-scanner-version         "0.4.4">
-<!ENTITY aquamarine-version                  "0.5.0">
+<!ENTITY aquamarine-version                  "0.7.2">
 <!ENTITY libliftoff-version                  "0.5.0">
 <!ENTITY hyprland-version                    "0.45.2">
 <!ENTITY sdbus-cpp-version                   "2.1.0">

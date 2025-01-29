@@ -26,6 +26,8 @@
       Wlroots.
     </para>
 
+    &abi-break;
+
     <bridgehead renderas="sect3">Package Information</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
