@@ -95,7 +95,7 @@ ninja</userinput></screen>
           None
         </seg>
         <seg>
-          /usr/include/glaze
+          /usr/include/glaze and /usr/share/glaze
         </seg>
       </seglistitem>
     </segmentedlist>

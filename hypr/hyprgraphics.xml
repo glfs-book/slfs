@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY hyprgraphics-download-http "https://github.com/hyprwm/hyprgraphics/archive/refs/tags/v&hyprgraphics-version;.tar.gz">
+]>
+
+<sect1 id="hyprgraphics" xreflabel="hyprgraphics-&hyprgraphics-version;">
+  <?dbhtml filename="hyprgraphics.html"?>
+
+
+  <title>hyprgraphics-&hyprgraphics-version;</title>
+
+  <indexterm zone="hyprgraphics">
+    <primary sortas="a-hyprgraphics">hyprgraphics</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to hyprgraphics</title>
+
+    <para>
+      The hyprgraphics package provides graphics utilities for the Hypr
+      ecosystem.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&hyprgraphics-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">hyprgraphics Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <xref linkend="hyprutils"/>,
+      <ulink url="&blfs-svn;/general/libjxl.html">libjxl</ulink>,
+      <xref linkend="libspng"/>,
+      <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>, and
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of hyprgraphics</title>
+
+    <para>
+      Install <application>hyprgraphics</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../xincludes/cmake-skip-install-rpath.xml"/>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libhyprgraphics.so
+        </seg>
+        <seg>
+          /usr/include/hyprgraphics
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libhyprgraphics">
+        <term><filename class="libraryfile">libhyprgraphics.so</filename></term>
+        <listitem>
+          <para>
+            provides graphics utility functions for the Hypr ecosystem
+          </para>
+          <indexterm zone="hyprgraphics libhyprgraphics">
+            <primary sortas="c-libhyprgraphics">libhyprgraphics.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

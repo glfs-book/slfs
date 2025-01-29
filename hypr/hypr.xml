@@ -25,6 +25,9 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="aquamarine.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libliftoff.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glaze.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libspng.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprgraphics.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="re2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprland.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sdbus-cpp.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xdg-desktop-portal-hyprland.xml"/>

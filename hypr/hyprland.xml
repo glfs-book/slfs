@@ -26,6 +26,9 @@
       written in C++.
     </para>
 
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../xincludes/long-build-time.xml"/>
+
     <bridgehead renderas="sect3">Package Information</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -49,6 +52,7 @@
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
       <xref linkend="hyprcursor"/>,
+      <xref linkend="hyprgraphics"/>,
       <xref linkend="hyprlang"/>,
       <xref linkend="hyprutils"/>,
       <xref linkend="hyprwayland-scanner"/>,
@@ -62,6 +66,7 @@
       (only the normal installation is required)),
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <xref linkend="re2"/>,
       <ulink url="https://glfs-book.github.io/glfs/shareddeps/seatd.html">seatd</ulink><phrase
       revision="sysv">,</phrase>
       <phrase revision="systemd">(the recommended dependency, elogind, is not

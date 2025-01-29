@@ -43,6 +43,11 @@
       <para>January 29th, 2024</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Hypr: Added a few packages to satisfy Hyprland
+          dependency. Fixes
+          <ulink url="&lfs-qol-issues;/34">#34</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - strace: 6.12 -&gt; 6.13. Fixes
           <ulink url="&lfs-qol-issues;/33">#33</ulink>.</para>
         </listitem>
