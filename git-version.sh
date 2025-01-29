@@ -26,7 +26,7 @@ fi
 
 echo "<!ENTITY % sysv        \"$SYSV\">"        >  conditional.ent
 echo "<!ENTITY % systemd     \"$SYSTEMD\">"     >> conditional.ent
-echo "<!ENTITY % development \"$DEVELOPMENT\">" >>  conditional.ent
+echo "<!ENTITY % development \"$DEVELOPMENT\">" >> conditional.ent
 echo "<!ENTITY % release     \"$RELEASE\">"     >> conditional.ent
 
 if ! git status > /dev/null; then
@@ -67,6 +67,6 @@ if [ "$(git diff HEAD | wc -l)" != "0" ]; then
 fi
 
 echo "<!ENTITY year              \"$year\">"               >  version.ent
-echo "<!ENTITY version           \"$version\">"            >> conditional.ent
+echo "<!ENTITY version           \"$version\">"            >> version.ent
 echo "<!ENTITY releasedate       \"$full_date\">"          >> version.ent
 echo "<!ENTITY pubdate           \"$short_date\">"         >> version.ent
