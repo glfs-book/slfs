@@ -9,7 +9,7 @@
         can improve system performance and memory usage by updating
         <filename>/usr/share/icons/hicolor/index.theme</filename>. To perform
         the update you must have <ulink
-        url="&blfs-svn;/x/gtk3.html">GTK3</ulink> installed and issue the
+        url="&blfs-svn;/x/gtk3.html">GTK-3</ulink> installed and issue the
         following command as the <systemitem class="username">root</systemitem>
         user:
       </para>

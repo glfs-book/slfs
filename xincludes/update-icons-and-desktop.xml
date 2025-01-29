@@ -13,7 +13,7 @@
         <filename>/usr/share/icons/hicolor/index.theme</filename> and
         <filename>/usr/share/applications/mimeinfo.cache</filename>. To perform
         the update you must have <ulink
-        url="&blfs-svn;/x/gtk3.html">GTK3</ulink> installed (for the icon
+        url="&blfs-svn;/x/gtk3.html">GTK-3</ulink> installed (for the icon
         cache) and <xref linkend="desktop-file-utils"/> (for the desktop cache)
         and issue the following commands as the <systemitem
         class="username">root</systemitem> user:
