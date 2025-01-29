@@ -43,6 +43,10 @@
       <para>January 29th, 2024</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - hyprwayland-scanner: 0.4.2 -&gt; 0.4.4. Fixes
+          <ulink url="&lfs-qol-issues;/29">#29</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - pugixml: 1.14 -&gt; 1.15. Fixes
           <ulink url="&lfs-qol-issues;/28">#28</ulink>.</para>
         </listitem>
