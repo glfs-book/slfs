@@ -159,8 +159,8 @@ install -v -m644 ../U17-MERGED.BIN /usr/share/p20-emu</userinput></screen>
           <para>
             is the Plexus P/20 emulator
           </para>
-          <indexterm zone="p20-emu p20-emu">
-            <primary sortas="b-p20-emu">p20-emu</primary>
+          <indexterm zone="p20-emu p20-emu-bin">
+            <primary sortas="b-p20-emu-bin">p20-emu</primary>
           </indexterm>
         </listitem>
       </varlistentry>

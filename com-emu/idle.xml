@@ -177,7 +177,7 @@ rm -rf idle_win32_bin</userinput></screen>
 
       <seglistitem>
         <seg>
-          idle-emu, mpw_obj2asm and xprofile_tool
+          idle-emu, mpw_obj2asm, and xprofile_tool
         </seg>
         <seg>
           None

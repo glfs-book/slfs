@@ -190,7 +190,7 @@ mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin<
           None
         </seg>
         <seg>
-          /usr/share/doc/freebee-b72776 and /usr/share/freebee
+          /usr/share/doc/freebee-&freebee-minor-version; and /usr/share/freebee
         </seg>
       </seglistitem>
     </segmentedlist>

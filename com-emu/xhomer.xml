@@ -113,13 +113,13 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
 
       <seglistitem>
         <seg>
-          xhomer, lbn2xhomer and venix2xhomer
+          xhomer, lbn2xhomer, and venix2xhomer
         </seg>
         <seg>
           None
         </seg>
         <seg>
-          /usr/share/doc/xhomer-2-19-24
+          /usr/share/doc/xhomer-&xhomer-version;
         </seg>
       </seglistitem>
     </segmentedlist>
@@ -135,8 +135,8 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
           <para>
             is the DEC Pro 350 emulator
           </para>
-          <indexterm zone="xhomer xhomer">
-            <primary sortas="b-xhomer">xhomer</primary>
+          <indexterm zone="xhomer xhomer-bin">
+            <primary sortas="b-xhomer-bin">xhomer</primary>
           </indexterm>
         </listitem>
       </varlistentry>

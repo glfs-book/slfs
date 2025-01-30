@@ -120,7 +120,7 @@ mv -v /usr/share/man/man1/gkermit.l /usr/share/man/man1/gkermit.1</userinput></s
           None
         </seg>
         <seg>
-          /usr/share/doc/gkermit-2.01
+          /usr/share/doc/gkermit-&gkermit-version;
         </seg>
       </seglistitem>
     </segmentedlist>
@@ -136,8 +136,8 @@ mv -v /usr/share/man/man1/gkermit.l /usr/share/man/man1/gkermit.1</userinput></s
           <para>
             TODO
           </para>
-          <indexterm zone="gkermit gkermit">
-            <primary sortas="b-gkermit">gkermit</primary>
+          <indexterm zone="gkermit gkermit-bin">
+            <primary sortas="b-gkermit-bin">gkermit</primary>
           </indexterm>
         </listitem>
       </varlistentry>

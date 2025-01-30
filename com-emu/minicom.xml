@@ -79,7 +79,7 @@ make</userinput></screen>
 
       <seglistitem>
         <seg>
-          ascii-xfr, minicom, runscript and xminicom
+          ascii-xfr, minicom, runscript, and xminicom
         </seg>
         <seg>
           None
@@ -113,8 +113,8 @@ make</userinput></screen>
           <para>
             TODO
           </para>
-          <indexterm zone="minicom minicom">
-            <primary sortas="b-minicom">minicom</primary>
+          <indexterm zone="minicom minicom-bin">
+            <primary sortas="b-minicom-bin">minicom</primary>
           </indexterm>
         </listitem>
       </varlistentry>

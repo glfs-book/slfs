@@ -177,7 +177,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
       <seglistitem>
         <seg>
           s4date, s4disk, s4dump, s4export, s4fs, s4fsck, s4import,
-          s4merge, s4mkfs, s4test and s4vol
+          s4merge, s4mkfs, s4test, and s4vol
         </seg>
         <seg>
           libs4.so
