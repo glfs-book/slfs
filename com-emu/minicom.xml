@@ -99,7 +99,7 @@ make</userinput></screen>
         <term><command>ascii-xfr</command></term>
         <listitem>
           <para>
-            uploads/downloads files as ASCII
+            transfers files using the ASCII character set
           </para>
           <indexterm zone="minicom ascii-xfr">
             <primary sortas="b-ascii-xfr">ascii-xfr</primary>
