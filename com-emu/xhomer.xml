@@ -133,7 +133,7 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
         <term><command>xhomer</command></term>
         <listitem>
           <para>
-            TODO
+            is the DEC Pro 350 emulator
           </para>
           <indexterm zone="xhomer xhomer">
             <primary sortas="b-xhomer">xhomer</primary>
@@ -145,7 +145,8 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
         <term><command>lbn2xhomer</command></term>
         <listitem>
           <para>
-            TODO
+            converts RX50 disk image files from logical block order
+            to raw sector order
           </para>
           <indexterm zone="xhomer lbn2xhomer">
             <primary sortas="b-lbn2xhomer">lbn2xhomer</primary>
@@ -157,7 +158,8 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
         <term><command>venix2xhomer</command></term>
         <listitem>
           <para>
-            TODO
+            converts RX50 disk image files produced by Venix
+            to the format required by <command>xhomer</command>
           </para>
           <indexterm zone="xhomer venix2xhomer">
             <primary sortas="b-venix2xhomer">venix2xhomer</primary>
