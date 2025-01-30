@@ -119,6 +119,31 @@ make -f Makefile.daveb running</userinput></screen>
 
 <screen role="root"><userinput>make -f Makefile.daveb run_install</userinput></screen>
 
+    <important>
+      <para>
+        When you update the kernel, you will also need to reinstall this
+        kernel module.
+      </para>
+
+      <para>
+        This is because there is glue when kernel modules are built. This glue
+        doesn't matter too much with first party modules (modules in the kernel
+        source tree) as the modules are updated at the same time the kernel is.
+        At that point, there is new glue holding them together. However, when
+        it comes to third party modules, they aren't updated when the kernel
+        updates, so this glue the third party modules had on the kernel breaks.
+        This leads to broken kernel modules. This also applies if you stay on
+        the same kernel verion but change some options, this can also break
+        the glue.
+      </para>
+
+      <para>
+        Be sure that when you reinstall the driver, make sure you are using
+        the new kernel and have the kernel source you built from. Otherwise
+        the driver will fail to install.
+      </para>
+    </important>
+
     <para>
       Now install the <application>s4-3b1-pc7300</application> userland tools
       by running the following commands:
