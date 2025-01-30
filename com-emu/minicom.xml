@@ -99,7 +99,7 @@ make</userinput></screen>
         <term><command>ascii-xfr</command></term>
         <listitem>
           <para>
-            TODO
+            uploads/downloads files as ASCII
           </para>
           <indexterm zone="minicom ascii-xfr">
             <primary sortas="b-ascii-xfr">ascii-xfr</primary>
@@ -111,7 +111,7 @@ make</userinput></screen>
         <term><command>minicom</command></term>
         <listitem>
           <para>
-            TODO
+            is the serial communication program
           </para>
           <indexterm zone="minicom minicom-bin">
             <primary sortas="b-minicom-bin">minicom</primary>
@@ -123,7 +123,7 @@ make</userinput></screen>
         <term><command>runscript</command></term>
         <listitem>
           <para>
-            TODO
+            is a script interpreter for <command>minicom</command>
           </para>
           <indexterm zone="minicom runscript">
             <primary sortas="b-runscript">runscript</primary>
@@ -135,7 +135,9 @@ make</userinput></screen>
         <term><command>xminicom</command></term>
         <listitem>
           <para>
-            TODO
+            is a script wrapper around <command>minicom</command>
+            which runs <command>minicom</command> with color support
+            if a compatible X11 terminal emulator is present
           </para>
           <indexterm zone="minicom xminicom">
             <primary sortas="b-xminicom">xminicom</primary>
