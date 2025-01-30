@@ -103,4 +103,70 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          xhomer, lbn2xhomer and venix2xhomer
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/xhomer-2-19-24
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="xhomer-bin">
+        <term><command>xhomer</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="xhomer xhomer">
+            <primary sortas="b-xhomer">xhomer</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lbn2xhomer">
+        <term><command>lbn2xhomer</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="xhomer lbn2xhomer">
+            <primary sortas="b-lbn2xhomer">lbn2xhomer</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="venix2xhomer">
+        <term><command>venix2xhomer</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="xhomer venix2xhomer">
+            <primary sortas="b-venix2xhomer">venix2xhomer</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>

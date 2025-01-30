@@ -196,4 +196,181 @@ done</userinput></screen>
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          lrz, lrb (link to lrz), lrx (link to lrz), rz (link to lrz), rb 
+          (link to lrb), rx (link to lrx), lsz, lsb (link to lsz), lsx
+          (link to lsz), sz (link to lsz), sb (link to lsb), sx (link to
+          lsx)
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="lrz">
+        <term><command>lrz</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz lrz">
+            <primary sortas="b-lrz">lrz</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lrb">
+        <term><command>lrb</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz lrb">
+            <primary sortas="b-lrb">lrb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lrx">
+        <term><command>lrx</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz lrx">
+            <primary sortas="b-lrx">lrx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rz">
+        <term><command>rz</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz rz">
+            <primary sortas="b-rz">rz</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rb">
+        <term><command>rb</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz rb">
+            <primary sortas="b-rb">rb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rx">
+        <term><command>rx</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz rx">
+            <primary sortas="b-rx">rx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lsz">
+        <term><command>lsz</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz lsz">
+            <primary sortas="b-lsz">lsz</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lsb">
+        <term><command>lsb</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz lsb">
+            <primary sortas="b-lsb">lsb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lsx">
+        <term><command>lsx</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz lsx">
+            <primary sortas="b-lsx">lsx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sz">
+        <term><command>sz</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz sz">
+            <primary sortas="b-sz">sz</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sb">
+        <term><command>sb</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz sb">
+            <primary sortas="b-sb">sb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sx">
+        <term><command>sx</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="lrzsz sx">
+            <primary sortas="b-sx">sx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>

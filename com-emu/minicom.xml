@@ -68,5 +68,83 @@ make</userinput></screen>
 <screen role="root"><userinput>make install</userinput></screen>
 
   </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          ascii-xfr, minicom, runscript and xminicom
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ascii-xfr">
+        <term><command>ascii-xfr</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="minicom ascii-xfr">
+            <primary sortas="b-ascii-xfr">ascii-xfr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="minicom-bin">
+        <term><command>minicom</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="minicom minicom">
+            <primary sortas="b-minicom">minicom</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="runscript">
+        <term><command>runscript</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="minicom runscript">
+            <primary sortas="b-runscript">runscript</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xminicom">
+        <term><command>xminicom</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="minicom xminicom">
+            <primary sortas="b-xminicom">xminicom</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
   
 </sect1>

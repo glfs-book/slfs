@@ -127,4 +127,46 @@ install -v -m644 ../U17-MERGED.BIN /usr/share/p20-emu</userinput></screen>
 
   </sect2>
 
+<sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          p20-emu
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/p20-emu
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="p20-emu-bin">
+        <term><command>p20-emu</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="p20-emu p20-emu">
+            <primary sortas="b-p20-emu">p20-emu</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>

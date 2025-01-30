@@ -174,4 +174,58 @@ mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin<
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          freebee and makehdimg
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/freebee-b72776 and /usr/share/freebee
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="freebee-bin">
+        <term><command>freebee</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="freebee freebee">
+            <primary sortas="b-freebee">freebee</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="makehdimg">
+        <term><command>makehdimg</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="freebee makehdimg">
+            <primary sortas="b-makehdimg">makehdimg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>
