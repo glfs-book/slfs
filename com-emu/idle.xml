@@ -197,7 +197,7 @@ rm -rf idle_win32_bin</userinput></screen>
         <term><command>idle-emu</command></term>
         <listitem>
           <para>
-            TODO
+            is the Apple Lisa emulator
           </para>
           <indexterm zone="idle idle-emu">
             <primary sortas="b-idle-emu">idle-emu</primary>
@@ -209,7 +209,8 @@ rm -rf idle_win32_bin</userinput></screen>
         <term><command>mpw_obj2asm</command></term>
         <listitem>
           <para>
-            TODO
+            is an experimental Macintosh MPW object file
+            disassembler
           </para>
           <indexterm zone="idle mpw_obj2asm">
             <primary sortas="b-mpw_obj2asm">mpw_obj2asm</primary>
@@ -221,7 +222,7 @@ rm -rf idle_win32_bin</userinput></screen>
         <term><command>xprofile_tool</command></term>
         <listitem>
           <para>
-            TODO
+            is a tool to manipulate X/ProFile drive images
           </para>
           <indexterm zone="idle xprofile_tool">
             <primary sortas="b-xprofile_tool">xprofile_tool</primary>
