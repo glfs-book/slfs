@@ -197,7 +197,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4date</command></term>
         <listitem>
           <para>
-            TODO
+            is an SVR2 <command>date</command< that starts in 2000
+            instead of 1900
           </para>
           <indexterm zone="s4-3b1-pc7300 s4date">
             <primary sortas="b-s4date">s4date</primary>
@@ -209,7 +210,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4disk</command></term>
         <listitem>
           <para>
-            TODO
+            is a tool to inspect volume images
           </para>
           <indexterm zone="s4-3b1-pc7300 s4disk">
             <primary sortas="b-s4disk">s4disk</primary>
@@ -221,7 +222,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4dump</command></term>
         <listitem>
           <para>
-            TODO
+            is a hex/ascii dumper tuned for dumping volume and FS
+            files
           </para>
           <indexterm zone="s4-3b1-pc7300 s4dump">
             <primary sortas="b-s4dump">s4dump</primary>
@@ -233,7 +235,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4export</command></term>
         <listitem>
           <para>
-            TODO
+            exports FSes from volumes into a mountable image file
           </para>
           <indexterm zone="s4-3b1-pc7300 s4export">
             <primary sortas="b-s4export">s4export</primary>
@@ -245,7 +247,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4fs</command></term>
         <listitem>
           <para>
-            TODO
+            is a tool for exploring FS image files
           </para>
           <indexterm zone="s4-3b1-pc7300 s4fs">
             <primary sortas="b-s4fs">s4fs</primary>
@@ -257,7 +259,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4fsck</command></term>
         <listitem>
           <para>
-            TODO
+            is an SVR2 <command>fsck</command> modified to work on
+            a possibly byte-swapped FS image
           </para>
           <indexterm zone="s4-3b1-pc7300 s4fsck">
             <primary sortas="b-s4fsck">s4fsck</primary>
@@ -269,7 +272,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4import</command></term>
         <listitem>
           <para>
-            TODO
+            merges an FS image into a volume file
           </para>
           <indexterm zone="s4-3b1-pc7300 s4import">
             <primary sortas="b-s4import">s4import</primary>
@@ -281,7 +284,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4merge</command></term>
         <listitem>
           <para>
-            TODO
+            merges multiple volume images into one, block by
+            block
           </para>
           <indexterm zone="s4-3b1-pc7300 s4merge">
             <primary sortas="b-s4merge">s4merge</primary>
@@ -293,7 +297,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4mkfs</command></term>
         <listitem>
           <para>
-            TODO
+            is an SVR2 <command>mkfs</command>, modified to generate
+            a file and handle byte-swapping
           </para>
           <indexterm zone="s4-3b1-pc7300 s4mkfs">
             <primary sortas="b-s4mkfs">s4mkfs</primary>
@@ -305,7 +310,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4test</command></term>
         <listitem>
           <para>
-            TODO
+            is a filesystem information tool and a test app for libs4
           </para>
           <indexterm zone="s4-3b1-pc7300 s4test">
             <primary sortas="b-s4test">s4test</primary>
@@ -317,7 +322,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4vol</command></term>
         <listitem>
           <para>
-            TODO
+            is a tool for advanced manipulation of 3B1 volume images
           </para>
           <indexterm zone="s4-3b1-pc7300 s4vol">
             <primary sortas="b-s4vol">s4vol</primary>
@@ -329,7 +334,9 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><filename class="libraryfile">libs4.so</filename></term>
         <listitem>
           <para>
-            TODO
+            provides functions for accessing AT&amp;T 3B1 UNIX PC/
+            PC-7300 hard drives, hard drive images and their
+            filesystems 
           </para>
           <indexterm zone="s4-3b1-pc7300 libs4">
             <primary sortas="c-libs4">libs4.so</primary>
