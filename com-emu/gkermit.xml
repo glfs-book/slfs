@@ -134,7 +134,7 @@ mv -v /usr/share/man/man1/gkermit.l /usr/share/man/man1/gkermit.1</userinput></s
         <term><command>gkermit</command></term>
         <listitem>
           <para>
-            TODO
+            transfers files using the Kermit protocol
           </para>
           <indexterm zone="gkermit gkermit-bin">
             <primary sortas="b-gkermit-bin">gkermit</primary>
