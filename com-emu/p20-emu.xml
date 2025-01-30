@@ -157,7 +157,7 @@ install -v -m644 ../U17-MERGED.BIN /usr/share/p20-emu</userinput></screen>
         <term><command>p20-emu</command></term>
         <listitem>
           <para>
-            TODO
+            is the Plexus P/20 emulator
           </para>
           <indexterm zone="p20-emu p20-emu">
             <primary sortas="b-p20-emu">p20-emu</primary>
