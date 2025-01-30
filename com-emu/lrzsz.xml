@@ -229,7 +229,7 @@ done</userinput></screen>
         <term><command>lrz</command></term>
         <listitem>
           <para>
-            TODO
+            receives files using the XMODEM/YMODEM/ZMODEM protocols
           </para>
           <indexterm zone="lrzsz lrz">
             <primary sortas="b-lrz">lrz</primary>
@@ -241,7 +241,7 @@ done</userinput></screen>
         <term><command>lrb</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lrz</command>
           </para>
           <indexterm zone="lrzsz lrb">
             <primary sortas="b-lrb">lrb</primary>
@@ -253,7 +253,7 @@ done</userinput></screen>
         <term><command>lrx</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lrz</command>
           </para>
           <indexterm zone="lrzsz lrx">
             <primary sortas="b-lrx">lrx</primary>
@@ -265,7 +265,7 @@ done</userinput></screen>
         <term><command>rz</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lrz</command>
           </para>
           <indexterm zone="lrzsz rz">
             <primary sortas="b-rz">rz</primary>
@@ -277,7 +277,7 @@ done</userinput></screen>
         <term><command>rb</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lrb</command>
           </para>
           <indexterm zone="lrzsz rb">
             <primary sortas="b-rb">rb</primary>
@@ -289,7 +289,7 @@ done</userinput></screen>
         <term><command>rx</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lrx</command>
           </para>
           <indexterm zone="lrzsz rx">
             <primary sortas="b-rx">rx</primary>
@@ -301,7 +301,7 @@ done</userinput></screen>
         <term><command>lsz</command></term>
         <listitem>
           <para>
-            TODO
+            sends files using the XMODEM/YMODEM/ZMODEM protocols
           </para>
           <indexterm zone="lrzsz lsz">
             <primary sortas="b-lsz">lsz</primary>
@@ -313,7 +313,7 @@ done</userinput></screen>
         <term><command>lsb</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lsz</command>
           </para>
           <indexterm zone="lrzsz lsb">
             <primary sortas="b-lsb">lsb</primary>
@@ -325,7 +325,7 @@ done</userinput></screen>
         <term><command>lsx</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lsz</command>
           </para>
           <indexterm zone="lrzsz lsx">
             <primary sortas="b-lsx">lsx</primary>
@@ -337,7 +337,7 @@ done</userinput></screen>
         <term><command>sz</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lsz</command>
           </para>
           <indexterm zone="lrzsz sz">
             <primary sortas="b-sz">sz</primary>
@@ -349,7 +349,7 @@ done</userinput></screen>
         <term><command>sb</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lsb</command>
           </para>
           <indexterm zone="lrzsz sb">
             <primary sortas="b-sb">sb</primary>
@@ -361,7 +361,7 @@ done</userinput></screen>
         <term><command>sx</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>lsx</command>
           </para>
           <indexterm zone="lrzsz sx">
             <primary sortas="b-sx">sx</primary>
