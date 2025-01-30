@@ -204,7 +204,7 @@ mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin<
         <term><command>freebee</command></term>
         <listitem>
           <para>
-            TODO
+            is the AT&amp;T 3B1 UNIX PC emulator
           </para>
           <indexterm zone="freebee freebee">
             <primary sortas="b-freebee">freebee</primary>
@@ -216,7 +216,8 @@ mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin<
         <term><command>makehdimg</command></term>
         <listitem>
           <para>
-            TODO
+            creates hard disk images for use with
+            <command>freebee</command>
           </para>
           <indexterm zone="freebee makehdimg">
             <primary sortas="b-makehdimg">makehdimg</primary>
