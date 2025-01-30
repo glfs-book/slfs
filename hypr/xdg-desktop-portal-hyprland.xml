@@ -39,9 +39,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
-      <xref linkend="hyprlang"/>,
-      <xref linkend="hyprutils"/>,
-      <xref linkend="hyprwayland-scanner"/>,
+      <xref linkend="hyprlib"/>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink> (for the GBM),
       <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
@@ -50,6 +48,11 @@
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, and
       <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Required (Runtime)</bridgehead>
+    <para role="runtime">
+      <xref linkend="hyprland"/>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>

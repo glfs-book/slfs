@@ -12,22 +12,17 @@
 
   <para>
     This section is dedicated to installing packages from the Hypr/Hyprland
-    ecosystem, including Hyprland itself.
+    ecosystem, including Hyprland itself, and their dependencies.
   </para>
 
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprutils.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprlang.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tomlplusplus.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libzip.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprcursor.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="pugixml.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprwayland-scanner.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="aquamarine.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libliftoff.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glaze.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libspng.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprgraphics.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprlib.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glaze.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="re2.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libliftoff.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprland.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sdbus-cpp.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xdg-desktop-portal-hyprland.xml"/>

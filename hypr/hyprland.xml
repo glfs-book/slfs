@@ -42,7 +42,6 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <xref linkend="aquamarine"/>,
       <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <phrase revision="sysv">
@@ -51,11 +50,7 @@
       <xref linkend="glaze"/>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
-      <xref linkend="hyprcursor"/>,
-      <xref linkend="hyprgraphics"/>,
-      <xref linkend="hyprlang"/>,
-      <xref linkend="hyprutils"/>,
-      <xref linkend="hyprwayland-scanner"/>,
+      <xref linkend="hyprlib"/>,
       <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,

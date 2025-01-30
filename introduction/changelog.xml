@@ -40,7 +40,18 @@
     -->
 
     <listitem>
-      <para>January 29th, 2024</para>
+      <para>January 30th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Hypr: Added hyprland-qt-support and
+          hyprland-qtutils; Put most Hypr packages into one page. Fixes
+          <ulink url="&lfs-qol-issues;/35">#35</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 29th, 2025</para>
       <itemizedlist>
         <listitem>
           <para>[zeckma] - Hypr: Added a few packages to satisfy Hyprland
