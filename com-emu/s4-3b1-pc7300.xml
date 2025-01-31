@@ -197,7 +197,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4date</command></term>
         <listitem>
           <para>
-            is an SVR2 <command>date</command< that starts in 2000
+            is an SVR2 <command>date</command> that starts in 2000
             instead of 1900
           </para>
           <indexterm zone="s4-3b1-pc7300 s4date">
