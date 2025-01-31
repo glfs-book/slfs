@@ -43,6 +43,11 @@
       <para>January 30th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[seal331] - com-emu: Document. Part of
+          <ulink url="&lfs-qol-issues;/11">#11</ulink>.
+          PR <ulink url="&lfs-qol-pull;/36">(#36)</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Hypr: Added hyprland-qt-support and
           hyprland-qtutils; Put most Hypr packages into one page. Fixes
           <ulink url="&lfs-qol-issues;/35">#35</ulink>.</para>
