@@ -21,8 +21,8 @@
     <title>Introduction to idle</title>
 
     <para>
-      The <application>idle</application> package is minimalistic Lisa 1/2
-      emulator.
+      The <application>idle</application> package is a minimalistic Lisa
+      1/2 emulator.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>
@@ -164,6 +164,73 @@ rm -rf idle_win32_bin</userinput></screen>
       directory and is named <filename>profile.raw</filename>.</para></note>
 
     </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          idle-emu, mpw_obj2asm, and xprofile_tool
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/idle
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="idle-emu">
+        <term><command>idle-emu</command></term>
+        <listitem>
+          <para>
+            is the Apple Lisa emulator
+          </para>
+          <indexterm zone="idle idle-emu">
+            <primary sortas="b-idle-emu">idle-emu</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mpw_obj2asm">
+        <term><command>mpw_obj2asm</command></term>
+        <listitem>
+          <para>
+            is an experimental Macintosh MPW object file
+            disassembler
+          </para>
+          <indexterm zone="idle mpw_obj2asm">
+            <primary sortas="b-mpw_obj2asm">mpw_obj2asm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xprofile_tool">
+        <term><command>xprofile_tool</command></term>
+        <listitem>
+          <para>
+            is a tool to manipulate X/ProFile drive images
+          </para>
+          <indexterm zone="idle xprofile_tool">
+            <primary sortas="b-xprofile_tool">xprofile_tool</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
   </sect2>
 

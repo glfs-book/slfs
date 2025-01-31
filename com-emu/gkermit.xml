@@ -104,4 +104,46 @@ mv -v /usr/share/man/man1/gkermit.l /usr/share/man/man1/gkermit.1</userinput></s
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          gkermit
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/gkermit-&gkermit-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="gkermit-bin">
+        <term><command>gkermit</command></term>
+        <listitem>
+          <para>
+            transfers files using the Kermit protocol
+          </para>
+          <indexterm zone="gkermit gkermit-bin">
+            <primary sortas="b-gkermit-bin">gkermit</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
 </sect1>

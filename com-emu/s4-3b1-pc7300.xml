@@ -119,6 +119,31 @@ make -f Makefile.daveb running</userinput></screen>
 
 <screen role="root"><userinput>make -f Makefile.daveb run_install</userinput></screen>
 
+    <important>
+      <para>
+        When you update the kernel, you will also need to reinstall this
+        kernel module.
+      </para>
+
+      <para>
+        This is because there is glue when kernel modules are built. This glue
+        doesn't matter too much with first party modules (modules in the kernel
+        source tree) as the modules are updated at the same time the kernel is.
+        At that point, there is new glue holding them together. However, when
+        it comes to third party modules, they aren't updated when the kernel
+        updates, so this glue the third party modules had on the kernel breaks.
+        This leads to broken kernel modules. This also applies if you stay on
+        the same kernel verion but change some options, this can also break
+        the glue.
+      </para>
+
+      <para>
+        Be sure that when you reinstall the driver, make sure you are using
+        the new kernel and have the kernel source you built from. Otherwise
+        the driver will fail to install.
+      </para>
+    </important>
+
     <para>
       Now install the <application>s4-3b1-pc7300</application> userland tools
       by running the following commands:
@@ -138,6 +163,188 @@ install -v -Dm644 s4d.h s4fixed.h     /usr/include        &amp;&amp;
 install -v -Dm755 libs4.so            /usr/lib            &amp;&amp;
 ln -svf           /usr/lib/libs4.so   /usr/lib/libs4.so.0 &amp;&amp;
 ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          s4date, s4disk, s4dump, s4export, s4fs, s4fsck, s4import,
+          s4merge, s4mkfs, s4test, and s4vol
+        </seg>
+        <seg>
+          libs4.so
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="s4date">
+        <term><command>s4date</command></term>
+        <listitem>
+          <para>
+            is an SVR2 <command>date</command> that starts in 2000
+            instead of 1900
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4date">
+            <primary sortas="b-s4date">s4date</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4disk">
+        <term><command>s4disk</command></term>
+        <listitem>
+          <para>
+            is a tool to inspect volume images
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4disk">
+            <primary sortas="b-s4disk">s4disk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4dump">
+        <term><command>s4dump</command></term>
+        <listitem>
+          <para>
+            is a hex/ascii dumper tuned for dumping volume and FS
+            files
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4dump">
+            <primary sortas="b-s4dump">s4dump</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4export">
+        <term><command>s4export</command></term>
+        <listitem>
+          <para>
+            exports FSes from volumes into a mountable image file
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4export">
+            <primary sortas="b-s4export">s4export</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4fs">
+        <term><command>s4fs</command></term>
+        <listitem>
+          <para>
+            is a tool for exploring FS image files
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4fs">
+            <primary sortas="b-s4fs">s4fs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4fsck">
+        <term><command>s4fsck</command></term>
+        <listitem>
+          <para>
+            is an SVR2 <command>fsck</command> modified to work on
+            a possibly byte-swapped FS image
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4fsck">
+            <primary sortas="b-s4fsck">s4fsck</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4import">
+        <term><command>s4import</command></term>
+        <listitem>
+          <para>
+            merges an FS image into a volume file
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4import">
+            <primary sortas="b-s4import">s4import</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4merge">
+        <term><command>s4merge</command></term>
+        <listitem>
+          <para>
+            merges multiple volume images into one, block by
+            block
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4merge">
+            <primary sortas="b-s4merge">s4merge</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4mkfs">
+        <term><command>s4mkfs</command></term>
+        <listitem>
+          <para>
+            is an SVR2 <command>mkfs</command>, modified to generate
+            a file and handle byte-swapping
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4mkfs">
+            <primary sortas="b-s4mkfs">s4mkfs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4test">
+        <term><command>s4test</command></term>
+        <listitem>
+          <para>
+            is a filesystem information tool and a test app for libs4
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4test">
+            <primary sortas="b-s4test">s4test</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s4vol">
+        <term><command>s4vol</command></term>
+        <listitem>
+          <para>
+            is a tool for advanced manipulation of 3B1 volume images
+          </para>
+          <indexterm zone="s4-3b1-pc7300 s4vol">
+            <primary sortas="b-s4vol">s4vol</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libs4">
+        <term><filename class="libraryfile">libs4.so</filename></term>
+        <listitem>
+          <para>
+            provides functions for accessing AT&amp;T 3B1 UNIX PC/
+            PC-7300 hard drives, hard drive images and their
+            filesystems 
+          </para>
+          <indexterm zone="s4-3b1-pc7300 libs4">
+            <primary sortas="c-libs4">libs4.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
 
   </sect2>
 
