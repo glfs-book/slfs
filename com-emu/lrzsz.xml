@@ -206,10 +206,10 @@ done</userinput></screen>
 
       <seglistitem>
         <seg>
-          lrz, lrb (link to lrz), lrx (link to lrz), rz (link to lrz), rb 
-          (link to lrb), rx (link to lrx), lsz, lsb (link to lsz), lsx
-          (link to lsz), sz (link to lsz), sb (link to lsb), and sx (link to
-          lsx)
+          lrb (link to lrz), lrx (link to lrz), lrz, lsb (link to lsz), lsx
+          (link to lsz), lsz, rb (link to lrb), rx (link to lrx), rz (link
+          to lrz), sb (link to lsb), sx (link to lsx), and sz (link to
+          lsz)
         </seg>
         <seg>
           None
@@ -224,18 +224,6 @@ done</userinput></screen>
       <bridgehead renderas="sect3">Short Descriptions</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
-
-      <varlistentry id="lrz">
-        <term><command>lrz</command></term>
-        <listitem>
-          <para>
-            receives files using the XMODEM/YMODEM/ZMODEM protocols
-          </para>
-          <indexterm zone="lrzsz lrz">
-            <primary sortas="b-lrz">lrz</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
 
       <varlistentry id="lrb">
         <term><command>lrb</command></term>
@@ -261,50 +249,14 @@ done</userinput></screen>
         </listitem>
       </varlistentry>
 
-      <varlistentry id="rz">
-        <term><command>rz</command></term>
+      <varlistentry id="lrz">
+        <term><command>lrz</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lrz</command>
+            receives files using the XMODEM/YMODEM/ZMODEM protocols
           </para>
-          <indexterm zone="lrzsz rz">
-            <primary sortas="b-rz">rz</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="rb">
-        <term><command>rb</command></term>
-        <listitem>
-          <para>
-            is a symlink pointing to <command>lrb</command>
-          </para>
-          <indexterm zone="lrzsz rb">
-            <primary sortas="b-rb">rb</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="rx">
-        <term><command>rx</command></term>
-        <listitem>
-          <para>
-            is a symlink pointing to <command>lrx</command>
-          </para>
-          <indexterm zone="lrzsz rx">
-            <primary sortas="b-rx">rx</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="lsz">
-        <term><command>lsz</command></term>
-        <listitem>
-          <para>
-            sends files using the XMODEM/YMODEM/ZMODEM protocols
-          </para>
-          <indexterm zone="lrzsz lsz">
-            <primary sortas="b-lsz">lsz</primary>
+          <indexterm zone="lrzsz lrz">
+            <primary sortas="b-lrz">lrz</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -333,14 +285,50 @@ done</userinput></screen>
         </listitem>
       </varlistentry>
 
-      <varlistentry id="sz">
-        <term><command>sz</command></term>
+      <varlistentry id="lsz">
+        <term><command>lsz</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lsz</command>
+            sends files using the XMODEM/YMODEM/ZMODEM protocols
           </para>
-          <indexterm zone="lrzsz sz">
-            <primary sortas="b-sz">sz</primary>
+          <indexterm zone="lrzsz lsz">
+            <primary sortas="b-lsz">lsz</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rb">
+        <term><command>rb</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>lrb</command>
+          </para>
+          <indexterm zone="lrzsz rb">
+            <primary sortas="b-rb">rb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rx">
+        <term><command>rx</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>lrx</command>
+          </para>
+          <indexterm zone="lrzsz rx">
+            <primary sortas="b-rx">rx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rz">
+        <term><command>rz</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>lrz</command>
+          </para>
+          <indexterm zone="lrzsz rz">
+            <primary sortas="b-rz">rz</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -365,6 +353,18 @@ done</userinput></screen>
           </para>
           <indexterm zone="lrzsz sx">
             <primary sortas="b-sx">sx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sz">
+        <term><command>sz</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>lsz</command>
+          </para>
+          <indexterm zone="lrzsz sz">
+            <primary sortas="b-sz">sz</primary>
           </indexterm>
         </listitem>
       </varlistentry>
