@@ -202,7 +202,9 @@ go over that limit. This keeps the XML from getting ugly and out of hand. There
 are situations where you can't keep it under that limit, such as using links or
 code blocks. That is fine. But if you can help it, please keep under the 80
 character limit.
-3. Edit `changelog.xml` as necessary. See section 3.1.2.9.
+3. Use oxford commas (subject1, subject2, and subject3) instead of
+(subject1, subject2 and subject3).
+4. Edit `changelog.xml` as necessary. See section 3.1.2.9.
 
 ## 3.2. Making an update
 First, you're going to need
