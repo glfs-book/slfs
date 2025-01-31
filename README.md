@@ -22,9 +22,15 @@ source via the stable branch.
 
 You can switch to it by running the following command:
 
+```Bash
 git checkout stable
+```
 
 Then render the book with `make STAB=release [other options]`.
+
+There are also [Releases](https://github.com/glfs-book/lfs-qol/releases) that
+you can download. All of them contain both the SysV and Systemd editions of the
+book, chunked HTML.
 
 # Installation
 
@@ -33,7 +39,7 @@ installed that deal with these conversions. Please read the `INSTALL.md` file to
 determine what programs you need to install and where to get instructions to
 install that software.
 
-After that, you can build the html with a simple `make` command.
+After that, you can build the HTML with a simple `make` command.
 You can change the revision, ie. systemd vs sysv by adding `REV=<rev>` to the
 `make` command. `<rev>` can be:
 - `sysv` (default)
@@ -41,7 +47,7 @@ You can change the revision, ie. systemd vs sysv by adding `REV=<rev>` to the
 
 Example: `make REV=systemd`.
 
-The default target (sysv) builds the html in `~/public_html/lfs-qol`,
+The default target (sysv) builds the HTML in `~/public_html/lfs-qol`,
 whereas for systemd, it would be in `~/public_html/lfs-qol-systemd`.
 It will by default make each package and section its own page then link
 everything together for a smooth experience.
@@ -57,6 +63,6 @@ Makefile targets are: `pdf`, `nochunks`, `validate`, and `lfs-qol-patch-list`.
 
 `nochunks`: builds LFS-QOL in one huge file.
 
-`validate`:  does an extensive check for xml errors in the book.
+`validate`:  does an extensive check for XML errors in the book.
 
 `lfs-qol-patch-list`: generates a list of all LFS-QOL controlled patches in the book.
