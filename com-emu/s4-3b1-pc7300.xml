@@ -334,8 +334,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><filename class="libraryfile">libs4.so</filename></term>
         <listitem>
           <para>
-            provides functions for accessing AT&amp;T 3B1 UNIX PC/
-            PC-7300 hard drives, hard drive images and their
+            provides functions for accessing AT&amp;T 3B1 UNIX
+            PC/PC-7300 hard drives, hard drive images and their
             filesystems 
           </para>
           <indexterm zone="s4-3b1-pc7300 libs4">
