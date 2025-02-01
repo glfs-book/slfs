@@ -41,7 +41,7 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/general/unzip.html">UnZip</ulink>
+      &unzip;
       (to unpack the distribution),
       <xref linkend="heirloom-ng"/> and
       <xref linkend="heirloom-devtools"/>

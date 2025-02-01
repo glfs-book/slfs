@@ -204,4 +204,7 @@ export -f as_root</userinput></screen>
 
 <!ENTITY berkeley-db "<ulink url='https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz'>Berkeley DB</ulink> (deprecated)">
 
+<!-- TODO: Replace link with libarchive when BLFS switches over. -->
+<!ENTITY unzip "<ulink url='&blfs-svn;/general/unzip.html'>UnZip</ulink>">
+
 <!ENTITY gobject-introspection "<xref linkend='glib2'/> (with GObject Introspection)">
