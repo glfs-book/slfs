@@ -1,19 +1,36 @@
 #!/usr/bin/python3
 
+# Quick doc stub generator script.
+# Warning: doesn't do *all* the work for you.
+# Review output manually after the script finishes.
+# (C) Seal Sealy, 2025
+
 import os
 import sys
 
-if len(sys.argv) != 3:
-	print("Usage: generate-doc-stub.py folder pkgname")
+if len(sys.argv) < 3:
+	print("Usage: generate-doc-stub.py pkgname folder1 <folder2> <folder3>")
 	sys.exit(1)
 
-if not os.path.isdir(sys.argv[1]):
-	print("Error: nonexistent folder")
+if not os.path.isdir(sys.argv[2]):
+	print("Error: nonexistent folder1")
 	sys.exit(1)
 
-filelist = onlyfiles = [f for f in os.listdir(sys.argv[1]) \
-			if os.path.isfile(os.path.join(sys.argv[1], f))]
-filelist = sorted(filelist)
+filelist1 =  [f for f in os.listdir(sys.argv[2]) \
+			if os.path.isfile(os.path.join(sys.argv[2], f))]
+if len(sys.argv) > 3:
+	filelist2 = [f for f in os.listdir(sys.argv[3]) \
+                        if os.path.isfile(os.path.join(sys.argv[3], f))]
+else:
+	filelist2 = []
+
+if len(sys.argv) > 4:
+	filelist3 = [f for f in os.listdir(sys.argv[4]) \
+                        if os.path.isfile(os.path.join(sys.argv[4], f))]
+else:
+	filelist3 = []
+
+filelist = sorted(list(set(filelist1 + filelist2 + filelist3)))
 
 print('''  <sect2 role="content">
     <title>Contents</title>
@@ -35,7 +52,7 @@ for i in filelist:
 		print(tmp)
 		tmp = '          '
 		tmp2 = tmp2[80:]
-print(tmp + tmp2, end='')
+print(tmp2, end='')
 print('''
         </seg>
         <seg>
@@ -61,7 +78,7 @@ for i in filelist:
           <para>
             TODO
           </para>
-          <indexterm zone="{sys.argv[2]} {i}">
+          <indexterm zone="{sys.argv[1]} {i}">
             <primary sortas="b-{i}">{i}</primary>
           </indexterm>
         </listitem>
