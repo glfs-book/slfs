@@ -101,4 +101,95 @@ ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          Mail (link to s-nail), /usr/ucb/mail (link to s-nail), mailx
+          (link to s-nail), and s-nail-dotlock
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="Mail">
+        <term><command>Mail</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>s-nail</command>
+          </para>
+          <indexterm zone="s-nail Mail">
+            <primary sortas="b-Mail">Mail</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ucb-mail">
+        <term><command>/usr/ucb/mail</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>s-nail</command>
+          </para>
+          <indexterm zone="s-nail ucb-mail">
+            <primary sortas="b-mail">mail</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mailx">
+        <term><command>mailx</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>s-nail</command>
+          </para>
+          <indexterm zone="s-nail mailx">
+            <primary sortas="b-mailx">mailx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s-nail-bin">
+        <term><command>s-nail</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="s-nail s-nail-bin">
+            <primary sortas="b-s-nail-bin">s-nail</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="s-nail-dotlock">
+        <term><command>s-nail-dotlock</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="s-nail s-nail-dotlock">
+            <primary sortas="b-s-nail-dotlock">s-nail-dotlock</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>

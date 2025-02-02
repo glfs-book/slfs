@@ -84,4 +84,961 @@ make</userinput></screen>
 
   </sect2>
   
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          ckdate, ckgid, ckint, ckitem, ckkeywd, ckpath, ckrange, ckstr, 
+          ckuid, ckyorn, cmdexec, dispgid (link to ckgid), errange 
+          (link to ckrange), errdate (link to ckdate), errint (link to ckint),
+          errkeywd (link to ckkeywd), errstr (link to ckstr), errtime (link to
+          cktime), erryorn (link to ckyorn), getdate (link to ckdate), getint 
+          (link to ckint), getkeywd (link to ckkeywd), getrange (link to 
+          ckrange), getstr (link to ckstr), getuid (link to ckuid), getyorn
+          (link to ckyorn), helpgid (link to ckgid), helpint (link to ckint), 
+          helppath (link to ckpath), helprange (link to ckrange), helptime
+          (link to cktime), helpuid (link to ckuid), i.CompCpio, i.awk,
+          i.build, i.sed, installf, pkgadd, pkgchk, pkginfo, pkginstall,
+          pkgmk, pkgname, pkgparam, pkgproto, pkgrm, pkgtrans, puttext, 
+          r.awk, r.build, r.sed, valdate (link to ckdate), valgid (link to
+          ckgid), valkeywd (link to ckkeywd), valpath (link to ckpath), valstr 
+          (link to ckstr), valtime (link to cktime), and valyorn (link to
+          ckyorn) 
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/sadm, and /var/sadm
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ckdate">
+        <term><command>ckdate</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckdate">
+            <primary sortas="b-ckdate">ckdate</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ckgid">
+        <term><command>ckgid</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckgid">
+            <primary sortas="b-ckgid">ckgid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ckint">
+        <term><command>ckint</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckint">
+            <primary sortas="b-ckint">ckint</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ckitem">
+        <term><command>ckitem</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckitem">
+            <primary sortas="b-ckitem">ckitem</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ckkeywd">
+        <term><command>ckkeywd</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckkeywd">
+            <primary sortas="b-ckkeywd">ckkeywd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ckpath">
+        <term><command>ckpath</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckpath">
+            <primary sortas="b-ckpath">ckpath</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ckrange">
+        <term><command>ckrange</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckrange">
+            <primary sortas="b-ckrange">ckrange</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ckstr">
+        <term><command>ckstr</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckstr">
+            <primary sortas="b-ckstr">ckstr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cktime">
+        <term><command>cktime</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite cktime">
+            <primary sortas="b-cktime">cktime</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ckuid">
+        <term><command>ckuid</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckuid">
+            <primary sortas="b-ckuid">ckuid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ckyorn">
+        <term><command>ckyorn</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite ckyorn">
+            <primary sortas="b-ckyorn">ckyorn</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cmdexec">
+        <term><command>cmdexec</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite cmdexec">
+            <primary sortas="b-cmdexec">cmdexec</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dispgid">
+        <term><command>dispgid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckgid</command>
+          </para>
+          <indexterm zone="pkgsuite dispgid">
+            <primary sortas="b-dispgid">dispgid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dispuid">
+        <term><command>dispuid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckuid</command>
+          </para>
+          <indexterm zone="pkgsuite dispuid">
+            <primary sortas="b-dispuid">dispuid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="errange">
+        <term><command>errange</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckrange</command>
+          </para>
+          <indexterm zone="pkgsuite errange">
+            <primary sortas="b-errange">errange</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="errdate">
+        <term><command>errdate</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckdate</command>
+          </para>
+          <indexterm zone="pkgsuite errdate">
+            <primary sortas="b-errdate">errdate</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="errgid">
+        <term><command>errgid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckgid</command>
+          </para>
+          <indexterm zone="pkgsuite errgid">
+            <primary sortas="b-errgid">errgid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="errint">
+        <term><command>errint</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckint</command>
+          </para>
+          <indexterm zone="pkgsuite errint">
+            <primary sortas="b-errint">errint</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="errkeywd">
+        <term><command>errkeywd</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckkeywd</command>
+          </para>
+          <indexterm zone="pkgsuite errkeywd">
+            <primary sortas="b-errkeywd">errkeywd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="errpath">
+        <term><command>errpath</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckpath</command>
+          </para>
+          <indexterm zone="pkgsuite errpath">
+            <primary sortas="b-errpath">errpath</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="errstr">
+        <term><command>errstr</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckstr</command>
+          </para>
+          <indexterm zone="pkgsuite errstr">
+            <primary sortas="b-errstr">errstr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="errtime">
+        <term><command>errtime</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>cktime</command>
+          </para>
+          <indexterm zone="pkgsuite errtime">
+            <primary sortas="b-errtime">errtime</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="erruid">
+        <term><command>erruid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckuid</command>
+          </para>
+          <indexterm zone="pkgsuite erruid">
+            <primary sortas="b-erruid">erruid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="erryorn">
+        <term><command>erryorn</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckyorn</command>
+          </para>
+          <indexterm zone="pkgsuite erryorn">
+            <primary sortas="b-erryorn">erryorn</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getdate">
+        <term><command>getdate</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckdate</command>
+          </para>
+          <indexterm zone="pkgsuite getdate">
+            <primary sortas="b-getdate">getdate</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getgid">
+        <term><command>getgid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckgid</command>
+          </para>
+          <indexterm zone="pkgsuite getgid">
+            <primary sortas="b-getgid">getgid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getint">
+        <term><command>getint</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckint</command>
+          </para>
+          <indexterm zone="pkgsuite getint">
+            <primary sortas="b-getint">getint</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getkeywd">
+        <term><command>getkeywd</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckkeywd</command>
+          </para>
+          <indexterm zone="pkgsuite getkeywd">
+            <primary sortas="b-getkeywd">getkeywd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getpath">
+        <term><command>getpath</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckpath</command>
+          </para>
+          <indexterm zone="pkgsuite getpath">
+            <primary sortas="b-getpath">getpath</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getrange">
+        <term><command>getrange</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckrange</command>
+          </para>
+          <indexterm zone="pkgsuite getrange">
+            <primary sortas="b-getrange">getrange</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getstr">
+        <term><command>getstr</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckstr</command>
+          </para>
+          <indexterm zone="pkgsuite getstr">
+            <primary sortas="b-getstr">getstr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gettime">
+        <term><command>gettime</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>cktime</command>
+          </para>
+          <indexterm zone="pkgsuite gettime">
+            <primary sortas="b-gettime">gettime</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getuid">
+        <term><command>getuid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckuid</command>
+          </para>
+          <indexterm zone="pkgsuite getuid">
+            <primary sortas="b-getuid">getuid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getyorn">
+        <term><command>getyorn</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckyorn</command>
+          </para>
+          <indexterm zone="pkgsuite getyorn">
+            <primary sortas="b-getyorn">getyorn</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helpdate">
+        <term><command>helpdate</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckdate</command>
+          </para>
+          <indexterm zone="pkgsuite helpdate">
+            <primary sortas="b-helpdate">helpdate</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helpgid">
+        <term><command>helpgid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckgid</command>
+          </para>
+          <indexterm zone="pkgsuite helpgid">
+            <primary sortas="b-helpgid">helpgid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helpint">
+        <term><command>helpint</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckint</command>
+          </para>
+          <indexterm zone="pkgsuite helpint">
+            <primary sortas="b-helpint">helpint</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helpkeywd">
+        <term><command>helpkeywd</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckkeywd</command>
+          </para>
+          <indexterm zone="pkgsuite helpkeywd">
+            <primary sortas="b-helpkeywd">helpkeywd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helppath">
+        <term><command>helppath</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckpath</command>
+          </para>
+          <indexterm zone="pkgsuite helppath">
+            <primary sortas="b-helppath">helppath</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helprange">
+        <term><command>helprange</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckrange</command>
+          </para>
+          <indexterm zone="pkgsuite helprange">
+            <primary sortas="b-helprange">helprange</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helpstr">
+        <term><command>helpstr</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckstr</command>
+          </para>
+          <indexterm zone="pkgsuite helpstr">
+            <primary sortas="b-helpstr">helpstr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helptime">
+        <term><command>helptime</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>cktime</command>
+          </para>
+          <indexterm zone="pkgsuite helptime">
+            <primary sortas="b-helptime">helptime</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helpuid">
+        <term><command>helpuid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckuid</command>
+          </para>
+          <indexterm zone="pkgsuite helpuid">
+            <primary sortas="b-helpuid">helpuid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="helpyorn">
+        <term><command>helpyorn</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckyorn</command>
+          </para>
+          <indexterm zone="pkgsuite helpyorn">
+            <primary sortas="b-helpyorn">helpyorn</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="i.CompCpio">
+        <term><command>i.CompCpio</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite i.CompCpio">
+            <primary sortas="b-i.CompCpio">i.CompCpio</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="i.awk">
+        <term><command>i.awk</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite i.awk">
+            <primary sortas="b-i.awk">i.awk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="i.build">
+        <term><command>i.build</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite i.build">
+            <primary sortas="b-i.build">i.build</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="i.sed">
+        <term><command>i.sed</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite i.sed">
+            <primary sortas="b-i.sed">i.sed</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="installf">
+        <term><command>installf</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite installf">
+            <primary sortas="b-installf">installf</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgadd">
+        <term><command>pkgadd</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkgadd">
+            <primary sortas="b-pkgadd">pkgadd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgask">
+        <term><command>pkgask</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>pkgadd</command>
+          </para>
+          <indexterm zone="pkgsuite pkgask">
+            <primary sortas="b-pkgask">pkgask</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgchk">
+        <term><command>pkgchk</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkgchk">
+            <primary sortas="b-pkgchk">pkgchk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkginfo">
+        <term><command>pkginfo</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkginfo">
+            <primary sortas="b-pkginfo">pkginfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkginstall">
+        <term><command>pkginstall</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkginstall">
+            <primary sortas="b-pkginstall">pkginstall</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgmk">
+        <term><command>pkgmk</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkgmk">
+            <primary sortas="b-pkgmk">pkgmk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgname">
+        <term><command>pkgname</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkgname">
+            <primary sortas="b-pkgname">pkgname</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgparam">
+        <term><command>pkgparam</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkgparam">
+            <primary sortas="b-pkgparam">pkgparam</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgproto">
+        <term><command>pkgproto</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkgproto">
+            <primary sortas="b-pkgproto">pkgproto</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgremove">
+        <term><command>pkgremove</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkgremove">
+            <primary sortas="b-pkgremove">pkgremove</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgrm">
+        <term><command>pkgrm</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkgrm">
+            <primary sortas="b-pkgrm">pkgrm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkgtrans">
+        <term><command>pkgtrans</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite pkgtrans">
+            <primary sortas="b-pkgtrans">pkgtrans</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="puttext">
+        <term><command>puttext</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite puttext">
+            <primary sortas="b-puttext">puttext</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="r.awk">
+        <term><command>r.awk</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite r.awk">
+            <primary sortas="b-r.awk">r.awk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="r.build">
+        <term><command>r.build</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite r.build">
+            <primary sortas="b-r.build">r.build</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="r.sed">
+        <term><command>r.sed</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="pkgsuite r.sed">
+            <primary sortas="b-r.sed">r.sed</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="removef">
+        <term><command>removef</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>installf</command>
+          </para>
+          <indexterm zone="pkgsuite removef">
+            <primary sortas="b-removef">removef</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valdate">
+        <term><command>valdate</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckdate</command>
+          </para>
+          <indexterm zone="pkgsuite valdate">
+            <primary sortas="b-valdate">valdate</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valgid">
+        <term><command>valgid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckgid</command>
+          </para>
+          <indexterm zone="pkgsuite valgid">
+            <primary sortas="b-valgid">valgid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valint">
+        <term><command>valint</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckint</command>
+          </para>
+          <indexterm zone="pkgsuite valint">
+            <primary sortas="b-valint">valint</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valkeywd">
+        <term><command>valkeywd</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckkeywd</command>
+          </para>
+          <indexterm zone="pkgsuite valkeywd">
+            <primary sortas="b-valkeywd">valkeywd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valpath">
+        <term><command>valpath</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckpath</command>
+          </para>
+          <indexterm zone="pkgsuite valpath">
+            <primary sortas="b-valpath">valpath</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valrange">
+        <term><command>valrange</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckrange</command>
+          </para>
+          <indexterm zone="pkgsuite valrange">
+            <primary sortas="b-valrange">valrange</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valstr">
+        <term><command>valstr</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckstr</command>
+          </para>
+          <indexterm zone="pkgsuite valstr">
+            <primary sortas="b-valstr">valstr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valtime">
+        <term><command>valtime</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>cktime</command>
+          </para>
+          <indexterm zone="pkgsuite valtime">
+            <primary sortas="b-valtime">valtime</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valuid">
+        <term><command>valuid</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckuid</command>
+          </para>
+          <indexterm zone="pkgsuite valuid">
+            <primary sortas="b-valuid">valuid</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="valyorn">
+        <term><command>valyorn</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ckyorn</command>
+          </para>
+          <indexterm zone="pkgsuite valyorn">
+            <primary sortas="b-valyorn">valyorn</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>

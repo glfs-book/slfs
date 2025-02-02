@@ -70,4 +70,397 @@ install</userinput></screen>
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          addbib, checkeq, checknr, col, dhtml, dpost, eqn, grap, hunt, 
+          inv, lookbib, mkey, neqn, nroff, otf_info, pic, picpack, pm, ptx, 
+          roffbib, runinv, soelim, sortbib, ta, tbl, troff, vfontedpr, and
+          vgrind
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/pub, /usr/ucblib/doctools, and /usr/ucblib/reftools
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="addbib">
+        <term><command>addbib</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools addbib">
+            <primary sortas="b-addbib">addbib</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="checkeq">
+        <term><command>checkeq</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools checkeq">
+            <primary sortas="b-checkeq">checkeq</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="checknr">
+        <term><command>checknr</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools checknr">
+            <primary sortas="b-checknr">checknr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="col">
+        <term><command>col</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools col">
+            <primary sortas="b-col">col</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dhtml">
+        <term><command>dhtml</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools dhtml">
+            <primary sortas="b-dhtml">dhtml</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dpost">
+        <term><command>dpost</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools dpost">
+            <primary sortas="b-dpost">dpost</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="eqn">
+        <term><command>eqn</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools eqn">
+            <primary sortas="b-eqn">eqn</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grap">
+        <term><command>grap</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools grap">
+            <primary sortas="b-grap">grap</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hunt">
+        <term><command>hunt</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools hunt">
+            <primary sortas="b-hunt">hunt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="indxbib">
+        <term><command>indxbib</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools indxbib">
+            <primary sortas="b-indxbib">indxbib</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="inv">
+        <term><command>inv</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools inv">
+            <primary sortas="b-inv">inv</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lookbib">
+        <term><command>lookbib</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools lookbib">
+            <primary sortas="b-lookbib">lookbib</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mkey">
+        <term><command>mkey</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools mkey">
+            <primary sortas="b-mkey">mkey</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="neqn">
+        <term><command>neqn</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools neqn">
+            <primary sortas="b-neqn">neqn</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="nroff">
+        <term><command>nroff</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools nroff">
+            <primary sortas="b-nroff">nroff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="otf_info">
+        <term><command>otf_info</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools otf_info">
+            <primary sortas="b-otf_info">otf_info</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pic">
+        <term><command>pic</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools pic">
+            <primary sortas="b-pic">pic</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="picpack">
+        <term><command>picpack</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools picpack">
+            <primary sortas="b-picpack">picpack</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pm">
+        <term><command>pm</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools pm">
+            <primary sortas="b-pm">pm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ptx">
+        <term><command>ptx</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools ptx">
+            <primary sortas="b-ptx">ptx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="refer">
+        <term><command>refer</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools refer">
+            <primary sortas="b-refer">refer</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="roffbib">
+        <term><command>roffbib</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools roffbib">
+            <primary sortas="b-roffbib">roffbib</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="runinv">
+        <term><command>runinv</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools runinv">
+            <primary sortas="b-runinv">runinv</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="soelim">
+        <term><command>soelim</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools soelim">
+            <primary sortas="b-soelim">soelim</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sortbib">
+        <term><command>sortbib</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools sortbib">
+            <primary sortas="b-sortbib">sortbib</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ta">
+        <term><command>ta</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools ta">
+            <primary sortas="b-ta">ta</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tbl">
+        <term><command>tbl</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools tbl">
+            <primary sortas="b-tbl">tbl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="troff">
+        <term><command>troff</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools troff">
+            <primary sortas="b-troff">troff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vfontedpr">
+        <term><command>vfontedpr</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools vfontedpr">
+            <primary sortas="b-vfontedpr">vfontedpr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vgrind">
+        <term><command>vgrind</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="heirloom-doctools vgrind">
+            <primary sortas="b-vgrind">vgrind</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>
