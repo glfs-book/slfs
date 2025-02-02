@@ -93,7 +93,7 @@ install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
         <term><command>star</command></term>
         <listitem>
           <para>
-            TODO
+            is the tape archiver
           </para>
           <indexterm zone="star star-bin">
             <primary sortas="b-star-bin">star</primary>
@@ -105,7 +105,7 @@ install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
         <term><command>star_sym</command></term>
         <listitem>
           <para>
-            TODO
+            converts an inode database into a human-readable format
           </para>
           <indexterm zone="star star_sym">
             <primary sortas="b-star_sym">star_sym</primary>
@@ -117,7 +117,7 @@ install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
         <term><command>tartest</command></term>
         <listitem>
           <para>
-            TODO
+            tests a tar archive for POSIX.1‐1990 compliance
           </para>
           <indexterm zone="star tartest">
             <primary sortas="b-tartest">tartest</primary>
