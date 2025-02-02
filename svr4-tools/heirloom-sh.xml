@@ -118,7 +118,7 @@ EOF</userinput></screen>
 
       <seglistitem>
         <seg>
-          jsh, and sh
+          jsh (link to sh), and sh
         </seg>
         <seg>
           None
@@ -138,7 +138,7 @@ EOF</userinput></screen>
         <term><command>jsh</command></term>
         <listitem>
           <para>
-            TODO
+            is a symlink pointing to <command>sh</command>
           </para>
           <indexterm zone="heirloom-sh jsh">
             <primary sortas="b-jsh">jsh</primary>
@@ -150,7 +150,7 @@ EOF</userinput></screen>
         <term><command>sh</command></term>
         <listitem>
           <para>
-            TODO
+            is the Bourne shell
           </para>
           <indexterm zone="heirloom-sh sh">
             <primary sortas="b-sh">sh</primary>
