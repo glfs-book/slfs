@@ -103,7 +103,7 @@ install</userinput></screen>
         <term><command>addbib</command></term>
         <listitem>
           <para>
-            TODO
+            creates or extends a bibliographic database
           </para>
           <indexterm zone="heirloom-doctools addbib">
             <primary sortas="b-addbib">addbib</primary>
@@ -115,7 +115,7 @@ install</userinput></screen>
         <term><command>checkeq</command></term>
         <listitem>
           <para>
-            TODO
+            reports missing or unbalanced delimiters and .EQ/.EN pairs
           </para>
           <indexterm zone="heirloom-doctools checkeq">
             <primary sortas="b-checkeq">checkeq</primary>
@@ -127,7 +127,7 @@ install</userinput></screen>
         <term><command>checknr</command></term>
         <listitem>
           <para>
-            TODO
+            checks nroff/troff files
           </para>
           <indexterm zone="heirloom-doctools checknr">
             <primary sortas="b-checknr">checknr</primary>
@@ -139,7 +139,7 @@ install</userinput></screen>
         <term><command>col</command></term>
         <listitem>
           <para>
-            TODO
+            filters reverse line feeds
           </para>
           <indexterm zone="heirloom-doctools col">
             <primary sortas="b-col">col</primary>
@@ -151,7 +151,7 @@ install</userinput></screen>
         <term><command>dhtml</command></term>
         <listitem>
           <para>
-            TODO
+            is the HTML postprocessor for <command>troff</command>
           </para>
           <indexterm zone="heirloom-doctools dhtml">
             <primary sortas="b-dhtml">dhtml</primary>
@@ -163,7 +163,7 @@ install</userinput></screen>
         <term><command>dpost</command></term>
         <listitem>
           <para>
-            TODO
+            is the PostScript preprocessor for <command>troff</command>
           </para>
           <indexterm zone="heirloom-doctools dpost">
             <primary sortas="b-dpost">dpost</primary>
@@ -175,7 +175,8 @@ install</userinput></screen>
         <term><command>eqn</command></term>
         <listitem>
           <para>
-            TODO
+            is the <command>troff</command> preprocessor for typesetting
+            mathematics on a photo‐typesetter
           </para>
           <indexterm zone="heirloom-doctools eqn">
             <primary sortas="b-eqn">eqn</primary>
@@ -187,7 +188,7 @@ install</userinput></screen>
         <term><command>grap</command></term>
         <listitem>
           <para>
-            TODO
+            is the <command>pic</command> preprocessor for drawing graphs
           </para>
           <indexterm zone="heirloom-doctools grap">
             <primary sortas="b-grap">grap</primary>
@@ -199,7 +200,8 @@ install</userinput></screen>
         <term><command>hunt</command></term>
         <listitem>
           <para>
-            TODO
+            searches an index made by <command>indxbib</command> and delivers
+            the items
           </para>
           <indexterm zone="heirloom-doctools hunt">
             <primary sortas="b-hunt">hunt</primary>
@@ -211,7 +213,7 @@ install</userinput></screen>
         <term><command>indxbib</command></term>
         <listitem>
           <para>
-            TODO
+            builds an inverted index for a bibliography
           </para>
           <indexterm zone="heirloom-doctools indxbib">
             <primary sortas="b-indxbib">indxbib</primary>
@@ -223,7 +225,7 @@ install</userinput></screen>
         <term><command>inv</command></term>
         <listitem>
           <para>
-            TODO
+            makes an index from a set of keys
           </para>
           <indexterm zone="heirloom-doctools inv">
             <primary sortas="b-inv">inv</primary>
@@ -235,7 +237,8 @@ install</userinput></screen>
         <term><command>lookbib</command></term>
         <listitem>
           <para>
-            TODO
+            uses an inverted index made by <command>indxbib</command> to find
+            sets of bibliographic references
           </para>
           <indexterm zone="heirloom-doctools lookbib">
             <primary sortas="b-lookbib">lookbib</primary>
@@ -247,7 +250,7 @@ install</userinput></screen>
         <term><command>mkey</command></term>
         <listitem>
           <para>
-            TODO
+            isolates keys from input files
           </para>
           <indexterm zone="heirloom-doctools mkey">
             <primary sortas="b-mkey">mkey</primary>
@@ -259,7 +262,8 @@ install</userinput></screen>
         <term><command>neqn</command></term>
         <listitem>
           <para>
-            TODO
+            is the <command>troff</command> preprocessor for typesetting
+            mathematics on a terminal
           </para>
           <indexterm zone="heirloom-doctools neqn">
             <primary sortas="b-neqn">neqn</primary>
@@ -271,7 +275,7 @@ install</userinput></screen>
         <term><command>nroff</command></term>
         <listitem>
           <para>
-            TODO
+            formats documents for display or printing
           </para>
           <indexterm zone="heirloom-doctools nroff">
             <primary sortas="b-nroff">nroff</primary>
@@ -283,7 +287,7 @@ install</userinput></screen>
         <term><command>otf_info</command></term>
         <listitem>
           <para>
-            TODO
+            dumps contents of OpenType font files
           </para>
           <indexterm zone="heirloom-doctools otf_info">
             <primary sortas="b-otf_info">otf_info</primary>
@@ -295,7 +299,7 @@ install</userinput></screen>
         <term><command>pic</command></term>
         <listitem>
           <para>
-            TODO
+            is the <command>troff</command> preprocessor for drawing pictures
           </para>
           <indexterm zone="heirloom-doctools pic">
             <primary sortas="b-pic">pic</primary>
@@ -307,7 +311,7 @@ install</userinput></screen>
         <term><command>picpack</command></term>
         <listitem>
           <para>
-            TODO
+            is the PostScript picture packing preprocessor
           </para>
           <indexterm zone="heirloom-doctools picpack">
             <primary sortas="b-picpack">picpack</primary>
@@ -319,7 +323,8 @@ install</userinput></screen>
         <term><command>pm</command></term>
         <listitem>
           <para>
-            TODO
+            is the page justifier for the mpm <command>troff</command> macro
+            package
           </para>
           <indexterm zone="heirloom-doctools pm">
             <primary sortas="b-pm">pm</primary>
@@ -331,7 +336,7 @@ install</userinput></screen>
         <term><command>ptx</command></term>
         <listitem>
           <para>
-            TODO
+            generates a permuted index
           </para>
           <indexterm zone="heirloom-doctools ptx">
             <primary sortas="b-ptx">ptx</primary>
@@ -343,7 +348,7 @@ install</userinput></screen>
         <term><command>refer</command></term>
         <listitem>
           <para>
-            TODO
+            finds and inserts literature references in documents
           </para>
           <indexterm zone="heirloom-doctools refer">
             <primary sortas="b-refer">refer</primary>
@@ -355,7 +360,7 @@ install</userinput></screen>
         <term><command>roffbib</command></term>
         <listitem>
           <para>
-            TODO
+            prints out all records in a bibliographic database
           </para>
           <indexterm zone="heirloom-doctools roffbib">
             <primary sortas="b-roffbib">roffbib</primary>
@@ -367,7 +372,7 @@ install</userinput></screen>
         <term><command>runinv</command></term>
         <listitem>
           <para>
-            TODO
+            is a demonstration script for <command>inv</command>
           </para>
           <indexterm zone="heirloom-doctools runinv">
             <primary sortas="b-runinv">runinv</primary>
@@ -379,7 +384,7 @@ install</userinput></screen>
         <term><command>soelim</command></term>
         <listitem>
           <para>
-            TODO
+            eliminates .SO's from <command>nroff</command> input
           </para>
           <indexterm zone="heirloom-doctools soelim">
             <primary sortas="b-soelim">soelim</primary>
@@ -391,7 +396,7 @@ install</userinput></screen>
         <term><command>sortbib</command></term>
         <listitem>
           <para>
-            TODO
+            sorts a bibliographic database
           </para>
           <indexterm zone="heirloom-doctools sortbib">
             <primary sortas="b-sortbib">sortbib</primary>
@@ -403,7 +408,7 @@ install</userinput></screen>
         <term><command>ta</command></term>
         <listitem>
           <para>
-            TODO
+            drives an HP2621 terminal to see stuff quickly
           </para>
           <indexterm zone="heirloom-doctools ta">
             <primary sortas="b-ta">ta</primary>
@@ -415,7 +420,8 @@ install</userinput></screen>
         <term><command>tbl</command></term>
         <listitem>
           <para>
-            TODO
+            formats tables for <command>nroff</command> or
+            <command>troff</command>
           </para>
           <indexterm zone="heirloom-doctools tbl">
             <primary sortas="b-tbl">tbl</primary>
@@ -427,7 +433,7 @@ install</userinput></screen>
         <term><command>troff</command></term>
         <listitem>
           <para>
-            TODO
+            typesets or formats documents
           </para>
           <indexterm zone="heirloom-doctools troff">
             <primary sortas="b-troff">troff</primary>
@@ -439,7 +445,7 @@ install</userinput></screen>
         <term><command>vfontedpr</command></term>
         <listitem>
           <para>
-            TODO
+            is the preprocessor for <command>vgrind</command>
           </para>
           <indexterm zone="heirloom-doctools vfontedpr">
             <primary sortas="b-vfontedpr">vfontedpr</primary>
@@ -451,7 +457,7 @@ install</userinput></screen>
         <term><command>vgrind</command></term>
         <listitem>
           <para>
-            TODO
+            prints nice listings of programs
           </para>
           <indexterm zone="heirloom-doctools vgrind">
             <primary sortas="b-vgrind">vgrind</primary>
