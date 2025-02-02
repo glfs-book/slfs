@@ -27,6 +27,9 @@ for d in range(len(sys.argv)):
 	if d == 0 or d == 1:
 		continue
 	i = sys.argv[d]
+	if not os.path.isdir(i):
+		print(f"Error: nonexistent folder {i}")
+		sys.exit(1)
 	for f in os.listdir(i):
 		if os.path.islink(os.path.join(i, f)):
 			if os.path.isfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
