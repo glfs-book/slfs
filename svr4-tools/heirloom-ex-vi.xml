@@ -162,7 +162,7 @@ make</userinput></screen>
         <term><command>ex</command></term>
         <listitem>
           <para>
-            TODO
+            is the text editor
           </para>
           <indexterm zone="heirloom-ex-vi ex">
             <primary sortas="b-ex">ex</primary>
@@ -174,7 +174,7 @@ make</userinput></screen>
         <term><command>expreserve</command></term>
         <listitem>
           <para>
-            TODO
+            preserves files into <filename>/var/preserve</filename>
           </para>
           <indexterm zone="heirloom-ex-vi expreserve">
             <primary sortas="b-expreserve">expreserve</primary>
@@ -186,7 +186,7 @@ make</userinput></screen>
         <term><command>exrecover</command></term>
         <listitem>
           <para>
-            TODO
+            recovers files from <filename>/var/preserve</filename>
           </para>
           <indexterm zone="heirloom-ex-vi exrecover">
             <primary sortas="b-exrecover">exrecover</primary>
@@ -234,7 +234,8 @@ make</userinput></screen>
         <term><command>wvi</command></term>
         <listitem>
           <para>
-            TODO
+            is a script that opens <command>vi</command> in a
+            separate xterm
           </para>
           <indexterm zone="heirloom-ex-vi wvi">
             <primary sortas="b-wvi">wvi</primary>
