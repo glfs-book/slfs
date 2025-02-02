@@ -168,7 +168,7 @@ ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
         <term><command>s-nail</command></term>
         <listitem>
           <para>
-            TODO
+            is the Berkeley Mail 8.1-derived mail user agent
           </para>
           <indexterm zone="s-nail s-nail-bin">
             <primary sortas="b-s-nail-bin">s-nail</primary>
@@ -180,7 +180,7 @@ ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
         <term><command>s-nail-dotlock</command></term>
         <listitem>
           <para>
-            TODO
+            is a helper program for locking the mailbox
           </para>
           <indexterm zone="s-nail s-nail-dotlock">
             <primary sortas="b-s-nail-dotlock">s-nail-dotlock</primary>
