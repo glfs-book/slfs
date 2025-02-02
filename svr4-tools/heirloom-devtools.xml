@@ -158,7 +158,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>admin</command></term>
         <listitem>
           <para>
-            TODO
+            creates and administers SCCS files
           </para>
           <indexterm zone="heirloom-devtools admin">
             <primary sortas="b-admin">admin</primary>
@@ -182,7 +182,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>comb</command></term>
         <listitem>
           <para>
-            TODO
+            combines SCCS deltas
           </para>
           <indexterm zone="heirloom-devtools comb">
             <primary sortas="b-comb">comb</primary>
@@ -194,7 +194,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>delta</command></term>
         <listitem>
           <para>
-            TODO
+            makes a delta to an SCCS file
           </para>
           <indexterm zone="heirloom-devtools delta">
             <primary sortas="b-delta">delta</primary>
@@ -206,7 +206,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>get</command></term>
         <listitem>
           <para>
-            TODO
+            retrieves a version of an SCCS file
           </para>
           <indexterm zone="heirloom-devtools get">
             <primary sortas="b-get">get</primary>
@@ -218,7 +218,8 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>help</command></term>
         <listitem>
           <para>
-            TODO
+            retrieves information about error messages and warnings from
+            SCCS commands
           </para>
           <indexterm zone="heirloom-devtools help">
             <primary sortas="b-help">help</primary>
@@ -230,7 +231,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>lex</command></term>
         <listitem>
           <para>
-            TODO
+            is a generator of lexical analysis programs
           </para>
           <indexterm zone="heirloom-devtools lex">
             <primary sortas="b-lex">lex</primary>
@@ -242,7 +243,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>m4</command></term>
         <listitem>
           <para>
-            TODO
+            is the macro processor
           </para>
           <indexterm zone="heirloom-devtools m4">
             <primary sortas="b-m4">m4</primary>
@@ -254,7 +255,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>make</command></term>
         <listitem>
           <para>
-            TODO
+            maintains, updates, and regenerates groups of programs
           </para>
           <indexterm zone="heirloom-devtools make">
             <primary sortas="b-make">make</primary>
@@ -266,7 +267,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>prs</command></term>
         <listitem>
           <para>
-            TODO
+            displays selected portions of an SCCS history
           </para>
           <indexterm zone="heirloom-devtools prs">
             <primary sortas="b-prs">prs</primary>
@@ -278,7 +279,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>prt</command></term>
         <listitem>
           <para>
-            TODO
+            prints parts or all of an SCCS file
           </para>
           <indexterm zone="heirloom-devtools prt">
             <primary sortas="b-prt">prt</primary>
@@ -290,7 +291,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>rmdel</command></term>
         <listitem>
           <para>
-            TODO
+            removes a delta from an SCCS file
           </para>
           <indexterm zone="heirloom-devtools rmdel">
             <primary sortas="b-rmdel">rmdel</primary>
@@ -314,7 +315,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>sccs</command></term>
         <listitem>
           <para>
-            TODO
+            is the human-oriented frontend to the SCCS system
           </para>
           <indexterm zone="heirloom-devtools sccs">
             <primary sortas="b-sccs">sccs</primary>
@@ -326,7 +327,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>sccsdiff</command></term>
         <listitem>
           <para>
-            TODO
+            compares two versions of an SCCS file
           </para>
           <indexterm zone="heirloom-devtools sccsdiff">
             <primary sortas="b-sccsdiff">sccsdiff</primary>
@@ -350,7 +351,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>unget</command></term>
         <listitem>
           <para>
-            TODO
+            undos a previous get of an SCCS file
           </para>
           <indexterm zone="heirloom-devtools unget">
             <primary sortas="b-unget">unget</primary>
@@ -362,7 +363,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>val</command></term>
         <listitem>
           <para>
-            TODO
+            validates an SCCS file
           </para>
           <indexterm zone="heirloom-devtools val">
             <primary sortas="b-val">val</primary>
@@ -374,7 +375,8 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>vc</command></term>
         <listitem>
           <para>
-            TODO
+            reads a line of text and processes it as if it were a version
+            control statement.
           </para>
           <indexterm zone="heirloom-devtools vc">
             <primary sortas="b-vc">vc</primary>
@@ -386,7 +388,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>what</command></term>
         <listitem>
           <para>
-            TODO
+            extracts SCCS version information from a file
           </para>
           <indexterm zone="heirloom-devtools what">
             <primary sortas="b-what">what</primary>
@@ -398,7 +400,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>yacc</command></term>
         <listitem>
           <para>
-            TODO
+            is a yet-another compiler compiler
           </para>
           <indexterm zone="heirloom-devtools yacc">
             <primary sortas="b-yacc">yacc</primary>
@@ -410,7 +412,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><filename class="libraryfile">libl.a</filename></term>
         <listitem>
           <para>
-            TODO
+            is the supporting library for <command>lex</command>
           </para>
           <indexterm zone="heirloom-devtools libl">
             <primary sortas="c-libl">libl.a</primary>
@@ -422,7 +424,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><filename class="libraryfile">liby.a</filename></term>
         <listitem>
           <para>
-            TODO
+            is the supporting library for <command>yacc</command>
           </para>
           <indexterm zone="heirloom-devtools liby">
             <primary sortas="c-liby">liby.a</primary>
