@@ -129,7 +129,7 @@ make</userinput></screen>
         <term><command>ckdate</command></term>
         <listitem>
           <para>
-            TODO
+            prompts for and validates a date
           </para>
           <indexterm zone="pkgsuite ckdate">
             <primary sortas="b-ckdate">ckdate</primary>
@@ -141,7 +141,7 @@ make</userinput></screen>
         <term><command>ckgid</command></term>
         <listitem>
           <para>
-            TODO
+            prompts for and validates a group ID
           </para>
           <indexterm zone="pkgsuite ckgid">
             <primary sortas="b-ckgid">ckgid</primary>
@@ -153,7 +153,7 @@ make</userinput></screen>
         <term><command>ckint</command></term>
         <listitem>
           <para>
-            TODO
+            prompts for and verify and validates an integer value
           </para>
           <indexterm zone="pkgsuite ckint">
             <primary sortas="b-ckint">ckint</primary>
@@ -165,7 +165,7 @@ make</userinput></screen>
         <term><command>ckitem</command></term>
         <listitem>
           <para>
-            TODO
+            prompts for and return a menu item
           </para>
           <indexterm zone="pkgsuite ckitem">
             <primary sortas="b-ckitem">ckitem</primary>
@@ -177,7 +177,7 @@ make</userinput></screen>
         <term><command>ckkeywd</command></term>
         <listitem>
           <para>
-            TODO
+            prompts for and validates a keyword
           </para>
           <indexterm zone="pkgsuite ckkeywd">
             <primary sortas="b-ckkeywd">ckkeywd</primary>
@@ -189,7 +189,7 @@ make</userinput></screen>
         <term><command>ckpath</command></term>
         <listitem>
           <para>
-            TODO
+            prompts for and validates a pathname
           </para>
           <indexterm zone="pkgsuite ckpath">
             <primary sortas="b-ckpath">ckpath</primary>
@@ -201,7 +201,7 @@ make</userinput></screen>
         <term><command>ckrange</command></term>
         <listitem>
           <para>
-            TODO
+            prompts for and validates an integer in a specific range
           </para>
           <indexterm zone="pkgsuite ckrange">
             <primary sortas="b-ckrange">ckrange</primary>
@@ -213,7 +213,7 @@ make</userinput></screen>
         <term><command>ckstr</command></term>
         <listitem>
           <para>
-            TODO
+            displays a prompt, validates and returns a string answer
           </para>
           <indexterm zone="pkgsuite ckstr">
             <primary sortas="b-ckstr">ckstr</primary>
@@ -225,7 +225,7 @@ make</userinput></screen>
         <term><command>cktime</command></term>
         <listitem>
           <para>
-            TODO
+            displays a prompt, verify and returns a time of day
           </para>
           <indexterm zone="pkgsuite cktime">
             <primary sortas="b-cktime">cktime</primary>
@@ -237,7 +237,7 @@ make</userinput></screen>
         <term><command>ckuid</command></term>
         <listitem>
           <para>
-            TODO
+            prompts for and validates a user ID
           </para>
           <indexterm zone="pkgsuite ckuid">
             <primary sortas="b-ckuid">ckuid</primary>
@@ -249,7 +249,7 @@ make</userinput></screen>
         <term><command>ckyorn</command></term>
         <listitem>
           <para>
-            TODO
+            prompts for and validates yes/no
           </para>
           <indexterm zone="pkgsuite ckyorn">
             <primary sortas="b-ckyorn">ckyorn</primary>
@@ -261,7 +261,8 @@ make</userinput></screen>
         <term><command>cmdexec</command></term>
         <listitem>
           <para>
-            TODO
+            is a helper command for executing programs during package
+            installations
           </para>
           <indexterm zone="pkgsuite cmdexec">
             <primary sortas="b-cmdexec">cmdexec</primary>
@@ -657,7 +658,7 @@ make</userinput></screen>
         <term><command>i.CompCpio</command></term>
         <listitem>
           <para>
-            TODO
+            is a helper script for installing old-style WOS packages
           </para>
           <indexterm zone="pkgsuite i.CompCpio">
             <primary sortas="b-i.CompCpio">i.CompCpio</primary>
@@ -669,7 +670,8 @@ make</userinput></screen>
         <term><command>i.awk</command></term>
         <listitem>
           <para>
-            TODO
+            is a helper script for invoking <command>awk</command> during
+            package installations
           </para>
           <indexterm zone="pkgsuite i.awk">
             <primary sortas="b-i.awk">i.awk</primary>
@@ -681,7 +683,8 @@ make</userinput></screen>
         <term><command>i.build</command></term>
         <listitem>
           <para>
-            TODO
+            is a helper script for the build class action script which gets
+            invoked during package installations
           </para>
           <indexterm zone="pkgsuite i.build">
             <primary sortas="b-i.build">i.build</primary>
@@ -693,7 +696,8 @@ make</userinput></screen>
         <term><command>i.sed</command></term>
         <listitem>
           <para>
-            TODO
+            is a helper script for invoking <command>sed</command> during
+            package installations
           </para>
           <indexterm zone="pkgsuite i.sed">
             <primary sortas="b-i.sed">i.sed</primary>
@@ -705,7 +709,7 @@ make</userinput></screen>
         <term><command>installf</command></term>
         <listitem>
           <para>
-            TODO
+            adds a file to the software installation database
           </para>
           <indexterm zone="pkgsuite installf">
             <primary sortas="b-installf">installf</primary>
@@ -717,7 +721,7 @@ make</userinput></screen>
         <term><command>pkgadd</command></term>
         <listitem>
           <para>
-            TODO
+            transfers software packages to the system
           </para>
           <indexterm zone="pkgsuite pkgadd">
             <primary sortas="b-pkgadd">pkgadd</primary>
@@ -741,7 +745,7 @@ make</userinput></screen>
         <term><command>pkgchk</command></term>
         <listitem>
           <para>
-            TODO
+            checks package installation accuracy
           </para>
           <indexterm zone="pkgsuite pkgchk">
             <primary sortas="b-pkgchk">pkgchk</primary>
@@ -753,7 +757,7 @@ make</userinput></screen>
         <term><command>pkginfo</command></term>
         <listitem>
           <para>
-            TODO
+            displays software package information
           </para>
           <indexterm zone="pkgsuite pkginfo">
             <primary sortas="b-pkginfo">pkginfo</primary>
@@ -765,7 +769,7 @@ make</userinput></screen>
         <term><command>pkginstall</command></term>
         <listitem>
           <para>
-            TODO
+            is a more advanced version of <command>pkgadd</command>
           </para>
           <indexterm zone="pkgsuite pkginstall">
             <primary sortas="b-pkginstall">pkginstall</primary>
@@ -777,7 +781,7 @@ make</userinput></screen>
         <term><command>pkgmk</command></term>
         <listitem>
           <para>
-            TODO
+            produces an installable package
           </para>
           <indexterm zone="pkgsuite pkgmk">
             <primary sortas="b-pkgmk">pkgmk</primary>
@@ -789,7 +793,7 @@ make</userinput></screen>
         <term><command>pkgname</command></term>
         <listitem>
           <para>
-            TODO
+            compares package names
           </para>
           <indexterm zone="pkgsuite pkgname">
             <primary sortas="b-pkgname">pkgname</primary>
@@ -801,7 +805,7 @@ make</userinput></screen>
         <term><command>pkgparam</command></term>
         <listitem>
           <para>
-            TODO
+            displays package parameter values
           </para>
           <indexterm zone="pkgsuite pkgparam">
             <primary sortas="b-pkgparam">pkgparam</primary>
@@ -813,7 +817,8 @@ make</userinput></screen>
         <term><command>pkgproto</command></term>
         <listitem>
           <para>
-            TODO
+            generates prototype file entries for input to
+            <command>pkgmk</command>
           </para>
           <indexterm zone="pkgsuite pkgproto">
             <primary sortas="b-pkgproto">pkgproto</primary>
@@ -825,7 +830,7 @@ make</userinput></screen>
         <term><command>pkgremove</command></term>
         <listitem>
           <para>
-            TODO
+            is a more advanced version of <command>pkgrm</command>
           </para>
           <indexterm zone="pkgsuite pkgremove">
             <primary sortas="b-pkgremove">pkgremove</primary>
@@ -837,7 +842,7 @@ make</userinput></screen>
         <term><command>pkgrm</command></term>
         <listitem>
           <para>
-            TODO
+            removes a package from the system
           </para>
           <indexterm zone="pkgsuite pkgrm">
             <primary sortas="b-pkgrm">pkgrm</primary>
@@ -849,7 +854,7 @@ make</userinput></screen>
         <term><command>pkgtrans</command></term>
         <listitem>
           <para>
-            TODO
+            translates package format
           </para>
           <indexterm zone="pkgsuite pkgtrans">
             <primary sortas="b-pkgtrans">pkgtrans</primary>
@@ -861,7 +866,7 @@ make</userinput></screen>
         <term><command>puttext</command></term>
         <listitem>
           <para>
-            TODO
+            prints text to the screen
           </para>
           <indexterm zone="pkgsuite puttext">
             <primary sortas="b-puttext">puttext</primary>
@@ -873,7 +878,8 @@ make</userinput></screen>
         <term><command>r.awk</command></term>
         <listitem>
           <para>
-            TODO
+            is a helper script for invoking <command>awk</command> during
+            package removals
           </para>
           <indexterm zone="pkgsuite r.awk">
             <primary sortas="b-r.awk">r.awk</primary>
@@ -885,7 +891,8 @@ make</userinput></screen>
         <term><command>r.build</command></term>
         <listitem>
           <para>
-            TODO
+            is a helper script for the build class action script which gets
+            invoked during package removals
           </para>
           <indexterm zone="pkgsuite r.build">
             <primary sortas="b-r.build">r.build</primary>
@@ -897,7 +904,8 @@ make</userinput></screen>
         <term><command>r.sed</command></term>
         <listitem>
           <para>
-            TODO
+            is a helper script for invoking <command>sed</command> during
+            package removals
           </para>
           <indexterm zone="pkgsuite r.sed">
             <primary sortas="b-r.sed">r.sed</primary>
