@@ -10,7 +10,7 @@ import sys
 import itertools
 
 if len(sys.argv) < 3:
-	print("Usage: generate-doc-stub.py pkgname folder1 <folder2> <folder3>")
+	print("Usage: generate-doc-stub.py pkgname folder1 <folder2> <folder3> ...")
 	sys.exit(1)
 
 if not os.path.isdir(sys.argv[2]):
@@ -22,40 +22,18 @@ if not os.path.isdir(sys.argv[2]):
 # OR
 # [<file name>, 'f', 'FILLER']
 
-filelist1 = []
-for f in os.listdir(sys.argv[2]):
-	if os.path.islink(os.path.join(sys.argv[2], f)):
-		if os.path.isfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(sys.argv[2], \
-				f)), os.readlink(os.path.join(sys.argv[2], f))))):
-			filelist1.append([f, 's', os.path.basename(os.readlink(os.path.join(sys.argv[2], f)))])
-	elif os.path.isfile(os.path.join(sys.argv[2], f)):
-		filelist1.append([f, 'f', 'FILLER'])
-
-if len(sys.argv) > 3:
-	filelist2 = []
-	for f in os.listdir(sys.argv[3]):
-        	if os.path.islink(os.path.join(sys.argv[3], f)):
-                	if os.path.isfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(sys.argv[3], \
-                        	        f)), os.readlink(os.path.join(sys.argv[3], f))))):
-                        	filelist2.append([f, 's', os.path.basename(os.readlink(os.path.join(sys.argv[3], f)))])
-        	elif os.path.isfile(os.path.join(sys.argv[3], f)):
-                	filelist2.append([f, 'f', 'FILLER'])
-else:
-	filelist2 = []
-
-if len(sys.argv) > 4:
-	filelist3 = []
-	for f in os.listdir(sys.argv[4]):
-		if os.path.islink(os.path.join(sys.argv[4], f)):
-			if os.path.isfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(sys.argv[4], \
-					f)), os.readlink(os.path.join(sys.argv[4], f))))):
-				filelist3.append([f, 's', os.path.basename(os.readlink(os.path.join(sys.argv[4], f)))])
-		elif os.path.isfile(os.path.join(sys.argv[4], f)):
-			filelist3.append([f, 'f', 'FILLER'])
-else:
-	filelist3 = []
-
-filelist = filelist1 + filelist2 + filelist3
+filelist = []
+for d in range(len(sys.argv)):
+	if d == 0 or d == 1:
+		continue
+	i = sys.argv[d]
+	for f in os.listdir(i):
+		if os.path.islink(os.path.join(i, f)):
+			if os.path.isfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
+					f)), os.readlink(os.path.join(i, f))))):
+				filelist.append([f, 's', os.path.basename(os.readlink(os.path.join(i, f)))])
+		elif os.path.isfile(os.path.join(i, f)):
+			filelist.append([f, 'f', 'FILLER'])
 
 filelist.sort()
 filelist = list(filelist for filelist,_ in itertools.groupby(filelist))
