@@ -1,0 +1,20 @@
+diff -Naur heirloom-sh-050706/fault.c heirloom-sh-050706-patched/fault.c
+--- heirloom-sh-050706/fault.c	2025-02-03 21:42:16.617468309 +0300
++++ heirloom-sh-050706-patched/fault.c	2025-02-03 22:36:35.184395692 +0300
+@@ -43,7 +43,7 @@
+ #include	<string.h>
+ 
+ static	void (*psig0_func)(int) = SIG_ERR;	/* previous signal handler for signal 0 */
+-static	char sigsegv_stack[SIGSTKSZ];
++char *sigsegv_stack;
+ 
+ static BOOL sleeping = 0;
+ static unsigned char *trapcom[MAXTRAP]; /* array of actions, one per signal */
+@@ -288,6 +288,7 @@
+ 	int rtmax = -1;
+ #endif
+ 
++	sigsegv_stack = sbrk(SIGSTKSZ);
+ 	ss.ss_size = SIGSTKSZ;
+ 	ss.ss_sp = sigsegv_stack;
+ 	ss.ss_flags = 0;
