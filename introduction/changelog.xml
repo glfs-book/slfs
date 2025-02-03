@@ -40,6 +40,17 @@
     -->
 
     <listitem>
+      <para>February 2nd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - svr4-tools: Document. Part of
+          <ulink url="&lfs-qol-issues;/11">#11</ulink>.
+          PR <ulink url="&lfs-qol-pull;/36">(#41)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 30th, 2025</para>
       <itemizedlist>
         <listitem>
