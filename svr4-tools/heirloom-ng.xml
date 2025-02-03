@@ -123,6 +123,1886 @@ patch -Np1 -i ../heirloom-ng-&heirloom-ng-minor-version;-fix-shl-build.patch</us
 
 <screen role="root"><userinput>make install</userinput></screen>
 
-  </sect2>
   
+    <para>
+      As the &root; user, remove binaries also shipped by 
+      <application>heirloom-doctools</application> and
+      <application>heirloom-devtools</application>:
+    </para>
+
+<screen role="root"><userinput>rm -vf /usr/5bin/col /usr/5bin/what</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          STTY, apropos, awk, banner, basename, bc, bdiff, bfs, cal, calendar, 
+          cat, catman, chgrp, chmod, chown, chroot, cksum, cmp, comm, copy, cp, 
+          csplit, cut, date, dc, dd, deroff, df, dfspace, diff, diff3, 
+          diffh, dircmp, dirname, du, echo, ed, egrep, env, expand, expr, 
+          false, fgrep, file, find, fmt, fmtmsg, fold, getconf, getopt, grep, 
+          hd, head, hostname, id, install, join, kill, lc, line, listusers, ln, 
+          logname, ls, /usr/5bin/mail, man, mesg, mkdir, mkfifo, mknod, more, mt, mv, 
+          nawk, newform, news, nice, nl, nohup, oawk, od, page, paste, pathchk, 
+          pg, pgrep, pkill, pr, printenv, printf, priocntl, ps, psrinfo, ptime, 
+          random, readlink, renice, rm, rmdir, sdiff, sed, seq, setpgrp, 
+          shl, sleep, sort, spell, split, stty, su, sum, sync, tabs, tail, 
+          tapecntl, tar, tcopy, tee, test, time, touch, tr, true, tsort, tty, 
+          uname, unexpand, uniq, units, uptime, users, w, watch, wc, who, 
+          whoami, whodo, xargs, and yes 
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/5lib/spell, /usr/5lib/tmac, and /var/adm
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="STTY">
+        <term><command>STTY</command></term>
+        <listitem>
+          <para>
+            is a hard link to <command>stty</command>
+          </para>
+          <indexterm zone="heirloom-ng STTY">
+            <primary sortas="b-STTY">STTY</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="apropos">
+        <term><command>apropos</command></term>
+        <listitem>
+          <para>
+            locates commands by keyword lookup
+          </para>
+          <indexterm zone="heirloom-ng apropos">
+            <primary sortas="b-apropos">apropos</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="awk">
+        <term><command>awk</command></term>
+        <listitem>
+          <para>
+            is a hard link to either <command>oawk</command> or
+            <command>nawk</command>, depending on directory
+          </para>
+          <indexterm zone="heirloom-ng awk">
+            <primary sortas="b-awk">awk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="banner">
+        <term><command>banner</command></term>
+        <listitem>
+          <para>
+            makes posters
+          </para>
+          <indexterm zone="heirloom-ng banner">
+            <primary sortas="b-banner">banner</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="basename">
+        <term><command>basename</command></term>
+        <listitem>
+          <para>
+            returns a non‐directory portion of a pathname
+          </para>
+          <indexterm zone="heirloom-ng basename">
+            <primary sortas="b-basename">basename</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="bc">
+        <term><command>bc</command></term>
+        <listitem>
+          <para>
+            is the arbitrary‐precision arithmetic language
+          </para>
+          <indexterm zone="heirloom-ng bc">
+            <primary sortas="b-bc">bc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="bdiff">
+        <term><command>bdiff</command></term>
+        <listitem>
+          <para>
+            is a wrapper around <command>diff</command> with support for big
+            files
+          </para>
+          <indexterm zone="heirloom-ng bdiff">
+            <primary sortas="b-bdiff">bdiff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="bfs">
+        <term><command>bfs</command></term>
+        <listitem>
+          <para>
+            is a read-only wrapper around <command>ed</command> with support
+            for big files
+          </para>
+          <indexterm zone="heirloom-ng bfs">
+            <primary sortas="b-bfs">bfs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cal">
+        <term><command>cal</command></term>
+        <listitem>
+          <para>
+            prints a calendar
+          </para>
+          <indexterm zone="heirloom-ng cal">
+            <primary sortas="b-cal">cal</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="calendar">
+        <term><command>calendar</command></term>
+        <listitem>
+          <para>
+            is a reminder service
+          </para>
+          <indexterm zone="heirloom-ng calendar">
+            <primary sortas="b-calendar">calendar</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="calprog">
+        <term><command>calprog</command></term>
+        <listitem>
+          <para>
+            is the backend for <command>calendar</command>
+          </para>
+          <indexterm zone="heirloom-ng calprog">
+            <primary sortas="b-calprog">calprog</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cat">
+        <term><command>cat</command></term>
+        <listitem>
+          <para>
+            concatenates and prints files
+          </para>
+          <indexterm zone="heirloom-ng cat">
+            <primary sortas="b-cat">cat</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="catman">
+        <term><command>catman</command></term>
+        <listitem>
+          <para>
+            creates the formatted files for the reference manual
+          </para>
+          <indexterm zone="heirloom-ng catman">
+            <primary sortas="b-catman">catman</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="chgrp">
+        <term><command>chgrp</command></term>
+        <listitem>
+          <para>
+            changes groups in file permissions
+          </para>
+          <indexterm zone="heirloom-ng chgrp">
+            <primary sortas="b-chgrp">chgrp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="chmod">
+        <term><command>chmod</command></term>
+        <listitem>
+          <para>
+            changes the mode of a file
+          </para>
+          <indexterm zone="heirloom-ng chmod">
+            <primary sortas="b-chmod">chmod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="chown">
+        <term><command>chown</command></term>
+        <listitem>
+          <para>
+            changes the owner of a file
+          </para>
+          <indexterm zone="heirloom-ng chown">
+            <primary sortas="b-chown">chown</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="chroot">
+        <term><command>chroot</command></term>
+        <listitem>
+          <para>
+            runs a command with the specified directory as /
+          </para>
+          <indexterm zone="heirloom-ng chroot">
+            <primary sortas="b-chroot">chroot</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cksum">
+        <term><command>cksum</command></term>
+        <listitem>
+          <para>
+            prints file checksums and sizes
+          </para>
+          <indexterm zone="heirloom-ng cksum">
+            <primary sortas="b-cksum">cksum</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cmp">
+        <term><command>cmp</command></term>
+        <listitem>
+          <para>
+            compares two files
+          </para>
+          <indexterm zone="heirloom-ng cmp">
+            <primary sortas="b-cmp">cmp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="comm">
+        <term><command>comm</command></term>
+        <listitem>
+          <para>
+            selects or rejects lines common to two sorted files
+          </para>
+          <indexterm zone="heirloom-ng comm">
+            <primary sortas="b-comm">comm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="copy">
+        <term><command>copy</command></term>
+        <listitem>
+          <para>
+            copies groups of files
+          </para>
+          <indexterm zone="heirloom-ng copy">
+            <primary sortas="b-copy">copy</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cp">
+        <term><command>cp</command></term>
+        <listitem>
+          <para>
+            copies files
+          </para>
+          <indexterm zone="heirloom-ng cp">
+            <primary sortas="b-cp">cp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cpio">
+        <term><command>cpio</command></term>
+        <listitem>
+          <para>
+            copies file archives in and out
+          </para>
+          <indexterm zone="heirloom-ng cpio">
+            <primary sortas="b-cpio">cpio</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="csplit">
+        <term><command>csplit</command></term>
+        <listitem>
+          <para>
+            reads a file and writes it in pieces
+          </para>
+          <indexterm zone="heirloom-ng csplit">
+            <primary sortas="b-csplit">csplit</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cut">
+        <term><command>cut</command></term>
+        <listitem>
+          <para>
+            cuts out selected fields of each line of a file
+          </para>
+          <indexterm zone="heirloom-ng cut">
+            <primary sortas="b-cut">cut</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="date">
+        <term><command>date</command></term>
+        <listitem>
+          <para>
+            prints or sets the date
+          </para>
+          <indexterm zone="heirloom-ng date">
+            <primary sortas="b-date">date</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dc">
+        <term><command>dc</command></term>
+        <listitem>
+          <para>
+            is the desk calculator
+          </para>
+          <indexterm zone="heirloom-ng dc">
+            <primary sortas="b-dc">dc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dd">
+        <term><command>dd</command></term>
+        <listitem>
+          <para>
+            converts and copies a file
+          </para>
+          <indexterm zone="heirloom-ng dd">
+            <primary sortas="b-dd">dd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="deroff">
+        <term><command>deroff</command></term>
+        <listitem>
+          <para>
+            removes <command>nroff</command>/<command>troff</command>,
+            <command>tbl</command> and <command>eqn</command> constructs
+          </para>
+          <indexterm zone="heirloom-ng deroff">
+            <primary sortas="b-deroff">deroff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="df">
+        <term><command>df</command></term>
+        <listitem>
+          <para>
+            prints filesystem statistics
+          </para>
+          <indexterm zone="heirloom-ng df">
+            <primary sortas="b-df">df</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dfspace">
+        <term><command>dfspace</command></term>
+        <listitem>
+          <para>
+            is a hard link to <command>df</command>
+          </para>
+          <indexterm zone="heirloom-ng dfspace">
+            <primary sortas="b-dfspace">dfspace</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="diff">
+        <term><command>diff</command></term>
+        <listitem>
+          <para>
+            is a differential file comparison tool
+          </para>
+          <indexterm zone="heirloom-ng diff">
+            <primary sortas="b-diff">diff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="diff3">
+        <term><command>diff3</command></term>
+        <listitem>
+          <para>
+            is a 3-way differential file comparison tool
+          </para>
+          <indexterm zone="heirloom-ng diff3">
+            <primary sortas="b-diff3">diff3</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="diff3prog">
+        <term><command>diff3prog</command></term>
+        <listitem>
+          <para>
+            is the backend for <command>diff3</command>
+          </para>
+          <indexterm zone="heirloom-ng diff3prog">
+            <primary sortas="b-diff3prog">diff3prog</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="diffh">
+        <term><command>diffh</command></term>
+        <listitem>
+          <para>
+            is the backend for <command>diff -h</command>
+          </para>
+          <indexterm zone="heirloom-ng diffh">
+            <primary sortas="b-diffh">diffh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dircmp">
+        <term><command>dircmp</command></term>
+        <listitem>
+          <para>
+            compares directories
+          </para>
+          <indexterm zone="heirloom-ng dircmp">
+            <primary sortas="b-dircmp">dircmp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dirname">
+        <term><command>dirname</command></term>
+        <listitem>
+          <para>
+            returns the directory portion of a pathname
+          </para>
+          <indexterm zone="heirloom-ng dirname">
+            <primary sortas="b-dirname">dirname</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="du">
+        <term><command>du</command></term>
+        <listitem>
+          <para>
+            summarizes disk usage
+          </para>
+          <indexterm zone="heirloom-ng du">
+            <primary sortas="b-du">du</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="echo">
+        <term><command>echo</command></term>
+        <listitem>
+          <para>
+            echoes arguments
+          </para>
+          <indexterm zone="heirloom-ng echo">
+            <primary sortas="b-echo">echo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ed">
+        <term><command>ed</command></term>
+        <listitem>
+          <para>
+            is a text editor
+          </para>
+          <indexterm zone="heirloom-ng ed">
+            <primary sortas="b-ed">ed</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="egrep">
+        <term><command>egrep</command></term>
+        <listitem>
+          <para>
+            searches a file for a pattern using full regular expressions
+          </para>
+          <indexterm zone="heirloom-ng egrep">
+            <primary sortas="b-egrep">egrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="env">
+        <term><command>env</command></term>
+        <listitem>
+          <para>
+            sets environment for a command invocation
+          </para>
+          <indexterm zone="heirloom-ng env">
+            <primary sortas="b-env">env</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="expand">
+        <term><command>expand</command></term>
+        <listitem>
+          <para>
+            converts tabs to spaces
+          </para>
+          <indexterm zone="heirloom-ng expand">
+            <primary sortas="b-expand">expand</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="expr">
+        <term><command>expr</command></term>
+        <listitem>
+          <para>
+            evaluates arguments as an expression
+          </para>
+          <indexterm zone="heirloom-ng expr">
+            <primary sortas="b-expr">expr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="factor">
+        <term><command>factor</command></term>
+        <listitem>
+          <para>
+            factors a number
+          </para>
+          <indexterm zone="heirloom-ng factor">
+            <primary sortas="b-factor">factor</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="false">
+        <term><command>false</command></term>
+        <listitem>
+          <para>
+            always returns 255
+          </para>
+          <indexterm zone="heirloom-ng false">
+            <primary sortas="b-false">false</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fgrep">
+        <term><command>fgrep</command></term>
+        <listitem>
+          <para>
+            searches a file for a character string
+          </para>
+          <indexterm zone="heirloom-ng fgrep">
+            <primary sortas="b-fgrep">fgrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="file">
+        <term><command>file</command></term>
+        <listitem>
+          <para>
+            determines file type
+          </para>
+          <indexterm zone="heirloom-ng file">
+            <primary sortas="b-file">file</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="find">
+        <term><command>find</command></term>
+        <listitem>
+          <para>
+            finds files
+          </para>
+          <indexterm zone="heirloom-ng find">
+            <primary sortas="b-find">find</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fmt">
+        <term><command>fmt</command></term>
+        <listitem>
+          <para>
+            is a simple text formatter
+          </para>
+          <indexterm zone="heirloom-ng fmt">
+            <primary sortas="b-fmt">fmt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fmtmsg">
+        <term><command>fmtmsg</command></term>
+        <listitem>
+          <para>
+            displays a message in standard format
+          </para>
+          <indexterm zone="heirloom-ng fmtmsg">
+            <primary sortas="b-fmtmsg">fmtmsg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fold">
+        <term><command>fold</command></term>
+        <listitem>
+          <para>
+            folds long lines
+          </para>
+          <indexterm zone="heirloom-ng fold">
+            <primary sortas="b-fold">fold</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getconf">
+        <term><command>getconf</command></term>
+        <listitem>
+          <para>
+            gets configuration values
+          </para>
+          <indexterm zone="heirloom-ng getconf">
+            <primary sortas="b-getconf">getconf</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getopt">
+        <term><command>getopt</command></term>
+        <listitem>
+          <para>
+            parses command options
+          </para>
+          <indexterm zone="heirloom-ng getopt">
+            <primary sortas="b-getopt">getopt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grep">
+        <term><command>grep</command></term>
+        <listitem>
+          <para>
+            searches a file for a pattern
+          </para>
+          <indexterm zone="heirloom-ng grep">
+            <primary sortas="b-grep">grep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="groups">
+        <term><command>groups</command></term>
+        <listitem>
+          <para>
+            shows group memberships
+          </para>
+          <indexterm zone="heirloom-ng groups">
+            <primary sortas="b-groups">groups</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hd">
+        <term><command>hd</command></term>
+        <listitem>
+          <para>
+            displays files in hexadecimal format
+          </para>
+          <indexterm zone="heirloom-ng hd">
+            <primary sortas="b-hd">hd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="head">
+        <term><command>head</command></term>
+        <listitem>
+          <para>
+            displays first few lines of files
+          </para>
+          <indexterm zone="heirloom-ng head">
+            <primary sortas="b-head">head</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hostname">
+        <term><command>hostname</command></term>
+        <listitem>
+          <para>
+            sets or prints name of current host system
+          </para>
+          <indexterm zone="heirloom-ng hostname">
+            <primary sortas="b-hostname">hostname</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="id">
+        <term><command>id</command></term>
+        <listitem>
+          <para>
+            prints user and group IDs and names
+          </para>
+          <indexterm zone="heirloom-ng id">
+            <primary sortas="b-id">id</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="install">
+        <term><command>install</command></term>
+        <listitem>
+          <para>
+            installs files
+          </para>
+          <indexterm zone="heirloom-ng install">
+            <primary sortas="b-install">install</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="join">
+        <term><command>join</command></term>
+        <listitem>
+          <para>
+            is the relational database operator
+          </para>
+          <indexterm zone="heirloom-ng join">
+            <primary sortas="b-join">join</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="kill">
+        <term><command>kill</command></term>
+        <listitem>
+          <para>
+            terminates a process
+          </para>
+          <indexterm zone="heirloom-ng kill">
+            <primary sortas="b-kill">kill</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lc">
+        <term><command>lc</command></term>
+        <listitem>
+          <para>
+            lists contents of a directory
+          </para>
+          <indexterm zone="heirloom-ng lc">
+            <primary sortas="b-lc">lc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="line">
+        <term><command>line</command></term>
+        <listitem>
+          <para>
+            reads one line
+          </para>
+          <indexterm zone="heirloom-ng line">
+            <primary sortas="b-line">line</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="listusers">
+        <term><command>listusers</command></term>
+        <listitem>
+          <para>
+            prints a list of user logins
+          </para>
+          <indexterm zone="heirloom-ng listusers">
+            <primary sortas="b-listusers">listusers</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ln">
+        <term><command>ln</command></term>
+        <listitem>
+          <para>
+            makes links
+          </para>
+          <indexterm zone="heirloom-ng ln">
+            <primary sortas="b-ln">ln</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="logins">
+        <term><command>logins</command></term>
+        <listitem>
+          <para>
+            lists login information
+          </para>
+          <indexterm zone="heirloom-ng logins">
+            <primary sortas="b-logins">logins</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="logname">
+        <term><command>logname</command></term>
+        <listitem>
+          <para>
+            gets a login name
+          </para>
+          <indexterm zone="heirloom-ng logname">
+            <primary sortas="b-logname">logname</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ls">
+        <term><command>ls</command></term>
+        <listitem>
+          <para>
+            lists context of a directory
+          </para>
+          <indexterm zone="heirloom-ng ls">
+            <primary sortas="b-ls">ls</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fivebin-mail">
+        <term><command>/usr/5bin/mail</command></term>
+        <listitem>
+          <para>
+            sends or receives mail among users
+          </para>
+          <indexterm zone="heirloom-ng fivebin-mail">
+            <primary sortas="b-mail">/usr/5bin/mail</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="man">
+        <term><command>man</command></term>
+        <listitem>
+          <para>
+            finds and displays reference manual pages
+          </para>
+          <indexterm zone="heirloom-ng man">
+            <primary sortas="b-man">man</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mesg">
+        <term><command>mesg</command></term>
+        <listitem>
+          <para>
+            permits or denies messages
+          </para>
+          <indexterm zone="heirloom-ng mesg">
+            <primary sortas="b-mesg">mesg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mkdir">
+        <term><command>mkdir</command></term>
+        <listitem>
+          <para>
+            makes a directory
+          </para>
+          <indexterm zone="heirloom-ng mkdir">
+            <primary sortas="b-mkdir">mkdir</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mkfifo">
+        <term><command>mkfifo</command></term>
+        <listitem>
+          <para>
+            makes a FIFO special file
+          </para>
+          <indexterm zone="heirloom-ng mkfifo">
+            <primary sortas="b-mkfifo">mkfifo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mknod">
+        <term><command>mknod</command></term>
+        <listitem>
+          <para>
+            builds a device node
+          </para>
+          <indexterm zone="heirloom-ng mknod">
+            <primary sortas="b-mknod">mknod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="more">
+        <term><command>more</command></term>
+        <listitem>
+          <para>
+            browses through a text file
+          </para>
+          <indexterm zone="heirloom-ng more">
+            <primary sortas="b-more">more</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mt">
+        <term><command>mt</command></term>
+        <listitem>
+          <para>
+            is the magnetic tape utility
+          </para>
+          <indexterm zone="heirloom-ng mt">
+            <primary sortas="b-mt">mt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mv">
+        <term><command>mv</command></term>
+        <listitem>
+          <para>
+            moves or renames files and directories
+          </para>
+          <indexterm zone="heirloom-ng mv">
+            <primary sortas="b-mv">mv</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mvdir">
+        <term><command>mvdir</command></term>
+        <listitem>
+          <para>
+            moves a directory
+          </para>
+          <indexterm zone="heirloom-ng mvdir">
+            <primary sortas="b-mvdir">mvdir</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="nawk">
+        <term><command>nawk</command></term>
+        <listitem>
+          <para>
+            is the new version of a program for manipulating text files
+          </para>
+          <indexterm zone="heirloom-ng nawk">
+            <primary sortas="b-nawk">nawk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="newform">
+        <term><command>newform</command></term>
+        <listitem>
+          <para>
+            changes the format of a text file
+          </para>
+          <indexterm zone="heirloom-ng newform">
+            <primary sortas="b-newform">newform</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="news">
+        <term><command>news</command></term>
+        <listitem>
+          <para>
+            prints news items
+          </para>
+          <indexterm zone="heirloom-ng news">
+            <primary sortas="b-news">news</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="nice">
+        <term><command>nice</command></term>
+        <listitem>
+          <para>
+            runs a command at low priority
+          </para>
+          <indexterm zone="heirloom-ng nice">
+            <primary sortas="b-nice">nice</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="nl">
+        <term><command>nl</command></term>
+        <listitem>
+          <para>
+            is the line numbering filter
+          </para>
+          <indexterm zone="heirloom-ng nl">
+            <primary sortas="b-nl">nl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="nohup">
+        <term><command>nohup</command></term>
+        <listitem>
+          <para>
+            runs a command while ignoring hangups
+          </para>
+          <indexterm zone="heirloom-ng nohup">
+            <primary sortas="b-nohup">nohup</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="oawk">
+        <term><command>oawk</command></term>
+        <listitem>
+          <para>
+            is the old version of a program for manipulating text files
+          </para>
+          <indexterm zone="heirloom-ng oawk">
+            <primary sortas="b-oawk">oawk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="od">
+        <term><command>od</command></term>
+        <listitem>
+          <para>
+            displays files in octal format
+          </para>
+          <indexterm zone="heirloom-ng od">
+            <primary sortas="b-od">od</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="page">
+        <term><command>page</command></term>
+        <listitem>
+          <para>
+            pages through a text file
+          </para>
+          <indexterm zone="heirloom-ng page">
+            <primary sortas="b-page">page</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="paste">
+        <term><command>paste</command></term>
+        <listitem>
+          <para>
+            merges same lines of several files or subsequent lines of one file
+          </para>
+          <indexterm zone="heirloom-ng paste">
+            <primary sortas="b-paste">paste</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pathchk">
+        <term><command>pathchk</command></term>
+        <listitem>
+          <para>
+            checks pathnames
+          </para>
+          <indexterm zone="heirloom-ng pathchk">
+            <primary sortas="b-pathchk">pathchk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pax">
+        <term><command>pax</command></term>
+        <listitem>
+          <para>
+            is the Portable Archiver
+          </para>
+          <indexterm zone="heirloom-ng pax">
+            <primary sortas="b-pax">pax</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pg">
+        <term><command>pg</command></term>
+        <listitem>
+          <para>
+            is the file perusal filter for CRTs
+          </para>
+          <indexterm zone="heirloom-ng pg">
+            <primary sortas="b-pg">pg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pgrep">
+        <term><command>pgrep</command></term>
+        <listitem>
+          <para>
+            finds processes by names and other attributes
+          </para>
+          <indexterm zone="heirloom-ng pgrep">
+            <primary sortas="b-pgrep">pgrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pkill">
+        <term><command>pkill</command></term>
+        <listitem>
+          <para>
+            signals processes by names and other attributes
+          </para>
+          <indexterm zone="heirloom-ng pkill">
+            <primary sortas="b-pkill">pkill</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pr">
+        <term><command>pr</command></term>
+        <listitem>
+          <para>
+            prints files
+          </para>
+          <indexterm zone="heirloom-ng pr">
+            <primary sortas="b-pr">pr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="printenv">
+        <term><command>printenv</command></term>
+        <listitem>
+          <para>
+            prints out the environment
+          </para>
+          <indexterm zone="heirloom-ng printenv">
+            <primary sortas="b-printenv">printenv</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="printf">
+        <term><command>printf</command></term>
+        <listitem>
+          <para>
+            prints a text string
+          </para>
+          <indexterm zone="heirloom-ng printf">
+            <primary sortas="b-printf">printf</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="priocntl">
+        <term><command>priocntl</command></term>
+        <listitem>
+          <para>
+            controls the process scheduler
+          </para>
+          <indexterm zone="heirloom-ng priocntl">
+            <primary sortas="b-priocntl">priocntl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ps">
+        <term><command>ps</command></term>
+        <listitem>
+          <para>
+            prints process status
+          </para>
+          <indexterm zone="heirloom-ng ps">
+            <primary sortas="b-ps">ps</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="psrinfo">
+        <term><command>psrinfo</command></term>
+        <listitem>
+          <para>
+            displays processor information
+          </para>
+          <indexterm zone="heirloom-ng psrinfo">
+            <primary sortas="b-psrinfo">psrinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ptime">
+        <term><command>ptime</command></term>
+        <listitem>
+          <para>
+            times a command
+          </para>
+          <indexterm zone="heirloom-ng ptime">
+            <primary sortas="b-ptime">ptime</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="pwd">
+        <term><command>pwd</command></term>
+        <listitem>
+          <para>
+            prints the working directory name
+          </para>
+          <indexterm zone="heirloom-ng pwd">
+            <primary sortas="b-pwd">pwd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="random">
+        <term><command>random</command></term>
+        <listitem>
+          <para>
+            generates a random number
+          </para>
+          <indexterm zone="heirloom-ng random">
+            <primary sortas="b-random">random</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="readlink">
+        <term><command>readlink</command></term>
+        <listitem>
+          <para>
+            displays the target of a symbolic link
+          </para>
+          <indexterm zone="heirloom-ng readlink">
+            <primary sortas="b-readlink">readlink</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="renice">
+        <term><command>renice</command></term>
+        <listitem>
+          <para>
+            alters priority of running processes
+          </para>
+          <indexterm zone="heirloom-ng renice">
+            <primary sortas="b-renice">renice</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rm">
+        <term><command>rm</command></term>
+        <listitem>
+          <para>
+            removes files
+          </para>
+          <indexterm zone="heirloom-ng rm">
+            <primary sortas="b-rm">rm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rmdir">
+        <term><command>rmdir</command></term>
+        <listitem>
+          <para>
+            removes directories
+          </para>
+          <indexterm zone="heirloom-ng rmdir">
+            <primary sortas="b-rmdir">rmdir</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sdiff">
+        <term><command>sdiff</command></term>
+        <listitem>
+          <para>
+            prints file differences side-by-side
+          </para>
+          <indexterm zone="heirloom-ng sdiff">
+            <primary sortas="b-sdiff">sdiff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sed">
+        <term><command>sed</command></term>
+        <listitem>
+          <para>
+            is the stream editor
+          </para>
+          <indexterm zone="heirloom-ng sed">
+            <primary sortas="b-sed">sed</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="seq">
+        <term><command>seq</command></term>
+        <listitem>
+          <para>
+            prints a sequence of numbers
+          </para>
+          <indexterm zone="heirloom-ng seq">
+            <primary sortas="b-seq">seq</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="setpgrp">
+        <term><command>setpgrp</command></term>
+        <listitem>
+          <para>
+            sets process group ID and session ID
+          </para>
+          <indexterm zone="heirloom-ng setpgrp">
+            <primary sortas="b-setpgrp">setpgrp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="settime">
+        <term><command>settime</command></term>
+        <listitem>
+          <para>
+            changes the access and modification dates of files
+          </para>
+          <indexterm zone="heirloom-ng settime">
+            <primary sortas="b-settime">settime</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="shl">
+        <term><command>shl</command></term>
+        <listitem>
+          <para>
+            is the shell layer manager
+          </para>
+          <indexterm zone="heirloom-ng shl">
+            <primary sortas="b-shl">shl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sleep">
+        <term><command>sleep</command></term>
+        <listitem>
+          <para>
+            suspends execution for an interval
+          </para>
+          <indexterm zone="heirloom-ng sleep">
+            <primary sortas="b-sleep">sleep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sort">
+        <term><command>sort</command></term>
+        <listitem>
+          <para>
+            sorts or merges files
+          </para>
+          <indexterm zone="heirloom-ng sort">
+            <primary sortas="b-sort">sort</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="spell">
+        <term><command>spell</command></term>
+        <listitem>
+          <para>
+            finds spelling errors
+          </para>
+          <indexterm zone="heirloom-ng spell">
+            <primary sortas="b-spell">spell</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="split">
+        <term><command>split</command></term>
+        <listitem>
+          <para>
+            splits a file into pieces
+          </para>
+          <indexterm zone="heirloom-ng split">
+            <primary sortas="b-split">split</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="stty">
+        <term><command>stty</command></term>
+        <listitem>
+          <para>
+            sets the options for a terminal
+          </para>
+          <indexterm zone="heirloom-ng stty">
+            <primary sortas="b-stty">stty</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="su">
+        <term><command>su</command></term>
+        <listitem>
+          <para>
+            helps you become superuser or another user
+          </para>
+          <indexterm zone="heirloom-ng su">
+            <primary sortas="b-su">su</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sum">
+        <term><command>sum</command></term>
+        <listitem>
+          <para>
+            sums and counts blocks in a file
+          </para>
+          <indexterm zone="heirloom-ng sum">
+            <primary sortas="b-sum">sum</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sync">
+        <term><command>sync</command></term>
+        <listitem>
+          <para>
+            updates the superblock
+          </para>
+          <indexterm zone="heirloom-ng sync">
+            <primary sortas="b-sync">sync</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tabs">
+        <term><command>tabs</command></term>
+        <listitem>
+          <para>
+            sets terminal tabs
+          </para>
+          <indexterm zone="heirloom-ng tabs">
+            <primary sortas="b-tabs">tabs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tail">
+        <term><command>tail</command></term>
+        <listitem>
+          <para>
+            displays the last few lines of a file
+          </para>
+          <indexterm zone="heirloom-ng tail">
+            <primary sortas="b-tail">tail</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tape">
+        <term><command>tape</command></term>
+        <listitem>
+          <para>
+            is a tool for magnetic tape maintenance
+          </para>
+          <indexterm zone="heirloom-ng tape">
+            <primary sortas="b-tape">tape</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tapecntl">
+        <term><command>tapecntl</command></term>
+        <listitem>
+          <para>
+            provides tape control for tape devices
+          </para>
+          <indexterm zone="heirloom-ng tapecntl">
+            <primary sortas="b-tapecntl">tapecntl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tar">
+        <term><command>tar</command></term>
+        <listitem>
+          <para>
+            is the tape archiver
+          </para>
+          <indexterm zone="heirloom-ng tar">
+            <primary sortas="b-tar">tar</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tcopy">
+        <term><command>tcopy</command></term>
+        <listitem>
+          <para>
+            copies a magnetic tape
+          </para>
+          <indexterm zone="heirloom-ng tcopy">
+            <primary sortas="b-tcopy">tcopy</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tee">
+        <term><command>tee</command></term>
+        <listitem>
+          <para>
+            transcribes stdin to stdout while making a copy in a file
+          </para>
+          <indexterm zone="heirloom-ng tee">
+            <primary sortas="b-tee">tee</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="test">
+        <term><command>test</command></term>
+        <listitem>
+          <para>
+            validates a condition
+          </para>
+          <indexterm zone="heirloom-ng test">
+            <primary sortas="b-test">test</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="time">
+        <term><command>time</command></term>
+        <listitem>
+          <para>
+            times a command
+          </para>
+          <indexterm zone="heirloom-ng time">
+            <primary sortas="b-time">time</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="touch">
+        <term><command>touch</command></term>
+        <listitem>
+          <para>
+            updates file access and modification times
+          </para>
+          <indexterm zone="heirloom-ng touch">
+            <primary sortas="b-touch">touch</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tr">
+        <term><command>tr</command></term>
+        <listitem>
+          <para>
+            translates characters
+          </para>
+          <indexterm zone="heirloom-ng tr">
+            <primary sortas="b-tr">tr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="true">
+        <term><command>true</command></term>
+        <listitem>
+          <para>
+            always returns 0
+          </para>
+          <indexterm zone="heirloom-ng true">
+            <primary sortas="b-true">true</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tsort">
+        <term><command>tsort</command></term>
+        <listitem>
+          <para>
+            topologically sorts entries
+          </para>
+          <indexterm zone="heirloom-ng tsort">
+            <primary sortas="b-tsort">tsort</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tty">
+        <term><command>tty</command></term>
+        <listitem>
+          <para>
+            gets the terminal name
+          </para>
+          <indexterm zone="heirloom-ng tty">
+            <primary sortas="b-tty">tty</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ul">
+        <term><command>ul</command></term>
+        <listitem>
+          <para>
+            underlines
+          </para>
+          <indexterm zone="heirloom-ng ul">
+            <primary sortas="b-ul">ul</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="uname">
+        <term><command>uname</command></term>
+        <listitem>
+          <para>
+            gets the system name
+          </para>
+          <indexterm zone="heirloom-ng uname">
+            <primary sortas="b-uname">uname</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="unexpand">
+        <term><command>unexpand</command></term>
+        <listitem>
+          <para>
+            converts spaces to tabs
+          </para>
+          <indexterm zone="heirloom-ng unexpand">
+            <primary sortas="b-unexpand">unexpand</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="uniq">
+        <term><command>uniq</command></term>
+        <listitem>
+          <para>
+            reports repeated lines in a file
+          </para>
+          <indexterm zone="heirloom-ng uniq">
+            <primary sortas="b-uniq">uniq</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="units">
+        <term><command>units</command></term>
+        <listitem>
+          <para>
+            is a unit conversion program
+          </para>
+          <indexterm zone="heirloom-ng units">
+            <primary sortas="b-units">units</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="uptime">
+        <term><command>uptime</command></term>
+        <listitem>
+          <para>
+            shows how long a system has been up for
+          </para>
+          <indexterm zone="heirloom-ng uptime">
+            <primary sortas="b-uptime">uptime</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="users">
+        <term><command>users</command></term>
+        <listitem>
+          <para>
+            displays a compact list of users logged on
+          </para>
+          <indexterm zone="heirloom-ng users">
+            <primary sortas="b-users">users</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="w">
+        <term><command>w</command></term>
+        <listitem>
+          <para>
+            displays who is on and what they are doing
+          </para>
+          <indexterm zone="heirloom-ng w">
+            <primary sortas="b-w">w</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="watch">
+        <term><command>watch</command></term>
+        <listitem>
+          <para>
+            executes a command repeatedly
+          </para>
+          <indexterm zone="heirloom-ng watch">
+            <primary sortas="b-watch">watch</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="wc">
+        <term><command>wc</command></term>
+        <listitem>
+          <para>
+            prints word count
+          </para>
+          <indexterm zone="heirloom-ng wc">
+            <primary sortas="b-wc">wc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="whatis">
+        <term><command>whatis</command></term>
+        <listitem>
+          <para>
+            displays a one-line summary about a keyword
+          </para>
+          <indexterm zone="heirloom-ng whatis">
+            <primary sortas="b-whatis">whatis</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="who">
+        <term><command>who</command></term>
+        <listitem>
+          <para>
+            displays who is on the system
+          </para>
+          <indexterm zone="heirloom-ng who">
+            <primary sortas="b-who">who</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="whoami">
+        <term><command>whoami</command></term>
+        <listitem>
+          <para>
+            displays the current effective username
+          </para>
+          <indexterm zone="heirloom-ng whoami">
+            <primary sortas="b-whoami">whoami</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="whodo">
+        <term><command>whodo</command></term>
+        <listitem>
+          <para>
+            prints who is doing what
+          </para>
+          <indexterm zone="heirloom-ng whodo">
+            <primary sortas="b-whodo">whodo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xargs">
+        <term><command>xargs</command></term>
+        <listitem>
+          <para>
+            constructs argument lists and executes commands
+          </para>
+          <indexterm zone="heirloom-ng xargs">
+            <primary sortas="b-xargs">xargs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="yes">
+        <term><command>yes</command></term>
+        <listitem>
+          <para>
+            prints a string repeatedly
+          </para>
+          <indexterm zone="heirloom-ng yes">
+            <primary sortas="b-yes">yes</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>

@@ -54,8 +54,27 @@
       <listitem>
         <para>
           <filename class="directory">/5bin</filename> and
-          <filename class="directory">/usr/5bin</filename>: System V (i.e. 5)
-          compatibility directory with AT&amp;T Unix System 5 compatible tools
+          <filename class="directory">/usr/5bin</filename>: SVID3-adhering
+          tools, aka tools compatible with AT&amp;T Unix System 5 Release
+          4.0 or Solaris 2
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <filename class="directory">/usr/5bin/s42</filename>: SVID4-adhering
+          tools, aka tools compatible with Unix System 5 Release 4.2MP
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <filename class="directory">/usr/5bin/posix</filename>:    
+          POSIX.2 and SUSv2-adhering tools
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <filename class="directory">/usr/5bin/posix2001</filename>:   
+          tools adhering to POSIX.1-2001 with SUSv3 extensions  
         </para>
       </listitem>
       <listitem>

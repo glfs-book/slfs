@@ -119,4 +119,132 @@ make</userinput></screen>
 
   </sect2>
   
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          edit (link to ex), ex, expreserve, exrecover, vedit (link to ex), 
+          view (link to ex), and wvi
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /var/preserve
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="edit">
+        <term><command>edit</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ex</command>
+          </para>
+          <indexterm zone="heirloom-ex-vi edit">
+            <primary sortas="b-edit">edit</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ex">
+        <term><command>ex</command></term>
+        <listitem>
+          <para>
+            is the text editor
+          </para>
+          <indexterm zone="heirloom-ex-vi ex">
+            <primary sortas="b-ex">ex</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="expreserve">
+        <term><command>expreserve</command></term>
+        <listitem>
+          <para>
+            preserves files into <filename>/var/preserve</filename>
+          </para>
+          <indexterm zone="heirloom-ex-vi expreserve">
+            <primary sortas="b-expreserve">expreserve</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="exrecover">
+        <term><command>exrecover</command></term>
+        <listitem>
+          <para>
+            recovers files from <filename>/var/preserve</filename>
+          </para>
+          <indexterm zone="heirloom-ex-vi exrecover">
+            <primary sortas="b-exrecover">exrecover</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vedit">
+        <term><command>vedit</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ex</command>
+          </para>
+          <indexterm zone="heirloom-ex-vi vedit">
+            <primary sortas="b-vedit">vedit</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vi">
+        <term><command>vi</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ex</command>
+          </para>
+          <indexterm zone="heirloom-ex-vi vi">
+            <primary sortas="b-vi">vi</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="view">
+        <term><command>view</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>ex</command>
+          </para>
+          <indexterm zone="heirloom-ex-vi view">
+            <primary sortas="b-view">view</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="wvi">
+        <term><command>wvi</command></term>
+        <listitem>
+          <para>
+            is a script that opens <command>vi</command> in a
+            separate xterm
+          </para>
+          <indexterm zone="heirloom-ex-vi wvi">
+            <primary sortas="b-wvi">wvi</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>

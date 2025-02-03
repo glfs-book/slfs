@@ -62,5 +62,71 @@ install -v -m644 star_sym/star_sym.1 /usr/share/man/5man/man1 &amp;&amp;
 install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
 
   </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          star, star_sym, and tartest
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="star-bin">
+        <term><command>star</command></term>
+        <listitem>
+          <para>
+            is the tape archiver
+          </para>
+          <indexterm zone="star star-bin">
+            <primary sortas="b-star-bin">star</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="star_sym">
+        <term><command>star_sym</command></term>
+        <listitem>
+          <para>
+            converts an inode database into a human-readable format
+          </para>
+          <indexterm zone="star star_sym">
+            <primary sortas="b-star_sym">star_sym</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tartest">
+        <term><command>tartest</command></term>
+        <listitem>
+          <para>
+            tests a tar archive for POSIX.1-1990 compliance
+          </para>
+          <indexterm zone="star tartest">
+            <primary sortas="b-tartest">tartest</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
   
 </sect1>

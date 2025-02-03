@@ -108,4 +108,58 @@ EOF</userinput></screen>
 
   </sect2>
 
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          jsh (link to sh), and sh
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="jsh">
+        <term><command>jsh</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>sh</command>
+          </para>
+          <indexterm zone="heirloom-sh jsh">
+            <primary sortas="b-jsh">jsh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sh">
+        <term><command>sh</command></term>
+        <listitem>
+          <para>
+            is the Bourne shell
+          </para>
+          <indexterm zone="heirloom-sh sh">
+            <primary sortas="b-sh">sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
 </sect1>
