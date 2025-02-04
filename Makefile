@@ -122,7 +122,7 @@ help:
 	@echo ""
 
 all: lfs-qol nochunks
-world: all lfs-qol-patch-list dump-commands test-links
+world: all dump-commands test-links
 
 html: $(BASEDIR)/index.html
 $(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
@@ -241,18 +241,6 @@ $(RENDERTMP)/$(LFS_QOLHTML): $(RENDERTMP)/$(LFS_QOLFULL) version
                 stylesheets/lfs-xsl/profile.xsl      \
                 $(RENDERTMP)/$(LFS_QOLFULL)
 
-lfs-qol-patch-list: lfs-qol-patches.sh
-	@echo "Generating lfs-qol patch list..."
-	$(Q)awk '{if ($$1 == "copy") {sub(/.*\//, "", $$2); print $$2}}' \
-	  lfs-qol-patches.sh > lfs-qol-patch-list
-
-lfs-qol-patches.sh: $(RENDERTMP)/$(LFS_QOLFULL) version
-	@echo "Generating lfs-qol patch script..."
-	$(Q)xsltproc --nonet                     \
-                --output lfs-qol-patches.sh    \
-                stylesheets/patcheslist.xsl \
-                $(RENDERTMP)/$(LFS_QOLFULL)
-
 wget-list: $(BASEDIR)/wget-list
 $(BASEDIR)/wget-list: $(RENDERTMP)/$(LFS_QOLFULL) version
 	@echo "Generating wget list for $(REV) at $(BASEDIR)/wget-list ..."
@@ -326,9 +314,9 @@ $(DUMPDIR): $(RENDERTMP)/$(LFS_QOLFULL) version
 	$(Q)touch $(DUMPDIR)
 	$(Q)rm -rf $(RENDERTMP)
 
-.PHONY: lfs-qol all world html nochunks tmpdir clean             \
-   validate profile-html lfs-qol-patch-list wget-list test-links \
-   dump-commands bootscripts systemd-units version test-options
+.PHONY: lfs-qol all world html nochunks pdf clean validate profile-html \
+   wget-list test-links dump-commands bootscripts systemd-units version \
+   test-options
 
 version:
 	$(Q)REV=$(REV) STAB=$(STAB) ./git-version.sh
