@@ -64,5 +64,3 @@ Makefile targets are: `pdf`, `nochunks`, `validate`, and `lfs-qol-patch-list`.
 `nochunks`: builds LFS-QOL in one huge file.
 
 `validate`:  does an extensive check for XML errors in the book.
-
-`lfs-qol-patch-list`: generates a list of all LFS-QOL controlled patches in the book.
