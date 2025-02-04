@@ -45,7 +45,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/svr4-tools/heirloom-sh/heirloom-sh-&heirloom-sh-version;-glibc234.patch"/>
+          <ulink url="&patch-root;/svr4-tools/heirloom-sh/heirloom-sh-&heirloom-sh-version;-glibc234-2.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -72,7 +72,7 @@
       Now, apply a patch to fix the build with glibc 2.34 or newer:
     </para>
 
-<screen><userinput>patch -Np1 -i ../heirloom-sh-&heirloom-sh-version;-glibc234.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../heirloom-sh-&heirloom-sh-version;-glibc234-2.patch</userinput></screen>
 
     <para>
       Install <application>heirloom-sh</application> by running the following

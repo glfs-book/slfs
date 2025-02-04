@@ -40,6 +40,18 @@
     -->
 
     <listitem>
+      <para>February 3rd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - heirloom-sh: Properly fix a glibc 2.34
+          compatibility issue. Fixes
+          <ulink url="&lfs-qol-issues;/17">#17</ulink>.
+          PR <ulink url="&lfs-qol-pull;/42">(#42)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 2nd, 2025</para>
       <itemizedlist>
         <listitem>
