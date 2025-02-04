@@ -112,7 +112,7 @@ ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
       <seglistitem>
         <seg>
           Mail (link to s-nail), /usr/ucb/mail (link to s-nail), mailx
-          (link to s-nail), and s-nail-dotlock
+          (link to s-nail), s-nail, and s-nail-dotlock
         </seg>
         <seg>
           None
