@@ -173,7 +173,7 @@ pdf: validate wget-list
 						--stringparam profile.condition pdf   \
 						--output $(RENDERTMP)/lfs-qol-pdf.xml \
 						stylesheets/lfs-xsl/profile.xsl       \
-						$(RENDERTMP)/$(LFS_QOLFULL).xml
+						$(RENDERTMP)/$(LFS_QOLFULL)
 
 	@echo "Generating FO file..."
 	$(Q)xsltproc --nonet										 \
