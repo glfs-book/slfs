@@ -57,7 +57,7 @@ running `make LFS_QOL_THEME=<theme>`. `<theme>` can equal:
 - light
 - dark
 
-Makefile targets are: `pdf`, `nochunks`, `validate`, and `lfs-qol-patch-list`.
+Makefile targets are: `pdf`, `nochunks`, and `validate`.
 
 `pdf`: builds LFS-QOL as a PDF file.
 
