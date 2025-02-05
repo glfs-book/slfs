@@ -56,10 +56,7 @@
       <xref linkend="libspng"/>,
       <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
       <xref linkend="libzip"/>,
-      <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink> (for the GBM),
-      OpenGL (<ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink> or
-      <ulink url="https://glfs-book.github.io/glfs/shareddeps/libglvnd.html">libglvnd</ulink>
-      (only the normal installation is required)),
+      <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>,
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,

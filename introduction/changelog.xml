@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>February 4th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Point to Mesa only instead of also libglvnd. Fixes
+          <ulink url="&lfs-qol-issues;/45">#45</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 3rd, 2025</para>
       <itemizedlist>
         <listitem>

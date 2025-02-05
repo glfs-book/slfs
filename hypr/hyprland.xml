@@ -56,9 +56,7 @@
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
       <xref linkend="libliftoff"/>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
-      OpenGL (<ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink> or
-      <ulink url="https://glfs-book.github.io/glfs/shareddeps/libglvnd.html">libglvnd</ulink>
-      (only the normal installation is required)),
+      <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <xref linkend="re2"/>,
