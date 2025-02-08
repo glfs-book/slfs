@@ -43,6 +43,10 @@
       <para>February 8th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - hyprland-protocols: Added. Fixes
+          <ulink url="&lfs-qol-issues;/46">#46</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - aquamarine: Allow building with Mesa OpenGL.</para>
         </listitem>
       </itemizedlist>

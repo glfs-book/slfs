@@ -81,7 +81,8 @@
     </para>
 
 <screen><userinput>cat &gt; hypr-list &lt;&lt; "EOF"
-<literal>hyprutils/&hypr-ext;/v&hyprutils-version;.tar.gz
+<literal>hyprland-protocols/&hypr-ext;/v&hyprland-protocols-version;.tar.gz
+hyprutils/&hypr-ext;/v&hyprutils-version;.tar.gz
 hyprlang/&hypr-ext;/v&hyprlang-version;.tar.gz
 hyprcursor/&hypr-ext;/v&hyprcursor-version;.tar.gz
 hyprwayland-scanner/&hypr-ext;/v&hyprwayland-scanner-version;.tar.gz
@@ -164,6 +165,12 @@ echo "Building $packagedir"
   pushd $packagedir
 
   case $packagedir in
+    hyprland-protocols-[0-9]* )
+      mkdir build
+      cd build
+        meson setup --prefix=/usr ..
+    ;;
+
     aquamarine-[0-9]* )
       sed -i 's/OpenGL::OpenGL/OpenGL::GL/g' \
           CMakeLists.txt
@@ -254,8 +261,9 @@ done</userinput></screen>
         </seg>
         <seg>
           /usr/include/{aquamarine,hyprcursor,hyprgraphics,hyprutils},
-          /usr/lib/cmake/hyprwayland-scanner, and
-          /usr/lib/qt6/qml/org/hyprland/style
+          /usr/lib/cmake/hyprwayland-scanner,
+          /usr/lib/qt6/qml/org/hyprland/style, and
+          /usr/share/hyprland-protocols
         </seg>
       </seglistitem>
     </segmentedlist>

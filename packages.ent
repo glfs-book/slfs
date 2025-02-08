@@ -8,6 +8,7 @@
 <!ENTITY libzip-version                      "1.11.3">
 <!ENTITY pugixml-version                     "1.15">
 <!ENTITY libspng-version                     "0.7.4">
+<!ENTITY hyprland-protocols-version          "0.6.2">
 <!ENTITY hyprutils-version                   "0.5.0">
 <!ENTITY hyprlang-version                    "0.6.0">
 <!ENTITY hyprcursor-version                  "0.1.11">
