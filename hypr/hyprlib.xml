@@ -164,15 +164,25 @@ echo "Building $packagedir"
   pushd $packagedir
 
   case $packagedir in
-    hyprland-qt-support-[0-9]* )
+    aquamarine-[0-9]* )
+      sed -i 's/OpenGL::OpenGL/OpenGL::GL/g' \
+          CMakeLists.txt
+      mkdir build
+      cd    build
+        cmake -D CMAKE_INSTALL_PREFIX=/usr       \
+              -D CMAKE_BUILD_TYPE=Release        \
+              -D CMAKE_SKIP_INSTALL_RPATH=ON     \
+              -G Ninja ..
+    ;;
 
+    hyprland-qt-support-[0-9]* )
       mkdir build
       cd    build
         cmake -D CMAKE_INSTALL_PREFIX=/usr       \
               -D CMAKE_BUILD_TYPE=Release        \
               -D CMAKE_SKIP_INSTALL_RPATH=ON     \
               -D INSTALL_QML_PREFIX=/lib/qt6/qml \
-              .. &amp;&amp;
+              ..
         make
 
         as_root make install
@@ -188,15 +198,15 @@ echo "Building $packagedir"
         cmake -D CMAKE_INSTALL_PREFIX=/usr   \
               -D CMAKE_BUILD_TYPE=Release    \
               -D CMAKE_SKIP_INSTALL_RPATH=ON \
-              -G Ninja .. &amp;&amp;
-        ninja
-
-        as_root ninja install
-      popd
-      rm -rf $packagedir
-      as_root /sbin/ldconfig
+              -G Ninja ..
     ;;
   esac
+
+  ninja
+  as_root ninja install
+  popd
+  rm -rf $packagedir
+  as_root /sbin/ldconfig
 done</userinput></screen>
 
     <para>
