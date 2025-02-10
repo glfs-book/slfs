@@ -43,7 +43,10 @@
       <para>February 10th, 2025</para>
       <itemizedlist>
         <listitem>
-          <para>[zeckma] - Gkermit: Ensure gwart gets compiled.</para>
+          <para>[zeckma] - G-Kermit: Use make -j1.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - G-Kermit: Ensure gwart gets compiled.</para>
         </listitem>
         <listitem>
           <para>[zeckma] - heirloom-devtools: Urge people to build as regular
