@@ -68,7 +68,7 @@
     <para role="required">
       &unzip;
       (to unpack the distributions) and
-      <ulink url="&blfs-svn;/general/sdl.html">sdl12-compat</ulink>
+      <ulink url="&blfs-svn;/multimedia/sdl.html">sdl12-compat</ulink>
     </para>
  
   </sect2>
