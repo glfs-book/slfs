@@ -40,6 +40,15 @@
     -->
 
     <listitem>
+      <para>February 10th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Fix exec i3 .xinitrc line.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 8th, 2025</para>
       <itemizedlist>
         <listitem>
