@@ -149,7 +149,7 @@ mv -v /usr/share/doc/i3{,-&i3-version;}</userinput></screen>
         <filename>.xinitrc</filename> before proceeding. 
       </para>
 
-<screen><userinput>echo "exec i3" >> ~/.xinitrc</userinput></screen>
+<screen><userinput>echo "exec i3" &gt;&gt; ~/.xinitrc</userinput></screen>
 
     </sect3>
 
