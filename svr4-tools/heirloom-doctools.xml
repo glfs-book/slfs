@@ -43,7 +43,7 @@
     <para role="required">
       &unzip;
       (to unpack the distribution),
-      <xref linkend="heirloom-ng"/> and
+      <xref linkend="heirloom-ng"/>, and
       <xref linkend="heirloom-devtools"/>
     </para>
 
