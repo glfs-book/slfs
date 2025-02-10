@@ -19,8 +19,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="heirloom-ng.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="star.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="heirloom-sh.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="heirloom-doctools.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="heirloom-devtools.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="heirloom-doctools.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="s-nail.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="pkgsuite.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="heirloom-ex-vi.xml"/>
