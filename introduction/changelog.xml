@@ -43,6 +43,9 @@
       <para>February 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - star: Add long build time note.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Fix exec i3 .xinitrc line.</para>
         </listitem>
       </itemizedlist>
