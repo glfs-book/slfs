@@ -43,6 +43,10 @@
       <para>February 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - heirloom-devtools: Urge people to build as regular
+          user.</para>
+        </listitem>
+        <listitem>
           <para>svr4-tools/*: Adjust order of heirloom-{doc,dev}tools.</para>
         </listitem>
         <listitem>
