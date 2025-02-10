@@ -43,6 +43,10 @@
       <para>February 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - *: Link to libarchive instead of UnZip. Fixes
+          <ulink url="&lfs-qol-issues;/38">#38</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - G-Kermit: Use make -j1.</para>
         </listitem>
         <listitem>

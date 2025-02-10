@@ -36,7 +36,7 @@
     </itemizedlist>
 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../xincludes/extraction-lchmod.xml"/>
+      href="../xincludes/extraction-unzip.xml"/>
 
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
