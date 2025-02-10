@@ -82,6 +82,7 @@ tar -xvf ../&gkermit-tarball-version;.tar.gz</userinput></screen>
     </para>
 
 <screen><userinput>rm -vf gproto.c &amp;&amp;
+make gwart      &amp;&amp;
 make</userinput></screen>
 
     <para>
