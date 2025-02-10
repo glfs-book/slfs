@@ -51,7 +51,10 @@
     <para role="required">
       &unzip;
       (to unpack the distribution),
-      <ulink url="&blfs-svn;/general/which.html">Which</ulink>, and
+      <ulink url="&blfs-svn;/general/which.html">Which</ulink>
+      (<application>GNU Which</application> is the one that needs to be
+      installed, <emphasis>NOT</emphasis> the shell script, or else it will
+      silently fail and will give the wrong paths to executables), and
       <xref linkend="heirloom-ng"/> (at runtime)
     </para>
 

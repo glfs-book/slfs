@@ -43,6 +43,10 @@
       <para>February 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - pkgsuite: Add that GNU Which in particular is needed
+          instead of the which script.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - star: Add long build time note.</para>
         </listitem>
         <listitem>
