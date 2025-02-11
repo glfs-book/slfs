@@ -130,7 +130,7 @@ make</userinput></screen>
       <seglistitem>
         <seg>
           edit (link to ex), ex, expreserve, exrecover, vedit (link to ex), 
-          view (link to ex), and wvi
+          view (link to ex), vi (link to ex), and wvi
         </seg>
         <seg>
           None
