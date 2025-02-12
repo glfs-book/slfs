@@ -1,9 +1,9 @@
 #!/bin/sh
 
-if test $REV = "sysv"; then
+if test x"$REV" = x"sysv"; then
     SYSV="INCLUDE"
     SYSTEMD="IGNORE"
-elif test $REV = "systemd"; then
+elif test x"$REV" = x"systemd"; then
     SYSV="IGNORE"
     SYSTEMD="INCLUDE"
 else
@@ -12,10 +12,10 @@ else
     exit 1
 fi
 
-if test $STAB = "development"; then
+if test x"$STAB" = x"development"; then
     DEVELOPMENT="INCLUDE"
     RELEASE="IGNORE"
-elif test $STAB = "release"; then
+elif test x"$STAB" = x"release"; then
     DEVELOPMENT="IGNORE"
     RELEASE="INCLUDE"
 else

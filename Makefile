@@ -30,41 +30,41 @@ else
 endif
 
 ifndef REV
-	REV = sysv
+  REV = sysv
 endif
 ifneq ($(REV), sysv)
-	ifneq ($(REV), systemd)
-		$(error REV must be 'sysv' (default) or 'systemd'.)
-	endif
+  ifneq ($(REV), systemd)
+    $(error REV must be 'sysv' (default) or 'systemd')
+  endif
 endif
 
 # Used in the book, does not actually change if the book will render for the
 # stable git hash, just changes if text for stable release is rendered or not.
 ifndef STAB
-	STAB = development
+  STAB = development
 endif
 ifneq ($(STAB), development)
-	ifneq ($(STAB), release)
-		$(error STAB must be 'development' (default) or 'release'.)
-	endif
+  ifneq ($(STAB), release)
+    $(error STAB must be 'development' (default) or 'release')
+  endif
 endif
 
 ifeq ($(REV), sysv)
-	BASEDIR         ?= $(HTML_ROOT)/lfs-qol
-	PDF_OUTPUT      ?= lfs-qol.pdf
-	NOCHUNKS_OUTPUT ?= lfs-qol.html
-	DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-commands
-	LFS_QOLHTML     ?= lfs-qol-html.xml
-	LFS_QOLHTML2    ?= lfs-qol-html2.xml
-	LFS_QOLFULL     ?= lfs-qol-full.xml
+  BASEDIR         ?= $(HTML_ROOT)/lfs-qol
+  PDF_OUTPUT      ?= lfs-qol.pdf
+  NOCHUNKS_OUTPUT ?= lfs-qol.html
+  DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-commands
+  LFS_QOLHTML     ?= lfs-qol-html.xml
+  LFS_QOLHTML2    ?= lfs-qol-html2.xml
+  LFS_QOLFULL     ?= lfs-qol-full.xml
 else
-	BASEDIR         ?= $(HTML_ROOT)/lfs-qol-systemd
-	PDF_OUTPUT      ?= lfs-qol-sysd.pdf
-	NOCHUNKS_OUTPUT ?= lfs-qol-sysd.html
-	DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-sysd-commands
-	LFS_QOLHTML     ?= lfs-qol-systemd-html.xml
-	LFS_QOLHTML2    ?= lfs-qol-systemd-html2.xml
-	LFS_QOLFULL     ?= lfs-qol-systemd-full.xml
+  BASEDIR         ?= $(HTML_ROOT)/lfs-qol-systemd
+  PDF_OUTPUT      ?= lfs-qol-sysd.pdf
+  NOCHUNKS_OUTPUT ?= lfs-qol-sysd.html
+  DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-sysd-commands
+  LFS_QOLHTML     ?= lfs-qol-systemd-html.xml
+  LFS_QOLHTML2    ?= lfs-qol-systemd-html2.xml
+  LFS_QOLFULL     ?= lfs-qol-systemd-full.xml
 endif
 
 lfs-qol: html wget-list
