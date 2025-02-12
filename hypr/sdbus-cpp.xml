@@ -4,7 +4,8 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 
-  <!ENTITY sdbus-cpp-download-http "https://github.com/Kistler-Group/sdbus-cpp/archive/refs/tags/v&sdbus-cpp-version;.tar.gz">
+  <!ENTITY sdbus-cpp-download-http
+    "https://github.com/Kistler-Group/sdbus-cpp/archive/v&sdbus-cpp-version;/sdbus-cpp-v&sdbus-cpp-version;.tar.gz">
 ]>
 
 <sect1 id="sdbus-cpp" xreflabel="sdbus-cpp-&sdbus-cpp-version;">

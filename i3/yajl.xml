@@ -4,7 +4,8 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 
-  <!ENTITY yajl-download-http "https://github.com/lloyd/yajl/archive/refs/tags/&yajl-version;.tar.gz">
+  <!ENTITY yajl-download-http
+    "https://github.com/lloyd/yajl/archive/&yajl-version;/yajl-&yajl-version;.tar.gz">
 ]>
 
 <sect1 id="yajl" xreflabel="yajl-&yajl-version;">

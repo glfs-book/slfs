@@ -4,7 +4,8 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 
-  <!ENTITY i3-download-http "https://github.com/i3/i3/archive/refs/tags/&i3-version;.tar.gz">
+  <!ENTITY i3-download-http
+    "https://github.com/i3/i3/archive/&i3-version;/i3-&i3-version;.tar.gz">
 ]>
 
 <sect1 id="i3-wm" xreflabel="i3-&i3-version;">

@@ -5,7 +5,6 @@
   %general-entities;
 
   <!ENTITY hyprlib-download-http "https://github.com/hyprwm/">
-  <!ENTITY hypr-ext              "archive/refs/tags">
 ]>
 
 <sect1 id="hyprlib" xreflabel="Hypr Libraries">
@@ -81,15 +80,15 @@
     </para>
 
 <screen><userinput>cat &gt; hypr-list &lt;&lt; "EOF"
-<literal>hyprland-protocols/&hypr-ext;/v&hyprland-protocols-version;.tar.gz
-hyprutils/&hypr-ext;/v&hyprutils-version;.tar.gz
-hyprlang/&hypr-ext;/v&hyprlang-version;.tar.gz
-hyprcursor/&hypr-ext;/v&hyprcursor-version;.tar.gz
-hyprwayland-scanner/&hypr-ext;/v&hyprwayland-scanner-version;.tar.gz
-aquamarine/&hypr-ext;/v&aquamarine-version;.tar.gz
-hyprgraphics/&hypr-ext;/v&hyprgraphics-version;.tar.gz
-hyprland-qt-support/&hypr-ext;/v&hyprland-qt-support-version;.tar.gz
-hyprland-qtutils/&hypr-ext;/v&hyprland-qtutils-version;.tar.gz</literal>
+<literal>hyprland-protocols/archive/v&hyprland-protocols-version;/hyprland-protocols-v&hyprland-protocols-version;.tar.gz
+hyprutils/archive/v&hyprutils-version;/hyprutils-v&hyprutils-version;.tar.gz
+hyprlang/archive/v&hyprlang-version;/hyprlang-v&hyprlang-version;.tar.gz
+hyprcursor/archive/v&hyprcursor-version;/hyprcursor-v&hyprcursor-version;.tar.gz
+hyprwayland-scanner/archive/v&hyprwayland-scanner-version;/hyprwayland-scanner-v&hyprwayland-scanner-version;.tar.gz
+aquamarine/archive/v&aquamarine-version;/aquamarine-v&aquamarine-version;.tar.gz
+hyprgraphics/archive/v&hyprgraphics-version;/hyprgraphics-v&hyprgraphics-version;.tar.gz
+hyprland-qt-support/archive/v&hyprland-qt-support-version;/hyprland-qt-support-v&hyprland-qt-support-version;.tar.gz
+hyprland-qtutils/archive/v&hyprland-qtutils-version;/hyprland-qtutils-v&hyprland-qtutils-version;.tar.gz</literal>
 EOF</userinput></screen>
 
     <para>
@@ -100,16 +99,8 @@ EOF</userinput></screen>
 
 <screen><userinput>mkdir hyprlib &amp;&amp;
 cd    hyprlib &amp;&amp;
-while IFS= read -r DOWNLOAD_URL; do
-    if [[ "$DOWNLOAD_URL" =~ ^# ]]; then
-        continue
-    fi
-    wget -c \
-        &hyprlib-download-http;"$DOWNLOAD_URL" &amp;&amp;
-    mv -v $(basename "$DOWNLOAD_URL") \
-        $(echo "$DOWNLOAD_URL" | awk -F"/" '{print $1}')-$(basename "$DOWNLOAD_URL" | \
-        sed 's/v//')
-done &lt; ../hypr-list</userinput></screen>
+grep -v '^#' ../hypr-list | wget -i- -c \
+    -B &hyprlib-download-http;</userinput></screen>
 
   </sect2>
 
@@ -155,10 +146,11 @@ EOF</literal></userinput></screen>
       Install all the packages by running the following commands:
     </para>
 
-<screen><userinput>for package in $(grep -v '^#' ../hypr-list | \
-  sed 's/\/archive\/refs\/tags\/v/\-/')
+<screen><userinput>for package in $(grep -v '^#' ../hypr-list)
 do
+package=$(basename "$package")
 packagedir=${package%.tar.?z*}
+packagedir=$(echo -n "$packagedir" | sed 's/-v\([0-9]\)/-\1/')
 echo "Building $packagedir"
 
   tar -xf $package

@@ -4,7 +4,8 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 
-  <!ENTITY tomlplusplus-download-http "https://github.com/marzer/tomlplusplus/archive/refs/tags/v&tomlplusplus-version;.tar.gz">
+  <!ENTITY tomlplusplus-download-http
+    "https://github.com/marzer/tomlplusplus/archive/v&tomlplusplus-version;/tomlplusplus-v&tomlplusplus-version;.tar.gz">
 ]>
 
 <sect1 id="tomlplusplus" xreflabel="tomlplusplus-&tomlplusplus-version;">

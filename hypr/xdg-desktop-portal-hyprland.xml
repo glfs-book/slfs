@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 
-  <!ENTITY xdg-desktop-portal-hyprland-download-http "https://github.com/hyprwm/xdg-desktop-portal-hyprland/archive/refs/tags/v&xdg-desktop-portal-hyprland-version;.tar.gz">
+  <!ENTITY xdg-desktop-portal-hyprland-download-http "https://github.com/hyprwm/xdg-desktop-portal-hyprland/archive/v&xdg-desktop-portal-hyprland-version;/xdg-desktop-portal-hyprland-v&xdg-desktop-portal-hyprland-version;.tar.gz">
 ]>
 
 <sect1 id="xdg-desktop-portal-hyprland" xreflabel="xdg-desktop-portal-hyprland-&xdg-desktop-portal-hyprland-version;">

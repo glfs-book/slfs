@@ -43,6 +43,10 @@
       <para>February 11th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Adjust Github tarball download locations. Fixes
+          <ulink url="&lfs-qol-issues;/51">#51</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] -
             hyprgraphics: 0.1.1 -&gt; 0.1.2;
             glaze: 4.3.1 -&gt; 4.4.1;
