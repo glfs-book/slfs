@@ -43,6 +43,10 @@
       <para>February 11th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - packages: Remove outdated text on tarball filename
+          conflicts.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Adjust Github tarball download locations. Fixes
           <ulink url="&lfs-qol-issues;/51">#51</ulink>.</para>
         </listitem>

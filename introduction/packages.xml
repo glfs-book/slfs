@@ -26,13 +26,11 @@
 
     <para>
       Obtaining all the source packages all at once is not recommended as
-      you will probably pull in packages you won't want, and there may be
-      filename conflicts due to poor developer decisions made upstream in the
-      form of poorly named tarballs. However, it is certainly a convenient
-      option if you have the disk space to spare. First navigate to the
-      directory you want the downloaded source code and patches to be, then
-      download <ulink url="../wget-list">wget-list</ulink>. After that,
-      download the packages and patches by doing the following:
+      you will probably pull in packages you won't want. However, it is
+      certainly a convenient option if you have the disk space to spare. First
+      navigate to the directory you want the downloaded source code and patches
+      to be, then download <ulink url="../wget-list">wget-list</ulink>. After
+      that, download the packages and patches by doing the following:
     </para>
 
 <screen><userinput>wget -N --input-file=wget-list --continue</userinput></screen>
