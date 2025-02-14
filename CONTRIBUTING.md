@@ -137,7 +137,7 @@ directories at the root of the source:
 - `book/`
 - `introduction/`
 - `com-emu/`
-- `dev-tools`
+- `dev-tools/`
 - `hypr/`
 - `i3/`
 - `svr4-tools/`
