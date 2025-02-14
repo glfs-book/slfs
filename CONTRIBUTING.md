@@ -182,8 +182,9 @@ message that details the commit. `->` should be `-&gt;` in the XML file. For
 the user in the changelog entry, it'd be appreciated if it matched with your
 Github username. If you are a BLFS/LFS editor, you can also use the handle you
 use for LFS/BLFS. Changes that shouldn't have a changelog entry are simple
-typos and internal changes (not counting changes to `packages.ent`, those count
-as updates that need to have a changelog entry).
+typos, grammar changes, fixing rendering failures, wording, etc. (small
+changes) and internal changes (not counting changes to `packages.ent`, those
+count as updates that need to have a changelog entry).
 #### 3.1.2.10. `index.xml`
 This file is an XML file that determines which main XML files to include for
 rendering. Think of it as the master XML file, or your `int main()`, but for
