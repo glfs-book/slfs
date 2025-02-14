@@ -39,6 +39,7 @@ At the root of the source, you'll find these files and directories:
 - `Makefile`
 - `expand_date`
 - `general.ent`
+- `generate-doc-stub.py`
 - `git-version.sh`
 - `gnome.ent`
 - `obfuscate.sh`
@@ -103,26 +104,32 @@ BLFS. Rarely needs to get updated.
 This file is an XML entity file containing important variables used by the
 book's XML and also includes different entity files. This file needs to get
 updated every stable release.
-#### 3.1.1.15. `git-version.sh`
+#### 3.1.1.15. `generate-doc-stub.py`
+This file is a Python script that generates baseline package contents for a
+given package, useful when adding a new package to the book. It does not
+provide actual explanations of a given program or library, but it does list out
+all the software and directories as necessary to make it easier for
+contributors. Update as needed if the script is faulty.
+#### 3.1.1.16. `git-version.sh`
 This file is a shell script that generates the version and revision the book
 should be rendered for, and outputs according text to `conditional.ent` and
 `version.ent`. Rarely needs to get updated.
-#### 3.1.1.16. `gnome.ent`
+#### 3.1.1.17. `gnome.ent`
 This file is an XML entity file that contains GNOME specific entities used by a
 small selection of XML files. Rarely needs to get updated.
-#### 3.1.1.17. `obfuscate.sh`
+#### 3.1.1.18. `obfuscate.sh`
 This file is a shell script that obfuscates email addresses in XML and HTML
 files. Rarely needs to get updated.
-#### 3.1.1.18. `packages.ent`
+#### 3.1.1.19. `packages.ent`
 This file is an XML entity file that contains version variables. Certain
 version variables are used by certain packages, although usually there will
 only be one variable used by a given package. For example, &hyprutils-version;
 is used by hyprutils. These variables determine the package's version.
 Whenever a package needs an update, this file needs to get edited.
-#### 3.1.1.19. `pdf-fixups.sh`
+#### 3.1.1.20. `pdf-fixups.sh`
 This file is a shell script that changes up a rendered PDF to be more pretty.
 Rarely needs to get updated.
-#### 3.1.1.20. `tidy.conf`
+#### 3.1.1.21. `tidy.conf`
 This file is a configuration file used by **tidy**. Rarely needs to get
 updated.
 
