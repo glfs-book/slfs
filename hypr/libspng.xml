@@ -74,7 +74,7 @@ ninja</userinput></screen>
       <filename>libspng.pc</filename> as the &root; user:
     </para>
 
-<screen role="root"><userinput>ln -sv libspng.pc /usr/lib/pkgconfig/spng.pc</userinput></screen>
+<screen role="root"><userinput>ln -sfv libspng.pc /usr/lib/pkgconfig/spng.pc</userinput></screen>
 
   </sect2>
   
