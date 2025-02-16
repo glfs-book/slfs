@@ -40,6 +40,15 @@
     -->
 
     <listitem>
+      <para>February 16th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - libspng: Create pkg-config file symlink.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 11th, 2025</para>
       <itemizedlist>
         <listitem>

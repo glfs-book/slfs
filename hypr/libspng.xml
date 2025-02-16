@@ -68,6 +68,14 @@ ninja</userinput></screen>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
+    <para>
+      Now create a <application>pkg-config</application> file symlink for
+      packages that expect <filename>spng.pc</filename> instead of
+      <filename>libspng.pc</filename> as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ln -sv libspng.pc /usr/lib/pkgconfig/spng.pc</userinput></screen>
+
   </sect2>
   
   <sect2 role="commands">
