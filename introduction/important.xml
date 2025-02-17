@@ -31,19 +31,17 @@
     <title>Init System</title>
 
     <para revision="sysv">
-      This version of this book is meant for SysV/non-Systemd LFS systems,
-      although there is a Systemd version of this book. However, due to Github
-      Pages restraints, this version of the book is not rendered anywhere
-      online by &copyholder;. Thus, you will need to render it yourself.
-      Follow the <ulink url="&lfs-qol-repo;">LFS QOL rendering
+      This version of this book is meant for SysV LFS systems. The Systemd
+      version of the book is not viewable online by &copyholder; due to Github
+      Pages restraints. Thus you will need to download or render the book
+      yourself. Follow the <ulink url="&lfs-qol-repo;">LFS QOL rendering
       instructions</ulink> in order to render the book yourself. You will need
-      <ulink url="&blfs-svn;/general/git.html">Git</ulink> to clone the
-      repository.
+      <xref linkend="git"/> to clone the repository. You can download the book
+      <ulink url="&lfs-qol-repo;/releases">here</ulink>.
     </para>
 
     <para revision="systemd">
-      This version of this book is meant for Systemd LFS systems. You probably
-      have rendered this version of the book yourself.
+      This version of this book is meant for Systemd LFS systems.
     </para>
 
   </sect2>

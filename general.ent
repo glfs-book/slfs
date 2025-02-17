@@ -111,18 +111,18 @@
 
 <![ %development; [
   <!ENTITY important-stability "<para>
-  This version of the book is in a constant flux of updates, including package
-  updates, and can be akin to the BLFS Git version. Right now, there is no
-  stable version of LFS QOL that is rendered online, although you can render it
-  yourself by following <ulink url='&lfs-qol-repo;'/>. This won't cause
-  issues usually as packages in this book do not show up in any of the LFS
-  books, but an updated base may cause unforseen headaches.
-  </para>">
+  This book viewable online is in a constant flux of updates, and updates about
+  as often as the BLFS Git/SVN version. While there isn't a viewable online
+  version of the stable release, you can either render it yourself by following
+  <ulink url='&lfs-qol-repo;'/>, or you can download a <ulink
+  url='&lfs-qol-repo;/releases'>release</ulink>.
+</para>">
 ]]>
 <![ %release; [
   <!ENTITY important-stability "<para>
   This is the stable release of this book and is known to have working
-  instructions. External links will point to stable sources.
+  instructions and matches up with LFS and BLFS &xlfs-version;. External links
+  will point to stable sources.
 </para>">
 ]]>
 
