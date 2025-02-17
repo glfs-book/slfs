@@ -134,13 +134,12 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
                 stylesheets/lfs-qol-chunked.xsl            \
                 $(RENDERTMP)/$(LFS_QOLHTML)
 
-	$(Q)./switch-theme.sh $(LFS_QOL_THEME)
 	@echo "Copying CSS code, images, and patches..."
 	$(Q)if [ ! -e $(BASEDIR)/stylesheets ]; then \
       mkdir -p $(BASEDIR)/stylesheets;          \
    fi;
 
-	$(Q)cp stylesheets/lfs-xsl/*.css $(BASEDIR)/stylesheets
+	$(Q)cp stylesheets/lfs-xsl/$(LFS_QOL_THEME).lfs.css $(BASEDIR)/stylesheets/lfs.css
 	$(Q)sed -i 's|../stylesheet|stylesheet|' $(BASEDIR)/index.html
 
 	$(Q)if [ ! -e $(BASEDIR)/images ]; then \
@@ -155,7 +154,6 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
 		mkdir -p $(BASEDIR)/patches;          \
    fi;
 	$(Q)cp -r patches/* $(BASEDIR)/patches
-	$(Q)./switch-theme.sh dark
 
 	@echo "Running Tidy and obfuscate.sh on chunked XHTML..."
 	$(Q)for filename in `find $(BASEDIR) -name "*.html"`; do       \
