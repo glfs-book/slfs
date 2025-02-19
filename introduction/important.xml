@@ -36,8 +36,9 @@
       Pages restraints. Thus you will need to download or render the book
       yourself. Follow the <ulink url="&lfs-qol-repo;">LFS QOL rendering
       instructions</ulink> in order to render the book yourself. You will need
-      <xref linkend="git"/> to clone the repository. You can download the book
-      <ulink url="&lfs-qol-repo;/releases">here</ulink>.
+      <ulink url="&blfs-svn;/general/git.html">Git</ulink> to clone the
+      repository. You can download the book <ulink
+      url="&lfs-qol-repo;/releases">here</ulink>.
     </para>
 
     <para revision="systemd">
