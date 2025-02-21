@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY byacc-download-http "https://invisible-island.net/archives/byacc/byacc-&byacc-version;.tgz">
+]>
+
+<sect1 id="byacc" xreflabel="byacc-&byacc-version;">
+  <?dbhtml filename="byacc.html"?>
+
+  <title>byacc-&byacc-version;</title>
+
+  <indexterm zone="byacc">
+    <primary sortas="a-byacc">byacc</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to byacc</title>
+
+    <para>
+      The byacc package contains an implementation of <command>yacc</command>
+      originating from BSD.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&byacc-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of byacc</title>
+
+    <para>
+      Install <application>byacc</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --program-prefix=b \
+--with-manpage-format=formatted &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          byacc
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="byacc-bin">
+        <term><command>byacc</command></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="byacc byacc-bin">
+            <primary sortas="a-byacc">byacc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
+</sect1>
