@@ -20,7 +20,7 @@
 
     <para>
       The <application>printproto</application> package provides the protocol
-      headers for the TODO put libXp link here package.
+      headers for the <xref linkend="libxp"/> package.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>
