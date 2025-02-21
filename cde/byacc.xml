@@ -86,7 +86,7 @@ make</userinput></screen>
         <term><command>byacc</command></term>
         <listitem>
           <para>
-            TODO
+            is the Berkeley Yacc
           </para>
           <indexterm zone="byacc byacc-bin">
             <primary sortas="a-byacc">byacc</primary>
