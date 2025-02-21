@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY cde-de-download-http "https://downloads.sourceforge.net/project/cdesktopenv/src/cde-&cde-de-version;.tar.gz">
+]>
+
+<sect1 id="cde-de" xreflabel="CDE-&cde-de-version;">
+  <?dbhtml filename="cde-de.html"?>
+
+
+  <title>CDE-&cde-de-version;</title>
+
+  <indexterm zone="cde-de">
+    <primary sortas="a-cde-de">CDE</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to CDE</title>
+
+    <para>
+      The CDE package contains the Common Desktop Environment, a Motif-based
+      desktop environment commonly associated with commercial UNIX
+      workstations.
+
+      <warning><para>
+      CDE has had quite a few known security vulnerabilities in it, and it is
+      likely that several more unknown ones still exist. You
+      <emphasis>REALLY</emphasis> do not want to expose a CDE system to the
+      public Internet. In fact, there are five known security vulnerabilities in
+      this release of CDE which still have no fixes.</para>
+
+      <para>Also, you should think strongly about enabling the
+      <command>dtspcd</command> and <command>rpc.ttdbserver</command> daemons.
+      Unless you know what they do, you almost certainly don't need them, and
+      they will increase your machine's attack surface.</para></warning>
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&cde-de-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/cde/cde-de/cde-&cde-de-version;-upstream-fixes.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  <bridgehead renderas="sect3">CDE Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>,
+      <ulink url="&blfs-svn;/x/x7app.html">Xorg Applications</ulink>,
+      <ulink url="&blfs-svn;/x/x7legacy.html">Xorg Legacy</ulink>,
+      <ulink url="&blfs-svn;/postlfs/linux-pam.html">Linux-PAM</ulink>,
+      <ulink url="&blfs-svn;/basicnet/libtirpc.html">libtirpc</ulink>,
+      <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType</ulink>,
+      <ulink url="&blfs-svn;/basicnet/rpcbind.html">rpcbind</ulink>,
+      <ulink url="&blfs-svn;/x/xbitmaps.html">xbitmaps</ulink>,
+      <ulink url="&blfs-svn;/pst/opensp.html">OpenSP</ulink>,
+      <ulink url="&blfs-svn;/server/lmdb.html">lmdb</ulink>,
+      <ulink url="&blfs-svn;/basicnet/rpcsvc-proto.html">rpcsvc-proto</ulink>,
+      <xref linkend="libutempter"/>, <xref linkend="motif"/>,
+      <xref linkend="ksh"/>, <xref linkend="libxp"/>,
+      <xref linkend="ncompress"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of CDE</title>
+
+    <para>
+      First, apply a patch with multiple upstream fixes and patches:
+    </para>
+
+<screen><userinput>patch -Np2 -i ../cde-&cde-de-version;-upstream-fixes.patch</userinput></screen>
+
+    <para>
+      Then, install CDE by executing the following commands:
+    </para>
+
+<screen><userinput>./autogen.sh &amp;&amp;
+./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <note><para>This package may print escape sequences during the build
+    process which will make the terminal stop echoing back characters. In
+    order to work around this, you need to blindly type in
+    <command>reset</command>. After the screen is cleared your terminal will
+    work just fine again.</para></note>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+install -v -m644 contrib/desktopentry/cde.desktop /usr/share/xsessions</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring CDE</title>
+
+    <sect3  id="cde-init">
+      <title>Boot Script</title>
+
+      <para>
+        To automatically start <command>dtlogin</command> (CDE's display
+        manager) when the PC is rebooted, install the xdm bootscript from
+        <phrase revision="sysv">
+        <ulink url="&blfs-svn;/introduction/bootscripts.html">blfs-bootscripts</ulink>
+        </phrase><phrase revision="systemd">TODO</phrase> with some
+        modifications by executing the following commands as the &root; user:
+      </para>
+
+      <indexterm zone="cde-de cde-init">
+        <primary sortas="f-cde-de">CDE</primary>
+      </indexterm>
+
+      <screen role="root" revision="sysv"><userinput>install -d -m 755 /etc/rc.d/rc{0,1,2,3,4,5,6,S}.d &amp;&amp;
+install -d -m 755 /etc/rc.d/init.d &amp;&amp;
+install -d -m 755 /etc/sysconfig &amp;&amp;
+install -m 754 blfs/init.d/xdm        /etc/rc.d/init.d/ &amp;&amp;
+install -m 644 blfs/sysconfig/xdm /etc/sysconfig/xdm &amp;&amp;
+echo "DISPLAY_MANAGER=/usr/dt/bin/dtlogin" >> /etc/sysconfig/xdm &amp;&amp;
+sed -i "s/DM_OPTIONS=.*/DM_OPTIONS=\"-quiet -daemon\"/g" /etc/sysconfig/xdm &amp;&amp;
+if ! grep -q '^dm:5' /etc/inittab; then \
+	echo dm:5:respawn:/etc/rc.d/init.d/xdm >> /etc/inittab; \
+fi</userinput></screen><screen role="root" revision="systemd">
+<userinput>TODO</userinput></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          cde-de
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/cde-de-&cde-de-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="cde-de-bin">
+        <term><command>cde-de</command></term>
+        <listitem>
+          <para>
+            transfers files using the Kermit protocol
+          </para>
+          <indexterm zone="cde-de cde-de-bin">
+            <primary sortas="b-cde-de-bin">cde-de</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
+</sect1>
