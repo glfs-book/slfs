@@ -94,7 +94,7 @@ rm -vf /usr/lib/libutempter.a</userinput></screen>
         <term><command>utempter</command></term>
         <listitem>
           <para>
-            TODO
+            is a privileged helper program for utmp/wtmp updates
           </para>
           <indexterm zone="libutempter utempter">
             <primary sortas="b-utempter">utempter</primary>
@@ -106,7 +106,7 @@ rm -vf /usr/lib/libutempter.a</userinput></screen>
         <term><filename class="libraryfile">libutempter.so</filename></term>
         <listitem>
           <para>
-            TODO
+            contains the utempter library interface
           </para>
           <indexterm zone="libutempter libutempter-bin">
             <primary sortas="c-libutempter">libutempter.so</primary>
