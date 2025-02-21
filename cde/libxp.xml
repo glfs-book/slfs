@@ -90,7 +90,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libXp.so</filename></term>
         <listitem>
           <para>
-            TODO
+            is the X Print library
           </para>
           <indexterm zone="libxp libXp">
             <primary sortas="c-libXp">libXp.so</primary>
