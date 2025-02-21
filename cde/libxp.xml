@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY libxp-download-http "https://x.org/archive/individual/lib/libXp-&libxp-version;.tar.xz">
+]>
+
+<sect1 id="libxp" xreflabel="libXp-&libxp-version;">
+  <?dbhtml filename="libxp.html"?>
+
+  <title>libXp-&libxp-version;</title>
+
+  <indexterm zone="libxp">
+    <primary sortas="a-libxp">libXp</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libXp</title>
+
+    <para>
+      The libXp package contains a library implementing the X Print Protocol.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libxp-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  <bridgehead renderas="sect3">libXp Dependencies</bridgehead>
+
+  <bridgehead renderas="sect4">Required</bridgehead>
+  <para role="required">
+    <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+  </para>
+   
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libXp</title>
+
+    <para>
+      Install <application>libXp</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>./configure $XORG_CONFIG --docdir=$XORG_PREFIX/share/doc/libXp-1.0.4 &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libXp.so
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libXp">
+        <term><filename class="libraryfile">libXp.so</filename></term>
+        <listitem>
+          <para>
+            TODO
+          </para>
+          <indexterm zone="libxp libXp">
+            <primary sortas="c-libXp">libXp.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
+</sect1>
