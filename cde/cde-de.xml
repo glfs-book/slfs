@@ -61,21 +61,23 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>,
-      <ulink url="&blfs-svn;/x/x7app.html">Xorg Applications</ulink>,
-      <ulink url="&blfs-svn;/x/x7legacy.html">Xorg Legacy</ulink>,
-      <ulink url="&blfs-svn;/postlfs/linux-pam.html">Linux-PAM</ulink>,
-      <ulink url="&blfs-svn;/basicnet/libtirpc.html">libtirpc</ulink>,
-      <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType</ulink>,
-      <ulink url="&blfs-svn;/basicnet/rpcbind.html">rpcbind</ulink>,
-      <ulink url="&blfs-svn;/x/xbitmaps.html">xbitmaps</ulink>,
-      <ulink url="&blfs-svn;/pst/opensp.html">OpenSP</ulink>,
+      <xref linkend="ksh"/>,
+      <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
+      <ulink url="&blfs-svn;/basicnet/libtirpc.html">libtirpc</ulink>,
+      <xref linkend="libutempter"/>,
+      <xref linkend="libxp"/>
+      <ulink url="&blfs-svn;/postlfs/linux-pam.html">Linux-PAM</ulink>,
       <ulink url="&blfs-svn;/server/lmdb.html">lmdb</ulink>,
+      <xref linkend="motif"/>,
+      <xref linkend="ncompress"/>,
+      <ulink url="&blfs-svn;/pst/opensp.html">OpenSP</ulink>,
+      <ulink url="&blfs-svn;/basicnet/rpcbind.html">rpcbind</ulink>,
       <ulink url="&blfs-svn;/basicnet/rpcsvc-proto.html">rpcsvc-proto</ulink>,
-      <xref linkend="libutempter"/>, <xref linkend="motif"/>,
-      <xref linkend="ksh"/>, <xref linkend="libxp"/>,
-      <xref linkend="ncompress"/>
+      <ulink url="&blfs-svn;/x/xbitmaps.html">xbitmaps</ulink>,
+      <ulink url="&blfs-svn;/x/x7app.html">Xorg Applications</ulink>,
+      <ulink url="&blfs-svn;/x/x7legacy.html">Xorg Legacy</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
   </sect2>

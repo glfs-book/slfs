@@ -48,11 +48,12 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>,
+      <xref linkend="byacc"/>,
       <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
       <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
-      <ulink url="&blfs-svn;/x/xbitmaps.html">xbitmaps</ulink>,
-      <xref linkend="libxp"/>, and <xref linkend="byacc"/>
+      <xref linkend="libxp"/>,
+      <ulink url="&blfs-svn;/x/xbitmaps.html">xbitmaps</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
   </sect2>

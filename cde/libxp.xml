@@ -49,7 +49,7 @@
       commands:
     </para>
 
-<screen><userinput>./configure $XORG_CONFIG --docdir=$XORG_PREFIX/share/doc/libXp-1.0.4 &amp;&amp;
+<screen><userinput>./configure $XORG_CONFIG --docdir=$XORG_PREFIX/share/doc/libXp-&libxp-version; &amp;&amp;
 make</userinput></screen>
 
     <para>

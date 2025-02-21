@@ -43,8 +43,9 @@
       commands:
     </para>
 
-<screen><userinput>./configure --prefix=/usr --program-prefix=b \
---with-manpage-format=formatted &amp;&amp;
+<screen><userinput>./configure --prefix=/usr      \
+            --program-prefix=b \
+            --with-manpage-format=formatted &amp;&amp;
 make</userinput></screen>
 
     <para>
