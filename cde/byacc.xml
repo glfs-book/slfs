@@ -89,7 +89,7 @@ make</userinput></screen>
             is the Berkeley Yacc
           </para>
           <indexterm zone="byacc byacc-bin">
-            <primary sortas="a-byacc">byacc</primary>
+            <primary sortas="b-byacc">byacc</primary>
           </indexterm>
         </listitem>
       </varlistentry>
