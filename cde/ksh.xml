@@ -72,13 +72,13 @@
 
       <seglistitem>
         <seg>
-          TODO
+          ksh and shcomp
         </seg>
         <seg>
-          TODO
+          libast.so, libcmd.so, libdll.so, and libshell.so
         </seg>
         <seg>
-          TODO
+          /usr/include/ast and /usr/share/fun
         </seg>
       </seglistitem>
     </segmentedlist>
@@ -92,10 +92,70 @@
         <term><command>ksh</command></term>
         <listitem>
           <para>
-            transfers files using the Kermit protocol
+            is the Korn Shell
           </para>
           <indexterm zone="ksh ksh-bin">
             <primary sortas="b-ksh-bin">ksh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="shcomp">
+        <term><command>shcomp</command></term>
+        <listitem>
+          <para>
+            compiles a shell script
+          </para>
+          <indexterm zone="ksh shcomp">
+            <primary sortas="b-shcomp">shcomp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libast">
+        <term><filename class="libraryfile">libast.so</filename></term>
+        <listitem>
+          <para>
+            is the AT&amp;T Software Technology library
+          </para>
+          <indexterm zone="ksh libast">
+            <primary sortas="c-libast">libast.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libcmd">
+        <term><filename class="libraryfile">libcmd.so</filename></term>
+        <listitem>
+          <para>
+            contains <command>ksh</command> loadable builtins
+          </para>
+          <indexterm zone="ksh libcmd">
+            <primary sortas="c-libcmd">libcmd.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libdll">
+        <term><filename class="libraryfile">libdll.so</filename></term>
+        <listitem>
+          <para>
+            contains wrappers around dlopen() and similar functions
+          </para>
+          <indexterm zone="ksh libdll">
+            <primary sortas="c-libdll">libdll.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libshell">
+        <term><filename class="libraryfile">libshell.so</filename></term>
+        <listitem>
+          <para>
+            contains the <command>ksh</command> library interface
+          </para>
+          <indexterm zone="ksh libshell">
+            <primary sortas="c-libshell">libshell.so</primary>
           </indexterm>
         </listitem>
       </varlistentry>
