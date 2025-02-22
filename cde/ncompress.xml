@@ -82,10 +82,22 @@
         <term><command>compress</command></term>
         <listitem>
           <para>
-            TODO
+            compresses files using the LZ coding
           </para>
           <indexterm zone="ncompress compress">
             <primary sortas="b-compress">compress</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="uncompress">
+        <term><command>uncompress</command></term>
+        <listitem>
+          <para>
+            uncompresses files using the LZ coding
+          </para>
+          <indexterm zone="ncompress uncompress">
+            <primary sortas="b-uncompress">uncompress</primary>
           </indexterm>
         </listitem>
       </varlistentry>
