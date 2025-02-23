@@ -70,7 +70,6 @@
 <!ENTITY mupen64plus-rsp-hle-version         "&mupen64plus-version;">
 <!ENTITY mupen64plus-video-rice-version      "&mupen64plus-version;">
 <!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
-<!ENTITY gliden64-minor-version              "70b9b6">
 <!ENTITY gliden64-version                    "70b9b6cee1eb457c759ee82654c4d6ae5b30c4df">
 
 <!-- 8. DEV-TOOLS -->

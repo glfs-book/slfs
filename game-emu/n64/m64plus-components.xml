@@ -83,8 +83,7 @@ EOF</userinput></screen>
 
     <para>
       To download the needed files using
-      <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink> and
-      <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
+      <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink>,
       use the following commands: 
     </para>
 
@@ -92,11 +91,8 @@ EOF</userinput></screen>
 cd    m64plus &amp;&amp;
 grep -v '^#' ../m64plus-list | wget -i- -c \
     -B &mupen64plus-download-http; &amp;&amp;
-git clone --recursive \
-    https://github.com/gonetz/GLideN64 GLideN64-&gliden64-minor-version; &amp;&amp;
-pushd GLideN64-&gliden64-minor-version;
-  git checkout &gliden64-version;
-popd</userinput></screen>
+wget https://github.com/gonetz/GLideN64/archive/&gliden64-version;.tar.gz \
+    -O GLideN64-&gliden64-version;.tar.gz</userinput></screen>
 
   </sect2>
 
@@ -129,7 +125,8 @@ echo "Building $packagedir"
   as_root /sbin/ldconfig
 done
 
-pushd GLideN64-&gliden64-minor-version;/projects/cmake
+tar -xf GLideN64-&gliden64-version;.tar.gz
+pushd GLideN64-&gliden64-version;/projects/cmake
   cmake -D CMAKE_INSTALL_PREFIX=/usr \
         -D GL_PROFILE=On             \
         -D MUPENPLUSAPI=On           \
