@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<chapter id="game-emu">
+  <?dbhtml filename="game-emu.html" dir="game-emu"?>
+
+  <title>Video Game Emulation</title>
+
+  <para>
+    This section is dedicated to installing video game emulators.
+  </para>
+
+  <!-- N64 -->
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/n64-header.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/n64-intro.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/sdl2_net.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/minizip.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/m64plus-components.xml"/>
+
+</chapter>

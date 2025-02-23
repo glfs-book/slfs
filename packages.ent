@@ -44,7 +44,7 @@
 <!ENTITY heirloom-ex-vi-minor-version        "bd1f88">
 <!ENTITY heirloom-ex-vi-version              "bd1f886598d20d457885c5c189fea34b027cbdef">
 
-<!-- 6. EMULATORS -->
+<!-- 6. COM-EMU -->
 <!ENTITY idle-minor-version                  "r26">
 <!ENTITY idle-version                        "e70cfd651ec84ec10f69b9d8ea8696978a6b5d11">
 <!ENTITY xhomer-version                      "2-19-24">
@@ -60,5 +60,18 @@
 <!ENTITY p20-emu-minor-version               "d75a83">
 <!ENTITY p20-emu-version                     "d75a83ca9b107e1ae1a54598e4045c2843bd823e">
 
-<!-- 7. DEV-TOOLS -->
+<!-- 7. GAME-EMU -->
+<!ENTITY sdl2_net-version                    "2.2.0">
+<!ENTITY zlib-version                        "1.3.1">
+<!ENTITY mupen64plus-version                 "2.6.0">
+<!ENTITY mupen64plus-core-version            "&mupen64plus-version;">
+<!ENTITY mupen64plus-input-sdl-version       "&mupen64plus-version;">
+<!ENTITY mupen64plus-audio-sdl-version       "&mupen64plus-version;">
+<!ENTITY mupen64plus-rsp-hle-version         "&mupen64plus-version;">
+<!ENTITY mupen64plus-video-rice-version      "&mupen64plus-version;">
+<!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
+<!ENTITY gliden64-minor-version              "70b9b6">
+<!ENTITY gliden64-version                    "70b9b6cee1eb457c759ee82654c4d6ae5b30c4df">
+
+<!-- 8. DEV-TOOLS -->
 <!ENTITY strace-version                      "6.13">

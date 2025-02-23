@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY zlib-download-http "https://zlib.net/fossils/zlib-&zlib-version;.tar.gz">
+]>
+
+<sect1 id="minizip" xreflabel="minizip from zlib-&zlib-version;">
+  <?dbhtml filename="minizip.html"?>
+	
+  <title>minizip from zlib-&zlib-version;</title>
+
+  <indexterm zone="minizip">
+    <primary sortas="a-minizip">minizip</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to minizip</title>
+
+    <para>
+      The <application>minizip</application> package provides a library for
+      mini zip and unzip, based on <application>Zlib</application>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&zlib-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of minizip</title>
+
+    <note><para>
+      You must unpack the downloaded
+      <filename>zlib-&zlib-version;.tar.gz</filename> tarball and navigate to
+      the extracted source directory. This package is inside that source.
+    </para></note>
+
+    <para>
+      Install <application>minizip</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>cd contrib/minizip &amp;&amp;
+
+mv Makefile{,.orig} &amp;&amp;
+autoreconf -fi      &amp;&amp;
+
+./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+rm -vf /usr/include/minizip/crypt.h</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>mv Makefile{,.orig}; autoconf -fi</command>: These commands
+      remove the pregenerated <filename>Makefile</filename> and generate a new
+      one.
+    </para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/static-libraries.xml"/>
+
+    <para>
+      <command>rm -vf /usr/include/minizip/crypt.h</command>: This command
+      deletes a C header that conflicts with another one, which can cause build
+      issues for other packages.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libminizip.so
+        </seg>
+        <seg>
+          /usr/include/minizip
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libminizip">
+        <term><filename class="libraryfile">libminizip.so</filename></term>
+        <listitem>
+          <para>
+            contains mini zip and unzip functions
+          </para>
+          <indexterm zone="minizip libminizip">
+            <primary sortas="c-libminizip">libminizip.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
