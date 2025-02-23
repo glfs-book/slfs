@@ -25,7 +25,6 @@ $Date$
 
   <!-- Appendices -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendices/creat-comm.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendices/mit0-lic.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendices/mit-lic.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendices/glossary.xml"/>
 
