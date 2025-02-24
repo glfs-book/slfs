@@ -185,9 +185,9 @@ popd</userinput></screen>
       url="https://github.com/mupen64plus/mupen64plus-ui-python">mupen64plus-ui-python</ulink>.
       Graphical frontends generally have many bells and whistles on top of
       being more user friendly. There are also
-      <application>Mupen64Plus</application>, which instead of using the
-      system-installed <application>Mupen64Plus</application> components, they
-      use their own in-house components/forks. A good launcher is <ulink
+      <application>Mupen64Plus</application> launchers, which instead of using
+      the system-installed <application>Mupen64Plus</application> components,
+      they use their own in-house components/forks. A good launcher is <ulink
       url="https://github.com/Rosalie241/RMG">RMG</ulink>, well-known for being
       easy to use and set up, but has more and harsher dependencies.
       The <command>mupen64plus</command> application can work just as well,
