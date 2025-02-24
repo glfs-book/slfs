@@ -182,19 +182,25 @@ popd</userinput></screen>
       <command>mupen64plus</command>, which is the
       <application>Mupen64Plus</application> command-line frontend, or you can
       use a graphical frontend such as <ulink
-      url="https://github.com/Rosalie241/RMG">RMG</ulink> or <ulink
-      url="https://github.com/mupen64plus/mupen64plus-ui-python">mupen64plus-ui-python</ulink>
-      as graphical frontends generally have many bells and whistles on top of
-      being more user friendly; however, the <command>mupen64plus</command>
-      application can work just as well. The rest of this
-      section covers the <command>mupen64plus</command> program.
+      url="https://github.com/mupen64plus/mupen64plus-ui-python">mupen64plus-ui-python</ulink>.
+      Graphical frontends generally have many bells and whistles on top of
+      being more user friendly. There are also
+      <application>Mupen64Plus</application>, which instead of using the
+      system-installed <application>Mupen64Plus</application> components, they
+      use their own in-house components/forks. A good launcher is <ulink
+      url="https://github.com/Rosalie241/RMG">RMG</ulink>, well-known for being
+      easy to use and set up, but has more and harsher dependencies.
+      The <command>mupen64plus</command> application can work just as well,
+      however. The rest of this section will cover the
+      <command>mupen64plus</command> program.
     </para>
 
     <para>
       You can choose which plugins to use, and there are various plugin types.
       Generally, the plugin name you will pass will be
-      <replaceable>&lt;NAME&gt;</replaceable> in
-      <filename>mupen64plus-<replaceable>&lt;TYPE&gt;</replaceable>-<replaceable>&lt;NAME&gt;</replaceable></filename>.
+      <filename>mupen64plus-<replaceable>&lt;TYPE&gt;</replaceable>-<replaceable>&lt;NAME&gt;</replaceable></filename>
+      in
+      <filename>mupen64plus-<replaceable>&lt;TYPE&gt;</replaceable>-<replaceable>&lt;NAME&gt;</replaceable>.so</filename>.
       <replaceable>&lt;TYPE&gt;</replaceable> can either be
       <filename>audio</filename>, <filename>input</filename>,
       <filename>rsp</filename>, or <filename>video</filename>.
@@ -203,19 +209,19 @@ popd</userinput></screen>
     <itemizedlist spacing="compact">
       <listitem><para>
         For <filename>audio</filename>, pass
-        <computeroutput>--audio <replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
+        <computeroutput>--audio mupen64plus-audio-<replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
       </para></listitem>
       <listitem><para>
         For <filename>input</filename>, pass
-        <computeroutput>--input <replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
+        <computeroutput>--input mupen64plus-input-<replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
       </para></listitem>
       <listitem><para>
         For <filename>rsp</filename>, pass
-        <computeroutput>--rsp <replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
+        <computeroutput>--rsp mupen64plus-rsp-<replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
       </para></listitem>
       <listitem><para>
         For <filename>video</filename>, pass
-        <computeroutput>--gfx <replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
+        <computeroutput>--gfx mupen64plus-video-<replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
       </para></listitem>
     </itemizedlist>
 
