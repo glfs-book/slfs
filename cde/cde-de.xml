@@ -10,7 +10,6 @@
 <sect1 id="cde-de" xreflabel="CDE-&cde-de-version;">
   <?dbhtml filename="cde-de.html"?>
 
-
   <title>CDE-&cde-de-version;</title>
 
   <indexterm zone="cde-de">
@@ -122,11 +121,12 @@ install -v -m644 contrib/desktopentry/cde.desktop /usr/share/xsessions</userinpu
 
       <para>
         To automatically start <command>dtlogin</command> (CDE's display
-        manager) when the PC is rebooted, install the xdm bootscript from
-        <phrase revision="sysv">
+        manager) when the PC is rebooted, install the <phrase revision="sysv">
+        xdm bootscript from
         <ulink url="&blfs-svn;/introduction/bootscripts.html">blfs-bootscripts</ulink>
-        </phrase><phrase revision="systemd">TODO</phrase> with some
-        modifications by executing the following commands as the &root; user:
+        with some modifications</phrase><phrase revision="systemd">dtlogin
+        systemd unit provided by this package</phrase>
+        by executing the following commands as the &root; user:
       </para>
 
       <indexterm zone="cde-de cde-init">
@@ -143,7 +143,12 @@ sed -i "s/DM_OPTIONS=.*/DM_OPTIONS=\"-quiet -daemon\"/g" /etc/sysconfig/xdm &amp
 if ! grep -q '^dm:5' /etc/inittab; then \
 	echo dm:5:respawn:/etc/rc.d/init.d/xdm >> /etc/inittab; \
 fi</userinput></screen><screen role="root" revision="systemd">
-<userinput>TODO</userinput></screen>
+<userinput>install -d -m 755 /etc/default &amp;&amp;
+install -d -m 755 /usr/lib/tmpfiles.d &amp;&amp;
+install -d -m 755 /usr/lib/systemd/system &amp;&amp;
+install -m 644 contrib/rc/systemd/dtlogin.service /usr/lib/systemd/system/ &amp;&amp;
+systemctl enable dtlogin.service
+</userinput></screen>
 
     </sect3>
 
