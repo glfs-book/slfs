@@ -52,16 +52,6 @@
 
   </sect2>
 
-  <sect2>
-    <title>Command Explanations</title>
-
-    <para>
-      <command>bin/package make -j&lt;N&gt;</command>: You can use this command
-      invocation for a parallel build.
-    </para>
-
-  </sect2>
-
   <sect2 role="content">
     <title>Contents</title>
 
