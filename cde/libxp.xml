@@ -36,6 +36,7 @@
 
   <bridgehead renderas="sect4">Required</bridgehead>
   <para role="required">
+    <xref linkend="printproto"/>, and
     <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
   </para>
    
