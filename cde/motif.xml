@@ -116,7 +116,11 @@ export YACC=byacc</userinput></screen>
 ./configure --prefix=/usr \
             --with-x      \
             --enable-motif22-compatibility \
-            --disable-static &amp;&amp;
+            --disable-static \
+            --enable-utf8 \
+            --enable-xft \
+            --enable-jpeg \
+            --enable-png &amp;&amp;
 make</userinput></screen>
 
     <para>
@@ -125,6 +129,7 @@ make</userinput></screen>
 
 <screen role="root"><userinput>make install &amp;&amp;
 make -C demos install-data &amp;&amp;
+rm -rvf /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
 install -v -m755 -d /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
 mv -v /usr/share/Xm/* /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
 rmdir -v /usr/share/Xm</userinput></screen>
@@ -152,6 +157,7 @@ Mwm*multiClickTime:             300
 Mwm*useIconBox:                 True</literal>
 EOF
 
+install -v -m755 -d /usr/share/xsessions &amp;&amp;
 cat &gt; /usr/share/xsessions/mwm.desktop &lt;&lt; "EOF"
 <literal>[Desktop Entry]
 Name=MWM
@@ -166,7 +172,7 @@ EOF</userinput></screen>
     </para>
 
 <screen><userinput>export LANG=$OLDLANG &amp;&amp;
-unset OLDLANG=C &amp;&amp;
+unset OLDLANG &amp;&amp;
 unset LEX &amp;&amp;
 unset YACC</userinput></screen>
 
