@@ -147,7 +147,7 @@ ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
             is a symlink pointing to <command>s-nail</command>
           </para>
           <indexterm zone="s-nail ucb-mail">
-            <primary sortas="b-mail">mail</primary>
+            <primary sortas="b-mail">/usr/ucb/mail</primary>
           </indexterm>
         </listitem>
       </varlistentry>
