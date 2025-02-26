@@ -136,12 +136,8 @@ install -v -Dm755 tools/xprofile_tool/xprofile_tool /usr/bin</userinput></screen
     </para>
 
 <screen role="root"><userinput>install -v -m755 -d /usr/share/idle/bios &amp;&amp;
-install -v -m644 bios/vidstate.rom /usr/share/idle/bios &amp;&amp;
 unzip ../idle_win32_bin.zip &amp;&amp;
-install -v -m644 idle_win32_bin/bios/341-0175-h /usr/share/idle/bios &amp;&amp;
-install -v -m644 idle_win32_bin/bios/341-0176-h /usr/share/idle/bios &amp;&amp;
-install -v -m644 idle_win32_bin/bios/L175REVC.bin /usr/share/idle/bios &amp;&amp;
-install -v -m644 idle_win32_bin/bios/L176REVC.bin /usr/share/idle/bios &amp;&amp;
+install -v -m644 idle_win32_bin/bios/* /usr/share/idle/bios
 rm -rf idle_win32_bin</userinput></screen>
 
   </sect2>
@@ -154,8 +150,7 @@ rm -rf idle_win32_bin</userinput></screen>
       <para>
         If you have not applied the systemwide ROMs patch, you will have to put
         the <filename class="directory">bios/</filename> folder from
-        <filename>idle_win32_bin.zip</filename> with
-        <filename>vidstate.rom</filename> replaced from the source distribution
+        <filename>idle_win32_bin.zip</filename>
         into every folder you plan on executing <application>idle</application>
         from.
       </para>
