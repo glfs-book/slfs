@@ -101,8 +101,8 @@ make -C tools</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -v -Dm755 freebee /usr/bin/freebee &amp;&amp;
-install -v -Dm755 tools/makehdimg /usr/bin/makehdimg &amp;&amp;
+<screen role="root"><userinput>install -v -Dm755 freebee /usr/bin &amp;&amp;
+install -v -Dm755 tools/makehdimg /usr/bin &amp;&amp;
 install -v -m644 freebee.1 /usr/share/man/man1 &amp;&amp;
 install -v -m644 tools/makehdimg.1 /usr/share/man/man1</userinput></screen>
 
