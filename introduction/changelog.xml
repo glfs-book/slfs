@@ -51,6 +51,16 @@
     </listitem>
 
     <listitem>
+      <para>February 26th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - com-emu/{freebee,idle,xhomer}: Simplify install
+          commands. PR <ulink url="&lfs-qol-pull;/61">(#61)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 17th, 2025</para>
       <itemizedlist>
         <listitem>
