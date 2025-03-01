@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY socat-download-http "http://www.dest-unreach.org/socat/download/socat-&socat-version;.tar.gz">
+]>
+
+<sect1 id="socat" xreflabel="socat-&socat-version;">
+  <?dbhtml filename="socat.html"?>
+
+
+  <title>socat-&socat-version;</title>
+
+  <indexterm zone="socat">
+    <primary sortas="a-socat">socat</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to socat</title>
+
+    <para>
+      The socat package provides a multipurpose relay tool.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&socat-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of socat</title>
+
+    <para>
+      Install <application>socat</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr \
+    --mandir=/usr/share/man &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+
+      <seglistitem>
+        <seg>
+          filan,
+          procan,
+          socat (link to socat1),
+          socat-*.sh, and
+          socat1
+        </seg>
+      </seglistitem>
+
+    </segmentedlist>
+
+    <segmentedlist>
+      <segtitle>Installed Libraries</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+
+    </segmentedlist>
+
+    <segmentedlist>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="filan">
+        <term><command>filan</command></term>
+        <listitem>
+         <para>
+           is a helper utility for file analysis
+         </para>
+          <indexterm zone="socat filan">
+            <primary sortas="b-filan">filan</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="procan">
+        <term><command>procan</command></term>
+        <listitem>
+         <para>
+           is a helper utility for process analysis
+         </para>
+          <indexterm zone="socat procan">
+            <primary sortas="b-procan">procan</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="socat-bin">
+        <term><command>socat</command></term>
+        <listitem>
+         <para>
+           is the multipurpose relay
+         </para>
+          <indexterm zone="socat socat-bin">
+            <primary sortas="b-socat">socat</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="socat-broker.sh">
+        <term><command>socat-broker.sh</command></term>
+        <listitem>
+         <para>
+           is a shell script for performing group communications (aka brokering)
+         </para>
+          <indexterm zone="socat socat-broker.sh">
+            <primary sortas="b-socat-broker.sh">socat-broker.sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="socat-chain.sh">
+        <term><command>socat-chain.sh</command></term>
+        <listitem>
+         <para>
+           is a (beta) shell script for building a chain of socat instances
+         </para>
+          <indexterm zone="socat socat-chain.sh">
+            <primary sortas="b-socat-chain.sh">socat-chain.sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="socat-mux.sh">
+        <term><command>socat-mux.sh</command></term>
+        <listitem>
+         <para>
+           is a shell script for establishing many-to-one, one-to-all communications
+         </para>
+          <indexterm zone="socat socat-mux.sh">
+            <primary sortas="b-socat-mux.sh">socat-mux.sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
