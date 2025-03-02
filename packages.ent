@@ -62,3 +62,6 @@
 
 <!-- 7. DEV-TOOLS -->
 <!ENTITY strace-version                      "6.13">
+
+<!-- 8. NEOFETCH-LIKE PROGRAMS -->
+<!ENTITY neofetch-version                    "7.1.0">

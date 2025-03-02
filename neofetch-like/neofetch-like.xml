@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<chapter id="neofetch-like">
+  <?dbhtml filename="neofetch-like.html" dir="neofetch-like"?>
+
+  <title>Neofetch-like Programs</title>
+
+  <para>
+    This section is dedicated to neofetch and its various forks and other 
+    packages inspired by it, which all provide information about the system and
+     output ASCII art, usually of the distro that's currently being used.
+  </para>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="neofetch.xml"/>
+
+</chapter>

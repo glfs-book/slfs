@@ -64,6 +64,13 @@
     This chapter covers packages which provide tools for developers.
   </para>
 
+  <bridgehead renderas="sect2">Chapter 8 - Neofetch-like Programs</bridgehead>
+
+  <para>
+    This chapter covers neofetch and its forks and other packages which are 
+    inspired by it.
+  </para>
+
   <bridgehead renderas="sect2">Appendices</bridgehead>
 
   <para>
