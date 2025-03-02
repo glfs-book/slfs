@@ -273,9 +273,43 @@ popd</userinput></screen>
       </para>
 
       <para>
+        Mapping your controller is the most difficult part but becomes a lot
+        easier if you use <xref linkend="jstest-sdl"/>. First, connect your
+        controller and invoke
+        <computeroutput>jstest-sdl -l</computeroutput>. You should see a
+        controller listed, perhaps multiple entries. In the case that there are
+        two entries for one controller, and one of them at the end says
+        <computeroutput>(IMU)</computeroutput>, you will want to choose the
+        controller that doesn't list <computeroutput>(IMU)</computeroutput> at
+        the end of the name. Each listing will have a joystick number. If you
+        only have one controller connected, it should be
+        <computeroutput>0</computeroutput>. Once you have decided which JS
+        number you are going to test, run
+        <computeroutput>jstest-sdl -t <replaceable>&lt;JS&gt;</replaceable></computeroutput>.
+        You should be brought up to a screen with axis, buttons, hats, and
+        balls listings, and depending on the quality of the sticks, the axis
+        listings may already be moving slightly.
+      </para>
+
+      <para>
+        Now go ahead and edit
+        <filename>~/.config/mupen64plus/mupen64plus.cfg</filename> in the
+        <computeroutput>[Input-SDL-Control1]</computeroutput> section for the
+        first controller. Ensure
+        <computeroutput>mode</computeroutput> is equal to
+        <computeroutput>0</computeroutput> so that you can bind the mappings
+        properly. Now edit each field to that which matches your controller's
+        input scheme that appears in <command>jstest-sdl</command>.
+        Once you feel confident in the mappings, save the file and test the
+        inputs by running a ROM. If all went well, the mappings should work.
+        You may have to edit the deadzones, but hopefully the default should
+        work for you.
+      </para>
+
+      <para>
         If you aim to use a graphical frontend, the manual configuration will
         hopefully not be necessary. Most graphical frontends will handle the
-        configuration for you.
+        configuration for you through the GUI.
       </para>
 
     </sect3>

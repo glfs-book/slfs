@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY jstest-sdl-download-http
+    "https://github.com/meleu/jstest-sdl/archive/&jstest-sdl-version;.tar.gz">
+]>
+
+<sect1 id="jstest-sdl" xreflabel="jstest-sdl-&jstest-sdl-minor-version;">
+  <?dbhtml filename="jstest-sdl.html"?>
+	
+  <title>jstest-sdl-&jstest-sdl-minor-version;</title>
+
+  <indexterm zone="jstest-sdl">
+    <primary sortas="a-jstest-sdl">jstest-sdl</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to jstest-sdl</title>
+
+    <para>
+      The <application>jstest-sdl</application> package provides a program for
+      testing gamepad/joystick inputs, which can help with mapping controllers
+      manually as described in <xref linkend="m64plus-components"/>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&jstest-sdl-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">jstest-sdl Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of jstest-sdl</title>
+
+    <para>
+      Install <application>jstest-sdl</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>sed -i 's/\-ltinfo//g' Makefile &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -v -m755 jstest-sdl /usr/bin/</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>sed -i 's/\-ltinfo//g' Makefile</command>: This command avoids
+      linking against an <application>Ncurses</application> library that wasn't
+      built in LFS.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          jstest-sdl
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="jstest-sdl-bin">
+        <term><command>jstest-sdl</command></term>
+        <listitem>
+          <para>
+            shows inputs given to a gamepad/joystick
+          </para>
+          <indexterm zone="jstest-sdl jstest-sdl-bin">
+            <primary sortas="b-jstest-sdl-bin">jstest-sdl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
