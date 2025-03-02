@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 
-  <!ENTITY neofetch-download-http "https://github.com/dylanaraps/neofetch/archive/7.1.0/neofetch-7.1.0.tar.gz">
+  <!ENTITY neofetch-download-http "https://github.com/dylanaraps/neofetch/archive/&neofetch-version;/neofetch-&neofetch-version;.tar.gz">
 ]>
 
 <sect1 id="neofetch" xreflabel="neofetch-&neofetch-version;">
