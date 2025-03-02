@@ -95,7 +95,7 @@
             Outputs information about the system and displays ASCII art of the 
             system's distro
           </para>
-          <indexterm zone="neofetch neofetch">
+          <indexterm zone="neofetch neofetch-bin">
             <primary sortas="b-neofetch">neofetch</primary>
           </indexterm>
         </listitem>
