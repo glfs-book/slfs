@@ -84,7 +84,8 @@ if libdocflag:
 				tmp = tmplst[0]
 				for h in tmplst[1:]:
 					# isdigit only works for positive integers and doesn't work with floats
-					# but neither of these should happen in shared object naming
+					# but it should do, shared object naming doesn't involve floats or
+					# negative integers
 					if not h.isdigit():
 						tmp = tmp + '.' + h
 				liblist.append([tmp, 'f', 'FILLER'])
