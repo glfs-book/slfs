@@ -80,7 +80,14 @@ if libdocflag:
 			elif os.path.isfile(os.path.join(i, f)) and '.a' in os.path.basename(os.path.join(i, f)):
 				liblist.append([f, 'f', 'FILLER'])
 			elif os.path.isfile(os.path.join(i, f)) and '.so' in os.path.basename(os.path.join(i, f)):
-				liblist.append([f.split('.so')[0] + '.so', 'f', 'FILLER'])
+				tmplst = f.split('.')
+				tmp = tmplst[0]
+				for h in tmplst[1:]:
+					# isdigit only works for positive integers and doesn't work with floats
+					# but neither of these should happen in shared object naming
+					if not h.isdigit():
+						tmp = tmp + '.' + h
+				liblist.append([tmp, 'f', 'FILLER'])
 
 	liblist.sort()
 	liblist = list(liblist for liblist,_ in itertools.groupby(liblist))
