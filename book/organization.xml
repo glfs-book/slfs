@@ -58,7 +58,13 @@
     hardware.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 7 - Developer Tools</bridgehead>
+  <bridgehead renderas="sect2">Chapter 7 - Video Game Emulators</bridgehead>
+
+  <para>
+    This chapter covers packages which allow you to emulate video games.
+  </para>
+
+  <bridgehead renderas="sect2">Chapter 8 - Developer Tools</bridgehead>
 
   <para>
     This chapter covers packages which provide tools for developers.

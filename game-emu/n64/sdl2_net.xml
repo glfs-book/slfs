@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY sdl2_net-download-http
+    "https://github.com/libsdl-org/SDL_net/releases/download/release-&sdl2_net-version;/SDL2_net-&sdl2_net-version;.tar.gz">
+]>
+
+<sect1 id="sdl2_net" xreflabel="SDL2_net-&sdl2_net-version;">
+  <?dbhtml filename="sdl2_net.html"?>
+	
+  <title>SDL2_net-&sdl2_net-version;</title>
+
+  <indexterm zone="sdl2_net">
+    <primary sortas="a-sdl2_net">SDL2_net</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to SDL2_net</title>
+
+    <para>
+      The <application>sdl2_net</application> package provides a cross-platform
+      networking library.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&sdl2_net-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">SDL2_net Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of SDL2_net</title>
+
+    <para>
+      Install <application>SDL2_net</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr     \
+            --disable-static  \
+            --disable-sdltest \
+            --disable-examples &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/static-libraries.xml"/>
+
+    <para>
+      <parameter>--disable-sdltest --disable-examples</parameter>: These
+      parameters disable linking against a library that was deleted in <ulink
+      url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libSDL2_net.so
+        </seg>
+        <seg>
+          /usr/lib/cmake/SDL2_net
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libsdl2_net">
+        <term><filename class="libraryfile">libSDL2_net.so</filename></term>
+        <listitem>
+          <para>
+            contains networking functions
+          </para>
+          <indexterm zone="sdl2_net libsdl2_net">
+            <primary sortas="c-libsdl2_net">libSDL2_net.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
