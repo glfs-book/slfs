@@ -43,6 +43,11 @@
       <para>March 4th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[seal331] - cde/*: Added. PR
+          <ulink url="&lfs-qol-pull;/56">(#56)</ulink>. Fixes
+          <ulink url="&lfs-qol-issues;/54">#54</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Changelog: Cleaned for next release cycle.</para>
         </listitem>
       </itemizedlist>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY printproto-download-http "https://x.org/pub/individual/proto/printproto-&printproto-version;.tar.bz2">
+]>
+
+<sect1 id="printproto" xreflabel="printproto-&printproto-version;">
+  <?dbhtml filename="printproto.html"?>
+  <title>printproto-&printproto-version;</title>
+
+  <indexterm zone="printproto">
+    <primary sortas="a-printproto">printproto</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to printproto</title>
+
+    <para>
+      The <application>printproto</application> package provides the protocol
+      headers for the <xref linkend="libxp"/> package.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&printproto-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  <bridgehead renderas="sect3">printproto Dependencies</bridgehead>
+
+  <bridgehead renderas="sect4">Required</bridgehead>
+  <para role="required">
+    <ulink url="&blfs-svn;/x/xorg7.html#xorg-env">Xorg build environment</ulink>
+    (should be set for the following instructions to work)
+  </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of printproto</title>
+
+    <para>
+      Install <application>printproto</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure $XORG_CONFIG</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>
