@@ -43,6 +43,12 @@
       <para>March 4th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - glaze: 4.4.1 -&gt; 4.4.3;
+          hyprutils: 0.5.0 -&gt; 0.5.1. Fixes
+          <ulink url="&lfs-qol-issues;/53">#53</ulink> and
+          <ulink url="&lfs-qol-issues;/55">#55</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - game-emu/n64*: Added. PR
           <ulink url="&lfs-qol-pull;/58">(#58)</ulink>. Fixes
           <ulink url="&lfs-qol-issues;/57">#57</ulink>.</para>
