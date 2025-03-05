@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<chapter id="gen-game">
+  <?dbhtml filename="gen-game.html" dir="gen-game"?>
+
+  <title>General Game Software</title>
+
+  <para>
+    This section is dedicated to installing general gaming software.
+  </para>
+
+  <!-- MC -->
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mc/mc-header.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mc/mc-intro.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mc/java.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mc/ojdk-conf.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mc/openjdk.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mc/prism-launcher.xml"/>
+
+</chapter>

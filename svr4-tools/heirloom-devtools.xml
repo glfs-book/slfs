@@ -123,13 +123,23 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
       command:
     </para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>make -j1</userinput></screen>
 
     <para>
       Now, as the &root; user:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>make -j1</command>: This command builds the package using only
+      one thread to ensure there is no race condition.
+    </para>
 
   </sect2>
 

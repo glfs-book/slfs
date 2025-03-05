@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="mc-intro" xreflabel="Introduction to Minecraft">
+  <?dbhtml filename="mc-intro.html"?>
+
+
+  <title>Introduction to Minecraft</title>
+
+  <sect2>
+    <title>What is Minecraft?</title>
+
+    <para>
+      Minecraft (now known as Minecraft: Java Edition) is a Java game with
+      cross platform support, unlike Minecraft: Bedrock Edition (now known as
+      simply Minecraft). Minecraft mentions of this book will simply refer to
+      it as Minecraft, but means Minecraft: Java Edition. 
+    </para>
+
+    <para>
+      Since Minecraft is a Java game, it needs a JDK (Java Development Kit) to
+      run. Beyond that, it also needs a proper launcher. The launcher in this
+      section is <xref linkend="prism-launcher"/>.
+    </para>
+
+  </sect2>
+
+</sect1>

@@ -9,7 +9,7 @@
 <!ENTITY pugixml-version                     "1.15">
 <!ENTITY libspng-version                     "0.7.4">
 <!ENTITY hyprland-protocols-version          "0.6.2">
-<!ENTITY hyprutils-version                   "0.5.0">
+<!ENTITY hyprutils-version                   "0.5.1">
 <!ENTITY hyprlang-version                    "0.6.0">
 <!ENTITY hyprcursor-version                  "0.1.11">
 <!ENTITY hyprwayland-scanner-version         "0.4.4">
@@ -17,7 +17,7 @@
 <!ENTITY hyprgraphics-version                "0.1.2">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-qtutils-version            "0.1.3">
-<!ENTITY glaze-version                       "4.4.1">
+<!ENTITY glaze-version                       "4.4.3">
 <!ENTITY re2-version                         "2024-07-02">
 <!ENTITY libliftoff-version                  "0.5.0">
 <!ENTITY hyprland-version                    "0.47.2">
@@ -44,7 +44,7 @@
 <!ENTITY heirloom-ex-vi-minor-version        "bd1f88">
 <!ENTITY heirloom-ex-vi-version              "bd1f886598d20d457885c5c189fea34b027cbdef">
 
-<!-- 6. EMULATORS -->
+<!-- 6. COM-EMU -->
 <!ENTITY idle-minor-version                  "r26">
 <!ENTITY idle-version                        "e70cfd651ec84ec10f69b9d8ea8696978a6b5d11">
 <!ENTITY xhomer-version                      "2-19-24">
@@ -60,6 +60,35 @@
 <!ENTITY p20-emu-minor-version               "d75a83">
 <!ENTITY p20-emu-version                     "d75a83ca9b107e1ae1a54598e4045c2843bd823e">
 
-<!-- 7. DEV-TOOLS -->
+<!-- 7. GAME-EMU -->
+<!ENTITY sdl2_net-version                    "2.2.0">
+<!ENTITY zlib-version                        "1.3.1">
+<!ENTITY jstest-sdl-minor-version            "710687">
+<!ENTITY jstest-sdl-version                  "710687344a8bd35553f0edf40469531c07b6ef31">
+<!ENTITY mupen64plus-version                 "2.6.0">
+<!ENTITY mupen64plus-core-version            "&mupen64plus-version;">
+<!ENTITY mupen64plus-input-sdl-version       "&mupen64plus-version;">
+<!ENTITY mupen64plus-audio-sdl-version       "&mupen64plus-version;">
+<!ENTITY mupen64plus-rsp-hle-version         "&mupen64plus-version;">
+<!ENTITY mupen64plus-video-rice-version      "&mupen64plus-version;">
+<!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
+<!ENTITY gliden64-version                    "70b9b6cee1eb457c759ee82654c4d6ae5b30c4df">
+
+<!-- 8. GEN-GAME -->
+<!ENTITY openjdk-version                     "19.0.2">
+<!ENTITY openjdk-build                       "7">
+<!ENTITY prism-launcher-version              "9.2">
+
+<!-- 9. DEV-TOOLS -->
 <!ENTITY strace-version                      "6.13">
 <!ENTITY socat-version                       "1.8.0.3">
+
+<!-- 10. CDE -->
+<!ENTITY libutempter-version                 "1.2.1">
+<!ENTITY printproto-version                  "1.0.5">
+<!ENTITY libxp-version                       "1.0.4">
+<!ENTITY byacc-version                       "20241231">
+<!ENTITY motif-version                       "2.3.8">
+<!ENTITY ksh-version                         "1.0.10">
+<!ENTITY ncompress-version                   "5.0">
+<!ENTITY cde-de-version                      "2.5.2">

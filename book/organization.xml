@@ -58,10 +58,28 @@
     hardware.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 7 - Developer Tools</bridgehead>
+  <bridgehead renderas="sect2">Chapter 7 - Video Game Emulators</bridgehead>
+
+  <para>
+    This chapter covers packages which allow you to emulate video games.
+  </para>
+
+  <bridgehead renderas="sect2">Chapter 8 - General Game Software</bridgehead>
+
+  <para>
+    This chapter covers packages which cover general gaming bases.
+  </para>
+
+  <bridgehead renderas="sect2">Chapter 9 - Developer Tools</bridgehead>
 
   <para>
     This chapter covers packages which provide tools for developers.
+  </para>
+
+  <bridgehead renderas="sect2">Chapter 10 - Common Desktop Environment</bridgehead>
+
+  <para>
+    This chapter covers the Common Desktop Environment and its dependencies.
   </para>
 
   <bridgehead renderas="sect2">Appendices</bridgehead>
