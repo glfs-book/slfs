@@ -66,7 +66,9 @@ make</userinput></screen>
           filan,
           procan,
           socat (link to socat1),
-          socat-*.sh, and
+          socat-broker.sh
+          socat-chain.sh
+          socat-mux.sh, and
           socat1
         </seg>
       </seglistitem>
