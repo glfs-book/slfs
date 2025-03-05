@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY prism-launcher-download-http
+    "https://github.com/PrismLauncher/PrismLauncher/releases/download/&prism-launcher-version;/PrismLauncher-&prism-launcher-version;.tar.gz">
+]>
+
+<sect1 id="prism-launcher" xreflabel="PrismLauncher-&prism-launcher-version;">
+  <?dbhtml filename="prism-launcher.html"?>
+  
+  <title>PrismLauncher-&prism-launcher-version;</title>
+
+  <indexterm zone="prism-launcher">
+    <primary sortas="a-prism-launcher">PrismLauncher</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to PrismLauncher</title>
+
+    <para>
+      The <application>PrismLauncher</application> package provides a Minecraft
+      Launcher.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&prism-launcher-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">PrismLauncher Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>,
+      <xref linkend="openjdk"/> (or
+      <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink>), and
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>
+    </para>
+
+    <important><para>
+      While you can install the most recent version of
+      <application>OpenJDK</application> (version 20 and above), you'll need to
+      edit the build system of this package, tick an option in the launcher
+      menu, and will lose support in older Minecraft versions, including mods
+      and other things. This is because version 20 and above does not support
+      Java 7, but version 19 does.
+    </para></important>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/python-dependencies.html#commonmark">commonmark</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/ghc-filesystem/">ghc_filesystem</ulink>,
+      <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/quazip/">QuaZip</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/scdoc/">scdoc</ulink>, and
+      <xref linkend="tomlplusplus"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of PrismLauncher</title>
+
+    <para>
+      If you have installed <application>OpenJDK</application> version 20 or
+      above, edit the build system to allow building with Java 8 instead of
+      7:
+    </para>
+
+<screen><userinput>sed -e 's/Java 1.7/Java 1.8/g'     \
+    -e 's/-target 7/-target 8/g' \
+    -e 's/-source 7/-source 8/g' \
+    -i libraries/{javacheck,launcher}/CMakeLists.txt</userinput></screen>
+
+    <para>
+      Install <application>PrismLauncher</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -G Ninja -Wno-dev .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring PrismLauncher</title>
+
+    <para>
+      This launcher should walk you through how to set it up. However, one
+      major thing needs to be done if you installed
+      <application>OpenJDK</application> version 20 or above. After you create
+      an instance, you will need to edit that instance, go to the
+      <quote>Settings</quote> section, then tick <quote>Skip Java Compatibility
+      Checks</quote> to avoid Minecraft from refusing to launch. This has to be
+      done for every instance. If you installed <xref linkend="openjdk"/>, this
+      doesn't need to be done at all.
+    </para>
+
+  </sect2>
+
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          prismlauncher
+        </seg>
+        <seg>
+          JavaCheck.jar, NewLaunch.jar, and NewLaunchLegacy.jar
+        </seg>
+        <seg>
+          /usr/share/{PrismLauncher,qlogging-categories6}
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="prismlauncher">
+        <term><command>prismlauncher</command></term>
+        <listitem>
+          <para>
+            manages and launches minecraft instances
+          </para>
+          <indexterm zone="prism-launcher prismlauncher">
+            <primary sortas="b-prismlauncher">prismlauncher</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

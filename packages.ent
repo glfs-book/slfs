@@ -74,10 +74,15 @@
 <!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
 <!ENTITY gliden64-version                    "70b9b6cee1eb457c759ee82654c4d6ae5b30c4df">
 
-<!-- 8. DEV-TOOLS -->
+<!-- 8. GEN-GAME -->
+<!ENTITY openjdk-version                     "19.0.2">
+<!ENTITY openjdk-build                       "7">
+<!ENTITY prism-launcher-version              "9.2">
+
+<!-- 9. DEV-TOOLS -->
 <!ENTITY strace-version                      "6.13">
 
-<!-- 8. CDE -->
+<!-- 10. CDE -->
 <!ENTITY libutempter-version                 "1.2.1">
 <!ENTITY printproto-version                  "1.0.5">
 <!ENTITY libxp-version                       "1.0.4">
