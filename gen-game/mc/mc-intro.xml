@@ -24,7 +24,7 @@
     <para>
       Since Minecraft is a Java game, it needs a JDK (Java Development Kit) to
       run. Beyond that, it also needs a proper launcher. The launcher in this
-      section is PRISM LAUNCHER.
+      section is <xref linkend="prism-launcher"/>.
     </para>
 
   </sect2>
