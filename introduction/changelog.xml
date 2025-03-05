@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>March 5th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Toxikuu] - socat: Added. PR
+          <ulink url="&lfs-qol-issues;/64">(#64)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 4th, 2025</para>
       <itemizedlist>
         <listitem>
