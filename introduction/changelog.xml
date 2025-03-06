@@ -43,6 +43,9 @@
       <para>March 5th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Add opengl entity.</para>
+        </listitem>
+        <listitem>
           <para>[Toxikuu] - socat: Added. PR
           <ulink url="&lfs-qol-pull;/64">(#64)</ulink>.</para>
         </listitem>

@@ -215,3 +215,7 @@ export -f as_root</userinput></screen>
 <!ENTITY unzip "<ulink url='&blfs-svn;/general/libarchive.html'>libarchive</ulink>">
 
 <!ENTITY gobject-introspection "<xref linkend='glib2'/> (with GObject Introspection)">
+
+<!ENTITY opengl
+         "OpenGL (<ulink url='&glfs-website;/shareddeps/libglvnd.html'>libglvnd</ulink>
+          and/or  <ulink url='&glfs-website;/shareddeps/mesa.html'>mesa</ulink>)">

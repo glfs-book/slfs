@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY glu-download-http "https://archive.mesa3d.org/glu/glu-&glu-version;.tar.xz">
+  <!ENTITY glu-download-ftp  " ">
+]>
+
+<sect1 id="glu" xreflabel="GLU-&glu-version;">
+  <?dbhtml filename="glu.html"?>
+
+  <title>GLU-&glu-version;</title>
+
+  <indexterm zone="glu">
+    <primary sortas="a-GLU">GLU</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to GLU</title>
+
+    <para>
+      This package provides the Mesa OpenGL Utility library.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&glu-download-http;"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Download (FTP): <ulink url="&glu-download-ftp;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">GLU Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      &opengl;
+    </para>
+
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of GLU</title>
+
+    <para>
+      Install <application>GLU</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup ..                   \
+      --prefix=$XORG_PREFIX      \
+      $(pkgconf libglvnd  &amp;&amp;     \
+      echo -D gl_provider=glvnd) \
+      $(pkgconf --print-provides \
+      gl | grep "gl =" 1>&amp;2 &amp;&amp;   \
+      echo -D gl_provider=gl)    \
+      --buildtype=release &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      This package does not come with a test suite.
+    </para>
+
+    <para>
+      Now, as the <systemitem class="username">root</systemitem> user:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+rm -vf /usr/lib/libGLU.a</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+<!--
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/static-libraries.xml"/>
+-->
+
+    <para>
+      <command>$(pkgconf ...)</command>: These commands check which provider
+      OpenGL has been installed from based on <command>pkgconf</command> files.
+      Then it passes the correct provider to <command>meson</command> to ensure
+      this package works properly.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Library</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libGLU.so
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libGLU">
+        <term><filename class="libraryfile">libGLU.so</filename></term>
+        <listitem>
+          <para>
+            is the <application>Mesa</application> OpenGL
+            Utility library
+          </para>
+          <indexterm zone="glu libGLU">
+            <primary sortas="c-libGLU">libGLU.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

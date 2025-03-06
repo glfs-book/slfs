@@ -39,7 +39,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
-      <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>,
+      &opengl;,
       <xref linkend="openjdk"/> (or
       <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink>), and
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>

@@ -32,9 +32,6 @@ JAVA_HOME=/opt/jdk
 # Adjust PATH
 pathappend $JAVA_HOME/bin
 
-# Add to MANPATH
-pathappend $JAVA_HOME/man MANPATH
-
 # Auto Java CLASSPATH: Copy jar files to, or create symlinks in, the
 # /usr/share/java directory.
 

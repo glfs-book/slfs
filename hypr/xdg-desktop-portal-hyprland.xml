@@ -41,7 +41,7 @@
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <xref linkend="hyprlib"/>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
-      <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink> (for the GBM),
+      &opengl;,
       <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
       <xref linkend="sdbus-cpp"/>,

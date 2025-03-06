@@ -55,7 +55,7 @@
       <xref linkend="libspng"/>,
       <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
       <xref linkend="libzip"/>,
-      <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>,
+      &opengl;,
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,

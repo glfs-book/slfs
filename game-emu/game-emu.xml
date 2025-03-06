@@ -20,6 +20,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/sdl2_net.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/minizip.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/jstest-sdl.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/glu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="n64/m64plus-components.xml"/>
 
 </chapter>
