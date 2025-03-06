@@ -60,6 +60,8 @@ make</userinput></screen>
 
     <segmentedlist>
       <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
 
       <seglistitem>
         <seg>
@@ -72,29 +74,16 @@ make</userinput></screen>
           socat1
         </seg>
       </seglistitem>
-
-    </segmentedlist>
-
-    <segmentedlist>
-      <segtitle>Installed Libraries</segtitle>
-
       <seglistitem>
         <seg>
           None
         </seg>
       </seglistitem>
-
-    </segmentedlist>
-
-    <segmentedlist>
-      <segtitle>Installed Directories</segtitle>
-
       <seglistitem>
         <seg>
           None
         </seg>
       </seglistitem>
-
     </segmentedlist>
 
     <variablelist>
