@@ -199,8 +199,10 @@ export -f as_root</userinput></screen>
           building this package.</para></note>">
 
 <!ENTITY logind
-         "<phrase revision='sysv'><xref linkend='elogind'/></phrase>
-          <phrase revision='systemd'><xref linkend='systemd'/></phrase>">
+         "<phrase revision='sysv'><ulink
+          url='&blfs-svn;/general/elogind.html'>elogind</ulink></phrase>
+          <phrase revision='systemd'><ulink
+          url='&blfs-svn;/general/systemd.html'>Systemd</ulink></phrase>">
 
 <!ENTITY qt5-deps
          "(<xref linkend='qt5'/> or <xref role='nodep' linkend='qt5-alternate'/>)">

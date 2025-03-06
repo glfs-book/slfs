@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY dolphin-download-http
+    "https://github.com/dolphin-emu/dolphin">
+]>
+
+<sect1 id="dolphin" xreflabel="Dolphin-&dolphin-version;">
+  <?dbhtml filename="dolphin.html"?>
+
+  <title>Dolphin-&dolphin-version;</title>
+
+  <indexterm zone="dolphin">
+    <primary sortas="a-dolphin">Dolphin</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Dolphin</title>
+
+    <para>
+      The <application>Dolphin</application> package (not to be confused with
+      the <ulink url="&blfs-svn;/kde/dolphin.html">KF6 dolphin file
+      manager</ulink>) provides a GCN and Wii emulator.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&dolphin-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Dolphin Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>,
+      &opengl;,
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/alsa-utils.html">alsa-utils</ulink>,
+      <ulink url="&blfs-svn;/general/bluez.html">BlueZ</ulink>,
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
+      <ulink url="&blfs-svn;/general/fmt.html">fmt</ulink>,
+      <xref linkend="libspng"/>,
+      <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
+      <ulink url="&blfs-svn;/general/llvm.html">LLVM</ulink>,
+      &logind;,
+      <!--
+      <xref linkend="mgba"/>,
+      -->
+      <xref linkend="minizip"/>,
+      <xref linkend="pugixml"/>,
+      <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>,
+      <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
+      <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/hidapi/">hidapi</ulink> and
+      <ulink url="&arch-pkgs;/extra/x86_64/mbedtls/">mbedtls</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Downloading Dolphin</title>
+
+    <para>
+      First, download the package with all its submodules using <ulink
+      url="&blfs-svn;/general/git.html">Git</ulink>:
+    </para>
+
+<screen><userinput>git clone --recursive &dolphin-download-http; &amp;&amp;
+cd dolphin &amp;&amp;
+git checkout &dolphin-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Dolphin</title>
+
+    <para>
+      Install <application>Dolphin</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D ENABLE_TESTS=OFF            \
+      -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <parameter>-D ENABLE_TESTS=OFF</parameter>: This parameter disables
+      building unit tests.
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Using Dolphin</title>
+
+    <para>
+      Using <application>Dolphin</application> is generally straight forward.
+      However, if you are on <application>Wayland</application>, and are not
+      launching the application via a launcher, then the program will most
+      likely not have a variable set in the same breath, which leads to
+      <application>Dolphin</application> not being able to launch any game.
+      You need to run
+      <computeroutput>env QT_QPA_PLATFORM=xcb dolphin-emu</computeroutput> in
+      order to bypass this. You might want to set an alias for
+      <command>dolphin-emu</command> which includes the
+      <computeroutput>env QT_QPA_PLATFORM=xcb</computeroutput> bit, ensuring
+      no matter how the program is launched, it has the variable set.
+      This variable will be set if the method of launching reads from the
+      <filename>.desktop</filename> file, which not all launchers read from.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          dolphin-emu, dolphin-emu-nogui, and dolphin-tool
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/dolphin-emu
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="dolphin-emu">
+        <term><command>dolphin-emu</command></term>
+        <listitem>
+          <para>
+            is the GUI version of <application>Dolphin</application>
+          </para>
+          <indexterm zone="dolphin dolphin-emu">
+            <primary sortas="b-dolphin-emu">dolphin-emu</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dolphin-emu-nogui">
+        <term><command>dolphin-emu-nogui</command></term>
+        <listitem>
+          <para>
+            is the command-line version of <application>Dolphin</application>
+          </para>
+          <indexterm zone="dolphin dolphin-emu-nogui">
+            <primary sortas="b-dolphin-emu-nogui">dolphin-emu-nogui</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dolphin-tool">
+        <term><command>dolphin-tool</command></term>
+        <listitem>
+          <para>
+            has multiple functions such as managing disc images
+          </para>
+          <indexterm zone="dolphin dolphin-tool">
+            <primary sortas="b-dolphin-tool">dolphin-tool</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
