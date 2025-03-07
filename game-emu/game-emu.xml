@@ -15,11 +15,9 @@
   </para>
 
   <!-- GBA -->
-  <!--
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gba/gba-header.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gba/gba-intro.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gba/mgba.xml"/>
-  -->
   <!-- GCN -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gcn/gcn-header.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gcn/gcn-intro.xml"/>

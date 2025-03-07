@@ -62,7 +62,8 @@
 
 <!-- 7. GAME-EMU -->
 <!-- GBA -->
-<!ENTITY mgba-version                        "0.10.4">
+<!ENTITY mgba-minor-version                  "eeb52e">
+<!ENTITY mgba-version                        "eeb52e40274a8240fe066a16b93d9d46c4b677b9">
 <!-- GCN/Wii -->
 <!ENTITY dolphin-version                     "2412">
 <!-- N64 -->

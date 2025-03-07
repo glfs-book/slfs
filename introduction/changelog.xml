@@ -43,6 +43,9 @@
       <para>March 6th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - mGBA: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Dolphin: Added. Fixes
           <ulink url="&lfs-qol-issues;/59">#59</ulink>.</para>
         </listitem>

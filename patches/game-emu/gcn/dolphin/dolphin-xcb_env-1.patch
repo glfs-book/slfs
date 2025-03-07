@@ -1,0 +1,58 @@
+From a3b06b0572d7a16d8ede9c849e9f549a283123df Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Joshua=20Vanda=C3=ABle?= <joshua@vandaele.software>
+Date: Mon, 20 Jan 2025 11:09:03 +0100
+Subject: [PATCH] Enforce XCB within code
+
+---
+ Data/dolphin-emu.desktop               | 2 +-
+ Flatpak/org.DolphinEmu.dolphin-emu.yml | 4 ----
+ Source/Core/DolphinQt/Main.cpp         | 8 ++++++++
+ 3 files changed, 9 insertions(+), 5 deletions(-)
+
+diff --git a/Data/dolphin-emu.desktop b/Data/dolphin-emu.desktop
+index a998ce4370fb..f44fe202f2a1 100644
+--- a/Data/dolphin-emu.desktop
++++ b/Data/dolphin-emu.desktop
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Version=1.0
+ Icon=dolphin-emu
+-Exec=env QT_QPA_PLATFORM=xcb dolphin-emu
++Exec=dolphin-emu
+ Terminal=false
+ Type=Application
+ Categories=Game;Emulator;
+diff --git a/Flatpak/org.DolphinEmu.dolphin-emu.yml b/Flatpak/org.DolphinEmu.dolphin-emu.yml
+index a1266b5df5c3..23bb14338c30 100644
+--- a/Flatpak/org.DolphinEmu.dolphin-emu.yml
++++ b/Flatpak/org.DolphinEmu.dolphin-emu.yml
+@@ -8,10 +8,6 @@ rename-icon: dolphin-emu
+ finish-args:
+   - --device=all
+   - --socket=pulseaudio
+-  # dolphin doesn't work on wayland (only the ui does), if a user were to set
+-  # this env variable globally to wayland then games wouldn't work. 
+-  # we overwrite the setting and force xcb to prevent this from happening.
+-  - --env=QT_QPA_PLATFORM=xcb
+   - --socket=x11
+   - --share=network
+   - --share=ipc
+diff --git a/Source/Core/DolphinQt/Main.cpp b/Source/Core/DolphinQt/Main.cpp
+index 88400aa1a6be..8baa6d7f0823 100644
+--- a/Source/Core/DolphinQt/Main.cpp
++++ b/Source/Core/DolphinQt/Main.cpp
+@@ -148,6 +148,14 @@ int main(int argc, char* argv[])
+ #if (QT_VERSION >= QT_VERSION_CHECK(6, 3, 0))
+   setenv("QT_XCB_NO_XI2", "1", true);
+ #endif
++  // Dolphin currently doesn't work on Wayland (Only the UI does, games do not launch.) This makes
++  // XCB the default and forces it on if the platform is specified to be wayland, to prevent this
++  // from happening.
++  // For more information: https://bugs.dolphin-emu.org/issues/11807
++  const char* current_qt_platform = getenv("QT_QPA_PLATFORM");
++  const bool replace_qt_platform =
++      (current_qt_platform && strcasecmp(current_qt_platform, "wayland") == 0);
++  setenv("QT_QPA_PLATFORM", "xcb", replace_qt_platform);
+ #endif
+ 
+   QCoreApplication::setOrganizationName(QStringLiteral("Dolphin Emulator"));

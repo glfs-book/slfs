@@ -35,6 +35,16 @@
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/game-emu/gcn/dolphin/dolphin-xcb_env-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
     <bridgehead renderas="sect3">Dolphin Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
@@ -59,9 +69,6 @@
       <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
       <ulink url="&blfs-svn;/general/llvm.html">LLVM</ulink>,
       &logind;,
-      <!--
-      <xref linkend="mgba"/>,
-      -->
       <xref linkend="minizip"/>,
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
@@ -96,6 +103,15 @@ git checkout &dolphin-version;</userinput></screen>
     <title>Installation of Dolphin</title>
 
     <para>
+      First apply a patch to force <application>XCB</application> to be used
+      in <application>Dolphin</application> on
+      <application>Wayland</application> to avoid being unable to initialize
+      graphics when launching a game:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../dolphin-xcb_env-1.patch</userinput></screen>
+
+    <para>
       Install <application>Dolphin</application> by running the following
       commands:
     </para>
@@ -107,6 +123,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
       -D CMAKE_SKIP_INSTALL_RPATH=ON \
       -D ENABLE_TESTS=OFF            \
+      -D USE_SYSTEM_LIBMGBA=OFF      \
       -G Ninja .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -130,8 +147,19 @@ ninja</userinput></screen>
       building unit tests.
     </para>
 
+    <para>
+      <parameter>-D USE_SYSTEM_LIBMGBA=OFF</parameter>: This parameter forces
+      the build system to build the vendored copy of
+      <application>mGBA</application>; otherwise, there will be compilation
+      errors if <xref linkend="mgba"/> is installed due to different versions
+      (compiling an older <application>mGBA</application> results in
+      compilation errors because of it requiring an older
+      <application>FFmpeg</application> version).
+    </para>
+
   </sect2>
 
+<!--
   <sect2>
     <title>Using Dolphin</title>
 
@@ -152,6 +180,7 @@ ninja</userinput></screen>
     </para>
 
   </sect2>
+-->
 
   <sect2 role="content">
     <title>Contents</title>

@@ -5,13 +5,13 @@
   %general-entities;
 
   <!ENTITY mgba-download-http
-    "https://github.com/mgba-emu/mgba/archive/&mgba-version;/mgba-&mgba-version;.tar.gz">
+    "https://github.com/mgba-emu/mgba/archive/&mgba-version;.tar.gz">
 ]>
 
-<sect1 id="mgba" xreflabel="mGBA-&mgba-version;">
+<sect1 id="mgba" xreflabel="mGBA-&mgba-minor-version;">
   <?dbhtml filename="mgba.html"?>
 
-  <title>mGBA-&mgba-version;</title>
+  <title>mGBA-&mgba-minor-version;</title>
 
   <indexterm zone="mgba">
     <primary sortas="a-mgba">mGBA</primary>
@@ -22,7 +22,7 @@
 
     <para>
       The <application>mGBA</application> package provides a GBA emulator. It
-      can also be used with other emulators, such as <xref linkend="dolphin"/>.
+      can also be used with other emulators.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>
@@ -49,14 +49,14 @@
       <ulink url="&blfs-svn;/general/desktop-file-utils.html">desktop-file-utils</ulink>,
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
       <ulink url="&blfs-svn;/general/lua.html">Lua</ulink>,
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, and
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink> and/or
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink> (for the
+      frontends), and
       <ulink url="&blfs-svn;/server/sqlite.html">SQLite</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/../12.2/x/qt5-components.html">Qt-5 Components</ulink>
-      (for the Qt frontend) and
       <ulink url="&arch-pkgs;/core/x86_64/libedit/">editline</ulink>
     </para>
 
@@ -85,7 +85,7 @@ ninja</userinput></screen>
     </para>
 
 <screen role="root"><userinput>ninja install &amp;&amp;
-mv -v /usr/share/doc/mGBA{,-&mgba-version;}</userinput></screen>
+mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
 
   </sect2>
   
@@ -96,7 +96,7 @@ mv -v /usr/share/doc/mGBA{,-&mgba-version;}</userinput></screen>
       href="../../xincludes/cmake-skip-install-rpath.xml"/>
 
     <para>
-      <command>mv -v /usr/share/doc/mGBA{,-&mgba-version;}</command>: This
+      <command>mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</command>: This
       command ensures the doc folder for this package is consistent with the
       other packages.
     </para>
@@ -113,13 +113,13 @@ mv -v /usr/share/doc/mGBA{,-&mgba-version;}</userinput></screen>
 
       <seglistitem>
         <seg>
-          mgba
+          mgba and mgba-qt
         </seg>
         <seg>
           libmgba.so
         </seg>
         <seg>
-          /usr/include/mgba{,-util} and /usr/share/doc/mgba-&mgba-version;
+          /usr/include/mgba{,-util} and /usr/share/doc/mgba-&mgba-minor-version;
         </seg>
       </seglistitem>
     </segmentedlist>
@@ -138,6 +138,19 @@ mv -v /usr/share/doc/mGBA{,-&mgba-version;}</userinput></screen>
           </para>
           <indexterm zone="mgba mgba-bin">
             <primary sortas="b-mgba-bin">mgba</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mgba-qt">
+        <term><command>mgba-qt</command></term>
+        <listitem>
+          <para>
+            is the <application>Qt-6</application> frontend for
+            <application>mGBA</application>
+          </para>
+          <indexterm zone="mgba mgba-qt">
+            <primary sortas="b-mgba-qt">mgba-qt</primary>
           </indexterm>
         </listitem>
       </varlistentry>
