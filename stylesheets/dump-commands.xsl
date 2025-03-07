@@ -12,7 +12,7 @@
 
   <xsl:template match="sect1">
       <!-- The dirs names -->
-    <xsl:variable name="pi-dir" select="../../processing-instruction('dbhtml')"/>
+    <xsl:variable name="pi-dir" select="../processing-instruction('dbhtml')"/>
     <xsl:variable name="pi-dir-value" select="substring-after($pi-dir,'dir=')"/>
     <xsl:variable name="quote-dir" select="substring($pi-dir-value,1,1)"/>
     <xsl:variable name="dirname" select="substring-before(substring($pi-dir-value,2),$quote-dir)"/>

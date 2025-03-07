@@ -305,7 +305,7 @@ test-options:
 
 dump-commands: $(DUMPDIR)
 $(DUMPDIR): $(RENDERTMP)/$(LFS_QOLFULL) version
-	@echo "Dumping book commands..."
+	@echo "Dumping book commands at $(DUMPDIR)..."
 	$(Q)xsltproc --output $(DUMPDIR)/          \
                 stylesheets/dump-commands.xsl \
                 $(RENDERTMP)/$(LFS_QOLFULL)
