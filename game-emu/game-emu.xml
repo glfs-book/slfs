@@ -14,6 +14,11 @@
     This section is dedicated to installing video game emulators.
   </para>
 
+  <!-- NDS -->
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nds/nds-header.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nds/nds-intro.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nds/enet.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nds/melonds.xml"/>
   <!-- GBA -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gba/gba-header.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gba/gba-intro.xml"/>

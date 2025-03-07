@@ -43,6 +43,10 @@
       <para>March 6th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - MelonDS: Added. Fixes
+          <ulink url="&lfs-qol-issues;/62">#62</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - mGBA: Added.</para>
         </listitem>
         <listitem>

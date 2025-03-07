@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY enet-download-http
+    "http://enet.bespin.org/download/enet-&enet-version;.tar.gz">
+]>
+
+<sect1 id="enet" xreflabel="enet-&enet-version;">
+  <?dbhtml filename="enet.html"?>
+
+  <title>enet-&enet-version;</title>
+
+  <indexterm zone="enet">
+    <primary sortas="a-enet">enet</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to enet</title>
+
+    <para>
+      The <application>enet</application> package provides a UDP networking
+      library.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&enet-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of enet</title>
+
+    <para>
+      Install <application>enet</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libenet.so
+        </seg>
+        <seg>
+          /usr/include/enet
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libenet">
+        <term><filename class="libraryfile">libenet.so</filename></term>
+        <listitem>
+          <para>
+            contains UDP networking functions
+          </para>
+          <indexterm zone="enet libenet">
+            <primary sortas="c-libenet">libenet.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
