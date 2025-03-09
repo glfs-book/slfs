@@ -127,7 +127,7 @@ make</userinput></screen>
           echo, ed, egrep, env, expand, expr, factor, false, fgrep, file, find, 
           fmt, fmtmsg, fold, getconf, getopt, grep, groups, hd, head, hostname, 
           id, install, join, kill, lc, lib.b, line, listusers, ln, logins, 
-          logname, ls, magic, /usr/5bin/mail, man, mesg, mkdir, mkfifo, mknod, 
+          logname, ls, /usr/5bin/mail, man, mesg, mkdir, mkfifo, mknod, 
           more, mt, mv, mvdir, nawk, newform, news, nice, nl, nohup, oawk, od, 
           page, paste, pathchk, pax, pg, pgrep, pick, pkill, pr, printenv, 
           printf, priocntl, ps, psrinfo, ptime, pwd, random, readlink, renice, 
