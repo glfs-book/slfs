@@ -194,7 +194,7 @@ unset YACC</userinput></screen>
           libMrm.so, libUil.so, and libXm.so
         </seg>
         <seg>
-          /usr/include/Mrm, /usr/include/uil, /usr/include/Xm, and
+          /usr/include/Mrm, /usr/include/uil, /usr/include/Xm,
           /usr/etc/X11/mwm, and /usr/share/X11/bindings
         </seg>
       </seglistitem>

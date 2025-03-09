@@ -65,7 +65,7 @@
       <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
       <ulink url="&blfs-svn;/basicnet/libtirpc.html">libtirpc</ulink>,
       <xref linkend="libutempter"/>,
-      <xref linkend="libxp"/>
+      <xref linkend="libxp"/>,
       <ulink url="&blfs-svn;/postlfs/linux-pam.html">Linux-PAM</ulink>,
       <ulink url="&blfs-svn;/server/lmdb.html">lmdb</ulink>,
       <xref linkend="motif"/>,
@@ -149,6 +149,14 @@ install -d -m 755 /usr/lib/systemd/system &amp;&amp;
 install -m 644 contrib/rc/systemd/dtlogin.service /usr/lib/systemd/system/ &amp;&amp;
 systemctl enable dtlogin.service
 </userinput></screen>
+
+      <para revision="sysv">
+        In order to permanently set the default runlevel to 5, starting the
+        <command>dtlogin</command> greeter screen automatically, you can modify
+        <filename>/etc/inittab</filename>. As the &root; user:
+      </para>
+
+<screen role="root" revision="sysv"><userinput>sed /initdefault/s/3/5/ -i /etc/inittab</userinput></screen>
 
     </sect3>
 
