@@ -33,7 +33,7 @@ if os.getenv('DOCSTUBGEN_DOCUMENT_LIBRARIES'):
 # OR
 # [<file name>, 'f', 'FILLER']
 
-filelist = [['calprog', 'f'], ['diff3prog', 'f'], ['diffh', 'f']]
+filelist = []
 for d in range(len(sys.argv)):
 	if d == 0 or d == 1:
 		continue
