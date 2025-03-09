@@ -122,19 +122,19 @@ make</userinput></screen>
          <seg>
           STTY, apply, apropos, awk, banner, basename, bc, bdiff, bfs, cal, 
           calendar, calprog, cat, catman, chgrp, chmod, chown, chroot, cksum, 
-          cmp, col, comm, copy, cp, cpio, csplit, cut, date, dc, dd, deroff, 
+          cmp, comm, copy, cp, cpio, csplit, cut, date, dc, dd, deroff, 
           df, dfspace, diff, diff3, diff3prog, diffh, dircmp, dirname, du, 
           echo, ed, egrep, env, expand, expr, factor, false, fgrep, file, find, 
           fmt, fmtmsg, fold, getconf, getopt, grep, groups, hd, head, hostname, 
           id, install, join, kill, lc, lib.b, line, listusers, ln, logins, 
-          logname, ls, magic, mail, man, mesg, mkdir, mkfifo, mknod, more, mt, 
-          mv, mvdir, nawk, newform, news, nice, nl, nohup, oawk, od, page, 
-          paste, pathchk, pax, pg, pgrep, pick, pkill, pr, printenv, printf, 
-          priocntl, ps, psrinfo, ptime, pwd, random, readlink, renice, rev, rm, 
-          rmdir, sdiff, sed, seq, setpgrp, settime, shl, sleep, sort, spell, 
-          split, stty, su, sum, sync, tabs, tail, tape, tapecntl, tar, tcopy, 
-          tee, test, time, timeout, touch, tr, true, tty, ul, uname, unexpand, 
-          uniq, units, unittab, uptime, users, w, wall, watch, wc, what, 
+          logname, ls, magic, /usr/5bin/mail, man, mesg, mkdir, mkfifo, mknod, 
+          more, mt, mv, mvdir, nawk, newform, news, nice, nl, nohup, oawk, od, 
+          page, paste, pathchk, pax, pg, pgrep, pick, pkill, pr, printenv, 
+          printf, priocntl, ps, psrinfo, ptime, pwd, random, readlink, renice, 
+          rev, rm, rmdir, sdiff, sed, seq, setpgrp, settime, shl, sleep, sort, 
+          spell, split, stty, su, sum, sync, tabs, tail, tape, tapecntl, tar, 
+          tcopy, tee, test, time, timeout, touch, tr, true, tty, ul, uname, 
+          unexpand, uniq, units, unittab, uptime, users, w, wall, watch, wc, 
           whatis, who, whoami, whodo, write, xargs, and yes 
          </seg>
         <seg>
