@@ -31,8 +31,7 @@
 <!ENTITY i3-version                          "4.24">
 
 <!-- 5. SVR4-TOOLS -->
-<!ENTITY heirloom-ng-minor-version           "59f7cc">
-<!ENTITY heirloom-ng-version                 "59f7cc870f72adc4a2df8a64acc75ab425d8ff6b">
+<!ENTITY heirloom-ng-version                 "250220">
 <!ENTITY schilytools-version                 "2024-03-21">
 <!ENTITY heirloom-sh-version                 "050706">
 <!ENTITY heirloom-doctools-minor-version     "2e9b0c">
