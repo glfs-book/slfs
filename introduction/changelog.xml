@@ -40,6 +40,18 @@
     -->
 
     <listitem>
+      <para>March 9th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - minicom: 2.9 -&gt; 2.10;
+          heirloom-ng: 59f7cc -&gt; 250220. Fixes
+          <ulink url="&lfs-qol-issues;/52">#52</ulink> and
+          <ulink url="&lfs-qol-issues;/60">#60</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 6th, 2025</para>
       <itemizedlist>
         <listitem>
