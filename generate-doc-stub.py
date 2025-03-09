@@ -33,7 +33,7 @@ if os.getenv('DOCSTUBGEN_DOCUMENT_LIBRARIES'):
 # OR
 # [<file name>, 'f', 'FILLER']
 
-filelist = []
+filelist = [['calprog', 'f'], ['diff3prog', 'f'], ['diffh', 'f']]
 for d in range(len(sys.argv)):
 	if d == 0 or d == 1:
 		continue
@@ -115,8 +115,9 @@ for i in filelist:
 		tmp = tmp2
 	else:
 		print(tmp)
-		tmp = '          '
-		tmp2 = tmp2[80:]
+		tmp3 = tmp2.split(', ')
+		tmp = '          ' + tmp3[-2] + ', '
+		tmp2 = ', '.join(tmp3[:-2])
 print(tmp2, end='')
 print('''
         </seg>
