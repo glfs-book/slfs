@@ -172,19 +172,21 @@ systemctl enable dtlogin.service
 
       <seglistitem>
         <seg>
-          Xsession, dsdm, dtaction, dtappgather, dtappintegrate, dtbuilder, 
-          dtchooser, dtcm, dtcm_delete, dtcm_editor, dtcm_insert, dtcm_lookup, 
-          dtcreate, dtdbcache, dtdocbook2infolib, dtdocbook2man, dtdocbook2sdl, 
-          dterror.ds, dtexec, dtfile, dtfile_copy, dtfile_error, dtfplist, 
-          dthello, dthelp_ctag1, dthelp_htag1, dthelp_htag2, dthelpgen, 
-          dthelpprint, dthelpprint.sh, dthelptag, dthelpview, dticon, 
-          dtinfo, dtinfo_start, dtksh, dtlogin, dtlp, dtlpsetup, dtmail, 
-          dtopen, dtopen_image (link to dtopen), dtopen_pdf (link to dtopen), 
-          dtopen_video (link to dtopen), dtpad, dtpdm, dtpdmd, dtprintegrate, 
-          dtscreen, dtsearchpath, dtsession, dtsession_res, dtspcd, dtsrclean, 
-          dtsrdbrec, dtsrdelete, dtsrhan, dtsrindex, dtsrkdump, dtsrload, 
-          dtterm, dttypes, dtwm, huffcode, rpc.cmsd, rpc.ttdbserver, 
-          ttauth, ttcp, ttdbck, ttmv, ttrm, ttrmdir, ttsession, ttsnoop, tttar, 
+          Xsession, dsdm, dtaction, dtappgather, dtappintegrate, dtbuilder,
+          dtcalc, dtchooser, dtcm, dtcm_delete, dtcm_editor, dtcm_insert,
+          dtcm_lookup, dtcodegen, dtcreate, dtdbcache, dtdocbook2infolib,
+          dtdocbook2man, dtdocbook2sdl, dtdspmsg, dterror.ds, dtexec, dtfile,
+          dtfile_copy, dtfile_error, dtfplist, dtgreet, dthello, dthelp_ctag1,
+          dthelp_htag1, dthelp_htag2, dthelpgen, dthelpgen.dtsh, dthelpprint,
+          dthelpprint.sh, dthelptag, dthelpview, dticon, dtimsstart, dtinfo,
+          dtksh, dtlogin, dtlp, dtlpsetup, dtmail, dtmailpr, dtopen,
+          dtopen_image (link to dtopen), dtopen_pdf (link to dtopen),
+          dtopen_ps (link to dtopen), dtopen_video (link to dtopen), dtpad,
+          dtpdm, dtpdmd, dtprintegrate, dtprintinfo, dtscreen, dtsearchpath,
+          dtsession, dtsession_res, dtspcd, dtsrclean, dtsrcreate, dtsrdbrec,
+          dtsrdelete, dtsrhan, dtsrindex, dtsrkdump, dtsrload, dtstyle, dtterm,
+          dttypes, dtwm, huffcode, rpc.cmsd, rpc.ttdbserver, tt_type_comp,
+          ttauth, ttcp, ttdbck, ttmv, ttrm, ttrmdir, ttsession, ttsnoop, tttar,
           and tttrace
         </seg>
         <seg>
