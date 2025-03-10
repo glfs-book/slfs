@@ -118,7 +118,13 @@ for i in filelist:
 		tmp3 = tmp2.split(', ')
 		tmp = '          ' + tmp3[-2] + ', '
 		tmp2 = ', '.join(tmp3[:-2])
-print(tmp2, end='')
+# this is a HACK to avoid generating incorrect binary lists in corner cases
+# where we already got through the entire filelist array, already printed out tmp2,
+# but there's still one binary left in tmp
+if tmp.count(', ') == 1:
+	print(tmp, end='')
+else:
+	print(tmp2, end='')
 print('''
         </seg>
         <seg>''')
@@ -136,7 +142,13 @@ else:
 			tmp3 = tmp2.split(', ')
 			tmp = '          ' + tmp3[-2] + ', '
 			tmp2 = ', '.join(tmp3[:-2])
-	print(tmp2, end='')
+	# this is a HACK to avoid generating incorrect library lists in corner cases
+	# where we already got through the entire liblist array, already printed out
+	# tmp2, but there's still one library left in tmp
+	if tmp.count(', ') == 1:
+		print(tmp, end='')
+	else:
+		print(tmp2, end='')
 	print()
 print('''        </seg>
         <seg>
