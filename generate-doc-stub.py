@@ -21,10 +21,6 @@ automatically generate doc stubs for libraries. Warning: automatically documenti
 libraries is EXPERIMENTAL AND PRONE TO FALSE POSITIVES.")
 	sys.exit(1)
 
-if not os.path.isdir(sys.argv[2]):
-	print("Error: nonexistent folder1")
-	sys.exit(1)
-
 if os.getenv('DOCSTUBGEN_DOCUMENT_LIBRARIES'):
 	libdocflag = True
 
