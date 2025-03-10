@@ -38,7 +38,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">OSTree Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Flatpak Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
