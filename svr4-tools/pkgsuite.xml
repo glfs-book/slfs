@@ -98,21 +98,27 @@ make</userinput></screen>
       <seglistitem>
         <seg>
           ckdate, ckgid, ckint, ckitem, ckkeywd, ckpath, ckrange, ckstr, 
-          ckuid, ckyorn, cmdexec, dispgid (link to ckgid), errange 
-          (link to ckrange), errdate (link to ckdate), errint (link to ckint),
-          errkeywd (link to ckkeywd), errstr (link to ckstr), errtime (link to
-          cktime), erryorn (link to ckyorn), getdate (link to ckdate), getint 
-          (link to ckint), getkeywd (link to ckkeywd), getrange (link to 
-          ckrange), getstr (link to ckstr), getuid (link to ckuid), getyorn
-          (link to ckyorn), helpgid (link to ckgid), helpint (link to ckint), 
-          helppath (link to ckpath), helprange (link to ckrange), helptime
-          (link to cktime), helpuid (link to ckuid), i.CompCpio, i.awk,
-          i.build, i.sed, installf, pkgadd, pkgchk, pkginfo, pkginstall,
-          pkgmk, pkgname, pkgparam, pkgproto, pkgrm, pkgtrans, puttext, 
-          r.awk, r.build, r.sed, valdate (link to ckdate), valgid (link to
-          ckgid), valkeywd (link to ckkeywd), valpath (link to ckpath), valstr 
-          (link to ckstr), valtime (link to cktime), and valyorn (link to
-          ckyorn) 
+          cktime, ckuid, ckyorn, cmdexec, dispgid (link to ckgid), dispuid
+          (link to ckuid), errange (link to ckrange), errdate (link to 
+          ckdate), errgid (link to ckgid), errint (link to ckint), errkeywd 
+          (link to ckkeywd), errpath (link to ckpath), errstr (link to ckstr), 
+          errtime (link to cktime), erruid (link to ckuid), erryorn (link to 
+          ckyorn), getdate (link to ckdate), getgid (link to ckgid), getint 
+          (link to ckint), getkeywd (link to ckkeywd), getpath (link to 
+          ckpath), getrange (link to ckrange), getstr (link to ckstr), gettime 
+          (link to cktime), getuid (link to ckuid), getyorn (link to ckyorn), 
+          helpdate (link to ckdate), helpgid (link to ckgid), helpint (link 
+          to ckint), helpkeywd (link to ckkeywd), helppath (link to ckpath), 
+          helprange (link to ckrange), helpstr (link to ckstr), helptime 
+          (link to cktime), helpuid (link to ckuid), helpyorn (link to 
+          ckyorn), i.CompCpio, i.awk, i.build, i.sed, installf, pkgadd,
+          pkgask (link to pkgadd), pkgchk, pkginfo, pkginstall, pkgmk, 
+          pkgname, pkgparam, pkgproto, pkgremove, pkgrm, pkgtrans, puttext, 
+          r.awk, r.build, r.sed, removef (link to installf), valdate (link to 
+          ckdate), valgid (link to ckgid), valint (link to ckint), valkeywd 
+          (link to ckkeywd), valpath (link to ckpath), valrange (link to 
+          ckrange), valstr (link to ckstr), valtime (link to cktime), valuid 
+          (link to ckuid), and valyorn (link to ckyorn)
         </seg>
         <seg>
           None

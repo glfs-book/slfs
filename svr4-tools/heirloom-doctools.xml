@@ -81,9 +81,9 @@ install</userinput></screen>
       <seglistitem>
         <seg>
           addbib, checkeq, checknr, col, dhtml, dpost, eqn, grap, hunt, 
-          inv, lookbib, mkey, neqn, nroff, otf_info, pic, picpack, pm, ptx, 
-          roffbib, runinv, soelim, sortbib, ta, tbl, troff, vfontedpr, and
-          vgrind
+          indxbib, inv, lookbib, mkey, neqn, nroff, otf_info, pic, picpack, pm, 
+          ptx, refer, roffbib, runinv, soelim, sortbib, ta, tbl, troff, 
+          vfontedpr, and vgrind
         </seg>
         <seg>
           None
