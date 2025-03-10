@@ -115,8 +115,9 @@ for i in filelist:
 		tmp = tmp2
 	else:
 		print(tmp)
-		tmp = '          '
-		tmp2 = tmp2[80:]
+		tmp3 = tmp2.split(', ')
+		tmp = '          ' + tmp3[-2] + ', '
+		tmp2 = ', '.join(tmp3[:-2])
 print(tmp2, end='')
 print('''
         </seg>
@@ -132,8 +133,9 @@ else:
 			tmp = tmp2
 		else:
 			print(tmp)
-			tmp = '          '
-			tmp2 = tmp2[80:]
+			tmp3 = tmp2.split(', ')
+			tmp = '          ' + tmp3[-2] + ', '
+			tmp2 = ', '.join(tmp3[:-2])
 	print(tmp2, end='')
 	print()
 print('''        </seg>

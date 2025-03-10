@@ -52,6 +52,24 @@
 
   </sect2>
 
+  <sect2 role="configuration">
+    <title>Configuring heirloom-sh</title>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        As the &root; user, update <filename>/etc/shells</filename> to include
+        the Korn shell program names:
+      </para>
+
+<screen role="root"><userinput>cat &gt;&gt; /etc/shells &lt;&lt; "EOF"
+<literal>/usr/bin/ksh</literal>
+EOF</userinput></screen>
+
+    </sect3>
+
+  </sect2>
+
   <sect2 role="content">
     <title>Contents</title>
 

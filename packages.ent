@@ -31,8 +31,7 @@
 <!ENTITY i3-version                          "4.24">
 
 <!-- 5. SVR4-TOOLS -->
-<!ENTITY heirloom-ng-minor-version           "59f7cc">
-<!ENTITY heirloom-ng-version                 "59f7cc870f72adc4a2df8a64acc75ab425d8ff6b">
+<!ENTITY heirloom-ng-version                 "250220">
 <!ENTITY schilytools-version                 "2024-03-21">
 <!ENTITY heirloom-sh-version                 "050706">
 <!ENTITY heirloom-doctools-minor-version     "2e9b0c">
@@ -54,7 +53,7 @@
 <!ENTITY s4-3b1-pc7300-minor-version         "efe55b">
 <!ENTITY s4-3b1-pc7300-version               "efe55b8cc917e3e27bcae9786c5b5dec0469be45">
 <!ENTITY lrzsz-version                       "0.12.20">
-<!ENTITY minicom-version                     "2.9">
+<!ENTITY minicom-version                     "2.10">
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY gkermit-version                     "2.01">
 <!ENTITY p20-emu-minor-version               "d75a83">

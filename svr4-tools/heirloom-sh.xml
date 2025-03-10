@@ -96,7 +96,7 @@
 
       <para>
         As the &root; user, update <filename>/etc/shells</filename> to include
-        the Bourne shell program names (as the root user):
+        the Bourne shell program names:
       </para>
 
 <screen role="root"><userinput>cat &gt;&gt; /etc/shells &lt;&lt; "EOF"
