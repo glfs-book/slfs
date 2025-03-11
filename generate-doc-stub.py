@@ -14,21 +14,32 @@ def checklib(i, f):
 	return not (libdocflag and (".a" in os.path.basename(os.path.join(i, 
 		f)) or ".so" in os.path.basename(os.path.join(i, f))))
 
+recsearchflag = False
+
 if len(sys.argv) < 3:
 	print("Usage: generate-doc-stub.py pkgname folder1 <folder2> <folder3> ...")
 	print("Set the DOCSTUBGEN_DOCUMENT_LIBRARIES environment variable to also \
 automatically generate doc stubs for libraries. Warning: automatically documenting \
 libraries is EXPERIMENTAL AND PRONE TO FALSE POSITIVES.")
+	print('INTERNAL NOTE: DOCSTUBGEN_RECURSIVE_SEARCH env variable enables \
+recursive directory searching, MOVE TO MANPAGE LATER')
 	sys.exit(1)
 
 if os.getenv('DOCSTUBGEN_DOCUMENT_LIBRARIES'):
 	libdocflag = True
 
+if os.getenv('DOCSTUBGEN_RECURSIVE_SEARCH'):
+	recsearchflag = True
+
 folderlist = []
 for d in range(len(sys.argv)):
 	if d == 0 or d == 1:
 		continue
-	folderlist.append(sys.argv[d])
+	if recsearchflag:
+		for tmp in [x[0] for x in os.walk(sys.argv[d])]:
+			folderlist.append(tmp)
+	else:
+		folderlist.append(sys.argv[d])
 
 # sublist structure
 # [<symlink name>, 's', <symlink target>]
