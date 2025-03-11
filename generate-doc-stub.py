@@ -22,17 +22,24 @@ recsearchflag = False
 nowarnflag = False
 checkbinflag = False
 
+# Use this flag only as a last resort. It disables any and all user input sanitization
+# happening during binary checking. If you enable this and you try to document some
+# sketchy package, you have just thrown out your last line of defense. There's a reason
+# this is undocumented.
+idontcareaboutsecurity = False
+
 def checklib(i, f):
 	return not (libdocflag and (".a" in os.path.basename(os.path.join(i, 
 		f)) or ".so" in os.path.basename(os.path.join(i, f))))
 
 def callcheckfile(path):
-	dangerouschars = dict.fromkeys(map(ord, "&'\"\\|><"), None)
-	path2 = path.translate(dangerouschars)
-	if path != path2:
-		print('Warning: possible ACE attempt detected. CHECK SYSTEM FOR \
+	if not idontcareaboutsecurity:
+		dangerouschars = dict.fromkeys(map(ord, "&'\"\\|><"), None)
+		path2 = path.translate(dangerouschars)
+		if path != path2:
+			print('Warning: possible ACE attempt detected. CHECK SYSTEM FOR \
 HACKER PRESENCE NOW.')
-		sys.exit(1)
+			sys.exit(1)
 	if os.waitstatus_to_exitcode(os.system(f'checkfile.sh {os.path.abspath(path)}')) == 0:
 		return 0
 	else:
