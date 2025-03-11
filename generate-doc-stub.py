@@ -7,6 +7,7 @@
 
 import os
 import sys
+import shutil
 import itertools
 
 # INTERNAL FLAGS, DO NOT TOUCH
@@ -19,10 +20,24 @@ nolibflag = False
 libdocflag = False
 recsearchflag = False
 nowarnflag = False
+checkbinflag = False
 
 def checklib(i, f):
 	return not (libdocflag and (".a" in os.path.basename(os.path.join(i, 
 		f)) or ".so" in os.path.basename(os.path.join(i, f))))
+
+def callcheckfile(path):
+	dangerouschars = dict.fromkeys(map(ord, "&'\"\\|><"), None)
+	path2 = path.translate(dangerouschars)
+	if path != path2:
+		print('Warning: possible ACE attempt detected. CHECK SYSTEM FOR \
+HACKER PRESENCE NOW.')
+		sys.exit(1)
+	if os.waitstatus_to_exitcode(os.system(f'checkfile.sh {os.path.abspath(path)}')) == 0:
+		return 0
+	else:
+		return 1
+
 
 if len(sys.argv) < 3:
 	print("Usage: generate-doc-stub.py pkgname folder1 <folder2> <folder3> ...", file=sys.stderr)
@@ -43,6 +58,25 @@ if os.getenv('DOCSTUBGEN_RECURSIVE_SEARCH'):
 
 if os.getenv('DOCSTUBGEN_I_KNOW_WHAT_I_AM_DOING'):
 	nowarnflag = True
+
+if os.getenv('DOCSTUBGEN_BINARY_DETECT'):
+	if not os.getenv('DOCSTUBGEN_TRUSTED_INPUT'):
+		print('SECURITY WARNING!!! DO NOT DISREGARD', file=sys.stderr)
+		print('You have set the DOCSTUBGEN_BINARY_DETECT environment variable.', file=sys.stderr)
+		print('This variable enables attempted automatic detection of binaries \
+and scripts using the file command, which involves passing user input into executed commands.', file=sys.stderr)
+		print('While the LFS-QOL editors have tried to sanitize user input from any unwanted \
+characters which may lead to ACE, there are simply too many ways to cause ACE in this scenario.', file=sys.stderr)
+		print('If you try to generate documentation for some sketchy application and it \
+leads to your computer getting hacked by some state-sponsored hackers, we disclaim ANY \
+responsibility for such an act and for any damages caused.', file=sys.stderr)
+		print('If you have read this fully and have considered the risks, set the \
+DOCSTUBGEN_TRUSTED_INPUT environment variable. You have been warned.', file=sys.stderr)
+		sys.exit(1)
+	if shutil.which("checkfile.sh") is None:
+		print('Error: checkfile.sh helper script not found in $PATH.', file=sys.stderr)
+		sys.exit(1)
+	checkbinflag = True
 
 folderlist = []
 for d in range(len(sys.argv)):
@@ -70,18 +104,22 @@ for d in folderlist:
 			if os.path.isfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
 					f)), os.readlink(os.path.join(i, f))))):
 				if libdocflag:
-					if checklib(i, f):
+					if checklib(i, f) and callcheckfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
+							f)), os.readlink(os.path.join(i, f))))) == 0:
 						filelist.append([f, 's', os.path.basename(os.readlink( \
 							os.path.join(i, f)))])
 				else:
-					filelist.append([f, 's', os.path.basename(os.readlink(os.path.join(i, \
-							f)))])
+					if callcheckfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
+							f)), os.readlink(os.path.join(i, f))))) == 0:
+						filelist.append([f, 's', os.path.basename(os.readlink(os.path.join(i, \
+								f)))])
 		elif os.path.isfile(os.path.join(i, f)):
 			if libdocflag:
-				if checklib(i, f):
+				if checklib(i, f) and callcheckfile(os.path.join(i, f)) == 0:
 					filelist.append([f, 'f', 'FILLER'])
 			else:
-				filelist.append([f, 'f', 'FILLER'])
+				if callcheckfile(os.path.join(i, f)) == 0:
+					filelist.append([f, 'f', 'FILLER'])
 
 filelist.sort()
 filelist = list(filelist for filelist,_ in itertools.groupby(filelist))
@@ -99,9 +137,9 @@ if libdocflag:
 				if os.path.isfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
 						f)), os.readlink(os.path.join(i, f))))):
 					continue
-			elif os.path.isfile(os.path.join(i, f)) and '.a' in os.path.basename(os.path.join(i, f)):
+			elif os.path.isfile(os.path.join(i, f)) and '.a' in os.path.basename(os.path.join(i, f)) and callcheckfile(os.path.join(i, f)) == 0:
 				liblist.append([f, 'f', 'FILLER'])
-			elif os.path.isfile(os.path.join(i, f)) and '.so' in os.path.basename(os.path.join(i, f)):
+			elif os.path.isfile(os.path.join(i, f)) and '.so' in os.path.basename(os.path.join(i, f)) and callcheckfile(os.path.join(i, f)) == 0:
 				tmplst = f.split('.')
 				tmp = tmplst[0]
 				for h in tmplst[1:]:
@@ -171,7 +209,7 @@ else:
 			tmp3 = tmp2.split(', ')
 			tmp = '          ' + tmp3[-2] + ', '
 			tmp2 = ', '.join(tmp3[:-2])
-	if len(filelist) == 0:
+	if len(liblist) == 0:
 		if not nowarnflag:
 			print('Warning: no acceptable libraries found.', file=sys.stderr)
 			print('Did you forget to set DOCSTUBGEN_RECURSIVE_SEARCH or did you \
