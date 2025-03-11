@@ -9,24 +9,30 @@ import os
 import sys
 import itertools
 
-# INTERNAL FLAGS DO NOT TOUCH
+# INTERNAL FLAGS, DO NOT TOUCH
 nobinflag = False
 nolibflag = False
 
+# These flags can be modified by environment variables.
+# If you don't want to add some EXPORTs to your shell rc file for some reason, feel
+# free to change these to your liking. Just don't commit these changes.
 libdocflag = False
+recsearchflag = False
+nowarnflag = False
+
 def checklib(i, f):
 	return not (libdocflag and (".a" in os.path.basename(os.path.join(i, 
 		f)) or ".so" in os.path.basename(os.path.join(i, f))))
 
-recsearchflag = False
-
 if len(sys.argv) < 3:
-	print("Usage: generate-doc-stub.py pkgname folder1 <folder2> <folder3> ...")
+	print("Usage: generate-doc-stub.py pkgname folder1 <folder2> <folder3> ...", file=sys.stderr)
 	print("Set the DOCSTUBGEN_DOCUMENT_LIBRARIES environment variable to also \
 automatically generate doc stubs for libraries. Warning: automatically documenting \
-libraries is EXPERIMENTAL AND PRONE TO FALSE POSITIVES.")
+libraries is EXPERIMENTAL AND PRONE TO FALSE POSITIVES.", file=sys.stderr)
 	print('INTERNAL NOTE: DOCSTUBGEN_RECURSIVE_SEARCH env variable enables \
-recursive directory searching, MOVE TO MANPAGE LATER')
+recursive directory searching, MOVE TO MANPAGE LATER', file=sys.stderr)
+	print('INTERNAL NOTE: DOCSTUBGEN_I_KNOW_WHAT_I_AM_DOING env variable \
+disables "no bins" and "no libs" warnings', file=sys.stderr)
 	sys.exit(1)
 
 if os.getenv('DOCSTUBGEN_DOCUMENT_LIBRARIES'):
@@ -34,6 +40,9 @@ if os.getenv('DOCSTUBGEN_DOCUMENT_LIBRARIES'):
 
 if os.getenv('DOCSTUBGEN_RECURSIVE_SEARCH'):
 	recsearchflag = True
+
+if os.getenv('DOCSTUBGEN_I_KNOW_WHAT_I_AM_DOING'):
+	nowarnflag = True
 
 folderlist = []
 for d in range(len(sys.argv)):
@@ -132,9 +141,10 @@ for i in filelist:
 		tmp = '          ' + tmp3[-2] + ', '
 		tmp2 = ', '.join(tmp3[:-2])
 if len(filelist) == 0:
-	print('Warning: no acceptable binaries found.', file=sys.stderr)
-	print('Did you forget to set DOCSTUBGEN_RECURSIVE_SEARCH?', file=sys.stderr)
-	print('Putting "None" into XML.', file=sys.stderr)
+	if not nowarnflag:
+		print('Warning: no acceptable binaries found.', file=sys.stderr)
+		print('Did you forget to set DOCSTUBGEN_RECURSIVE_SEARCH?', file=sys.stderr)
+		print('Putting "None" into XML.', file=sys.stderr)
 	print('          None', end='')
 	nobinflag = True
 # this is a HACK to avoid generating incorrect binary lists in corner cases
@@ -162,10 +172,11 @@ else:
 			tmp = '          ' + tmp3[-2] + ', '
 			tmp2 = ', '.join(tmp3[:-2])
 	if len(filelist) == 0:
-		print('Warning: no acceptable libraries found.', file=sys.stderr)
-		print('Did you forget to set DOCSTUBGEN_RECURSIVE_SEARCH or did you \
+		if not nowarnflag:
+			print('Warning: no acceptable libraries found.', file=sys.stderr)
+			print('Did you forget to set DOCSTUBGEN_RECURSIVE_SEARCH or did you \
 set DOCSTUBGEN_DOCUMENT_LIBRARIES by mistake?', file=sys.stderr)
-		print('Putting "None" into XML.', file=sys.stderr)
+			print('Putting "None" into XML.', file=sys.stderr)
 		print('          None', end='')
 		nolibflag = True
 	# this is a HACK to avoid generating incorrect library lists in corner cases
