@@ -24,16 +24,20 @@ libraries is EXPERIMENTAL AND PRONE TO FALSE POSITIVES.")
 if os.getenv('DOCSTUBGEN_DOCUMENT_LIBRARIES'):
 	libdocflag = True
 
+folderlist = []
+for d in range(len(sys.argv)):
+	if d == 0 or d == 1:
+		continue
+	folderlist.append(sys.argv[d])
+
 # sublist structure
 # [<symlink name>, 's', <symlink target>]
 # OR
 # [<file name>, 'f', 'FILLER']
 
 filelist = []
-for d in range(len(sys.argv)):
-	if d == 0 or d == 1:
-		continue
-	i = sys.argv[d]
+for d in folderlist:
+	i = d
 	if not os.path.isdir(i):
 		print(f"Error: nonexistent folder {i}")
 		sys.exit(1)
@@ -61,10 +65,8 @@ filelist = sorted(filelist, key=lambda e: e[0])
 
 if libdocflag:
 	liblist = []
-	for d in range(len(sys.argv)):
-		if d == 0 or d == 1:
-			continue
-		i = sys.argv[d]
+	for d in folderlist:
+		i = d
 		if not os.path.isdir(i):
 			print(f"Error: nonexistent folder {i}")
 			sys.exit(1)
