@@ -9,6 +9,10 @@ import os
 import sys
 import itertools
 
+# INTERNAL FLAGS DO NOT TOUCH
+nobinflag = False
+nolibflag = False
+
 libdocflag = False
 def checklib(i, f):
 	return not (libdocflag and (".a" in os.path.basename(os.path.join(i, 
@@ -50,7 +54,7 @@ filelist = []
 for d in folderlist:
 	i = d
 	if not os.path.isdir(i):
-		print(f"Error: nonexistent folder {i}")
+		print(f"Error: nonexistent folder {i}", file=sys.stderr)
 		sys.exit(1)
 	for f in os.listdir(i):
 		if os.path.islink(os.path.join(i, f)):
@@ -79,7 +83,7 @@ if libdocflag:
 	for d in folderlist:
 		i = d
 		if not os.path.isdir(i):
-			print(f"Error: nonexistent folder {i}")
+			print(f"Error: nonexistent folder {i}", file=sys.stderr)
 			sys.exit(1)
 		for f in os.listdir(i):
 			if os.path.islink(os.path.join(i, f)):
@@ -127,10 +131,16 @@ for i in filelist:
 		tmp3 = tmp2.split(', ')
 		tmp = '          ' + tmp3[-2] + ', '
 		tmp2 = ', '.join(tmp3[:-2])
+if len(filelist) == 0:
+	print('Warning: no acceptable binaries found.', file=sys.stderr)
+	print('Did you forget to set DOCSTUBGEN_RECURSIVE_SEARCH?', file=sys.stderr)
+	print('Putting "None" into XML.', file=sys.stderr)
+	print('          None', end='')
+	nobinflag = True
 # this is a HACK to avoid generating incorrect binary lists in corner cases
 # where we already got through the entire filelist array, already printed out tmp2,
 # but there's still one binary left in tmp
-if tmp.count(', ') == 1:
+elif tmp.count(', ') == 1:
 	print(tmp, end='')
 else:
 	print(tmp2, end='')
@@ -151,10 +161,17 @@ else:
 			tmp3 = tmp2.split(', ')
 			tmp = '          ' + tmp3[-2] + ', '
 			tmp2 = ', '.join(tmp3[:-2])
+	if len(filelist) == 0:
+		print('Warning: no acceptable libraries found.', file=sys.stderr)
+		print('Did you forget to set DOCSTUBGEN_RECURSIVE_SEARCH or did you \
+set DOCSTUBGEN_DOCUMENT_LIBRARIES by mistake?', file=sys.stderr)
+		print('Putting "None" into XML.', file=sys.stderr)
+		print('          None', end='')
+		nolibflag = True
 	# this is a HACK to avoid generating incorrect library lists in corner cases
 	# where we already got through the entire liblist array, already printed out
 	# tmp2, but there's still one library left in tmp
-	if tmp.count(', ') == 1:
+	elif tmp.count(', ') == 1:
 		print(tmp, end='')
 	else:
 		print(tmp2, end='')
@@ -165,7 +182,22 @@ print('''        </seg>
         </seg>
       </seglistitem>
     </segmentedlist>
+''', end='')
 
+if nobinflag:
+	if libdocflag:
+		if nolibflag:
+			print('''
+  </sect2>
+''')
+			sys.exit(0)
+	else:
+		print('''
+  </sect2>
+''')
+		sys.exit(0)
+
+print('''
     <variablelist>
       <bridgehead renderas="sect3">Short Descriptions</bridgehead>
       <?dbfo list-presentation="list"?>
