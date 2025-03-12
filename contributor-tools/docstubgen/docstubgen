@@ -41,21 +41,15 @@ def callcheckfile(path):
 			print('Warning: possible ACE attempt detected. CHECK SYSTEM FOR \
 HACKER PRESENCE NOW.')
 			sys.exit(1)
-	if os.waitstatus_to_exitcode(os.system(f'checkfile.sh {os.path.abspath(path)}')) == 0:
+	if os.waitstatus_to_exitcode(os.system(f'{checkfilepath} {os.path.abspath(path)}')) == 0:
 		return 0
 	else:
 		return 1
 
 
 if len(sys.argv) < 3:
-	print("Usage: generate-doc-stub.py pkgname folder1 <folder2> <folder3> ...", file=sys.stderr)
-	print("Set the DOCSTUBGEN_DOCUMENT_LIBRARIES environment variable to also \
-automatically generate doc stubs for libraries. Warning: automatically documenting \
-libraries is EXPERIMENTAL AND PRONE TO FALSE POSITIVES.", file=sys.stderr)
-	print('INTERNAL NOTE: DOCSTUBGEN_RECURSIVE_SEARCH env variable enables \
-recursive directory searching, MOVE TO MANPAGE LATER', file=sys.stderr)
-	print('INTERNAL NOTE: DOCSTUBGEN_I_KNOW_WHAT_I_AM_DOING env variable \
-disables "no bins" and "no libs" warnings', file=sys.stderr)
+	print(f"Usage: {sys.argv[0]} pkgname folder1 <folder2> <folder3> ...", file=sys.stderr)
+	print('Environment variable descriptions have been moved to docstubgen(1).', file=sys.stderr)
 	sys.exit(1)
 
 if os.getenv('DOCSTUBGEN_DOCUMENT_LIBRARIES'):
@@ -81,9 +75,13 @@ responsibility for such an act and for any damages caused.', file=sys.stderr)
 		print('If you have read this fully and have considered the risks, set the \
 DOCSTUBGEN_TRUSTED_INPUT environment variable. You have been warned.', file=sys.stderr)
 		sys.exit(1)
-	if shutil.which("checkfile.sh") is None:
-		print('Error: checkfile.sh helper script not found in $PATH.', file=sys.stderr)
+	if os.path.exists("/usr/libexec/checkfile.sh"):
+		checkfilepath = "/usr/libexec/checkfile.sh"
+	elif shutil.which("checkfile.sh") is None:
+		print('Error: checkfile.sh helper script not found in /usr/libexec or $PATH.', file=sys.stderr)
 		sys.exit(1)
+	else:
+		checkfilepath = shutil.which("checkfile.sh")
 	checkbinflag = True
 
 folderlist = []
