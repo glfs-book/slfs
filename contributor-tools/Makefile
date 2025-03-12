@@ -19,7 +19,7 @@ $(OBJDIR)/docstubgen/docstubgen.1: docstubgen/docstubgen.1.xml
 	cp docstubgen/docstubgen $(OBJDIR)/docstubgen/
 	cp docstubgen/checkfile.sh $(OBJDIR)/docstubgen/
 
-install-docstubgen: build-docstubgen-manpage
+install-docstubgen: clean build-docstubgen-manpage
 	install -m755 -d $(DESTDIR)/usr/bin
 	install -m755 $(OBJDIR)/docstubgen/docstubgen $(DESTDIR)/usr/bin
 	install -m755 -d $(DESTDIR)/usr/libexec
