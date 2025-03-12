@@ -1,0 +1,46 @@
+--- heirloom-ng-250220/build/mk.config	2025-02-21 06:00:47.000000000 +0300
++++ heirloom-ng-250220-patched/build/mk.config	2025-03-09 20:11:16.757997260 +0300
+@@ -120,8 +120,8 @@
+ # Uncomment the definition below and comment the current definition if you are
+ # on the GNU C Library, since it doesn't seems to like static linking.
+ #
+-#LIBPATH = -L/lib
+-LIBPATH = -L/usr/lib -L/usr/ccs/lib
++LIBPATH = -L/lib
++#LIBPATH = -L/usr/lib -L/usr/ccs/lib
+ 
+ #
+ # Curses library. Change to -lncurses if necessary. Caution: Some gcc
+@@ -159,8 +159,8 @@
+ # Uncomment the definition below and comment the current definition if you
+ # are on the GNU C Library, since it doesn't seems to like static binaries.
+ #
+-#LIBZ = -Wl,-Bdynamic -lz
+-LIBZ = -Wl,-Bstatic -lz
++LIBZ = -Wl,-Bdynamic -lz
++#LIBZ = -Wl,-Bstatic -lz
+ USE_ZLIB = 1
+ 
+ #
+@@ -170,8 +170,8 @@
+ # Uncomment the definition below and comment the current definition if you
+ # are on the GNU C Library, since it doesn't seems to like static binaries.
+ #
+-#LIBBZ2 = -Wl,-Bdynamic -lbz2
+-LIBBZ2 = -Wl,-Bstatic -lbz2
++LIBBZ2 = -Wl,-Bdynamic -lbz2
++#LIBBZ2 = -Wl,-Bstatic -lbz2
+ USE_BZLIB = 1
+ 
+ #
+@@ -188,8 +188,8 @@
+ # you are on the GNU C Library, since it doesn't seems to like static
+ # binaries.
+ #
+-#LDFLAGS = $(LIBPATH)
+-LDFLAGS = -static $(LIBPATH)
++LDFLAGS = $(LIBPATH)
++#LDFLAGS = -static $(LIBPATH)
+ 
+ #
+ # Flags for the C preprocessor.
