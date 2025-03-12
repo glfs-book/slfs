@@ -21,6 +21,7 @@ libdocflag = False
 recsearchflag = False
 nowarnflag = False
 checkbinflag = False
+trustedinputflag = False
 
 # Use this flag only as a last resort. It disables any and all user input sanitization
 # happening during binary checking. If you enable this and you try to document some
@@ -67,7 +68,7 @@ if os.getenv('DOCSTUBGEN_I_KNOW_WHAT_I_AM_DOING'):
 	nowarnflag = True
 
 if os.getenv('DOCSTUBGEN_BINARY_DETECT'):
-	if not os.getenv('DOCSTUBGEN_TRUSTED_INPUT'):
+	if (not os.getenv('DOCSTUBGEN_TRUSTED_INPUT')) and (not trustedinputflag):
 		print('SECURITY WARNING!!! DO NOT DISREGARD', file=sys.stderr)
 		print('You have set the DOCSTUBGEN_BINARY_DETECT environment variable.', file=sys.stderr)
 		print('This variable enables attempted automatic detection of binaries \
