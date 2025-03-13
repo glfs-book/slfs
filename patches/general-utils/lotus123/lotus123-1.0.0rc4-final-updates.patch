@@ -1,0 +1,228 @@
+diff -Naur 123elf-1.0.0rc4/atfuncs/atfuncs.c 123elf-git/atfuncs/atfuncs.c
+--- 123elf-1.0.0rc4/atfuncs/atfuncs.c	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/atfuncs/atfuncs.c	2025-03-13 17:11:05.125010263 +0300
+@@ -12,7 +12,9 @@
+     // Setup any @functions here.
+     functions[AT_WEEKDAY] = (atfunc_t) at_weekday;
+     functions[AT_PRODUCT] = (atfunc_t) at_product;
++    functions[AT_SYSTEM] = (atfunc_t) at_system;
+ 
+     // You can pass 1 or more parameters to @PRODUCT().
+     fn_numargs[AT_PRODUCT] = AT_ARGS_VARIABLE | 1;
++    fn_numargs[AT_SYSTEM] = 1;
+ }
+diff -Naur 123elf-1.0.0rc4/atfuncs/atfuncs.h 123elf-git/atfuncs/atfuncs.h
+--- 123elf-1.0.0rc4/atfuncs/atfuncs.h	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/atfuncs/atfuncs.h	2025-03-13 17:11:05.125776607 +0300
+@@ -16,17 +16,23 @@
+ 
+ extern int16_t check_three_numbers();
+ extern int16_t check_one_number();
++extern int16_t check_one_string();
+ extern int16_t get_integer();
+ extern int16_t push_integer(uint16_t val);
+ extern int16_t push_one();
+ extern int16_t push_zero();
++extern int16_t push_na();
++extern int16_t drop_one_push_err();
++extern int16_t drop_one_push_stack_string(char *str);
++extern char * peek_string(int16_t n);
+ extern void mod_real_d();
+ extern void int_real_d();
+ extern void drop_one();
+ extern void swap_TOS();
+ 
+-// @PRODUCT replaced the previously unimplemented @CALL
++// Replaced previously unimplemented functions
+ #define AT_CALL AT_PRODUCT
++#define AT_TERM2 AT_SYSTEM
+ 
+ enum {
+     AT_NA,
+@@ -162,7 +168,7 @@
+     AT_PMT2,
+     AT_PV2,
+     AT_FV2,
+-    AT_TERM2,
++    AT_SYSTEM,
+     AT_NUM_FUNCS,
+ };
+ 
+@@ -173,6 +179,7 @@
+ 
+ int16_t at_date();
+ int16_t at_weekday();
++int16_t at_system();
+ int16_t at_product(int16_t cnt);
+ 
+ void init_at_funcs();
+diff -Naur 123elf-1.0.0rc4/atfuncs/Makefile 123elf-git/atfuncs/Makefile
+--- 123elf-1.0.0rc4/atfuncs/Makefile	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/atfuncs/Makefile	2025-03-13 17:11:05.123776607 +0300
+@@ -7,7 +7,7 @@
+ 
+ all: atfuncs.a
+ 
+-atfuncs.a: date.o weekday.o product.o atfuncs.o
++atfuncs.a: date.o weekday.o product.o atfuncs.o system.o
+ 	$(AR) r $@ $^
+ 
+ clean:
+diff -Naur 123elf-1.0.0rc4/atfuncs/system.c 123elf-git/atfuncs/system.c
+--- 123elf-1.0.0rc4/atfuncs/system.c	1970-01-01 03:00:00.000000000 +0300
++++ 123elf-git/atfuncs/system.c	2025-03-13 17:11:05.128776607 +0300
+@@ -0,0 +1,44 @@
++#include <stdint.h>
++#include <stdlib.h>
++#include <stdio.h>
++#include <stdbool.h>
++#include <stddef.h>
++
++#include "lottypes.h"
++#include "lotfuncs.h"
++#include "lotdefs.h"
++#include "atfuncs.h"
++
++int16_t at_system()
++{
++    FILE *cmd;
++    char buf[512] = {0};
++
++    if (!check_one_string()) {
++        return 0;
++    }
++
++    // @SYSTEM() is only permitted when autoexec is enabled.
++    if (get_allow_autoexec() == false) {
++        drop_one();
++        push_na();
++        return 1;
++    }
++
++    cmd = popen(peek_string(0), "r");
++
++    if (cmd == NULL) {
++        return drop_one_push_err();
++    }
++
++    // We can read at most 512 bytes of output.
++    fscanf(cmd, "%511[^\n]", buf);
++
++    // We return @ERR if the command returned failure.
++    if (pclose(cmd) != EXIT_SUCCESS) {
++        return drop_one_push_err();
++    }
++
++    // Return the output as a string.
++    return drop_one_push_stack_string(buf);
++}
+diff -Naur 123elf-1.0.0rc4/coffsyrup.c 123elf-git/coffsyrup.c
+--- 123elf-1.0.0rc4/coffsyrup.c	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/coffsyrup.c	2025-03-13 17:11:05.130776606 +0300
+@@ -347,7 +347,7 @@
+             // with a jmp, and then add a new RELOC. This really only makes sense
+             // if this is a function, so it should begin with push ebp.
+             if (patch->opcode != OPCODE_PUSH_EBP) {
+-                errx(EXIT_FAILURE, "Text symbol is missing a function prologue.");
++                warnx("Text symbol is missing a function prologue.");
+             }
+ 
+             // Now patch it with a JMP, is this right??
+diff -Naur 123elf-1.0.0rc4/globalize.lst 123elf-git/globalize.lst
+--- 123elf-1.0.0rc4/globalize.lst	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/globalize.lst	2025-03-13 17:11:05.133776606 +0300
+@@ -83,3 +83,6 @@
+ filename_length
+ mac_nobreak
+ mac_str
++drop_one_push_stack_string
++drop_one_push_err
++get_allow_autoexec
+diff -Naur 123elf-1.0.0rc4/lotdefs.h 123elf-git/lotdefs.h
+--- 123elf-1.0.0rc4/lotdefs.h	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/lotdefs.h	2025-03-13 17:11:05.142776606 +0300
+@@ -248,4 +248,5 @@
+ extern int win_column_width(uint16_t, int16_t);
+ extern void tty_disp_info(struct DISPLAYINFO *dpyinfo);
+ extern void memdup(void *, uint32_t, uint32_t);
++extern int16_t get_allow_autoexec();
+ #endif
+diff -Naur 123elf-1.0.0rc4/patch.c 123elf-git/patch.c
+--- 123elf-1.0.0rc4/patch.c	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/patch.c	2025-03-13 17:11:05.145776605 +0300
+@@ -82,7 +82,7 @@
+ uint32_t fmt_cpy(uint32_t *dst, uint32_t *src, uint16_t src_len)
+ {
+     static const uint32_t dst_max = 256;
+-    uint32_t *dptr, *dst_end = dst + dst_max / 4;
++    uint32_t *dptr, *dst_end = dst + dst_max;
+ 
+     for (dptr = dst; src_len >= 4 && dptr < dst_end; dptr++) {
+         *dptr = *src++;
+diff -Naur 123elf-1.0.0rc4/res/l123txt3.txt 123elf-git/res/l123txt3.txt
+--- 123elf-1.0.0rc4/res/l123txt3.txt	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/res/l123txt3.txt	2025-03-13 17:11:05.148776605 +0300
+@@ -2767,7 +2767,7 @@
+ 130 "PMT2"
+ 131 "PV2"
+ 132 "FV2"
+-133 "TERM2"
++133 "SYSTEM"
+ 134 "?"
+ 
+ =group 21, 256 bytes
+diff -Naur 123elf-1.0.0rc4/test/runtests.sh 123elf-git/test/runtests.sh
+--- 123elf-1.0.0rc4/test/runtests.sh	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/test/runtests.sh	2025-03-13 17:11:05.153872408 +0300
+@@ -704,6 +704,10 @@
+     verify_result_contents '@UPPER("hello")' "HELLO"
+     verify_result_contents '@WEEKDAY(@DATE(2001,12,25))' "3"
+     verify_result_contents '@PRODUCT(1,2,3)' "6"
++    verify_result_contents '@ISERR(@SYSTEM("false"))' "1"
++    verify_result_contents '@ISERR(@SYSTEM("true"))' "0"
++    verify_result_contents '@SYSTEM("printf XyZzY")' "XyZzY"
++    verify_result_contents '@VALUE(@SYSTEM("echo 32+6 | bc"))' "38"
+ }
+ 
+ function check_crash_bugs()
+@@ -712,6 +716,28 @@
+         runmacro "~$(quit)" "testcases/bug103.wk3"
+         endtest
+     }
++    starttest "Large Range Combine" && {
++        local protect=$(mktemp -u)
++        local presave=$(mktemp -u)
++        local pstsave=$(mktemp -u)
++        local savewks=$(mktemp -u XXXXXXXXXX.wk3)
++        macro=$(sendkeys '/dfA1..BM1~~~64~')
++        macro+=$(goto A2)
++        macro+=$(writerange "${protect}" '@STRING(@CELL("protect",BM1),0)')
++        macro+=$(sendkeys '/ruA1..BM1~')
++        macro+=$(writerange "${presave}" '@STRING(@CELL("protect",BM1),0)')
++        macro+=$(saveas "${savewks}")
++        macro+=$(retrieve "${savewks}")
++        macro+=$(writerange "${pstsave}" '@STRING(@CELL("protect",BM1),0)')
++        macro+=$(quit)
++        runmacro "${macro}"
++
++        verifycontents "${protect}" "1"
++        verifycontents "${presave}" "0"
++        verifycontents "${pstsave}" "0"
++        endtest "${savewks}" "${protect}" "${presave}" "${pstsave}"
++    }
++
+ }
+ 
+ function run_all_tests()
+diff -Naur 123elf-1.0.0rc4/wrappers.c 123elf-git/wrappers.c
+--- 123elf-1.0.0rc4/wrappers.c	2023-03-28 07:35:44.000000000 +0300
++++ 123elf-git/wrappers.c	2025-03-13 17:11:05.169776603 +0300
+@@ -163,7 +163,7 @@
+             // I think these are the only flags you can change.
+             if (unixflags & 4)
+                 linuxflags |= O_NONBLOCK;
+-            if (linuxflags & 8)
++            if (unixflags & 8)
+                 linuxflags |= O_APPEND;
+ 
+             if (fcntl(fd, cmd, &linuxflags) == 0) {

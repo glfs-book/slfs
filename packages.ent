@@ -101,3 +101,16 @@
 <!ENTITY ksh-version                         "1.0.10">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY cde-de-version                      "2.5.2">
+
+<!-- 11. GENERAL-UTILS -->
+<!ENTITY lotus123-version                    "1.0.0rc4">
+<!-- DO NOT KEEP THIS UP TO DATE. Do not sync this with LFS, do not sync
+this up with the latest version, ONLY sync this with upstream. We're
+dealing with decades-old proprietary software here, not even meant to work
+on Linux, whose port to Linux was only possible because of dlopen() not being
+a common thing on 90s UNIX and the software needing plugin support. I do NOT
+want to spend an entire day debugging this and single stepping stuff with gdb
+because there was a regression in binutils regarding i386 COFF, a format which
+barely anyone uses these days. This is a known-working upstream-recommended
+version, so keep this at that. -->
+<!ENTITY lotus123-binutils-version           "2.38">
