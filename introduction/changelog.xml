@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>March 13th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - general-utilities/*: Added. PR
+          <ulink url="&lfs-qol-pull;/75">(#75)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 9th, 2025</para>
       <itemizedlist>
         <listitem>
