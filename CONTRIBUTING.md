@@ -27,6 +27,7 @@ more internal but nonetheless essential.
 At the root of the source, you'll find these files and directories:
 - `.github/workflows/`
 - `archive/`
+- `contributor-tools/`
 - `images/`
 - `kernel-config/`
 - `patches/`
