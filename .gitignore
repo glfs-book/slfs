@@ -4,3 +4,4 @@ blfs-bootscripts*
 xxx
 *.swp
 local.mk
+contributor-tools/obj
