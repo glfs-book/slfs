@@ -5,15 +5,6 @@
   %general-entities;
 
   <!ENTITY lotus123-download-http "https://github.com/taviso/123elf/archive/v&lotus123-version;/123elf-v&lotus123-version;.tar.gz">
-  <!-- DO NOT KEEP THIS UP TO DATE. Do not sync this with LFS, do not sync
-  this up with the latest version, ONLY sync this with upstream. We're
-  dealing with decades-old proprietary software here, not even meant to work
-  on Linux, whose port to Linux was only possible because of dlopen() not being
-  a common thing on 90s UNIX and the software needing plugin support. I do NOT
-  want to spend an entire day debugging this and single stepping stuff with gdb
-  because there was a regression in binutils regarding i386 COFF, a format
-  which barely anyone uses these days. This is a known-working
-  upstream-recommended version, so keep this at that. -->
   <!ENTITY lotus123-binutils-download-http "https://ftp.gnu.org/gnu/binutils/binutils-&lotus123-binutils-version;.tar.gz">
 ]>
 
@@ -90,6 +81,24 @@
 
 <screen><userinput>for i in 1 2 3 4 5; do wget \
 https://archive.org/download/123-unix/123UNIX$i.IMG; done</userinput></screen>
+
+    <warning><para>
+      <emphasis>DO NOT</emphasis> use any other binutils versions than the one
+      used in the book to compile this package. This is decades-old proprietary
+      software, not ever meant to work on Linux, whose port to Linux was only
+      possible because of technical issues with UNIXen of the day making it
+      impossible to support third-party plugins without shipping object code.
+      The format used for said object code is i386 COFF, which barely anyone
+      uses these days. This version of binutils is the exact same one used
+      in the upstream packaging scripts, and is known to have no critical
+      issues regarding this format. If you use a different binutils version,
+      you may very run into regressions which break the app in various ways.
+      And if you do run into issues with this version of binutils, then you'll
+      actually be able to report this upstream. If your binutils fails to build,
+      <emphasis>DO NOT</emphasis> use a newer version. Report this to the
+      LFS-QOL editors in order for this to be fixed for everyone without
+      possibly opening up the door to critical regressions.
+    </para></warning>
 
     <para>
       Now, compile the required parts of binutils with COFF support enabled:
