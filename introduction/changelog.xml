@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>March 16th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[MymeType] - neofetch: Added. PR
+          <ulink url="&lfs-qol-pull;/80">(#80)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 13th, 2025</para>
       <itemizedlist>
         <listitem>
