@@ -52,15 +52,21 @@ whereas for systemd, it would be in `~/public_html/lfs-qol-systemd`.
 It will by default make each package and section its own page then link
 everything together for a smooth experience.
 
+You can set a path to LFS QOL themes by running
+`make LFS_QOL_THEME_PATH=<path>`. The default is `stylesheets/lfs-xsl`.
+
 The dark theme is also the default, but you can switch the theme by
 running `make LFS_QOL_THEME=<theme>`. `<theme>` can equal:
-- light
-- dark
+- `light`
+- `dark`
+Note that if you set `LFS_QOL_THEME_PATH`, you can set `LFS_QOL_THEME` to more
+than just what the available options are shown above, but only the available
+themes that are in that path.
 
 Makefile targets are: `pdf`, `nochunks`, and `validate`.
 
-`pdf`: builds LFS-QOL as a PDF file.
+`pdf`: builds LFS QOL as a PDF file.
 
-`nochunks`: builds LFS-QOL in one huge file.
+`nochunks`: builds LFS QOL in one huge file.
 
 `validate`:  does an extensive check for XML errors in the book.
