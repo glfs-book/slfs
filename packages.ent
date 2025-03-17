@@ -90,6 +90,7 @@
 
 <!-- 9. GENERAL-UTILS -->
 <!ENTITY htop-version                        "3.4.0">
+<!ENTITY btop-version                        "1.4.0">
 <!ENTITY lotus123-version                    "1.0.0rc4">
 <!-- DO NOT KEEP THIS UP TO DATE. Do not sync this with LFS, do not sync
 this up with the latest version, ONLY sync this with upstream. We're

@@ -43,6 +43,9 @@
       <para>March 17th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - BTOP++: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - htop: Added. Fixes
           <ulink url="&lfs-qol-issues;/79">#79</ulink>.</para>
         </listitem>
