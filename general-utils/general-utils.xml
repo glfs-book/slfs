@@ -16,5 +16,6 @@
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="lotus123.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="neofetch.xml"/>
 
 </chapter>

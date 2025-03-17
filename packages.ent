@@ -114,3 +114,4 @@ because there was a regression in binutils regarding i386 COFF, a format which
 barely anyone uses these days. This is a known-working upstream-recommended
 version, so keep this at that. -->
 <!ENTITY lotus123-binutils-version           "2.38">
+<!ENTITY neofetch-version                    "7.1.0">
