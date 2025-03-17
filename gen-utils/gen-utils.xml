@@ -5,8 +5,8 @@
   %general-entities;
 ]>
 
-<chapter id="general-utils">
-  <?dbhtml filename="general-utils.html" dir="general-utils"?>
+<chapter id="gen-utils">
+  <?dbhtml filename="gen-utils.html" dir="gen-utils"?>
 
   <title>General Utilities</title>
 

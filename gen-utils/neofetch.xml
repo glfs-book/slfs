@@ -27,7 +27,7 @@
 
     <note>
       <para>
-        Neofetch has been archived since Apr 26, 2024. It is advisable to use a 
+        Neofetch has been archived since Apr 26, 2024. It is advisable to use a
         more maintained fork or alternative such as <application>
         hyfetch</application> or <application>fastfetch</application>.
       </para>
@@ -47,9 +47,9 @@
     <title>Installation of neofetch</title>
 
     <para>
-      <application>neofetch</application> does not need to be compiled and can 
-      be directly installed by running the following command as the &root; 
-      user:
+      The <application>neofetch</application> package does not need to be
+      compiled and can be directly installed by running the following command
+      as the &root; user:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -86,7 +86,7 @@
         <term><command>neofetch</command></term>
         <listitem>
           <para>
-            Outputs information about the system and displays ASCII art of the 
+            outputs information about the system and displays ASCII art of the
             system's distro
           </para>
           <indexterm zone="neofetch neofetch-bin">
