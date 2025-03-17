@@ -6,6 +6,8 @@
 
   <!ENTITY dolphin-download-http
     "https://github.com/dolphin-emu/dolphin">
+  <!ENTITY dolphin-dl-root
+    "https://github.com">
 ]>
 
 <sect1 id="dolphin" xreflabel="Dolphin-&dolphin-version;">
@@ -50,9 +52,11 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>,
       &opengl;,
-      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>, and
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, and
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
@@ -61,7 +65,7 @@
       <ulink url="&blfs-svn;/multimedia/alsa-utils.html">alsa-utils</ulink>,
       <ulink url="&blfs-svn;/general/bluez.html">BlueZ</ulink>,
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
-      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
+      <xref linkend="enet"/>,
       <ulink url="&blfs-svn;/general/fmt.html">fmt</ulink>,
       <xref linkend="libspng"/>,
       <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>,
@@ -72,7 +76,6 @@
       <xref linkend="minizip"/>,
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>,
       <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
     </para>
@@ -89,13 +92,42 @@
     <title>Downloading Dolphin</title>
 
     <para>
-      First, download the package with all its submodules using <ulink
-      url="&blfs-svn;/general/git.html">Git</ulink>:
+      Create a list of the needed tarballs that will be downloaded:
     </para>
 
-<screen><userinput>git clone --recursive &dolphin-download-http; &amp;&amp;
-cd dolphin &amp;&amp;
-git checkout &dolphin-version;</userinput></screen>
+<screen><userinput>cat &gt; dolphin-list &lt;&lt; "EOF"
+<literal>dolphin-emu/dolphin/archive/&dolphin-version;/dolphin-&dolphin-version;.tar.gz
+dolphin-emu/ext-win-qt/archive/&dolphin-qt-external;.tar.gz
+SFML/SFML/archive/&dolphin-sfml-external;.tar.gz
+GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/&dolphin-vk-mem-alloc-external;.tar.gz
+mozilla/cubeb/archive/&dolphin-cubeb-external;.tar.gz
+arsenm/sanitizers-cmake/archive/&dolphin-sanitize-external;.tar.gz
+libusb/hidapi/archive/&dolphin-hidapi-external;.tar.gz
+epezent/implot/archive/&dolphin-implot-external;.tar.gz
+mgba-emu/mgba/archive/&dolphin-mgba-external;.tar.gz
+zlib-ng/minizip-ng/archive/&dolphin-minizip-ng-external;.tar.gz
+RetroAchievements/rcheevos/archive/&dolphin-rcheevos-external;.tar.gz
+KhronosGroup/SPIRV-Cross/archive/&dolphin-spirv-cross-external;.tar.gz
+syoyo/tinygltf/archive/&dolphin-tinygltf-external;.tar.gz
+Cyan4973/xxHash/archive/&dolphin-xxhash-external;.tar.gz
+zlib-ng/zlib-ng/archive/&dolphin-zlib-ng-external;.tar.gz
+
+# Required if you have not installed some recommended dependencies
+lsalzman/enet/archive/&dolphin-enet-external;.tar.gz
+fmtlib/fmt/archive/&dolphin-fmt-external;.tar.gz
+randy408/libspng/archive/&dolphin-libspng-external;.tar.gz
+libusb/libusb/archive/&dolphin-libusb-external;.tar.gz</literal>
+EOF</userinput></screen>
+
+    <para>
+      Now download the package and its submodules using <ulink
+      url="&blfs-svn;/basicnet/wget.html">Wget</ulink>:
+    </para>
+
+<screen><userinput>mkdir dolphin-emu &amp;&amp;
+cd    dolphin-emu &amp;&amp;
+grep -v '^#' ../dolphin-list | wget -i- -c \
+    -B &dolphin-dl-root;</userinput></screen>
 
   </sect2>
 
@@ -103,13 +135,82 @@ git checkout &dolphin-version;</userinput></screen>
     <title>Installation of Dolphin</title>
 
     <para>
-      First apply a patch to force <application>XCB</application> to be used
+      Extract all the tarballs:
+    </para>
+
+<screen><userinput>for i in *.tar.?z*; do
+  tar -xf $i
+done</userinput></screen>
+
+    <para>
+      Now that everything has been extracted, the required extracted submodules
+      need to be moved into <filename
+      class="directory">dolphin-&dolphin-version;</filename>. Do that by
+      running the following commands:
+    </para>
+
+<screen><userinput>mv -T ext-win-qt-* dolphin-&dolphin-version;/Externals/Qt &amp;&amp;
+mv -T SFML-* dolphin-&dolphin-version;/Externals/SFML/SFML &amp;&amp;
+mv -T VulkanMemoryAllocator-* \
+      dolphin-&dolphin-version;/Externals/VulkanMemoryAllocator &amp;&amp;
+mv -T cubeb-* dolphin-&dolphin-version;/Externals/cubeb/cubeb &amp;&amp;
+mv -T sanitizers-cmake-* \
+      dolphin-&dolphin-version;/Externals/cubeb/cubeb/cmake/sanitizers-cmake &amp;&amp;
+mv -T hidapi-* dolphin-&dolphin-version;/Externals/hidapi/hidapi-src &amp;&amp;
+mv -T implot-* dolphin-&dolphin-version;/Externals/implot/implot &amp;&amp;
+mv -T mgba-* dolphin-&dolphin-version;/Externals/mGBA/mgba &amp;&amp;
+mv -T minizip-ng-* dolphin-&dolphin-version;/Externals/minizip-ng/minizip-ng &amp;&amp;
+mv -T rcheevos-* dolphin-&dolphin-version;/Externals/rcheevos/rcheevos &amp;&amp;
+mv -T SPIRV-Cross-* dolphin-&dolphin-version;/Externals/spirv_cross/SPIRV-Cross &amp;&amp;
+mv -T tinygltf-* dolphin-&dolphin-version;/Externals/tinygltf/tinygltf &amp;&amp;
+mv -T xxHash-* dolphin-&dolphin-version;/Externals/xxhash/xxHash &amp;&amp;
+mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput></screen>
+
+    <para>
+      If you have not installed <xref linkend="enet"/>, move the submodule into
+      <filename class="directory">dolphin-&dolphin-version;</filename>:
+    </para>
+
+<screen><userinput>mv -T enet-* dolphin-&dolphin-version;/Externals/enet/enet</userinput></screen>
+
+    <para>
+      If you have not installed <ulink
+      url="&blfs-svn;/general/fmt.html">fmt</ulink>, move the submodule into
+      <filename class="directory">dolphin-&dolphin-version;</filename>:
+    </para>
+
+<screen><userinput>mv -T fmt-* dolphin-&dolphin-version;/Externals/fmt/fmt</userinput></screen>
+
+    <para>
+      If you have not installed <xref linkend="libspng"/>, move the submodule
+      into <filename class="directory">dolphin-&dolphin-version;</filename>:
+    </para>
+
+<screen><userinput>mv -T libspng-* dolphin-&dolphin-version;/Externals/libspng/libspng</userinput></screen>
+
+    <para>
+      If you have not installed <ulink
+      url="&blfs-svn;/general/libusb.html">libusb</ulink>, move the submodule
+      into <filename class="directory">dolphin-&dolphin-version;</filename>:
+    </para>
+
+<screen><userinput>mv -T libusb-* dolphin-&dolphin-version;/Externals/libusb/libusb</userinput></screen>
+
+    <para>
+      Now go into the <filename
+      class="directory">dolphin-&dolphin-version;</filename> directory:
+    </para>
+
+<screen><userinput>cd dolphin-&dolphin-version;</userinput></screen>
+
+    <para>
+      Apply a patch to force <application>XCB</application> to be used
       in <application>Dolphin</application> on
       <application>Wayland</application> to avoid being unable to initialize
       graphics when launching a game:
     </para>
 
-<screen><userinput>patch -Np1 -i ../dolphin-xcb_env-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../../dolphin-xcb_env-1.patch</userinput></screen>
 
     <para>
       Install <application>Dolphin</application> by running the following

@@ -43,6 +43,10 @@
       <para>March 17th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Dolphin: 2412 -&gt; 2503. Fixes
+          <ulink url="&lfs-qol-issues;/76">#76</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - BTOP++: Added.</para>
         </listitem>
         <listitem>
