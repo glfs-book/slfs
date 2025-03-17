@@ -11,7 +11,7 @@
   <title>Developer Tools</title>
 
   <para>
-    This section is dedicated to installing tools useful for developers.
+    This chapter is dedicated to installing tools useful for developers.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="strace.xml"/>

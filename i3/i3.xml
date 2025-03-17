@@ -11,7 +11,7 @@
   <title>i3</title>
 
   <para>
-    This section is dedicated to installing i3 and its dependencies.
+    This chapter is dedicated to installing i3 and its dependencies.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-util-xrm.xml"/>
