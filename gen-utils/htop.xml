@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+
+  <!ENTITY htop-download-http "https://github.com/htop-dev/htop/releases/download/&htop-version;/htop-&htop-version;.tar.xz">
+]>
+
+<sect1 id="htop" xreflabel="htop-&htop-version;">
+  <?dbhtml filename="htop.html"?>
+
+  <title>htop-&htop-version;</title>
+
+  <indexterm zone="htop">
+    <primary sortas="a-htop">htop</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to htop</title>
+
+    <para>
+      The <application>htop</application> package provides a TUI
+      <footnote><para>
+        Text-based User Interface.
+      </para></footnote>
+      system monitor and has became well-known for its ease-of-use and
+      comprehensive features.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&htop-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">htop Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/lm_sensors/">lm_sensors</ulink>,
+      <ulink url="&blfs-svn;/general/lsof.html">lsof</ulink>, and
+      <xref linkend="strace"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of htop</title>
+
+    <para>
+      Install <application>htop</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          htop
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="htop-bin">
+        <term><command>htop</command></term>
+        <listitem>
+         <para>
+           is a TUI system monitor
+         </para>
+          <indexterm zone="htop htop-bin">
+            <primary sortas="b-htop-bin">htop</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

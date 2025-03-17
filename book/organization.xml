@@ -70,13 +70,20 @@
     This chapter covers packages which cover general gaming bases.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 9 - Developer Tools</bridgehead>
+  <bridgehead renderas="sect2">Chapter 9 - General Utilties</bridgehead>
+
+  <para>
+    This chapter covers packages which are general utilites you may wish to
+    have.
+  </para>
+
+  <bridgehead renderas="sect2">Chapter 10 - Developer Tools</bridgehead>
 
   <para>
     This chapter covers packages which provide tools for developers.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 10 - Common Desktop Environment</bridgehead>
+  <bridgehead renderas="sect2">Chapter 11 - Common Desktop Environment</bridgehead>
 
   <para>
     This chapter covers the Common Desktop Environment and its dependencies.

@@ -22,9 +22,9 @@ $Date$
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="com-emu/com-emu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="game-emu/game-emu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gen-game/gen-game.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gen-utils/gen-utils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="dev-tools/dev-tools.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cde/cde.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gen-utils/gen-utils.xml"/>
 
   <!-- Appendices -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendices/creat-comm.xml"/>

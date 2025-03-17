@@ -88,21 +88,8 @@
 <!ENTITY openjdk-build                       "7">
 <!ENTITY prism-launcher-version              "9.2">
 
-<!-- 9. DEV-TOOLS -->
-<!ENTITY strace-version                      "6.13">
-<!ENTITY socat-version                       "1.8.0.3">
-
-<!-- 10. CDE -->
-<!ENTITY libutempter-version                 "1.2.1">
-<!ENTITY printproto-version                  "1.0.5">
-<!ENTITY libxp-version                       "1.0.4">
-<!ENTITY byacc-version                       "20241231">
-<!ENTITY motif-version                       "2.3.8">
-<!ENTITY ksh-version                         "1.0.10">
-<!ENTITY ncompress-version                   "5.0">
-<!ENTITY cde-de-version                      "2.5.2">
-
-<!-- 11. GENERAL-UTILS -->
+<!-- 9. GENERAL-UTILS -->
+<!ENTITY htop-version                        "3.4.0">
 <!ENTITY lotus123-version                    "1.0.0rc4">
 <!-- DO NOT KEEP THIS UP TO DATE. Do not sync this with LFS, do not sync
 this up with the latest version, ONLY sync this with upstream. We're
@@ -115,3 +102,17 @@ barely anyone uses these days. This is a known-working upstream-recommended
 version, so keep this at that. -->
 <!ENTITY lotus123-binutils-version           "2.38">
 <!ENTITY neofetch-version                    "7.1.0">
+
+<!-- 10. DEV-TOOLS -->
+<!ENTITY strace-version                      "6.13">
+<!ENTITY socat-version                       "1.8.0.3">
+
+<!-- 11. CDE -->
+<!ENTITY libutempter-version                 "1.2.1">
+<!ENTITY printproto-version                  "1.0.5">
+<!ENTITY libxp-version                       "1.0.4">
+<!ENTITY byacc-version                       "20241231">
+<!ENTITY motif-version                       "2.3.8">
+<!ENTITY ksh-version                         "1.0.10">
+<!ENTITY ncompress-version                   "5.0">
+<!ENTITY cde-de-version                      "2.5.2">
