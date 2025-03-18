@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>March 18th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[MymeType] - fastfetch: Added. PR
+          <ulink url="&lfs-qol-pull;/81">(#81)</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 17th, 2025</para>
       <itemizedlist>
         <listitem>
