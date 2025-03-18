@@ -42,7 +42,7 @@
       Install fastfetch by running the following commands:
     </para>
 
-<screen role="root"><userinput>mkdir build &amp;&amp;
+<screen><userinput>mkdir build &amp;&amp;
 cd build
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr \
@@ -73,7 +73,7 @@ make
     <para>
       <parameter>-D BUILD_FLASHFETCH=OFF</parameter>: This switch disables 
       building the historical flashfetch binary. If you need it for any reason, 
-      set this switch to ON.
+      set this switch to <parameter>ON</parameter>.
     </para>
 
   </sect2>
