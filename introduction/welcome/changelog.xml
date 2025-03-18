@@ -43,6 +43,14 @@
       <para>March 17th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - hyprutils: 0.5.1 -&gt; 0.5.2;
+          glaze: 4.4.3 -&gt; 5.0.0;
+          aquamarine: 0.7.2 -&gt; 0.8.0. Fixes
+          <ulink url="&lfs-qol-issues;/77">#77</ulink>,
+          <ulink url="&lfs-qol-issues;/78">#78</ulink>, and
+          <ulink url="&lfs-qol-issues;/81">#81</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - *: Rearrange the entire book.</para>
         </listitem>
         <listitem>

@@ -1,7 +1,7 @@
 <!-- II. GENERAL -->
 <!-- 2. General Libraries -->
 <!ENTITY enet-version                        "1.3.18">
-<!ENTITY glaze-version                       "4.4.3">
+<!ENTITY glaze-version                       "5.0.0">
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libliftoff-version                  "0.5.0">
 <!ENTITY libzip-version                      "1.11.3">
@@ -72,11 +72,11 @@ version, so keep this at that. -->
 <!ENTITY cde-de-version                      "2.5.2">
 <!-- 9. Hypr -->
 <!ENTITY hyprland-protocols-version          "0.6.2">
-<!ENTITY hyprutils-version                   "0.5.1">
+<!ENTITY hyprutils-version                   "0.5.2">
 <!ENTITY hyprlang-version                    "0.6.0">
 <!ENTITY hyprcursor-version                  "0.1.11">
 <!ENTITY hyprwayland-scanner-version         "0.4.4">
-<!ENTITY aquamarine-version                  "0.7.2">
+<!ENTITY aquamarine-version                  "0.8.0">
 <!ENTITY hyprgraphics-version                "0.1.2">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-qtutils-version            "0.1.3">
