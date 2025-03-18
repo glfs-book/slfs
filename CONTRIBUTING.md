@@ -146,13 +146,14 @@ stronger impact of the final rendered product. Here are the following files and
 directories at the root of the source:
 
 - `appendices/`
+- `binary/`
 - `book/`
+- `emu/`
+- `gen-game/`
+- `general/`
 - `introduction/`
-- `com-emu/`
-- `dev-tools/`
-- `hypr/`
-- `i3/`
-- `svr4-tools/`
+- `svr4/`
+- `wm/`
 - `changelog.xml` (link to `introduction/welcome/changelog.xml`)
 - `index.xml`
 
@@ -164,29 +165,32 @@ as the instructions.
 #### 3.1.2.1. `appendices/`
 This directory contains XML files rendered at the end of the book. Rarely needs
 to get updated.
-#### 3.1.2.2. `book/`
+#### 3.1.2.2. `binary/`
+This directory contains XML files rendered for the Binary Support part.
+Contains packages.
+#### 3.1.2.3. `book/`
 This directory contains XML files rendered at the beginning of the book. Rarely
 needs to get updated.
-#### 3.1.2.3. `introduction/`
-This directory contains XML files rendered for the Introduction chapter of the
+#### 3.1.2.4. `emu/`
+This directory contains XML files rendered for the Emulators part. Contains
+packages.
+#### 3.1.2.5. `gen-game/`
+This directory contains XML files rendered for the General Gaming Software
+part. Contains packages.
+#### 3.1.2.6. `general/`
+This directory contains XML files rendered for the General Libraries and
+Utilities part. Contains packages.
+#### 3.1.2.7. `introduction/`
+This directory contains XML files rendered for the Introduction part of the
 book. Contains `welcome/changelog.xml` which does need to get updated often.
 Rest of the XML files usually don't.
-#### 3.1.2.4. `com-emu/`
-This directory contains XML files rendered for the Computer Emulators chapter
-of the book. Contains packages.
-#### 3.1.2.5. `dev-tools/`
-This directory contains XML files rendered for the Developer Tools chapter of
-the book. Contains packages.
-#### 3.1.2.6. `hypr/`
-This directory contains XML files rendered for the Hypr chapter
-of the book. Contains packages.
-#### 3.1.2.7. `i3/`
-This directory contains XML files rendered for the i3 chapter of the book.
+#### 3.1.2.8. `svr4/`
+This directory contains XML files rendered for the SVR4 part of the book.
 Contains packages.
-#### 3.1.2.8. `svr4-tools/`
-This directory contains XML files rendered for the SVR4-style Tools chapter of
-the book. Contains packages.
-#### 3.1.2.9. `changelog.xml`
+#### 3.1.2.9. `wm/`
+This directory contains XML files rendered for the Window Managers,
+Compositors, and Desktop Environments part. Contains packages.
+#### 3.1.2.10. `changelog.xml`
 This symlink points to `introduction/welcome/changelog.xml`, an XML file that
 details changes made to the book since the last release. All changes should be
 noted here, and the message should be similar or exact to the git commit
@@ -197,7 +201,7 @@ use for LFS/BLFS. Changes that shouldn't have a changelog entry are simple
 typos, grammar changes, fixing rendering failures, wording, etc. (small
 changes) and internal changes (not counting changes to `packages.ent`, those
 count as updates that need to have a changelog entry).
-#### 3.1.2.10. `index.xml`
+#### 3.1.2.11. `index.xml`
 This file is an XML file that determines which main XML files to include for
 rendering. Think of it as the master XML file, or your `int main()`, but for
 XML. Rarely needs changing unless a new section is added.
