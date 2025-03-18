@@ -43,13 +43,13 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/svr4-tools/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-final-updates.patch"/>
+          <ulink url="&patch-root;/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-final-updates.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/svr4-tools/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch"/>
+          <ulink url="&patch-root;/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch"/>
         </para>
       </listitem>
     </itemizedlist>

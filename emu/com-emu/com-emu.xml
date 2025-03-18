@@ -20,9 +20,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xhomer.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="freebee.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="s4-3b1-pc7300.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="lrzsz.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minicom.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gkermit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="p20-emu.xml"/>
 
 </chapter>

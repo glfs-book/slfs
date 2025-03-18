@@ -43,7 +43,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/general-utils/lotus123/lotus123-&lotus123-version;-final-updates.patch"/>
+          <ulink url="&patch-root;/lotus123/lotus123-&lotus123-version;-final-updates.patch"/>
         </para>
       </listitem>
       <listitem>

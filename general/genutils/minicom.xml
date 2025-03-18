@@ -22,9 +22,7 @@
 
     <para>
       The <application>minicom</application> package provides a serial
-      communication program. It is provided in this chapter for communicating
-      with UNIX 3.51 on <xref linkend="freebee"/> and transferring files over
-      <computeroutput>xmodem</computeroutput>.
+      communication program.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>

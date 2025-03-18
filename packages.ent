@@ -4,6 +4,7 @@
 <!ENTITY glaze-version                       "5.0.0">
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libliftoff-version                  "0.5.0">
+<!ENTITY libutempter-version                 "1.2.1">
 <!ENTITY libzip-version                      "1.11.3">
 <!ENTITY zlib-version                        "1.3.1">
 <!ENTITY pugixml-version                     "1.15">
@@ -15,7 +16,6 @@
 <!-- 3. Graphical Libraries -->
 <!ENTITY glu-version                         "9.0.3">
 <!ENTITY libspng-version                     "0.7.4">
-<!ENTITY xcb-util-xrm-version                "1.3">
 <!-- 4. General Utilities -->
 <!ENTITY htop-version                        "3.4.0">
 <!ENTITY btop-version                        "1.4.0">
@@ -32,16 +32,28 @@ because there was a regression in binutils regarding i386 COFF, a format which
 barely anyone uses these days. This is a known-working upstream-recommended
 version, so keep this at that. -->
 <!ENTITY lotus123-binutils-version           "2.38">
+<!ENTITY lrzsz-version                       "0.12.20">
+<!ENTITY minicom-version                     "2.10">
+<!ENTITY gkermit-tarball-version             "gku201">
+<!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
 <!-- 5. Programming -->
+<!ENTITY byacc-version                       "20241231">
 <!ENTITY strace-version                      "6.13">
 <!ENTITY socat-version                       "1.8.0.3">
 <!-- JAVA -->
 <!ENTITY openjdk-version                     "19.0.2">
 <!ENTITY openjdk-build                       "7">
+<!-- 6. Shells -->
+<!ENTITY ksh-version                         "1.0.10">
+<!-- 7. Xorg Components -->
+<!ENTITY xcb-util-xrm-version                "1.3">
+<!ENTITY printproto-version                  "1.0.5">
+<!ENTITY libxp-version                       "1.0.4">
+<!ENTITY motif-version                       "2.3.8">
 
 <!-- III. SVR4 -->
-<!-- 6. SVR4-style Tools -->
+<!-- 8. SVR4-style Tools -->
 <!ENTITY heirloom-ng-version                 "250220">
 <!ENTITY schilytools-version                 "2024-03-21">
 <!ENTITY heirloom-sh-version                 "050706">
@@ -55,22 +67,15 @@ version, so keep this at that. -->
 <!ENTITY heirloom-ex-vi-version              "bd1f886598d20d457885c5c189fea34b027cbdef">
 
 <!-- IV. BINARY SUPPORT -->
-<!-- 7. Binary Support -->
+<!-- 9. Binary Support -->
 <!ENTITY fuse2-version                       "2.9.9">
 <!ENTITY ostree-version                      "2025.1">
 <!ENTITY flatpak-version                     "1.16.0">
 
 <!-- V. WM -->
-<!-- 8. CDE -->
-<!ENTITY libutempter-version                 "1.2.1">
-<!ENTITY printproto-version                  "1.0.5">
-<!ENTITY libxp-version                       "1.0.4">
-<!ENTITY byacc-version                       "20241231">
-<!ENTITY motif-version                       "2.3.8">
-<!ENTITY ksh-version                         "1.0.10">
-<!ENTITY ncompress-version                   "5.0">
+<!-- 10. CDE -->
 <!ENTITY cde-de-version                      "2.5.2">
-<!-- 9. Hypr -->
+<!-- 11. Hypr -->
 <!ENTITY hyprland-protocols-version          "0.6.2">
 <!ENTITY hyprutils-version                   "0.5.2">
 <!ENTITY hyprlang-version                    "0.6.0">
@@ -82,11 +87,11 @@ version, so keep this at that. -->
 <!ENTITY hyprland-qtutils-version            "0.1.3">
 <!ENTITY hyprland-version                    "0.47.2">
 <!ENTITY xdg-desktop-portal-hyprland-version "1.3.9">
-<!-- 10. i3 -->
+<!-- 12. i3 -->
 <!ENTITY i3-version                          "4.24">
 
 <!-- VI. EMULATORS -->
-<!-- 11. Com-Emu -->
+<!-- 13. Com-Emu -->
 <!ENTITY idle-minor-version                  "r26">
 <!ENTITY idle-version                        "e70cfd651ec84ec10f69b9d8ea8696978a6b5d11">
 <!ENTITY xhomer-version                      "2-19-24">
@@ -95,13 +100,10 @@ version, so keep this at that. -->
 <!ENTITY musashi-submodule-version           "fc7a6fc602e2fbcd24851670a5242358765feacf">
 <!ENTITY s4-3b1-pc7300-minor-version         "efe55b">
 <!ENTITY s4-3b1-pc7300-version               "efe55b8cc917e3e27bcae9786c5b5dec0469be45">
-<!ENTITY lrzsz-version                       "0.12.20">
-<!ENTITY minicom-version                     "2.10">
-<!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY gkermit-version                     "2.01">
 <!ENTITY p20-emu-minor-version               "d75a83">
 <!ENTITY p20-emu-version                     "d75a83ca9b107e1ae1a54598e4045c2843bd823e">
-<!-- 12. Game-Emu -->
+<!-- 14. Game-Emu -->
 <!-- NDS -->
 <!ENTITY melonds-version                     "1.0rc">
 <!-- GBA -->
@@ -140,5 +142,5 @@ version, so keep this at that. -->
 <!ENTITY gliden64-version                    "70b9b6cee1eb457c759ee82654c4d6ae5b30c4df">
 
 <!-- VII. GEN-GAME-SOFT -->
-<!-- 13. Minecraft -->
+<!-- 15. Minecraft -->
 <!ENTITY prism-launcher-version              "9.2">

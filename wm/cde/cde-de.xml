@@ -51,7 +51,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/cde/cde-de/cde-&cde-de-version;-upstream-fixes.patch"/>
+          <ulink url="&patch-root;/cde-de/cde-&cde-de-version;-upstream-fixes.patch"/>
         </para>
       </listitem>
     </itemizedlist>

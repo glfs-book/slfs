@@ -40,19 +40,19 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/com-emu/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch"/>
+          <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/com-emu/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch"/>
+          <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/com-emu/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch"/>
+          <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch"/>
         </para>
       </listitem>
     </itemizedlist>

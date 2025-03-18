@@ -51,13 +51,13 @@
       <listitem>
         <para>
           Recommended patch:
-          <ulink url="&patch-root;/com-emu/p20-emu/p20-emu-&p20-emu-minor-version;-no-debug.patch"/>
+          <ulink url="&patch-root;/p20-emu/p20-emu-&p20-emu-minor-version;-no-debug.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Recommended patch:
-          <ulink url="&patch-root;/com-emu/p20-emu/p20-emu-&p20-emu-minor-version;-system-roms.patch"/>
+          <ulink url="&patch-root;/p20-emu/p20-emu-&p20-emu-minor-version;-system-roms.patch"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -16,13 +16,6 @@
     in commercial UNIX.
   </para>
 
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libutempter.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="printproto.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libxp.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="byacc.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="motif.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ksh.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ncompress.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cde-de.xml"/>
 
 </chapter>

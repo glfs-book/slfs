@@ -39,13 +39,13 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/svr4-tools/heirloom-sh/heirloom-sh-&heirloom-sh-version;-final-updates.patch"/>
+          <ulink url="&patch-root;/heirloom-sh/heirloom-sh-&heirloom-sh-version;-final-updates.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/svr4-tools/heirloom-sh/heirloom-sh-&heirloom-sh-version;-glibc234-2.patch"/>
+          <ulink url="&patch-root;/heirloom-sh/heirloom-sh-&heirloom-sh-version;-glibc234-2.patch"/>
         </para>
       </listitem>
     </itemizedlist>

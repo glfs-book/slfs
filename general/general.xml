@@ -17,5 +17,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sysutils/sysutils.xml"/>
   -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="prog/prog.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="shells/shells.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xorg/xorg.xml"/>
 
 </part>

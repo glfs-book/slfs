@@ -40,7 +40,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/svr4-tools/pkgsuite/pkgsuite-&pkgsuite-minor-version;-paths.patch"/>
+          <ulink url="&patch-root;/pkgsuite/pkgsuite-&pkgsuite-minor-version;-paths.patch"/>
         </para>
       </listitem>
     </itemizedlist>

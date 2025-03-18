@@ -25,9 +25,7 @@
 
     <para>
       The <application>G-Kermit</application> package provides a Unix program
-      for transferring files with the Kermit protocol. It is provided here for
-      transferring files over the Kermit protocol to UNIX 3.51 running on
-      <xref linkend="freebee"/>.
+      for transferring files with the Kermit protocol.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>
@@ -44,7 +42,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/com-emu/gkermit/gkermit-&gkermit-version;-fix-implicit-declaration.patch"/>
+          <ulink url="&patch-root;/gkermit/gkermit-&gkermit-version;-fix-implicit-declaration.patch"/>
         </para>
       </listitem>
     </itemizedlist>

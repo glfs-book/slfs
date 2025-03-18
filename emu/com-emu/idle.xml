@@ -45,19 +45,19 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/com-emu/idle/idle-&idle-minor-version;-fix-sigill.patch"/>
+          <ulink url="&patch-root;/idle/idle-&idle-minor-version;-fix-sigill.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Recommended patch:
-          <ulink url="&patch-root;/com-emu/idle/idle-&idle-minor-version;-system-roms.patch"/>
+          <ulink url="&patch-root;/idle/idle-&idle-minor-version;-system-roms.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Optional patch:
-          <ulink url="&patch-root;/com-emu/idle/idle-&idle-minor-version;-pretend-we-are-a-lisa-2-10.patch"/>
+          <ulink url="&patch-root;/idle/idle-&idle-minor-version;-pretend-we-are-a-lisa-2-10.patch"/>
         </para>
       </listitem>
     </itemizedlist>
