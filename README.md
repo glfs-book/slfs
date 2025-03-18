@@ -3,15 +3,11 @@
 This book is dedicated to documenting the installation of some packages on an
 LFS system that do not appear in LFS, MLFS, BLFS, and GLFS.
 
-This project also assumes you are using a SysVinit LFS system.
-
-Such packages that are included are, but not limited to:
-- Fuse-2.9.9 (needed for appimages)
-- Flatpak
-- Hyprland
-- i3
-- SVR4-style tools
-- And much more!
+This book boasts several libraries and utilities not covered in the `*LFS`
+books. On top of that, it also provides: SVR4-related tooling, binary-only
+application support, many graphical environments for both Wayland and X.org,
+both computer and video game console emulators, general gaming software, and
+more.
 
 # Where to read
 
