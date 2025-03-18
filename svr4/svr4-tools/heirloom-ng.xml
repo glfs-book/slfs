@@ -70,7 +70,7 @@
 <screen><userinput>patch -Np1 -i ../heirloom-ng-&heirloom-ng-version;-no-static.patch</userinput></screen>
 
     <para>
-      Finally, apply a patch to avoid a failure during installation:
+      Then, apply a patch to avoid a failure during installation:
     </para>
 
 <screen><userinput>patch -Np1 -i ../heirloom-ng-59f7cc-dont-link-nonexistent-files.patch</userinput></screen>
