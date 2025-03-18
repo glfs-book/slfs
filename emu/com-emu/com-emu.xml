@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<chapter id="com-emu">
+  <?dbhtml filename="com-emu.html"?>
+
+  <title>Computer Emulators</title>
+
+  <para>
+    This chapter is dedicated to towards various emulators for old computer
+    hardware, their dependencies, and various tools needed for
+    interoperability with old operating systems running on said hardware.
+  </para>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="idle.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xhomer.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="freebee.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="s4-3b1-pc7300.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="lrzsz.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minicom.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gkermit.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="p20-emu.xml"/>
+
+</chapter>

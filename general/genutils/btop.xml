@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY btop-download-http "https://github.com/aristocratos/btop/archive/v&btop-version;/btop-&btop-version;.tar.gz">
+]>
+
+<sect1 id="btop" xreflabel="BTOP++-&btop-version;">
+  <?dbhtml filename="btop.html"?>
+
+  <title>BTOP++-&btop-version;</title>
+
+  <indexterm zone="btop">
+    <primary sortas="a-btop">BTOP++</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to BTOP++</title>
+
+    <para>
+      The <application>BTOP++</application> package provides a TUI
+      <footnote><para>
+        Text-based User Interface.
+      </para></footnote>
+      system monitor, much like <xref linkend="htop"/>. This package, however,
+      boasts even further capabilities.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&btop-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">BTOP++ Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/lowdown/">lowdown</ulink> and
+      <ulink url="&arch-pkgs;/extra/x86_64/rocm-smi-lib/">ROCM-SMI-lib</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of BTOP++</title>
+
+    <para>
+      Install <application>BTOP++</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>make all</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          btop
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/btop
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="btop-bin">
+        <term><command>btop</command></term>
+        <listitem>
+         <para>
+           is a TUI system monitor
+         </para>
+          <indexterm zone="btop btop-bin">
+            <primary sortas="b-btop-bin">btop</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

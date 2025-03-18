@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY ostree-download-http "https://github.com/ostreedev/ostree/releases/download/v&ostree-version;/libostree-&ostree-version;.tar.xz">
+]>
+
+<sect1 id="ostree" xreflabel="OSTree-&ostree-version;">
+  <?dbhtml filename="ostree.html"?>
+
+
+  <title>OSTree-&ostree-version;</title>
+
+  <indexterm zone="ostree">
+    <primary sortas="a-ostree">OSTree</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to OSTree</title>
+
+    <para>
+      The OSTree package is for container deployment and the like. It is
+      required by <xref linkend="flatpak"/>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&ostree-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">OSTree Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="fuse2"/> or
+      <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink> and
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <phrase revision="sysv">
+      <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>,
+      </phrase>
+      <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
+      <ulink url="&blfs-svn;/basicnet/libsoup.html">libsoup</ulink>,
+      <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
+      <phrase revision="sysv">and</phrase>
+      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink><phrase
+      revision="systemd">, and
+      <ulink url="&blfs-svn;/general/systemd.html">Systemd</ulink>
+      </phrase>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of OSTree</title>
+
+    <para>
+      Install <application>OSTree</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --sysconfdir=/etc --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          ostree, ostree-prepare-root, ostree-remount, and rofiles-fuse
+        </seg>
+        <seg>
+          libostree-1.so
+        </seg>
+        <seg>
+          /etc/ostree/remotes.d, /usr/include/ostree-1, /usr/lib/ostree,
+          /usr/lib/tmpfiles.d, /usr/libexec/libostee, and
+          /usr/share/ostree/trusted.gpg.d
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ostree-bin">
+        <term><command>ostree</command></term>
+        <listitem>
+          <para>
+            manages filesystem trees
+          </para>
+          <indexterm zone="ostree ostree-bin">
+            <primary sortas="b-ostree-bin">ostree</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ostree-prepare-root">
+        <term><command>ostree-prepare-root</command></term>
+        <listitem>
+          <para>
+            changes the view of a mounted root filesystem to an
+            <application>ostree</application> deployment
+          </para>
+          <indexterm zone="ostree ostree-prepare-root">
+            <primary sortas="b-ostree-prepare-root">ostree-prepare-root</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ostree-remount">
+        <term><command>ostree-remount</command></term>
+        <listitem>
+          <para>
+            prepares the root for a filesystem
+          </para>
+          <indexterm zone="ostree ostree-remount">
+            <primary sortas="b-ostree-remount">ostree-remount</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rofiles-fuse">
+        <term><command>rofiles-fuse</command></term>
+        <listitem>
+          <para>
+            uses <application>Fuse</application> to create a view where
+            directories and files are immutable
+          </para>
+          <indexterm zone="ostree rofiles-fuse">
+            <primary sortas="b-rofiles-fuse">rofiles-fuse</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libostree-1">
+        <term><filename class="libraryfile">libostree-1.so</filename></term>
+        <listitem>
+          <para>
+            contains functions for managing filesystem trees
+          </para>
+          <indexterm zone="ostree libostree-1">
+            <primary sortas="c-libostree-1">libostree-1.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

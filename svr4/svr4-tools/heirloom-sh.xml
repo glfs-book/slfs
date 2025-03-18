@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY heirloom-sh-download-http "https://downloads.sourceforge.net/heirloom/heirloom-sh/&heirloom-sh-version;/heirloom-sh-&heirloom-sh-version;.tar.bz2">
+]>
+
+<sect1 id="heirloom-sh" xreflabel="heirloom-sh-&heirloom-sh-version;">
+  <?dbhtml filename="heirloom-sh.html"?>
+
+
+  <title>heirloom-sh-&heirloom-sh-version;</title>
+
+  <indexterm zone="heirloom-sh">
+    <primary sortas="a-heirloom-sh">heirloom-sh</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to heirloom-sh</title>
+
+    <para>
+      The <application>heirloom-sh</application> package is a portable variant
+      of the traditional Unix Bourne Shell.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&heirloom-sh-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-sh/heirloom-sh-&heirloom-sh-version;-final-updates.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-sh/heirloom-sh-&heirloom-sh-version;-glibc234-2.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">heirloom-sh Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="heirloom-ng"/>
+    </para>
+ 
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of heirloom-sh</title>
+
+    <para>
+      Apply a patch to bring up the source to the last upstream commit:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-sh-&heirloom-sh-version;-final-updates.patch</userinput></screen>
+
+    <para>
+      Now, apply a patch to fix the build with glibc 2.34 or newer:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-sh-&heirloom-sh-version;-glibc234-2.patch</userinput></screen>
+
+    <para>
+      Install <application>heirloom-sh</application> by running the following
+      command:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring heirloom-sh</title>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        As the &root; user, update <filename>/etc/shells</filename> to include
+        the Bourne shell program names:
+      </para>
+
+<screen role="root"><userinput>cat &gt;&gt; /etc/shells &lt;&lt; "EOF"
+<literal>/usr/5bin/sh
+/usr/5bin/jsh</literal>
+EOF</userinput></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          jsh (link to sh), and sh
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="jsh">
+        <term><command>jsh</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>sh</command>
+          </para>
+          <indexterm zone="heirloom-sh jsh">
+            <primary sortas="b-jsh">jsh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sh">
+        <term><command>sh</command></term>
+        <listitem>
+          <para>
+            is the Bourne shell
+          </para>
+          <indexterm zone="heirloom-sh sh">
+            <primary sortas="b-sh">sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

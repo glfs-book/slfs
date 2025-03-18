@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+ <!ENTITY % general-entities SYSTEM "../../general.ent">
+ %general-entities;
+]>
+
+<chapter id="general-prog">
+  <?dbhtml filename="prog.html" ?>
+
+  <title>Programming</title>
+
+  <para>
+    This chapter covers some extra programming and developer tools.
+  </para>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="strace.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="socat.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="java-header.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="java.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ojdk-conf.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="openjdk.xml"/>
+
+</chapter>

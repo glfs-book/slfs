@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="gcn-intro" xreflabel="Introduction to Nintendo GameCube/Wii Emulation">
+  <?dbhtml filename="gcn-intro.html"?>
+
+
+  <title>Introduction to Nintendo GameCube/Wii Emulation</title>
+
+  <sect2>
+    <title>What is the Nintendo GameCube and Wii?</title>
+
+    <para>
+      The Nintendo GameCube (GCN/NGC/GC) is a video game console made by
+      Nintendo which was available from 2001 to 2007. It uses a 32-bit CPU.
+      The Wii was also a video game console made by Nintendo, but it was
+      available from 2006 to 2013. It uses a similar CPU and general
+      architecture as the GCN. There are a few emulators for each of the two
+      consoles, but the most prominent one is Dolphin, which is in this book.
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Dolphin</title>
+
+    <para>
+      Dolphin is a GCN and Wii emulator and is generally considered the gold
+      standard of emulators. It supports multiple controllers, connection
+      methods, general settings, etc.
+    </para>
+
+  </sect2>
+
+</sect1>

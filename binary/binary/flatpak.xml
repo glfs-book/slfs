@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY flatpak-download-http "https://github.com/flatpak/flatpak/releases/download/&flatpak-version;/flatpak-&flatpak-version;.tar.xz">
+]>
+
+<sect1 id="flatpak" xreflabel="Flatpak-&flatpak-version;">
+  <?dbhtml filename="flatpak.html"?>
+
+
+  <title>Flatpak-&flatpak-version;</title>
+
+  <indexterm zone="flatpak">
+    <primary sortas="a-flatpak">Flatpak</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Flatpak</title>
+
+    <para>
+      Flatpak allows you to download apps and run them in a sandbox. It
+      downloads all of the dependencies of a given package in a sandbox and
+      allows you to run the package as if it was not in a sandbox. Some
+      packages only exist as a Flatpak, and some packages have a lot of
+      dependencies that it might be worth it to install the Flatpak version
+      instead.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&flatpak-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Flatpak Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/appstream.html">AppStream</ulink>,
+      <ulink url="&blfs-svn;/general/dbus.html">dbus</ulink>,
+      <phrase revision="sysv">
+      <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>,
+      </phrase>
+      <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
+      <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>,
+      <ulink url="&blfs-svn;/general/json-glib.html">json-glib</ulink>,
+      <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
+      <xref linkend="ostree"/>,
+      <ulink url="&blfs-svn;/postlfs/p11-kit.html">p11-kit</ulink>,
+      <phrase revision="sysv">and</phrase>
+      <ulink url="&blfs-svn;/general/python-modules.html#pyparsing">pyparsing</ulink><phrase
+      revision="systemd">, and
+      <ulink url="&blfs-svn;/general/systemd.html">Systemd</ulink></phrase>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/appstream-glib.html">appsteam-glib</ulink>,
+      <ulink url="&blfs-svn;/basicnet/avahi.html">Avahi</ulink>,
+      <ulink url="&blfs-svn;/general/bubblewrap.html">Bubblewrap</ulink>,
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <ulink url="&blfs-svn;/gnome/dconf.html">DConf</ulink>,
+      <ulink url="&blfs-svn;/pst/docbook-4.5-dtd.html">docbook-4.5-dtd</ulink>,
+      <ulink url="&blfs-svn;/pst/docbook.html">docbook-xml-4.5</ulink>,
+      <ulink url="&blfs-svn;/pst/docbook-xsl.html">docbook-xsl-nons</ulink>,
+      <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
+      <ulink url="&blfs-svn;/general/libarchive.html">libarchive</ulink>,
+      <ulink url="&blfs-svn;/general/libseccomp.html">libseccomp</ulink>,
+      <ulink url="&blfs-svn;/x/libXau.html">libXau</ulink>,
+      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
+      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>,
+      <ulink url="&blfs-svn;/general/xdg-dbus-proxy.html">xdg-dbus-proxy</ulink>,
+      <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>, and
+      <ulink url="&blfs-svn;/pst/xmlto.html">xmlto</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="https://gitlab.freedesktop.org/pwithnall/malcontent">malcontent</ulink>
+      (for parental features),
+      <xref linkend="socat"/>
+      (for tests), and
+      <ulink url="&blfs-svn;/general/valgrind.html">Valgrind</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Flatpak</title>
+
+    <para>
+      Install <application>Flatpak</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build    &amp;&amp;
+cd    build    &amp;&amp;
+
+meson setup --prefix=/usr       \
+            --buildtype=release \</userinput><userinput revision="sysv">
+            -D systemd=disabled \</userinput><userinput>
+            -D tests=false      \
+            .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/meson-buildtype-release.xml"/>
+
+    <para revision="sysv">
+      <parameter>-D systemd=disabled</parameter>: This parameter disables
+      Systemd support.
+    </para>
+
+    <para>
+      <parameter>-D tests=false</parameter>: This parameter disables tests.
+      Remove this parameter if you have <application>socat</application>
+      installed.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Shell Script Triggers</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          flatpak, flatpak-bisect, flatpak-bwrap, flatpak-coredumpctl,
+          flatpak-dbus-proxy, flatpak-oci-authenticator, flatpak-portal,
+          flatpak-session-helper, flatpak-system-helper, flatpak-validate-icon,
+          and revokefs-fuse
+        </seg>
+        <seg>
+          desktop-database.trigger, gtk-icon-cache.trigger, and
+          mime-database.trigger
+        </seg>
+        <seg>
+          libflatpak.so
+        </seg>
+        <seg>
+          /usr/include/flatpak, /usr/lib/sysusers.d, and
+          /usr/share/flatpak/triggers
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="desktop-database.trigger">
+        <term><command>desktop-database.trigger</command></term>
+        <listitem>
+          <para>
+            is a trigger that updates a flatpak's application cache
+          </para>
+          <indexterm zone="flatpak desktop-database.trigger">
+            <primary sortas="b-desktop-database.trigger">desktop-database.trigger</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-bin">
+        <term><command>flatpak</command></term>
+        <listitem>
+          <para>
+            can run containerized and sandboxed applications
+          </para>
+          <indexterm zone="flatpak flatpak-bin">
+            <primary sortas="b-flatpak-bin">flatpak</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-bisect">
+        <term><command>flatpak-bisect</command></term>
+        <listitem>
+          <para>
+            can do a git-style bisect of a flatpak application
+          </para>
+          <indexterm zone="flatpak flatpak-bisect">
+            <primary sortas="b-flatpak-bisect">flatpak-bisect</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-bwrap">
+        <term><command>flatpak-bwrap</command></term>
+        <listitem>
+          <para>
+            is used by <command>flatpak</command> to utilize
+            <application>Bubblewrap</application> features
+          </para>
+          <indexterm zone="flatpak flatpak-bwrap">
+            <primary sortas="b-flatpak-bwrap">flatpak-bwrap</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-coredumpctl">
+        <term><command>flatpak-coredumpctl</command></term>
+        <listitem>
+          <para>
+            can debug an application in <application>gdb</application> that
+            crashed inside <command>flatpak</command>.
+          </para>
+          <indexterm zone="flatpak flatpak-coredumpctl">
+            <primary sortas="b-flatpak-coredumpctl">flatpak-coredumpctl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-dbus-proxy">
+        <term><command>flatpak-dbus-proxy</command></term>
+        <listitem>
+          <para>
+            is used by <command>flatpak</command> to utilize
+            <application>xdg-dbus-proxy</application> features
+          </para>
+          <indexterm zone="flatpak flatpak-dbus-proxy">
+            <primary sortas="b-flatpak-dbus-proxy">flatpak-dbus-proxy</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-oci-authenticator">
+        <term><command>flatpak-oci-authenticator</command></term>
+        <listitem>
+          <para>
+            is used by <command>flatpak</command> to athenticate with the
+            Oracle OCI SDK
+          </para>
+          <indexterm zone="flatpak flatpak-oci-authenticator">
+            <primary sortas="b-flatpak-oci-authenticator">flatpak-oci-authenticator</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-portal">
+        <term><command>flatpak-portal</command></term>
+        <listitem>
+          <para>
+            is used by <command>flatpak</command> to access the
+            <application>xdg-desktop-portal</application>
+          </para>
+          <indexterm zone="flatpak flatpak-portal">
+            <primary sortas="b-flatpak-portal">flatpak-portal</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-session-helper">
+        <term><command>flatpak-session-helper</command></term>
+        <listitem>
+          <para>
+            is used by <command>flatpak</command> to help with session
+            management
+          </para>
+          <indexterm zone="flatpak flatpak-session-helper">
+            <primary sortas="b-flatpak-session-helper">flatpak-session-helper</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-system-helper">
+        <term><command>flatpak-system-helper</command></term>
+        <listitem>
+          <para>
+            is used by <command>flatpak</command> to help with the
+            <application>flatpak</application> system.
+          </para>
+          <indexterm zone="flatpak flatpak-system-helper">
+            <primary sortas="b-flatpak-system-helper">flatpak-system-helper</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flatpak-validate-icon">
+        <term><command>flatpak-validate-icon</command></term>
+        <listitem>
+          <para>
+            is used by <command>flatpak</command> to validate icons
+          </para>
+          <indexterm zone="flatpak flatpak-validate-icon">
+            <primary sortas="b-flatpak-validate-icon">flatpak-validate-icon</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gtk-icon-cache.trigger">
+        <term><command>gtk-icon-cache.trigger</command></term>
+        <listitem>
+          <para>
+            is a trigger that updates a flatpak's GTK icon cache
+          </para>
+          <indexterm zone="flatpak gtk-icon-cache.trigger">
+            <primary sortas="b-gtk-icon-cache.trigger">gtk-icon-cache.trigger</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mime-database.trigger">
+        <term><command>mime-database.trigger</command></term>
+        <listitem>
+          <para>
+            is a trigger that updates a flatpak's MIME database cache
+          </para>
+          <indexterm zone="flatpak mime-database.trigger">
+            <primary sortas="b-mime-database.trigger">mime-database.trigger</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="revokefs-fuse">
+        <term><command>revokefs-fuse</command></term>
+        <listitem>
+          <para>
+            makes a basepath visible at a given mountpoint
+          </para>
+          <indexterm zone="flatpak revokefs-fuse">
+            <primary sortas="b-revokefs-fuse">revokefs-fuse</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libflatpak">
+        <term><filename class="libraryfile">libflatpak.so</filename></term>
+        <listitem>
+          <para>
+            contains functions used by the <application>Flatpak</application>
+            utilities
+          </para>
+          <indexterm zone="flatpak libflatpak">
+            <primary sortas="c-libflatpak">libflatpak.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

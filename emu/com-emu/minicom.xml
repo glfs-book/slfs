@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY minicom-download-http "https://salsa.debian.org/minicom-team/minicom/-/archive/&minicom-version;/minicom-&minicom-version;.tar.gz">
+]>
+
+<sect1 id="minicom" xreflabel="minicom-&minicom-version;">
+  <?dbhtml filename="minicom.html"?>
+
+
+  <title>minicom-&minicom-version;</title>
+
+  <indexterm zone="minicom">
+    <primary sortas="a-minicom">minicom</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to minicom</title>
+
+    <para>
+      The <application>minicom</application> package provides a serial
+      communication program. It is provided in this chapter for communicating
+      with UNIX 3.51 on <xref linkend="freebee"/> and transferring files over
+      <computeroutput>xmodem</computeroutput>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&minicom-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">minicom Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="lrzsz"/>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="https://github.com/KermitProject/ckermit">C-Kermit</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of minicom</title>
+
+    <para>
+      Install <application>minicom</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          ascii-xfr, minicom, runscript, and xminicom
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ascii-xfr">
+        <term><command>ascii-xfr</command></term>
+        <listitem>
+          <para>
+            transfers files using the ASCII character set
+          </para>
+          <indexterm zone="minicom ascii-xfr">
+            <primary sortas="b-ascii-xfr">ascii-xfr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="minicom-bin">
+        <term><command>minicom</command></term>
+        <listitem>
+          <para>
+            is the serial communication program
+          </para>
+          <indexterm zone="minicom minicom-bin">
+            <primary sortas="b-minicom-bin">minicom</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="runscript">
+        <term><command>runscript</command></term>
+        <listitem>
+          <para>
+            is a script interpreter for <command>minicom</command>
+          </para>
+          <indexterm zone="minicom runscript">
+            <primary sortas="b-runscript">runscript</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xminicom">
+        <term><command>xminicom</command></term>
+        <listitem>
+          <para>
+            is a script wrapper around <command>minicom</command>
+            which runs <command>minicom</command> with color support
+            if a compatible X11 terminal emulator is present
+          </para>
+          <indexterm zone="minicom xminicom">
+            <primary sortas="b-xminicom">xminicom</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+  
+</sect1>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY xdg-desktop-portal-hyprland-download-http "https://github.com/hyprwm/xdg-desktop-portal-hyprland/archive/v&xdg-desktop-portal-hyprland-version;/xdg-desktop-portal-hyprland-v&xdg-desktop-portal-hyprland-version;.tar.gz">
+]>
+
+<sect1 id="xdg-desktop-portal-hyprland" xreflabel="xdg-desktop-portal-hyprland-&xdg-desktop-portal-hyprland-version;">
+  <?dbhtml filename="xdg-desktop-portal-hyprland.html"?>
+
+
+  <title>xdg-desktop-portal-hyprland-&xdg-desktop-portal-hyprland-version;</title>
+
+  <indexterm zone="xdg-desktop-portal-hyprland">
+    <primary sortas="a-xdg-desktop-portal-hyprland">xdg-desktop-portal-hyprland</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to xdg-desktop-portal-hyprland</title>
+
+    <para>
+      The xdg-desktop-portal-hyprland package provides a portal backend for
+      <application>Hyprland</application>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&xdg-desktop-portal-hyprland-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">xdg-desktop-portal-hyprland Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <xref linkend="hyprlib"/>,
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      &opengl;,
+      <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
+      <xref linkend="sdbus-cpp"/>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, and
+      <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Required (Runtime)</bridgehead>
+    <para role="runtime">
+      <xref linkend="hyprland"/>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/inih.html">inih</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional (Runtime)</bridgehead>
+    <para role="optional">
+      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/grim/">grim</ulink> and
+      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/slurp/">slurp</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of xdg-desktop-portal-hyprland</title>
+
+    <para>
+      Install <application>xdg-desktop-portal-hyprland</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>rm -rf subprojects/sdbus-cpp &amp;&amp;
+mkdir build                  &amp;&amp;
+cd    build                  &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -G Ninja ..            &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root" revision="sysv"><userinput>ninja install &amp;&amp;
+rm -rvf /usr/lib/systemd</userinput></screen>
+
+<screen role="root" revision="systemd"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>rm -rf subprojects/sdbus-cpp</command>: This command removes
+      vendored source code that FTBFS.
+    </para>
+
+    <para revision="sysv">
+      <command>rm -rvf /usr/lib/systemd</command>: This command removes
+      unnecessary Systemd files.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          hyprland-share-picker and xdg-desktop-portal-hyprland
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="hyprland-share-picker">
+        <term><command>hyprland-share-picker</command></term>
+        <listitem>
+          <para>
+            allows you to pick what screen and region to share
+          </para>
+          <indexterm zone="xdg-desktop-portal-hyprland hyprland-share-picker">
+            <primary sortas="b-hyprland-share-picker">hyprland-share-picker</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xdg-desktop-portal-hyprland-bin">
+        <term><command>xdg-desktop-portal-hyprland</command></term>
+        <listitem>
+          <para>
+            allows you to access portals in a
+            <application>Hyprland</application> session
+          </para>
+          <indexterm zone="xdg-desktop-portal-hyprland xdg-desktop-portal-hyprland-bin">
+            <primary sortas="b-xdg-desktop-portal-hyprland-bin">xdg-desktop-portal-hyprland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+ <!ENTITY % general-entities SYSTEM "../../general.ent">
+ %general-entities;
+]>
+
+<chapter id="general-genlib">
+  <?dbhtml filename="genlib.html"?>
+
+  <title>General Libraries</title>
+
+  <para>
+    This chapter covers many libraries which you may need, especially by
+    packages that appear later in the book.
+  </para>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="enet.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glaze.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libev.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libliftoff.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libzip.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minizip.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="pugixml.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="re2.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sdbus-cpp.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sdl2_net.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tomlplusplus.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yajl.xml"/>
+
+</chapter>

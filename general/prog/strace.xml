@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY strace-download-http "https://github.com/strace/strace/releases/download/v&strace-version;/strace-&strace-version;.tar.xz">
+]>
+
+<sect1 id="strace" xreflabel="strace-&strace-version;">
+  <?dbhtml filename="strace.html"?>
+
+
+  <title>strace-&strace-version;</title>
+
+  <indexterm zone="strace">
+    <primary sortas="a-strace">strace</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to strace</title>
+
+    <para>
+      The strace package provides a diagnostic, debugging, and instructional userspace utility.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&strace-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">strace Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of strace</title>
+
+    <para>
+      Install <application>strace</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr \
+    --enable-mpers=no &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>--enable-mpers=no</parameter>: By default, strace is built to support both the m32 and mx32 personalities. This parameter disables that behavior.
+    </para>
+
+    <para>
+      <parameter>--with-libunwind</parameter>: This parameter builds strace with libunwind support.
+    </para>
+
+    <note><para>
+      Invoke <userinput>./configure --help</userinput> for a full list of options.
+    </para></note>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          strace and strace-log-merge
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="strace-prog">
+        <term><command>strace</command></term>
+        <listitem>
+         <para>
+           traces system calls and signals, most often used for debugging
+         </para>
+          <indexterm zone="strace strace-prog">
+            <primary sortas="b-strace">strace</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="strace-log-merge">
+        <term><command>strace-log-merge</command></term>
+        <listitem>
+         <para>
+           merges the output of <command>strace -ff -tt</command>, prepends PID
+           to each lines, then sorts the result using time stamps
+         </para>
+          <indexterm zone="strace strace-log-merge">
+            <primary sortas="b-strace-log-merge">strace-log-merge</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

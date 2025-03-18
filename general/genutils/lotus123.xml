@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY lotus123-download-http "https://github.com/taviso/123elf/archive/v&lotus123-version;/123elf-v&lotus123-version;.tar.gz">
+  <!ENTITY lotus123-binutils-download-http "https://ftp.gnu.org/gnu/binutils/binutils-&lotus123-binutils-version;.tar.gz">
+]>
+
+<sect1 id="lotus123" xreflabel="lotus123-&lotus123-version;">
+  <?dbhtml filename="lotus123.html"?>
+
+  <title>Lotus 1-2-3 R3 for Linux &lotus123-version;</title>
+
+  <indexterm zone="lotus123">
+    <primary sortas="a-lotus123">lotus123</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Lotus 1-2-3</title>
+
+    <para>
+      Lotus 1-2-3 was a popular spreadsheet back in the 1980s and 1990s. This
+      package is an unofficial port of it to Linux using the UNIX version as
+      a base.
+    </para>
+
+    <note><para>This package requires either a 32-bit system or a 64-bit
+    system with 32-bit application support.</para></note>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&lotus123-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/general-utils/lotus123/lotus123-&lotus123-version;-final-updates.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required binutils version:
+          <ulink url="&lotus123-binutils-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Lotus 1-2-3 Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cpio.html">cpio</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of lotus123</title>
+
+    <para>
+      First, apply a patch to bring the source up to the latest upstream
+      commit:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../lotus123-&lotus123-version;-final-updates.patch</userinput></screen>
+
+    <para>
+      Then, in order to download the required disk images using
+      <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink>,
+      execute the following commands:
+    </para>
+
+<screen><userinput>for i in 1 2 3 4 5; do wget \
+https://archive.org/download/123-unix/123UNIX$i.IMG; done</userinput></screen>
+
+    <warning><para>
+      <emphasis>DO NOT</emphasis> use any other binutils versions than the one
+      used in the book to compile this package. This is decades-old proprietary
+      software, not ever meant to work on Linux, whose port to Linux was only
+      possible because of technical issues with UNIXen of the day making it
+      impossible to support third-party plugins without shipping object code.
+      The format used for said object code is i386 COFF, which barely anyone
+      uses these days. This version of binutils is the exact same one used
+      in the upstream packaging scripts, and is known to have no critical
+      issues regarding this format. If you use a different binutils version,
+      you may very run into regressions which break the app in various ways.
+      And if you do run into issues with this version of binutils, then you'll
+      actually be able to report this upstream. If your binutils fails to build,
+      <emphasis>DO NOT</emphasis> use a newer version. Report this to the
+      LFS-QOL editors in order for this to be fixed for everyone without
+      possibly opening up the door to critical regressions.
+    </para></warning>
+
+    <para>
+      Now, compile the required parts of binutils with COFF support enabled:
+    </para>
+
+<!-- No, I have no idea why i386-pc-elf32 somehow enables COFF -->
+<!-- Yes, it does work -->
+<screen><userinput>tar -xvf ../binutils-&lotus123-binutils-version;.tar.gz &amp;&amp;
+cd binutils-&lotus123-binutils-version; &amp;&amp;
+./configure --enable-targets=i386-pc-elf32 \
+            --disable-gas                  \
+            --disable-libctf               \
+            --disable-plugins              \
+            --disable-gprof                \
+            --enable-compressed-debug-sections=none &amp;&amp;
+make all-ld MAKEINFO=true &amp;&amp;
+cd .. &amp;&amp;
+cp -v binutils-&lotus123-binutils-version;/binutils/obj{copy,dump} . &amp;&amp;
+cp -v binutils-&lotus123-binutils-version;/ld/ld-new ld</userinput></screen>
+
+    <para>
+      In order to compile <application>Lotus 1-2-3</application>, execute the
+      following commands:
+    </para>
+
+<screen><userinput>./extract.sh &amp;&amp;
+sed -i 's/\-ltinfo//g' Makefile &amp;&amp;
+sed -i 's/\-ltinfo//g' keymap/Makefile &amp;&amp;
+sed -i 's/\-ltinfo//g' ttydraw/Makefile &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make prefix=/usr install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>sed -i 's/\-ltinfo//g' ...</parameter>: This command avoids 
+      linking against an <application>Ncurses</application> library that wasn't
+      built in LFS.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          123
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/lotus
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="prog123">
+        <term><command>123</command></term>
+        <listitem>
+         <para>
+           is the spreadsheet app
+         </para>
+          <indexterm zone="lotus123 prog123">
+            <primary sortas="b-123">123</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

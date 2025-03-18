@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libutempter-download-http "http://ftp.altlinux.org/pub/people/ldv/libutempter/libutempter-&libutempter-version;.tar.gz">
+]>
+
+<sect1 id="libutempter" xreflabel="libutempter-&libutempter-version;">
+  <?dbhtml filename="libutempter.html"?>
+
+  <title>libutempter-&libutempter-version;</title>
+
+  <indexterm zone="libutempter">
+    <primary sortas="a-libutempter">libutempter</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libutempter</title>
+
+    <para>
+      The <application>libutempter</application> package is a library
+      that allows non-privileged apps to write utmp info.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libutempter-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libutempter</title>
+
+    <para>
+      Install <application>libutempter</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+rm -vf /usr/lib/libutempter.a</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>rm -vf /usr/lib/libutempter.a</command>: Remove a useless
+      static library.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          utempter
+        </seg>
+        <seg>
+          libutempter.so
+        </seg>
+        <seg>
+          /usr/lib/utempter
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="utempter">
+        <term><command>utempter</command></term>
+        <listitem>
+          <para>
+            is a privileged helper program for utmp/wtmp updates
+          </para>
+          <indexterm zone="libutempter utempter">
+            <primary sortas="b-utempter">utempter</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libutempter-bin">
+        <term><filename class="libraryfile">libutempter.so</filename></term>
+        <listitem>
+          <para>
+            contains the utempter library interface
+          </para>
+          <indexterm zone="libutempter libutempter-bin">
+            <primary sortas="c-libutempter">libutempter.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
+</sect1>

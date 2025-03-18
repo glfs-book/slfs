@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY hyprland-download-http "https://github.com/hyprwm/Hyprland/releases/download/v&hyprland-version;/source-v&hyprland-version;.tar.gz">
+]>
+
+<sect1 id="hyprland" xreflabel="Hyprland-&hyprland-version;">
+  <?dbhtml filename="hyprland.html"?>
+
+
+  <title>Hyprland-&hyprland-version;</title>
+
+  <indexterm zone="hyprland">
+    <primary sortas="a-hyprland">Hyprland</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Hyprland</title>
+
+    <para>
+      Hyprland is an independent Wayland compositor aiming to have more
+      features than other Wayland compositors and be highly customizable,
+      written in C++.
+    </para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/long-build-time.xml"/>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&hyprland-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Hyprland Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <phrase revision="sysv">
+      <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>,
+      </phrase>
+      <xref linkend="glaze"/>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
+      <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
+      <xref linkend="hyprlib"/>,
+      <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
+      <xref linkend="libliftoff"/>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      &opengl;,
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <xref linkend="re2"/>,
+      <ulink url="https://glfs-book.github.io/glfs/shareddeps/seatd.html">seatd</ulink><phrase
+      revision="sysv">,</phrase>
+      <phrase revision="systemd">(the recommended dependency, elogind, is not
+      needed on a Systemd system, just install
+      <ulink url="&blfs-svn;/general/systemd.html">Systemd</ulink>),</phrase>
+      <phrase revision="systemd">
+      <ulink url="&blfs-svn;/general/systemd.html">Systemd</ulink>,
+      </phrase>
+      <xref linkend="tomlplusplus"/>,
+      <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
+      <ulink url="https://glfs-book.github.io/glfs/shareddeps/xcb-utils.html">XCB Utils</ulink>
+      (xcb-util-errors is necessary; only normal installation is necessary), and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/cpio.html">cpio</ulink>
+      (to build and install plugins)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Hyprland</title>
+
+    <para>
+      Install <application>Hyprland</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>rm -fv scripts/generateVersion.sh &amp;&amp;
+make release PREFIX=/usr</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+rm -fv /usr/include/hyprland/src/version.h.in</userinput></screen>
+
+    <para revision="sysv">
+      Finally, remove an a unnecessary Systemd file as the &root; user:
+    </para>
+
+<screen role="root" revision="sysv"><userinput>rm -rvf /usr/lib/systemd</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>rm -fv scripts/generateVersion.sh</command>: This command works
+      around an issue where this package installs an invalid
+      <filename>/usr/include/hyprland/src/version.h</filename> as it is missing
+      all values.
+    </para>
+
+    <para>
+      <command>rm -fv /usr/include/hyprland/src/version.h.in</command>: This
+      command removes an unneeded <filename>.h.in</filename> file, an artifact
+      from the previously explained command.
+    </para>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring Hyprland</title>
+
+    <sect3 id="hyprland-config">
+      <title>Config Files</title>
+      <para>
+        <filename>~/.config/hypr/hyprland.conf</filename>. The default version
+        is in <filename class="directory">/usr/share/hypr</filename> and will
+        not be used and must be copied to
+        <filename class="directory">~/.config/hypr</filename>
+      </para>
+
+      <indexterm zone="hyprland hyprland-config">
+        <primary sortas="e-AA.config">~/.config/hypr/hyprland.conf</primary>
+      </indexterm>
+
+    </sect3>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        Create the config file:
+      </para>
+
+<screen><userinput>mkdir -pv ~/.config/hypr &amp;&amp;
+cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
+
+      <para>
+        Now inspect the file and make any changes to suit your workflow.
+      </para>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          hyprctl,
+          hyprland (link to Hyprland),
+          Hyprland, and
+          hyprpm
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/include/hyprland, /usr/share/hypr, and
+          /usr/share/wayland-sessions
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="hyprctl">
+        <term><command>hyprctl</command></term>
+        <listitem>
+          <para>
+            retrieves and configures information about the current instance of
+            <command>Hyprland</command>
+          </para>
+          <indexterm zone="hyprland hyprctl">
+            <primary sortas="b-hyprctl">hyprctl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprland-link">
+        <term><command>hyprland</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>Hyprland</command>
+          </para>
+          <indexterm zone="hyprland hyprland-link">
+            <primary sortas="b-hyprland-link">hyprland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="Hyprland">
+        <term><command>Hyprland</command></term>
+        <listitem>
+          <para>
+            is the <application>Hyprland</application> compositor
+          </para>
+          <indexterm zone="hyprland Hyprland">
+            <primary sortas="b-Hyprland">Hyprland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprpm">
+        <term><command>hyprpm</command></term>
+        <listitem>
+          <para>
+            is the plugin manager for <command>Hyprland</command>
+          </para>
+          <indexterm zone="hyprland hyprpm">
+            <primary sortas="b-hyprpm">hyprpm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

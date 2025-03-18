@@ -12,81 +12,55 @@
   <title>Organization</title>
 
   <para>
-    This book is divided into the following chapters:
+    This book is divided into the following parts:
   </para>
 
-  <bridgehead renderas="sect2">Chapter 1 - Introduction</bridgehead>
+  <bridgehead renderas="sect2">Chapter I - Introduction</bridgehead>
 
   <para>
-    This chapter contains essential information which is needed to
+    This part contains essential information which is needed to
     understand the rest of the book.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 2 - Binary</bridgehead>
+  <bridgehead renderas="sect2">Chapter II - General Libraries and Utilities</bridgehead>
 
   <para>
-    This chapter covers packages that help with running binaries on an LFS system
-    that have not been compiled on that system. It does not cover 32-bit binary
-    support on 64-bit. If that is what you are looking for, please read MLFS.
+    This part covers libraries and utilities that you may want or need. Many
+    packages can depend on the packages covered within. It also covers
+    toolchains for those that may need them.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 3 - Hypr</bridgehead>
+  <bridgehead renderas="sect2">Chapter III - SVR4</bridgehead>
 
   <para>
-    This chapter covers packages from the Hypr/Hyprland ecosystem, including
-    Hyprland itself.
+    This part covers SVR4 tooling and various software.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 4 - i3</bridgehead>
+  <bridgehead renderas="sect2">Chapter IV - Binary Support</bridgehead>
 
   <para>
-    This chapter covers how to install the dependencies of i3, and how to install
-    i3 itself.
+    This part covers packages and setup for optimal binary-only application
+    compatibility on a Linux From Scratch system.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 5 - SVR4-style Tools</bridgehead>
+  <bridgehead renderas="sect2">Chapter V - Window Managers, Compositors, and Desktop Environments</bridgehead>
 
   <para>
-    This chapter covers the SVR4-style tools, some coming from the Heirloom
-    project.
+    This part covers graphical environments you may wish to use.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 6 - Computer Emulators</bridgehead>
+  <bridgehead renderas="sect2">Chapter VI - Emulators</bridgehead>
 
   <para>
-    This chapter covers packages which allow you to emulate older computer
-    hardware.
+    This part covers many emulators for computers, vide game consoles, and
+    more.
   </para>
 
-  <bridgehead renderas="sect2">Chapter 7 - Video Game Emulators</bridgehead>
+  <bridgehead renderas="sect2">Chapter VII - General Gaming Software</bridgehead>
 
   <para>
-    This chapter covers packages which allow you to emulate video games.
-  </para>
-
-  <bridgehead renderas="sect2">Chapter 8 - General Game Software</bridgehead>
-
-  <para>
-    This chapter covers packages which cover general gaming bases.
-  </para>
-
-  <bridgehead renderas="sect2">Chapter 9 - General Utilties</bridgehead>
-
-  <para>
-    This chapter covers packages which are general utilites you may wish to
-    have.
-  </para>
-
-  <bridgehead renderas="sect2">Chapter 10 - Developer Tools</bridgehead>
-
-  <para>
-    This chapter covers packages which provide tools for developers.
-  </para>
-
-  <bridgehead renderas="sect2">Chapter 11 - Common Desktop Environment</bridgehead>
-
-  <para>
-    This chapter covers the Common Desktop Environment and its dependencies.
+    This part covers gaming support software that is not covered in BLFS and
+    GLFS.
   </para>
 
   <bridgehead renderas="sect2">Appendices</bridgehead>

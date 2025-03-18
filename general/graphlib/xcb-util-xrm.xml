@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY xcb-util-xrm-download-http "https://github.com/Airblader/xcb-util-xrm/releases/download/v&xcb-util-xrm-version;/xcb-util-xrm-&xcb-util-xrm-version;.tar.bz2">
+]>
+
+<sect1 id="xcb-util-xrm" xreflabel="xcb-util-xrm-&xcb-util-xrm-version;">
+  <?dbhtml filename="xcb-util-xrm.html"?>
+	
+  <title>xcb-util-xrm-&xcb-util-xrm-version;</title>
+
+  <indexterm zone="xcb-util-xrm">
+    <primary sortas="a-xcb-util-xrm">xcb-util-xrm</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to xcb-util-xrm</title>
+
+    <para>
+      The <application>xcb-util-xrm</application> package provides XCB utility
+      functions for the X Resource Manager.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&xcb-util-xrm-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">xcb-util-xrm Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/util-macros.html">util-macros</ulink>,
+      <ulink url="&blfs-svn;/x/xcb-util.html">xcb-util</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of xcb-util-xrm</title>
+
+    <para>
+      Install <application>xcb-util-xrm</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libxcb-xrm.so
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libxcb-xrm">
+        <term><filename class="libraryfile">libxcb-xrm.so</filename></term>
+        <listitem>
+          <para>
+            provides utility functions for the X Resource Manager, or XRM
+          </para>
+          <indexterm zone="xcb-util-xrm libxcb-xrm">
+            <primary sortas="c-libxcb-xrm">libxcb-xrm.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

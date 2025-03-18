@@ -5,7 +5,7 @@ ifeq ($(KERNEL_TREE),)
 $(error "must set KERNEL_TREE=/path/to/kernel/source")
 endif
 
-all: $(OUTPUT) ../introduction/conventions-kernel.xml
+all: $(OUTPUT) ../introduction/welcome/conventions-kernel.xml
 
 kernel.version: s-kernel-version; @true
 
@@ -25,5 +25,5 @@ s-kernel-version:
 ../%-kernel.xml: %-kernel.xml.tmp
 	mv $< $@
 
-../introduction/conventions-kernel.xml: kernel-config.py testdata/Kconfig testdata/config.toml.example
+../introduction/welcome/conventions-kernel.xml: kernel-config.py testdata/Kconfig testdata/config.toml.example
 	./kernel-config.py testdata testdata/config.toml.example > $@

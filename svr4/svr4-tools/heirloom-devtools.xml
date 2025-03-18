@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY heirloom-devtools-download-http "https://downloads.sourceforge.net/heirloom/heirloom-devtools/&heirloom-devtools-version;/heirloom-devtools-&heirloom-devtools-version;.tar.bz2">
+]>
+
+<sect1 id="heirloom-devtools" xreflabel="heirloom-devtools-&heirloom-devtools-version;">
+  <?dbhtml filename="heirloom-devtools.html"?>
+
+
+  <title>heirloom-devtools-&heirloom-devtools-version;</title>
+
+  <indexterm zone="heirloom-devtools">
+    <primary sortas="a-heirloom-devtools">heirloom-devtools</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to heirloom-devtools</title>
+
+    <para>
+      The <application>heirloom-devtools</application> package provides
+      <application>yacc</application>, <application>lex</application>,
+      <application>m4</application>, <application>make</application>, and
+      <application>SCCS</application>. Those tools are portable derivatives of
+      the tools released as a part of OpenSolaris, which were derived from the
+      original UNIX versions.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&heirloom-devtools-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-final-updates.patch"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/svr4-tools/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">heirloom-devtools Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="heirloom-ng"/> and
+      <ulink url="&blfs-svn;/basicnet/libtirpc.html">libtirpc</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="heirloom-sh"/>
+    </para>
+ 
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of heirloom-devtools</title>
+
+    <para>
+      Apply a patch to bring up the source to the last upstream commit:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-final-updates.patch</userinput></screen>
+
+    <para>
+      Now, apply a patch to fix the compililation of the make utility:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch</userinput></screen>
+
+    <para>
+      Execute the following command to tell this package to use
+      <application>libtirpc</application>:
+    </para>
+
+<screen><userinput>sed -i 's=-O=-O -I/usr/include/tirpc=g' mk.config</userinput></screen>
+
+    <para>
+      If you have <application>heirloom-sh</application> installed, execute the
+      following commands to tell <application>heirloom-devtools</application>
+      where to find it:
+    </para>
+
+<screen><userinput>sed -i 's-/sbin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
+sed -i 's-/bin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
+sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
+
+    <para>
+      Otherwise, execute the following command:
+    </para>
+
+    <!-- computeroutput here as it may be possible jhalfs if down the road
+    used for this book will run this command block blindly. The above
+    command block should really be followed instead as it should install the
+    recommended dep. -->
+<screen><computeroutput>sed -i 's-/sbin/sh-/bin/sh-g' mk.config</computeroutput></screen>
+
+    <important><para>
+      Ensure you are building this package as the regular user and
+      <emphasis>NOT</emphasis> as the &root; user, or else the
+      <command>make</command> process will fail as it will be unable to create
+      a temporary file/directory.
+    </para></important>
+
+    <para>
+      Install <application>heirloom-devtools</application> by running the following
+      command:
+    </para>
+
+<screen><userinput>make -j1</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>make -j1</command>: This command builds the package using only
+      one thread to ensure there is no race condition.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          admin, cdc (link to rmdel), comb, delta, get, help, lex, m4, make,
+          prs, prt, rmdel, sact (link to unget), sccs, sccsdiff, svr4.make
+          (link to make), unget, val, vc, what, and yacc 
+        </seg>
+        <seg>
+          libl.a, and liby.a
+        </seg>
+        <seg>
+          /usr/ccs/lib/help, /usr/ccs/lib/lex, and /usr/ccs/share/lib/make
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="admin">
+        <term><command>admin</command></term>
+        <listitem>
+          <para>
+            creates and administers SCCS files
+          </para>
+          <indexterm zone="heirloom-devtools admin">
+            <primary sortas="b-admin">admin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cdc">
+        <term><command>cdc</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>rmdel</command>
+          </para>
+          <indexterm zone="heirloom-devtools cdc">
+            <primary sortas="b-cdc">cdc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="comb">
+        <term><command>comb</command></term>
+        <listitem>
+          <para>
+            combines SCCS deltas
+          </para>
+          <indexterm zone="heirloom-devtools comb">
+            <primary sortas="b-comb">comb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="delta">
+        <term><command>delta</command></term>
+        <listitem>
+          <para>
+            makes a delta to an SCCS file
+          </para>
+          <indexterm zone="heirloom-devtools delta">
+            <primary sortas="b-delta">delta</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="get">
+        <term><command>get</command></term>
+        <listitem>
+          <para>
+            retrieves a version of an SCCS file
+          </para>
+          <indexterm zone="heirloom-devtools get">
+            <primary sortas="b-get">get</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="help">
+        <term><command>help</command></term>
+        <listitem>
+          <para>
+            retrieves information about error messages and warnings from
+            SCCS commands
+          </para>
+          <indexterm zone="heirloom-devtools help">
+            <primary sortas="b-help">help</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lex">
+        <term><command>lex</command></term>
+        <listitem>
+          <para>
+            is a generator of lexical analysis programs
+          </para>
+          <indexterm zone="heirloom-devtools lex">
+            <primary sortas="b-lex">lex</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="m4">
+        <term><command>m4</command></term>
+        <listitem>
+          <para>
+            is the macro processor
+          </para>
+          <indexterm zone="heirloom-devtools m4">
+            <primary sortas="b-m4">m4</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="make">
+        <term><command>make</command></term>
+        <listitem>
+          <para>
+            maintains, updates, and regenerates groups of programs
+          </para>
+          <indexterm zone="heirloom-devtools make">
+            <primary sortas="b-make">make</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="prs">
+        <term><command>prs</command></term>
+        <listitem>
+          <para>
+            displays selected portions of an SCCS history
+          </para>
+          <indexterm zone="heirloom-devtools prs">
+            <primary sortas="b-prs">prs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="prt">
+        <term><command>prt</command></term>
+        <listitem>
+          <para>
+            prints parts or all of an SCCS file
+          </para>
+          <indexterm zone="heirloom-devtools prt">
+            <primary sortas="b-prt">prt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rmdel">
+        <term><command>rmdel</command></term>
+        <listitem>
+          <para>
+            removes a delta from an SCCS file
+          </para>
+          <indexterm zone="heirloom-devtools rmdel">
+            <primary sortas="b-rmdel">rmdel</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sact">
+        <term><command>sact</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>unget</command>
+          </para>
+          <indexterm zone="heirloom-devtools sact">
+            <primary sortas="b-sact">sact</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sccs">
+        <term><command>sccs</command></term>
+        <listitem>
+          <para>
+            is the human-oriented frontend to the SCCS system
+          </para>
+          <indexterm zone="heirloom-devtools sccs">
+            <primary sortas="b-sccs">sccs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sccsdiff">
+        <term><command>sccsdiff</command></term>
+        <listitem>
+          <para>
+            compares two versions of an SCCS file
+          </para>
+          <indexterm zone="heirloom-devtools sccsdiff">
+            <primary sortas="b-sccsdiff">sccsdiff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="svr4.make">
+        <term><command>svr4.make</command></term>
+        <listitem>
+          <para>
+            is a symlink pointing to <command>make</command>
+          </para>
+          <indexterm zone="heirloom-devtools svr4.make">
+            <primary sortas="b-svr4.make">svr4.make</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="unget">
+        <term><command>unget</command></term>
+        <listitem>
+          <para>
+            undos a previous get of an SCCS file
+          </para>
+          <indexterm zone="heirloom-devtools unget">
+            <primary sortas="b-unget">unget</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="val">
+        <term><command>val</command></term>
+        <listitem>
+          <para>
+            validates an SCCS file
+          </para>
+          <indexterm zone="heirloom-devtools val">
+            <primary sortas="b-val">val</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vc">
+        <term><command>vc</command></term>
+        <listitem>
+          <para>
+            reads a line of text and processes it as if it were a version
+            control statement.
+          </para>
+          <indexterm zone="heirloom-devtools vc">
+            <primary sortas="b-vc">vc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="what">
+        <term><command>what</command></term>
+        <listitem>
+          <para>
+            extracts SCCS version information from a file
+          </para>
+          <indexterm zone="heirloom-devtools what">
+            <primary sortas="b-what">what</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="yacc">
+        <term><command>yacc</command></term>
+        <listitem>
+          <para>
+            is a yet-another compiler compiler
+          </para>
+          <indexterm zone="heirloom-devtools yacc">
+            <primary sortas="b-yacc">yacc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libl">
+        <term><filename class="libraryfile">libl.a</filename></term>
+        <listitem>
+          <para>
+            is the supporting library for <command>lex</command>
+          </para>
+          <indexterm zone="heirloom-devtools libl">
+            <primary sortas="c-libl">libl.a</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="liby">
+        <term><filename class="libraryfile">liby.a</filename></term>
+        <listitem>
+          <para>
+            is the supporting library for <command>yacc</command>
+          </para>
+          <indexterm zone="heirloom-devtools liby">
+            <primary sortas="c-liby">liby.a</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

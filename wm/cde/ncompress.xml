@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY ncompress-download-http "https://github.com/vapier/ncompress/archive/v&ncompress-version;/ncompress-&ncompress-version;.tar.gz">
+]>
+
+<sect1 id="ncompress" xreflabel="ncompress-&ncompress-version;">
+  <?dbhtml filename="ncompress.html"?>
+
+  <title>ncompress-&ncompress-version;</title>
+
+  <indexterm zone="ncompress">
+    <primary sortas="a-ncompress">ncompress</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to ncompress</title>
+
+    <para>
+      The ncompress package provides a SVR4-compatible implementation of <command>compress</command>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&ncompress-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of ncompress</title>
+
+    <para>
+      Install <application>ncompress</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make PREFIX=/usr install_core</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          compress and uncompress
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="compress">
+        <term><command>compress</command></term>
+        <listitem>
+          <para>
+            compresses files using the LZ coding
+          </para>
+          <indexterm zone="ncompress compress">
+            <primary sortas="b-compress">compress</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="uncompress">
+        <term><command>uncompress</command></term>
+        <listitem>
+          <para>
+            uncompresses files using the LZ coding
+          </para>
+          <indexterm zone="ncompress uncompress">
+            <primary sortas="b-uncompress">uncompress</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
+</sect1>

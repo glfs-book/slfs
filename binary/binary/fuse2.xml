@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY fuse2-download-http "https://github.com/libfuse/libfuse/releases/download/fuse-&fuse2-version;/fuse-&fuse2-version;.tar.gz">
+]>
+
+<sect1 id="fuse2" xreflabel="Fuse2-&fuse2-version;">
+  <?dbhtml filename="fuse2.html"?>
+
+
+  <title>Fuse2-&fuse2-version;</title>
+
+  <indexterm zone="fuse2">
+    <primary sortas="a-fuse2">Fuse2</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Fuse2</title>
+
+    <para>
+      FUSE, or Filesystem in Userspace, allows userspace programs to create
+      virtual filesystems. This is a really helpful technology, and the current
+      Fuse version is major version 3. Fuse2 on the otherhand is still used by
+      AppImages which rely on this technology. You may extract AppImages as you
+      wish which would bypass this requirement, but other people opt to just
+      install Fuse2 and run the AppImages directly.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&fuse2-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <!-- As required -->
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/fuse2/-/raw/main/conditionally-define-closefrom.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="kernel" id="fuse2-kernel">
+    <title>Kernel Configuration</title>
+
+    <para>
+      Enable the following options in the kernel configuration and recompile the
+      kernel if necessary:
+    </para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="fuse2-kernel.xml"/>
+
+
+    <indexterm zone="fuse2 fuse2-kernel">
+      <primary sortas="d-fuse2">Fuse2</primary>
+    </indexterm>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Fuse2</title>
+
+    <para>
+      First apply a patch to fix compatibility with glibc-2.34 and up and
+      regenerate the <filename>configure</filename> script:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../conditionally-define-closefrom.patch &amp;&amp;
+autoreconf -i</userinput></screen>
+
+    <para>
+      Install <application>Fuse2</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-static \
+         INIT_D_PATH=/tmp/init.d &amp;&amp;
+
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+
+rm -rf  /tmp/init.d &amp;&amp;
+
+install -v -m755 -d /usr/share/doc/fuse-&fuse2-version; &amp;&amp;
+install -v -m644    doc/{how-fuse-works,kernel.txt} \
+                    /usr/share/doc/fuse-&fuse2-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring Fuse2</title>
+
+    <para>
+      Some options regarding mount policy can be set in the file
+      <filename>/etc/fuse.conf</filename>. To install the file, run the
+      following command as the &root; user:
+    </para>
+
+<screen role="root"><userinput>cat &gt; /etc/fuse.conf &lt;&lt; "EOF"
+<literal># Set the maximum number of FUSE mounts allowed to non-root users.
+# The default is 1000.
+#
+#mount_max = 1000
+
+# Allow non-root users to specify the 'allow_other' or 'allow_root'
+# mount options.
+#
+#user_allow_other</literal>
+EOF</userinput></screen>
+    
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          fusermount, mount.fuse, and ulockmgr_server
+        </seg>
+        <seg>
+          libfuse.so and libulockmgr.so
+        </seg>
+        <seg>
+          /usr/include/fuse and /usr/share/doc/fuse-&fuse2-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="fusermount">
+        <term><command>fusermount</command></term>
+        <listitem>
+          <para>
+            is a suid root program to mount and unmount
+            <application>Fuse2</application> filesystems 
+          </para>
+          <indexterm zone="fuse2 fusermount">
+            <primary sortas="b-fusermount">fusermount</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mount.fuse">
+        <term><command>mount.fuse</command></term>
+        <listitem>
+          <para>
+            is the command <command>mount</command> calls to mount a Fuse2
+            filesystem 
+          </para>
+          <indexterm zone="fuse2 mount.fuse">
+            <primary sortas="b-mount.fuse">mount.fuse</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ulockmgr_server">
+        <term><command>ulockmgr_server</command></term>
+        <listitem>
+          <para>
+            is the Userspace Lock Manager Server for Fuse2 filesystems
+          </para>
+          <indexterm zone="fuse2 ulockmgr_server">
+            <primary sortas="b-ulockmgr_server">ulockmgr_server</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libfuse">
+        <term><filename class="libraryfile">libfuse.so</filename></term>
+        <listitem>
+          <para>
+            contains the Fuse2 API functions
+          </para>
+          <indexterm zone="fuse2 libfuse">
+            <primary sortas="c-libfuse">libfuse.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libulockmgr">
+        <term><filename class="libraryfile">libulockmgr.so</filename></term>
+        <listitem>
+          <para>
+            starts <command>ulockmgr_server</command> and helps with its
+            execution
+          </para>
+          <indexterm zone="fuse2 libulockmgr">
+            <primary sortas="c-libulockmgr">libulockmgr.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

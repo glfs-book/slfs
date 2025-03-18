@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libev-download-http "http://dist.schmorp.de/libev/Attic/libev-&libev-version;.tar.gz">
+]>
+
+<sect1 id="libev" xreflabel="libev-&libev-version;">
+  <?dbhtml filename="libev.html"?>
+	
+  <title>libev-&libev-version;</title>
+
+  <indexterm zone="libev">
+    <primary sortas="a-libev">libev</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libev</title>
+
+    <para>
+      The <application>libev</application> package is a full-featured,
+      high-performant library containing an event loop loosely modelled after
+      <ulink url="&blfs-svn;/basicnet/libevent.html">libevent</ulink>.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libev-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libev</title>
+
+    <para>
+      Install <application>libev</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make   DESTDIR=$PWD/DESTDIR install &amp;&amp;
+rm -v  DESTDIR/usr/include/event.h  &amp;&amp;
+cp -vR DESTDIR/usr/* /usr           &amp;&amp;
+ldconfig</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/static-libraries.xml"/>
+
+    <para>
+      <command>rm -v DESTDIR/usr/include/event.h</command>: This command
+      removes a file before installation that conflicts with
+      <ulink url="&blfs-svn;/basicnet/libevent.html">libevent</ulink>. If it is
+      not removed, packages that depend on <application>libevent</application>
+      will fail to build as they assume <filename>event.h</filename> is provided
+      by <application>libevent</application> which would be incorrect.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libev.so
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libev-lib">
+        <term><filename class="libraryfile">libev.so</filename></term>
+        <listitem>
+          <para>
+            contains event loop functions
+          </para>
+          <indexterm zone="libev libev-lib">
+            <primary sortas="c-libev-lib">libev.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

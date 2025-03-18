@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="conventions">
+  <?dbhtml filename="conventions.html"?>
+
+
+  <title>Conventions Used in this Book</title>
+
+  <sect2>
+  <title>Typographical Conventions</title>
+  <para>To make things easy to follow, a number of conventions are used
+  throughout the book.  Here are some examples:</para>
+
+<screen><userinput>./configure --prefix=/usr</userinput></screen>
+
+  <blockquote>
+    <para>This form of text should be typed exactly as shown unless
+    otherwise noted in the surrounding text. It is also used to identify
+    references to specific commands.</para>
+  </blockquote>
+
+<screen><computeroutput>install-info: unknown option
+`--dir-file=/mnt/lfs/usr/info/dir'</computeroutput></screen>
+
+  <blockquote>
+    <para>This form of text (fixed width font) shows screen
+    output, probably the result of issuing a command. It is also used to
+    show filenames such as <filename>/boot/grub/grub.conf</filename></para>
+  </blockquote>
+
+  <note>
+    <para>Please configure your browser to display fixed-width text with
+    a good monospaced font, with which you can distinguish the glyphs of
+    <literal>Il1</literal> or <literal>O0</literal> clearly.</para>
+  </note>
+
+  <para><emphasis>Emphasis</emphasis></para>
+
+  <blockquote>
+    <para>This form of text is used for several purposes,
+    but mainly to emphasize important points, or to give examples of
+    what to type.</para>
+  </blockquote>
+
+  <para><ulink url="https://www.&lfs-domainname;/"/></para>
+
+  <blockquote>
+    <para>This form of text is used for hypertext links external to
+    the book, such as HowTos, download locations, websites, etc.</para>
+  </blockquote>
+
+  <para><xref linkend="askhelp"/></para>
+
+  <blockquote>
+    <para>This form of text is used for links internal to
+    the book, such as another section describing a different package.</para>
+  </blockquote>
+
+<screen><userinput>cat &gt; $LFS/etc/group &lt;&lt; "EOF"
+<literal>root:x:0:
+bin:x:1:
+......</literal>
+EOF</userinput></screen>
+
+  <blockquote>
+    <para>This style is mainly used when creating configuration
+    files.  The first command (in bold) tells the system to create
+    the file <filename>$LFS/etc/group</filename> from whatever is typed on the
+    following lines, until the sequence EOF is encountered.
+    Therefore, this whole section is usually typed exactly as shown.
+    Remember, copy and paste is your friend!</para>
+  </blockquote>
+
+  <para><replaceable>&lt;REPLACED TEXT&gt;</replaceable></para>
+
+  <blockquote>
+    <para>This form of text is used to encapsulate text that should be
+    modified, and is not to be typed as shown, or copied and pasted.
+    The angle brackets are not part of the literal text; they are part of the
+    substitution.</para>
+  </blockquote>
+
+  <para><systemitem class='username'>root</systemitem></para>
+
+  <blockquote>
+    <para>This form of text is used to show a specific system user or group
+    reference in the instructions.</para>
+  </blockquote>
+
+  <para>&nbsp;</para> <!-- add extra white space to improve readability -->
+  </sect2>
+
+  <sect2>
+  <title>Conventions Used for Package Dependencies</title>
+
+    <para>When new packages are created, the software's authors depend on prior
+    work. In order to build a package in the LFS books, these dependencies must
+    be built before the desired package can be compiled. For each package,
+    prerequisites are listed in one or more separate sections: Required,
+    Recommended, and Optional.</para>
+
+    <bridgehead renderas="sect3">Required Dependencies</bridgehead>
+
+    <para>These dependencies are the bare minimum needed to
+    build the package.  Packages in LFS, and the required
+    dependencies of these required packages, are omitted from this list.
+    Always remember to check for nested dependencies. If a dependency is
+    said to be <quote>runtime</quote>, then it is not needed for building
+    the package, but only to use it after installation.</para>
+
+    <bridgehead renderas="sect3">Recommended Dependencies</bridgehead>
+
+    <para>These are dependencies the LFS QOL editors have determined
+    are important to give the package reasonable capabilities.  If a
+    recommended dependency is not said to be <quote>runtime</quote>, package
+    installation instructions assume it is installed.  If it
+    is not installed, the instructions may require modification, to
+    accommodate the missing package. A recommended <quote>runtime</quote>
+    dependency does not need to be installed before building the package, but
+    must be built afterwards for running the package with reasonable
+    capabilities.</para>
+
+    <bridgehead renderas="sect3">Optional Dependencies</bridgehead>
+
+    <para>These are dependencies the package <emphasis>may</emphasis> use.  Integration
+    of optional dependencies may be automatic by the package, or
+    additional steps not presented by LFS QOL may be necessary.  Optional dependencies are
+    sometimes listed without explicit LFS QOL instructions.  In this case you must
+    determine how to perform the installation yourself.</para>
+
+    <para>&nbsp;</para> <!-- add extra white space to improve readability -->
+  </sect2>
+
+  <sect2>
+  <title>Conventions Used for Kernel Configuration Options</title>
+
+    <para>Some packages require specific kernel configuration options.
+    The general layout for these looks like this:</para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="conventions-kernel.xml"/>
+
+    <para>[...] on the right gives the symbolic name of the option, so you
+    can easily check whether it is set in your <filename>.config</filename>
+    file. Note that the <filename>.config</filename> file contains a
+    <literal>CONFIG_</literal> prefix before all symbolic names.  The
+    meaning of the various entries is:
+
+    <blockquote>
+    <informaltable frame='none'><tgroup cols="2">
+      <colspec align="left"/><colspec align="left"/><tbody>
+      <row>
+        <entry><emphasis role="bold">Master section</emphasis></entry>
+        <entry>top level menu item</entry>
+      </row>
+      <row>
+        <entry><emphasis role="bold">Subsection</emphasis></entry>
+        <entry>submenu item</entry>
+      </row>
+      <row>
+        <entry>
+          <emphasis role="bold">Required parameter</emphasis></entry>
+        <entry>
+          the option can either be built-in, or not selected: it must be
+          selected
+        </entry>
+      </row>
+      <row>
+        <entry>
+          <emphasis role="bold">Required parameter (not as
+          module)</emphasis>
+        </entry>
+        <entry>
+          the option can be built-in, a module, or not selected (tri-state):
+          it must be selected as built-in
+        </entry>
+      </row>
+      <row>
+        <entry>
+          <emphasis role="bold">Required parameter (could be
+          a module)</emphasis>
+        </entry>
+        <entry>
+          the option can be built-in, a module, or not selected:
+          it must be selected, either as built-in or as a module
+        </entry>
+      </row>
+      <row>
+        <entry>
+          <emphasis role="bold">Required parameter (as
+          a module)</emphasis>
+        </entry>
+        <entry>
+          the option can be built-in, a module, or not selected:
+          it must be selected as a module; selecting it as built-in
+          may cause unwanted effects
+        </entry>
+      </row>
+      <row>
+        <entry>
+          <emphasis role="bold">Optional parameter</emphasis>
+        </entry>
+        <entry>
+          the option can be built-in, a module, or not
+          selected: it may be selected as a module or built-in if you
+          need it for driving the hardware or optional kernel features
+        </entry>
+      </row>
+      <row>
+        <entry>
+          <emphasis role="bold">Optional parameter (as a module
+          if enabled)</emphasis>
+        </entry>
+        <entry>
+          the option can be built-in, a module, or not
+          selected: it may be selected as a module if you need it
+          for driving the hardware or optional kernel features, but
+          selecting it as built-in may cause unwanted effects
+        </entry>
+      </row>
+      <row>
+        <entry>
+          <emphasis role="bold">Incompatible parameter</emphasis>
+        </entry>
+        <entry>
+          the option can either be built-in or not selected: it must
+          <emphasis>not</emphasis> be selected
+        </entry>
+      </row>
+      <row>
+        <entry>
+          <emphasis role="bold">Incompatible parameter (even as module)</emphasis>
+        </entry>
+        <entry>
+          the option can be built-in, a module, or not selected:
+          it must <emphasis>not</emphasis> be selected
+        </entry>
+      </row>
+    </tbody></tgroup></informaltable>
+    </blockquote>
+    </para>
+
+    <para>Note that, depending on other selections, the angle brackets
+    (&lt;&gt;) in the configuration menu may appear as braces ({}) if the option cannot be unselected,
+    or even as dashes (-*- or -M-), when the choice is imposed.
+    The help text describing the option specifies the other selections on which this
+    option relies, and how those other selections are set.</para>
+
+    <para>
+      The letter in <emphasis role='blue'>blue</emphasis> is the hotkey
+      for this option.  If you are running
+      <command>make menuconfig</command>, you can press a key to quickly
+      traverse all the options with this key as the hotkey on the screen.
+    </para>
+
+    <para>&nbsp;</para> <!-- add extra white space to improve readability -->
+  </sect2>
+
+</sect1>

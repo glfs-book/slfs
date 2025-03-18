@@ -5,11 +5,11 @@
   %general-entities;
 ]>
 
-<part id="gen-game" xreflabel="General Gaming Software">
-  <?dbhtml filename="gen-game.html" dir="gen-game"?>
+<part id="svr4" xreflabel="SVR4">
+  <?dbhtml filename="svr4.html" dir="svr4"?>
 
-  <title>General Gaming Software</title>
+  <title>SVR4</title>
 
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mc/mc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="svr4-tools/svr4-tools.xml"/>
 
 </part>

@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+<!DOCTYPE part PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
 ]>
 
-<chapter id="binary">
+<part id="binary" xreflabel="Binary Support">
   <?dbhtml filename="binary.html" dir="binary"?>
 
-  <title>Binary</title>
+  <title>Binary Support</title>
 
-  <para>
-    This chapter is dedicated to installing packages that help aid you to
-    download, run, and execute binaries that you have not compiled yourself.
-  </para>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="binary/binary-intro.xml"/>
 
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fuse2.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ostree.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="flatpak.xml"/>
-
-</chapter>
+</part>

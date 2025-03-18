@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="important" xreflabel="Important Information">
+  <?dbhtml filename="important.html"?>
+
+  <title>Important Information</title>
+
+  <para>
+    BLFS has more information regarding compilation, /usr vs /usr/local,
+    boot scripts, etc. at 
+    <ulink url="&blfs-svn;/introduction/important.html"/>.
+    Unlike this book, this would be a chapter in BLFS.
+    A lot of that information has been omitted as this book is more linear
+    and doesn't follow how BLFS follows. However, we will cover some bases
+    here.
+  </para>
+
+  <sect2>
+    <title>Stability</title>
+
+    &important-stability;
+
+  </sect2>
+
+  <sect2>
+    <title>Init System</title>
+
+    <para revision="sysv">
+      This version of this book is meant for SysV LFS systems. The Systemd
+      version of the book is not viewable online by &copyholder; due to Github
+      Pages restraints. Thus you will need to download or render the book
+      yourself. Follow the <ulink url="&lfs-qol-repo;">LFS QOL rendering
+      instructions</ulink> in order to render the book yourself. You will need
+      <ulink url="&blfs-svn;/general/git.html">Git</ulink> to clone the
+      repository. You can download the book <ulink
+      url="&lfs-qol-repo;/releases">here</ulink>.
+    </para>
+
+    <para revision="systemd">
+      This version of this book is meant for Systemd LFS systems.
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Building software</title>
+
+    <para>
+      Building software on LFS QOL is identical to how it's done in the
+      LFS books. It goes without saying firstmost that you should have
+      <envar>MAKEFLAGS</envar> set to save yourself a lot of time. This is
+      useful for the <command>make</command> utility to use the amount of
+      threads that you both want and have.
+    </para>
+
+<screen><userinput>export MAKEFLAGS='-jx'</userinput></screen>
+
+    <para>
+      Replace <option>x</option> with the amount of threads you have.
+      You can check the amount of threads you have with:
+    </para>
+
+<screen><userinput>grep processor /proc/cpuinfo</userinput></screen>
+
+    <important>
+      <para>
+        Make sure that you have enough RAM for your system!
+        A general method is having 2.5G per thread that is thrown at
+        <command>make</command>. For instance, if you want to use 6 threads,
+        multiply 6 by 2.5 (which is 15), then make sure you have 15G of RAM.
+        If you don't have that RAM, try and limit the threads you throw at
+        <command>make</command>.
+      </para>
+    </important>
+
+  </sect2>
+
+</sect1>

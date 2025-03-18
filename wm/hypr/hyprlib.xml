@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY hyprlib-download-http "https://github.com/hyprwm/">
+]>
+
+<sect1 id="hyprlib" xreflabel="Hypr Libraries">
+  <?dbhtml filename="hyprlib.html"?>
+
+  <title>Hypr Libraries</title>
+
+  <indexterm zone="hyprlib">
+    <primary sortas="a-hyprlib">Hypr Libraries</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Hypr Libraries</title>
+
+    <para>
+      The Hypr libraries provide needed utilties for the entire Hypr ecosystem.
+      While two of the packages installed in this page are not strictly
+      required (<application>hyprland-qt-support</application> and
+      <application>hyprland-qtutils</application>), they are needed for some
+      dialog boxes and this book assumes that you have built them.
+    </para>
+
+    &abi-break;
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/long-build-time.xml"/>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&hyprlib-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Hypr Libraries Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
+      <ulink url="&blfs-svn;/general/libjxl.html">libjxl</ulink>,
+      <ulink url="&blfs-svn;/general/librsvg.html">librsvg</ulink>,
+      <xref linkend="libspng"/>,
+      <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
+      <xref linkend="libzip"/>,
+      &opengl;,
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <xref linkend="pugixml"/>,
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
+      <ulink url="https://glfs-book.github.io/glfs/shareddeps/seatd.html">seatd</ulink>,
+      <xref linkend="tomlplusplus"/>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/hwdata.html">hwdata</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Downloading Hypr Libraries</title>
+
+    <para>
+      First create a list of files to be downloaded:
+    </para>
+
+<screen><userinput>cat &gt; hypr-list &lt;&lt; "EOF"
+<literal>hyprland-protocols/archive/v&hyprland-protocols-version;/hyprland-protocols-v&hyprland-protocols-version;.tar.gz
+hyprutils/archive/v&hyprutils-version;/hyprutils-v&hyprutils-version;.tar.gz
+hyprlang/archive/v&hyprlang-version;/hyprlang-v&hyprlang-version;.tar.gz
+hyprcursor/archive/v&hyprcursor-version;/hyprcursor-v&hyprcursor-version;.tar.gz
+hyprwayland-scanner/archive/v&hyprwayland-scanner-version;/hyprwayland-scanner-v&hyprwayland-scanner-version;.tar.gz
+aquamarine/archive/v&aquamarine-version;/aquamarine-v&aquamarine-version;.tar.gz
+hyprgraphics/archive/v&hyprgraphics-version;/hyprgraphics-v&hyprgraphics-version;.tar.gz
+hyprland-qt-support/archive/v&hyprland-qt-support-version;/hyprland-qt-support-v&hyprland-qt-support-version;.tar.gz
+hyprland-qtutils/archive/v&hyprland-qtutils-version;/hyprland-qtutils-v&hyprland-qtutils-version;.tar.gz</literal>
+EOF</userinput></screen>
+
+    <para>
+      To download the needed files using
+      <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink>,
+      use the following commands: 
+    </para>
+
+<screen><userinput>mkdir hyprlib &amp;&amp;
+cd    hyprlib &amp;&amp;
+grep -v '^#' ../hypr-list | wget -i- -c \
+    -B &hyprlib-download-http;</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Hypr Libraries</title>
+
+    <para>
+      First, <emphasis>IF</emphasis> you have not followed the
+      <ulink url="&blfs-svn;/kde/kf6-intro.html">KDE Frameworks 6
+      Pre-installation Configuration</ulink> and have not configured KDE to
+      install in <filename class="directory">/usr</filename>, add to
+      <filename>/etc/profile.d/qt6.sh</filename> to ensure QML files can be
+      loaded/imported as the &root; user:
+    </para>
+
+<screen role="root"><userinput>cat &gt;&gt; /etc/profile.d/qt6.sh &lt;&lt; "EOF"
+<literal># Begin Hypr extension for /etc/profile.d/qt6.sh
+
+pathappend /usr/lib/plugins        QT_PLUGIN_PATH
+pathappend $QT6DIR/lib/plugins     QT_PLUGIN_PATH
+
+pathappend /usr/lib/qt6/qml        QML2_IMPORT_PATH
+pathappend $QT6DIR/lib/qml         QML2_IMPORT_PATH
+
+# End extension for /etc/profile.d/qt6.sh
+EOF</literal></userinput></screen>
+
+    <para>
+      Now go ahead and source the startup script again:
+    </para>
+
+<screen><userinput>source /etc/profile.d/qt6.sh</userinput></screen>
+
+    &as_root;
+
+    <para>
+      Next, start a subshell that will exit on error:
+    </para>
+
+<screen><userinput>bash -e</userinput></screen>
+
+    <para>
+      Install all the packages by running the following commands:
+    </para>
+
+<screen><userinput>for package in $(grep -v '^#' ../hypr-list)
+do
+package=$(basename "$package")
+packagedir=${package%.tar.?z*}
+packagedir=$(echo -n "$packagedir" | sed 's/-v\([0-9]\)/-\1/')
+echo "Building $packagedir"
+
+  tar -xf $package
+  pushd $packagedir
+
+  case $packagedir in
+    hyprland-protocols-[0-9]* )
+      mkdir build
+      cd build
+        meson setup --prefix=/usr ..
+    ;;
+
+    aquamarine-[0-9]* )
+      sed -i 's/OpenGL::OpenGL/OpenGL::GL/g' \
+          CMakeLists.txt
+      mkdir build
+      cd    build
+        cmake -D CMAKE_INSTALL_PREFIX=/usr       \
+              -D CMAKE_BUILD_TYPE=Release        \
+              -D CMAKE_SKIP_INSTALL_RPATH=ON     \
+              -G Ninja ..
+    ;;
+
+    hyprland-qt-support-[0-9]* )
+      mkdir build
+      cd    build
+        cmake -D CMAKE_INSTALL_PREFIX=/usr       \
+              -D CMAKE_BUILD_TYPE=Release        \
+              -D CMAKE_SKIP_INSTALL_RPATH=ON     \
+              -D INSTALL_QML_PREFIX=/lib/qt6/qml \
+              ..
+        make
+
+        as_root make install
+      popd     # $packagedir
+      rm -rf $packagedir
+      as_root /sbin/ldconfig
+      continue # for loop
+    ;;
+
+    * )
+      mkdir build
+      cd    build
+        cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+              -D CMAKE_BUILD_TYPE=Release    \
+              -D CMAKE_SKIP_INSTALL_RPATH=ON \
+              -G Ninja ..
+    ;;
+  esac
+
+  ninja
+  as_root ninja install
+  popd
+  rm -rf $packagedir
+  as_root /sbin/ldconfig
+done</userinput></screen>
+
+    <para>
+      Finally, exit the shell that was started earlier:
+    </para>
+
+<screen><userinput>exit</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          hyprcursor-util,
+          hyprland-dialog,
+          hyprland-donate-screen,
+          hyprland-update-screen, and
+          hyprwayland-scanner
+        </seg>
+        <seg>
+          libaquamarine.so,
+          libhyprcursor.so,
+          libhyprgraphics.so,
+          libhyprland-quick-style-implplugin.so,
+          libhyprland-quick-style-impl.so,
+          libhyprland-quick-styleplugin.so,
+          libhyprland-quick-style.so,
+          libhyprlang.so, and
+          libhyprutils.so
+        </seg>
+        <seg>
+          /usr/include/{aquamarine,hyprcursor,hyprgraphics,hyprutils},
+          /usr/lib/cmake/hyprwayland-scanner,
+          /usr/lib/qt6/qml/org/hyprland/style, and
+          /usr/share/hyprland-protocols
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="hyprcursor-util">
+        <term><command>hyprcursor-util</command></term>
+        <listitem>
+          <para>
+            compiles, packs, and unpacks hyprcursor and xcursor themes
+          </para>
+          <indexterm zone="hyprlib hyprcursor-util">
+            <primary sortas="b-hyprcursor-util">hyprcursor-util</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprland-dialog">
+        <term><command>hyprland-dialog</command></term>
+        <listitem>
+          <para>
+            shows certain dialog using <application>Qt-6</application>
+          </para>
+          <indexterm zone="hyprlib hyprland-dialog">
+            <primary sortas="b-hyprland-dialog">hyprland-dialog</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprland-donate-screen">
+        <term><command>hyprland-donate-screen</command></term>
+        <listitem>
+          <para>
+            shows a pop up box telling users to donate using
+            <application>Qt-6</application>
+          </para>
+          <indexterm zone="hyprlib hyprland-donate-screen">
+            <primary sortas="b-hyprland-donate-screen">hyprland-donate-screen</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprland-update-screen">
+        <term><command>hyprland-update-screen</command></term>
+        <listitem>
+          <para>
+            shows a pop up box telling users to update using
+            <application>Qt-6</application>
+          </para>
+          <indexterm zone="hyprlib hyprland-update-screen">
+            <primary sortas="b-hyprland-update-screen">hyprland-update-screen</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprwayland-scanner">
+        <term><command>hyprwayland-scanner</command></term>
+        <listitem>
+          <para>
+            generates C++ code from <application>Wayland</application> protocol
+            XML files
+          </para>
+          <indexterm zone="hyprlib hyprwayland-scanner">
+            <primary sortas="b-hyprwayland-scanner">hyprwayland-scanner</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libaquamarine">
+        <term><filename class="libraryfile">libaquamarine.so</filename></term>
+        <listitem>
+          <para>
+            provides rendering backend API functions
+          </para>
+          <indexterm zone="hyprlib libaquamarine">
+            <primary sortas="c-libaquamarine">libaquamarine.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprcursor">
+        <term><filename class="libraryfile">libhyprcursor.so</filename></term>
+        <listitem>
+          <para>
+            provides API functions for the hyprcursor format
+          </para>
+          <indexterm zone="hyprlib libhyprcursor">
+            <primary sortas="c-libhyprcursor">libhyprcursor.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprgraphics">
+        <term><filename class="libraryfile">libhyprgraphics.so</filename></term>
+        <listitem>
+          <para>
+            provides graphics utility functions for the Hypr ecosystem
+          </para>
+          <indexterm zone="hyprlib libhyprgraphics">
+            <primary sortas="c-libhyprgraphics">libhyprgraphics.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprland-quick-style-implplugin">
+        <term><filename class="libraryfile">libhyprland-quick-style-implplugin.so</filename></term>
+        <listitem>
+          <para>
+            is the <application>Hyprland</application> Quick Style IMPL plugin
+          </para>
+          <indexterm zone="hyprlib libhyprland-quick-style-implplugin">
+            <primary sortas="c-libhyprland-quick-style-implplugin">libhyprland-quick-style-implplugin.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprland-quick-style-impl">
+        <term><filename class="libraryfile">libhyprland-quick-style-impl.so</filename></term>
+        <listitem>
+          <para>
+            is the <application>Hyprland</application> Quick Style IMPL library
+          </para>
+          <indexterm zone="hyprlib libhyprland-quick-style-impl">
+            <primary sortas="c-libhyprland-quick-style-impl">libhyprland-quick-style-impl.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprland-quick-styleplugin">
+        <term><filename class="libraryfile">libhyprland-quick-styleplugin.so</filename></term>
+        <listitem>
+          <para>
+            is the <application>Hyprland</application> Quick Style plugin
+          </para>
+          <indexterm zone="hyprlib libhyprland-quick-styleplugin">
+            <primary sortas="c-libhyprland-quick-styleplugin">libhyprland-quick-styleplugin.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprland-quick-style">
+        <term><filename class="libraryfile">libhyprland-quick-style.so</filename></term>
+        <listitem>
+          <para>
+            is the <application>Hyprland</application> Quick Style library
+          </para>
+          <indexterm zone="hyprlib libhyprland-quick-style">
+            <primary sortas="c-libhyprland-quick-style">libhyprland-quick-style.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprlang">
+        <term><filename class="libraryfile">libhyprlang.so</filename></term>
+        <listitem>
+          <para>
+            provides functions to parse and use the Hypr configurartion
+            language
+          </para>
+          <indexterm zone="hyprlib libhyprlang">
+            <primary sortas="c-libhyprlang">libhyprlang.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprutils">
+        <term><filename class="libraryfile">libhyprutils.so</filename></term>
+        <listitem>
+          <para>
+            provides utility functions for the Hypr ecoysystem
+          </para>
+          <indexterm zone="hyprlib libhyprutils">
+            <primary sortas="c-libhyprutils">libhyprutils.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

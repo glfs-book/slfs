@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libliftoff-download-http "https://gitlab.freedesktop.org/emersion/libliftoff/-/archive/v&libliftoff-version;/libliftoff-v&libliftoff-version;.tar.gz">
+]>
+
+<sect1 id="libliftoff" xreflabel="libliftoff-&libliftoff-version;">
+  <?dbhtml filename="libliftoff.html"?>
+
+
+  <title>libliftoff-&libliftoff-version;</title>
+
+  <indexterm zone="libliftoff">
+    <primary sortas="a-libliftoff">libliftoff</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libliftoff</title>
+
+    <para>
+      The libliftoff package provides a library that handles KMS planes.
+    </para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libliftoff-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">libliftoff Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>
+    </para>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libliftoff</title>
+
+    <para>
+      Install <application>libliftoff</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libliftoff.so
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libliftoff-lib">
+        <term><filename class="libraryfile">libliftoff.so</filename></term>
+        <listitem>
+          <para>
+            provides functions that can work with KMS planes
+          </para>
+          <indexterm zone="libliftoff libliftoff-lib">
+            <primary sortas="c-libliftoff-lib">libliftoff.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+  
+</sect1>
