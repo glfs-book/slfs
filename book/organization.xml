@@ -15,14 +15,14 @@
     This book is divided into the following parts:
   </para>
 
-  <bridgehead renderas="sect2">Chapter I - Introduction</bridgehead>
+  <bridgehead renderas="sect2">Part I - Introduction</bridgehead>
 
   <para>
     This part contains essential information which is needed to
     understand the rest of the book.
   </para>
 
-  <bridgehead renderas="sect2">Chapter II - General Libraries and Utilities</bridgehead>
+  <bridgehead renderas="sect2">Part II - General Libraries and Utilities</bridgehead>
 
   <para>
     This part covers libraries and utilities that you may want or need. Many
@@ -30,33 +30,33 @@
     toolchains for those that may need them.
   </para>
 
-  <bridgehead renderas="sect2">Chapter III - SVR4</bridgehead>
+  <bridgehead renderas="sect2">Part III - SVR4</bridgehead>
 
   <para>
     This part covers SVR4 tooling and various software.
   </para>
 
-  <bridgehead renderas="sect2">Chapter IV - Binary Support</bridgehead>
+  <bridgehead renderas="sect2">Part IV - Binary Support</bridgehead>
 
   <para>
     This part covers packages and setup for optimal binary-only application
     compatibility on a Linux From Scratch system.
   </para>
 
-  <bridgehead renderas="sect2">Chapter V - Window Managers, Compositors, and Desktop Environments</bridgehead>
+  <bridgehead renderas="sect2">Part V - Window Managers, Compositors, and Desktop Environments</bridgehead>
 
   <para>
     This part covers graphical environments you may wish to use.
   </para>
 
-  <bridgehead renderas="sect2">Chapter VI - Emulators</bridgehead>
+  <bridgehead renderas="sect2">Part VI - Emulators</bridgehead>
 
   <para>
     This part covers many emulators for computers, vide game consoles, and
     more.
   </para>
 
-  <bridgehead renderas="sect2">Chapter VII - General Gaming Software</bridgehead>
+  <bridgehead renderas="sect2">Part VII - General Gaming Software</bridgehead>
 
   <para>
     This part covers gaming support software that is not covered in BLFS and
