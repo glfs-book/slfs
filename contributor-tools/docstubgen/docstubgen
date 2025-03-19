@@ -34,6 +34,8 @@ def checklib(i, f):
 		f)) or ".so" in os.path.basename(os.path.join(i, f))))
 
 def callcheckfile(path):
+	if not checkbinflag:
+		return 0
 	if not idontcareaboutsecurity:
 		dangerouschars = dict.fromkeys(map(ord, "&'\"\\|><"), None)
 		path2 = path.translate(dangerouschars)
