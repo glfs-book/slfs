@@ -37,6 +37,7 @@ version, so keep this at that. -->
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
+<!ENTITY fastfetch-version                   "2.38.0">
 <!-- 5. Programming -->
 <!ENTITY byacc-version                       "20241231">
 <!ENTITY strace-version                      "6.13">
