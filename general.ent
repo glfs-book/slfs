@@ -220,4 +220,4 @@ export -f as_root</userinput></screen>
 
 <!ENTITY opengl
          "OpenGL (<ulink url='&glfs-website;/shareddeps/libglvnd.html'>libglvnd</ulink>
-          and/or  <ulink url='&glfs-website;/shareddeps/mesa.html'>mesa</ulink>)">
+          or  <ulink url='&glfs-website;/shareddeps/mesa.html'>mesa</ulink>)">
