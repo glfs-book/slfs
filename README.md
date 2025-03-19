@@ -1,4 +1,4 @@
-# lfs-qol (Linux From Scratch - Quality of Life)
+# Linux From Scratch - Quality of Life (LFS-QOL)
 
 This book is dedicated to documenting the installation of some packages on an
 LFS system that do not appear in LFS, MLFS, BLFS, and GLFS.
