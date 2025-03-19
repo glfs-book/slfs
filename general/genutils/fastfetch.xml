@@ -33,6 +33,35 @@
         </para>
       </listitem>
     </itemizedlist>
+
+    <bridgehead renderas="sect3">Fastfetch Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
+      <ulink url="&blfs-svn;/general/imagemagick.html">ImageMagick</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/chafa/">Chafa</ulink>,
+      <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
+      <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/chafa/">libglvnd</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/ocl-icd/">ocl-icd</ulink>,
+      <ulink url="&blfs-svn;/xfce/xfconf.html">Xfconf</ulink>,
+      <ulink url="&blfs-svn;/server/sqlite.html">SQLite</ulink>,
+      <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink> and
+      <ulink url="&arch-pkgs;/extra/x86_64/directx-headers/">DirectX-Headers
+      </ulink>
+    </para>
+
   </sect2>
 
   <sect2 role="installation">
