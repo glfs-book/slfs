@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>March 19th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[MymeType] - fastfetch: Added dependency list. Fixes
+          <ulink url="&lfs-qol-issues;/84">#84</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 18th, 2025</para>
       <itemizedlist>
         <listitem>
