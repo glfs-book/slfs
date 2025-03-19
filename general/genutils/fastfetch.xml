@@ -20,9 +20,9 @@
     <title>Introduction to fastfetch</title>
 
     <para>
-      <application>Fastfetch</application> is a maintained, feature-rich and 
-      performance oriented system information tool and alternative to neofetch 
-      written in C.
+      <application>Fastfetch</application> is a maintained, feature-rich and
+      performance oriented system information tool. It is an alternative to
+      <xref linkend="neofetch"/> and written in C.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>
@@ -43,14 +43,14 @@
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
-cd build
+cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D CMAKE_BUILD_TYPE=Release  \
       -D BUILD_FLASHFETCH=OFF      \
       ..  &amp;&amp;
-make
-</userinput></screen>
+
+make</userinput></screen>
 
     <para>
       Now, as the &root; user:
@@ -64,15 +64,15 @@ make
     <title>Command Explanations</title>
 
     <para>
-      <parameter>-D CMAKE_BUILD_TYPE=Release</parameter>: This switch enables 
-      compiler optimizations in order to speed up the code and reduce its size. 
-      It also disables some compile checks which are not necessary on a 
+      <parameter>-D CMAKE_BUILD_TYPE=Release</parameter>: This switch enables
+      compiler optimizations in order to speed up the code and reduce its size.
+      It also disables some compile checks which are not necessary on a
       production system.
     </para>
 
     <para>
-      <parameter>-D BUILD_FLASHFETCH=OFF</parameter>: This switch disables 
-      building the historical flashfetch binary. If you need it for any reason, 
+      <parameter>-D BUILD_FLASHFETCH=OFF</parameter>: This switch disables
+      building the historical flashfetch binary. If you need it for any reason,
       set this switch to <parameter>ON</parameter>.
     </para>
 
