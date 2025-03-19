@@ -139,6 +139,7 @@ grep -v '^#' ../dolphin-list | wget -i- -c \
     </para>
 
 <screen><userinput>for i in *.tar.?z*; do
+  echo "Extracting $i..."
   tar -xf $i
 done</userinput></screen>
 
