@@ -55,6 +55,7 @@ The dark theme is also the default, but you can switch the theme by
 running `make LFS_QOL_THEME=<theme>`. `<theme>` can equal:
 - `light`
 - `dark`
+
 Note that if you set `LFS_QOL_THEME_PATH`, you can set `LFS_QOL_THEME` to more
 than just what the available options are shown above, but only the available
 themes that are in that path.
