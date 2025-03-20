@@ -45,7 +45,6 @@ At the root of the source, you'll find these files and directories:
 - `gnome.ent`
 - `obfuscate.sh`
 - `packages.ent`
-- `pdf-fixups.sh`
 - `tidy.conf`
 
 #### 3.1.1.1. `.github/workflows/`
@@ -131,10 +130,7 @@ version variables are used by certain packages, although usually there will
 only be one variable used by a given package. For example, &hyprutils-version;
 is used by hyprutils. These variables determine the package's version.
 Whenever a package needs an update, this file needs to get edited.
-#### 3.1.1.21. `pdf-fixups.sh`
-This file is a shell script that changes up a rendered PDF to be more pretty.
-Rarely needs to get updated.
-#### 3.1.1.22. `tidy.conf`
+#### 3.1.1.21. `tidy.conf`
 This file is a configuration file used by **tidy**. Rarely needs to get
 updated.
 

@@ -52,16 +52,12 @@ endif
 
 ifeq ($(REV), sysv)
   BASEDIR         ?= $(HTML_ROOT)/lfs-qol
-  PDF_OUTPUT      ?= lfs-qol.pdf
-  NOCHUNKS_OUTPUT ?= lfs-qol.html
   DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-commands
   LFS_QOLHTML     ?= lfs-qol-html.xml
   LFS_QOLHTML2    ?= lfs-qol-html2.xml
   LFS_QOLFULL     ?= lfs-qol-full.xml
 else
   BASEDIR         ?= $(HTML_ROOT)/lfs-qol-systemd
-  PDF_OUTPUT      ?= lfs-qol-sysd.pdf
-  NOCHUNKS_OUTPUT ?= lfs-qol-sysd.html
   DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-sysd-commands
   LFS_QOLHTML     ?= lfs-qol-systemd-html.xml
   LFS_QOLHTML2    ?= lfs-qol-systemd-html2.xml
@@ -105,17 +101,8 @@ help:
 	@echo ""
 	@echo "  html                 Builds the HTML pages of the book."
 	@echo ""
-	@echo "  pdf                  Builds the book as a PDF file."
-	@echo ""
 	@echo "  wget-list            Produces a list of all packages to download."
 	@echo "                       Output is BASEDIR/wget-list"
-	@echo ""
-	@echo "  nochunks             Builds the book as a one-pager. The output"
-	@echo "                       is a large single HTML page containing the"
-	@echo "                       whole book."
-	@echo ""
-	@echo "                       Parameter NOCHUNKS_OUTPUT=<filename> controls"
-	@echo "                       the name of the HTML file."
 	@echo ""
 	@echo "  validate             Runs validation checks on the XML files."
 	@echo ""
@@ -125,7 +112,7 @@ help:
 	@echo "                       containing all valid URLs."
 	@echo ""
 
-all: lfs-qol nochunks
+all: lfs-qol
 world: all dump-commands test-links
 
 html: $(BASEDIR)/index.html
@@ -169,52 +156,6 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
    done;
 
 	$(Q)rm -rf $(RENDERTMP)
-
-pdf: validate wget-list
-	@echo "Generating profiled XML for PDF..."
-	$(Q)xsltproc --nonet \
-						--stringparam profile.condition pdf   \
-						--output $(RENDERTMP)/lfs-qol-pdf.xml \
-						stylesheets/lfs-xsl/profile.xsl       \
-						$(RENDERTMP)/$(LFS_QOLFULL)
-
-	@echo "Generating FO file..."
-	$(Q)xsltproc --nonet										 \
-					--stringparam rootid "$(ROOT_ID)"	 \
-					--output $(RENDERTMP)/lfs-qol-pdf.fo \
-					stylesheets/lfs-qol-pdf.xsl          \
-					$(RENDERTMP)/lfs-qol-pdf.xml
-
-	$(Q)sed -i -e 's/span="inherit"/span="all"/' $(RENDERTMP)/lfs-qol-pdf.fo
-	$(Q)bash pdf-fixups.sh $(RENDERTMP)/lfs-qol-pdf.fo
-
-	@echo "Generating PDF file..."
-	$(Q)mkdir -p $(RENDERTMP)/images
-	$(Q)cp images/*.png $(RENDERTMP)/images
-
-	$(Q)mkdir -p $(BASEDIR)
-
-	$(Q)fop -q $(RENDERTMP)/lfs-qol-pdf.fo $(BASEDIR)/$(PDF_OUTPUT) 2>fop.log
-	@echo "$(BASEDIR)/$(PDF_OUTPUT) created"
-	@echo "fop.log created"
-	$(Q)rm fop.log
-	@echo "fop.log destroyed"
-
-	$(Q)rm -rf $(RENDERTMP)
-
-nochunks: $(BASEDIR)/$(NOCHUNKS_OUTPUT)
-$(BASEDIR)/$(NOCHUNKS_OUTPUT): $(RENDERTMP)/$(LFS_QOLHTML) version
-	@echo "Generating non-chunked XHTML file..."
-	$(Q)xsltproc --nonet                                \
-                --stringparam rootid "$(ROOT_ID)"      \
-                --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
-                stylesheets/lfs-qol-nochunks.xsl       \
-                $(RENDERTMP)/$(LFS_QOLHTML)
-
-	@echo "Running Tidy and obfuscate.sh on non-chunked XHTML..."
-	$(Q)tidy -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || true
-	$(Q)bash obfuscate.sh $(BASEDIR)/$(NOCHUNKS_OUTPUT)
-	$(Q)sed -i -e "1,20s@text/html@application/xhtml+xml@g" $(BASEDIR)/$(NOCHUNKS_OUTPUT)
 
 validate: $(RENDERTMP)/$(LFS_QOLFULL)
 $(RENDERTMP)/$(LFS_QOLFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
@@ -317,9 +258,8 @@ $(DUMPDIR): $(RENDERTMP)/$(LFS_QOLFULL) version
 	$(Q)touch $(DUMPDIR)
 	$(Q)rm -rf $(RENDERTMP)
 
-.PHONY: lfs-qol all world html nochunks pdf clean validate profile-html \
-   wget-list test-links dump-commands bootscripts systemd-units version \
-   test-options
+.PHONY: lfs-qol all world html clean validate profile-html wget-list \
+  test-links dump-commands bootscripts systemd-units version test-options
 
 version:
 	$(Q)REV=$(REV) STAB=$(STAB) ./git-version.sh

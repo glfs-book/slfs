@@ -59,11 +59,3 @@ running `make LFS_QOL_THEME=<theme>`. `<theme>` can equal:
 Note that if you set `LFS_QOL_THEME_PATH`, you can set `LFS_QOL_THEME` to more
 than just what the available options are shown above, but only the available
 themes that are in that path.
-
-Makefile targets are: `pdf`, `nochunks`, and `validate`.
-
-`pdf`: builds LFS QOL as a PDF file.
-
-`nochunks`: builds LFS QOL in one huge file.
-
-`validate`:  does an extensive check for XML errors in the book.
