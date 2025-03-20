@@ -144,6 +144,7 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
    fi;
 
 	$(Q)cp $(LFS_QOL_THEME_PATH)/$(LFS_QOL_THEME).lfs.css $(BASEDIR)/stylesheets/lfs.css
+	$(Q)cp stylesheets/lfs-xsl/lfs-print.css $(BASEDIR)/stylesheets
 	$(Q)sed -i 's|../stylesheet|stylesheet|' $(BASEDIR)/index.html
 
 	$(Q)if [ ! -e $(BASEDIR)/images ]; then \
