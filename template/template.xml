@@ -231,8 +231,8 @@ mv doc/* /usr/share/doc/template-&template-version;</userinput></screen>
 
     <para>
       <parameter>--PARAMETER</parameter>: This parameter does something
-      mandatory for GLFS purposes. It will be in the instructions above. It is
-      not optional and is why it is listed as a parameter and not an option.
+      mandatory for LFS QOL purposes. It will be in the instructions above. It
+      is not optional and is why it is listed as a parameter and not an option.
     </para>
 
   </sect2>
