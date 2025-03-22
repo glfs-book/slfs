@@ -220,4 +220,9 @@ export -f as_root</userinput></screen>
 
 <!ENTITY opengl
          "OpenGL (<ulink url='&glfs-website;/shareddeps/libglvnd.html'>libglvnd</ulink>
-          or  <ulink url='&glfs-website;/shareddeps/mesa.html'>mesa</ulink>)">
+          or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>;
+          only the normal installation is required for either)">
+<!ENTITY gbm
+         "GBM (<ulink url='&glfs-website;/shareddeps/gbm.html'>GBM from Mesa</ulink>
+          or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>;
+          only the normal installation is required for either)">
