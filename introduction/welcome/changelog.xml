@@ -33,7 +33,8 @@
           <para>[name] - Newer entry.</para>
         </listitem>
         <listitem>
-          <para>[name] - Older entry.</para>
+          <para>[name] - package: ver -&gt; ver. Fixes
+          <ulink url="&lfs-qol-isses;/num">#num</ulink>.</para>
         </listitem>
       </itemizedlist>
     </listitem>
