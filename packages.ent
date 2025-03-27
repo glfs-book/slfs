@@ -1,7 +1,7 @@
 <!-- GENERAL -->
 <!-- General Libraries -->
 <!ENTITY enet-version                        "1.3.18">
-<!ENTITY glaze-version                       "5.0.0">
+<!ENTITY glaze-version                       "5.0.1">
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libliftoff-version                  "0.5.0">
 <!ENTITY libutempter-version                 "1.2.1">
@@ -37,10 +37,10 @@ version, so keep this at that. -->
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.38.0">
+<!ENTITY fastfetch-version                   "2.39.1">
 <!-- Programming -->
 <!ENTITY byacc-version                       "20241231">
-<!ENTITY strace-version                      "6.13">
+<!ENTITY strace-version                      "6.14">
 <!ENTITY socat-version                       "1.8.0.3">
 <!-- JAVA -->
 <!ENTITY openjdk-version                     "19.0.2">
@@ -70,7 +70,7 @@ version, so keep this at that. -->
 <!-- BINARY SUPPORT -->
 <!-- Binary Support -->
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY ostree-version                      "2025.1">
+<!ENTITY ostree-version                      "2025.2">
 <!ENTITY flatpak-version                     "1.16.0">
 
 <!-- WM -->
@@ -80,13 +80,13 @@ version, so keep this at that. -->
 <!ENTITY hyprland-protocols-version          "0.6.2">
 <!ENTITY hyprutils-version                   "0.5.2">
 <!ENTITY hyprlang-version                    "0.6.0">
-<!ENTITY hyprcursor-version                  "0.1.11">
+<!ENTITY hyprcursor-version                  "0.1.12">
 <!ENTITY hyprwayland-scanner-version         "0.4.4">
 <!ENTITY aquamarine-version                  "0.8.0">
 <!ENTITY hyprgraphics-version                "0.1.2">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-qtutils-version            "0.1.3">
-<!ENTITY hyprland-version                    "0.47.2">
+<!ENTITY hyprland-version                    "0.48.0">
 <!ENTITY xdg-desktop-portal-hyprland-version "1.3.9">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.24">
@@ -140,7 +140,7 @@ version, so keep this at that. -->
 <!ENTITY mupen64plus-rsp-hle-version         "&mupen64plus-version;">
 <!ENTITY mupen64plus-video-rice-version      "&mupen64plus-version;">
 <!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
-<!ENTITY gliden64-version                    "70b9b6cee1eb457c759ee82654c4d6ae5b30c4df">
+<!ENTITY gliden64-version                    "575f3814e47851b7f86bdb61829b6abac11a38be">
 
 <!-- GEN-GAME-SOFT -->
 <!-- Minecraft -->
