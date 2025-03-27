@@ -37,6 +37,17 @@
       </glossdef>
     </glossentry>
 
+    <glossentry id="gASLR">
+      <glossterm>
+        <acronym>ASLR</acronym>
+      </glossterm>
+      <glossdef>
+        <para>
+          Address Space Layout Randomization
+        </para>
+      </glossdef>
+    </glossentry>
+
     <glossentry id="gBLFS">
       <glossterm>
         <acronym>BLFS</acronym>
@@ -418,6 +429,17 @@
       <glossdef>
         <para>
           Secure Sockets Layer
+        </para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry id="gSSP">
+      <glossterm>
+        <acronym>SSP</acronym>
+      </glossterm>
+      <glossdef>
+        <para>
+          Stack Smash Protection
         </para>
       </glossdef>
     </glossentry>
