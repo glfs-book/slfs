@@ -10,6 +10,10 @@ import sys
 import shutil
 import itertools
 
+# Flags that get replaced by make
+prefix = #prefix#
+libexecdir = #libexecdir#
+
 # INTERNAL FLAGS, DO NOT TOUCH
 nobinflag = False
 nolibflag = False
@@ -77,13 +81,13 @@ responsibility for such an act and for any damages caused.', file=sys.stderr)
 		print('If you have read this fully and have considered the risks, set the \
 DOCSTUBGEN_TRUSTED_INPUT environment variable. You have been warned.', file=sys.stderr)
 		sys.exit(1)
-	if os.path.exists("/usr/libexec/checkfile.sh"):
-		checkfilepath = "/usr/libexec/checkfile.sh"
-	elif shutil.which("checkfile.sh") is None:
-		print('Error: checkfile.sh helper script not found in /usr/libexec or $PATH.', file=sys.stderr)
+	if os.path.exists(prefix + '/' + libexecdir + '/' + "docstubgen-checkfile"):
+		checkfilepath = prefix + '/' + libexecdir + '/' + "docstubgen-checkfile"
+	elif shutil.which("docstubgen-checkfile") is None:
+		print('Error: docstubgen-checkfile helper script not found in ' + prefix + '/' + libexecdir + ' or $PATH.', file=sys.stderr)
 		sys.exit(1)
 	else:
-		checkfilepath = shutil.which("checkfile.sh")
+		checkfilepath = shutil.which("docstubgen-checkfile")
 	checkbinflag = True
 
 folderlist = []

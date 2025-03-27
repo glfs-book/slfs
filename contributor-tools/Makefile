@@ -24,13 +24,14 @@ $(OBJDIR)/docstubgen/docstubgen.1: docstubgen/docstubgen.1.xml
 	mkdir -p $(OBJDIR)/docstubgen/
 	xsltproc --output $(OBJDIR)/docstubgen/ $(XSLSTYLESHEET) docstubgen/docstubgen.1.xml
 	cp docstubgen/docstubgen $(OBJDIR)/docstubgen/
-	cp docstubgen/checkfile.sh $(OBJDIR)/docstubgen/
+	cp docstubgen/docstubgen-checkfile $(OBJDIR)/docstubgen/
 
 install-docstubgen:
+	sed -e 's/\#prefix\#/"\$(PREFIX)"/g' -e 's/\#libexecdir\#/"$(LIBEXECDIR)"/g' -i $(OBJDIR)/docstubgen/docstubgen
 	install -m755 -d $(DESTDIR)$(PREFIX)/$(BINDIR)
 	install -m755 $(OBJDIR)/docstubgen/docstubgen $(DESTDIR)$(PREFIX)/$(BINDIR)
 	install -m755 -d $(DESTDIR)$(PREFIX)/$(LIBEXECDIR)
-	install -m755 $(OBJDIR)/docstubgen/checkfile.sh $(DESTDIR)$(PREFIX)/$(LIBEXECDIR)
+	install -m755 $(OBJDIR)/docstubgen/docstubgen-checkfile $(DESTDIR)$(PREFIX)/$(LIBEXECDIR)
 
 install-docstubgen-man: build-docstubgen-manpage
 	install -m755 -d $(DESTDIR)$(PREFIX)/$(SHAREDIR)/man/man1
