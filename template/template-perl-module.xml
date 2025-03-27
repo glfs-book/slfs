@@ -33,16 +33,10 @@
 
 <!--  &lfs8x_checked; -->
 
-      <bridgehead renderas="sect4">Package Information</bridgehead>
       <itemizedlist spacing="compact">
         <listitem>
           <para>
             Download (HTTP): <ulink url="&my-download-http;"/>
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            Download MD5 sum: &my-md5sum;
           </para>
         </listitem>
       </itemizedlist>
