@@ -15,7 +15,6 @@
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="byacc.xml"/>
-  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gccrs.xml"/> -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gnat.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="strace.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="socat.xml"/>
