@@ -1,1 +1,0 @@
-contributor-tools/docstubgen/docstubgen
