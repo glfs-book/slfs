@@ -45,6 +45,7 @@ version, so keep this at that. -->
 <!ENTITY cuda-nvidia-version                 "570.124.06">
 <!ENTITY gcc-version                         "14.2.0">
 <!ENTITY gnat-binary-version                 "&gcc-version;-1">
+<!ENTITY intercal-version                    "0.33">
 <!ENTITY strace-version                      "6.14">
 <!ENTITY socat-version                       "1.8.0.3">
 <!-- JAVA -->
