@@ -16,6 +16,7 @@
 <!-- Graphical Libraries -->
 <!ENTITY glu-version                         "9.0.3">
 <!ENTITY libspng-version                     "0.7.4">
+<!ENTITY nv-codec-headers-version            "13.0.19.0">
 <!-- General Utilities -->
 <!ENTITY htop-version                        "3.4.0">
 <!ENTITY btop-version                        "1.4.0">
@@ -40,6 +41,8 @@ version, so keep this at that. -->
 <!ENTITY fastfetch-version                   "2.39.1">
 <!-- Programming -->
 <!ENTITY byacc-version                       "20241231">
+<!ENTITY cuda-version                        "12.8.1">
+<!ENTITY cuda-nvidia-version                 "570.124.06">
 <!ENTITY gcc-version                         "14.2.0">
 <!ENTITY gnat-binary-version                 "&gcc-version;-1">
 <!ENTITY strace-version                      "6.14">

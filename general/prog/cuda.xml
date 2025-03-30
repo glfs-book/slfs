@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY cuda-download-http
+    "https://developer.download.nvidia.com/compute/cuda/&cuda-version;/local_installers/cuda_&cuda-version;_&cuda-nvidia-version;_linux.run">
+]>
+
+
+<sect1 id="cuda" xreflabel="CUDA-&cuda-version;">
+  <?dbhtml filename="cuda.html"?>
+
+  <title>CUDA-&cuda-version;</title>
+
+  <indexterm zone="cuda">
+    <primary sortas="a-cuda">CUDA</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to CUDA</title>
+
+    <para>
+      The <application>CUDA</application> proprietary toolkit provides tools
+      for running code on NVIDIA GPUs. This is otherwise known as hardware
+      acceleration.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&cuda-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <note><para>
+      The download size is over 5G, so you should consider if and when you will
+      want to download this runfile. For this reason, it is not recommended to
+      download it when using limited hotspot data. Its size can largely be
+      attributed to containing compilers as well as the
+      <application>NVIDIA</application> driver. The driver only accounts for
+      10% of the runfile's size.
+    </para></note>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/cuda/cuda-&cuda-version;-glibc-2.41-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">CUDA Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&glfs-website;/shareddeps/nvidia.html">NVIDIA</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/gdb.html">GDB</ulink> and
+      <xref linkend="glu"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of CUDA</title>
+
+    <para>
+      First create the installation directory and symlink as the &root; user:
+    </para>
+
+<screen role="root"><userinput>mkdir -pv /opt/cuda-&cuda-version; &amp;&amp;
+ln -sfv cuda-&cuda-version; /opt/cuda</userinput></screen>
+
+    <para>
+      Install <application>CUDA</application> by running the following
+      command as the &root; user:
+    </para>
+
+<screen role="root"><userinput>sh cuda_&cuda-version;_&cuda-nvidia-version;_linux.run \
+  --silent  \
+  --toolkit \
+  --toolkitpath=/opt/cuda-&cuda-version;</userinput></screen>
+
+    <para>
+      Now as the &root; user, allow the use of new compilers:
+    </para>
+
+<screen role="root"><userinput>sed -e "/.*unsupported GNU version.*/d" \
+    -e "/.*unsupported clang version.*/d" \
+    -i /opt/cuda-&cuda-version;/targets/x86_64-linux/include/crt/host_config.h</userinput></screen>
+
+    <important><para>
+      This technically is not supported and there may be compilation errors in
+      other packages as a result. However, it's a better compromise than
+      installing older compilers just for one package. This package is still
+      being developed but takes a long time to adapt to newer software.
+    </para></important>
+
+    <para>
+      Finally, patch a header file to fix building against
+      <application>glibc-2.41</application>, again as the &root; user:
+    </para>
+
+<screen role="root"><userinput>patch -Np1 /opt/cuda-&cuda-version;/targets/x86_64-linux/include/crt/math_functions.h \
+  -i cuda-&cuda-version;-glibc-2.41-1.patch</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>--silent</parameter>: This parameter is required or else this
+      toolkit will be unable to be installed.
+    </para>
+
+    <para>
+      <parameter>--toolkit</parameter>: This option forces the toolkit to be
+      installed as the <application>NVIDIA</application> driver is also
+      included and will be installed otherwise, which can cause issues.
+    </para>
+
+    <para>
+      <parameter>--toolkitpath=/opt/cuda-&cuda-version;</parameter>: This
+      parameter changes the installation path.
+    </para>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring CUDA</title>
+
+    <para>
+      Now in order to use the toolkit, it needs to be included in the path.
+    </para>
+
+    <para>
+      As the &root; user, create the profile (dependent on <ulink
+      url="&blfs-svn;/postlfs/profile.html">The Bash Shell Startup
+      Files</ulink>) for CUDA:
+    </para>
+      
+<screen role="root"><userinput>cat &gt; /etc/profile.d/cuda.sh &lt;&lt; "EOF"
+<literal># Begin /etc/profile.d/cuda.sh
+
+pathprepend /opt/cuda/bin           PATH
+
+# End /etc/profile.d/cuda.sh</literal>
+EOF</userinput></screen>
+
+    <para>
+      Immediately after installation, update the current PATH
+      for your current shell:
+    </para>
+
+    <screen><userinput>source /etc/profile.d/cuda.sh</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <para>
+      For a full package listing, check <ulink
+      url="&arch-pkgs;/extra/x86_64/cuda/">Arch's CUDA package contents</ulink>
+      as the full list is too expansive to list here.
+    </para>
+
+  </sect2>
+
+</sect1>

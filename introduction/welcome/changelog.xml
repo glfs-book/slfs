@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>March 29th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - CUDA; nv-codec-headers: Added. Fixes
+          <ulink url="&lfs-qol-issues;/94">#94</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 27th, 2025</para>
       <itemizedlist>
         <listitem>

@@ -17,5 +17,6 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libspng.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nv-codec-headers.xml"/>
 
 </chapter>
