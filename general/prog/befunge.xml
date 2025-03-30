@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY befunge93-download-http "https://codeberg.org/catseye/Befunge-93/archive/rel_&befunge-minor-version;.tar.gz">
+]>
+
+<sect1 id="befunge93" xreflabel="befunge93-&befunge-version;">
+  <?dbhtml filename="befunge.html"?>
+
+  <title>Befunge-93-&befunge-version;</title>
+
+  <indexterm zone="befunge93">
+    <primary sortas="a-befunge93">Befunge-93</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to befunge</title>
+
+    <para>
+      The Befunge-93 package contains the reference implementation of the
+      Befunge language.
+    </para>
+    
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&befunge93-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Befunge-93</title>
+
+    <note><para>This package extracts to befunge-93.</para></note>
+
+    <para>
+      Install <application>Befunge-93</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -v -Dm755 bin/bef /usr/bin &amp;&amp;
+install -v -Dm755 bin/befprof /usr/bin &amp;&amp;
+install -v -Dm755 bin/bef2c /usr/bin</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          bef, befprof, and bef2c
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="bef">
+        <term><command>bef</command></term>
+        <listitem>
+          <para>
+            is the Befunge-93 reference interpreter/debugger
+          </para>
+          <indexterm zone="befunge93 bef">
+            <primary sortas="b-bef">bef</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="bef2c">
+        <term><command>bef2c</command></term>
+        <listitem>
+          <para>
+            is the Befunge-93 to ANSI C compiler
+          </para>
+          <indexterm zone="befunge93 bef2c">
+            <primary sortas="b-bef2c">bef2c</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="befprof">
+        <term><command>befprof</command></term>
+        <listitem>
+          <para>
+            is the Befunge-93 profiler
+          </para>
+          <indexterm zone="befunge93 befprof">
+            <primary sortas="b-befprof">befprof</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

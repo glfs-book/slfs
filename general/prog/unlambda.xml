@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY unlambda-download-http "http://ftp.madore.org/pub/madore/unlambda/unlambda-&unlambda-version;.tar.gz">
+]>
+
+<sect1 id="unlambda" xreflabel="unlambda-&unlambda-version;">
+  <?dbhtml filename="unlambda.html"?>
+
+  <title>Unlambda-&unlambda-version;</title>
+
+  <indexterm zone="unlambda">
+    <primary sortas="a-unlambda">Unlambda</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to unlambda</title>
+
+    <para>
+      The Unlambda package contains an interpreter for the Unlambda programming
+      language.
+    </para>
+    
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&unlambda-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Unlambda Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/gc.html">GC</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Unlambda</title>
+
+    <para>
+      Install <application>Unlambda</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>sed -i '32i #include &lt;stdlib.h&gt;' c/unlambda.c &amp;&amp;
+cc -o c/unlambda c/unlambda.c -I/usr/include/gc -lgc</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -v -m755 c/unlambda /usr/bin/</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          unlambda
+        </seg>
+        <seg>
+          None 
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="unlambda-bin">
+        <term><command>unlambda</command></term>
+        <listitem>
+          <para>
+            is the Unlambda interpreter
+          </para>
+          <indexterm zone="unlambda unlambda-bin">
+            <primary sortas="b-unlambda-bin">unlambda</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
