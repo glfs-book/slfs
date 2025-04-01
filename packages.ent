@@ -40,13 +40,17 @@ version, so keep this at that. -->
 <!ENTITY neofetch-version                    "7.1.0">
 <!ENTITY fastfetch-version                   "2.39.1">
 <!-- Programming -->
+<!ENTITY befunge-minor-version               "2_25">
+<!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20241231">
 <!ENTITY cuda-version                        "12.8.1">
 <!ENTITY cuda-nvidia-version                 "570.124.06">
 <!ENTITY gcc-version                         "14.2.0">
 <!ENTITY gnat-binary-version                 "&gcc-version;-1">
+<!ENTITY intercal-version                    "0.33">
 <!ENTITY strace-version                      "6.14">
 <!ENTITY socat-version                       "1.8.0.3">
+<!ENTITY unlambda-version                    "2.0.0">
 <!-- JAVA -->
 <!ENTITY openjdk-version                     "19.0.2">
 <!ENTITY openjdk-build                       "7">

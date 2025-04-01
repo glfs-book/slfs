@@ -44,6 +44,10 @@
       <para>April 1st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[seal331] - C-INTERCAL; Befunge; Unlambda: Added. PR
+          <ulink url="&lfs-qol-pull;/97">(#97)</ulink></para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - yajl: Fix build with CMake-4.0.0. Fixes
           <ulink url="&lfs-qol-issues;/96">#96</ulink>.</para>
         </listitem>
