@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>April 1st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - C-INTERCAL; Befunge; Unlambda: Added. PR
+          <ulink url="&lfs-qol-pull;/97">(#97)</ulink></para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 29th, 2025</para>
       <itemizedlist>
         <listitem>
