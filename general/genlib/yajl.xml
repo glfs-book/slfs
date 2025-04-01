@@ -54,6 +54,12 @@
           <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-&yajl-version;-memory_leak.patch"/>
         </para>
       </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="https://github.com/lloyd/yajl/commit/6fe59ca50dfd65bdb3d1c87a27245b2dd1a072f9.patch"/>
+        </para>
+      </listitem>
     </itemizedlist>
 
     <bridgehead renderas="sect3">yajl Dependencies</bridgehead>
@@ -70,14 +76,20 @@
 
     <para>
       Since the last commit to this package is almost a decade old, issues have
-      came up and need to be fixed before building. Apply the three required
-      patches to fix the important ones:
+      came up and need to be fixed before building. Apply required patches to
+      fix the important ones:
     </para>
 
 <screen><userinput>patch -Np1 -i ../yajl-&yajl-version;-CVE-2017-16516.patch &amp;&amp;
 patch -Np1 -i ../yajl-&yajl-version;-CVE-2022-24795.patch &amp;&amp;
 patch -Np1 -i ../yajl-&yajl-version;-memory_leak.patch
 </userinput></screen>
+
+    <para>
+      Fix building with <application>CMake-4.0.0</application>:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../6fe59ca50dfd65bdb3d1c87a27245b2dd1a072f9.patch</userinput></screen>
 
     <para>
       Install <application>yajl</application> by running the following

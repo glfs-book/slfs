@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>April 1st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - yajl: Fix build with CMake-4.0.0. Fixes
+          <ulink url="&lfs-qol-issues;/96">#96</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 29th, 2025</para>
       <itemizedlist>
         <listitem>
