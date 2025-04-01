@@ -60,6 +60,16 @@ cc -o c/unlambda c/unlambda.c -I/usr/include/gc -lgc</userinput></screen>
 
   </sect2>
 
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>sed -i '32i #include &lt;stdlib.h&gt;' c/unlambda.c</command>:
+      This command fixes the compile with GCC 14 and newer.
+    </para>
+
+  </sect2>
+
   <sect2 role="content">
     <title>Contents</title>
 
