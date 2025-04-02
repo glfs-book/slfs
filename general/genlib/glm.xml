@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY glm-download-http "https://github.com/g-truc/glm/archive/&glm-version;/glm-&glm-version;.tar.gz">
+]>
+
+<sect1 id="glm" xreflabel="GLM-&glm-version;">
+  <?dbhtml filename="glm.html"?>
+
+
+  <title>GLM-&glm-version;</title>
+
+  <indexterm zone="glm">
+    <primary sortas="a-glm">GLM</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to GLM</title>
+
+    <para>
+      The GLM package provides a libary for C++ that aids in various
+      mathematics, such as algebra. It is mainly used for matrix
+      transformations and perspective in both 2D and 3D software. It is a
+      critical component of many games but is also used in other software like
+      window managers.
+    </para>
+    
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&glm-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">GLM Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of GLM</title>
+
+    <para>
+      Install <application>GLM</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr                \
+      -D CMAKE_INSTALL_DATAROOTDIR=/usr/lib/cmake \
+      -D CMAKE_BUILD_TYPE=Release                 \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON              \
+      -D BUILD_SHARED_LIBS=ON                     \
+      -D GLM_BUILD_TESTS=OFF                      \
+      -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+    <para>
+      If you want to install the API documention, run the following command as
+      the &root; user:
+    </para>
+
+<screen role="root"
+  remap="doc"><userinput>cp -vR ../doc /usr/share/doc/glm-&glm-version;</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>-D CMAKE_INSTALL_DATAROOTDIR=/usr/lib/cmake</parameter>: This
+      parameter forces this package to install <application>CMake</application>
+      files to <filename class="directory">/usr/lib/cmake</filename>.
+    </para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libglm.so
+        </seg>
+        <seg>
+          /usr/include/glm, /usr/lib/cmake/glm, and
+          /usr/share/doc/glm-&glm-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libglm">
+        <term><filename class="libraryfile">libglm.so</filename></term>
+        <listitem>
+          <para>
+            provides functions that aid with mathematics
+          </para>
+          <indexterm zone="glm libglm">
+            <primary sortas="c-libglm">libglm.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

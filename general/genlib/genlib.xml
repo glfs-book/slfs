@@ -17,11 +17,13 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="enet.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glaze.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glm.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libev.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libliftoff.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libutempter.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libzip.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minizip.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nlohmann-json.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="pugixml.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="re2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sdbus-cpp.xml"/>

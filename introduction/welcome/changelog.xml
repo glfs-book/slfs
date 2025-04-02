@@ -44,6 +44,10 @@
       <para>April 1st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - wm/wf/*: Added. Fixes
+          <ulink url="&lfs-qol-issues;/98">#98</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Hyprland: 0.48.0 -&gt; 0.48.1. Fixes
           <ulink url="&lfs-qol-issues;/95">#95</ulink>.</para>
         </listitem>

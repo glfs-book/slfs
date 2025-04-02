@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY wf-config-download-http
+    "https://github.com/WayfireWM/wf-config/releases/download/v&wf-config-version;/wf-config-&wf-config-version;.tar.xz">
+]>
+
+<sect1 id="wf-config" xreflabel="wf-config-&wf-config-version;">
+  <?dbhtml filename="wf-config.html"?>
+
+
+  <title>wf-config-&wf-config-version;</title>
+
+  <indexterm zone="wf-config">
+    <primary sortas="a-wf-config">wf-config</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to wf-config</title>
+
+    <para>
+      The wf-config package provides a library that manages configuration files
+      for <xref linkend="wayfire"/>.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&wf-config-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">wf-config Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="glm"/>,
+      <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>, and
+      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="https://github.com/doctest/doctest">doctest</ulink> (for
+      tests)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of wf-config</title>
+
+    <para>
+      Install <application>wf-config</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -D tests=disabled   \
+            .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libwf-config.so
+        </seg>
+        <seg>
+          /usr/include/wayfire
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libwf-config">
+        <term><filename class="libraryfile">libwf-config.so</filename></term>
+        <listitem>
+          <para>
+            provides functions that manage configuration files
+          </para>
+          <indexterm zone="wf-config libwf-config">
+            <primary sortas="c-libwf-config">wf-config.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
