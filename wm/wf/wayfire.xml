@@ -241,7 +241,7 @@ ninja</userinput></screen>
           zoom
         </seg>
         <seg>
-          /usr/lib/wayfire
+          /usr/lib/wayfire and /usr/share/wayfire
         </seg>
       </seglistitem>
     </segmentedlist>
