@@ -49,7 +49,7 @@
   <abstract>
     <para>
       This book is dedicated to documenting the installation of some packages
-      on an LFS system that do not appear in LFS, MLFS, BLFS, and GLFS.
+      on an x86_64 LFS system that do not appear in LFS, MLFS, BLFS, and GLFS.
     </para>
   </abstract>
 
