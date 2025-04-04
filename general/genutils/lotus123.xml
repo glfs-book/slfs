@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY lotus123-download-http "https://github.com/taviso/123elf/archive/v&lotus123-version;/123elf-v&lotus123-version;.tar.gz">
+  <!ENTITY lotus123-download-http "https://github.com/taviso/123elf/archive/v&lotus123-version;/123elf-&lotus123-version;.tar.gz">
   <!ENTITY lotus123-binutils-download-http "https://ftp.gnu.org/gnu/binutils/binutils-&lotus123-binutils-version;.tar.gz">
 ]>
 

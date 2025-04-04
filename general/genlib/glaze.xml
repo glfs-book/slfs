@@ -5,7 +5,7 @@
   %general-entities;
 
   <!ENTITY glaze-download-http
-    "https://github.com/stephenberry/glaze/archive/v&glaze-version;/glaze-v&glaze-version;.tar.gz">
+    "https://github.com/stephenberry/glaze/archive/v&glaze-version;/glaze-&glaze-version;.tar.gz">
 ]>
 
 <sect1 id="glaze" xreflabel="glaze-&glaze-version;">

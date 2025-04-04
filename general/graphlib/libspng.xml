@@ -5,7 +5,7 @@
   %general-entities;
 
   <!ENTITY libspng-download-http
-    "https://github.com/randy408/libspng/archive/v&libspng-version;/libspng-v&libspng-version;.tar.gz">
+    "https://github.com/randy408/libspng/archive/v&libspng-version;/libspng-&libspng-version;.tar.gz">
 ]>
 
 <sect1 id="libspng" xreflabel="libspng-&libspng-version;">

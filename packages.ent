@@ -1,7 +1,7 @@
 <!-- GENERAL -->
 <!-- General Libraries -->
 <!ENTITY enet-version                        "1.3.18">
-<!ENTITY glaze-version                       "5.0.1">
+<!ENTITY glaze-version                       "5.0.2">
 <!ENTITY glm-version                         "1.0.1">
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libliftoff-version                  "0.5.0">
@@ -40,7 +40,7 @@ version, so keep this at that. -->
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.39.1">
+<!ENTITY fastfetch-version                   "2.40.1">
 <!-- Programming -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
@@ -89,7 +89,7 @@ version, so keep this at that. -->
 <!-- CDE -->
 <!ENTITY cde-de-version                      "2.5.2">
 <!-- Hypr -->
-<!ENTITY hyprland-protocols-version          "0.6.2">
+<!ENTITY hyprland-protocols-version          "0.6.3">
 <!ENTITY hyprutils-version                   "0.5.2">
 <!ENTITY hyprlang-version                    "0.6.0">
 <!ENTITY hyprcursor-version                  "0.1.12">
