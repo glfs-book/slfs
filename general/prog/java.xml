@@ -4,9 +4,8 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY anduin-download             "&sources-anduin-http;/OpenJDK/OpenJDK-&openjdk-version;">
-  <!ENTITY openjdk-download-binary-x86 "&sources-anduin-http;/OpenJDK/OpenJDK-&openjdk-version;/OpenJDK-&openjdk-version;+&openjdk-build;-i686-bin.tar.xz">
-  <!ENTITY openjdk-download-binary-x64 "&sources-anduin-http;/OpenJDK/OpenJDK-&openjdk-version;/OpenJDK-&openjdk-version;+&openjdk-build;-x86_64-bin.tar.xz">
+  <!ENTITY ojdk-bin-tag            "openjdk-&openjdk-version;+&openjdk-build;-bin">
+  <!ENTITY openjdk-download-binary "&misc-dl-root;/&ojdk-bin-tag;/&ojdk-bin-tag;.tar.xz">
 ]>
 
 <sect1 id="java" xreflabel="Java-&openjdk-version;">
@@ -85,12 +84,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Binary download (x86): <ulink url="&openjdk-download-binary-x86;"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Binary download (x86_64): <ulink url="&openjdk-download-binary-x64;"/>
+          Binary download: <ulink url="&openjdk-download-binary;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -123,9 +117,9 @@
       <systemitem class="username">root</systemitem> user:
     </para>
 
-<screen role="root"><userinput>install -vdm755 /opt/OpenJDK-&openjdk-version;-bin &amp;&amp;
-mv -v * /opt/OpenJDK-&openjdk-version;-bin         &amp;&amp;
-chown -R root:root /opt/OpenJDK-&openjdk-version;-bin</userinput></screen>
+<screen role="root"><userinput>install -vdm755 /opt/openjdk-&openjdk-version;-bin &amp;&amp;
+mv -v * /opt/openjdk-&openjdk-version;-bin         &amp;&amp;
+chown -R root:root /opt/openjdk-&openjdk-version;-bin</userinput></screen>
 
     <para>
       The binary version is now installed. You may create a symlink to that
@@ -133,7 +127,7 @@ chown -R root:root /opt/OpenJDK-&openjdk-version;-bin</userinput></screen>
       user:
     </para>
 
-<screen role="root"><userinput>ln -sfn OpenJDK-&openjdk-version;-bin /opt/jdk</userinput></screen>
+<screen role="root"><userinput>ln -sfn openjdk-&openjdk-version;-bin /opt/jdk</userinput></screen>
 
     <para>
       You may now proceed to <xref linkend="ojdk-conf"/>, where the

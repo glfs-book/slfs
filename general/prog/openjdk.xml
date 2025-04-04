@@ -4,8 +4,8 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY ojdk-tarball              "jdk-&openjdk-version;-ga.tar.gz">
-  <!ENTITY ojdk-repo                 "https://github.com/openjdk/jdk19u">
+  <!ENTITY ojdk-tarball              "jdk-&openjdk-version;+&openjdk-build;.tar.gz">
+  <!ENTITY ojdk-repo                 "https://github.com/openjdk/jdk&openjdk-major-version;u">
   <!ENTITY ojdk-download             "&ojdk-repo;/archive/&ojdk-tarball;">
 ]>
 
@@ -350,8 +350,9 @@ EOF</userinput></screen>
         To check the installation, issue:
       </para>
 
-<screen role="root"><userinput>cd /opt/jdk
-bin/keytool -list -cacerts</userinput></screen>
+<screen role="root"><userinput>pushd /opt/jdk &amp;&amp;
+  bin/keytool -list -cacerts
+popd</userinput></screen>
 
     <para>
       At the prompt <computeroutput>Enter keystore password:</computeroutput>,

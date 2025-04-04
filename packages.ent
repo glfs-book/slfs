@@ -54,8 +54,9 @@ version, so keep this at that. -->
 <!ENTITY socat-version                       "1.8.0.3">
 <!ENTITY unlambda-version                    "2.0.0">
 <!-- JAVA -->
-<!ENTITY openjdk-version                     "19.0.2">
-<!ENTITY openjdk-build                       "7">
+<!ENTITY openjdk-major-version               "17">
+<!ENTITY openjdk-version                     "&openjdk-major-version;.0.15">
+<!ENTITY openjdk-build                       "5">
 <!-- Shells -->
 <!ENTITY ksh-version                         "1.0.10">
 <!-- Xorg Components -->

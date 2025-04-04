@@ -51,7 +51,8 @@
       edit the build system of this package, tick an option in the launcher
       menu, and will lose support in older Minecraft versions, including mods
       and other things. This is because version 20 and above does not support
-      Java 7, but version 19 does.
+      Java 7. Version 19 and below supports Java 7. <xref linkend="openjdk"/>
+      is used as it's an LTS release that gets security updates.
     </para></important>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
