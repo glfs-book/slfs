@@ -480,7 +480,7 @@ rm -v testgnat*</userinput></screen>
           gnatprep
         </seg>
         <seg>
-          libgnarl.{so,a}, libgnat.{so,a} in <filename class="directory">
+          libgnarl and libgnat in <filename class="directory">
           /usr/lib/gcc/&lt;arch-triplet&gt;/&gcc-version;/adalib</filename>
         </seg>
         <seg>

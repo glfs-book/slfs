@@ -67,7 +67,7 @@ make</userinput></screen>
           convickt and ick 
         </seg>
         <seg>
-          libick.a, libickec.a, libickmt.a, and libyuk.a 
+          libick, libickec, libickmt, and libyuk (all static)
         </seg>
         <seg>
           /usr/include/ick-&intercal-version; and
@@ -106,49 +106,49 @@ make</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libick">
-        <term><filename class="libraryfile">libick.a</filename></term>
+        <term><filename class="libraryfile">libick</filename></term>
         <listitem>
           <para>
             contains the runtime functions for the INTERCAL compiler
           </para>
           <indexterm zone="cintercal libick">
-            <primary sortas="c-libick">libick.a</primary>
+            <primary sortas="c-libick">libick</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libickec">
-        <term><filename class="libraryfile">libickec.a</filename></term>
+        <term><filename class="libraryfile">libickec</filename></term>
         <listitem>
           <para>
             contains the runtime functions for INTERCAL programs
           </para>
           <indexterm zone="cintercal libickec">
-            <primary sortas="c-libickec">libickec.a</primary>
+            <primary sortas="c-libickec">libickec</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libickmt">
-        <term><filename class="libraryfile">libickmt.a</filename></term>
+        <term><filename class="libraryfile">libickmt</filename></term>
         <listitem>
           <para>
-            is the multithreaded version of libick.a
+            is the multithreaded version of libick
           </para>
           <indexterm zone="cintercal libickmt">
-            <primary sortas="c-libickmt">libickmt.a</primary>
+            <primary sortas="c-libickmt">libickmt</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libyuk">
-        <term><filename class="libraryfile">libyuk.a</filename></term>
+        <term><filename class="libraryfile">libyuk</filename></term>
         <listitem>
           <para>
             contains support functions for yuk, the INTERCAL debugger
           </para>
           <indexterm zone="cintercal libyuk">
-            <primary sortas="c-libyuk">libyuk.a</primary>
+            <primary sortas="c-libyuk">libyuk</primary>
           </indexterm>
         </listitem>
       </varlistentry>

@@ -11,7 +11,6 @@
 <sect1 id="wayfire" xreflabel="Wayfire-&wayfire-version;">
   <?dbhtml filename="wayfire.html"?>
 
-
   <title>Wayfire-&wayfire-version;</title>
 
   <indexterm zone="wayfire">
@@ -164,12 +163,7 @@ ninja</userinput></screen>
       <para>
         Now inspect the file and make any changes to suit your workflow. If you
         need to know which plugins are installed, check for the Installed
-        Plugins below
-        <footnote><para>
-        The real names look like <filename
-        class="libraryfile">lib<replaceable>&lt;PLUGIN&gt;</replaceable>.so</filename>
-        in <filename class="directory">/usr/lib/wayfire</filename>
-        </para></footnote>.
+        Plugins below.
       </para>
 
     </sect3>
@@ -190,9 +184,9 @@ ninja</userinput></screen>
           wayfire
         </seg>
         <seg>
-          libwayfire-blur-base.so,
-          libwf-util.so, and
-          libwftouch.a
+          libwayfire-blur-base,
+          libwf-util, and
+          libwftouch (static)
         </seg>
         <seg>
           alpha,
@@ -264,40 +258,40 @@ ninja</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libwayfire-blur-base">
-        <term><filename class="libraryfile">libwayfire-blur-base.so</filename></term>
+        <term><filename class="libraryfile">libwayfire-blur-base</filename></term>
         <listitem>
           <para>
             provides basic functions for blur implementations in
             <application>Wayfire</application>
           </para>
           <indexterm zone="wayfire libwayfire-blur-base">
-            <primary sortas="b-libwayfire-blur-base">libwayfire-blur-base.so</primary>
+            <primary sortas="b-libwayfire-blur-base">libwayfire-blur-base</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libwf-utils">
-        <term><filename class="libraryfile">libwf-utils.so</filename></term>
+        <term><filename class="libraryfile">libwf-utils</filename></term>
         <listitem>
           <para>
             contains several functions used by
             <application>Wayfire</application> and its libraries
           </para>
           <indexterm zone="wayfire libwf-utils">
-            <primary sortas="b-libwf-utils">libwf-utils.so</primary>
+            <primary sortas="b-libwf-utils">libwf-utils</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libwftouch.a">
-        <term><filename class="libraryfile">libwftouch.a</filename></term>
+        <term><filename class="libraryfile">libwftouch</filename></term>
         <listitem>
           <para>
             is the static library for <application>Wayfire</application> touch
             functionality
           </para>
           <indexterm zone="wayfire libwftouch.a">
-            <primary sortas="b-libwftouch.a">libwftouch.a</primary>
+            <primary sortas="b-libwftouch.a">libwftouch</primary>
           </indexterm>
         </listitem>
       </varlistentry>

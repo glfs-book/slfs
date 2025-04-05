@@ -71,7 +71,7 @@ ninja</userinput></screen>
           None
         </seg>
         <seg>
-          libtomlplusplus.so
+          libtomlplusplus
         </seg>
         <seg>
           /usr/include/toml++ and /usr/lib/cmake/tomlplusplus
@@ -85,13 +85,13 @@ ninja</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libtomlplusplus">
-        <term><filename class="libraryfile">libtomlplusplus.so</filename></term>
+        <term><filename class="libraryfile">libtomlplusplus</filename></term>
         <listitem>
           <para>
             provides functions for parsing TOML
           </para>
           <indexterm zone="tomlplusplus libtomlplusplus">
-            <primary sortas="c-libtomlplusplus">libtomlplusplus.so</primary>
+            <primary sortas="c-libtomlplusplus">libtomlplusplus</primary>
           </indexterm>
         </listitem>
       </varlistentry>

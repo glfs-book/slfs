@@ -26,7 +26,6 @@
       CTIX and AT&amp;T 3B1 UNIX System Software hard disks.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -180,7 +179,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
           s4merge, s4mkfs, s4test, and s4vol
         </seg>
         <seg>
-          libs4.so
+          libs4
         </seg>
         <seg>
           None
@@ -331,7 +330,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libs4">
-        <term><filename class="libraryfile">libs4.so</filename></term>
+        <term><filename class="libraryfile">libs4</filename></term>
         <listitem>
           <para>
             provides functions for accessing AT&amp;T 3B1 UNIX
@@ -339,7 +338,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
             filesystems 
           </para>
           <indexterm zone="s4-3b1-pc7300 libs4">
-            <primary sortas="c-libs4">libs4.so</primary>
+            <primary sortas="c-libs4">libs4</primary>
           </indexterm>
         </listitem>
       </varlistentry>

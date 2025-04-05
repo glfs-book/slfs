@@ -99,7 +99,7 @@ rm -vf /usr/include/minizip/crypt.h</userinput></screen>
           None
         </seg>
         <seg>
-          libminizip.so
+          libminizip
         </seg>
         <seg>
           /usr/include/minizip
@@ -113,13 +113,13 @@ rm -vf /usr/include/minizip/crypt.h</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libminizip">
-        <term><filename class="libraryfile">libminizip.so</filename></term>
+        <term><filename class="libraryfile">libminizip</filename></term>
         <listitem>
           <para>
             contains mini zip and unzip functions
           </para>
           <indexterm zone="minizip libminizip">
-            <primary sortas="c-libminizip">libminizip.so</primary>
+            <primary sortas="c-libminizip">libminizip</primary>
           </indexterm>
         </listitem>
       </varlistentry>

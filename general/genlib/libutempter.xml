@@ -77,7 +77,7 @@ rm -vf /usr/lib/libutempter.a</userinput></screen>
           utempter
         </seg>
         <seg>
-          libutempter.so
+          libutempter
         </seg>
         <seg>
           /usr/lib/utempter
@@ -103,13 +103,13 @@ rm -vf /usr/lib/libutempter.a</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libutempter-bin">
-        <term><filename class="libraryfile">libutempter.so</filename></term>
+        <term><filename class="libraryfile">libutempter</filename></term>
         <listitem>
           <para>
             contains the utempter library interface
           </para>
           <indexterm zone="libutempter libutempter-bin">
-            <primary sortas="c-libutempter">libutempter.so</primary>
+            <primary sortas="c-libutempter">libutempter</primary>
           </indexterm>
         </listitem>
       </varlistentry>

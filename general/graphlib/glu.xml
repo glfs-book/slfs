@@ -113,7 +113,7 @@ rm -vf /usr/lib/libGLU.a</userinput></screen>
           None
         </seg>
         <seg>
-          libGLU.so
+          libGLU
         </seg>
         <seg>
           None
@@ -127,14 +127,14 @@ rm -vf /usr/lib/libGLU.a</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libGLU">
-        <term><filename class="libraryfile">libGLU.so</filename></term>
+        <term><filename class="libraryfile">libGLU</filename></term>
         <listitem>
           <para>
             is the <application>Mesa</application> OpenGL
             Utility library
           </para>
           <indexterm zone="glu libGLU">
-            <primary sortas="c-libGLU">libGLU.so</primary>
+            <primary sortas="c-libGLU">libGLU</primary>
           </indexterm>
         </listitem>
       </varlistentry>

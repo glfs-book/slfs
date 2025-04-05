@@ -109,7 +109,7 @@ ninja</userinput></screen>
           None
         </seg>
         <seg>
-          libglm.so
+          libglm
         </seg>
         <seg>
           /usr/include/glm, /usr/lib/cmake/glm, and
@@ -124,13 +124,13 @@ ninja</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libglm">
-        <term><filename class="libraryfile">libglm.so</filename></term>
+        <term><filename class="libraryfile">libglm</filename></term>
         <listitem>
           <para>
             provides functions that aid with mathematics
           </para>
           <indexterm zone="glm libglm">
-            <primary sortas="c-libglm">libglm.so</primary>
+            <primary sortas="c-libglm">libglm</primary>
           </indexterm>
         </listitem>
       </varlistentry>

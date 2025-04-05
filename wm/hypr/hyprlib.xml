@@ -32,7 +32,6 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="../../xincludes/long-build-time.xml"/>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -242,15 +241,15 @@ done</userinput></screen>
           hyprwayland-scanner
         </seg>
         <seg>
-          libaquamarine.so,
-          libhyprcursor.so,
-          libhyprgraphics.so,
-          libhyprland-quick-style-implplugin.so,
-          libhyprland-quick-style-impl.so,
-          libhyprland-quick-styleplugin.so,
-          libhyprland-quick-style.so,
-          libhyprlang.so, and
-          libhyprutils.so
+          libaquamarine,
+          libhyprcursor,
+          libhyprgraphics,
+          libhyprland-quick-style-implplugin,
+          libhyprland-quick-style-impl,
+          libhyprland-quick-styleplugin,
+          libhyprland-quick-style,
+          libhyprlang, and
+          libhyprutils
         </seg>
         <seg>
           /usr/include/{aquamarine,hyprcursor,hyprgraphics,hyprutils},
@@ -330,110 +329,110 @@ done</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libaquamarine">
-        <term><filename class="libraryfile">libaquamarine.so</filename></term>
+        <term><filename class="libraryfile">libaquamarine</filename></term>
         <listitem>
           <para>
             provides rendering backend API functions
           </para>
           <indexterm zone="hyprlib libaquamarine">
-            <primary sortas="c-libaquamarine">libaquamarine.so</primary>
+            <primary sortas="c-libaquamarine">libaquamarine</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libhyprcursor">
-        <term><filename class="libraryfile">libhyprcursor.so</filename></term>
+        <term><filename class="libraryfile">libhyprcursor</filename></term>
         <listitem>
           <para>
             provides API functions for the hyprcursor format
           </para>
           <indexterm zone="hyprlib libhyprcursor">
-            <primary sortas="c-libhyprcursor">libhyprcursor.so</primary>
+            <primary sortas="c-libhyprcursor">libhyprcursor</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libhyprgraphics">
-        <term><filename class="libraryfile">libhyprgraphics.so</filename></term>
+        <term><filename class="libraryfile">libhyprgraphics</filename></term>
         <listitem>
           <para>
             provides graphics utility functions for the Hypr ecosystem
           </para>
           <indexterm zone="hyprlib libhyprgraphics">
-            <primary sortas="c-libhyprgraphics">libhyprgraphics.so</primary>
+            <primary sortas="c-libhyprgraphics">libhyprgraphics</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libhyprland-quick-style-implplugin">
-        <term><filename class="libraryfile">libhyprland-quick-style-implplugin.so</filename></term>
+        <term><filename class="libraryfile">libhyprland-quick-style-implplugin</filename></term>
         <listitem>
           <para>
             is the <application>Hyprland</application> Quick Style IMPL plugin
           </para>
           <indexterm zone="hyprlib libhyprland-quick-style-implplugin">
-            <primary sortas="c-libhyprland-quick-style-implplugin">libhyprland-quick-style-implplugin.so</primary>
+            <primary sortas="c-libhyprland-quick-style-implplugin">libhyprland-quick-style-implplugin</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libhyprland-quick-style-impl">
-        <term><filename class="libraryfile">libhyprland-quick-style-impl.so</filename></term>
+        <term><filename class="libraryfile">libhyprland-quick-style-impl</filename></term>
         <listitem>
           <para>
             is the <application>Hyprland</application> Quick Style IMPL library
           </para>
           <indexterm zone="hyprlib libhyprland-quick-style-impl">
-            <primary sortas="c-libhyprland-quick-style-impl">libhyprland-quick-style-impl.so</primary>
+            <primary sortas="c-libhyprland-quick-style-impl">libhyprland-quick-style-impl</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libhyprland-quick-styleplugin">
-        <term><filename class="libraryfile">libhyprland-quick-styleplugin.so</filename></term>
+        <term><filename class="libraryfile">libhyprland-quick-styleplugin</filename></term>
         <listitem>
           <para>
             is the <application>Hyprland</application> Quick Style plugin
           </para>
           <indexterm zone="hyprlib libhyprland-quick-styleplugin">
-            <primary sortas="c-libhyprland-quick-styleplugin">libhyprland-quick-styleplugin.so</primary>
+            <primary sortas="c-libhyprland-quick-styleplugin">libhyprland-quick-styleplugin</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libhyprland-quick-style">
-        <term><filename class="libraryfile">libhyprland-quick-style.so</filename></term>
+        <term><filename class="libraryfile">libhyprland-quick-style</filename></term>
         <listitem>
           <para>
             is the <application>Hyprland</application> Quick Style library
           </para>
           <indexterm zone="hyprlib libhyprland-quick-style">
-            <primary sortas="c-libhyprland-quick-style">libhyprland-quick-style.so</primary>
+            <primary sortas="c-libhyprland-quick-style">libhyprland-quick-style</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libhyprlang">
-        <term><filename class="libraryfile">libhyprlang.so</filename></term>
+        <term><filename class="libraryfile">libhyprlang</filename></term>
         <listitem>
           <para>
             provides functions to parse and use the Hypr configurartion
             language
           </para>
           <indexterm zone="hyprlib libhyprlang">
-            <primary sortas="c-libhyprlang">libhyprlang.so</primary>
+            <primary sortas="c-libhyprlang">libhyprlang</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libhyprutils">
-        <term><filename class="libraryfile">libhyprutils.so</filename></term>
+        <term><filename class="libraryfile">libhyprutils</filename></term>
         <listitem>
           <para>
             provides utility functions for the Hypr ecoysystem
           </para>
           <indexterm zone="hyprlib libhyprutils">
-            <primary sortas="c-libhyprutils">libhyprutils.so</primary>
+            <primary sortas="c-libhyprutils">libhyprutils</primary>
           </indexterm>
         </listitem>
       </varlistentry>

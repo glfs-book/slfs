@@ -89,7 +89,7 @@ ninja</userinput></screen>
           None
         </seg>
         <seg>
-          libpugixml.so
+          libpugixml
         </seg>
         <seg>
           /usr/lib/cmake/pugixml
@@ -103,13 +103,13 @@ ninja</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libpugixml">
-        <term><filename class="libraryfile">libpugixml.so</filename></term>
+        <term><filename class="libraryfile">libpugixml</filename></term>
         <listitem>
           <para>
             provides functions that can help parse XML content
           </para>
           <indexterm zone="pugixml libpugixml">
-            <primary sortas="c-libpugixml">libpugixml.so</primary>
+            <primary sortas="c-libpugixml">libpugixml</primary>
           </indexterm>
         </listitem>
       </varlistentry>

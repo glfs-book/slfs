@@ -25,7 +25,6 @@
       multiple accompanying tools.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -191,7 +190,7 @@ unset YACC</userinput></screen>
           mwm, uil, and xmbind
         </seg>
         <seg>
-          libMrm.so, libUil.so, and libXm.so
+          libMrm, libUil, and libXm
         </seg>
         <seg>
           /usr/include/Mrm, /usr/include/uil, /usr/include/Xm,
@@ -242,37 +241,37 @@ unset YACC</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libMrm">
-        <term><filename class="libraryfile">libMrm.so</filename></term>
+        <term><filename class="libraryfile">libMrm</filename></term>
         <listitem>
           <para>
             is the Motif Resource Manager library
           </para>
           <indexterm zone="motif libMrm">
-            <primary sortas="c-libMrm">libMrm.so</primary>
+            <primary sortas="c-libMrm">libMrm</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libUil">
-        <term><filename class="libraryfile">libUil.so</filename></term>
+        <term><filename class="libraryfile">libUil</filename></term>
         <listitem>
           <para>
             is the Motif User Interface Language library
           </para>
           <indexterm zone="motif libUil">
-            <primary sortas="c-libUil">libUil.so</primary>
+            <primary sortas="c-libUil">libUil</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libXm">
-        <term><filename class="libraryfile">libXm.so</filename></term>
+        <term><filename class="libraryfile">libXm</filename></term>
         <listitem>
           <para>
             is the main Motif library
           </para>
           <indexterm zone="motif libXm">
-            <primary sortas="c-libXm">libXm.so</primary>
+            <primary sortas="c-libXm">libXm</primary>
           </indexterm>
         </listitem>
       </varlistentry>

@@ -88,7 +88,7 @@ ldconfig</userinput></screen>
           None
         </seg>
         <seg>
-          libev.so
+          libev
         </seg>
         <seg>
           None
@@ -102,13 +102,13 @@ ldconfig</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libev-lib">
-        <term><filename class="libraryfile">libev.so</filename></term>
+        <term><filename class="libraryfile">libev</filename></term>
         <listitem>
           <para>
             contains event loop functions
           </para>
           <indexterm zone="libev libev-lib">
-            <primary sortas="c-libev-lib">libev.so</primary>
+            <primary sortas="c-libev-lib">libev</primary>
           </indexterm>
         </listitem>
       </varlistentry>

@@ -93,7 +93,7 @@ ninja</userinput></screen>
           None
         </seg>
         <seg>
-          libre2.so
+          libre2
         </seg>
         <seg>
           /usr/include/re2 and /usr/lib/cmake/re2
@@ -107,13 +107,13 @@ ninja</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libre2">
-        <term><filename class="libraryfile">libre2.so</filename></term>
+        <term><filename class="libraryfile">libre2</filename></term>
         <listitem>
           <para>
             provides regular expression engine functions
           </para>
           <indexterm zone="re2 libre2">
-            <primary sortas="c-libre2">libre2.so</primary>
+            <primary sortas="c-libre2">libre2</primary>
           </indexterm>
         </listitem>
       </varlistentry>

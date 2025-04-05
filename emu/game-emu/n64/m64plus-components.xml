@@ -30,7 +30,6 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="../../../xincludes/long-build-time.xml"/>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -198,9 +197,7 @@ popd</userinput></screen>
     <para>
       You can choose which plugins to use, and there are various plugin types.
       Generally, the plugin name you will pass will be
-      <filename>mupen64plus-<replaceable>&lt;TYPE&gt;</replaceable>-<replaceable>&lt;NAME&gt;</replaceable></filename>
-      in
-      <filename>mupen64plus-<replaceable>&lt;TYPE&gt;</replaceable>-<replaceable>&lt;NAME&gt;</replaceable>.so</filename>.
+      <filename>mupen64plus-<replaceable>&lt;TYPE&gt;</replaceable>-<replaceable>&lt;NAME&gt;</replaceable></filename>.
       <replaceable>&lt;TYPE&gt;</replaceable> can either be
       <filename>audio</filename>, <filename>input</filename>,
       <filename>rsp</filename>, or <filename>video</filename>.
@@ -330,14 +327,14 @@ popd</userinput></screen>
           mupen64plus
         </seg>
         <seg>
-          libmupen64plus.so.2
+          libmupen64plus.2
         </seg>
         <seg>
-          mupen64plus-audio-sdl.so,
-          mupen64plus-input-sdl.so,
-          mupen64plus-rsp-hle.so,
-          mupen64plus-video-GLideN64.so, and
-          mupen64plus-video-rice.so
+          mupen64plus-audio-sdl,
+          mupen64plus-input-sdl,
+          mupen64plus-rsp-hle,
+          mupen64plus-video-GLideN64, and
+          mupen64plus-video-rice
         </seg>
         <seg>
           /usr/include/mupen64plus, /usr/lib/mupen64plus, and
@@ -365,14 +362,14 @@ popd</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libmupen64plus">
-        <term><filename class="libraryfile">libmupen64plus.so.2</filename></term>
+        <term><filename class="libraryfile">libmupen64plus</filename></term>
         <listitem>
           <para>
             is the <application>Mupen64Plus</application> core that can be used
             by various frontends and loads the necessary plugins
           </para>
           <indexterm zone="m64plus-components libmupen64plus">
-            <primary sortas="c-libmupen64plus">libmupen64plus.so.2</primary>
+            <primary sortas="c-libmupen64plus">libmupen64plus</primary>
           </indexterm>
         </listitem>
       </varlistentry>

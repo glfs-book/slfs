@@ -92,7 +92,7 @@ make</userinput></screen>
           None
         </seg>
         <seg>
-          libSDL2_net.so
+          libSDL2_net
         </seg>
         <seg>
           /usr/lib/cmake/SDL2_net
@@ -106,13 +106,13 @@ make</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libsdl2_net">
-        <term><filename class="libraryfile">libSDL2_net.so</filename></term>
+        <term><filename class="libraryfile">libSDL2_net</filename></term>
         <listitem>
           <para>
             contains networking functions
           </para>
           <indexterm zone="sdl2_net libsdl2_net">
-            <primary sortas="c-libsdl2_net">libSDL2_net.so</primary>
+            <primary sortas="c-libsdl2_net">libSDL2_net</primary>
           </indexterm>
         </listitem>
       </varlistentry>

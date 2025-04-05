@@ -25,7 +25,6 @@
       <application>Hyprland</application>.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -72,8 +71,8 @@
     <title>Installation of xdg-desktop-portal-hyprland</title>
 
     <para>
-      Install <application>xdg-desktop-portal-hyprland</application> by running the following
-      commands:
+      Install <application>xdg-desktop-portal-hyprland</application> by running
+      the following commands:
     </para>
 
 <screen><userinput>rm -rf subprojects/sdbus-cpp &amp;&amp;

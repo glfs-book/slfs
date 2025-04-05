@@ -29,7 +29,6 @@
       install Fuse2 and run the AppImages directly.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -139,7 +138,7 @@ EOF</userinput></screen>
           fusermount, mount.fuse, and ulockmgr_server
         </seg>
         <seg>
-          libfuse.so and libulockmgr.so
+          libfuse and libulockmgr
         </seg>
         <seg>
           /usr/include/fuse and /usr/share/doc/fuse-&fuse2-version;
@@ -191,26 +190,26 @@ EOF</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libfuse">
-        <term><filename class="libraryfile">libfuse.so</filename></term>
+        <term><filename class="libraryfile">libfuse</filename></term>
         <listitem>
           <para>
             contains the Fuse2 API functions
           </para>
           <indexterm zone="fuse2 libfuse">
-            <primary sortas="c-libfuse">libfuse.so</primary>
+            <primary sortas="c-libfuse">libfuse</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libulockmgr">
-        <term><filename class="libraryfile">libulockmgr.so</filename></term>
+        <term><filename class="libraryfile">libulockmgr</filename></term>
         <listitem>
           <para>
             starts <command>ulockmgr_server</command> and helps with its
             execution
           </para>
           <indexterm zone="fuse2 libulockmgr">
-            <primary sortas="c-libulockmgr">libulockmgr.so</primary>
+            <primary sortas="c-libulockmgr">libulockmgr</primary>
           </indexterm>
         </listitem>
       </varlistentry>

@@ -25,7 +25,6 @@
       library.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -68,7 +67,7 @@ make</userinput></screen>
           None
         </seg>
         <seg>
-          libenet.so
+          libenet
         </seg>
         <seg>
           /usr/include/enet
@@ -82,13 +81,13 @@ make</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libenet">
-        <term><filename class="libraryfile">libenet.so</filename></term>
+        <term><filename class="libraryfile">libenet</filename></term>
         <listitem>
           <para>
             contains UDP networking functions
           </para>
           <indexterm zone="enet libenet">
-            <primary sortas="c-libenet">libenet.so</primary>
+            <primary sortas="c-libenet">libenet</primary>
           </indexterm>
         </listitem>
       </varlistentry>

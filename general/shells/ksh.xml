@@ -23,7 +23,6 @@
       The ksh package contains the Korn Shell.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -83,7 +82,7 @@ EOF</userinput></screen>
           ksh and shcomp
         </seg>
         <seg>
-          libast.so, libcmd.so, libdll.so, and libshell.so
+          libast, libcmd, libdll, and libshell
         </seg>
         <seg>
           /usr/include/ast and /usr/share/fun
@@ -121,49 +120,49 @@ EOF</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libast">
-        <term><filename class="libraryfile">libast.so</filename></term>
+        <term><filename class="libraryfile">libast</filename></term>
         <listitem>
           <para>
             is the AT&amp;T Software Technology library
           </para>
           <indexterm zone="ksh libast">
-            <primary sortas="c-libast">libast.so</primary>
+            <primary sortas="c-libast">libast</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libcmd">
-        <term><filename class="libraryfile">libcmd.so</filename></term>
+        <term><filename class="libraryfile">libcmd</filename></term>
         <listitem>
           <para>
             contains <command>ksh</command> loadable builtins
           </para>
           <indexterm zone="ksh libcmd">
-            <primary sortas="c-libcmd">libcmd.so</primary>
+            <primary sortas="c-libcmd">libcmd</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libdll">
-        <term><filename class="libraryfile">libdll.so</filename></term>
+        <term><filename class="libraryfile">libdll</filename></term>
         <listitem>
           <para>
             contains wrappers around dlopen() and similar functions
           </para>
           <indexterm zone="ksh libdll">
-            <primary sortas="c-libdll">libdll.so</primary>
+            <primary sortas="c-libdll">libdll</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libshell">
-        <term><filename class="libraryfile">libshell.so</filename></term>
+        <term><filename class="libraryfile">libshell</filename></term>
         <listitem>
           <para>
             contains the <command>ksh</command> library interface
           </para>
           <indexterm zone="ksh libshell">
-            <primary sortas="c-libshell">libshell.so</primary>
+            <primary sortas="c-libshell">libshell</primary>
           </indexterm>
         </listitem>
       </varlistentry>

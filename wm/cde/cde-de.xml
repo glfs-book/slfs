@@ -37,7 +37,6 @@
       they will increase your machine's attack surface.</para></warning>
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -190,9 +189,9 @@ systemctl enable dtlogin.service
           and tttrace
         </seg>
         <seg>
-          libcsa.so, libDtHelp.so, libDtMmdb.so, libDtMrm.so, libDtPrint.so,
-          libDtSearch.so, libDtSvc.so, libDtTerm.so, libDtWidget.so,
-          libDtXinerama.so, and libtt.so
+          libcsa, libDtHelp, libDtMmdb, libDtMrm, libDtPrint,
+          libDtSearch, libDtSvc, libDtTerm, libDtWidget,
+          libDtXinerama, and libtt
         </seg>
         <seg>
           /usr/dt, /usr/etc/cde, /usr/include/csa, /usr/include/Dt,
@@ -1269,133 +1268,133 @@ systemctl enable dtlogin.service
       </varlistentry>
 
       <varlistentry id="libcsa">
-        <term><filename class="libraryfile">libcsa.so</filename></term>
+        <term><filename class="libraryfile">libcsa</filename></term>
         <listitem>
           <para>
             is a helper library for <command>dtcm</command>
           </para>
           <indexterm zone="cde-de libcsa">
-            <primary sortas="c-libcsa">libcsa.so</primary>
+            <primary sortas="c-libcsa">libcsa</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libDtHelp">
-        <term><filename class="libraryfile">libDtHelp.so</filename></term>
+        <term><filename class="libraryfile">libDtHelp</filename></term>
         <listitem>
           <para>
             contains the CDE online help functions
           </para>
           <indexterm zone="cde-de libDtHelp">
-            <primary sortas="c-libDtHelp">libDtHelp.so</primary>
+            <primary sortas="c-libDtHelp">libDtHelp</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libDtMmdb">
-        <term><filename class="libraryfile">libDtMmdb.so</filename></term>
+        <term><filename class="libraryfile">libDtMmdb</filename></term>
         <listitem>
           <para>
             contains the CDE multimedia database functions
           </para>
           <indexterm zone="cde-de libDtMmdb">
-            <primary sortas="c-libDtMmdb">libDtMmdb.so</primary>
+            <primary sortas="c-libDtMmdb">libDtMmdb</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libDtMrm">
-        <term><filename class="libraryfile">libDtMrm.so</filename></term>
+        <term><filename class="libraryfile">libDtMrm</filename></term>
         <listitem>
           <para>
             contains the UIL Resource Manager functions
           </para>
           <indexterm zone="cde-de libDtMrm">
-            <primary sortas="c-libDtMrm">libDtMrm.so</primary>
+            <primary sortas="c-libDtMrm">libDtMrm</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libDtPrint">
-        <term><filename class="libraryfile">libDtPrint.so</filename></term>
+        <term><filename class="libraryfile">libDtPrint</filename></term>
         <listitem>
           <para>
             contains print-specific GUIs
           </para>
           <indexterm zone="cde-de libDtPrint">
-            <primary sortas="c-libDtPrint">libDtPrint.so</primary>
+            <primary sortas="c-libDtPrint">libDtPrint</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libDtSearch">
-        <term><filename class="libraryfile">libDtSearch.so</filename></term>
+        <term><filename class="libraryfile">libDtSearch</filename></term>
         <listitem>
           <para>
             contains the CDE search functions
           </para>
           <indexterm zone="cde-de libDtSearch">
-            <primary sortas="c-libDtSearch">libDtSearch.so</primary>
+            <primary sortas="c-libDtSearch">libDtSearch</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libDtSvc">
-        <term><filename class="libraryfile">libDtSvc.so</filename></term>
+        <term><filename class="libraryfile">libDtSvc</filename></term>
         <listitem>
           <para>
             contains the CDE service functions for desktop management
           </para>
           <indexterm zone="cde-de libDtSvc">
-            <primary sortas="c-libDtSvc">libDtSvc.so</primary>
+            <primary sortas="c-libDtSvc">libDtSvc</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libDtTerm">
-        <term><filename class="libraryfile">libDtTerm.so</filename></term>
+        <term><filename class="libraryfile">libDtTerm</filename></term>
         <listitem>
           <para>
             is a helper library for <command>dtterm</command>
           </para>
           <indexterm zone="cde-de libDtTerm">
-            <primary sortas="c-libDtTerm">libDtTerm.so</primary>
+            <primary sortas="c-libDtTerm">libDtTerm</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libDtWidget">
-        <term><filename class="libraryfile">libDtWidget.so</filename></term>
+        <term><filename class="libraryfile">libDtWidget</filename></term>
         <listitem>
           <para>
             contains the CDE widgets
           </para>
           <indexterm zone="cde-de libDtWidget">
-            <primary sortas="c-libDtWidget">libDtWidget.so</primary>
+            <primary sortas="c-libDtWidget">libDtWidget</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libDtXinerama">
-        <term><filename class="libraryfile">libDtXinerama.so</filename></term>
+        <term><filename class="libraryfile">libDtXinerama</filename></term>
         <listitem>
           <para>
             is a Xinerama wrapper for CDE
           </para>
           <indexterm zone="cde-de libDtXinerama">
-            <primary sortas="c-libDtXinerama">libDtXinerama.so</primary>
+            <primary sortas="c-libDtXinerama">libDtXinerama</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 
       <varlistentry id="libtt">
-        <term><filename class="libraryfile">libtt.so</filename></term>
+        <term><filename class="libraryfile">libtt</filename></term>
         <listitem>
           <para>
             contains the ToolTalk routines
           </para>
           <indexterm zone="cde-de libtt">
-            <primary sortas="c-libtt">libtt.so</primary>
+            <primary sortas="c-libtt">libtt</primary>
           </indexterm>
         </listitem>
       </varlistentry>

@@ -76,7 +76,7 @@ ninja</userinput></screen>
           None
         </seg>
         <seg>
-          libliftoff.so
+          libliftoff
         </seg>
         <seg>
           None
@@ -90,13 +90,13 @@ ninja</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libliftoff-lib">
-        <term><filename class="libraryfile">libliftoff.so</filename></term>
+        <term><filename class="libraryfile">libliftoff</filename></term>
         <listitem>
           <para>
             provides functions that can work with KMS planes
           </para>
           <indexterm zone="libliftoff libliftoff-lib">
-            <primary sortas="c-libliftoff-lib">libliftoff.so</primary>
+            <primary sortas="c-libliftoff-lib">libliftoff</primary>
           </indexterm>
         </listitem>
       </varlistentry>

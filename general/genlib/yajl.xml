@@ -142,7 +142,7 @@ rm -vf /usr/lib/libyajl_s.a</userinput></screen>
           json_reformat and json_verify
         </seg>
         <seg>
-          libyajl.so
+          libyajl
         </seg>
         <seg>
           /usr/include/yajl
@@ -180,13 +180,13 @@ rm -vf /usr/lib/libyajl_s.a</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libyajl">
-        <term><filename class="libraryfile">libyajl.so</filename></term>
+        <term><filename class="libraryfile">libyajl</filename></term>
         <listitem>
           <para>
             provides functions that can help with parsing JSON in C
           </para>
           <indexterm zone="yajl libyajl">
-            <primary sortas="c-libyajl">libyajl.so</primary>
+            <primary sortas="c-libyajl">libyajl</primary>
           </indexterm>
         </listitem>
       </varlistentry>

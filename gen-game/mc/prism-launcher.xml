@@ -25,7 +25,6 @@
       Launcher.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -119,7 +118,6 @@ ninja</userinput></screen>
 
   </sect2>
 
-
   <sect2 role="content">
     <title>Contents</title>
 
@@ -133,7 +131,7 @@ ninja</userinput></screen>
           prismlauncher
         </seg>
         <seg>
-          JavaCheck.jar, NewLaunch.jar, and NewLaunchLegacy.jar
+          JavaCheck, NewLaunch, and NewLaunchLegacy (all Java libraries)
         </seg>
         <seg>
           /usr/share/{PrismLauncher,qlogging-categories6}

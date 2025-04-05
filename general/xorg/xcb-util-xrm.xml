@@ -24,7 +24,6 @@
       functions for the X Resource Manager.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -76,7 +75,7 @@ make</userinput></screen>
           None
         </seg>
         <seg>
-          libxcb-xrm.so
+          libxcb-xrm
         </seg>
         <seg>
           None
@@ -90,13 +89,13 @@ make</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libxcb-xrm">
-        <term><filename class="libraryfile">libxcb-xrm.so</filename></term>
+        <term><filename class="libraryfile">libxcb-xrm</filename></term>
         <listitem>
           <para>
             provides utility functions for the X Resource Manager, or XRM
           </para>
           <indexterm zone="xcb-util-xrm libxcb-xrm">
-            <primary sortas="c-libxcb-xrm">libxcb-xrm.so</primary>
+            <primary sortas="c-libxcb-xrm">libxcb-xrm</primary>
           </indexterm>
         </listitem>
       </varlistentry>

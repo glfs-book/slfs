@@ -23,7 +23,6 @@
       The libXp package contains a library implementing the X Print Protocol.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -74,7 +73,7 @@ make</userinput></screen>
           None
         </seg>
         <seg>
-          libXp.so
+          libXp
         </seg>
         <seg>
           None
@@ -88,13 +87,13 @@ make</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libXp">
-        <term><filename class="libraryfile">libXp.so</filename></term>
+        <term><filename class="libraryfile">libXp</filename></term>
         <listitem>
           <para>
             is the X Print library
           </para>
           <indexterm zone="libxp libXp">
-            <primary sortas="c-libXp">libXp.so</primary>
+            <primary sortas="c-libXp">libXp</primary>
           </indexterm>
         </listitem>
       </varlistentry>

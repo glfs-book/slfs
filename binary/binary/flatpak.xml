@@ -29,7 +29,6 @@
       instead.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -159,7 +158,7 @@ ninja</userinput></screen>
           mime-database.trigger
         </seg>
         <seg>
-          libflatpak.so
+          libflatpak
         </seg>
         <seg>
           /usr/include/flatpak, /usr/lib/sysusers.d, and
@@ -349,14 +348,14 @@ ninja</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libflatpak">
-        <term><filename class="libraryfile">libflatpak.so</filename></term>
+        <term><filename class="libraryfile">libflatpak</filename></term>
         <listitem>
           <para>
             contains functions used by the <application>Flatpak</application>
             utilities
           </para>
           <indexterm zone="flatpak libflatpak">
-            <primary sortas="c-libflatpak">libflatpak.so</primary>
+            <primary sortas="c-libflatpak">libflatpak</primary>
           </indexterm>
         </listitem>
       </varlistentry>

@@ -11,7 +11,6 @@
 <sect1 id="wf-config" xreflabel="wf-config-&wf-config-version;">
   <?dbhtml filename="wf-config.html"?>
 
-
   <title>wf-config-&wf-config-version;</title>
 
   <indexterm zone="wf-config">
@@ -90,7 +89,7 @@ ninja</userinput></screen>
           None
         </seg>
         <seg>
-          libwf-config.so
+          libwf-config
         </seg>
         <seg>
           /usr/include/wayfire
@@ -104,13 +103,13 @@ ninja</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libwf-config">
-        <term><filename class="libraryfile">libwf-config.so</filename></term>
+        <term><filename class="libraryfile">libwf-config</filename></term>
         <listitem>
           <para>
             provides functions that manage configuration files
           </para>
           <indexterm zone="wf-config libwf-config">
-            <primary sortas="c-libwf-config">wf-config.so</primary>
+            <primary sortas="c-libwf-config">wf-config</primary>
           </indexterm>
         </listitem>
       </varlistentry>

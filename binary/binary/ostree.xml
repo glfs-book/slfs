@@ -25,7 +25,6 @@
       required by <xref linkend="flatpak"/>.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -92,7 +91,7 @@ make</userinput></screen>
           ostree, ostree-prepare-root, ostree-remount, and rofiles-fuse
         </seg>
         <seg>
-          libostree-1.so
+          libostree-1
         </seg>
         <seg>
           /etc/ostree/remotes.d, /usr/include/ostree-1, /usr/lib/ostree,
@@ -158,13 +157,13 @@ make</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libostree-1">
-        <term><filename class="libraryfile">libostree-1.so</filename></term>
+        <term><filename class="libraryfile">libostree-1</filename></term>
         <listitem>
           <para>
             contains functions for managing filesystem trees
           </para>
           <indexterm zone="ostree libostree-1">
-            <primary sortas="c-libostree-1">libostree-1.so</primary>
+            <primary sortas="c-libostree-1">libostree-1</primary>
           </indexterm>
         </listitem>
       </varlistentry>

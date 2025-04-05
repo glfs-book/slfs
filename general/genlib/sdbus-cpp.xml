@@ -110,7 +110,7 @@ mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</userinput></screen>
           None
         </seg>
         <seg>
-          libsdbus-c++.so
+          libsdbus-c++
         </seg>
         <seg>
           /usr/include/sdbus-c++, /usr/lib/cmake/sdbus-c++, and
@@ -125,13 +125,13 @@ mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libsdbus-cpp">
-        <term><filename class="libraryfile">libsdbus-c++.so</filename></term>
+        <term><filename class="libraryfile">libsdbus-c++</filename></term>
         <listitem>
           <para>
             provides API functions for <application>D-Bus</application> in C++
           </para>
           <indexterm zone="sdbus-cpp libsdbus-cpp">
-            <primary sortas="c-libsdbus-cpp">libsdbus-c++.so</primary>
+            <primary sortas="c-libsdbus-cpp">libsdbus-c++</primary>
           </indexterm>
         </listitem>
       </varlistentry>
