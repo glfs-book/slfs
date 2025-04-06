@@ -46,6 +46,13 @@
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
+    <bridgehead renderas="sect4">Optional</bridgehead>
+
+    <para role="optional">
+      <ulink url="https://git.sr.ht/~sircmpwn/scdoc">scdoc</ulink>
+      (to build the man pages)
+    </para>
+
     &build-use-internet;
 
   </sect2>
@@ -72,6 +79,32 @@
 install -vDm755 extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg  &amp;&amp;
 install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/
 </userinput></screen>
+
+    <para>
+      If you wish to install shell completions, execute the relevant commands
+      for your shell(s) as the <systemitem class="username">root</systemitem>
+      user:
+    </para>
+<screen role="root"><userinput>install -vDm644 extra/completions/alacritty.bash /usr/share/bash-completion/completions/alacritty
+install -vDm644 extra/completions/_alacritty /usr/share/zsh/site-functions/_alacritty
+install -vDm644 extra/completions/alacritty.fish /usr/share/fish/vendor_completions.d/alacritty.fish</userinput></screen>
+
+    <para>
+      If you installed <application>scdoc</application> and wish to build the
+      man pages, execute the following commands:
+    </para>
+<screen><userinput>pushd extra/man &amp;&amp;
+for f in *.scd; do
+    scdoc &lt; $f &gt; ${f%.*}
+done &amp;&amp;
+popd</userinput></screen>
+
+    <para>
+      If you built the man pages, install them as the
+      <systemitem class="username">root</systemitem> user:
+    </para>
+<screen role="root"><userinput>install -vDm644 extra/man/*.1 -t /usr/share/man/man1 &amp;&amp;
+install -vDm644 extra/man/*.5 -t /usr/share/man/man5</userinput></screen>
 
     <para>
       If you wish to install the documentation, execute the following as the
