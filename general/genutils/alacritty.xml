@@ -38,7 +38,6 @@
     <bridgehead renderas="sect4">Required</bridgehead>
 
     <para role="required">
-      <ulink url="&blfs-svn;/general/desktop-file-utils.html">desktop-file-utils</ulink>,
       <ulink url="&blfs-svn;/general/fontconfig.html">fontconfig</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">freetype</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
@@ -69,20 +68,17 @@
       Now, as the <systemitem class="username">root</systemitem> user:
     </para>
 
-    <screen role="root"><userinput>install -vm755 target/release/alacritty /usr/bin/alacritty                              &amp;&amp;
-install -vDm755 extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg          &amp;&amp;
-desktop-file-install -m 644 --dir=/usr/share/applications extra/linux/Alacritty.desktop &amp;&amp;
-update-desktop-database</userinput></screen>
-
-    <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" -->
-    <!--   href="../../xincludes/update-desktop-database.xml"/> -->
+<screen role="root"><userinput>install -vm755 target/release/alacritty /usr/bin/alacritty                      &amp;&amp;
+install -vDm755 extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg  &amp;&amp;
+install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/
+</userinput></screen>
 
     <para>
       If you wish to install the documentation, execute the following as the
       <systemitem class="username">root</systemitem> user:
     </para>
 
-    <screen role="root"><userinput>install -vDm644 docs/* -t /usr/share/doc/alacritty-&alacritty-version; &amp;&amp;
+<screen remap="doc" role="root"><userinput>install -vDm644 docs/* -t /usr/share/doc/alacritty-&alacritty-version; &amp;&amp;
 install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput></screen>
 
   </sect2>
@@ -91,11 +87,13 @@ install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput
     <title>Command Explanations</title>
 
     <para>
-      <command>cargo build --no-default-features --features=x11</command>: This command builds Alacritty without wayland support.
+      <command>cargo build --no-default-features --features=x11</command>: This
+      command builds Alacritty without wayland support.
     </para>
 
     <para>
-      <command>cargo build --no-default-features --features=wayland</command>: This command builds Alacritty without X11 support.
+      <command>cargo build --no-default-features --features=wayland</command>:
+      This command builds Alacritty without X11 support.
     </para>
 
   </sect2>
@@ -130,7 +128,7 @@ install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput
         <term><command>alacritty</command></term>
         <listitem>
           <para>
-            is the fast, cross-platform OpenGL terminal emulator
+            is a fast, cross-platform OpenGL terminal emulator
           </para>
           <indexterm zone="alacritty alacritty-bin">
             <primary sortas="alacritty-bin">alacritty</primary>

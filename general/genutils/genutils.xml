@@ -15,6 +15,7 @@
     used by packages that appear later in the book.
   </para>
 
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="alacritty.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="htop.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="btop.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="jstest-sdl.xml"/>
@@ -25,6 +26,5 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ncompress.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="neofetch.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fastfetch.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="alacritty.xml"/>
 
 </chapter>
