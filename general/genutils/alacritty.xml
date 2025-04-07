@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY alacritty-download-http "https://github.com/alacritty/alacritty/archive/v&alacritty-version;/alacritty-&alacritty-version;.tar.gz">
+]>
+
+<sect1 id="alacritty" xreflabel="alacritty-&alacritty-version;">
+  <?dbhtml filename="alacritty.html"?>
+
+
+  <title>Alacritty-&alacritty-version;</title>
+
+  <indexterm zone="alacritty">
+    <primary sortas="a-alacritty">alacritty</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Alacritty</title>
+
+    <para>
+      The <application>Alacritty</application> package provides a fast,
+      cross-platform OpenGL terminal emulator.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&alacritty-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Alacritty Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+
+    <para role="required">
+      <ulink url="&blfs-svn;/general/fontconfig.html">fontconfig</ulink>,
+      <ulink url="&blfs-svn;/general/freetype2.html">freetype</ulink>,
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/general/rust.html">rustc</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+
+    <para role="optional">
+      <ulink url="https://git.sr.ht/~sircmpwn/scdoc">scdoc</ulink>
+      (to build the man pages)
+    </para>
+
+    &build-use-internet;
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Alacritty</title>
+
+    <para>
+      Install <application>Alacritty</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>cargo build --release</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>cargo test --release</command>.
+    </para>
+
+    <para>
+      If you installed <application>scdoc</application> and wish to build the
+      man pages, execute the following commands:
+    </para>
+<screen><userinput>pushd extra/man &amp;&amp;
+for f in *.scd; do
+    scdoc &lt; $f &gt; ${f%.*}
+done &amp;&amp;
+popd</userinput></screen>
+
+    <para>
+      Now, as the <systemitem class="username">root</systemitem> user:
+    </para>
+
+<screen role="root"><userinput>install -vm755 target/release/alacritty /usr/bin/alacritty                      &amp;&amp;
+install -vDm755 extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg  &amp;&amp;
+install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/</userinput></screen>
+
+    <para>
+      If you wish to install shell completions, execute the relevant commands
+      for your shell(s) as the <systemitem class="username">root</systemitem>
+      user:
+    </para>
+<screen role="root"><userinput>install -vDm644 extra/completions/alacritty.bash /usr/share/bash-completion/completions/alacritty
+install -vDm644 extra/completions/_alacritty /usr/share/zsh/site-functions/_alacritty
+install -vDm644 extra/completions/alacritty.fish /usr/share/fish/vendor_completions.d/alacritty.fish</userinput></screen>
+
+    <para>
+      If you built the man pages, install them as the
+      <systemitem class="username">root</systemitem> user:
+    </para>
+<screen role="root"><userinput>install -vDm644 extra/man/*.1 -t /usr/share/man/man1 &amp;&amp;
+install -vDm644 extra/man/*.5 -t /usr/share/man/man5</userinput></screen>
+
+    <para>
+      If you wish to install the documentation, execute the following as the
+      <systemitem class="username">root</systemitem> user:
+    </para>
+
+<screen remap="doc" role="root"><userinput>install -vDm644 docs/* -t /usr/share/doc/alacritty-&alacritty-version; &amp;&amp;
+install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>cargo build --no-default-features --features=x11</command>: This
+      command builds Alacritty without wayland support.
+    </para>
+
+    <para>
+      <command>cargo build --no-default-features --features=wayland</command>:
+      This command builds Alacritty without X11 support.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          alacritty
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/alacritty-&alacritty-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="alacritty-bin">
+        <term><command>alacritty</command></term>
+        <listitem>
+          <para>
+            is a fast, cross-platform OpenGL terminal emulator
+          </para>
+          <indexterm zone="alacritty alacritty-bin">
+            <primary sortas="alacritty-bin">alacritty</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
