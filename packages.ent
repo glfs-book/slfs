@@ -41,7 +41,7 @@ version, so keep this at that. -->
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.40.1">
+<!ENTITY fastfetch-version                   "2.40.3">
 <!-- Programming -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
