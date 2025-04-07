@@ -72,13 +72,22 @@
     </para>
 
     <para>
+      If you installed <application>scdoc</application> and wish to build the
+      man pages, execute the following commands:
+    </para>
+<screen><userinput>pushd extra/man &amp;&amp;
+for f in *.scd; do
+    scdoc &lt; $f &gt; ${f%.*}
+done &amp;&amp;
+popd</userinput></screen>
+
+    <para>
       Now, as the <systemitem class="username">root</systemitem> user:
     </para>
 
 <screen role="root"><userinput>install -vm755 target/release/alacritty /usr/bin/alacritty                      &amp;&amp;
 install -vDm755 extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg  &amp;&amp;
-install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/
-</userinput></screen>
+install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/</userinput></screen>
 
     <para>
       If you wish to install shell completions, execute the relevant commands
@@ -88,16 +97,6 @@ install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/
 <screen role="root"><userinput>install -vDm644 extra/completions/alacritty.bash /usr/share/bash-completion/completions/alacritty
 install -vDm644 extra/completions/_alacritty /usr/share/zsh/site-functions/_alacritty
 install -vDm644 extra/completions/alacritty.fish /usr/share/fish/vendor_completions.d/alacritty.fish</userinput></screen>
-
-    <para>
-      If you installed <application>scdoc</application> and wish to build the
-      man pages, execute the following commands:
-    </para>
-<screen><userinput>pushd extra/man &amp;&amp;
-for f in *.scd; do
-    scdoc &lt; $f &gt; ${f%.*}
-done &amp;&amp;
-popd</userinput></screen>
 
     <para>
       If you built the man pages, install them as the
