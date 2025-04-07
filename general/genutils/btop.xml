@@ -55,7 +55,7 @@
       commands:
     </para>
 
-<screen><userinput>make all</userinput></screen>
+<screen><userinput>make</userinput></screen>
 
     <para>
       Now, as the &root; user:
