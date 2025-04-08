@@ -13,6 +13,7 @@
 <!ENTITY re2-version                         "2024-07-02">
 <!ENTITY sdbus-cpp-version                   "2.1.0">
 <!ENTITY sdl2_net-version                    "2.2.0">
+<!ENTITY tllist-version                      "1.1.0">
 <!ENTITY tomlplusplus-version                "3.4.0">
 <!ENTITY yajl-version                        "2.1.0">
 <!-- Graphical Libraries -->
