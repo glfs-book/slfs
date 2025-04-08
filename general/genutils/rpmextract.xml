@@ -96,7 +96,7 @@ ln -sfv rpmextract.sh /usr/bin/rpmextract</userinput></screen>
         <term><command>rpm2cpio</command></term>
         <listitem>
           <para>
-            converts an RPM file to a CPIO archive.
+            converts an RPM file to a CPIO archive
           </para>
           <indexterm zone="rpmextract rpm2cpio">
             <primary sortas="b-rpm2cpio">rpm2cpio</primary>
