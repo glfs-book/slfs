@@ -42,6 +42,7 @@ version, so keep this at that. -->
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
 <!ENTITY fastfetch-version                   "2.40.3">
+<!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.3">
 <!-- Programming -->
 <!ENTITY befunge-minor-version               "2_25">

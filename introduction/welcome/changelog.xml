@@ -44,6 +44,10 @@
       <para>April 7th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - rpmextract: Added. Fixes
+          <ulink url="&lfs-qol-issues;/108">#108</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - scdoc: Added. Fixes
           <ulink url="&lfs-qol-issues;/107">#107</ulink>.</para>
         </listitem>

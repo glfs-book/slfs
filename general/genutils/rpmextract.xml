@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY rpmextract-common-dl "https://gitlab.archlinux.org/archlinux/packaging/packages/rpmextract/-/raw/main">
+]>
+
+<sect1 id="rpmextract" xreflabel="rpmextract-&rpmextract-version;">
+  <?dbhtml filename="rpmextract.html"?>
+
+  <title>rpmextract-&rpmextract-version;</title>
+
+  <indexterm zone="rpmextract">
+    <primary sortas="a-rpmextract">rpmextract</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to rpmextract</title>
+
+    <para>
+      The <application>rpmextract</application> package provides tools for
+      extracting <filename class="extension">.rpm</filename> files.
+    </para>
+
+    <bridgehead renderas="sect3">rpmextract Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/libarchive.html">libarchive</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Downloading rpmextract</title>
+
+    <para>
+      To download the <application>rpmextract</application> files with <ulink
+      url="&blfs-svn;/basicnet/wget.html">wget</ulink>, run the following
+      instructions:
+    </para>
+
+<screen><userinput>mkdir rmpextract-&rpmextract-version; &amp;&amp;
+cd    rmpextract-&rpmextract-version; &amp;&amp;
+for i in {rpm2cpio,rpmextract.sh}; do
+  echo $i | wget -i- -c \
+    -B &rpmextract-common-dl;/
+done</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of rpmextract</title>
+
+    <para>
+      Install <application>rpmextract</application> by executing the following
+      commands as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vm755 rpm2cpio rpmextract.sh /usr/bin &amp;&amp;
+ln -sfv rpmextract.sh /usr/bin/rpmextract</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          rpm2cpio,
+          rpmextract (link to rpmextract.sh), and
+          rpmextract.sh
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="rpm2cpio">
+        <term><command>rpm2cpio</command></term>
+        <listitem>
+          <para>
+            converts an RPM file to a CPIO archive.
+          </para>
+          <indexterm zone="rpmextract rpm2cpio">
+            <primary sortas="b-rpm2cpio">rpm2cpio</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rpmextract-bin">
+        <term><command>rpmextract</command></term>
+        <listitem>
+          <para>
+            symlink pointing to <command>rpmextract.sh</command>
+          </para>
+          <indexterm zone="rpmextract rpmextract-bin">
+            <primary sortas="b-rpmextract-bin">rpmextract</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rpmextract-sh">
+        <term><command>rpmextract.sh</command></term>
+        <listitem>
+          <para>
+            extracts RPM files
+          </para>
+          <indexterm zone="rpmextract rpmextract-sh">
+            <primary sortas="b-rpmextract-sh">rpmextract.sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
+</sect1>
