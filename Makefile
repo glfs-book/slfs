@@ -10,6 +10,7 @@
 
 # Adjust these to suit your installation, or include the variables
 # you wish to change in local.mk, which must be created manually.
+AUTO_CLEAN         ?= 1
 LFS_QOL_THEME      ?= dark
 LFS_QOL_THEME_PATH ?= stylesheets/lfs-xsl
 RENDERTMP          := $(shell mktemp -d)
@@ -28,6 +29,11 @@ ifdef V
   Q =
 else
   Q = @
+endif
+
+CLEAN = rm -rf $(RENDERTMP)
+ifeq ($(AUTO_CLEAN), 0)
+  CLEAN =
 endif
 
 ifndef REV
@@ -155,11 +161,12 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
       sed -i -e "1,20s@text/html@application/xhtml+xml@g" $$filename; \
    done;
 
-	$(Q)rm -rf $(RENDERTMP)
+	$(Q)$(CLEAN)
 
 validate: $(RENDERTMP)/$(LFS_QOLFULL)
 $(RENDERTMP)/$(LFS_QOLFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
 	$(Q)[ -d $(RENDERTMP) ] || mkdir -p $(RENDERTMP)
+	$(Q)trap '$(CLEAN)' EXIT
 
 	@echo "Rendering the book for $(REV)..."
 	$(Q)xsltproc --nonet                               \
@@ -225,7 +232,10 @@ $(BASEDIR)/test-links: $(RENDERTMP)/$(LFS_QOLFULL) version
          fi; \
    done
 
+	$(Q)$(CLEAN)
+
 bootscripts:
+	$(Q)trap '$(CLEAN)' EXIT
 	@VERSION=`grep "bootscripts-version " general.ent | cut -d\" -f2`; \
    BOOTSCRIPTS="lfs-qol-bootscripts-$$VERSION";                       \
    if [ ! -e $$BOOTSCRIPTS.tar.xz ]; then                             \
@@ -236,7 +246,10 @@ bootscripts:
      tar  -cJhf $$BOOTSCRIPTS.tar.xz -C $(RENDERTMP) $$BOOTSCRIPTS;   \
    fi
 
+	$(Q)$(CLEAN)
+
 systemd-units:
+	$(Q)trap '$(CLEAN)' EXIT
 		@VERSION=`grep "systemd-units-version " general.ent | cut -d\" -f2`; \
 	UNITS="lfs-qol-systemd-units-$$VERSION";                                \
 	if [ ! -e $$UNITS.tar.xz ]; then                                     \
@@ -246,8 +259,12 @@ systemd-units:
 		tar -cJhf $$UNITS.tar.xz -C $(RENDERTMP) $$UNITS;                  \
 	fi
 
+	$(Q)$(CLEAN)
+
 test-options:
+	$(Q)trap '$(CLEAN)' EXIT
 	$(Q)xsltproc --xinclude --nonet stylesheets/test-options.xsl index.xml
+	$(Q)$(CLEAN)
 
 dump-commands: $(DUMPDIR)
 $(DUMPDIR): $(RENDERTMP)/$(LFS_QOLFULL) version
@@ -256,9 +273,9 @@ $(DUMPDIR): $(RENDERTMP)/$(LFS_QOLFULL) version
                 stylesheets/dump-commands.xsl \
                 $(RENDERTMP)/$(LFS_QOLFULL)
 	$(Q)touch $(DUMPDIR)
-	$(Q)rm -rf $(RENDERTMP)
+	$(Q)$(CLEAN)
 
-.PHONY: lfs-qol all world html clean validate profile-html wget-list \
+.PHONY: lfs-qol all world html validate profile-html wget-list \
   test-links dump-commands bootscripts systemd-units version test-options
 
 version:
