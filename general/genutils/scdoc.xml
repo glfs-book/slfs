@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY scdoc-download-http "https://git.sr.ht/~sircmpwn/scdoc/archive/&scdoc-version;.tar.gz">
+]>
+
+<sect1 id="scdoc" xreflabel="scdoc-&scdoc-version;">
+  <?dbhtml filename="scdoc.html"?>
+
+  <title>scdoc-&scdoc-version;</title>
+
+  <indexterm zone="scdoc">
+    <primary sortas="a-scdoc">scdoc</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to scdoc</title>
+
+    <para>
+      The <application>scdoc</application> package provides a man page
+      generator.
+    </para>
+
+    
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&scdoc-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of scdoc</title>
+
+    <para>
+      Install <application>scdoc</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>make PREFIX=/usr LDFLAGS="$LDFLAGS"</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <envar>LDFLAGS="$LDFLAGS"</envar>: This ensures that if
+      <envar>$LDFLAGS</envar> is set, that the build system respects it.
+      Otherwise, it will unset the variable for the build process.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          scdoc
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="scdoc-bin">
+        <term><command>scdoc</command></term>
+        <listitem>
+          <para>
+            generates man pages
+          </para>
+          <indexterm zone="scdoc scdoc-bin">
+            <primary sortas="b-scdoc-bin">scdoc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
+</sect1>

@@ -60,7 +60,7 @@
       <ulink url="&arch-pkgs;/extra/x86_64/ghc-filesystem/">ghc_filesystem</ulink>,
       <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/quazip/">QuaZip</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/scdoc/">scdoc</ulink>, and
+      <xref linkend="scdoc"/>, and
       <xref linkend="tomlplusplus"/>
     </para>
 

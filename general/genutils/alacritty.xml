@@ -49,8 +49,7 @@
     <bridgehead renderas="sect4">Optional</bridgehead>
 
     <para role="optional">
-      <ulink url="https://git.sr.ht/~sircmpwn/scdoc">scdoc</ulink>
-      (to build the man pages)
+      <xref linkend="scdoc"/> (to build the man pages)
     </para>
 
     &build-use-internet;

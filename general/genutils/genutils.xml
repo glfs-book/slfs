@@ -26,5 +26,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ncompress.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="neofetch.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fastfetch.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="scdoc.xml"/>
 
 </chapter>

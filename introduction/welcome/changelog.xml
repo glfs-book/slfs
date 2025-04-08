@@ -44,6 +44,10 @@
       <para>April 7th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - scdoc: Added. Fixes
+          <ulink url="&lfs-qol-issues;/107">#107</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - hyprgraphics: 0.1.2 -> 0.1.3;
           hyprutils: 0.5.2 -> 0.6.0; hyprland-protocols: 0.6.3 -> 0.6.4.
           Fixes <ulink url="&lfs-qol-issues;/110">#110</ulink>,
