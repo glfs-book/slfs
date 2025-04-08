@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY wbg-download-http
+    "https://codeberg.org/dnkl/wbg/releases/download/&wbg-version;/wbg-&wbg-version;.tar.gz">
+]>
+
+<sect1 id="wbg" xreflabel="wbg-&wbg-version;">
+  <?dbhtml filename="wbg.html"?>
+
+  <title>wbg-&wbg-version;</title>
+
+  <indexterm zone="wbg">
+    <primary sortas="a-wbg">wbg</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to wbg</title>
+
+    <para>
+      The <application>wbg</application> package provides a
+      <application>Wayland</application> wallpaper setter.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&wbg-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">wbg Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
+      <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
+      <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
+      <ulink url="&blfs-svn;/general/libjxl.html">libjxl</ulink>, and
+      <xref linkend="tllist"/> (if not built, it will be downloaded)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of wbg</title>
+
+    <para>
+      First apply a fix that avoids an error about possible uninitialized
+      values:
+    </para>
+
+<screen><userinput>sed 's/float t\[6\]/float t\[6\] = {0}/' \
+  -i 3rd-party/nanosvg/src/nanosvg.h</userinput></screen>
+
+    <para>
+      Install <application>wbg</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          wbg
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="wbg-bin">
+        <term><command>wbg</command></term>
+        <listitem>
+          <para>
+            creates a wallpaper from an image on
+            <application>Wayland</application>
+          </para>
+          <indexterm zone="wbg wbg-bin">
+            <primary sortas="wbg-bin">wbg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

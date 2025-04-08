@@ -44,6 +44,10 @@
       <para>April 8th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - wbg: Added. Fixes
+          <ulink url="&lfs-qol-issues;/114">#114</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Alacritty: Add configuration information.</para>
         </listitem>
         <listitem>

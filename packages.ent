@@ -45,6 +45,7 @@ version, so keep this at that. -->
 <!ENTITY fastfetch-version                   "2.40.3">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.3">
+<!ENTITY wbg-version                         "1.2.0">
 <!-- Programming -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
