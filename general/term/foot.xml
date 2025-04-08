@@ -77,18 +77,15 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>ninja install &amp;&amp;
-mv -v /usr/share/doc/foot{,-&foot-version;}</userinput></screen>
-
-  </sect2>
-
-  <sect2 role="commands">
-    <title>Command Explanations</title>
+<screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      <command>mv -v /usr/share/doc/foot{,-&foot-version;}</command>: This makes
-      the created documentation directory versioned.
+      If you built <application>scdoc</application>, make the documentation
+      directory versioned as the &root; user:
     </para>
+
+<screen remap="doc"
+  role="root"><userinput>mv -v /usr/share/doc/foot{,-&foot-version;}</userinput></screen>
 
   </sect2>
 
