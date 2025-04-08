@@ -44,17 +44,11 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <phrase revision="sysv">
-      <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>,
-      </phrase>
       <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
       <ulink url="&blfs-svn;/basicnet/libsoup.html">libsoup</ulink>,
       <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
-      <phrase revision="sysv">and</phrase>
-      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink><phrase
-      revision="systemd">, and
-      <ulink url="&blfs-svn;/general/systemd.html">Systemd</ulink>
-      </phrase>
+      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>, and
+      &logind-nocomma;
     </para>
 
   </sect2>

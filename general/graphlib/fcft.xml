@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY fcft-download-http
+    "https://codeberg.org/dnkl/fcft/releases/download/&fcft-version;/fcft-&fcft-version;.tar.gz">
+]>
+
+<sect1 id="fcft" xreflabel="fcft-&fcft-version;">
+  <?dbhtml filename="fcft.html"?>
+
+
+  <title>fcft-&fcft-version;</title>
+
+  <indexterm zone="fcft">
+    <primary sortas="a-fcft">fcft</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to fcft</title>
+
+    <para>
+      The <application>fcft</application> package provides a library for
+      loading fonts and rasterizing glyphs.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&fcft-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">fcft Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/fontconfig.html">fontconfig</ulink>,
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>, and
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink> and
+      <xref linkend="tllist"/> (if not built, it will be downloaded)
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="https://github.com/memononen/nanosvg">nanosvg</ulink>,
+      <xref linkend="scdoc"/>, and
+      <ulink url="&arch-pkgs;/extra/x86_64/utf8proc/">utf8proc</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of fcft</title>
+
+    <para>
+      Install <application>fcft</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+mv -v /usr/share/doc/fcft{,-&fcft-version;}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>mv -v /usr/share/doc/fcft{,-&fcft-version;}</command>: This
+      makes the created documentation directory versioned.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libfcft
+        </seg>
+        <seg>
+          /usr/share/doc/fcft-3.3.1 and /usr/include/fcft
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libfcft">
+        <term><filename class="libraryfile">libfcft</filename></term>
+        <listitem>
+          <para>
+            contains functions for handling fonts and glyphs
+          </para>
+          <indexterm zone="fcft libfcft">
+            <primary sortas="c-libfcft">libfcft</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

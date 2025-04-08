@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+ <!ENTITY % general-entities SYSTEM "../../general.ent">
+ %general-entities;
+]>
+
+<chapter id="general-term">
+  <?dbhtml filename="term.html"?>
+
+  <title>Terminal Emulators</title>
+
+  <para>
+    This chapter covers terminal emulators.
+  </para>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="alacritty.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="foot.xml"/>
+
+</chapter>

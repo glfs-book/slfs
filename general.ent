@@ -199,11 +199,17 @@ export -f as_root</userinput></screen>
           <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> before
           building this package.</para></note>">
 
-<!ENTITY logind
+<!ENTITY logind-nocomma
          "<phrase revision='sysv'><ulink
           url='&blfs-svn;/general/elogind.html'>elogind</ulink></phrase>
           <phrase revision='systemd'><ulink
           url='&blfs-svn;/general/systemd.html'>Systemd</ulink></phrase>">
+
+<!ENTITY logind
+         "<phrase revision='sysv'><ulink
+          url='&blfs-svn;/general/elogind.html'>elogind</ulink>,</phrase>
+          <phrase revision='systemd'><ulink
+          url='&blfs-svn;/general/systemd.html'>Systemd</ulink>,</phrase>">
 
 <!ENTITY qt5-deps
          "(<xref linkend='qt5'/> or <xref role='nodep' linkend='qt5-alternate'/>)">

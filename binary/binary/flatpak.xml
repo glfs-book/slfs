@@ -43,20 +43,15 @@
     <para role="required">
       <ulink url="&blfs-svn;/general/appstream.html">AppStream</ulink>,
       <ulink url="&blfs-svn;/general/dbus.html">dbus</ulink>,
-      <phrase revision="sysv">
-      <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>,
-      </phrase>
       <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>,
       <ulink url="&blfs-svn;/general/json-glib.html">json-glib</ulink>,
       <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
+      &logind;
       <xref linkend="ostree"/>,
-      <ulink url="&blfs-svn;/postlfs/p11-kit.html">p11-kit</ulink>,
-      <phrase revision="sysv">and</phrase>
-      <ulink url="&blfs-svn;/general/python-modules.html#pyparsing">pyparsing</ulink><phrase
-      revision="systemd">, and
-      <ulink url="&blfs-svn;/general/systemd.html">Systemd</ulink></phrase>
+      <ulink url="&blfs-svn;/postlfs/p11-kit.html">p11-kit</ulink>, and
+      <ulink url="&blfs-svn;/general/python-modules.html#pyparsing">pyparsing</ulink>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>

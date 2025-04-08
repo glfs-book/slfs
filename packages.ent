@@ -17,11 +17,11 @@
 <!ENTITY tomlplusplus-version                "3.4.0">
 <!ENTITY yajl-version                        "2.1.0">
 <!-- Graphical Libraries -->
+<!ENTITY fcft-version                        "3.3.1">
 <!ENTITY glu-version                         "9.0.3">
 <!ENTITY libspng-version                     "0.7.4">
 <!ENTITY nv-codec-headers-version            "13.0.19.0">
 <!-- General Utilities -->
-<!ENTITY alacritty-version                   "0.15.1">
 <!ENTITY htop-version                        "3.4.0">
 <!ENTITY btop-version                        "1.4.0">
 <!ENTITY jstest-sdl-minor-version            "710687">
@@ -68,6 +68,9 @@ version, so keep this at that. -->
 <!ENTITY printproto-version                  "1.0.5">
 <!ENTITY libxp-version                       "1.0.4">
 <!ENTITY motif-version                       "2.3.8">
+<!-- Terminal Emulators -->
+<!ENTITY alacritty-version                   "0.15.1">
+<!ENTITY foot-version                        "1.21.0">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->

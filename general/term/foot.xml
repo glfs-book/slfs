@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY foot-download-http
+    "https://codeberg.org/dnkl/foot/releases/download/&foot-version;/foot-&foot-version;.tar.gz">
+]>
+
+<sect1 id="foot" xreflabel="foot-&foot-version;">
+  <?dbhtml filename="foot.html"?>
+
+  <title>foot-&foot-version;</title>
+
+  <indexterm zone="foot">
+    <primary sortas="a-foot">foot</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to foot</title>
+
+    <para>
+      The <application>foot</application> package provides a
+      <application>Wayland</application> terminal emulator.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&foot-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">foot Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/fontconfig.html">fontconfig</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      &logind;
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink> and
+      <xref linkend="tllist"/> (if not built, it will be downloaded)
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <xref linkend="scdoc"/> and
+      <ulink url="&arch-pkgs;/extra/x86_64/utf8proc/">utf8proc</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of foot</title>
+
+    <para>
+      Install <application>foot</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+mv -v /usr/share/doc/foot{,-&foot-version;}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>mv -v /usr/share/doc/foot{,-&foot-version;}</command>: This makes
+      the created documentation directory versioned.
+    </para>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring foot</title>
+
+    <sect3 id="foot-config">
+      <title>Config Files</title>
+      <para>
+        <filename>~/.config/foot/foot.ini</filename>. The default version
+        is in <filename class="directory">/etc/xdg/foot</filename> and will
+        not be used and must be copied to
+        <filename class="directory">~/.config/foot</filename>.
+      </para>
+
+      <indexterm zone="foot foot-config">
+        <primary sortas="e-AA.config">~/.config/foot/foot.ini</primary>
+      </indexterm>
+
+    </sect3>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        Create the config file:
+      </para>
+
+<screen><userinput>mkdir -pv ~/.config/foot &amp;&amp;
+cp /etc/xdg/foot/foot.ini ~/.config/foot</userinput></screen>
+
+      <para>
+        Now inspect the file and make any changes you see fit.
+      </para>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          foot and footclient
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /etc/xdg/foot,
+          /usr/share/doc/foot-&foot-version;, and
+          /usr/share/foot
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="foot-bin">
+        <term><command>foot</command></term>
+        <listitem>
+          <para>
+            is a <application>Wayland</application> terminal emulator
+          </para>
+          <indexterm zone="foot foot-bin">
+            <primary sortas="foot-bin">foot</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="footclient">
+        <term><command>footclient</command></term>
+        <listitem>
+          <para>
+            starts <command>foot</command> instances in a
+            <application>foot</application> server
+          </para>
+          <indexterm zone="foot footclient">
+            <primary sortas="footclient">footclient</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

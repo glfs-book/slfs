@@ -44,6 +44,10 @@
       <para>April 8th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - foot; fcft: Added. Fixes
+          <ulink url="&lfs-qol-issues;/113">#113</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - tllist: Added.</para>
         </listitem>
       </itemizedlist>
