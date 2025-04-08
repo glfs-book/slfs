@@ -129,6 +129,27 @@ install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput
 
   </sect2>
 
+  <sect2 role="configuration">
+    <title>Configuring foot</title>
+
+    <sect3 id="alacritty-config">
+      <title>Config Files</title>
+      <para>
+        <filename>~/.config/alacritty/alacritty.toml</filename>. There is no
+        default version and must be created manually. For configuration
+        options, see <ulink
+        url="https://alacritty.org/config-alacritty.html">alacritty(5)</ulink>,
+        or if you built the man pages, run <command>man 5 alacritty</command>.
+      </para>
+
+      <indexterm zone="alacritty alacritty-config">
+        <primary sortas="e-AA.config">~/.config/alacritty/alacritty</primary>
+      </indexterm>
+
+    </sect3>
+
+  </sect2>
+
   <sect2 role="content">
     <title>Contents</title>
 
