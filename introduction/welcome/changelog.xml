@@ -44,6 +44,9 @@
       <para>April 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - xdg-desktop-portal-wlr: Fix build.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - asio; QR-Code-Generator; websocketpp: Added.</para>
         </listitem>
         <listitem>

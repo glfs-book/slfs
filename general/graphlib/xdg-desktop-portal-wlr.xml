@@ -73,14 +73,29 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+meson setup --prefix=/usr                 \
+            --buildtype=release           \</userinput><phrase revision="sysv"><userinput>
+            -D sd-bus-provider=libelogind \</userinput></phrase><phrase revision="system"><userinput>
+            -D sd-bus-provider=libsystemd \</userinput></phrase><userinput>
+            .. &amp;&amp;
+
 ninja</userinput></screen>
 
     <para>
       Now, as the &root; user:
     </para>
 
-<screen role="root" revision="sysv"><userinput>ninja install</userinput></screen>
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+    <para>
+      Ensure the portal can be detected as the &root; user:
+    </para>
+
+<screen
+  role="root"><userinput>cat &gt; /usr/share/xdg-desktop-portal/wlr-portals.conf &lt;&lt; "EOF"
+<literal>[preferred]
+default=wlr</literal>
+EOF</userinput></screen>
 
   </sect2>
   
