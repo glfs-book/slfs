@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY asio-download-http
+    "https://github.com/chriskohlhoff/asio/archive/refs/tags/asio-&asio-version;.tar.gz">
+]>
+
+<sect1 id="asio" xreflabel="asio-&asio-version;">
+  <?dbhtml filename="asio.html"?>
+
+
+  <title>asio-&asio-version;</title>
+
+  <indexterm zone="asio">
+    <primary sortas="a-asio">asio</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to asio</title>
+
+    <para>
+      The asio package provides a C++ library for ASynchronous I/O networking.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&asio-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">asio Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/boost.html">boost</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of asio</title>
+
+    <para>
+      Install <application>asio</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>cd asio &amp;&amp;
+autoreconf -fi &amp;&amp;
+./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/include/asio
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>

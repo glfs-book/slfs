@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY qrcodegencpp-download-http
+    "https://github.com/nayuki/QR-Code-generator/archive/v&qrcodegencpp-version;/QR-Code-generator-&qrcodegencpp-version;.tar.gz">
+]>
+
+<sect1 id="qrcodegencpp" xreflabel="QR-Code-generator-&qrcodegencpp-version;">
+  <?dbhtml filename="qrcodegencpp.html"?>
+
+  <title>QR-Code-generator-&qrcodegencpp-version;</title>
+
+  <indexterm zone="qrcodegencpp">
+    <primary sortas="a-qrcodegencpp">QR-Code-generator</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to QR-Code-generator</title>
+
+    <para>
+      The QR-Code-generator package provides a QR code generator.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&qrcodegencpp-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required CMake files:
+          <ulink url="https://github.com/EasyCoding/qrcodegen-cmake/archive/v&qrcodegencpp-version;-cmake3/qrcodegen-cmake-&qrcodegencpp-version;-cmake3.tar.gz"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">QR-Code-generator Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of QR-Code-generator</title>
+
+    <para>
+      First unpack the CMake files:
+    </para>
+
+<screen><userinput>tar -xf ../qrcodegen-cmake-&qrcodegencpp-version;-cmake3.tar.gz &amp;&amp;
+cp -vR qrcodegen-cmake-&qrcodegencpp-version;-cmake3/{cmake,CMakeLists.txt} . &amp;&amp;
+rm -rf qrcodegen-cmake-&qrcodegencpp-version;-cmake3</userinput></screen>
+
+    <para>
+      Install <application>QR-Code-generator</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D BUILD_SHARED_LIBS=ON        \
+      -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: This ensures shared
+      libraries are built.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libqrcodegen{,cpp}
+        </seg>
+        <seg>
+          /usr/include/qrcodegen{,cpp} and /usr/lib/cmake/qrcodegen{,cpp}
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libqrcodegen">
+        <term><filename class="libraryfile">libqrcodegen</filename></term>
+        <listitem>
+          <para>
+            provides QR code generation functions
+          </para>
+          <indexterm zone="qrcodegencpp libqrcodegen">
+            <primary sortas="c-libqrcodegen">libqrcodegen</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

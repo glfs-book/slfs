@@ -84,10 +84,9 @@
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            <ulink url="&arch-pkgs;/extra/any/asio/">asio</ulink>,
-            <ulink url="&arch-pkgs;/extra/any/qrcodegencpp-cmake/">qrcodegencpp</ulink>,
-            and
-            <ulink url="&arch-pkgs;/extra/any/websocketpp/">websocketpp</ulink>
+            <xref linkend="asio"/>,
+            <xref linkend="qrcodegencpp"/>, and
+            <xref linkend="websocketpp"/>
             (required for WebSocket support)
           </para>
         </listitem>
@@ -325,12 +324,14 @@ ninja</userinput></screen>
         <seg>
           libobs-frontend-api,
           libobs-opengl,
+          libobs-scripting,
           libobs, and many plugins in /usr/lib/obs-plugins
         </seg>
         <seg>
           /usr/include/obs,
           /usr/lib/cmake/{libobs,obs-frontend-api,obs-websocket-api},
-          /usr/lib/obs-plugins, and
+          /usr/lib/obs-plugins,
+          /usr/lib/obs-scripting, and
           /usr/share/obs
         </seg>
       </seglistitem>
@@ -388,6 +389,19 @@ ninja</userinput></screen>
           </para>
           <indexterm zone="obs-studio libobs-opengl">
             <primary sortas="c-libobs-opengl">libobs-opengl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libobs-scripting">
+        <term><filename class="libraryfile">libobs-scripting</filename></term>
+        <listitem>
+          <para>
+            provides functions for <application>OBS
+            Studio</application> scripts
+          </para>
+          <indexterm zone="obs-studio libobs-scripting">
+            <primary sortas="c-libobs-scripting">libobs-scripting</primary>
           </indexterm>
         </listitem>
       </varlistentry>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY websocketpp-download-http
+    "https://github.com/zaphoyd/websocketpp/archive/&websocketpp-version;/websocketpp-&websocketpp-version;.tar.gz">
+  <!ENTITY websocket-patch-root "https://gitlab.archlinux.org/archlinux/packaging/packages/websocketpp/-/raw/main">
+]>
+
+<sect1 id="websocketpp" xreflabel="websocketpp-&websocketpp-version;">
+  <?dbhtml filename="websocketpp.html"?>
+
+  <title>websocketpp-&websocketpp-version;</title>
+
+  <indexterm zone="websocketpp">
+    <primary sortas="a-websocketpp">websocketpp</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to websocketpp</title>
+
+    <para>
+      The websocketpp package provides a websocket client/server library.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&websocketpp-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&websocket-patch-root;/websocketpp-&websocketpp-version;-boost-1.87-compat.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">websocketpp Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="asio"/> and
+      <ulink url="&blfs-svn;/general/boost.html">boost</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of websocketpp</title>
+
+    <para>
+      First apply fixes to allow building with
+      <application>boost-1.87</application> and later:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../websocketpp-&websocketpp-version;-boost-1.87-compat.patch
+sed 's|"${WEBSOCKETPP_BOOST_LIBS}"|${WEBSOCKETPP_BOOST_LIBS}|' -i CMakeLists.txt</userinput></screen>
+
+    <para>
+      Install <application>websocketpp</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr        \
+      -D CMAKE_BUILD_TYPE=Release         \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON      \
+      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+      -D ENABLE_CPP11=ON                  \
+      -D BUILD_TESTS=OFF                  \
+      -G Ninja ..</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <parameter>-D CMAKE_POLICY_VERSION_MINIMUM=3.5</parameter>: This allows
+      building with newer <application>CMake</application> versions.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_CPP11=ON</parameter>: This builds support for
+      the c++11 ISO standard.
+    </para>
+
+    <para>
+      <parameter>-D BUILD_TESTS=OFF</parameter>: This disables building tests.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/include/websocketpp and /usr/lib/cmake/websocketpp
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>
