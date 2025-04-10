@@ -24,7 +24,6 @@
       The pugixml package provides a light-weight XML parser for C++.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>

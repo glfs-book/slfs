@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY mbedtls-download-http "https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-&mbedtls-version;/mbedtls-&mbedtls-version;.tar.bz2">
+]>
+
+<sect1 id="mbedtls" xreflabel="Mbed-TLS-&mbedtls-version;">
+  <?dbhtml filename="mbedtls.html"?>
+
+
+  <title>Mbed-TLS-&mbedtls-version;</title>
+
+  <indexterm zone="mbedtls">
+    <primary sortas="a-mbedtls">Mbed-TLS</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Mbed TLS</title>
+
+    <para>
+      The Mbed TLS package provides TLS libraries and aims to flexible and
+      portable.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&mbedtls-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Mbed TLS Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Mbed TLS</title>
+
+    <para>
+      Install <application>Mbed TLS</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr      \
+      -D CMAKE_BUILD_TYPE=Release       \
+      -D CMAKE_SKIP_RPATH=ON            \
+      -D USE_SHARED_MBEDTLS_LIBRARY=ON  \
+      -D USE_STATIC_MBEDTLS_LIBRARY=OFF \
+      -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>DESTDIR=$PWD/DESTDIR ninja install &amp;&amp;
+pushd DESTDIR/usr/bin &amp;&amp;
+  for i in *; do
+    mv -v {,mbedtls_}$i
+  done
+popd &amp;&amp;
+cp -vR DESTDIR/usr/* /usr</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <parameter>-D USE_SHARED_MBEDTLS_LIBRARY=ON</parameter>: This parameter
+      ensures shared libraries are built.
+    </para>
+
+    <para>
+      <parameter>-D USE_STATIC_MBEDTLS_LIBRARY=OFF</parameter>: This parameter
+      ensures the main libraries are not statically built.
+    </para>
+
+    <para>
+      <command>pushd DESTDIR/usr/bin ...</command>: These commands rename the
+      programs as to not conflict with those that may be installed by other
+      programs.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          mbedtls_aead_demo,
+          mbedtls_benchmark,
+          mbedtls_cert_app,
+          mbedtls_cert_req,
+          mbedtls_cert_write,
+          mbedtls_cipher_aead_demo,
+          mbedtls_crl_app,
+          mbedtls_crypt_and_hash,
+          mbedtls_crypto_examples,
+          mbedtls_dh_client,
+          mbedtls_dh_genprime,
+          mbedtls_dh_server,
+          mbedtls_dtls_client,
+          mbedtls_dtls_server,
+          mbedtls_ecdh_curve25519,
+          mbedtls_ecdsa,
+          mbedtls_gen_entropy,
+          mbedtls_generic_sum,
+          mbedtls_gen_key,
+          mbedtls_gen_random_ctr_drbg,
+          mbedtls_hello,
+          mbedtls_hmac_demo,
+          mbedtls_key_app,
+          mbedtls_key_app_writer,
+          mbedtls_key_ladder_demo,
+          mbedtls_key_ladder_demo.sh,
+          mbedtls_load_roots,
+          mbedtls_md_hmac_demo,
+          mbedtls_metatest,
+          mbedtls_mini_client,
+          mbedtls_mpi_demo,
+          mbedtls_pem2der,
+          mbedtls_pk_decrypt,
+          mbedtls_pk_encrypt,
+          mbedtls_pk_sign,
+          mbedtls_pk_verify,
+          mbedtls_psa_constant_names,
+          mbedtls_psa_hash,
+          mbedtls_query_compile_time_config,
+          mbedtls_query_included_headers,
+          mbedtls_req_app,
+          mbedtls_rsa_decrypt,
+          mbedtls_rsa_encrypt,
+          mbedtls_rsa_genkey,
+          mbedtls_rsa_sign,
+          mbedtls_rsa_sign_pss,
+          mbedtls_rsa_verify,
+          mbedtls_rsa_verify_pss,
+          mbedtls_selftest,
+          mbedtls_ssl_client1,
+          mbedtls_ssl_client2,
+          mbedtls_ssl_context_info,
+          mbedtls_ssl_fork_server,
+          mbedtls_ssl_mail_client,
+          mbedtls_ssl_pthread_server,
+          mbedtls_ssl_server,
+          mbedtls_ssl_server2,
+          mbedtls_strerror,
+          mbedtls_udp_proxy, and
+          mbedtls_zeroize
+        </seg>
+        <seg>
+          libeverest (static),
+          libmbedcrypto,
+          libmbedtls,
+          libmbedx509, and
+          libp256m (static)
+        </seg>
+        <seg>
+          /usr/include/{everest,mbedtls,psa} and
+          /usr/lib/cmake/MbedTLS
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libmbedcrypto">
+        <term><filename class="libraryfile">libmbedcrypto</filename></term>
+        <listitem>
+          <para>
+            handles cryptography functions that are needed by other parts of
+            this package and other packages
+          </para>
+          <indexterm zone="mbedtls libmbedcrypto">
+            <primary sortas="c-libmbedcrypto">libmbedcrypto</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libmbedtls">
+        <term><filename class="libraryfile">libmbedtls</filename></term>
+        <listitem>
+          <para>
+            provides TLS functions
+          </para>
+          <indexterm zone="mbedtls libmbedtls">
+            <primary sortas="c-libmbedtls">libmbedtls</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libmbedx509">
+        <term><filename class="libraryfile">libmbedx509</filename></term>
+        <listitem>
+          <para>
+            is used by <filename class="libraryfile">libmbedtls</filename>; it
+            handles X.509 certificates that allow TLS and SSL to be possible
+          </para>
+          <indexterm zone="mbedtls libmbedx509">
+            <primary sortas="c-libmbedx509">libmbedx509</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
