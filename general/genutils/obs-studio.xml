@@ -53,6 +53,12 @@
           <ulink url="&patch-root;/obs/obs-studio-&obs-studio-version;-allow_mesa.patch"/>
         </para>
       </listitem>
+      <listitem>
+        <para>
+          Recommended download:
+          <ulink url="https://cdn-fastly.obsproject.com/downloads/cef_binary_&obs-cef-version;_linux_x86_64.tar.xz"/>
+        </para>
+      </listitem>
     </itemizedlist>
 
     <bridgehead renderas="sect3">OBS Studio Dependencies</bridgehead>
@@ -82,6 +88,7 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
+      <ulink url="&blfs-svn;/x/at-spi2-core.html">at-spi2-core</ulink>,
       <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
       <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
@@ -107,6 +114,14 @@
 <screen><userinput>patch -Np1 -i ../obs-studio-&obs-studio-version;-allow_mesa.patch</userinput></screen>
 
     <para>
+      If you want to enable browser support, ensure you have downloaded the
+      recommended download, then unpack it:
+    </para>
+
+<screen><userinput>tar -xf ../cef_binary_&obs-cef-version;_linux_x86_64.tar.xz &amp;&amp;
+mv cef_binary_&obs-cef-version;_linux_x86_64 cef-&obs-cef-version;</userinput></screen>
+
+    <para>
       Install <application>OBS Studio</application> by running the following
       commands:
     </para>
@@ -116,10 +131,11 @@ cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr             \
       -D CMAKE_BUILD_TYPE=Release              \
+      -D ENABLE_BROWSER=ON                     \
+      -D CEF_ROOT_DIR=../cef-&obs-cef-version;              \
       -D ENABLE_AJA=OFF                        \
       -D ENABLE_JACK=OFF                       \
       -D ENABLE_VLC=OFF                        \
-      -D ENABLE_BROWSER=OFF                    \
       -D ENABLE_WEBRTC=OFF                     \
       -D ENABLE_WEBSOCKET=OFF                  \
       -D ENABLE_V4L2=OFF                       \
@@ -190,6 +206,8 @@ ninja</userinput></screen>
           linux-capture,
           linux-pipewire,
           linux-pulseaudio,
+          obs-browser-page,
+          obs-browser,
           obs-ffmpeg,
           obs-filters,
           obs-outputs,
