@@ -44,6 +44,9 @@
       <para>April 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - libdatachannel: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - xdg-desktop-portal-wlr: Added.</para>
         </listitem>
         <listitem>

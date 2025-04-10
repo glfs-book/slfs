@@ -20,7 +20,9 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glm.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="jansson.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libev.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libliftoff.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libjuice.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libsrtp.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libdatachannel.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libutempter.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libzip.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mbedtls.xml"/>

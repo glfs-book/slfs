@@ -119,7 +119,7 @@
         </listitem>
         <listitem>
           <para>
-            <ulink url="&arch-pkgs;/extra/x86_64/libdatachannel/">libdatachannel</ulink>
+            <xref linkend="libdatachannel"/>
             (required for WebRTC support)
           </para>
         </listitem>

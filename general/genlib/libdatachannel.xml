@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libdatachannel-download-http
+    "https://github.com/paullouisageneau/libdatachannel/archive/v&libdatachannel-version;/libdatachannel-&libdatachannel-version;.tar.gz">
+]>
+
+<sect1 id="libdatachannel" xreflabel="libdatachannel-&libdatachannel-version;">
+  <?dbhtml filename="libdatachannel.html"?>
+
+  <title>libdatachannel-&libdatachannel-version;</title>
+
+  <indexterm zone="libdatachannel">
+    <primary sortas="a-libdatachannel">libdatachannel</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libdatachannel</title>
+
+    <para>
+      The libdatachannel package provides a WebRTC networking library.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libdatachannel-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required submodule:
+          <ulink url="https://github.com/SergiusTheBest/plog/archive/&libdatachannel-plog;.tar.gz"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Required submodule:
+          <ulink url="https://github.com/sctplab/usrsctp/archive/&libdatachannel-usrsctp;.tar.gz"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">libdatachannel Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="libjuice"/> and
+      <xref linkend="libsrtp"/>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/postlfs/gnutls.html">GnuTLS</ulink> and
+      <xref linkend="nlohmann-json"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libdatachannel</title>
+
+    <para>
+      First unpack the submodules:
+    </para>
+
+<screen><userinput>tar -xf ../&libdatachannel-plog;.tar.gz &amp;&amp;
+tar -xf ../&libdatachannel-usrsctp;.tar.gz &amp;&amp;
+
+mv -T plog-*    deps/plog &amp;&amp;
+mv -T usrsctp-* deps/usrsctp</userinput></screen>
+
+    <para>
+      Install <application>libdatachannel</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr        \
+      -D CMAKE_BUILD_TYPE=Release         \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON      \
+      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+      -D USE_GNUTLS=0                     \
+      -D USE_NICE=0                       \
+      -D USE_SYSTEM_JUICE=1               \
+      -D USE_SYSTEM_SRTP=1                \
+      -D NO_EXAMPLES=1                    \
+      -D NO_TESTS=1                       \
+      -Wno-dev -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <parameter>-D CMAKE_POLICY_VERSION_MINIMUM=3.5</parameter>: This allows
+      building with newer <application>CMake</application> versions.
+    </para>
+
+    <para>
+      <parameter>-D USE_GNUTLS=0</parameter>: This disables building against
+      the optional <application>GnuTLS</application>.
+    </para>
+
+    <para>
+      <parameter>-D USE_NICE=0</parameter>: This ensures <xref
+      linkend="libjuice"/> is used instead of a package not in this book.
+    </para>
+
+    <para>
+      <parameter>-D USE_SYSTEM_JUICE=1</parameter>: This links against the
+      system-installed <xref linkend="libjuice"/>.
+    </para>
+
+    <para>
+      <parameter>-D USE_SYSTEM_SRTP=1</parameter>: This links against the
+      system-installed <xref linkend="libsrtp"/>.
+    </para>
+
+    <para>
+      <parameter>-D NO_EXAMPLES=1</parameter>: This disables building examples.
+    </para>
+
+    <para>
+      <parameter>-D NO_TESTS=1</parameter>: This disables building tests.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libdatachannel
+        </seg>
+        <seg>
+          /usr/include/rtc and /usr/lib/cmake/LibDataChannel
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="lib-libdatachannel">
+        <term><filename class="libraryfile">libdatachannel</filename></term>
+        <listitem>
+          <para>
+            provides functions for WebRTC
+          </para>
+          <indexterm zone="libdatachannel lib-libdatachannel">
+            <primary sortas="c-lib-libdatachannel">libdatachannel</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
