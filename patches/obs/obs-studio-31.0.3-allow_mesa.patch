@@ -1,0 +1,101 @@
+Submitted By:            Zeckma <zeckma.tech@gmail.com>
+Date:                    2025-04-09
+Initial Package Version: 31.0.3
+Upstream Status:         Not sent
+Origin:                  Self
+Description:             This patch allows Mesa's EGL library to be used, as
+                         CMake's find_package(OpenGL::EGL) reports false if
+                         libglvnd is not installed. This is a problem. Most
+                         distros install libglvnd, but BLFS doesn't, and GLFS
+                         gives the option.
+
+--- obs-studio-31.0.3-sources.orig/deps/glad/CMakeLists.txt	2025-03-28 13:40:03.000000000 -0600
++++ obs-studio-31.0.3-sources/deps/glad/CMakeLists.txt	2025-04-09 21:26:08.371169796 -0600
+@@ -5,17 +5,48 @@
+ add_library(obsglad OBJECT)
+ add_library(OBS::glad ALIAS obsglad)
+ 
++find_package(PkgConfig REQUIRED)
++pkg_check_modules(EGL QUIET egl)
++target_link_libraries(obsglad PUBLIC ${EGL_LIBRARIES})
++target_include_directories(obsglad PUBLIC ${EGL_INCLUDE_DIRS})
++target_compile_options(obsglad PUBLIC ${EGL_CFLAGS_OTHER})
++
++#target_sources(
++#  obsglad
++#  PRIVATE
++#    src/glad.c
++#    $<$<PLATFORM_ID:Windows>:src/glad_wgl.c>
++#    if(EGL_FOUND)
++#      src/glad_egl.c
++#      include/EGL/eglplatform.h
++#    endif()
++#  PUBLIC
++#    include/glad/glad.h
++#    "$<$<PLATFORM_ID:Windows>:${CMAKE_CURRENT_SOURCE_DIR}/include/glad/glad_wgl.h>"
++#    "$<$<TARGET_EXISTS:OpenGL::EGL>:${CMAKE_CURRENT_SOURCE_DIR}/include/glad/glad_egl.h>"
++#)
++
++set(GLAD_SOURCES_PRIVATE
++  src/glad.c
++  "$<$<PLATFORM_ID:Windows>:src/glad_wgl.c>")
++set(GLAD_SOURCES_PUBLIC
++  include/glad/glad.h
++  "$<$<PLATFORM_ID:Windows>:${CMAKE_CURRENT_SOURCE_DIR}/include/glad/glad_wgl.h>")
++
++if(EGL_FOUND)
++  list(APPEND GLAD_SOURCES_PRIVATE
++    src/glad_egl.c
++    include/EGL/eglplatform.h)
++  list(APPEND GLAD_SOURCES_PUBLIC
++    "${CMAKE_CURRENT_SOURCE_DIR}/include/glad/glad_egl.h")
++endif()
++
+ target_sources(
+   obsglad
+   PRIVATE
+-    src/glad.c
+-    $<$<PLATFORM_ID:Windows>:src/glad_wgl.c>
+-    $<$<TARGET_EXISTS:OpenGL::EGL>:src/glad_egl.c>
+-    $<$<TARGET_EXISTS:OpenGL::EGL>:include/EGL/eglplatform.h>
++    ${GLAD_SOURCES_PRIVATE}
+   PUBLIC
+-    include/glad/glad.h
+-    "$<$<PLATFORM_ID:Windows>:${CMAKE_CURRENT_SOURCE_DIR}/include/glad/glad_wgl.h>"
+-    "$<$<TARGET_EXISTS:OpenGL::EGL>:${CMAKE_CURRENT_SOURCE_DIR}/include/glad/glad_egl.h>"
++    ${GLAD_SOURCES_PUBLIC}
+ )
+ 
+ target_compile_options(obsglad PRIVATE $<$<COMPILE_LANG_AND_ID:C,AppleClang,Clang>:-Wno-strict-prototypes>)
+@@ -25,7 +56,7 @@
+ target_link_libraries(
+   obsglad
+   PRIVATE $<$<NOT:$<PLATFORM_ID:Windows,Darwin>>:${CMAKE_DL_LIBS}>
+-  PUBLIC OpenGL::GL $<$<TARGET_EXISTS:OpenGL::EGL>:OpenGL::EGL>
++  PUBLIC OpenGL::GL
+ )
+ 
+ set_target_properties(obsglad PROPERTIES FOLDER deps POSITION_INDEPENDENT_CODE TRUE)
+--- obs-studio-31.0.3-sources.orig/libobs-opengl/CMakeLists.txt	2025-03-28 13:40:03.000000000 -0600
++++ obs-studio-31.0.3-sources/libobs-opengl/CMakeLists.txt	2025-04-09 21:23:48.577748221 -0600
+@@ -13,7 +13,11 @@
+   find_package(X11-xcb REQUIRED)
+ 
+   if(ENABLE_WAYLAND)
+-    find_package(OpenGL REQUIRED EGL)
++    find_package(PkgConfig REQUIRED)
++    pkg_check_modules(EGL REQUIRED egl)
++    target_link_libraries(libobs-opengl PRIVATE ${EGL_LIBRARIES})
++    target_include_directories(libobs-opengl PRIVATE ${EGL_INCLUDE_DIRS})
++    target_compile_options(libobs-opengl PRIVATE ${EGL_CFLAGS_OTHER})
+     find_package(Wayland REQUIRED)
+   endif()
+ endif()
+@@ -56,7 +60,6 @@
+     "$<$<PLATFORM_ID:Darwin>:$<LINK_LIBRARY:FRAMEWORK,IOSurface.framework>>"
+     $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD>:xcb::xcb>
+     $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD>:X11::x11-xcb>
+-    $<$<AND:$<PLATFORM_ID:Linux,FreeBSD,OpenBSD>,$<BOOL:${ENABLE_WAYLAND}>>:OpenGL::EGL>
+     $<$<AND:$<PLATFORM_ID:Linux,FreeBSD,OpenBSD>,$<BOOL:${ENABLE_WAYLAND}>>:Wayland::EGL>
+ )
+ 
