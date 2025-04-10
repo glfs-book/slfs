@@ -73,6 +73,7 @@
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       &opengl;,
       <ulink url="&blfs-svn;/general/pciutils.html">pciutils</ulink>,
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
       <xref linkend="uthash"/>,
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, and
