@@ -92,7 +92,7 @@ ninja</userinput></screen>
 <screen role="root" revision="sysv"><userinput>ninja install &amp;&amp;
 rm -rvf /usr/lib/systemd</userinput></screen>
 
-<screen role="root" revision="systemd"><userinput>make install</userinput></screen>
+<screen role="root" revision="systemd"><userinput>ninja install</userinput></screen>
 
   </sect2>
   

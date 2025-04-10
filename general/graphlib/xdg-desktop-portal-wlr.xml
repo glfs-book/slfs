@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY xdg-desktop-portal-wlr-download-http
+    "https://github.com/emersion/xdg-desktop-portal-wlr/archive/v&xdg-desktop-portal-wlr-version;/xdg-desktop-portal-wlr-&xdg-desktop-portal-wlr-version;.tar.gz">
+]>
+
+<sect1 id="xdg-desktop-portal-wlr" xreflabel="xdg-desktop-portal-wlr-&xdg-desktop-portal-wlr-version;">
+  <?dbhtml filename="xdg-desktop-portal-wlr.html"?>
+
+
+  <title>xdg-desktop-portal-wlr-&xdg-desktop-portal-wlr-version;</title>
+
+  <indexterm zone="xdg-desktop-portal-wlr">
+    <primary sortas="a-xdg-desktop-portal-wlr">xdg-desktop-portal-wlr</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to xdg-desktop-portal-wlr</title>
+
+    <para>
+      The xdg-desktop-portal-wlr package provides a portal backend for
+      <application>Wlroots</application> compositors.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&xdg-desktop-portal-wlr-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">xdg-desktop-portal-wlr Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      &gbm;,
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      &logind;
+      &opengl;,
+      <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
+      <xref linkend="sdbus-cpp"/>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, and
+      <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/inih.html">inih</ulink> and
+      <xref linkend="scdoc"/>
+    </para>
+
+    <bridgehead renderas="sect4">Optional (Runtime)</bridgehead>
+    <para role="optional">
+      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/grim/">grim</ulink> and
+      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/slurp/">slurp</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of xdg-desktop-portal-wlr</title>
+
+    <para>
+      Install <application>xdg-desktop-portal-wlr</application> by running
+      the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root" revision="sysv"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          xdg-desktop-portal-wlr
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="xdg-desktop-portal-wlr-bin">
+        <term><command>xdg-desktop-portal-wlr</command></term>
+        <listitem>
+          <para>
+            allows you to access portals in a
+            <application>Wlroots</application> session
+          </para>
+          <indexterm zone="xdg-desktop-portal-wlr xdg-desktop-portal-wlr-bin">
+            <primary sortas="b-xdg-desktop-portal-wlr-bin">xdg-desktop-portal-wlr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -17,6 +17,5 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprlib.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprland.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xdg-desktop-portal-hyprland.xml"/>
 
 </chapter>
