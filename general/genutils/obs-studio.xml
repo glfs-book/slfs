@@ -60,7 +60,6 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/multimedia/alsa-plugins.html">alsa-plugins</ulink>,
-      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
