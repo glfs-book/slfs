@@ -17,6 +17,7 @@
 <!ENTITY sdl2_net-version                    "2.2.0">
 <!ENTITY tllist-version                      "1.1.0">
 <!ENTITY tomlplusplus-version                "3.4.0">
+<!ENTITY uthash-version                      "2.3.0">
 <!ENTITY yajl-version                        "2.1.0">
 <!-- Graphical Libraries -->
 <!ENTITY fcft-version                        "3.3.1">
@@ -45,6 +46,7 @@ version, so keep this at that. -->
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
 <!ENTITY fastfetch-version                   "2.40.3">
+<!ENTITY obs-studio-version                  "31.0.3">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.3">
 <!ENTITY wbg-version                         "1.2.0">

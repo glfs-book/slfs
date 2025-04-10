@@ -32,6 +32,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sdl2_net.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tllist.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tomlplusplus.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="uthash.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yajl.xml"/>
 
 </chapter>

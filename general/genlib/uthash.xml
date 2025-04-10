@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY uthash-download-http
+    "https://github.com/troydhanson/uthash/archive/v&uthash-version;/uthash-&uthash-version;.tar.gz">
+]>
+
+<sect1 id="uthash" xreflabel="uthash-&uthash-version;">
+  <?dbhtml filename="uthash.html"?>
+
+  <title>uthash-&uthash-version;</title>
+
+  <indexterm zone="uthash">
+    <primary sortas="a-uthash">uthash</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to uthash</title>
+
+    <para>
+      The uthash package provides headers containing C macros for hash tables.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&uthash-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of uthash</title>
+
+    <para>
+      Install <application>uthash</application> as the &root; user:
+    </para>
+
+<screen role="root"><userinput>cp -av include/* /usr/include</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>

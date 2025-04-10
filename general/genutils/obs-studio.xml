@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY obs-studio-download-http
+    "https://github.com/obsproject/obs-studio/releases/download/&obs-studio-version;/OBS-Studio-&obs-studio-version;-Sources.tar.gz">
+]>
+
+<sect1 id="obs-studio" xreflabel="OBS-Studio-&obs-studio-version;">
+  <?dbhtml filename="obs-studio.html"?>
+
+  <title>OBS-Studio-&obs-studio-version;</title>
+
+  <indexterm zone="obs-studio">
+    <primary sortas="a-obs-studio">OBS-Studio</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to OBS Studio</title>
+
+    <para>
+      <application>OBS Studio</application> is a screen recorder that can be
+      piped to various media containers and remote servers. It is geared
+      towards streaming but also has a very much supported general recording
+      usecase.
+    </para>
+
+    <note><para>
+      This page is incomplete and intentionally does not enable most support as
+      it requires packages not yet in this book. If you want a more featured
+      build, it is recommended to wait, or to go off-roading to fulfill
+      dependencies.
+    </para></note>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/long-build-time.xml"/>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&obs-studio-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/obs/obs-studio-&obs-studio-version;-allow_mesa.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">OBS Studio Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/multimedia/alsa-plugins.html">alsa-plugins</ulink>,
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
+      <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink> (with GObject
+      Introspection),
+      <xref linkend="jansson"/>,
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      &opengl;,
+      <ulink url="&blfs-svn;/general/pciutils.html">pciutils</ulink>,
+      <xref linkend="uthash"/>,
+      <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, and
+      <ulink url="&blfs-svn;/multimedia/x264.html">x264</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
+      <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
+      <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
+    </para>
+
+<!--
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+    </para>
+-->
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of OBS Studio</title>
+
+    <para>
+      First apply a patch to allow EGL libraries from
+      <application>Mesa</application>:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../obs-studio-&obs-studio-version;-allow_mesa.patch</userinput></screen>
+
+    <para>
+      Install <application>OBS Studio</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr             \
+      -D CMAKE_BUILD_TYPE=Release              \
+      -D ENABLE_AJA=OFF                        \
+      -D ENABLE_JACK=OFF                       \
+      -D ENABLE_VLC=OFF                        \
+      -D ENABLE_BROWSER=OFF                    \
+      -D ENABLE_WEBRTC=OFF                     \
+      -D ENABLE_WEBSOCKET=OFF                  \
+      -D ENABLE_V4L2=OFF                       \
+      -D ENABLE_NEW_MPEGTS_OUTPUT=OFF          \
+      -D ENABLE_RNNOISE=OFF                    \
+      -D ENABLE_NVENC=OFF                      \
+      -D ENABLE_NVENC_FFMPEG_IDS=OFF           \
+      -D ENABLE_QSV11=OFF                      \
+      -D ENABLE_SCRIPTING=OFF                  \
+      -D OBS_COMPILE_DEPRECATION_AS_WARNING=ON \
+      -G Ninja -Wno-dev .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+<!--
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <command>rm -fv scripts/generateVersion.sh</command>: This command works
+      around an issue where this package installs an invalid
+      <filename>/usr/include/obs-studio/src/version.h</filename> as it is missing
+      all values.
+    </para>
+
+    <para>
+      <command>rm -fv /usr/include/obs-studio/src/version.h.in</command>: This
+      command removes an unneeded <filename>.h.in</filename> file, an artifact
+      from the previously explained command.
+    </para>
+
+  </sect2>
+-->
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Plugins</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          obs and obs-ffmpeg-mux
+        </seg>
+        <seg>
+          libobs-frontend-api,
+          libobs-opengl, and
+          libobs
+        </seg>
+        <seg>
+          decklink-captions,
+          decklink-output-ui,
+          decklink,
+          frontend-tools,
+          image-source,
+          linux-alsa,
+          linux-capture,
+          linux-pipewire,
+          linux-pulseaudio,
+          obs-ffmpeg,
+          obs-filters,
+          obs-outputs,
+          obs-transitions,
+          obs-vst,
+          obs-x264,
+          rtmp-services, and
+          text-freetype2
+        </seg>
+        <seg>
+          /usr/include/obs,
+          /usr/lib/cmake/{libobs,obs-frontend-api,obs-websocket-api},
+          /usr/lib/obs-plugins, and
+          /usr/share/obs
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="obs">
+        <term><command>obs</command></term>
+        <listitem>
+          <para>
+            is the <application>OBS Studio</application> program
+          </para>
+          <indexterm zone="obs-studio obs">
+            <primary sortas="b-obs">obs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="obs-ffmpeg-mux">
+        <term><command>obs-ffmpeg-mux</command></term>
+        <listitem>
+          <para>
+            is the <application>FFmpeg</application> multiplexer that
+            <command>obs</command> uses
+          </para>
+          <indexterm zone="obs-studio obs-ffmpeg-mux">
+            <primary sortas="b-obs-ffmpeg-mux">obs-ffmpeg-mux</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libobs-frontend-api">
+        <term><filename class="libraryfile">libobs-frontend-api</filename></term>
+        <listitem>
+          <para>
+            contains API functions for the <application>OBS
+            Studio</application> frontend
+          </para>
+          <indexterm zone="obs-studio libobs-frontend-api">
+            <primary sortas="c-libobs-frontend-api">libobs-frontend-api</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libobs-opengl">
+        <term><filename class="libraryfile">libobs-opengl</filename></term>
+        <listitem>
+          <para>
+            provided OpenGL rendering functions for <application>OBS
+            Studio</application>
+          </para>
+          <indexterm zone="obs-studio libobs-opengl">
+            <primary sortas="c-libobs-opengl">libobs-opengl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libobs">
+        <term><filename class="libraryfile">libobs</filename></term>
+        <listitem>
+          <para>
+            contains all the functions used by <application>OBS
+            Studio</application> and its plugins
+          </para>
+          <indexterm zone="obs-studio libobs">
+            <primary sortas="c-libobs">libobs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
