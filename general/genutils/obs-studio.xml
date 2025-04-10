@@ -27,13 +27,6 @@
       usecase.
     </para>
 
-    <note><para>
-      This page is incomplete and intentionally does not enable most support as
-      it requires packages not yet in this book. If you want a more featured
-      build, it is recommended to wait, or to go off-roading to fulfill
-      dependencies.
-    </para></note>
-
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="../../xincludes/long-build-time.xml"/>
 
@@ -88,18 +81,110 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/x/at-spi2-core.html">at-spi2-core</ulink>,
-      <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
-      <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
-      <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <ulink url="&arch-pkgs;/extra/any/asio/">asio</ulink>,
+            <ulink url="&arch-pkgs;/extra/any/qrcodegencpp-cmake/">qrcodegencpp</ulink>,
+            and
+            <ulink url="&arch-pkgs;/extra/any/websocketpp/">websocketpp</ulink>
+            (required for WebSocket support)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/at-spi2-core.html">at-spi2-core</ulink>
+            (required for browser support)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="cuda"/> and <xref linkend="nv-codec-headers"/>
+            (required for NVIDIA hardware encoding)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/multimedia/fdk-aac.html">fdk-aac</ulink>
+            (required for FDK AAC codec support)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/multimedia/intel-vaapi-driver.html">intel-vaapi-driver</ulink>
+            and
+            <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>
+            (required for Intel QSV11 hardware encoding)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&arch-pkgs;/extra/x86_64/libdatachannel/">libdatachannel</ulink>
+            (required for WebRTC support)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>
+            and
+            <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>
+            (required for Pipewire camera support and screencasting)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>
+            (required for PulseAudio audio sources)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>
+            (required for SpeexDSP noise suppression)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/general/swig.html">SWIG</ulink> and
+            <ulink url="&blfs-svn;/general/luajit.html">luajit</ulink>
+            (required for scripting support)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/multimedia/v4l-utils.html">v4l-utils</ulink>
+            (required for V4L support)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/multimedia/vlc.html">VLC</ulink>
+            (required for VLC support)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
+            (required for recording on Wayland)
+          </para>
+        </listitem>
+      </itemizedlist>
     </para>
 
-<!--
+    <note><para>
+      The options to disable the functionality enabled by the dependencies
+      above are in the Command Explanations.
+    </para></note>
+
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
+      <ulink url="https://github.com/jackaudio/jack2">Jack2</ulink>,
+      <ulink url="https://github.com/aja-video/libajantv2">libajantv2</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/librist/">librist</ulink>,
+      <ulink url="https://github.com/xiph/rnnoise">librnnoise</ulink>
+      (if not installed, an internal copy will be used), and
+      <ulink url="&arch-pkgs;/extra/x86_64/sndio/">sndio</ulink>
     </para>
--->
 
   </sect2>
 
@@ -131,20 +216,12 @@ cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr             \
       -D CMAKE_BUILD_TYPE=Release              \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON           \
       -D ENABLE_BROWSER=ON                     \
       -D CEF_ROOT_DIR=../cef-&obs-cef-version;              \
       -D ENABLE_AJA=OFF                        \
       -D ENABLE_JACK=OFF                       \
-      -D ENABLE_VLC=OFF                        \
-      -D ENABLE_WEBRTC=OFF                     \
-      -D ENABLE_WEBSOCKET=OFF                  \
-      -D ENABLE_V4L2=OFF                       \
       -D ENABLE_NEW_MPEGTS_OUTPUT=OFF          \
-      -D ENABLE_RNNOISE=OFF                    \
-      -D ENABLE_NVENC=OFF                      \
-      -D ENABLE_NVENC_FFMPEG_IDS=OFF           \
-      -D ENABLE_QSV11=OFF                      \
-      -D ENABLE_SCRIPTING=OFF                  \
       -D OBS_COMPILE_DEPRECATION_AS_WARNING=ON \
       -G Ninja -Wno-dev .. &amp;&amp;
 
@@ -158,25 +235,80 @@ ninja</userinput></screen>
 
   </sect2>
 
-<!--
   <sect2 role="commands">
     <title>Command Explanations</title>
 
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
     <para>
-      <command>rm -fv scripts/generateVersion.sh</command>: This command works
-      around an issue where this package installs an invalid
-      <filename>/usr/include/obs-studio/src/version.h</filename> as it is missing
-      all values.
+      <parameter>-D ENABLE_BROWSER=ON</parameter>: This switch enables browser
+      support.
     </para>
 
     <para>
-      <command>rm -fv /usr/include/obs-studio/src/version.h.in</command>: This
-      command removes an unneeded <filename>.h.in</filename> file, an artifact
-      from the previously explained command.
+      <parameter>-D CEF_ROOT_DIR=../cef-&obs-cef-version;</parameter>: This
+      switch tells the build system where the CEF binaries are located.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_AJA=OFF</parameter>: This switch disables the
+      optional Aja functionality.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_JACK=OFF</parameter>: This switch disables the
+      optional Jack2 functionality.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_NEW_MPEGTS_OUTPUT=OFF</parameter>: This switch
+      disables the optional MpegTS Output functionality.
+    </para>
+
+    <para>
+      <option>-D ENABLE_WEBRTC=OFF</option>: Disables WebRTC support if you
+      have not installed the recommended dependencies.
+    </para>
+
+    <para>
+      <option>-D ENABLE_WEBSOCKET=OFF</option>: Disables WebSocket support if
+      you have not installed the recommended dependencies.
+    </para>
+
+    <para>
+      <option>-D ENABLE_V4L2=OFF</option>: Disables V4L2 support if you have
+      not installed the recommended dependencies.
+    </para>
+
+    <para>
+      <option>-D ENABLE_VLC=OFF</option>: Disables VLC support if you have not
+      installed the recommended dependencies.
+    </para>
+
+    <para>
+      <option>-D ENABLE_NVENC=OFF -D ENABLE_NVENC_FFMPEG_IDS=OFF</option>:
+      These options disable NVIDIA hardware encoding support if you have not
+      installed the recommended dependencies.
+    </para>
+
+    <para>
+      <option>-D ENABLE_QSV11=OFF</option>: Disables Intel QSV11 hardware
+      encoding support if you have not installed the recommended dependencies.
+    </para>
+
+    <para>
+      <option>-D ENABLE_SCRIPTING=OFF</option>: Disables scripting support if
+      you have not installed the recommended dependencies.
+    </para>
+
+    <para>
+      <parameter>-D OBS_COMPILE_DEPRECATION_AS_WARNING=ON</parameter>: This
+      ensures there are no build failures due to deprecated features in the
+      FFmpeg side being used.
     </para>
 
   </sect2>
--->
 
   <sect2 role="content">
     <title>Contents</title>
@@ -184,7 +316,6 @@ ninja</userinput></screen>
     <segmentedlist>
       <segtitle>Installed Programs</segtitle>
       <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
       <segtitle>Installed Directories</segtitle>
 
       <seglistitem>
@@ -193,29 +324,8 @@ ninja</userinput></screen>
         </seg>
         <seg>
           libobs-frontend-api,
-          libobs-opengl, and
-          libobs
-        </seg>
-        <seg>
-          decklink-captions,
-          decklink-output-ui,
-          decklink,
-          frontend-tools,
-          image-source,
-          linux-alsa,
-          linux-capture,
-          linux-pipewire,
-          linux-pulseaudio,
-          obs-browser-page,
-          obs-browser,
-          obs-ffmpeg,
-          obs-filters,
-          obs-outputs,
-          obs-transitions,
-          obs-vst,
-          obs-x264,
-          rtmp-services, and
-          text-freetype2
+          libobs-opengl,
+          libobs, and many plugins in /usr/lib/obs-plugins
         </seg>
         <seg>
           /usr/include/obs,
