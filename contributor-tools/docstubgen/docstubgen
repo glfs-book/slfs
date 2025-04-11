@@ -34,8 +34,10 @@ trustedinputflag = False
 idontcareaboutsecurity = False
 
 def checklib(i, f):
-	return not (libdocflag and (".a" in os.path.basename(os.path.join(i, 
-		f)) or ".so" in os.path.basename(os.path.join(i, f))))
+	return (libdocflag and (".a" in os.path.basename(os.path.join(i, 
+		f)) or ".so" in os.path.basename(os.path.join(i, f)) or 
+		".jar" in os.path.basename(os.path.join(i, f)) or
+		".dll" in os.path.basename(os.path.join(i, f))))
 
 def callcheckfile(path):
 	if not checkbinflag:
@@ -95,6 +97,13 @@ for d in range(len(sys.argv)):
 	if d == 0 or d == 1:
 		continue
 	if recsearchflag:
+		# yes, this is a duplicate of the code from the next loop
+		# but we need it because os.walk apparently just ignores
+		# nonexistent folders, and because of that any missing folder
+		# errors were masked out in this case
+		if not os.path.isdir(sys.argv[d]):
+			print(f"Error: nonexistent folder {sys.argv[d]}", file=sys.stderr)
+			sys.exit(1)
 		for tmp in [x[0] for x in os.walk(sys.argv[d])]:
 			folderlist.append(tmp)
 	else:
@@ -116,7 +125,7 @@ for d in folderlist:
 			if os.path.isfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
 					f)), os.readlink(os.path.join(i, f))))):
 				if libdocflag:
-					if checklib(i, f) and callcheckfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
+					if not checklib(i, f) and callcheckfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
 							f)), os.readlink(os.path.join(i, f))))) == 0:
 						filelist.append([f, 's', os.path.basename(os.readlink( \
 							os.path.join(i, f)))])
@@ -127,7 +136,7 @@ for d in folderlist:
 								f)))])
 		elif os.path.isfile(os.path.join(i, f)):
 			if libdocflag:
-				if checklib(i, f) and callcheckfile(os.path.join(i, f)) == 0:
+				if not checklib(i, f) and callcheckfile(os.path.join(i, f)) == 0:
 					filelist.append([f, 'f', 'FILLER'])
 			else:
 				if callcheckfile(os.path.join(i, f)) == 0:
@@ -149,8 +158,6 @@ if libdocflag:
 				if os.path.isfile(os.path.normpath(os.path.join(os.path.dirname(os.path.join(i, \
 						f)), os.readlink(os.path.join(i, f))))):
 					continue
-			elif os.path.isfile(os.path.join(i, f)) and '.a' in os.path.basename(os.path.join(i, f)) and callcheckfile(os.path.join(i, f)) == 0:
-				liblist.append([f, 'f', 'FILLER'])
 			elif os.path.isfile(os.path.join(i, f)) and '.so' in os.path.basename(os.path.join(i, f)) and callcheckfile(os.path.join(i, f)) == 0:
 				tmplst = f.split('.')
 				tmp = tmplst[0]
@@ -161,6 +168,8 @@ if libdocflag:
 					if not h.isdigit():
 						tmp = tmp + '.' + h
 				liblist.append([tmp, 'f', 'FILLER'])
+			elif os.path.isfile(os.path.join(i, f)) and checklib(i, f) and callcheckfile(os.path.join(i, f)) == 0:
+				liblist.append([f, 'f', 'FILLER'])
 
 	liblist.sort()
 	liblist = list(liblist for liblist,_ in itertools.groupby(liblist))
@@ -212,7 +221,18 @@ if not libdocflag:
 else:
 	tmp = '          '
 	for i in liblist:
-		tmp2 = tmp + i[0] + ', '
+		if '.a' == i[0][-2:]:
+			f = i[0][:-2] + ' (static)'
+		elif '.so' == i[0][-3:]:
+			f = i[0][:-3]
+		elif '.jar' == i[0][-4:]:
+			f = i[0][:-4] + ' (Java library)'
+		elif '.dll' == i[0][-4:]:
+			f = i[0][:-4] + ' (DLL)'
+		else:
+			# what the???
+			f = i
+		tmp2 = tmp + f + ', '
 		#print(tmp2)
 		if len(tmp2) <= 80:
 			tmp = tmp2
@@ -298,30 +318,39 @@ for g in filelist:
       </varlistentry>
 ''', end='')
 
+printedout = []
 if libdocflag:
 	for g in liblist:
 		i = g[0]
 		# yes this is a hack
 		# but i can't figure out how rsplit works, I'm tired and it's 11:49PM
-		if '.a' in i:
+		if '.a' == i[-2:]:
 			f = i[:-2]
-		elif '.so' in i:
+		elif '.so' == i[-3:]:
 			f = i[:-3]
+		elif '.jar' == i[-4:]:
+			f = i[:-4]
+		elif '.dll' == i[-4:]:
+			f = i[:-4]
 		else:
+			# what the???
 			f = i
-		print(f'''
+		# teaching an old codebase new tricks :tm:
+		if f not in printedout:
+			print(f'''
       <varlistentry id="{f}">
-        <term><filename class="libraryfile">{i}</filename></term>
+        <term><filename class="libraryfile">{f}</filename></term>
         <listitem>
           <para>
             TODO
           </para>
           <indexterm zone="{sys.argv[1]} {f}">
-            <primary sortas="c-{f}">{i}</primary>
+            <primary sortas="c-{f}">{f}</primary>
           </indexterm>
         </listitem>
       </varlistentry>
 ''', end='')
+			printedout.append(f)
 
 print('''
     </variablelist>
