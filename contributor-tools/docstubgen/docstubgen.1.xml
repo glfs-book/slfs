@@ -7,7 +7,7 @@
 <refmeta>
 <refentrytitle>docstubgen</refentrytitle>
 <manvolnum>1</manvolnum>
-<refmiscinfo class='source'>March 12, 2025</refmiscinfo>
+<refmiscinfo class='source'>April 12, 2025</refmiscinfo>
 <refmiscinfo class='manual'>LFS-QOL Contributor Tools</refmiscinfo>
 </refmeta>
 <refnamediv>
@@ -58,8 +58,8 @@ In order to not break any existing workflows, these features are all guarded beh
   <varlistentry>
   <term><emphasis role='strong' remap='B'>DOCSTUBGEN_DOCUMENT_LIBRARIES</emphasis></term>
   <listitem>
-<para>Enables library documenting. Current mechanism for checking if a file is a library or not checks if the
-string ".a" or ".so" appears in the filename.</para>
+<para>Enables library documenting. Current mechanism for checking if a file is a library or not checks if ".a", ".so", ".jar"
+or ".dll" appears in the filename.</para>
   </listitem>
   </varlistentry>
   <varlistentry>
@@ -85,8 +85,8 @@ string ".a" or ".so" appears in the filename.</para>
   <listitem>
 <para>Performs a binary detection to check if a file is a binary or just some accompanying auxilliary file
 that randomly got put in the folders. Current mechanism for checking this involves executing the file
-command on every single file in the folders and checking if the output contains "ELF", "script", or
-"ar archive".</para>
+command on every single file in the folders and checking if the output contains "ELF", "script", "DLL", or
+"ar archive" OR the output contains "Zip" while the extension is ".jar".</para>
   </listitem>
   </varlistentry>
   <varlistentry>
