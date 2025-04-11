@@ -24,7 +24,7 @@ prep:
 	mkdir -p $(OBJDIR)/docstubgen
 
 build-docstubgen-manpage: $(OBJDIR)/docstubgen/docstubgen.1
-$(OBJDIR)/docstubgen/docstubgen.1: docstubgen/docstubgen.1.xml
+$(OBJDIR)/docstubgen/docstubgen.1: docstubgen/docstubgen.1.xml FRC
 	xsltproc --output $(OBJDIR)/docstubgen/ $(XSLSTYLESHEET) docstubgen/docstubgen.1.xml
 
 build-docstubgen: $(OBJDIR)/docstubgen/docstubgen $(OBJDIR)/docstubgen/docstubgen-checkfile
