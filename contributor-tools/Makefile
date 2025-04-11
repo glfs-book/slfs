@@ -10,7 +10,7 @@ LIBEXECDIR ?= libexec
 SHAREDIR ?= share
 OBJDIR ?= obj
 
-all: src man
+all: prep src man
 src: prep build-docstubgen
 man: prep build-docstubgen-manpage
 install: src install-docstubgen install-docstubgen-compat-symlink
