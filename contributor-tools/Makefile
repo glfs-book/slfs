@@ -27,7 +27,7 @@ $(OBJDIR)/docstubgen/docstubgen.1: docstubgen/docstubgen.1.xml
 	cp docstubgen/docstubgen-checkfile $(OBJDIR)/docstubgen/
 
 install-docstubgen:
-	sed -e 's/\#prefix\#/"\$(PREFIX)"/g' -e 's/\#libexecdir\#/"$(LIBEXECDIR)"/g' -i $(OBJDIR)/docstubgen/docstubgen
+	sed -e 's=#prefix#="$(PREFIX)"=g' -e 's=#libexecdir#="$(LIBEXECDIR)"=g' -i $(OBJDIR)/docstubgen/docstubgen
 	install -m755 -d $(DESTDIR)$(PREFIX)/$(BINDIR)
 	install -m755 $(OBJDIR)/docstubgen/docstubgen $(DESTDIR)$(PREFIX)/$(BINDIR)
 	install -m755 -d $(DESTDIR)$(PREFIX)/$(LIBEXECDIR)
