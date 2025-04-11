@@ -10,20 +10,28 @@ LIBEXECDIR ?= libexec
 SHAREDIR ?= share
 OBJDIR ?= obj
 
-all: man
-man: build-docstubgen-manpage
-install: install-docstubgen install-docstubgen-compat-symlink
-install-man: install-docstubgen-man
+all: src man
+src: prep build-docstubgen
+man: prep build-docstubgen-manpage
+install: src install-docstubgen install-docstubgen-compat-symlink
+install-man: man install-docstubgen-man
 World: all install install-man
 
 clean:
 	rm -rf $(OBJDIR)
 
+prep:
+	mkdir -p $(OBJDIR)/docstubgen
+
 build-docstubgen-manpage: $(OBJDIR)/docstubgen/docstubgen.1
 $(OBJDIR)/docstubgen/docstubgen.1: docstubgen/docstubgen.1.xml
-	mkdir -p $(OBJDIR)/docstubgen/
 	xsltproc --output $(OBJDIR)/docstubgen/ $(XSLSTYLESHEET) docstubgen/docstubgen.1.xml
+
+build-docstubgen: $(OBJDIR)/docstubgen/docstubgen $(OBJDIR)/docstubgen/docstubgen-checkfile
+$(OBJDIR)/docstubgen/docstubgen: docstubgen/docstubgen FRC
 	cp docstubgen/docstubgen $(OBJDIR)/docstubgen/
+
+$(OBJDIR)/docstubgen/docstubgen-checkfile: docstubgen/docstubgen-checkfile FRC
 	cp docstubgen/docstubgen-checkfile $(OBJDIR)/docstubgen/
 
 install-docstubgen:
@@ -39,3 +47,5 @@ install-docstubgen-man: build-docstubgen-manpage
 
 install-docstubgen-compat-symlink: install-docstubgen
 	ln -sf docstubgen $(DESTDIR)$(PREFIX)/$(BINDIR)/generate-doc-stub.py
+
+FRC:
