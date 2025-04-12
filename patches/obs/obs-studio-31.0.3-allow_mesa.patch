@@ -1,7 +1,7 @@
 Submitted By:            Zeckma <zeckma.tech@gmail.com>
 Date:                    2025-04-09
 Initial Package Version: 31.0.3
-Upstream Status:         Not sent
+Upstream Status:         Sent but will NOT be merged
 Origin:                  Self
 Description:             This patch allows Mesa's EGL library to be used, as
                          CMake's find_package(OpenGL::EGL) reports false if
