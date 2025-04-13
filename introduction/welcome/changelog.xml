@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>April 13th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Fastfetch: 2.40.3 -&gt; 2.40.4. Fixes
+          <ulink url="&lfs-qol-issues;/115">#115</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 10th, 2025</para>
       <itemizedlist>
         <listitem>
