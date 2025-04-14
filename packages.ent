@@ -61,6 +61,8 @@ version, so keep this at that. -->
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.3">
 <!ENTITY wbg-version                         "1.2.0">
+<!-- System Utilities -->
+<!ENTITY eza-version                         "0.21.0">
 <!-- Programming -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">

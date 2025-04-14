@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY eza-download-root "https://github.com/eza-community/eza">
+  <!ENTITY eza-download-http "&eza-download-root;/archive/v&eza-version;/eza-&eza-version;.tar.gz">
+  <!ENTITY eza-man-dl        "&eza-download-root;/releases/download/v&eza-version;/man-&eza-version;.tar.gz">
+]>
+
+<sect1 id="eza" xreflabel="eza-&eza-version;">
+  <?dbhtml filename="eza.html"?>
+
+  <title>eza-&eza-version;</title>
+
+  <indexterm zone="eza">
+    <primary sortas="a-eza">eza</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to eza</title>
+
+    <para>
+      The <application>eza</application> package provides a Rust alternative to
+      <command>ls</command>.
+    </para>
+
+    &build-use-internet;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&eza-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">eza Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/basinet/curl.html">cURL</ulink> (to download man
+      pages)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of eza</title>
+    <para>
+      Install <application>eza</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>cargo build --release</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>cargo test --release</command>.
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vm755 target/release/eza /usr/bin/</userinput></screen>
+
+    <para>
+      If you want to install man pages, you will need to download
+      <footnote><para>
+        Man pages for this package must be downloaded as there no tools in any
+        of the LFS packages to convert Markdown to man pages. This is because
+        the current options either require a lot of packages or a package that
+        is big and may in turn require several dependencies.
+      </para></footnote>
+      them using <ulink url="&blfs-svn;/basinet/curl.html">cURL</ulink> as the
+      &root; user:
+    </para>
+
+<screen remap="doc"
+  role="root"><userinput>curl -L &eza-man-dl; \
+  -o eza-man-&eza-version;.tar.gz &amp;&amp;
+tar -xf eza-man-&eza-version;.tar.gz &amp;&amp;
+for i in {1,5}; do
+  cp -v target/man-&eza-version;/*.$i /usr/share/man/man$i
+done</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Program</segtitle>
+      <segtitle>Installed Library</segtitle>
+      <segtitle>Installed Directory</segtitle>
+
+      <seglistitem>
+        <seg>
+          eza
+        </seg>
+        <seg>
+          none
+        </seg>
+        <seg>
+          none
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="eza-bin">
+        <term><command>eza</command></term>
+        <listitem>
+          <para>
+            is an <command>ls</command> Rust alternative
+          </para>
+          <indexterm zone="eza eza-bin">
+            <primary sortas="b-eza-bin">eza</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

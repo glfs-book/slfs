@@ -44,6 +44,10 @@
       <para>April 13th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - eza: Added. Fixes
+          <ulink url="&lfs-qol-issues;/118">#118</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Fastfetch: 2.40.3 -&gt; 2.40.4. Fixes
           <ulink url="&lfs-qol-issues;/115">#115</ulink>.</para>
         </listitem>
