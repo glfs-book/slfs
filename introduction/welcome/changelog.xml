@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>April 16th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - hyprlang: 0.6.0 -&gt; 0.6.1. Fixes
+          <ulink url="&lfs-qol-issues;/117">#117</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 15th, 2025</para>
       <itemizedlist>
         <listitem>
