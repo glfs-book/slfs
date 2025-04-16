@@ -43,7 +43,7 @@
     <para role="required">
       <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
       &gbm;,
-      <xref linkend="glm"/>,
+      <ulink url="&blfs-svn;/general/glm.html">GLM</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
       <ulink url="&blfs-svn;/general/hwdata.html">hwdata</ulink>,
       <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,

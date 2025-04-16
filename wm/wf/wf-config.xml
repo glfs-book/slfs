@@ -37,7 +37,7 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <xref linkend="glm"/>,
+      <ulink url="&blfs-svn;/general/glm.html">GLM</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>, and
       <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>
     </para>

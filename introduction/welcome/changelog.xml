@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>April 15th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - GLM: Removed. Fixes
+          <ulink url="&lfs-qol-issues;/121">#121</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 13th, 2025</para>
       <itemizedlist>
         <listitem>
