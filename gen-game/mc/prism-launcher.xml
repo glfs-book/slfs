@@ -39,7 +39,7 @@
     <para role="required">
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       &opengl;,
-      <xref linkend="openjdk"/> (or
+      <xref linkend="openjdk"/> (and/or
       <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink>), and
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>
     </para>
@@ -49,9 +49,11 @@
       <application>OpenJDK</application> (version 20 and above), you'll need to
       edit the build system of this package, tick an option in the launcher
       menu, and will lose support in older Minecraft versions, including mods
-      and other things. This is because version 20 and above does not support
-      Java 7. Version 19 and below supports Java 7. <xref linkend="openjdk"/>
-      is used as it's an LTS release that gets security updates.
+      and other things <emphasis>IF</emphasis> you did not make <xref
+      linkend="openjdk"/> the default JDK. This is because version 20 and above
+      does not support Java 7. Version 19 and below supports Java 7. <xref
+      linkend="openjdk"/> is used as it's an LTS release that gets security
+      updates.
     </para></important>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
@@ -70,12 +72,20 @@
     <title>Installation of PrismLauncher</title>
 
     <para>
-      If you have installed <application>OpenJDK</application> version 20 or
-      above, edit the build system to allow building with Java 8 instead of
-      7:
+      If you installed <xref linkend="openjdk"/> and it is currently not the
+      default JDK, but wish to make it the default, then run the following
+      command as the &root; user:
     </para>
 
-<screen><userinput>sed -e 's/Java 1.7/Java 1.8/g'     \
+<screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;+&openjdk-build; /opt/jdk</userinput></screen>
+
+    <para>
+      If you have installed <application>OpenJDK</application> version 20 or
+      above and have made it the default JDK, edit the build system to allow
+      building with Java 8 instead of 7:
+    </para>
+
+<screen><userinput>sed -e 's/Java 1.7/Java 1.8/g'   \
     -e 's/-target 7/-target 8/g' \
     -e 's/-source 7/-source 8/g' \
     -i libraries/{javacheck,launcher}/CMakeLists.txt</userinput></screen>
@@ -90,7 +100,7 @@ cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
-      -G Ninja -Wno-dev .. &amp;&amp;
+      -W no-dev -G Ninja .. &amp;&amp;
 
 ninja</userinput></screen>
 
@@ -108,12 +118,49 @@ ninja</userinput></screen>
     <para>
       This launcher should walk you through how to set it up. However, one
       major thing needs to be done if you installed
-      <application>OpenJDK</application> version 20 or above. After you create
-      an instance, you will need to edit that instance, go to the
-      <quote>Settings</quote> section, then tick <quote>Skip Java Compatibility
-      Checks</quote> to avoid Minecraft from refusing to launch. This has to be
-      done for every instance. If you installed <xref linkend="openjdk"/>, this
+      <application>OpenJDK</application> version 20 or above and made it the
+      default. After you create an instance, you will need to edit that
+      instance, go to the <quote>Settings</quote> section, then tick
+      <quote>Skip Java Compatibility Checks</quote> to avoid Minecraft from
+      refusing to launch. This has to be done for every instance. If you
+      installed <xref linkend="openjdk"/> and made it the default JDK, this
       doesn't need to be done at all.
+    </para>
+
+    <para>
+      In the case that you are using a newer Minecraft instance and/or have
+      installed mods that require newer versions of a given JDK, you will need
+      to have a multi-JDK setup. This generally entails having multiple JDK
+      builds in <filename class="directory">/opt</filename> and having a
+      default JDK that gets used in all cases unless specified otherwise. An
+      ideal setup is to make <xref linkend="openjdk"/> the default JDK, but
+      also install <ulink
+      url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink> so that the JDK
+      version can be overridden per MC instance. In that case, you will need to
+      copy the same steps in the above paragraph, as well as changing the
+      <quote>Java Installation</quote> to point to the desired JDK. When
+      installing the newer JDK, it is recommended to skip making the symlink on
+      that page so that it doesn't become the default. If you made it the
+      default beforehand but wish to change it, run the following command as
+      the &root; user:
+    </para>
+
+<screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;+&openjdk-build; /opt/jdk</userinput></screen>
+
+    <para>
+      A multi-JDK setup may look like this:
+    </para>
+
+<screen><userinput>$ ls /opt | grep jdk
+</userinput><computeroutput>jdk
+<literal>jdk-23.0.2+7</literal>
+<literal>jdk-17.0.15+5</literal>
+...</computeroutput></screen>
+
+    <para>
+      <userinput>jdk</userinput> can be a symlink to either
+      <computeroutput><literal>jdk-23.0.2+7</literal></computeroutput> or
+      <computeroutput><literal>jdk-17.0.15+5</literal></computeroutput>.
     </para>
 
   </sect2>

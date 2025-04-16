@@ -44,6 +44,10 @@
       <para>April 16th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - PrismLauncher: Cover default JDKs and multi-JDK
+          setup.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - hyprlang: 0.6.0 -&gt; 0.6.1. Fixes
           <ulink url="&lfs-qol-issues;/117">#117</ulink>.</para>
         </listitem>
