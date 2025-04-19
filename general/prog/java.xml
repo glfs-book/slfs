@@ -8,10 +8,10 @@
   <!ENTITY openjdk-download-binary "&misc-dl-root;/&ojdk-bin-tag;/&ojdk-bin-tag;.tar.xz">
 ]>
 
-<sect1 id="java" xreflabel="Java-&openjdk-version;">
+<sect1 id="java" xreflabel="Java-&openjdk-version;+&openjdk-build;">
   <?dbhtml filename="java.html"?>
 
-  <title>Java-&openjdk-version;</title>
+  <title>Java-&openjdk-version;+&openjdk-build;</title>
 
   <indexterm zone="java">
     <primary sortas="a-java">JDK Binary</primary>
@@ -76,7 +76,7 @@
 
     <para>
       To start, we set up a binary installation of the JDK created
-      by the BLFS editors. It is installed in the <filename>/opt</filename>
+      by the LFS QOL editors. It is installed in the <filename>/opt</filename>
       directory to allow for multiple installations, including a source based
       version.
     </para>

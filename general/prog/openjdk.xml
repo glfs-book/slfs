@@ -9,10 +9,10 @@
   <!ENTITY ojdk-download             "&ojdk-repo;/archive/&ojdk-tarball;">
 ]>
 
-<sect1 id="openjdk" xreflabel="OpenJDK-&openjdk-version;">
+<sect1 id="openjdk" xreflabel="OpenJDK-&openjdk-version;+&openjdk-build;">
   <?dbhtml filename="openjdk.html" ?>
 
-  <title>OpenJDK-&openjdk-version;</title>
+  <title>OpenJDK-&openjdk-version;+&openjdk-build;</title>
 
   <indexterm zone="openjdk">
     <primary sortas="a-OpenJDK">OpenJDK</primary>
