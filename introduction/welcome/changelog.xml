@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>April 19th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - PrismLauncher: 9.2 -&gt; 9.4. Fixes
+          <ulink url="&lfs-qol-issues;/119">#119</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 16th, 2025</para>
       <itemizedlist>
         <listitem>
