@@ -41,6 +41,48 @@
     -->
 
     <listitem>
+      <para>April 23rd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - GLideN64: 575f381 -&gt; 865b121. Fixes
+          <ulink url="&lfs-qol-issues;/123">#123</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - asio: 1-34-0 -&gt; 1-34-2. Fixes
+          <ulink url="&lfs-qol-issues;/124">#124</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 5.0.2 -&gt; 5.1.0. Fixes
+          <ulink url="&lfs-qol-issues;/125">#125</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libjuice: 1.5.2 -&gt; 1.6.0. Fixes
+          <ulink url="&lfs-qol-issues;/126">#126</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libdatachannel: 0.21.2 -&gt; 0.22.6. Fixes
+          <ulink url="&lfs-qol-issues;/127">#127</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - nlohmann-json: 3.11.3 -&gt; 3.12.0. Fixes
+          <ulink url="&lfs-qol-issues;/128">#128</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - htop: 3.4.0 -&gt; 3.4.1. Fixes
+          <ulink url="&lfs-qol-issues;/129">#129</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - eza: 0.21.0 -&gt; 0.21.1. Fixes
+          <ulink url="&lfs-qol-issues;/130">#130</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - foot: 1.21.0 -&gt; 1.22.0. Fixes
+          <ulink url="&lfs-qol-issues;/131">#131</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 19th, 2025</para>
       <itemizedlist>
         <listitem>

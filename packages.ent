@@ -1,20 +1,20 @@
 <!-- GENERAL -->
 <!-- General Libraries -->
-<!ENTITY asio-version                        "1-34-0">
+<!ENTITY asio-version                        "1-34-2">
 <!ENTITY enet-version                        "1.3.18">
-<!ENTITY glaze-version                       "5.0.2">
+<!ENTITY glaze-version                       "5.1.0">
 <!ENTITY jansson-version                     "2.14.1">
 <!ENTITY libev-version                       "4.33">
-<!ENTITY libjuice-version                    "1.5.2">
+<!ENTITY libjuice-version                    "1.6.0">
 <!ENTITY libsrtp-version                     "2.7.0">
-<!ENTITY libdatachannel-version              "0.21.2">
-<!ENTITY libdatachannel-plog                 "e21baecd4753f14da64ede979c5a19302618b752">
+<!ENTITY libdatachannel-version              "0.22.6">
+<!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
 <!ENTITY libdatachannel-usrsctp              "ebb18adac6501bad4501b1f6dccb67a1c85cc299">
 <!ENTITY libutempter-version                 "1.2.1">
 <!ENTITY libzip-version                      "1.11.3">
 <!ENTITY mbedtls-version                     "3.6.3">
 <!ENTITY zlib-version                        "1.3.1">
-<!ENTITY nlohmann-json-version               "3.11.3">
+<!ENTITY nlohmann-json-version               "3.12.0">
 <!ENTITY pugixml-version                     "1.15">
 <!ENTITY re2-version                         "2024-07-02">
 <!ENTITY qrcodegencpp-version                "1.8.0">
@@ -34,7 +34,7 @@
 <!ENTITY xdg-desktop-portal-hyprland-version "1.3.9">
 <!ENTITY xdg-desktop-portal-wlr-version      "0.7.1">
 <!-- General Utilities -->
-<!ENTITY htop-version                        "3.4.0">
+<!ENTITY htop-version                        "3.4.1">
 <!ENTITY btop-version                        "1.4.0">
 <!ENTITY jstest-sdl-minor-version            "710687">
 <!ENTITY jstest-sdl-version                  "710687344a8bd35553f0edf40469531c07b6ef31">
@@ -61,7 +61,7 @@ version, so keep this at that. -->
 <!ENTITY scdoc-version                       "1.11.3">
 <!ENTITY wbg-version                         "1.2.0">
 <!-- System Utilities -->
-<!ENTITY eza-version                         "0.21.0">
+<!ENTITY eza-version                         "0.21.1">
 <!-- Programming -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
@@ -87,7 +87,7 @@ version, so keep this at that. -->
 <!ENTITY motif-version                       "2.3.8">
 <!-- Terminal Emulators -->
 <!ENTITY alacritty-version                   "0.15.1">
-<!ENTITY foot-version                        "1.21.0">
+<!ENTITY foot-version                        "1.22.0">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->
@@ -180,7 +180,7 @@ version, so keep this at that. -->
 <!ENTITY mupen64plus-rsp-hle-version         "&mupen64plus-version;">
 <!ENTITY mupen64plus-video-rice-version      "&mupen64plus-version;">
 <!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
-<!ENTITY gliden64-version                    "575f3814e47851b7f86bdb61829b6abac11a38be">
+<!ENTITY gliden64-version                    "865b1214bf72530b147e0f14e1e205e6897082ac">
 
 <!-- GEN-GAME-SOFT -->
 <!-- Minecraft -->
