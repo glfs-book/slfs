@@ -28,6 +28,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="obs-studio.xml"/> 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rpmextract.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="scdoc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tmux.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wbg.xml"/>
 
 </chapter>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY tmux-download-http "https://github.com/tmux/tmux/releases/download/&tmux-version;/tmux-&tmux-version;.tar.gz">
+]>
+
+<sect1 id="tmux" xreflabel="tmux-&tmux-version;">
+  <?dbhtml filename="tmux.html"?>
+
+  <title>tmux-&tmux-version;</title>
+
+  <indexterm zone="tmux">
+    <primary sortas="a-tmux">tmux</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to tmux</title>
+
+    <para>
+      The <application>tmux</application> package provides a terminal
+      multiplexer and an alternative to <ulink
+      url="&blfs-svn;/general/screen.html">Screen</ulink>.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&tmux-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">tmux Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/basicnet/libevent.html">libevent</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <xref linkend="libutempter"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of tmux</title>
+
+    <para>
+      Install <application>tmux</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <option>--enable-utempter</option>: If you installed <xref
+      linkend="libutempter"/>, use this option to be able to update utmp.
+    </para>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          tmux
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="tmux-bin">
+        <term><command>tmux</command></term>
+        <listitem>
+         <para>
+           is a terminal multiplexer
+         </para>
+          <indexterm zone="tmux tmux-bin">
+            <primary sortas="b-tmux-bin">tmux</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

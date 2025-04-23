@@ -44,6 +44,10 @@
       <para>April 23rd, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - tmux: Added. Fixes
+          <ulink url="&lfs-qol-issues;/132">#132</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - GLideN64: 575f381 -&gt; 865b121. Fixes
           <ulink url="&lfs-qol-issues;/123">#123</ulink>.</para>
         </listitem>

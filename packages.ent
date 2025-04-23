@@ -59,6 +59,7 @@ version, so keep this at that. -->
 <!ENTITY obs-cef-version                     "6533">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.3">
+<!ENTITY tmux-version                        "3.5a">
 <!ENTITY wbg-version                         "1.2.0">
 <!-- System Utilities -->
 <!ENTITY eza-version                         "0.21.1">
