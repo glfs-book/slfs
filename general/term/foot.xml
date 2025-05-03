@@ -48,7 +48,7 @@
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
       <xref linkend="fcft"/> (if not built, it will be downloaded),
-      <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink> and
+      <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink>, and
       <xref linkend="tllist"/> (if not built, it will be downloaded)
     </para>
 
