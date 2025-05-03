@@ -53,11 +53,13 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-cmake -D CMAKE_INSTALL_PREFIX=/usr      \
-      -D CMAKE_BUILD_TYPE=Release       \
-      -D CMAKE_SKIP_RPATH=ON            \
-      -D USE_SHARED_MBEDTLS_LIBRARY=ON  \
-      -D USE_STATIC_MBEDTLS_LIBRARY=OFF \
+CFLAGS="-Wno-unterminated-string-initialization"   \
+CXXFLAGS="-Wno-unterminated-string-initialization" \
+cmake -D CMAKE_INSTALL_PREFIX=/usr                 \
+      -D CMAKE_BUILD_TYPE=Release                  \
+      -D CMAKE_SKIP_RPATH=ON                       \
+      -D USE_SHARED_MBEDTLS_LIBRARY=ON             \
+      -D USE_STATIC_MBEDTLS_LIBRARY=OFF            \
       -G Ninja .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -78,6 +80,11 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
 
   <sect2 role="commands">
     <title>Command Explanations</title>
+
+    <para>
+      <envar>C{,XX}FLAGS="-Wno-unterminated-string-initialization"</envar>:
+      These variables disable a false positive being triggered by GCC-15.x.x.
+    </para>
 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="../../xincludes/cmake-skip-install-rpath.xml"/>
