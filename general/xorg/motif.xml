@@ -112,6 +112,8 @@ export YACC=byacc</userinput></screen>
     </para>
 
 <screen><userinput>sed -i '1 i\%option main' tools/wml/wmluiltok.l &amp;&amp;
+CFLAGS="-std=gnu17"       \
+CXXFLAGS="-std=gnu17"     \
 ./configure --prefix=/usr \
             --with-x      \
             --enable-motif22-compatibility \
@@ -174,6 +176,14 @@ EOF</userinput></screen>
 unset OLDLANG &amp;&amp;
 unset LEX &amp;&amp;
 unset YACC</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/gnu17.xml"/>
 
   </sect2>
 
