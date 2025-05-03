@@ -59,13 +59,11 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup ..                   \
-      --prefix=$XORG_PREFIX      \
-      $(pkgconf libglvnd  &amp;&amp;     \
-      echo -D gl_provider=glvnd) \
-      $(pkgconf --print-provides \
-      gl | grep "gl =" 1>&amp;2 &amp;&amp;   \
-      echo -D gl_provider=gl)    \
+meson setup ..                     \
+      --prefix=$XORG_PREFIX        \
+      $(pkgconf libglvnd &amp;&amp;        \
+      echo -D gl_provider=glvnd || \
+      echo -D gl_provider=gl)      \
       --buildtype=release &amp;&amp;
 
 ninja</userinput></screen>
