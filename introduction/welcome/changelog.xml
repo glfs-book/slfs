@@ -41,6 +41,15 @@
     -->
 
     <listitem>
+      <para>May 3rd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - CUDA: Get around use of older libxml2 ABI.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 23rd, 2025</para>
       <itemizedlist>
         <listitem>

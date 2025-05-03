@@ -81,16 +81,52 @@ ln -sfv cuda-&cuda-version; /opt/cuda</userinput></screen>
 
     <para>
       Install <application>CUDA</application> by running the following
-      command as the &root; user:
+      commands as the &root; user:
     </para>
 
 <screen role="root"><userinput>sh cuda_&cuda-version;_&cuda-nvidia-version;_linux.run \
-  --silent  \
-  --toolkit \
-  --toolkitpath=/opt/cuda-&cuda-version;</userinput></screen>
+  --target cuda_&cuda-version;_&cuda-nvidia-version;_linux \
+  --noexec &amp;&amp;
+pushd cuda_&cuda-version;_&cuda-nvidia-version;_linux/builds &amp;&amp;
+  rm -rvf bin integration NVIDIA*.run &amp;&amp;
+  mv version.json /opt/cuda-&cuda-version; &amp;&amp;
+  mkdir -p /opt/cuda-&cuda-version;/bin &amp;&amp;
+  cuda_components=(
+    cuda_nsight/{bin,nsightee_plugins},
+    cuda_nvvp/{bin,libnvvp},
+    cuda_sanitizer_api/compute-sanitizer,
+    nsight_compute,
+    nsight_systems
+  )
+  for i in ${cuda_components[@]}; do
+    cp -vR $i /opt/cuda-&cuda-version;
+  done &amp;&amp;
+  rm -rf cuda_nvvp cuda_nsight cuda_sanitizer_api &amp;&amp;
+  ln -sfv ../compute-sanitizer/compute-sanitizer \
+    /opt/cuda-&cuda-version;/bin/compute-sanitizer &amp;&amp;
+  mv EULA.txt /opt/cuda-&cuda-version; &amp;&amp;
+  for lib in *; do
+    cp -vR $lib/* /opt/cuda-&cuda-version; &amp;&amp;
+    rm -rf $lib
+  done &amp;&amp;
+  ln -svf lib64 /opt/cuda-&cuda-version;/lib &amp;&amp;
+  for mf in $(find /opt/cuda-&cuda-version; -name Makefile); do
+    sed -i "s|/usr/local/cuda|/opt/cuda-&cuda-version;|g" "$mf"
+  done &amp;&amp;
+popd &amp;&amp;
+rm -rf cuda_&cuda-version;_&cuda-nvidia-version;_linux</userinput></screen>
+
+    <note><para>
+      The above instructions extract the runfile and installs components
+      manually. In the past, this was not needed. However,
+      <command>cuda_installer</command> fails to load as it relies on an older
+      <application>libxml2</application> ABI. This process will be kept even
+      when the ABI gets fixed as it allows for more control, despite being more
+      complicated.
+    </para></note>
 
     <para>
-      Now as the &root; user, allow the use of new compilers:
+      Still as the &root; user, allow the use of new compilers:
     </para>
 
 <screen role="root"><userinput>sed -e "/.*unsupported GNU version.*/d" \
@@ -118,25 +154,31 @@ ln -sfv cuda-&cuda-version; /opt/cuda</userinput></screen>
     <title>Command Explanations</title>
 
     <para>
-      <parameter>--silent</parameter>: This parameter is required or else this
-      toolkit will be unable to be installed.
+      <parameter>--target</parameter>: This parameter specifies the extraction
+      directory.
     </para>
 
     <para>
-      <parameter>--toolkit</parameter>: This option forces the toolkit to be
-      installed as the <application>NVIDIA</application> driver is also
-      included and will be installed otherwise, which can cause issues.
-    </para>
-
-    <para>
-      <parameter>--toolkitpath=/opt/cuda-&cuda-version;</parameter>: This
-      parameter changes the installation path.
+      <parameter>--noexec</parameter>: This parameter does ensures the toolkit
+      does not get triggered for installation.
     </para>
 
   </sect2>
 
   <sect2 role="configuration">
     <title>Configuring CUDA</title>
+
+    <para>
+      Ensure the libraries are cached as the &root; user:
+    </para>
+
+<screen role="root"><userinput>cat &gt; /etc/ld.so.conf.d/cuda.conf &lt;&lt; EOF &amp;&amp;
+<literal>/opt/cuda/lib64
+/opt/cuda/nvvm/lib64
+/opt/cuda/extras/CUPTI/lib64</literal>
+EOF
+
+ldconfig</userinput></screen>
 
     <para>
       Now in order to use the toolkit, it needs to be included in the path.
