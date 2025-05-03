@@ -5,7 +5,7 @@
   %general-entities;
 
   <!ENTITY yajl-download-http
-    "https://github.com/lloyd/yajl/archive/&yajl-version;/yajl-&yajl-version;.tar.gz">
+    "https://github.com/lloyd/yajl/archive/refs/tags/&yajl-version;/yajl-&yajl-version;.tar.gz">
 ]>
 
 <sect1 id="yajl" xreflabel="yajl-&yajl-version;">
@@ -25,7 +25,6 @@
       The yajl package provides a JSON library.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
