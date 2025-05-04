@@ -81,7 +81,7 @@
     </para>
 
 <screen><userinput>sed -i 's/\-ltinfo//g' build/mk.config &amp;&amp;
-make</userinput></screen>
+CC="cc -std=gnu17" make</userinput></screen>
 
     <para>
       Now, as the &root; user:
