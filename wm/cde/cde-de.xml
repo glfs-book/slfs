@@ -90,10 +90,19 @@
 <screen><userinput>patch -Np2 -i ../cde-&cde-de-version;-upstream-fixes.patch</userinput></screen>
 
     <para>
-      Then, install CDE by executing the following commands:
+      Fix <envar>nullptr</envar> being used in a wrong way:
+    </para>
+
+<screen><userinput>sed -e 's/\, \*nullptr//g'     \
+    -e 's/\&amp;nullptr/nullptr/g' \
+    -i programs/dtksh/ksh93/src/cmd/ksh93/sh/xec.c</userinput></screen>
+
+    <para>
+      Install CDE by executing the following commands:
     </para>
 
 <screen><userinput>./autogen.sh &amp;&amp;
+CFLAGS="-std=gnu17" \
 ./configure --prefix=/usr --disable-static &amp;&amp;
 make</userinput></screen>
 
