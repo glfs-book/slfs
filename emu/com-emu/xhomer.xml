@@ -26,7 +26,6 @@
       early to mid-80s.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -82,7 +81,7 @@
       command:
     </para>
 
-<screen><userinput>make &amp;&amp;
+<screen><userinput>make CC="cc -std=gnu17" &amp;&amp;
 gcc UTILITIES/lbn2xhomer.c -o UTILITIES/lbn2xhomer &amp;&amp;
 gcc UTILITIES/venix2xhomer.c -o UTILITIES/venix2xhomer</userinput></screen>
 
