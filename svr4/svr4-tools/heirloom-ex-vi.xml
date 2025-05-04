@@ -26,7 +26,6 @@
       <application>vi</application>.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -80,7 +79,7 @@
     </para>
 
 <screen><userinput>./configure &amp;&amp;
-make</userinput></screen>
+CC="cc -std=gnu17" make</userinput></screen>
 
     <para>
       Now, as the &root; user:
