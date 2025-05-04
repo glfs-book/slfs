@@ -94,6 +94,7 @@
         <listitem>
           <para>
             <ulink url="&blfs-svn;/x/at-spi2-core.html">at-spi2-core</ulink>
+            and <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>
             (required for browser support)
           </para>
         </listitem>
@@ -264,6 +265,16 @@ ninja</userinput></screen>
     <para>
       <parameter>-D ENABLE_NEW_MPEGTS_OUTPUT=OFF</parameter>: This switch
       disables the optional MpegTS Output functionality.
+    </para>
+
+    <para>
+      <option>-D ENABLE_PIPEWIRE=OFF</option>: Disables Pipewire support if you
+      have not installed it.
+    </para>
+
+    <para>
+      <option>-D ENABLE_SPEEXDSP=OFF</option>: Disables Speex support if you
+      have not installed it.
     </para>
 
     <para>
