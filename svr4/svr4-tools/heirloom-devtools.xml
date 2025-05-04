@@ -29,7 +29,6 @@
       original UNIX versions.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -123,7 +122,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
       command:
     </para>
 
-<screen><userinput>make -j1</userinput></screen>
+<screen><userinput>CC="cc -std=gnu17" make -j1</userinput></screen>
 
     <para>
       Now, as the &root; user:
