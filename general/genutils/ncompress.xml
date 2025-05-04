@@ -42,7 +42,7 @@
       commands:
     </para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>CFLAGS="-std=gnu17" make</userinput></screen>
 
     <para>
       Now as the &root; user:
