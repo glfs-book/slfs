@@ -193,7 +193,14 @@
     <title>Installation of OBS Studio</title>
 
     <para>
-      First apply a patch to allow EGL libraries from
+      Fix building with GCC-15.x.x:
+    </para>
+
+<screen><userinput>sed '/^#include &lt;cmath&gt;/a #include &lt;cstdint&gt;' \
+  -i deps/json11/json11.cpp</userinput></screen>
+
+    <para>
+      Apply a patch to allow EGL libraries from
       <application>Mesa</application>:
     </para>
 
