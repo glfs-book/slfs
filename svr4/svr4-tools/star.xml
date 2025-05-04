@@ -29,7 +29,6 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="../../xincludes/long-build-time.xml"/>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -44,11 +43,20 @@
     <title>Installation of star from schilytools</title>
 
     <para>
-      Compile <application>star</application> by running the following
-      command:
+      First build <command>smake</command> to allow overriding variables in
+      build files:
     </para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>pushd psmake &amp;&amp;
+  sh MAKE-all &amp;&amp;
+popd</userinput></screen>
+
+    <para>
+      Compile <application>star</application> by running the following
+      commands, and ensure an older GNU standard is used:
+    </para>
+
+<screen><userinput>psmake/smake -e CC="cc -std=gnu17"</userinput></screen>
 
     <para>
       Now, as the &root; user, install <application>star</application> and the
