@@ -112,6 +112,13 @@
 <screen><userinput>cd sysv &amp;&amp;
 make -f Makefile.daveb running</userinput></screen>
 
+    <tip><para>
+      Be sure to compile this kernel module booted into your LFS system, or if
+      in a chroot, have the same kernel version you built for the target as on
+      the host. Otherwise, directories that are assumed to exist will not be
+      found and the build process will fail.
+    </para></tip>
+
     <para>
       Now install the kernel module as the &root; user:
     </para>
