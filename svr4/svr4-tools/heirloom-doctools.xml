@@ -28,7 +28,6 @@
       ditroff, which are themselves descendants of the original UNIX troff.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -58,8 +57,10 @@
     </para>
 
 <screen><userinput>./configure &amp;&amp;
-make PREFIX=/usr MANDIR=/usr/share/man/5man \
-YACC=/usr/ccs/bin/yacc</userinput></screen>
+make PREFIX=/usr            \
+     CC="cc -std=gnu17"     \
+     YACC=/usr/ccs/bin/yacc \
+     MANDIR=/usr/share/man/5man</userinput></screen>
 
     <para>
       Now, as the &root; user:
