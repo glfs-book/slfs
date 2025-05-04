@@ -44,6 +44,9 @@
       <para>May 3rd, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - GCC: 14.2.0 -&gt; 15.1.0.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - CUDA: Get around use of older libxml2 ABI.</para>
         </listitem>
       </itemizedlist>
