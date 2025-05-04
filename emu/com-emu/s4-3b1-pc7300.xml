@@ -156,7 +156,7 @@ make -f Makefile.daveb running</userinput></screen>
     </para>
 
 <screen><userinput>cd .. &amp;&amp;
-make</userinput></screen>
+make CC="cc -std=gnu17"</userinput></screen>
 
     <para>
       Now, as the &root; user:
