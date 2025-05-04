@@ -72,9 +72,10 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-cmake -D CMAKE_INSTALL_PREFIX=/usr   \
-      -D CMAKE_BUILD_TYPE=Release    \
-      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+cmake -D CMAKE_INSTALL_PREFIX=/usr        \
+      -D CMAKE_BUILD_TYPE=Release         \
+      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON      \
       -G Ninja .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -90,6 +91,9 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
   
   <sect2 role="commands">
     <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../../xincludes/cmake-policy-version.xml"/>
 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="../../../xincludes/cmake-skip-install-rpath.xml"/>
