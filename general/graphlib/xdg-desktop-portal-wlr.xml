@@ -39,6 +39,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       &gbm;,
+      <ulink url="&blfs-svn;/general/inih.html">inih</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       &logind;
       &opengl;,
@@ -50,7 +51,6 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/general/inih.html">inih</ulink> and
       <xref linkend="scdoc"/>
     </para>
 
