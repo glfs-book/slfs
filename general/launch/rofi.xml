@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY rofi-download-http
+    "https://github.com/davatorium/rofi/releases/download/&rofi-version;/rofi-&rofi-version;.tar.xz">
+]>
+
+<sect1 id="rofi" xreflabel="Rofi-&rofi-version;">
+  <?dbhtml filename="rofi.html"?>
+
+  <title>Rofi-&rofi-version;</title>
+
+  <indexterm zone="rofi">
+    <primary sortas="a-rofi">Rofi</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Rofi</title>
+
+    <para>
+      <application>Rofi</application> provides an application launcher for the
+      <application>X</application> Window System. It can launch applications
+      found in <envar>$PATH</envar>, such as <command>firefox</command>. It can
+      also launch applications from <filename
+      class="extension">.desktop</filename> files in <filename
+      class="directory">/usr/share/applications</filename>, <filename
+      class="directory">~/.local/share/applications</filename>, and other
+      paths, such as
+      <filename>/usr/share/applications/firefox.desktop</filename>. This
+      specific edition of <application>Rofi</application> does not support
+      <application>Wayland</application> compositors.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&rofi-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Rofi Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>),
+      <ulink url="&blfs-svn;/x/startup-notification.html">startup-notification</ulink>, and
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/hicolor-icon-theme.html">hicolor-icon-theme</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/xcb-imdkit/">XCBImdkit</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Rofi</title>
+
+    <para>
+      Install <application>Rofi</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          rofi, rofi-sensible-terminal, and rofi-theme-selector
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/include/rofi and
+          /usr/share/rofi/themes
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="rofi-bin">
+        <term><command>rofi</command></term>
+        <listitem>
+          <para>
+            is an <application>X11</application> application laucher
+          </para>
+          <indexterm zone="rofi rofi-bin">
+            <primary sortas="b-rofi-bin">rofi</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rofi-sensible-terminal">
+        <term><command>rofi-sensible-terminal</command></term>
+        <listitem>
+          <para>
+            invokes the default terminal
+          </para>
+          <indexterm zone="rofi rofi-sensible-terminal">
+            <primary sortas="b-rofi-sensible-terminal">rofi-sensible-terminal</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rofi-theme-selector">
+        <term><command>rofi-theme-selector</command></term>
+        <listitem>
+          <para>
+            changes the theme used for <command>rofi</command>'s UI
+          </para>
+          <indexterm zone="rofi rofi-theme-selector">
+            <primary sortas="b-rofi-theme-selector">rofi-theme-selector</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

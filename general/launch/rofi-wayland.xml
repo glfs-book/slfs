@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY rofi-wayland-download-http
+    "https://github.com/lbonn/rofi/releases/download/&rofi-wayland-version;/rofi-&rofi-wayland-version;.tar.xz">
+]>
+
+<sect1 id="rofi-wayland" xreflabel="Rofi-Wayland-&rofi-wayland-version;">
+  <?dbhtml filename="rofi-wayland.html"?>
+
+  <title>Rofi-Wayland-&rofi-wayland-version;</title>
+
+  <indexterm zone="rofi-wayland">
+    <primary sortas="a-rofi-wayland">Rofi-Wayland</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Rofi-Wayland</title>
+
+    <para>
+      <application>Rofi-Wayland</application> provides an application launcher
+      for the <application>X</application> Window System as well as
+      <application>Wayland</application>. It has the same functionality as
+      <xref linkend="rofi"/> and more. If you only use the
+      <application>X</application> Window System, you can just install <xref
+      linkend="rofi"/> instead.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&rofi-wayland-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Rofi-Wayland Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>),
+      <ulink url="&blfs-svn;/x/startup-notification.html">startup-notification</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, and
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/hicolor-icon-theme.html">hicolor-icon-theme</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/xcb-imdkit/">XCBImdkit</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Rofi-Wayland</title>
+
+    <para>
+      Install <application>Rofi-Wayland</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          rofi, rofi-sensible-terminal, and rofi-theme-selector
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/include/rofi and
+          /usr/share/rofi/themes
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="rofi-wayland-bin">
+        <term><command>rofi</command></term>
+        <listitem>
+          <para>
+            is an <application>X11</application> and
+            <application>Wayland</application> application laucher
+          </para>
+          <indexterm zone="rofi-wayland rofi-wayland-bin">
+            <primary sortas="b-rofi-wayland-bin">rofi</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rofi-wayland-sensible-terminal">
+        <term><command>rofi-sensible-terminal</command></term>
+        <listitem>
+          <para>
+            invokes the default terminal
+          </para>
+          <indexterm zone="rofi-wayland rofi-wayland-sensible-terminal">
+            <primary sortas="b-rofi-wayland-sensible-terminal">rofi-sensible-terminal</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rofi-wayland-theme-selector">
+        <term><command>rofi-theme-selector</command></term>
+        <listitem>
+          <para>
+            changes the theme used for <command>rofi</command>'s UI
+          </para>
+          <indexterm zone="rofi-wayland rofi-wayland-theme-selector">
+            <primary sortas="b-rofi-wayland-theme-selector">rofi-theme-selector</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

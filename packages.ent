@@ -89,6 +89,10 @@ version, so keep this at that. -->
 <!-- Terminal Emulators -->
 <!ENTITY alacritty-version                   "0.15.1">
 <!ENTITY foot-version                        "1.22.0">
+<!-- Launchers -->
+<!ENTITY rofi-version                        "1.7.8">
+<!ENTITY rofi-wayland-version                "&rofi-version;+wayland1">
+<!ENTITY wofi-version                        "1.4.1">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->

@@ -117,7 +117,7 @@ ninja</userinput></screen>
             <application>Wayland</application>
           </para>
           <indexterm zone="wbg wbg-bin">
-            <primary sortas="wbg-bin">wbg</primary>
+            <primary sortas="b-wbg-bin">wbg</primary>
           </indexterm>
         </listitem>
       </varlistentry>

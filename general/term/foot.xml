@@ -160,7 +160,7 @@ cp /etc/xdg/foot/foot.ini ~/.config/foot</userinput></screen>
             is a <application>Wayland</application> terminal emulator
           </para>
           <indexterm zone="foot foot-bin">
-            <primary sortas="foot-bin">foot</primary>
+            <primary sortas="b-foot-bin">foot</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -173,7 +173,7 @@ cp /etc/xdg/foot/foot.ini ~/.config/foot</userinput></screen>
             <application>foot</application> server
           </para>
           <indexterm zone="foot footclient">
-            <primary sortas="footclient">footclient</primary>
+            <primary sortas="b-footclient">footclient</primary>
           </indexterm>
         </listitem>
       </varlistentry>
