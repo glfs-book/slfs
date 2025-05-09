@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY dunst-download-http
+    "https://github.com/dunst-project/dunst/archive/v&dunst-version;/dunst-&dunst-version;.tar.gz">
+]>
+
+<sect1 id="dunst" xreflabel="Dunst-&dunst-version;">
+  <?dbhtml filename="dunst.html"?>
+
+  <title>Dunst-&dunst-version;</title>
+
+  <indexterm zone="dunst">
+    <primary sortas="a-dunst">Dunst</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Dunst</title>
+
+    <para>
+      <application>Dunst</application> provides a notification daemon that is
+      light and customizable for the <application>X</application> Window System
+      and <application>Wayland</application> compositors.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&dunst-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Dunst Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
+      <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
+      &logind;
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/x/libnotify.html">libnotify</ulink> and
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Dunst</title>
+
+    <para>
+      Install <application>Dunst</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>make PREFIX=/usr                 \
+     SYSCONFDIR=/etc             \
+     X11LIB=$XORG_PREFIX/lib/X11 \
+     X11INC=$XORG_PREFIX/include/X11</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make PREFIX=/usr SYSCONFDIR=/etc install</userinput></screen>
+
+    <para>
+      As a sanity test, you can see if the installation works by sending a
+      notification to the desktop (be sure to do this in a working graphical
+      environment; requires <ulink
+      url="&blfs-svn;/x/libnotify.html">libnotify</ulink>):
+    </para>
+
+<screen><userinput>(dunst &amp; disown)
+dunstify -i info Information "Hello, ${USER}!" &amp;&amp; sleep 5
+pkill dunst</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring Dunst</title>
+
+    <sect3 id="dunst-config">
+      <title>Config Files</title>
+      <para>
+        <filename>~/.config/dunst/dunstrc</filename>. The default version
+        is in <filename class="directory">/etc/dunst</filename> and will
+        not be read from. If you want to customize your experience, copy the
+        configuration file to
+        <filename class="directory">~/.config/dunst</filename>
+      </para>
+
+      <indexterm zone="dunst dunst-config">
+        <primary sortas="e-AA.config">~/.config/dunst/dunstrc</primary>
+      </indexterm>
+
+    </sect3>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        Create the config file:
+      </para>
+
+<screen><userinput>mkdir -pv ~/.config/dunst &amp;&amp;
+cp /etc/dunst/dunstrc ~/.config/dunst</userinput></screen>
+
+      <para>
+        Now inspect the file and make any changes to suit your needs.
+      </para>
+
+      <para>
+        <command>dunst</command> also needs to be started for it to be able to
+        send any notification. While this can be autostarted by
+        <application>D-Bus</application>, multiple notification daemons may be
+        installed, so <application>D-Bus</application> will be the one to
+        choose what gets autostarted. Thus, there are a couple of options.
+      </para>
+
+      <sect4>
+        <title>For X11 - Window Managers</title>
+
+        <para>
+          You can just add the following to <filename>~/.xinitrc</filename>:
+        </para>
+
+<screen><userinput><literal>dunst &amp;</literal></userinput></screen>
+
+        <para>
+          Make sure the above line comes before the
+<userinput><literal>exec <replaceable>&lt;WM&gt;</replaceable></literal></userinput>
+          line. This will ensure the daemon is started and works throughout the
+          runtime of the X11 instance.
+        </para>
+
+        <para>
+          For display managers, it's a bit more tricky. For those, the
+          <quote>General XDG Autostart Method</quote> should be sufficient.
+        </para>
+
+      </sect4>
+
+      <sect4>
+        <title>For Specific Window Managers or Compositors</title>
+
+        <para>
+          In some cases, this method is the only method to autostart this
+          program correctly, like when using <xref linkend="wayfire"/>.
+          In essence, if your preferred window manager or compositor has a
+          configuration file and supports autostarting, the general idea is to
+          just have it autostart <command>dunst</command> with no arguments.
+          Every window manager and compositor will handle autostarting
+          differently, but that's the general gist of it. As an example, for
+          <xref linkend="wayfire"/>, it might look something like this:
+        </para>
+
+<screen><emphasis role='purple'>[autostart]</emphasis>
+<emphasis role='blue'># Autostart notification daemon</emphasis>
+<emphasis role='green'>notifications</emphasis> = <emphasis role='violetred'>dunst</emphasis></screen>
+
+      </sect4>
+
+      <sect4>
+        <title>General XDG Autostart Method</title>
+
+        <para>
+          If the other cases were not possible, this can be the solution. An
+          XDG Autostart file can be created which some window managers and
+          compositors can read from and autostart in accordance with the XDG
+          standard. Create one as the &root; user:
+        </para>
+
+<screen role="root"><userinput>cat &gt; /etc/xdg/autostart/dunst.desktop &lt;&lt; "EOF"
+<literal>[Desktop Entry]
+Version=1.0
+Name=Dunst
+Comment=Starts the Dunst daemon
+Exec=/usr/bin/dunst
+Terminal=false
+Type=Application</literal>
+EOF</userinput></screen>
+
+        <para>
+          In some cases, this should do the trick.
+        </para>
+
+      </sect4>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          dunst, dunstctl, and dunstify
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /etc/dunst
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="dunst-bin">
+        <term><command>dunst</command></term>
+        <listitem>
+          <para>
+            is the <application>Dunst</application> notification daemon
+          </para>
+          <indexterm zone="dunst dunst-bin">
+            <primary sortas="b-dunst-bin">dunst</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dunstctl">
+        <term><command>dunstctl</command></term>
+        <listitem>
+          <para>
+            is a command-line utility for controlling
+            <application>Dunst</application>
+          </para>
+          <indexterm zone="dunst dunstctl">
+            <primary sortas="b-dunstctl">dunstctl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dunstify">
+        <term><command>dunstify</command></term>
+        <listitem>
+          <para>
+            can send desktop notifications from the command-line
+          </para>
+          <indexterm zone="dunst dunstify">
+            <primary sortas="b-dunstify">dunstify</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

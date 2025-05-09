@@ -11,11 +11,13 @@
   <title>System Utilities</title>
 
   <para>
-    This chapter contains mainly hardware utilities. It also contains
-    some applications used by other applications in the book for
-    installation or configuration purposes.
+    This chapter contains mainly system-level utilities, what could be
+    considered core to the system. It may also contain some applications used
+    by other applications in the book for installation or configuration
+    purposes.
   </para>
 
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="dunst.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="eza.xml"/>
 
 </chapter>

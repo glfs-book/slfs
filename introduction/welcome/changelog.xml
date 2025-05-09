@@ -44,6 +44,10 @@
       <para>May 9th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Dunst: Added. Part of
+          <ulink url="&lfs-qol-issues;/138">#138</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Rofi; Rofi-Wayland; Wofi: Added. Part of
           <ulink url="&lfs-qol-issues;/138">#138</ulink>.</para>
         </listitem>
