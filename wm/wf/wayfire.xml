@@ -68,6 +68,7 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
+      <xref linkend="libliftoff"/>,
       <xref linkend="wf-config"/> (if not installed, it will be downloaded from
       the internet),
       <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
