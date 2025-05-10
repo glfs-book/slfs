@@ -44,6 +44,10 @@
       <para>May 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Fastfetch: 2.40.4 -&gt; 2.41.0. Fixes
+          <ulink url="&lfs-qol-issues;/122">#122</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - OpenJDK: 17.0.15+5 -&gt; 17.0.16+2. Fixes
           <ulink url="&lfs-qol-issues;/133">#133</ulink>.</para>
         </listitem>
