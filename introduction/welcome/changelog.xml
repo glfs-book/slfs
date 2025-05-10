@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>May 10th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - OpenJDK: 17.0.15+5 -&gt; 17.0.16+2. Fixes
+          <ulink url="&lfs-qol-issues;/133">#133</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 9th, 2025</para>
       <itemizedlist>
         <listitem>

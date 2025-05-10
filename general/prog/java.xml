@@ -4,14 +4,14 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY ojdk-bin-tag            "openjdk-&openjdk-version;+&openjdk-build;-bin">
+  <!ENTITY ojdk-bin-tag            "openjdk-&java-version;+&java-build;-bin">
   <!ENTITY openjdk-download-binary "&misc-dl-root;/&ojdk-bin-tag;/&ojdk-bin-tag;.tar.xz">
 ]>
 
-<sect1 id="java" xreflabel="Java-&openjdk-version;+&openjdk-build;">
+<sect1 id="java" xreflabel="Java-&java-version;+&java-build;">
   <?dbhtml filename="java.html"?>
 
-  <title>Java-&openjdk-version;+&openjdk-build;</title>
+  <title>Java-&java-version;+&java-build;</title>
 
   <indexterm zone="java">
     <primary sortas="a-java">JDK Binary</primary>
@@ -105,8 +105,8 @@
     <note>
       <para>
         The tarball
-        <emphasis>openjdk-&openjdk-version;_linux-x64_bin.tar.gz</emphasis> will
-        untar to the <emphasis>jdk-&openjdk-version;</emphasis> directory.
+        <emphasis>openjdk-&java-version;_linux-x64_bin.tar.gz</emphasis> will
+        untar to the <emphasis>jdk-&java-version;</emphasis> directory.
       </para>
     </note>
 -->
@@ -117,9 +117,9 @@
       <systemitem class="username">root</systemitem> user:
     </para>
 
-<screen role="root"><userinput>install -vdm755 /opt/openjdk-&openjdk-version;-bin &amp;&amp;
-mv -v * /opt/openjdk-&openjdk-version;-bin         &amp;&amp;
-chown -R root:root /opt/openjdk-&openjdk-version;-bin</userinput></screen>
+<screen role="root"><userinput>install -vdm755 /opt/openjdk-&java-version;-bin &amp;&amp;
+mv -v * /opt/openjdk-&java-version;-bin         &amp;&amp;
+chown -R root:root /opt/openjdk-&java-version;-bin</userinput></screen>
 
     <para>
       The binary version is now installed. You may create a symlink to that
@@ -127,7 +127,7 @@ chown -R root:root /opt/openjdk-&openjdk-version;-bin</userinput></screen>
       user:
     </para>
 
-<screen role="root"><userinput>ln -sfn openjdk-&openjdk-version;-bin /opt/jdk</userinput></screen>
+<screen role="root"><userinput>ln -sfn openjdk-&java-version;-bin /opt/jdk</userinput></screen>
 
     <para>
       You may now proceed to <xref linkend="ojdk-conf"/>, where the
