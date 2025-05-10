@@ -78,7 +78,7 @@
       <ulink url="&blfs-svn;/general/cpio.html">cpio</ulink>,
       <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>,
       &unzip;,
-      <ulink url="&blfs-svn;/x/xorg7-lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/x/xorg7-lib.html">Xorg Libraries</ulink>,
       <ulink url="&blfs-svn;/general/which.html">Which</ulink>, and
       <ulink url="&blfs-svn;/general/zip.html">Zip</ulink>
     </para>
