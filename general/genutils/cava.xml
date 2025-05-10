@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY cava-download-http
+    "https://github.com/karlstav/cava/releases/download/&cava-version;/cava-&cava-version;.tar.gz">
+]>
+
+<sect1 id="cava" xreflabel="cava-&cava-version;">
+  <?dbhtml filename="cava.html"?>
+
+  <title>cava-&cava-version;</title>
+
+  <indexterm zone="cava">
+    <primary sortas="a-cava">cava</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to cava</title>
+
+    <para>
+      The <application>cava</application> package provides an audio visualizer.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&cava-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">cava Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/fftw.html">fftw</ulink> and
+      <xref linkend="iniparser"/>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
+      &opengl;,
+      <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
+      <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
+      and <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/jack2/">JACK2</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/portaudio/">PortAudio</ulink>, and
+      <ulink url="&arch-pkgs;/extra/x86_64/sndio/">sndio</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of cava</title>
+
+    <para>
+      Install <application>cava</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          cava
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="cava-bin">
+        <term><command>cava</command></term>
+        <listitem>
+         <para>
+           is an audio visualizer
+         </para>
+          <indexterm zone="cava cava-bin">
+            <primary sortas="b-cava-bin">cava</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

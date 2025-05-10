@@ -3,6 +3,7 @@
 <!ENTITY asio-version                        "1-34-2">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY glaze-version                       "5.1.0">
+<!ENTITY iniparser-version                   "4.2.6">
 <!ENTITY jansson-version                     "2.14.1">
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libjuice-version                    "1.6.0">
@@ -34,6 +35,7 @@
 <!ENTITY xdg-desktop-portal-hyprland-version "1.3.9">
 <!ENTITY xdg-desktop-portal-wlr-version      "0.7.1">
 <!-- General Utilities -->
+<!ENTITY cava-version                        "0.10.4">
 <!ENTITY htop-version                        "3.4.1">
 <!ENTITY btop-version                        "1.4.0">
 <!ENTITY jstest-sdl-minor-version            "710687">

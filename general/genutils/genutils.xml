@@ -15,6 +15,7 @@
     used by packages that appear later in the book.
   </para>
 
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cava.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="htop.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="btop.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="jstest-sdl.xml"/>

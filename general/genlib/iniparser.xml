@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY iniparser-download-http
+    "https://gitlab.com/iniparser/iniparser/-/archive/v&iniparser-version;/iniparser-v&iniparser-version;.tar.gz">
+]>
+
+<sect1 id="iniparser" xreflabel="iniparser-&iniparser-version;">
+  <?dbhtml filename="iniparser.html"?>
+
+  <title>iniparser-&iniparser-version;</title>
+
+  <indexterm zone="iniparser">
+    <primary sortas="a-iniparser">iniparser</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to iniparser</title>
+
+    <para>
+      The <application>iniparser</application> package provides a C
+      library for parsing <filename class="extension">.ini</filename> files.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&iniparser-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">iniparser Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of iniparser</title>
+
+    <para>
+      Install <application>iniparser</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libiniparser
+        </seg>
+        <seg>
+          /usr/include/iniparser and /usr/lib/cmake/iniparser
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libiniparser">
+        <term><filename class="libraryfile">libiniparser</filename></term>
+        <listitem>
+          <para>
+            parses <filename class="extension">.ini</filename> files
+          </para>
+          <indexterm zone="iniparser libiniparser">
+            <primary sortas="c-libiniparser">libiniparser</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
