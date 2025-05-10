@@ -44,6 +44,10 @@
       <para>May 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Dolphin: 2503 -&gt; 2503a. Fixes
+          <ulink url="&lfs-qol-issues;/134">#134</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Fastfetch: 2.40.4 -&gt; 2.41.0. Fixes
           <ulink url="&lfs-qol-issues;/122">#122</ulink>.</para>
         </listitem>

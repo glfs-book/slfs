@@ -161,7 +161,7 @@ version, so keep this at that. -->
 <!ENTITY mgba-version                        "eeb52e40274a8240fe066a16b93d9d46c4b677b9">
 <!-- GCN/Wii -->
 <!-- REQUIRED -->
-<!ENTITY dolphin-version                     "2503">
+<!ENTITY dolphin-version                     "2503a">
 <!ENTITY dolphin-qt-external                 "495517af2b922c10c24f543e0fd6ea3ddf774e50">
 <!ENTITY dolphin-sfml-external               "7f1162dfea4969bc17417563ac55d93b72e84c1e">
 <!ENTITY dolphin-vk-mem-alloc-external       "3bab6924988e5f19bf36586a496156cf72f70d9f">
