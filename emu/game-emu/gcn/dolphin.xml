@@ -71,7 +71,7 @@
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
       <ulink url="&blfs-svn;/general/llvm.html">LLVM</ulink>,
-      &logind;,
+      &logind;
       <xref linkend="minizip"/>,
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
