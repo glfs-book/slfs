@@ -12,16 +12,16 @@ body {
 
 
 /* Links */
-a:link { color: #22b; }
-a.ulink:link { font-weight: bold; color: #55f; }
-a:visited { color: #7e4988 ! important; }
-a:hover, a:focus { color: #d30e08 ! important; }
+a:link { color: #19a68e; }
+a.ulink:link { font-weight: bold; color: #19a68e; }
+a:visited { color: #699c52 ! important; }
+a:hover, a:focus { color: #bb9b54 ! important; }
 a:active { color: #6b77b1 ! important;}
 
 
 /* Book titlepage */
 .book .titlepage {
-  background: #f5f6f7;
+  background: #f4f7f3;
   margin: 0px auto;
   padding: 0 1em;
 }
@@ -34,7 +34,7 @@ a:active { color: #6b77b1 ! important;}
 }
 
 .book hr {
-  background: #dbddec;
+  background: #dcecdb;
   height: .3em;
   border: 0px;
   margin: 0 -1em;
@@ -47,8 +47,8 @@ div.dedication {
 
 /* Section titles */
 h1.sect1, h1.preface, h1.part, h1.chapter, h1.appendix, .glossary h1, .index h1 {
-  background: #f5f6f7;
-  border-bottom: .1em solid #dbddec;
+  background: #f4f7f3;
+  border-bottom: .1em solid #dcecdb;
   margin-bottom:1em;
   margin-top: 0;
   padding: .4em;
@@ -133,7 +133,7 @@ h2 {
 
 .book h2.subtitle {
   text-align: center;
-  background: #dbddec;
+  background: #dcecdb;
   margin: 0;
   padding: 0.2em;
 }
@@ -160,13 +160,13 @@ h4 {
 
 /* Navigation */
 div.navheader, div.navfooter {
-  background: #ecedef;
+  background: #f4f7f3;
   margin: 0;
   padding: 0.1em .5em;
 }
 
 div.navheader {
-  border-bottom: .1em solid #dbddec;
+  border-bottom: .1em solid #dcecdb;
 }
 
 /* no need for a footer now that the header is always visible */
@@ -197,7 +197,7 @@ div.navheader ul, div.navfooter ul {
   padding: .2em .5em .5em .5em; /*top right bottom left*/
   margin: .5em 0;
   position: relative;
-  background: #dbddec;
+  background: #dcecdb;
 }
 
 div.navheader ul li, div.navfooter ul li {
@@ -235,7 +235,7 @@ div.navfooter ul li.home, div.navfooter ul li.up {
   padding: 0;
   margin: 0 auto;
   display: block;
-  color: #dbddec;
+  color: #dcecdb;
 }
 
 
