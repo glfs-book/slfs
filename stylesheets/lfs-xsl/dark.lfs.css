@@ -12,9 +12,9 @@ body {
 
 
 /* Links */
-a:link { color: #19a68e; }
-a.ulink:link { font-weight: bold; color: #19a68e; }
-a:visited { color: #89c76d ! important; }
+a:link { color: #89c76d; }
+a.ulink:link { font-weight: bold; color: #89c76d; }
+a:visited { color: #19a68e ! important; }
 a:hover, a:focus { color: #d4b060 ! important; }
 a:active { color: #9ea8db ! important;}
 
