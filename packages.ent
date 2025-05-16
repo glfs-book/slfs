@@ -56,7 +56,7 @@ version, so keep this at that. -->
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.41.0">
+<!ENTITY fastfetch-version                   "2.42.0">
 <!ENTITY obs-studio-version                  "31.0.3">
 <!ENTITY obs-cef-version                     "6533">
 <!ENTITY rpmextract-version                  "1.0">
