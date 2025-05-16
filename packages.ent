@@ -88,10 +88,11 @@ version, so keep this at that. -->
 <!-- Shells -->
 <!ENTITY ksh-version                         "1.0.10">
 <!-- Xorg Components -->
-<!ENTITY xcb-util-xrm-version                "1.3">
 <!ENTITY printproto-version                  "1.0.5">
 <!ENTITY libxp-version                       "1.0.4">
 <!ENTITY motif-version                       "2.3.8">
+<!ENTITY xcb-util-xrm-version                "1.3">
+<!ENTITY xeyes-version                       "1.3.0">
 <!-- Terminal Emulators -->
 <!ENTITY alacritty-version                   "0.15.1">
 <!ENTITY foot-version                        "1.22.0">

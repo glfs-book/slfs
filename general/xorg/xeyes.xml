@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY xeyes-download-http "https://x.org/archive/individual/app/xeyes-&xeyes-version;.tar.xz">
+]>
+
+<sect1 id="xeyes" xreflabel="xeyes-&xeyes-version;">
+  <?dbhtml filename="xeyes.html"?>
+
+  <title>xeyes-&xeyes-version;</title>
+
+  <indexterm zone="xeyes">
+    <primary sortas="a-xeyes">xeyes</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to xeyes</title>
+
+    <para>
+      The <application>xeyes</application> package provides an application that
+      displays eyes that follow the XCURSOR in an <application>X</application>
+      Window System environment. Its usecase is limited and even at the time it
+      was made, it was considered gimmicky. It got followed up by better
+      programs that did the premise better. The last usecase it has nowadays
+      is determining which GUI applications use Wayland or fall back to Xorg.
+      This is because <application>xeyes</application> can only follow the
+      cursor if it is found in an Xorg environment. The general Xorg server on
+      Wayland is shared by <application>Xwayland</application>. So when an
+      application is running in it, <application>xeyes</application> will be
+      able to see the cursor when it hovers over said window. For Wayland apps,
+      the cursor cannot be found at all. Thus, you can tell which apps use
+      Wayland or not. If you are just using Xorg, this app practically has no
+      use. If you are using Wayland and want to, for example, see progress on
+      Wayland support for <application>Wine</application>, this application
+      will show if it is using Wayland or Xorg.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&xeyes-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  <bridgehead renderas="sect3">xeyes Dependencies</bridgehead>
+
+  <bridgehead renderas="sect4">Required</bridgehead>
+  <para role="required">
+    <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+  </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of xeyes</title>
+
+    <para>
+      Install <application>xeyes</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>./configure $XORG_CONFIG &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          xeyes
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="xeyes-bin">
+        <term><command>xeyes</command></term>
+        <listitem>
+          <para>
+            shows eyes that follow the XCURSOR via Xorg
+          </para>
+          <indexterm zone="xeyes xeyes-bin">
+            <primary sortas="b-xeyes-bin">xeyes</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
+</sect1>

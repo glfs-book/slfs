@@ -15,9 +15,10 @@
     age and obscurity. Some packages in this book, however, do depend on them.
   </para>
 
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-util-xrm.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="printproto.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libxp.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="motif.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-util-xrm.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xeyes.xml"/>
 
 </chapter>

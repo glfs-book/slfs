@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>May 16th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - xeyes: Added. Fixes
+          <ulink url="&lfs-qol-issues;/148">#148</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 15th, 2025</para>
       <itemizedlist>
         <listitem>
