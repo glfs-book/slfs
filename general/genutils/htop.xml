@@ -41,7 +41,7 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&arch-pkgs;/extra/x86_64/lm_sensors/">lm_sensors</ulink>,
+      <ulink url="&blfs-svn;/general/lm_sensors.html">lm_sensors</ulink>,
       <ulink url="&blfs-svn;/general/lsof.html">lsof</ulink>, and
       <xref linkend="strace"/>
     </para>
