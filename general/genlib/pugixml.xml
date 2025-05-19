@@ -55,6 +55,7 @@ cd    build &amp;&amp;
 cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
       -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D BUILD_SHARED_LIBS=ON        \
       -G Ninja .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -72,6 +73,11 @@ ninja</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: This parameter forces the
+      build system to build shared libraries instead of static ones.
+    </para>
 
   </sect2>
 
