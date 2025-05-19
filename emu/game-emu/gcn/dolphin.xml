@@ -82,7 +82,7 @@
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&arch-pkgs;/extra/x86_64/hidapi/">hidapi</ulink> and
-      <ulink url="&arch-pkgs;/extra/x86_64/mbedtls/">mbedtls</ulink>
+      <xref linkend="mbedtls"/>
     </para>
 
   </sect2>
