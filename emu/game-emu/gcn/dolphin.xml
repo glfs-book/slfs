@@ -36,16 +36,6 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
-    <itemizedlist spacing="compact">
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&patch-root;/dolphin/dolphin-xcb_env-1.patch"/>
-        </para>
-      </listitem>
-    </itemizedlist>
-
     <bridgehead renderas="sect3">Dolphin Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
@@ -119,14 +109,16 @@ libusb/libusb/archive/&dolphin-libusb-external;.tar.gz</literal>
 EOF</userinput></screen>
 
     <para>
-      Now download the package and its submodules using <ulink
+      Now download the package, its submodules, and needed patches if
+      applicable, using <ulink
       url="&blfs-svn;/basicnet/wget.html">Wget</ulink>:
     </para>
 
 <screen><userinput>mkdir dolphin-emu &amp;&amp;
 cd    dolphin-emu &amp;&amp;
 grep -v '^#' ../dolphin-list | wget -i- -c \
-    -B &dolphin-dl-root;</userinput></screen>
+    -B &dolphin-dl-root; &amp;&amp;
+wget -c &patch-root;/dolphin/dolphin-xcb_env-1.patch</userinput></screen>
 
   </sect2>
 
@@ -210,7 +202,7 @@ mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput><
       graphics when launching a game:
     </para>
 
-<screen><userinput>patch -Np1 -i ../../dolphin-xcb_env-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../dolphin-xcb_env-1.patch</userinput></screen>
 
     <para>
       Install <application>Dolphin</application> by running the following
@@ -220,12 +212,13 @@ mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput><
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-cmake -D CMAKE_INSTALL_PREFIX=/usr   \
-      -D CMAKE_BUILD_TYPE=Release    \
-      -D CMAKE_SKIP_INSTALL_RPATH=ON \
-      -D ENABLE_TESTS=OFF            \
-      -D USE_SYSTEM_LIBMGBA=OFF      \
-      -G Ninja .. &amp;&amp;
+cmake -D CMAKE_INSTALL_PREFIX=/usr        \
+      -D CMAKE_BUILD_TYPE=Release         \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON      \
+      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+      -D ENABLE_TESTS=OFF                 \
+      -D USE_SYSTEM_LIBMGBA=OFF           \
+      -G Ninja -W no-dev .. &amp;&amp;
 
 ninja</userinput></screen>
 
@@ -242,6 +235,9 @@ ninja</userinput></screen>
 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="../../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../../xincludes/cmake-policy-version.xml"/>
 
     <para>
       <parameter>-D ENABLE_TESTS=OFF</parameter>: This parameter disables
