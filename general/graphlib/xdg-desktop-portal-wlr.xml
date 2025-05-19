@@ -75,7 +75,7 @@ cd    build &amp;&amp;
 
 meson setup --prefix=/usr                 \
             --buildtype=release           \</userinput><phrase revision="sysv"><userinput>
-            -D sd-bus-provider=libelogind \</userinput></phrase><phrase revision="system"><userinput>
+            -D sd-bus-provider=libelogind \</userinput></phrase><phrase revision="systemd"><userinput>
             -D sd-bus-provider=libsystemd \</userinput></phrase><userinput>
             .. &amp;&amp;
 
