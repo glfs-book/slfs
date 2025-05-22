@@ -163,6 +163,16 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
 
 	$(Q)$(CLEAN)
 
+# Display a URL for the newly-rendered index.html, accounting for a relative
+# $(BASEDIR)
+	$(Q)echo
+	$(Q)if echo "$(BASEDIR)" | grep -q '^/'; then \
+		echo "View the book at file://$(BASEDIR)/index.html"; \
+	else \
+	   echo "View the book at file://$$PWD/$(BASEDIR)/index.html"; \
+	fi;
+	$(Q)echo
+
 validate: $(RENDERTMP)/$(LFS_QOLFULL)
 $(RENDERTMP)/$(LFS_QOLFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
 	$(Q)[ -d $(RENDERTMP) ] || mkdir -p $(RENDERTMP)
