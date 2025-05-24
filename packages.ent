@@ -62,6 +62,7 @@ version, so keep this at that. -->
 <!ENTITY scdoc-version                       "1.11.3">
 <!ENTITY tmux-version                        "3.5a">
 <!ENTITY wbg-version                         "1.2.0">
+<!ENTITY yt-dlp-version                      "2025.05.22">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.12.2">
 <!ENTITY eza-version                         "0.21.1">

@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>May 24th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - yt-dlp: Added. Fixes
+          <ulink url="&lfs-qol-issues;/157">#157</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 22th, 2025</para>
       <itemizedlist>
         <listitem>

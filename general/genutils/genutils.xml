@@ -31,5 +31,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="scdoc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tmux.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wbg.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yt-dlp.xml"/>
 
 </chapter>
