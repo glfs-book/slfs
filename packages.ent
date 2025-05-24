@@ -37,6 +37,8 @@
 <!ENTITY cava-version                        "0.10.4">
 <!ENTITY htop-version                        "3.4.1">
 <!ENTITY btop-version                        "1.4.3">
+<!ENTITY inxi-rev                            "1">
+<!ENTITY inxi-version                        "3.3.38-&inxi-rev;">
 <!ENTITY jstest-sdl-minor-version            "710687">
 <!ENTITY jstest-sdl-version                  "710687344a8bd35553f0edf40469531c07b6ef31">
 <!ENTITY lotus123-version                    "1.0.0rc4">

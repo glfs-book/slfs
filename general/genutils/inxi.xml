@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY inxi-download-http
+    "https://codeberg.org/smxi/inxi/archive/&inxi-version;.tar.gz">
+]>
+
+<sect1 id="inxi" xreflabel="inxi-&inxi-version;">
+  <?dbhtml filename="inxi.html"?>
+
+  <title>inxi-&inxi-version;</title>
+
+  <indexterm zone="inxi">
+    <primary sortas="a-inxi">inxi</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to inxi</title>
+
+    <para>
+      The <application>inxi</application> package provides a command-line
+      program which grabs information about the system that you request via a
+      <application>Perl</application> script.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&inxi-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">inxi Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/pciutils.html">pciutils</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/basic-net/bind-utils.html">Bind Utilities</ulink>,
+      <ulink url="&blfs-svn;/general/bluez.html">BlueZ</ulink>,
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <ulink url="&blfs-svn;/general/lm-sensors.html">lm-sensors</ulink>,
+      <ulink url="&blfs-svn;/postlfs/lvm2.html">LVM2</ulink>,
+      <ulink url="&blfs-svn;/general/perl-modules.html#perl-io-socket-ssl">IO-Socket-SSL</ulink>,
+      <ulink url="&blfs-svn;/postlfs/smartmontools.html">smartmontools</ulink>,
+      <ulink url="&blfs-svn;/postlfs/sudo.html">Sudo</ulink>,
+      <ulink url="&blfs-svn;/general/tree.html">tree</ulink>,
+      <ulink url="&blfs-svn;/general/upower.html">UPower</ulink>,
+      <ulink url="&blfs-svn;/general/usbutils.html">usbutils</ulink>,
+      <ulink url="&blfs-svn;/basicnet/wget.html">wget</ulink>, and
+      <ulink url="&blfs-svn;/x/x7app.html">Xorg Applications</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="https://archive.mesa3d.org/demos/">mesa-demos</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of inxi</title>
+
+    <para>
+      As the &root; user, install the package:
+    </para>
+
+<screen role="root"><userinput>install -vm755 inxi /usr/bin</userinput></screen>
+
+    <para>
+      Install the documentation as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vm644 inxi.1 /usr/share/man/man1</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          inxi
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="inxi-bin">
+        <term><command>inxi</command></term>
+        <listitem>
+         <para>
+           grabs information about the system
+         </para>
+          <indexterm zone="inxi inxi-bin">
+            <primary sortas="b-inxi-bin">inxi</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

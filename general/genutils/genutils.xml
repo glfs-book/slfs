@@ -18,6 +18,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cava.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="htop.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="btop.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="inxi.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="jstest-sdl.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="lotus123.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="lrzsz.xml"/>
