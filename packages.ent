@@ -68,6 +68,7 @@ version, so keep this at that. -->
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.12.2">
 <!ENTITY eza-version                         "0.21.1">
+<!ENTITY tealdeer-version                    "1.7.2">
 <!-- Programming -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">

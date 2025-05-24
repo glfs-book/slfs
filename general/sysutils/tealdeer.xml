@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY tealdeer-download-http
+    "https://github.com/tealdeer-rs/tealdeer/archive/v&tealdeer-version;/tealdeer-&tealdeer-version;.tar.gz">
+]>
+
+<sect1 id="tealdeer" xreflabel="tealdeer-&tealdeer-version;">
+  <?dbhtml filename="tealdeer.html"?>
+
+  <title>tealdeer-&tealdeer-version;</title>
+
+  <indexterm zone="tealdeer">
+    <primary sortas="a-tealdeer">tealdeer</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to tealdeer</title>
+
+    <para>
+      The <application>tealdeer</application> package provides a fast
+      <command>tldr</command> program which is an alternative to
+      <command>man</command>. It aims to be more concise, approachable, and
+      simple than what is offered by most man pages.
+    </para>
+
+    &build-use-internet;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&tealdeer-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">tealdeer Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of tealdeer</title>
+    <para>
+      Install <application>tealdeer</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>cargo build --release</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>cargo test --release</command>.
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vm755 target/release/tldr /usr/bin</userinput></screen>
+
+    <para>
+      Now download the page cache (this will need to be done for every user):
+    </para>
+
+<screen><userinput>tldr --update</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Program</segtitle>
+      <segtitle>Installed Library</segtitle>
+      <segtitle>Installed Directory</segtitle>
+
+      <seglistitem>
+        <seg>
+          tealdeer
+        </seg>
+        <seg>
+          none
+        </seg>
+        <seg>
+          none
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="tldr-tealdeer">
+        <term><command>tldr</command></term>
+        <listitem>
+          <para>
+            is the <application>tealdeer</application> <command>tldr</command>
+          </para>
+          <indexterm zone="tealdeer tldr-tealdeer">
+            <primary sortas="b-tldr-tealdeer">tldr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -44,6 +44,10 @@
       <para>May 24th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - tealdeer: Added. Fixes
+          <ulink url="&lfs-qol-issues;/155">#155</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - inxi: Added. Fixes
           <ulink url="&lfs-qol-issues;/149">#149</ulink>.</para>
         </listitem>
