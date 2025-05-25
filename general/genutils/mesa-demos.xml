@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY mesa-demos-download-http
+    "https://gitlab.freedesktop.org/mesa/demos/-/archive/mesa-demos-&mesa-demos-version;/demos-mesa-demos-&mesa-demos-version;.tar.gz">
+]>
+
+<sect1 id="mesa-demos" xreflabel="Mesa-Demos-&mesa-demos-version;">
+  <?dbhtml filename="mesa-demos.html"?>
+
+  <title>Mesa-Demos-&mesa-demos-version;</title>
+
+  <indexterm zone="mesa-demos">
+    <primary sortas="a-mesa-demos">Mesa-Demos</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Mesa-Demos</title>
+
+    <para>
+      The <application>Mesa-Demos</application> package provides multiple demos
+      to test the installation of mutliple graphics APIs and drivers for those
+      APIs, such as OpenGL, EGL, Vulkan, and more.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&mesa-demos-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/mesa-demos/-/raw/main/mesa-demos-system-data.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">mesa-demos Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      &opengl;
+      <footnote><para>
+        The more support built into the OpenGL provider, like EGL, GLES, and
+        others, the more demos will get built unless specified otherwise in the
+        <command>meson setup</command> options.
+      </para></footnote>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>:
+            Required for the <command>readtex</command> utility.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            &gbm;:
+            Required for EGL with KMS (Kernel Mode Setting).
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/glslang.html">glslang</ulink> and
+            <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>:
+            Required for Vulkan demos.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>:
+            Required for X11/Wayland demos.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>:
+            Required for X11 demos.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="libdecor"/> (will be downloaded if it is not
+            installed),
+            <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+            <ulink
+            url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>:
+            Required for Wayland demos.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/freeglut.html">Freeglut</ulink>
+            (with <xref linkend="glu"/>): Recommended for X11 demos; will be
+            automatically downloaded if it is not disabled or installed.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Mesa-Demos</title>
+
+    <para>
+      First apply a patch so that shaders and other necessary data get copied
+      over during installation:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../mesa-demos-system-data.patch</userinput></screen>
+
+    <para>
+      Install <application>Mesa-Demos</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now do a destdir installation and rename some binaries that conflict with
+      other packages outside of the LFS books:
+    </para>
+
+<screen><userinput>DESTDIR=$PWD/DESTDIR ninja install &amp;&amp;
+for bin in {identity,linktest,poly}; do
+  mv -v DESTDIR/usr/bin/{$bin,mesa-$bin}
+done</userinput></screen>
+
+    <para>
+      If you only want the utilities, or important demos built by this package,
+      install just them as the &root; user:
+    </para>
+
+<screen role="root"><userinput>mesa_utils=(
+  eglgears_wayland
+  eglgears_x11
+  eglinfo
+  eglkms
+  egltri_wayland
+  egltri_x11
+  es1_info
+  es2_info
+  es2gears_wayland
+  es2gears_x11
+  es2tri
+  gears
+  glxgears
+  glxinfo
+  peglgears
+  tri
+  vkgears
+  xeglgears
+)
+for util in ${mesa_utils[@]}; do
+  install -vm755 DESTDIR/usr/bin/$util /usr/bin
+done
+cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
+
+    <note><para>
+      You may get multiple errors of a given utility not being able to be
+      installed. This is normal as you likely won't have every utility built.
+      A number of them should still get installed, however.
+    </para></note>
+
+    <para>
+      If you wish to install every demo (less important binaries built in this
+      package), then run the following command as the &root; user:
+    </para>
+
+<screen role="root"><userinput>cp -vR DESTDIR/usr/* /usr</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <note><para>
+      Not every demo will be shown here. Please check all the built binaries in
+      <filename class="directory">$DESTDIR/usr/bin</filename> as it will
+      greatly vary depending on what you have installed, how you built OpenGL,
+      etc.
+    </para></note>
+
+    <segmentedlist>
+      <segtitle>Installed Utilities</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          eglgears_wayland,
+          eglgears_x11,
+          eglinfo,
+          eglkms,
+          egltri_wayland,
+          egltri_x11,
+          es1_info,
+          es2_info,
+          es2gears_wayland,
+          es2gears_x11,
+          es2tri,
+          gears,
+          glxgears,
+          glxinfo,
+          peglgears,
+          tri,
+          vkgears, and
+          xeglgears
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/mesa-demos
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="eglgears_wayland">
+        <term><command>eglgears_wayland</command></term>
+        <listitem>
+          <para>
+            displays 3D rotating gears through the EGL API on a Wayland client
+          </para>
+          <indexterm zone="mesa-demos eglgears_wayland">
+            <primary sortas="b-eglgears_wayland">eglgears_wayland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="eglgears_x11">
+        <term><command>eglgears_x11</command></term>
+        <listitem>
+          <para>
+            displays 3D rotating gears through the EGL API on a X11 server
+          </para>
+          <indexterm zone="mesa-demos eglgears_x11">
+            <primary sortas="b-eglgears_x11">eglgears_x11</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="eglinfo">
+        <term><command>eglinfo</command></term>
+        <listitem>
+          <para>
+            displays useful information about the drivers in use and installed
+            hardware via the EGL api
+          </para>
+          <indexterm zone="mesa-demos eglinfo">
+            <primary sortas="b-eglinfo">eglinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="eglkms">
+        <term><command>eglkms</command></term>
+        <listitem>
+          <para>
+            displays an RGB triangle using the EGL API with KMS to be
+            independent from both X11 and Wayland
+          </para>
+          <indexterm zone="mesa-demos eglkms">
+            <primary sortas="b-eglkms">eglkms</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="egltri_wayland">
+        <term><command>egltri_wayland</command></term>
+        <listitem>
+          <para>
+            displays an RGB triangle using the EGL API on a Wayland client
+          </para>
+          <indexterm zone="mesa-demos egltri_wayland">
+            <primary sortas="b-egltri_wayland">egltri_wayland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="egltri_x11">
+        <term><command>egltri_x11</command></term>
+        <listitem>
+          <para>
+            displays an RGB triangle using the EGL API on an X11 server
+          </para>
+          <indexterm zone="mesa-demos egltri_x11">
+            <primary sortas="b-egltri_x11">egltri_x11</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="es1_info">
+        <term><command>es1_info</command></term>
+        <listitem>
+          <para>
+            displays useful information about the drivers in use and installed
+            hardware via the OpenGL ES v1 API
+          </para>
+          <indexterm zone="mesa-demos es1_info">
+            <primary sortas="b-es1_info">es1_info</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="es2_info">
+        <term><command>es2_info</command></term>
+        <listitem>
+          <para>
+            displays useful information about the drivers in use and installed
+            hardware via the OpenGL ES v2 API
+          </para>
+          <indexterm zone="mesa-demos es2_info">
+            <primary sortas="b-es2_info">es2_info</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="es2gears_wayland">
+        <term><command>es2gears_wayland</command></term>
+        <listitem>
+          <para>
+            displays 3D rotating gears through the OpenGL ES v2 API on a
+            Wayland client
+          </para>
+          <indexterm zone="mesa-demos es2gears_wayland">
+            <primary sortas="b-es2gears_wayland">es2gears_wayland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="es2gears_x11">
+        <term><command>es2gears_x11</command></term>
+        <listitem>
+          <para>
+            displays 3D rotating gears through the Open GLES v2 API on an X11
+            server
+          </para>
+          <indexterm zone="mesa-demos es2gears_x11">
+            <primary sortas="b-es2gears_x11">es2gears_x11</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="es2tri">
+        <term><command>es2tri</command></term>
+        <listitem>
+          <para>
+            displays an RGB triangle using the OpenGL ES v2 API
+          </para>
+          <indexterm zone="mesa-demos es2tri">
+            <primary sortas="b-es2tri">es2tri</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gears">
+        <term><command>gears</command></term>
+        <listitem>
+          <para>
+            displays 3D rotating gears through normal OpenGL via a
+            <application>GLUT</application> variant or OpenGL ES
+          </para>
+          <indexterm zone="mesa-demos gears">
+            <primary sortas="b-gears">gears</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="glxgears">
+        <term><command>glxgears</command></term>
+        <listitem>
+          <para>
+            displays 3D rotating gears through the GLX API
+          </para>
+          <indexterm zone="mesa-demos glxgears">
+            <primary sortas="b-glxgears">glxgears</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="glxinfo">
+        <term><command>glxinfo</command></term>
+        <listitem>
+          <para>
+            displays useful information about the drivers in use and installed
+            hardware via the GLX API
+          </para>
+          <indexterm zone="mesa-demos glxinfo">
+            <primary sortas="b-glxinfo">glxinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="peglgears">
+        <term><command>peglgears</command></term>
+        <listitem>
+          <para>
+            a straight port of <command>glxgears</command> for EGL
+          </para>
+          <indexterm zone="mesa-demos peglgears">
+            <primary sortas="b-peglgears">peglgears</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tri">
+        <term><command>tri</command></term>
+        <listitem>
+          <para>
+            displays an RGB triangle using normal OpenGL via a
+            <application>GLUT</application> variant or OpenGL ES
+          </para>
+          <indexterm zone="mesa-demos tri">
+            <primary sortas="b-tri">tri</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vkgears">
+        <term><command>vkgears</command></term>
+        <listitem>
+          <para>
+            displays 3D rotating gears through the Vulkan API
+          </para>
+          <indexterm zone="mesa-demos vkgears">
+            <primary sortas="b-vkgears">vkgears</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xeglgears">
+        <term><command>xeglgears</command></term>
+        <listitem>
+          <para>
+            displays 3D rotating gears through the GLX/EGL/GLES API, though its
+            source code notes it uses full OpenGL presently
+          </para>
+          <indexterm zone="mesa-demos xeglgears">
+            <primary sortas="b-xeglgears">xeglgears</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

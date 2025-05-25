@@ -28,6 +28,7 @@
 <!-- Graphical Libraries -->
 <!ENTITY fcft-version                        "3.3.1">
 <!ENTITY glu-version                         "9.0.3">
+<!ENTITY libdecor-version                    "0.2.3">
 <!ENTITY libliftoff-version                  "0.5.0">
 <!ENTITY libspng-version                     "0.7.4">
 <!ENTITY nv-codec-headers-version            "13.0.19.0">
@@ -55,6 +56,7 @@ version, so keep this at that. -->
 <!ENTITY lrzsz-version                       "0.12.20">
 <!ENTITY minicom-version                     "2.10">
 <!ENTITY gkermit-tarball-version             "gku201">
+<!ENTITY mesa-demos-version                  "9.0.0">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
 <!ENTITY fastfetch-version                   "2.42.0">

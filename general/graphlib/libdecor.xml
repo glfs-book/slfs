@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libdecor-download-http
+    "https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/&libdecor-version;/libdecor-&libdecor-version;.tar.gz">
+]>
+
+<sect1 id="libdecor" xreflabel="libdecor-&libdecor-version;">
+  <?dbhtml filename="libdecor.html"?>
+
+  <title>libdecor-&libdecor-version;</title>
+
+  <indexterm zone="libdecor">
+    <primary sortas="a-libdecor">libdecor</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libdecor</title>
+
+    <para>
+      The libdecor package provides a library that helps Wayland clients draw
+      client-side window decorations.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libdecor-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">libdecor Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink>
+      (with <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>),
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/gtk3.html">GTK-3</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>, and
+      &opengl; (with EGL)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libdecor</title>
+
+    <para>
+      Install <application>libdecor</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -D demo=false       \
+            -D gtk=disabled     \
+            .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>-D demo=false</parameter>: This parameter disables building
+      the demos. Remove it if you installed the optional dependencies.
+    </para>
+
+    <para>
+      <parameter>-D gtk=disabled</parameter>: This parameter disables building
+      the <application>GTK-3</application> plugin. Remove it if you installed
+      <ulink url="&blfs-svn;/x/gtk3.html">GTK-3</ulink>.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libdecor
+        </seg>
+        <seg>
+          /usr/include/libdecor-0 and
+          /usr/lib/libdecor/plugins-1
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libdecor-lib">
+        <term><filename class="libraryfile">libdecor</filename></term>
+        <listitem>
+          <para>
+            provides functions to help with client-side decorations for
+            Wayland clients
+          </para>
+          <indexterm zone="libdecor libdecor-lib">
+            <primary sortas="c-libdecor-lib">libdecor</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+  
+</sect1>
