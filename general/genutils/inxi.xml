@@ -60,7 +60,7 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="https://archive.mesa3d.org/demos/">mesa-demos</ulink>
+      <xref linkend="mesa-demos"/>
     </para>
 
   </sect2>
