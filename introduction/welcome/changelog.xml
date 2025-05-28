@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>May 28th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Toxikuu] - fastfetch: 2.42.0 -&gt; 2.43.0. Fixes
+          <ulink url="&lfs-qol-issues;/159">#159</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 25th, 2025</para>
       <itemizedlist>
         <listitem>
