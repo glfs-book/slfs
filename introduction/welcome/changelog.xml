@@ -47,6 +47,10 @@
           <para>[Toxikuu] - fastfetch: 2.42.0 -&gt; 2.43.0. Fixes
           <ulink url="&lfs-qol-issues;/159">#159</ulink>.</para>
         </listitem>
+        <listitem>
+          <para>[Toxikuu] - eza: 0.21.1 -&gt; 0.21.3. Fixes
+          <ulink url="&lfs-qol-issues;/161">#161</ulink>.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
