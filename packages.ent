@@ -133,7 +133,7 @@ the exact same version number... -->
 <!-- Binary Support -->
 <!ENTITY fuse2-version                       "2.9.9">
 <!ENTITY ostree-version                      "2025.2">
-<!ENTITY flatpak-version                     "1.16.0">
+<!ENTITY flatpak-version                     "1.16.1">
 
 <!-- WM -->
 <!-- CDE -->
