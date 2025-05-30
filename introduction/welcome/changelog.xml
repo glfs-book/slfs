@@ -44,6 +44,10 @@
       <para>May 30th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[seal331] - libzip: 1.11.3 -&gt; 1.11.4.
+          Fixes <ulink url="&lfs-qol-issues;/165">#165</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[seal331] - libutempter: 1.2.1 -&gt; 1.2.3.
           Fixes <ulink url="&lfs-qol-issues;/164">#164</ulink>.</para>
         </listitem>
