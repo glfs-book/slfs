@@ -44,6 +44,10 @@
       <para>May 30th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[seal331] - libutempter: 1.2.1 -&gt; 1.2.3.
+          Fixes <ulink url="&lfs-qol-issues;/164">#164</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[seal331] - Rofi-Wayland: 1.7.8+wayland1 -&gt; 1.7.9+wayland1.
           Fixes <ulink url="&lfs-qol-issues;/167">#167</ulink>.</para>
         </listitem>

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libutempter-download-http "http://ftp.altlinux.org/pub/people/ldv/libutempter/libutempter-&libutempter-version;.tar.gz">
+  <!ENTITY libutempter-download-http "https://github.com/altlinux/libutempter/archive/&libutempter-tag;/libutempter-&libutempter-tag;.tar.gz">
 ]>
 
 <sect1 id="libutempter" xreflabel="libutempter-&libutempter-version;">
@@ -24,7 +24,6 @@
       that allows non-privileged apps to write utmp info.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -33,6 +32,16 @@
       </listitem>
     </itemizedlist>
    
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/libutempter/libutempter-&libutempter-version;-unbreak-reinstall.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
   </sect2>
 
   <sect2 role="installation">
@@ -43,24 +52,15 @@
       commands:
     </para>
 
-<screen><userinput>make</userinput></screen>
+<screen><userinput>patch -Np1 -i ../libutempter-1.2.3-unbreak-reinstall.patch &amp;&amp;
+cd libutempter &amp;&amp;
+make</userinput></screen>
 
     <para>
       Now as the &root; user:
     </para>
 
-<screen role="root"><userinput>make install &amp;&amp;
-rm -vf /usr/lib/libutempter.a</userinput></screen>
-
-  </sect2>
-
-  <sect2 role="commands">
-    <title>Command Explanations</title>
-
-    <para>
-      <command>rm -vf /usr/lib/libutempter.a</command>: Remove a useless
-      static library.
-    </para>
+<screen role="root"><userinput>make install</userinput></screen>
 
   </sect2>
 
