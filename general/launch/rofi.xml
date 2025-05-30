@@ -5,13 +5,13 @@
   %general-entities;
 
   <!ENTITY rofi-download-http
-    "https://github.com/davatorium/rofi/releases/download/&rofi-version;/rofi-&rofi-version;.tar.xz">
+    "https://github.com/davatorium/rofi/releases/download/&rofi-version;/rofi-&rofi-full-version;.tar.xz">
 ]>
 
-<sect1 id="rofi" xreflabel="Rofi-&rofi-version;">
+<sect1 id="rofi" xreflabel="Rofi-&rofi-full-version;">
   <?dbhtml filename="rofi.html"?>
 
-  <title>Rofi-&rofi-version;</title>
+  <title>Rofi-&rofi-full-version;</title>
 
   <indexterm zone="rofi">
     <primary sortas="a-rofi">Rofi</primary>

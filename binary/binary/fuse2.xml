@@ -76,7 +76,7 @@
     </para>
 
 <screen><userinput>patch -Np1 -i ../conditionally-define-closefrom.patch &amp;&amp;
-autoreconf -i</userinput></screen>
+autoreconf -i -I/usr/share/gettext/m4</userinput></screen>
 
     <para>
       Install <application>Fuse2</application> by running the following
