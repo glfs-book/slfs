@@ -81,7 +81,7 @@ version, so keep this at that. -->
 <!ENTITY gcc-version                         "15.1.0">
 <!ENTITY gnat-binary-version                 "&gcc-version;-rc1">
 <!ENTITY intercal-version                    "0.33">
-<!ENTITY strace-version                      "6.14">
+<!ENTITY strace-version                      "6.15">
 <!ENTITY socat-version                       "1.8.0.3">
 <!ENTITY unlambda-version                    "2.0.0">
 <!-- JAVA -->
