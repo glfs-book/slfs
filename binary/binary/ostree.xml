@@ -45,10 +45,14 @@
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
-      <ulink url="&blfs-svn;/basicnet/libsoup.html">libsoup</ulink>,
       <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
       <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>, and
       &logind-nocomma;
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="https://linuxfromscratch.org/blfs/view/12.3/basicnet/libsoup.html">libsoup</ulink>
     </para>
 
   </sect2>
