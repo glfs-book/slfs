@@ -100,7 +100,7 @@ version, so keep this at that. -->
 <!ENTITY xeyes-version                       "1.3.0">
 <!-- Terminal Emulators -->
 <!ENTITY alacritty-version                   "0.15.1">
-<!ENTITY foot-version                        "1.22.0">
+<!ENTITY foot-version                        "1.22.3">
 <!-- Launchers -->
 <!ENTITY rofi-version                        "1.7.8">
 <!ENTITY rofi-wayland-version                "&rofi-version;+wayland1">

@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>May 30th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - foot: 1.22.0 -&gt; 1.22.3. Fixes
+          <ulink url="&lfs-qol-issues;/162">#162</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 28th, 2025</para>
       <itemizedlist>
         <listitem>
