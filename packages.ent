@@ -102,7 +102,15 @@ version, so keep this at that. -->
 <!ENTITY alacritty-version                   "0.15.1">
 <!ENTITY foot-version                        "1.22.3">
 <!-- Launchers -->
-<!ENTITY rofi-version                        "1.7.8">
+<!-- According to upstream, 1.7.9.1 was "just a tarball fix, no code change".
+As a side effect of that they just slapped the 1.7.9.1 tarballs in the 1.7.9
+release, and the original 1.7.9 tarballs are no longer available AFAICS.
+So now we have to deal with this. Once rofi updates again to something with a
+saner tag/tarball version relationship just get rid of this both here and in
+general/launch/rofi.xml. At least it's better than three separate versions with
+the exact same version number... -->
+<!ENTITY rofi-full-version                   "1.7.9.1">
+<!ENTITY rofi-version                        "1.7.9">
 <!ENTITY rofi-wayland-version                "&rofi-version;+wayland1">
 <!ENTITY wofi-version                        "1.4.1">
 

@@ -44,6 +44,14 @@
       <para>May 30th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[seal331] - Rofi-Wayland: 1.7.8+wayland1 -&gt; 1.7.9+wayland1.
+          Fixes <ulink url="&lfs-qol-issues;/167">#167</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[seal331] - Rofi: 1.7.8 -&gt; 1.7.9.1. Fixes
+          <ulink url="&lfs-qol-issues;/166">#166</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[seal331] - foot: 1.22.0 -&gt; 1.22.3. Fixes
           <ulink url="&lfs-qol-issues;/162">#162</ulink>.</para>
         </listitem>
