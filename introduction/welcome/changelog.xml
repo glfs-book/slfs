@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>May 31st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - xcb-imdkit: Added. Part of
+          <ulink url="&lfs-qol-issues;/152">#152</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 30th, 2025</para>
       <itemizedlist>
         <listitem>
