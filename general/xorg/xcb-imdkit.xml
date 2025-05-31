@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY xcb-imdkit-download-http "https://github.com/fcitx/xcb-imdkit/archive/&xcb-imdkit-version;/xcb-imdkit-&xcb-imdkit-version;.tar.gz">
+]>
+
+<sect1 id="xcb-imdkit" xreflabel="xcb-imdkit-&xcb-imdkit-version;">
+  <?dbhtml filename="xcb-imdkit.html"?>
+	
+  <title>xcb-imdkit-&xcb-imdkit-version;</title>
+
+  <indexterm zone="xcb-imdkit">
+    <primary sortas="a-xcb-imdkit">xcb-imdkit</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to xcb-imdkit</title>
+
+    <para>
+      The <application>xcb-imdkit</application> package provides an
+      implementation of the X Input Method protocol using XCB.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&xcb-imdkit-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">xcb-imdkit Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">cmake</ulink>,
+      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
+      <ulink url="&blfs-svn;/x/xcb-util.html">xcb-util</ulink>, and
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="uthash"/> (if not installed, an internal version will be
+      used instead)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of xcb-imdkit</title>
+
+    <para>
+      Install <application>xcb-imdkit</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp; cd build &amp;&amp;
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+-DCMAKE_BUILD_TYPE=Release \
+-DCMAKE_SKIP_INSTALL_RPATH=ON \
+-Wno-dev .. &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libxcb-imdkit
+        </seg>
+        <seg>
+          /usr/include/xcb-imdkit and /usr/lib/cmake/XCBImdkit
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libxcb-imdkit">
+        <term><filename class="libraryfile">libxcb-imdkit</filename></term>
+        <listitem>
+          <para>
+            contains an implementation of IMDkit compatible with XCB
+          </para>
+          <indexterm zone="xcb-imdkit libxcb-imdkit">
+            <primary sortas="c-libxcb-imdkit">libxcb-imdkit</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
