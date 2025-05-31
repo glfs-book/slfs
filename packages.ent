@@ -39,6 +39,8 @@
 <!ENTITY cava-version                        "0.10.4">
 <!ENTITY htop-version                        "3.4.1">
 <!ENTITY btop-version                        "1.4.3">
+<!ENTITY cldr-emoji-annotation-version       "38">
+<!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">
 <!ENTITY inxi-rev                            "1">
 <!ENTITY inxi-version                        "3.3.38-&inxi-rev;">
 <!ENTITY jstest-sdl-minor-version            "710687">

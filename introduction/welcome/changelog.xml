@@ -44,6 +44,10 @@
       <para>May 31st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[seal331] - cldr-emoji-annotation: Added. Part of
+          <ulink url="&lfs-qol-issues;/152">#152</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[seal331] - xcb-imdkit: Added. Part of
           <ulink url="&lfs-qol-issues;/152">#152</ulink>.</para>
         </listitem>
