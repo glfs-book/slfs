@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+ <!ENTITY % general-entities SYSTEM "../../general.ent">
+ %general-entities;
+]>
+
+<chapter id="general-fcitx">
+  <?dbhtml filename="fcitx.html"?>
+
+  <title>Fcitx</title>
+
+  <para>
+    This chapter covers Fcitx, which is an input method framework, and various extensions
+    for it.
+  </para>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5.xml"/>
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-qt.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-gtk.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-chinese-addons.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-table-extra"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-anthy.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-m17n.xml"/> -->
+
+</chapter>

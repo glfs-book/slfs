@@ -117,6 +117,8 @@ the exact same version number... -->
 <!ENTITY rofi-version                        "1.7.9">
 <!ENTITY rofi-wayland-version                "&rofi-version;+wayland1">
 <!ENTITY wofi-version                        "1.4.1">
+<!-- Fcitx -->
+<!ENTITY fcitx5-version                      "5.1.12">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->
