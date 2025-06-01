@@ -41,7 +41,7 @@
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>,
-      <xref linkend="fcitx5"/>
+      and <xref linkend="fcitx5"/>
     </para>
 
   </sect2>
