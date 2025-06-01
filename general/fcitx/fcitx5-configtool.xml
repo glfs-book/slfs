@@ -8,8 +8,6 @@
     "https://github.com/fcitx/fcitx5-configtool/archive/&fcitx5-configtool-version;/fcitx5-configtool-&fcitx5-configtool-version;.tar.gz">
 ]>
 
-<!-- TODO: test building KDE Plasma integration and document deps -->
-
 <sect1 id="fcitx5-configtool" xreflabel="Fcitx5-configtool-&fcitx5-configtool-version;">
   <?dbhtml filename="fcitx5-configtool.html"?>
 
@@ -46,6 +44,12 @@
       <ulink url="&blfs-svn;/general/iso-codes.html">ISO Codes</ulink>,
       <xref linkend="fcitx5"/>, and
       <xref linkend="fcitx5-qt"/>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/kde/plasma-all.html">KDE Plasma</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>
     </para>
 
   </sect2>
@@ -85,7 +89,8 @@ make</userinput></screen>
 
     <para>
       <parameter>-D ENABLE_KCM=OFF</parameter>: This switch disables building
-      KDE Plasma integration for Fcitx5-configtool.
+      KDE Plasma integration for Fcitx5-configtool. Remove it if you have
+      installed the optional dependencies.
     </para>
 
   </sect2>
@@ -96,14 +101,19 @@ make</userinput></screen>
     <segmentedlist>
       <segtitle>Installed Programs</segtitle>
       <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Plugins</segtitle>
       <segtitle>Installed Directories</segtitle>
 
       <seglistitem>
         <seg>
-          fcitx5-config-qt, fcitx5-migrator, and kbd-layout-viewer5 
+          fcitx5-config-qt, fcitx5-migrator, fcitx5-plasma-theme-generator,
+          and kbd-layout-viewer5
         </seg>
         <seg>
           libFcitx5Migrator
+        </seg>
+        <seg>
+          kcm_fcitx5 (KDE configuration module)
         </seg>
         <seg>
           None
@@ -136,6 +146,18 @@ make</userinput></screen>
           </para>
           <indexterm zone="fcitx5-configtool fcitx5-migrator">
             <primary sortas="b-fcitx5-migrator">fcitx5-migrator</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fcitx5-plasma-theme-generator">
+        <term><command>fcitx5-plasma-theme-generator</command></term>
+        <listitem>
+          <para>
+            generates a Fcitx 5 Classic UI theme based on a Plasma theme
+          </para>
+          <indexterm zone="fcitx5-configtool fcitx5-plasma-theme-generator">
+            <primary sortas="b-fcitx5-plasma-theme-generator">fcitx5-plasma-theme-generator</primary>
           </indexterm>
         </listitem>
       </varlistentry>
