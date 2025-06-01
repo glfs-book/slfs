@@ -120,6 +120,7 @@ the exact same version number... -->
 <!-- Fcitx -->
 <!ENTITY fcitx5-version                      "5.1.12">
 <!ENTITY fcitx5-qt-version                   "5.1.9">
+<!ENTITY fcitx5-gtk-version                  "5.1.3">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->
