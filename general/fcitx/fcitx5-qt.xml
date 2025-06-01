@@ -60,9 +60,9 @@ cd    build &amp;&amp;
 cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
       -D CMAKE_SKIP_INSTALL_RPATH=ON \
-      -D ENABLE_QT4=OFF \
-      -D ENABLE_QT5=OFF \
-      -D ENABLE_QT6=ON \
+      -D ENABLE_QT4=OFF              \
+      -D ENABLE_QT5=OFF              \
+      -D ENABLE_QT6=ON               \
       -Wno-dev .. &amp;&amp;
 
 make</userinput></screen>
@@ -72,6 +72,14 @@ make</userinput></screen>
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
 
   </sect2>
 

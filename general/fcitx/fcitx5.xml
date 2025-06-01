@@ -76,8 +76,8 @@ cd    build &amp;&amp;
 cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
       -D CMAKE_SKIP_INSTALL_RPATH=ON \
-      -D ENABLE_TESTING_ADDONS=OFF \
-      -D ENABLE_TEST=OFF \
+      -D ENABLE_TESTING_ADDONS=OFF   \
+      -D ENABLE_TEST=OFF             \
       -Wno-dev .. &amp;&amp;
 
 make</userinput></screen>
@@ -179,15 +179,17 @@ cp -rv doc/html/* /usr/share/doc/fcitx5-&fcitx5-version;</userinput></screen>
         </listitem>
       </varlistentry>
 
-      <varlistentry id="fcitx5-configtool">
+      <!-- we add the -bin here to avoid conflicts with the actual
+      fcitx5-configtool package -->
+      <varlistentry id="fcitx5-configtool-bin">
         <term><command>fcitx5-configtool</command></term>
         <listitem>
           <para>
             is a wrapper which autodetects and runs a suitable Fcitx
             configuration tool
           </para>
-          <indexterm zone="fcitx5 fcitx5-configtool">
-            <primary sortas="b-fcitx5-configtool">fcitx5-configtool</primary>
+          <indexterm zone="fcitx5 fcitx5-configtool-bin">
+            <primary sortas="b-fcitx5-configtool-bin">fcitx5-configtool</primary>
           </indexterm>
         </listitem>
       </varlistentry>
