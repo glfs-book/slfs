@@ -10,7 +10,7 @@
   <!ENTITY anthy-download-http "https://salsa.debian.org/debian/anthy/-/archive/debian/anthy-debian.tar.gz">
 ]>
 
-<sect1 id="anthy" xreflabel="anthy-&anthy-version;">
+<sect1 id="anthy" xreflabel="Anthy-&anthy-version;">
   <?dbhtml filename="anthy.html"?>
 
   <title>Anthy-&anthy-version;</title>
