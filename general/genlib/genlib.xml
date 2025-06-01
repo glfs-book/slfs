@@ -15,6 +15,7 @@
     packages that appear later in the book.
   </para>
 
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="anthy.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="asio.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="enet.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glaze.xml"/>
