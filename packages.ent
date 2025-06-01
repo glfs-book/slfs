@@ -119,6 +119,7 @@ the exact same version number... -->
 <!ENTITY wofi-version                        "1.4.1">
 <!-- Fcitx -->
 <!ENTITY fcitx5-version                      "5.1.12">
+<!ENTITY fcitx5-qt-version                   "5.1.9">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->
