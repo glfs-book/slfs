@@ -22,5 +22,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-table-extra"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-anthy.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-m17n.xml"/> -->
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-configtool.xml"/>
 
 </chapter>
