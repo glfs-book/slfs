@@ -131,21 +131,21 @@ cp -rv doc/html/* /usr/share/doc/fcitx5-&fcitx5-version;</userinput></screen>
       <seglistitem>
         <seg>
           comp-spell-dict, fcitx5, fcitx5-configtool, fcitx5-diagnose, 
-          fcitx5-remote, fcitx5-wayland-launcher
+          fcitx5-remote, and fcitx5-wayland-launcher
         </seg>
         <seg>
-          libFcitx5Config, libFcitx5Core, libFcitx5Utils
+          libFcitx5Config, libFcitx5Core, and libFcitx5Utils
         </seg>
         <seg>
           libclassicui, libclipboard, libdbus, libdbusfrontend, libemoji, 
           libfcitx4frontend, libibusfrontend, libimselector, libkimpanel, 
           libnotificationitem, libnotifications, libquickphrase, libspell, 
           libunicode, libvirtualkeyboard, libwayland, libwaylandim, libxcb, 
-          libxim
+          and libxim
         </seg>
         <seg>
           /usr/include/Fcitx5, /usr/lib/fcitx5, /usr/share/fcitx5,
-          /usr/share/doc/fcitx5-&fcitx5-version;
+          and /usr/share/doc/fcitx5-&fcitx5-version;
         </seg>
       </seglistitem>
     </segmentedlist>
