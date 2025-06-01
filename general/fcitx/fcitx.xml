@@ -18,6 +18,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-qt.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-gtk.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-lua.xml"/> 
   <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-chinese-addons.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-table-extra"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx5-anthy.xml"/>
