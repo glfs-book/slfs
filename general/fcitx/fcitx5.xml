@@ -8,20 +8,20 @@
     "https://github.com/fcitx/fcitx5/archive/&fcitx5-version;/fcitx5-&fcitx5-version;.tar.gz">
 ]>
 
-<sect1 id="fcitx5" xreflabel="Fcitx-&fcitx5-version;">
+<sect1 id="fcitx5" xreflabel="Fcitx5-&fcitx5-version;">
   <?dbhtml filename="fcitx5.html"?>
 
-  <title>Fcitx-&fcitx5-version;</title>
+  <title>Fcitx5-&fcitx5-version;</title>
 
   <indexterm zone="fcitx5">
-    <primary sortas="a-fcitx5">Fcitx</primary>
+    <primary sortas="a-fcitx5">Fcitx5</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fcitx</title>
+    <title>Introduction to Fcitx5</title>
 
     <para>
-      The Fcitx package provides an extensible input method framework.
+      The Fcitx5 package provides an extensible input method framework.
     </para>
 
     <itemizedlist spacing="compact">
@@ -32,7 +32,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fcitx Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fcitx5 Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
@@ -63,10 +63,10 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fcitx</title>
+    <title>Installation of Fcitx5</title>
 
     <para>
-      Install <application>Fcitx</application> by running the following
+      Install <application>Fcitx5</application> by running the following
       commands:
     </para>
 
