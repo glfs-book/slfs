@@ -60,10 +60,10 @@
     </para>
 
 <screen><userinput>mkdir build &amp;&amp; cd build &amp;&amp;
-cmake -DCMAKE_INSTALL_PREFIX=/usr \
--DCMAKE_BUILD_TYPE=Release \
--DCMAKE_SKIP_INSTALL_RPATH=ON \
--Wno-dev .. &amp;&amp;
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -Wno-dev .. &amp;&amp;
 make</userinput></screen>
 
     <para>
