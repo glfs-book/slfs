@@ -42,20 +42,20 @@
       <ulink url="&blfs-svn;/general/json-c.html">JSON-C</ulink>,
       <ulink url="&blfs-svn;/general/dbus.html">dbus</ulink>,
       <ulink url="&blfs-svn;/general/fmt.html">fmt</ulink>,
-      <xref linkend="xcb-imdkit"/>
+      and <xref linkend="xcb-imdkit"/>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
       <xref linkend="cldr-emoji-annotation"/>,
-      <ulink url="&blfs-svn;/general/enchant.html">enchant</ulink>
+      and <ulink url="&blfs-svn;/general/enchant.html">enchant</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink> (TODO figure
       out if this is an exclusive Wayland/X11 switch, if not promote to
-      Recommended),
+      Recommended), and
       <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink> (to build
       the documentation)
     </para>
