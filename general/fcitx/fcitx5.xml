@@ -70,13 +70,18 @@
       commands:
     </para>
 
+    <warning><para>
+      DO NOT disable the testing addons with the -DENABLE_TESTING_ADDONS=OFF
+      option. For some reason some Fcitx input methods depend on those, even
+      when the test code is explicitly disabled.
+    </para></warning>
+
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
       -D CMAKE_SKIP_INSTALL_RPATH=ON \
-      -D ENABLE_TESTING_ADDONS=OFF   \
       -D ENABLE_TEST=OFF             \
       -Wno-dev .. &amp;&amp;
 
