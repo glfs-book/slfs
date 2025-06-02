@@ -142,11 +142,11 @@ cp -rv doc/html/* /usr/share/doc/fcitx5-&fcitx5-version;</userinput></screen>
           libFcitx5Config, libFcitx5Core, and libFcitx5Utils
         </seg>
         <seg>
-          libclassicui, libclipboard, libdbus, libdbusfrontend, libemoji, 
-          libfcitx4frontend, libibusfrontend, libimselector, libkimpanel, 
-          libnotificationitem, libnotifications, libquickphrase, libspell, 
-          libunicode, libvirtualkeyboard, libwayland, libwaylandim, libxcb, 
-          and libxim
+          libclassicui, libclipboard, libdbus, libdbusfrontend, libemoji,
+          libfcitx4frontend, libibusfrontend, libimselector, libkimpanel,
+          libnotificationitem, libnotifications, libquickphrase, libspell,
+          libtestfrontend, libtestim, libtestui, libunicode,
+          libvirtualkeyboard, libwayland, libwaylandim, libxcb, and libxim
         </seg>
         <seg>
           /usr/include/Fcitx5, /usr/lib/fcitx5, /usr/share/fcitx5,
