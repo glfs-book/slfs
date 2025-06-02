@@ -47,15 +47,13 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
       <xref linkend="cldr-emoji-annotation"/>,
       and <ulink url="&blfs-svn;/general/enchant.html">enchant</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink> (TODO figure
-      out if this is an exclusive Wayland/X11 switch, if not promote to
-      Recommended), and
       <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink> (to build
       the documentation)
     </para>
