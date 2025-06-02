@@ -107,6 +107,16 @@ target... ugh -->
 <screen role="root"><userinput>install -v -m755 -d /usr/share/doc/fcitx5-&fcitx5-version; &amp;&amp;
 cp -rv doc/html/* /usr/share/doc/fcitx5-&fcitx5-version;</userinput></screen>
 
+    <para>
+      Under some desktop environments and most window managers, Fcitx will not
+      be started automatically. Execute the following command as each user you
+      want to use Fcitx as to avoid that:
+    </para>
+
+<screen><userinput>mkdir -p ~/.config/autostart &amp;&amp;
+cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart
+</userinput></screen>
+
   </sect2>
 
   <sect2 role="commands">
