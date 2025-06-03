@@ -38,7 +38,7 @@
       <listitem>
         <para>
           Required submodule:
-          <ulink url="https://github.com/kpu/kenlm/archive/&libime-kenlm;.zip"/>
+          <ulink url="https://github.com/kpu/kenlm/archive/&libime-kenlm;.tar.gz"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -47,10 +47,9 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      &unzip; (to unpack the submodule),
+      <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
-      <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
       and <xref linkend="fcitx5"/>
     </para>
 
@@ -69,7 +68,7 @@
       Unpack the <application>kenlm</application> submodule into the right place:
     </para>
 
-<screen><userinput>unzip ../&libime-kenlm;.zip -d src/libime/core &amp;&amp;
+<screen><userinput>tar -xvf ../&libime-kenlm;.tar.gz -C src/libime/core &amp;&amp;
 rmdir src/libime/core/kenlm &amp;&amp;
 mv src/libime/core/kenlm-&libime-kenlm; src/libime/core/kenlm</userinput></screen>
 
@@ -91,8 +90,8 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      If you have passed the ENABLE_DOC parameter to CMake, build the 
-      documentation by executing the following commands:
+      If you have passed the <option>-D ENABLE_DOC=ON</option> parameter to 
+      CMake, build the documentation by executing the following commands:
     </para>
 
 <screen><userinput>make doc</userinput></screen>
@@ -126,7 +125,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
     </para>
 
     <para>
-      <parameter>-D ENABLE_DOC=ON</parameter>: Use this switch if you want to
+      <option>-D ENABLE_DOC=ON</option>: Use this switch if you want to
       build the documentation (requires <application>doxygen</application>).
     </para>
 
