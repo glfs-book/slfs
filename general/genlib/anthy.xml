@@ -47,7 +47,7 @@
 
 <screen><userinput>patch -Np1 -i debian/patches/0001-calctrans-proccorpus.c-Fix-implicit-function-decl-of.patch &amp;&amp;
 autoreconf -fiv &amp;&amp;
-./configure --prefix=/usr &amp;&amp;
+./configure --prefix=/usr --disable-static &amp;&amp;
 make</userinput></screen>
 
     <para>
