@@ -37,7 +37,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required tarball:
+          Required database:
           <ulink url="https://download.savannah.nongnu.org/releases/m17n/m17n-db-&m17n-db-version;.tar.gz"/>
         </para>
       </listitem>
@@ -47,19 +47,19 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>,
-      <ulink url="&blfs-svn;/general/fribidi.html">FriBidi</ulink>,
-      <ulink url="&blfs-svn;/general/freetype.html">FreeType</ulink>,
-      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
       <xref linkend="anthy"/>,
-      <ulink url="&blfs-svn;/general/aspell.html">Aspell</ulink>, and
-      <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>
+      <ulink url="&blfs-svn;/general/aspell.html">Aspell</ulink>,
+      <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>,
+      <ulink url="&blfs-svn;/general/freetype.html">FreeType</ulink>,
+      <ulink url="&blfs-svn;/general/fribidi.html">FriBidi</ulink>,
+      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="https://github.com/netkawai/libotf">libotf</ulink> and
-      <ulink url="https://libgd.github.io/">LibGD</ulink>
+      <ulink url="https://libgd.github.io/">LibGD</ulink> and
+      <ulink url="https://github.com/netkawai/libotf">libotf</ulink>
     </para>
 
   </sect2>
