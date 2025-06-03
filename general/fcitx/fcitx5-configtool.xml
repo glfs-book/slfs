@@ -39,11 +39,11 @@
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
-      <ulink url="&blfs-svn;/kde/frameworks6.html">KF6</ulink>,
-      <ulink url="&blfs-svn;/x/xkeyboard-config.html">XKeyboardConfig</ulink>,
+      <xref linkend="fcitx5"/>,
+      <xref linkend="fcitx5-qt"/>,
       <ulink url="&blfs-svn;/general/iso-codes.html">ISO Codes</ulink>,
-      <xref linkend="fcitx5"/>, and
-      <xref linkend="fcitx5-qt"/>
+      <ulink url="&blfs-svn;/kde/frameworks6.html">KF6</ulink>, and
+      <ulink url="&blfs-svn;/x/xkeyboard-config.html">XKeyboardConfig</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>

@@ -38,12 +38,12 @@
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      <xref linkend="fcitx5"/>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
-      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       <ulink url="&blfs-svn;/x/gtk3.html">GTK3</ulink>, 
       <ulink url="&blfs-svn;/x/gtk4.html">GTK4</ulink> (only one of the two is
       required, but both are recommended), and
-      <xref linkend="fcitx5"/>
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>
     </para>
 
   </sect2>

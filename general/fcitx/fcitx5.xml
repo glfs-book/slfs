@@ -37,19 +37,19 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
-      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
-      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
-      <ulink url="&blfs-svn;/general/json-c.html">JSON-C</ulink>,
       <ulink url="&blfs-svn;/general/dbus.html">dbus</ulink>,
+      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
       <ulink url="&blfs-svn;/general/fmt.html">fmt</ulink>,
+      <ulink url="&blfs-svn;/general/json-c.html">JSON-C</ulink>,
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       and <xref linkend="xcb-imdkit"/>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
       <xref linkend="cldr-emoji-annotation"/>,
-      and <ulink url="&blfs-svn;/general/enchant.html">enchant</ulink>
+      <ulink url="&blfs-svn;/general/enchant.html">enchant</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
@@ -69,7 +69,8 @@
     </para>
 
     <warning><para>
-      DO NOT disable the testing addons with the -DENABLE_TESTING_ADDONS=OFF
+      DO NOT disable the testing addons with the
+      <option>-D ENABLE_TESTING_ADDONS=OFF</option>
       option. For some reason some Fcitx input methods depend on those, even
       when the test code is explicitly disabled.
     </para></warning>
@@ -86,8 +87,8 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      If you have passed the ENABLE_DOC parameter to CMake, build the 
-      documentation by executing the following commands:
+      If you have passed the <option>-D ENABLE_DOC=ON</option> parameter to 
+      CMake, build the documentation by executing the following commands:
     </para>
 
 <screen><userinput>make doc</userinput></screen>
@@ -126,7 +127,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart
       href="../../xincludes/cmake-skip-install-rpath.xml"/>
 
     <para>
-      <parameter>-D ENABLE_DOC=ON</parameter>: Use this switch if you want to
+      <option>-D ENABLE_DOC=ON</option>: Use this switch if you want to
       build the documentation (requires <application>doxygen</application>).
     </para>
 

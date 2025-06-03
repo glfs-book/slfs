@@ -37,26 +37,26 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
+      <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
-      <xref linkend="libime"/>,
-      <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
-      and <xref linkend="fcitx5"/>
+      <xref linkend="fcitx5"/>,
+      and <xref linkend="libime"/>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>,
       <xref linkend="fcitx5-lua"/>,
-      and <xref linkend="fcitx5-qt"/>
+      <xref linkend="fcitx5-qt"/>. and
+      <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>,
-      <ulink url="&blfs-svn;/x/qtwebengine.html">QtWebEngine</ulink>,
-      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>, and
-      <ulink url="https://github.com/BYVoid/OpenCC">OpenCC</ulink>
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <ulink url="https://github.com/BYVoid/OpenCC">OpenCC</ulink>, and
+      <ulink url="&blfs-svn;/x/qtwebengine.html">QtWebEngine</ulink>
     </para>
 
   </sect2>

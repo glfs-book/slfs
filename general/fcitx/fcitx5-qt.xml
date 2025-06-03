@@ -38,10 +38,10 @@
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      <xref linkend="fcitx5"/>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
-      <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>,
-      and <xref linkend="fcitx5"/>
+      and <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>
     </para>
 
   </sect2>
