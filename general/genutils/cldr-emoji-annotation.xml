@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY cldr-emoji-annotation-download-http "https://github.com/fujiwarat/cldr-emoji-annotation/releases/download/&cldr-emoji-annotation-tarball-version;/cldr-emoji-annotation-&cldr-emoji-annotation-tarball-version;.tar.gz">
+]>
+
+<!-- TODO: figure out how to install the proper unicode-cldr and not just this
+outdated emoji-only version, but fcitx still refers to this one as an option
+so this will do for now -->
+
+<sect1 id="cldr-emoji-annotation" xreflabel="cldr-emoji-annotation-&cldr-emoji-annotation-version;">
+  <?dbhtml filename="cldr-emoji-annotation.html"?>
+
+  <title>cldr-emoji-annotation-&cldr-emoji-annotation-version;</title>
+
+  <indexterm zone="cldr-emoji-annotation">
+    <primary sortas="a-cldr-emoji-annotation">cldr-emoji-annotation</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to cldr-emoji-annotation</title>
+
+    <para>
+      The <application>cldr-emoji-annotation</application> package provides
+      the emoji-related annotation files from Unicode's CLDR.
+    </para>
+
+    
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&cldr-emoji-annotation-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/cldr-emoji-annotation/cldr-emoji-annotation-&cldr-emoji-annotation-version;-final-updates.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of cldr-emoji-annotation</title>
+
+    <para>
+      Apply a patch to bring up the source to the latest upstream commit:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../cldr-emoji-annotation-&cldr-emoji-annotation-version;-final-updates.patch</userinput></screen>
+
+    <para>
+      Install <application>cldr-emoji-annotation</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>autoreconf -fiv &amp;&amp;
+./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/unicode
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>  
+
+</sect1>

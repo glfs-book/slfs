@@ -20,5 +20,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="motif.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-util-xrm.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xeyes.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-imdkit.xml"/>
 
 </chapter>

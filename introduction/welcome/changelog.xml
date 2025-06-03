@@ -41,6 +41,48 @@
     -->
 
     <listitem>
+      <para>June 2nd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - general/fcitx/*: Added. Fixes
+          <ulink url="&lfs-qol-issues;/152">#152</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[seal331] - m17n: Added. Part of
+          <ulink url="&lfs-qol-issues;/152">#152</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[seal331] - Anthy: Added. Part of
+          <ulink url="&lfs-qol-issues;/152">#152</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>June 1st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - libime: Added. Part of
+          <ulink url="&lfs-qol-issues;/152">#152</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>May 31st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - cldr-emoji-annotation: Added. Part of
+          <ulink url="&lfs-qol-issues;/152">#152</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[seal331] - xcb-imdkit: Added. Part of
+          <ulink url="&lfs-qol-issues;/152">#152</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 30th, 2025</para>
       <itemizedlist>
         <listitem>

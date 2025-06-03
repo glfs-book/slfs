@@ -15,16 +15,19 @@
     packages that appear later in the book.
   </para>
 
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="anthy.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="asio.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="enet.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glaze.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="iniparser.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libev.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libime.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libjuice.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libsrtp.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libdatachannel.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libutempter.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libzip.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="m17n.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mbedtls.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minizip.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nlohmann-json.xml"/>

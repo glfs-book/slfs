@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY m17n-download-http
+    "https://download.savannah.nongnu.org/releases/m17n/m17n-lib-&m17n-version;.tar.gz">
+]>
+
+<sect1 id="m17n" xreflabel="m17n-&m17n-version;">
+  <?dbhtml filename="m17n.html"?>
+
+  <title>m17n-&m17n-version;</title>
+
+  <indexterm zone="m17n">
+    <primary sortas="a-m17n">m17n</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to m17n</title>
+
+    <para>
+      The m17n package provides a library for multilingualization of
+      applications.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&m17n-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required database:
+          <ulink url="https://download.savannah.nongnu.org/releases/m17n/m17n-db-&m17n-db-version;.tar.gz"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">m17n Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="anthy"/>,
+      <ulink url="&blfs-svn;/general/aspell.html">Aspell</ulink>,
+      <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>,
+      <ulink url="&blfs-svn;/general/freetype.html">FreeType</ulink>,
+      <ulink url="&blfs-svn;/general/fribidi.html">FriBidi</ulink>,
+      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="https://libgd.github.io/">LibGD</ulink> and
+      <ulink url="https://github.com/netkawai/libotf">libotf</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of m17n</title>
+
+    <para>
+      First, install the <application>m17n</application> database by running
+      the following commands:
+    </para>
+
+<screen><userinput>tar -xvf ../m17n-db-&m17n-db-version;.tar.gz &amp;&amp;
+cd m17n-db-&m17n-db-version; &amp;&amp;
+./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user, install the database:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+    <para>
+      Then, install <application>m17n</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>cd .. &amp;&amp;
+./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          m17n-conv, m17n-date, m17n-db, m17n-dump, m17n-edit, and m17n-view
+        </seg>
+        <seg>
+          libm17n-core, libm17n-flt, libm17n-gui, and libm17n
+        </seg>
+        <seg>
+          /usr/lib/m17n and /usr/share/m17n
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="m17n-conv">
+        <term><command>m17n-conv</command></term>
+        <listitem>
+          <para>
+            converts files between encodings
+          </para>
+          <indexterm zone="m17n m17n-conv">
+            <primary sortas="b-m17n-conv">m17n-conv</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="m17n-date">
+        <term><command>m17n-date</command></term>
+        <listitem>
+          <para>
+            displays the system date and time in many locales
+          </para>
+          <indexterm zone="m17n m17n-date">
+            <primary sortas="b-m17n-date">m17n-date</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="m17n-db">
+        <term><command>m17n-db</command></term>
+        <listitem>
+          <para>
+            prints information about the m17n database
+          </para>
+          <indexterm zone="m17n m17n-db">
+            <primary sortas="b-m17n-db">m17n-db</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="m17n-dump">
+        <term><command>m17n-dump</command></term>
+        <listitem>
+          <para>
+            dumps text as a PNG image file
+          </para>
+          <indexterm zone="m17n m17n-dump">
+            <primary sortas="b-m17n-dump">m17n-dump</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="m17n-edit">
+        <term><command>m17n-edit</command></term>
+        <listitem>
+          <para>
+            displays a file on a window and allows users to edit it
+          </para>
+          <indexterm zone="m17n m17n-edit">
+            <primary sortas="b-m17n-edit">m17n-edit</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="m17n-view">
+        <term><command>m17n-view</command></term>
+        <listitem>
+          <para>
+            displays a file on a window
+          </para>
+          <indexterm zone="m17n m17n-view">
+            <primary sortas="b-m17n-view">m17n-view</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libm17n-core">
+        <term><filename class="libraryfile">libm17n-core</filename></term>
+        <listitem>
+          <para>
+            is the m17n core library
+          </para>
+          <indexterm zone="m17n libm17n-core">
+            <primary sortas="c-libm17n-core">libm17n-core</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libm17n-flt">
+        <term><filename class="libraryfile">libm17n-flt</filename></term>
+        <listitem>
+          <para>
+            is the m17n Font Layout Table library
+          </para>
+          <indexterm zone="m17n libm17n-flt">
+            <primary sortas="c-libm17n-flt">libm17n-flt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libm17n-gui">
+        <term><filename class="libraryfile">libm17n-gui</filename></term>
+        <listitem>
+          <para>
+            is the m17n GUI drawing/inputting library
+          </para>
+          <indexterm zone="m17n libm17n-gui">
+            <primary sortas="c-libm17n-gui">libm17n-gui</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libm17n">
+        <term><filename class="libraryfile">libm17n</filename></term>
+        <listitem>
+          <para>
+            is the m17n shell API library
+          </para>
+          <indexterm zone="m17n libm17n">
+            <primary sortas="c-libm17n">libm17n</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

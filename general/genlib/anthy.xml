@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!-- always fetching git master... yes this isn't best practice, but the 
+       actual download URLs have % signs in them and I have no idea how to
+       make XML handle that -->
+  <!ENTITY anthy-download-http "https://salsa.debian.org/debian/anthy/-/archive/debian/anthy-debian.tar.gz">
+]>
+
+<sect1 id="anthy" xreflabel="Anthy-&anthy-version;">
+  <?dbhtml filename="anthy.html"?>
+
+  <title>Anthy-&anthy-version;</title>
+
+  <indexterm zone="anthy">
+    <primary sortas="a-anthy">Anthy</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Anthy</title>
+
+    <para>
+      The <application>Anthy</application> package provides
+      a kana-kanji conversion engine for Japanese.
+    </para>
+    
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&anthy-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Anthy</title>
+
+    <para>
+      Install <application>Anthy</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>patch -Np1 -i debian/patches/0001-calctrans-proccorpus.c-Fix-implicit-function-decl-of.patch &amp;&amp;
+autoreconf -fiv &amp;&amp;
+./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          anthy-agent and anthy-dic-tool
+        </seg>
+        <seg>
+          libanthy, libanthydic, and libanthyinput 
+        </seg>
+        <seg>
+          /usr/include/anthy and /usr/share/anthy
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="anthy-agent">
+        <term><command>anthy-agent</command></term>
+        <listitem>
+          <para>
+            is a tool which integrates Anthy input into applications 
+          </para>
+          <indexterm zone="anthy anthy-agent">
+            <primary sortas="b-anthy-agent">anthy-agent</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="anthy-dic-tool">
+        <term><command>anthy-dic-tool</command></term>
+        <listitem>
+          <para>
+            is a utility command for dictionary manipulation
+          </para>
+          <indexterm zone="anthy anthy-dic-tool">
+            <primary sortas="b-anthy-dic-tool">anthy-dic-tool</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libanthy">
+        <term><filename class="libraryfile">libanthy</filename></term>
+        <listitem>
+          <para>
+            is the Anthy core library
+          </para>
+          <indexterm zone="anthy libanthy">
+            <primary sortas="c-libanthy">libanthy</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libanthydic">
+        <term><filename class="libraryfile">libanthydic</filename></term>
+        <listitem>
+          <para>
+            is the Anthy dictionary manipulation library
+          </para>
+          <indexterm zone="anthy libanthydic">
+            <primary sortas="c-libanthydic">libanthydic</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libanthyinput">
+        <term><filename class="libraryfile">libanthyinput</filename></term>
+        <listitem>
+          <para>
+            is the Anthy input library
+          </para>
+          <indexterm zone="anthy libanthyinput">
+            <primary sortas="c-libanthyinput">libanthyinput</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

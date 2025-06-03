@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libime-download-http
+    "https://github.com/fcitx/libime/archive/&libime-version;/libime-&libime-version;.tar.gz">
+]>
+
+<sect1 id="libime" xreflabel="libime-&libime-version;">
+  <?dbhtml filename="libime.html"?>
+
+  <title>libime-&libime-version;</title>
+
+  <indexterm zone="libime">
+    <primary sortas="a-libime">libime</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libime</title>
+
+    <para>
+      The libime package provides a library with support functions for
+      implementing generic input methods.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libime-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required submodule:
+          <ulink url="https://github.com/kpu/kenlm/archive/&libime-kenlm;.tar.gz"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">libime Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      and <xref linkend="fcitx5"/>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink> (to build
+      the documentation)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libime</title>
+
+    <para>
+      Unpack the <application>kenlm</application> submodule into the right place:
+    </para>
+
+<screen><userinput>tar -xvf ../&libime-kenlm;.tar.gz -C src/libime/core &amp;&amp;
+rmdir src/libime/core/kenlm &amp;&amp;
+mv src/libime/core/kenlm-&libime-kenlm; src/libime/core/kenlm</userinput></screen>
+
+    <para>
+      Install <application>libime</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D BUILD_SHARED_LIBS=ON        \
+      -D ENABLE_TEST=OFF             \
+      -Wno-dev .. &amp;&amp;
+
+make</userinput></screen>
+
+    <para>
+      If you have passed the <option>-D ENABLE_DOC=ON</option> parameter to 
+      CMake, build the documentation by executing the following commands:
+    </para>
+
+<screen><userinput>make doc</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+    <para>
+      If you have built the documentation, install it as the &root; user:
+    </para>
+
+<!-- install doesn't support recursive copy and there's no doc install
+target... ugh -->
+<screen role="root"><userinput>install -v -m755 -d /usr/share/doc/libime-&libime-version; &amp;&amp;
+cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: This ensures shared
+      libraries are built.
+    </para>
+
+    <para>
+      <option>-D ENABLE_DOC=ON</option>: Use this switch if you want to
+      build the documentation (requires <application>doxygen</application>).
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          libime_history, libime_migrate_fcitx4_pinyin,
+          libime_migrate_fcitx4_table, libime_pinyindict, libime_prediction,
+          libime_slm_build_binary, and libime_tabledict
+        </seg>
+        <seg>
+          libIMECore, libIMEPinyin, and libIMETable
+        </seg>
+        <seg>
+          /usr/include/LibIME, /usr/lib/libime, and /usr/share/libime
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libime_history">
+        <term><command>libime_history</command></term>
+        <listitem>
+          <para>
+            is a helper tool for dealing with bigrams
+          </para>
+          <indexterm zone="libime libime_history">
+            <primary sortas="b-libime_history">libime_history</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libime_migrate_fcitx4_pinyin">
+        <term><command>libime_migrate_fcitx4_pinyin</command></term>
+        <listitem>
+          <para>
+            is a tool which migrates Fcitx 4 pinyin dictionaries to Fcitx 5
+          </para>
+          <indexterm zone="libime libime_migrate_fcitx4_pinyin">
+            <primary sortas="b-libime_migrate_fcitx4_pinyin">libime_migrate_fcitx4_pinyin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libime_migrate_fcitx4_table">
+        <term><command>libime_migrate_fcitx4_table</command></term>
+        <listitem>
+          <para>
+            is a tool which migrates Fcitx 4 tables to Fcitx 5
+          </para>
+          <indexterm zone="libime libime_migrate_fcitx4_table">
+            <primary sortas="b-libime_migrate_fcitx4_table">libime_migrate_fcitx4_table</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libime_pinyindict">
+        <term><command>libime_pinyindict</command></term>
+        <listitem>
+          <para>
+            is a helper tool for dealing with pinyin dictionaries
+          </para>
+          <indexterm zone="libime libime_pinyindict">
+            <primary sortas="b-libime_pinyindict">libime_pinyindict</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libime_prediction">
+        <term><command>libime_prediction</command></term>
+        <listitem>
+          <para>
+            is a helper tool for dealing with word predictions
+          </para>
+          <indexterm zone="libime libime_prediction">
+            <primary sortas="b-libime_prediction">libime_prediction</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libime_slm_build_binary">
+        <term><command>libime_slm_build_binary</command></term>
+        <listitem>
+          <para>
+            builds a binary file from an ARPA file for faster load times
+          </para>
+          <indexterm zone="libime libime_slm_build_binary">
+            <primary sortas="b-libime_slm_build_binary">libime_slm_build_binary</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libime_tabledict">
+        <term><command>libime_tabledict</command></term>
+        <listitem>
+          <para>
+            is a helper tool for dealing with table-based dictionaries
+          </para>
+          <indexterm zone="libime libime_tabledict">
+            <primary sortas="b-libime_tabledict">libime_tabledict</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libIMECore">
+        <term><filename class="libraryfile">libIMECore</filename></term>
+        <listitem>
+          <para>
+            is the libime core library
+          </para>
+          <indexterm zone="libime libIMECore">
+            <primary sortas="c-libIMECore">libIMECore</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libIMEPinyin">
+        <term><filename class="libraryfile">libIMEPinyin</filename></term>
+        <listitem>
+          <para>
+            is the libime pinyin library
+          </para>
+          <indexterm zone="libime libIMEPinyin">
+            <primary sortas="c-libIMEPinyin">libIMEPinyin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libIMETable">
+        <term><filename class="libraryfile">libIMETable</filename></term>
+        <listitem>
+          <para>
+            is the libime table-based input library
+          </para>
+          <indexterm zone="libime libIMETable">
+            <primary sortas="c-libIMETable">libIMETable</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

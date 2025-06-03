@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY fcitx5-download-http
+    "https://github.com/fcitx/fcitx5/archive/&fcitx5-version;/fcitx5-&fcitx5-version;.tar.gz">
+]>
+
+<sect1 id="fcitx5" xreflabel="Fcitx5-&fcitx5-version;">
+  <?dbhtml filename="fcitx5.html"?>
+
+  <title>Fcitx5-&fcitx5-version;</title>
+
+  <indexterm zone="fcitx5">
+    <primary sortas="a-fcitx5">Fcitx5</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Fcitx5</title>
+
+    <para>
+      The Fcitx5 package provides an extensible input method framework.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&fcitx5-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Fcitx5 Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/general/dbus.html">dbus</ulink>,
+      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      <ulink url="&blfs-svn;/general/fmt.html">fmt</ulink>,
+      <ulink url="&blfs-svn;/general/json-c.html">JSON-C</ulink>,
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
+      and <xref linkend="xcb-imdkit"/>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="cldr-emoji-annotation"/>,
+      <ulink url="&blfs-svn;/general/enchant.html">enchant</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink> (to build
+      the documentation)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Fcitx5</title>
+
+    <para>
+      Install <application>Fcitx5</application> by running the following
+      commands:
+    </para>
+
+    <warning><para>
+      DO NOT disable the testing addons with the
+      <option>-D ENABLE_TESTING_ADDONS=OFF</option>
+      option. For some reason some Fcitx input methods depend on those, even
+      when the test code is explicitly disabled.
+    </para></warning>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D ENABLE_TEST=OFF             \
+      -Wno-dev .. &amp;&amp;
+
+make</userinput></screen>
+
+    <para>
+      If you have passed the <option>-D ENABLE_DOC=ON</option> parameter to 
+      CMake, build the documentation by executing the following commands:
+    </para>
+
+<screen><userinput>make doc</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+    <para>
+      If you have built the documentation, install it as the &root; user:
+    </para>
+
+<!-- install doesn't support recursive copy and there's no doc install
+target... ugh -->
+<screen role="root"><userinput>install -v -m755 -d /usr/share/doc/fcitx5-&fcitx5-version; &amp;&amp;
+cp -rv doc/html/* /usr/share/doc/fcitx5-&fcitx5-version;</userinput></screen>
+
+    <para>
+      Under some desktop environments and most window managers, Fcitx will not
+      be started automatically. Execute the following command as each user you
+      want to use Fcitx as to avoid that:
+    </para>
+
+<screen><userinput>mkdir -p ~/.config/autostart &amp;&amp;
+cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart
+</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <option>-D ENABLE_DOC=ON</option>: Use this switch if you want to
+      build the documentation (requires <application>doxygen</application>).
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Plugins</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          comp-spell-dict, fcitx5, fcitx5-configtool, fcitx5-diagnose, 
+          fcitx5-remote, and fcitx5-wayland-launcher
+        </seg>
+        <seg>
+          libFcitx5Config, libFcitx5Core, and libFcitx5Utils
+        </seg>
+        <seg>
+          libclassicui, libclipboard, libdbus, libdbusfrontend, libemoji,
+          libfcitx4frontend, libibusfrontend, libimselector, libkimpanel,
+          libnotificationitem, libnotifications, libquickphrase, libspell,
+          libtestfrontend, libtestim, libtestui, libunicode,
+          libvirtualkeyboard, libwayland, libwaylandim, libxcb, and libxim
+        </seg>
+        <seg>
+          /usr/include/Fcitx5, /usr/lib/fcitx5, /usr/share/fcitx5,
+          and /usr/share/doc/fcitx5-&fcitx5-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="comp-spell-dict">
+        <term><command>comp-spell-dict</command></term>
+        <listitem>
+          <para>
+            compiles a spell dictionary for the spell plugin
+          </para>
+          <indexterm zone="fcitx5 comp-spell-dict">
+            <primary sortas="b-comp-spell-dict">comp-spell-dict</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fcitx5-bin">
+        <term><command>fcitx5</command></term>
+        <listitem>
+          <para>
+            is the Fcitx server
+          </para>
+          <indexterm zone="fcitx5 fcitx5-bin">
+            <primary sortas="b-fcitx5-bin">fcitx5</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <!-- we add the -bin here to avoid conflicts with the actual
+      fcitx5-configtool package -->
+      <varlistentry id="fcitx5-configtool-bin">
+        <term><command>fcitx5-configtool</command></term>
+        <listitem>
+          <para>
+            is a wrapper which autodetects and runs a suitable Fcitx
+            configuration tool
+          </para>
+          <indexterm zone="fcitx5 fcitx5-configtool-bin">
+            <primary sortas="b-fcitx5-configtool-bin">fcitx5-configtool</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fcitx5-diagnose">
+        <term><command>fcitx5-diagnose</command></term>
+        <listitem>
+          <para>
+            is a script that fetches diagnostic data for bug reports
+          </para>
+          <indexterm zone="fcitx5 fcitx5-diagnose">
+            <primary sortas="b-fcitx5-diagnose">fcitx5-diagnose</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fcitx5-remote">
+        <term><command>fcitx5-remote</command></term>
+        <listitem>
+          <para>
+            is a control tool for the Fcitx server
+          </para>
+          <indexterm zone="fcitx5 fcitx5-remote">
+            <primary sortas="b-fcitx5-remote">fcitx5-remote</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fcitx5-wayland-launcher">
+        <term><command>fcitx5-wayland-launcher</command></term>
+        <listitem>
+          <para>
+            is a helper tool for launching Fcitx within a Wayland compositor
+          </para>
+          <indexterm zone="fcitx5 fcitx5-wayland-launcher">
+            <primary sortas="b-fcitx5-wayland-launcher">fcitx5-wayland-launcher</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libFcitx5Config">
+        <term><filename class="libraryfile">libFcitx5Config</filename></term>
+        <listitem>
+          <para>
+            is a library for parsing Fcitx configuration files
+          </para>
+          <indexterm zone="fcitx5 libFcitx5Config">
+            <primary sortas="c-libFcitx5Config">libFcitx5Config</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libFcitx5Core">
+        <term><filename class="libraryfile">libFcitx5Core</filename></term>
+        <listitem>
+          <para>
+            is the Fcitx core library
+          </para>
+          <indexterm zone="fcitx5 libFcitx5Core">
+            <primary sortas="c-libFcitx5Core">libFcitx5Core</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libFcitx5Utils">
+        <term><filename class="libraryfile">libFcitx5Utils</filename></term>
+        <listitem>
+          <para>
+            contains Fcitx utility functions
+          </para>
+          <indexterm zone="fcitx5 libFcitx5Utils">
+            <primary sortas="c-libFcitx5Utils">libFcitx5Utils</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

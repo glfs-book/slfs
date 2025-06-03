@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY fcitx5-gtk-download-http
+    "https://github.com/fcitx/fcitx5-gtk/archive/&fcitx5-gtk-version;/fcitx5-gtk-&fcitx5-gtk-version;.tar.gz">
+]>
+
+<sect1 id="fcitx5-gtk" xreflabel="Fcitx5-GTK-&fcitx5-gtk-version;">
+  <?dbhtml filename="fcitx5-gtk.html"?>
+
+  <title>Fcitx5-GTK-&fcitx5-gtk-version;</title>
+
+  <indexterm zone="fcitx5-gtk">
+    <primary sortas="a-fcitx5-gtk">Fcitx5-GTK</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Fcitx5-GTK</title>
+
+    <para>
+      The Fcitx5-GTK package provides a GTK frontend for Fcitx.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&fcitx5-gtk-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Fcitx5-GTK Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      <xref linkend="fcitx5"/>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
+      <ulink url="&blfs-svn;/x/gtk3.html">GTK3</ulink>, 
+      <ulink url="&blfs-svn;/x/gtk4.html">GTK4</ulink> (only one of the two is
+      required, but both are recommended), and
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Fcitx5-GTK</title>
+
+    <para>
+      Install <application>Fcitx5-GTK</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D ENABLE_GIR=ON               \
+      -D ENABLE_GTK2_IM_MODULE=OFF   \
+      -D ENABLE_GTK3_IM_MODULE=ON    \
+      -D ENABLE_GTK4_IM_MODULE=ON    \
+      -Wno-dev .. &amp;&amp;
+
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+<!-- upstream says the following is only needed for a custom prefix; in my
+personal testing the module only got picked up after running this despite
+being installed in /usr -->
+
+    <para>
+      If you have compiled in GTK3 support, update the GTK3 input method
+      module cache as the &root; user:
+    </para>
+
+<screen role="root"><userinput>gtk-query-immodules-3.0 --update-cache</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Plugins</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          fcitx5-gtk3-immodule-probing and fcitx5-gtk4-immodule-probing, 
+        </seg>
+        <seg>
+          libFcitx5GClient
+        </seg>
+        <seg>
+          im-fcitx5 (GTK3 plugin) and libim-fcitx5 (GTK4 plugin)
+        </seg>
+        <seg>
+          /usr/include/Fcitx5/GClient
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="fcitx5-gtk3-immodule-probing">
+        <term><command>fcitx5-gtk3-immodule-probing</command></term>
+        <listitem>
+          <para>
+            is a debugging application for GTK3 input methods
+          </para>
+          <indexterm zone="fcitx5-gtk fcitx5-gtk3-immodule-probing">
+            <primary sortas="b-fcitx5-gtk3-immodule-probing">fcitx5-gtk3-immodule-probing</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fcitx5-gtk4-immodule-probing">
+        <term><command>fcitx5-gtk4-immodule-probing</command></term>
+        <listitem>
+          <para>
+            is a debugging application for GTK4 input methods
+          </para>
+          <indexterm zone="fcitx5-gtk fcitx5-gtk4-immodule-probing">
+            <primary sortas="b-fcitx5-gtk4-immodule-probing">fcitx5-gtk4-immodule-probing</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libFcitx5GClient">
+        <term><filename class="libraryfile">libFcitx5GClient</filename></term>
+        <listitem>
+          <para>
+            is the Fcitx DBus client library for GLib
+          </para>
+          <indexterm zone="fcitx5-gtk libFcitx5GClient">
+            <primary sortas="c-libFcitx5GClient">libFcitx5GClient</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

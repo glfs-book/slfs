@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY fcitx5-chinese-addons-download-http
+    "https://github.com/fcitx/fcitx5-chinese-addons/archive/&fcitx5-chinese-addons-version;/fcitx5-chinese-addons-&fcitx5-chinese-addons-version;.tar.gz">
+]>
+
+<sect1 id="fcitx5-chinese-addons" xreflabel="Fcitx5-chinese-addons-&fcitx5-chinese-addons-version;">
+  <?dbhtml filename="fcitx5-chinese-addons.html"?>
+
+  <title>Fcitx5-chinese-addons-&fcitx5-chinese-addons-version;</title>
+
+  <indexterm zone="fcitx5-chinese-addons">
+    <primary sortas="a-fcitx5-chinese-addons">Fcitx5-chinese-addons</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Fcitx5-chinese-addons</title>
+
+    <para>
+      The Fcitx5-chinese-addons package provides Chinese-related addons for 
+      Fcitx 5, including IMEs previously bundled with Fcitx 4.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&fcitx5-chinese-addons-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Fcitx5-chinese-addons Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      <xref linkend="fcitx5"/>,
+      and <xref linkend="libime"/>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="fcitx5-lua"/>,
+      <xref linkend="fcitx5-qt"/>. and
+      <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>,
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <ulink url="https://github.com/BYVoid/OpenCC">OpenCC</ulink>, and
+      <ulink url="&blfs-svn;/x/qtwebengine.html">QtWebEngine</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Fcitx5-chinese-addons</title>
+
+    <para>
+      Install <application>Fcitx5-chinese-addons</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D ENABLE_TEST=OFF             \
+      -D ENABLE_OPENCC=OFF           \
+      -D ENABLE_BROWSER=OFF          \
+      -D ENABLE_CLOUDPINYIN=OFF      \
+      -Wno-dev .. &amp;&amp;
+
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+    <para>
+      <parameter>-D ENABLE_OPENCC=OFF</parameter>: This switch disables
+      building the chttrans utility, which requires OpenCC and Boost.
+      Remove it if you have installed them.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_BROWSER=OFF</parameter>: This switch disables
+      building the built-in browser, which requires QtWebEngine.
+      Remove it if you have installed it.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_CLOUDPINYIN=OFF</parameter>: This switch disables
+      building the cloud pinyin addon, which requires cURL.
+      Remove it if you have installed it.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Plugins</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          scel2org5
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libchttrans, libcloudpinyin, libcustomphraseeditor, libfullwidth
+          libpinyin, libpinyindictmanager, libpinyinhelper, libpunctuation
+          and libtable
+        </seg>
+        <seg>
+          /usr/include/Fcitx5/Module/fcitx-module/cloudpinyin,
+          /usr/include/Fcitx5/Module/fcitx-module/pinyinhelper,
+          /usr/include/Fcitx5/Module/fcitx-module/punctuation,
+          /usr/share/fcitx5/chttrans, /usr/share/fcitx5/inputmethod,
+          /usr/share/fcitx5/lua/imeapi/extensions,
+          /usr/share/fcitx5/pinyin, /usr/share/fcitx5/pinyinhelper,
+          /usr/share/fcitx5/punctuation
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="scel2org5">
+        <term><command>scel2org5</command></term>
+        <listitem>
+          <para>
+            converts a scel file to a libime-compatible file
+          </para>
+          <indexterm zone="fcitx5-chinese-addons scel2org5">
+            <primary sortas="b-scel2org5">scel2org5</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

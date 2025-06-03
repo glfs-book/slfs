@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY fcitx5-qt-download-http
+    "https://github.com/fcitx/fcitx5-qt/archive/&fcitx5-qt-version;/fcitx5-qt-&fcitx5-qt-version;.tar.gz">
+]>
+
+<sect1 id="fcitx5-qt" xreflabel="Fcitx5-Qt-&fcitx5-qt-version;">
+  <?dbhtml filename="fcitx5-qt.html"?>
+
+  <title>Fcitx5-Qt-&fcitx5-qt-version;</title>
+
+  <indexterm zone="fcitx5-qt">
+    <primary sortas="a-fcitx5-qt">Fcitx5-Qt</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Fcitx5-Qt</title>
+
+    <para>
+      The Fcitx5-Qt package provides a Qt frontend for Fcitx.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&fcitx5-qt-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Fcitx5-Qt Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      <xref linkend="fcitx5"/>,
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      and <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Fcitx5-Qt</title>
+
+    <para>
+      Install <application>Fcitx5-Qt</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D ENABLE_QT4=OFF              \
+      -D ENABLE_QT5=OFF              \
+      -D ENABLE_QT6=ON               \
+      -Wno-dev .. &amp;&amp;
+
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Plugins</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          fcitx5-qt6-gui-wrapper and fcitx5-qt6-immodule-probing
+        </seg>
+        <seg>
+          libFcitx5Qt6DBusAddons and libFcitx5Qt6WidgetsAddons
+        </seg>
+        <seg>
+          libfcitx5platforminputcontextplugin (Qt plugin) and 
+          libfcitx-quickphrase-editor5 (Fcitx plugin) 
+        </seg>
+        <seg>
+          /usr/include/Fcitx5Qt6 and /usr/lib/fcitx5/qt6
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="fcitx5-qt6-gui-wrapper">
+        <term><command>fcitx5-qt6-gui-wrapper</command></term>
+        <listitem>
+          <para>
+            is a launcher for the Fcitx GUI plugin
+          </para>
+          <indexterm zone="fcitx5-qt fcitx5-qt6-gui-wrapper">
+            <primary sortas="b-fcitx5-qt6-gui-wrapper">fcitx5-qt6-gui-wrapper</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fcitx5-qt6-immodule-probing">
+        <term><command>fcitx5-qt6-immodule-probing</command></term>
+        <listitem>
+          <para>
+            is a debugging application for Qt6 input methods
+          </para>
+          <indexterm zone="fcitx5-qt fcitx5-qt6-immodule-probing">
+            <primary sortas="b-fcitx5-qt6-immodule-probing">fcitx5-qt6-immodule-probing</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libFcitx5Qt6DBusAddons">
+        <term><filename class="libraryfile">libFcitx5Qt6DBusAddons</filename></term>
+        <listitem>
+          <para>
+            contains the Qt DBus-related methods of Fcitx
+          </para>
+          <indexterm zone="fcitx5-qt libFcitx5Qt6DBusAddons">
+            <primary sortas="c-libFcitx5Qt6DBusAddons">libFcitx5Qt6DBusAddons</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libFcitx5Qt6WidgetsAddons">
+        <term><filename class="libraryfile">libFcitx5Qt6WidgetsAddons</filename></term>
+        <listitem>
+          <para>
+            contains the Qt widgets used by Fcitx
+          </para>
+          <indexterm zone="fcitx5-qt libFcitx5Qt6WidgetsAddons">
+            <primary sortas="c-libFcitx5Qt6WidgetsAddons">libFcitx5Qt6WidgetsAddons</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
