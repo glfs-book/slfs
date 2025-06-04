@@ -153,13 +153,13 @@ ninja</userinput></screen>
 
 <screen><userinput>$ ls /opt | grep jdk
 </userinput><computeroutput>jdk
-<literal>jdk-23.0.2+7</literal>
+<literal>jdk-&jdk-modern;</literal>
 <literal>jdk-17.0.15+5</literal>
 ...</computeroutput></screen>
 
     <para>
       <userinput>jdk</userinput> can be a symlink to either
-      <computeroutput><literal>jdk-23.0.2+7</literal></computeroutput> or
+      <computeroutput><literal>jdk-&jdk-modern;</literal></computeroutput> or
       <computeroutput><literal>jdk-17.0.15+5</literal></computeroutput>.
     </para>
 
