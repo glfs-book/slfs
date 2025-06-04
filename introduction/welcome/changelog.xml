@@ -44,6 +44,10 @@
       <para>June 4th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - OpenTTD: Added. Fixes
+          <ulink url="&lfs-qol-issues;/139">#139</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - m17n-db: 1.8.9 -&gt; 1.8.10. Fixes
           <ulink url="&lfs-qol-issues;/179">#179</ulink>.</para>
         </listitem>

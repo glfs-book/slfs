@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY openttd-download-http
+    "https://cdn.openttd.org/openttd-releases/&openttd-version;/openttd-&openttd-version;-source.tar.xz">
+]>
+
+<sect1 id="openttd" xreflabel="OpenTTD-&openttd-version;">
+  <?dbhtml filename="openttd.html"?>
+  
+  <title>OpenTTD-&openttd-version;</title>
+
+  <indexterm zone="openttd">
+    <primary sortas="a-openttd">OpenTTD</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to OpenTTD</title>
+
+    <para>
+      The <application>OpenTTD</application> package is an open source and
+      improved-upon version of Transportation Tycoon Deluxe.
+    </para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="../../xincludes/long-build-time.xml"/>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&openttd-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">OpenTTD Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Required (for clients; not needed for
+      servers)</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>,
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>, and
+      <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink>
+      (with <ulink url="&blfs-svn;/general/icu.html">ICU</ulink>)
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <ulink url="&blfs-svn;/x/hicolor-icon-theme.html">hicolor-icon-theme</ulink>,
+      and <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink
+        url="https://chromium.googlesource.com/breakpad/breakpad">breakpad</ulink>,
+      <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>, and
+      <ulink url="&arch-pkgs;/extra/x86_64/fluidsynth/">fluidsynth</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of OpenTTD</title>
+
+    <para>
+      Install <application>OpenTTD</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -W no-dev -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+mv -v /usr/share/doc/openttd{,-&openttd-version;}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          openttd
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/openttd-&openttd-version; and
+          /usr/share/openttd
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="openttd-bin">
+        <term><command>openttd</command></term>
+        <listitem>
+          <para>
+            is the <application>OpenTTD</application> launcher
+          </para>
+          <indexterm zone="openttd openttd-bin">
+            <primary sortas="b-openttd-bin">openttd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

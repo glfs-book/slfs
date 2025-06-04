@@ -11,5 +11,6 @@
   <title>General Gaming Software</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mc/mc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ttd/ttd.xml"/>
 
 </part>

@@ -232,3 +232,5 @@ the exact same version number... -->
      - Zeckma -->
 <!ENTITY jdk-modern                          "24.0.1+9">
 <!ENTITY prism-launcher-version              "9.4">
+<!-- TTD -->
+<!ENTITY openttd-version                     "15.0-beta2">
