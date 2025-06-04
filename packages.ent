@@ -77,7 +77,7 @@ version, so keep this at that. -->
 <!ENTITY yt-dlp-version                      "2025.05.22">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.12.2">
-<!ENTITY eza-version                         "0.21.3">
+<!ENTITY eza-version                         "0.21.4">
 <!ENTITY tealdeer-version                    "1.7.2">
 <!-- Programming -->
 <!ENTITY befunge-minor-version               "2_25">

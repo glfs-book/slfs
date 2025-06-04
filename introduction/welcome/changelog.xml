@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>June 4th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - 0.21.3 -&gt; 0.21.4. Fixes
+          <ulink url="&lfs-qol-issues;/173">#173</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 2nd, 2025</para>
       <itemizedlist>
         <listitem>
