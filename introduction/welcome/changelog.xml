@@ -44,7 +44,11 @@
       <para>June 4th, 2025</para>
       <itemizedlist>
         <listitem>
-          <para>[zeckma] - 0.21.3 -&gt; 0.21.4. Fixes
+          <para>[zeckma] - glaze: 5.3.0 -&gt; 5.3.1. Fixes
+          <ulink url="&lfs-qol-issues;/178">#178</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - eza: 0.21.3 -&gt; 0.21.4. Fixes
           <ulink url="&lfs-qol-issues;/173">#173</ulink>.</para>
         </listitem>
       </itemizedlist>
