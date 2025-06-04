@@ -116,9 +116,11 @@ cp -rv doc/html/* /usr/share/doc/fcitx5-&fcitx5-version;</userinput></screen>
       want to use Fcitx as to avoid that:
     </para>
 
+<!-- Probably not the best practice to put in XDG_CONFIG_HOME,
+     but it works. -->
 <screen><userinput>mkdir -p ~/.config/autostart &amp;&amp;
-cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart
-</userinput></screen>
+cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
+         ~/.config/autostart</userinput></screen>
 
   </sect2>
 
@@ -133,6 +135,21 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart
       build the documentation (requires <application>doxygen</application>).
     </para>
 
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring Fcitx5</title>
+    <sect3>
+      <title>Configuration Information</title>
+      <para>
+        While this package has been installed, you will want an Input Method
+        Engine in tandom with this package, such as <xref
+        linkend="fcitx5-anthy"/>. Furthermore, you will want to ensure you can
+        actually use this package. Read the <ulink
+        url="https://fcitx-im.org/wiki/Fcitx_5">Fcitx5 Wiki</ulink> for more
+        information on how to set it up.
+      </para>
+    </sect3>
   </sect2>
 
   <sect2 role="content">
