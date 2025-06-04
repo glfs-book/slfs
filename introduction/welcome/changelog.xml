@@ -44,6 +44,10 @@
       <para>June 4th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - m17n-db: 1.8.9 -&gt; 1.8.10. Fixes
+          <ulink url="&lfs-qol-issues;/179">#179</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - glaze: 5.3.0 -&gt; 5.3.1. Fixes
           <ulink url="&lfs-qol-issues;/178">#178</ulink>.</para>
         </listitem>
