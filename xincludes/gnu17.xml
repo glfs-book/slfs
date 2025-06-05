@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE note PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
-   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
-
-
-<para>
-  <envar>C{,XX}FLAGS="std=gnu17"</envar>: These variables ensure this package
-  properly builds as C23 is now the default in GCC-15.x.x.
-</para>

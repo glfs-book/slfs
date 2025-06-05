@@ -34,8 +34,7 @@
       </listitem>
     </itemizedlist>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/extraction-unzip.xml"/>
+    &extraction-unzip;
 
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">

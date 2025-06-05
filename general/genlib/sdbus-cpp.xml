@@ -85,8 +85,7 @@ mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+    &cmake-skip-install-rpath;
 
     <para>
       <command>mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</command>:

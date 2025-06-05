@@ -118,8 +118,7 @@ rm -vf /usr/lib/libyajl_s.a</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+    &cmake-skip-install-rpath;
 
     <para>
       <command>rm -vf /usr/lib/libyajl_s.a</command>: This command removes a

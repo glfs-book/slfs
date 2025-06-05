@@ -75,8 +75,7 @@
   <sect2 role="installation">
     <title>Installation of p20-emu</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/extraction-unzip.xml"/>
+    &extraction-unzip;
 
     <para>
       Apply a patch to build without any debugging information, which allows

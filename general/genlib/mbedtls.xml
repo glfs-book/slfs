@@ -86,8 +86,7 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
       These variables disable a false positive being triggered by GCC-15.x.x.
     </para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+    &cmake-skip-install-rpath;
 
     <para>
       <parameter>-D USE_SHARED_MBEDTLS_LIBRARY=ON</parameter>: This parameter

@@ -116,8 +116,7 @@ ninja</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/meson-buildtype-release.xml"/>
+    &meson-buildtype-release;
 
     <para revision="sysv">
       <parameter>-D systemd=disabled</parameter>: This parameter disables

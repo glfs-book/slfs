@@ -1,0 +1,70 @@
+<!ENTITY abi-break
+  "<important><para>Updating this package is known
+  to break ABI.</para></important>">
+
+<!ENTITY parallel_issues
+  "<note><para>This package may occasionally fail when
+  building with multiple processors. See <xref
+  linkend='parallel-builds'/> for more information.</para></note>">
+
+<!ENTITY build-use-internet
+  "<note><para>An Internet connection is needed for building this
+  package. The system certificate store may need to be set up with
+  <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> before
+  building this package.</para></note>">
+
+<!ENTITY test-use-internet
+  "<note><para>An Internet connection is needed for some tests of
+  this package. The system certificate store may need to be set up
+  with <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink>
+  before testing this package.</para></note>">
+
+<!ENTITY options-configure
+  "<note><para>Run <command>./configure --help</command> for a full list
+  of options.</para></note>">
+<!ENTITY options-subconfigure
+  "<note><para>Run <command>../configure --help</command> for a full
+  list of options.</para></note>">
+<!ENTITY options-meson
+  "<note><para>Inspect <filename>meson_options.txt</filename> or
+  <filename>meson.options</filename> for a full list of
+  options.</para></note>">
+<!ENTITY options-cmake
+  "<note><para>For a full list of options and values, make sure you are
+  in a build directory, then run <command>cmake -LAH ..</command>.
+  </para></note>">
+
+<!-- Previously were xincludes. Not all of them from BLFS/xincludes will be
+     here, only take what we need. -->
+<!ENTITY cmake-policy-version
+  "<para><parameter>-D CMAKE_POLICY_VERSION_MINIMUM=3.5</parameter>:
+  This switch allows building this package with cmake-4.0 or newer.</para>">
+<!ENTITY cmake-skip-install-rpath
+  "<!-- https://wiki.debian.org/RpathIssue/
+        https://security.stackexchange.com/questions/161799/ -->
+  <para><parameter>-D CMAKE_SKIP_INSTALL_RPATH=ON</parameter>:
+  This switch makes <command>cmake</command> remove hardcoded library search
+  paths (rpath) when installing a binary executable file or a shared library.
+  This package does not need rpath once it's installed into the standard
+  location, and rpath may sometimes cause unwanted effects or even security
+  issues.</para>">
+<!ENTITY extraction-unzip
+  "<note><para>During extraction, you may get the following message(s):</para>
+<screen><computeroutput>unzip: Cannot set mode for '...': Operation notsupported</computeroutput></screen>
+  <para>You may ignore said message(s), everything is fine. It is caused by
+  an attempt to set the file attributes on a symbolic link, which are
+  ignored on most Unix and Unix-like systems, a notable exception being
+  macOS.</para></note>">
+<!ENTITY gnu17
+  "<para><envar>C{,XX}FLAGS='std=gnu17'</envar>: These variables ensure this
+  package properly builds as C23 is now the default in GCC-15.x.x.</para>">
+<!ENTITY long-build-time
+  "<note><para>This may take a while to build. Feel free to do something else
+  while this is building.</para></note>">
+<!ENTITY meson-buildtype-release
+  "<para><parameter>--buildtype=release</parameter>: Specify a buildtype
+  suitable for stable releases of the package, as the default may
+  produce unoptimized binaries.</para>">
+<!ENTITY static-libraries
+  "<para><parameter>--disable-static</parameter>: This switch prevents
+  installation of static versions of the libraries.</para>">

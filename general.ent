@@ -170,35 +170,6 @@ export -f as_root</userinput></screen>
 <!ENTITY % package-entities SYSTEM      "packages.ent">
 %package-entities;
 
-<!ENTITY parallel_issues "<note><para>This package may occasionally fail when
-                          building with multiple processors.  See <xref
-                          linkend='parallel-builds'/> for more information.</para></note>">
-
-<!ENTITY shell-env "<note><para>If installing in the chroot environment, be
-                    sure to export the <envar>SHELL</envar> environment
-                    variable or configuration of the package will
-                    fail.</para></note>">
-
-<!ENTITY gi-doc-disable
-         "Allow building this package without <xref linkend='gi-docgen'/>
-          installed.  If you have <xref linkend='gi-docgen'/> installed and
-          you wish to rebuild and install the API documentation, a
-          <command>meson configure</command> command will reset this
-          option.">
-
-<!-- TODO change "nodep" to "required"/"optional" after 12.3 release. -->
-<!ENTITY build-use-internet
-         "<note><para>An Internet connection is needed for building this
-          package. The system certificate store may need to be set up with
-          <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> before
-          building this package.</para></note>">
-
-<!ENTITY test-use-internet
-         "<note><para>An Internet connection is needed for some tests of
-          this package. The system certificate store may need to be set up with
-          <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> before
-          building this package.</para></note>">
-
 <!ENTITY logind-nocomma
          "<phrase revision='sysv'><ulink
           url='&blfs-svn;/general/elogind.html'>elogind</ulink></phrase>
@@ -233,3 +204,6 @@ export -f as_root</userinput></screen>
          "GBM (<ulink url='&glfs-website;/shareddeps/gbm.html'>GBM from Mesa</ulink>
           or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>;
           only the normal installation is required for either)">
+
+<!ENTITY % xinclude-entities SYSTEM "xent.ent">
+%xinclude-entities;

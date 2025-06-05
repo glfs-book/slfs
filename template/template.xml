@@ -38,6 +38,8 @@
       This is useful for...
     </para>
 
+    &long-build-time;
+
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -218,11 +220,7 @@ mv doc/* /usr/share/doc/template-&template-version;</userinput></screen>
       Invoke <userinput>command</userinput> for a full list of options.
     </para></note>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/static-libraries.xml"/>
-
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/gtk-doc-rebuild.xml"/>
+    &static-libraries;
 
     <para>
       <command>COMMAND</command>: This command does something.

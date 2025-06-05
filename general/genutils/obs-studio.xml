@@ -27,8 +27,7 @@
       usecase.
     </para>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/long-build-time.xml"/>
+    &long-build-time;
 
     <itemizedlist spacing="compact">
       <listitem>
@@ -246,8 +245,7 @@ ninja</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/cmake-skip-install-rpath.xml"/>
+    &cmake-skip-install-rpath;
 
     <para>
       <parameter>-D ENABLE_BROWSER=ON</parameter>: This switch enables browser

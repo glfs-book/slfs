@@ -78,8 +78,7 @@
 rmdir src/musashi &amp;&amp;
 mv src/Musashi-&musashi-submodule-version; src/musashi</userinput></screen>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="../../xincludes/extraction-unzip.xml"/>
+    &extraction-unzip;
 
     <para>
       Optionally, apply a patch to search for the ROMs in a system-wide
