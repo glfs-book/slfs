@@ -83,11 +83,10 @@
     </para>
 
 <screen remap="doc"
-  role="root"><userinput>curl -L &eza-man-dl; \
-  -o eza-man-&eza-version;.tar.gz &amp;&amp;
-tar -xf eza-man-&eza-version;.tar.gz &amp;&amp;
+  role="root"><userinput>curl -fsSL &eza-man-dl; |
+  tar -xzvf - &amp;&amp;
 for i in {1,5}; do
-  cp -v target/man-&eza-version;/*.$i /usr/share/man/man$i
+  install -vDm644 target/man-&eza-version;/*.$i -t /usr/share/man/man$i/
 done</userinput></screen>
 
   </sect2>
