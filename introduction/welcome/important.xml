@@ -34,11 +34,11 @@
       This version of this book is meant for SysV LFS systems. The Systemd
       version of the book is not viewable online by &copyholder; due to Github
       Pages restraints. Thus you will need to download or render the book
-      yourself. Follow the <ulink url="&lfs-qol-repo;">LFS QOL rendering
+      yourself. Follow the <ulink url="&slfs-repo;">SLFS rendering
       instructions</ulink> in order to render the book yourself. You will need
       <ulink url="&blfs-svn;/general/git.html">Git</ulink> to clone the
       repository. You can download the book <ulink
-      url="&lfs-qol-repo;/releases">here</ulink>.
+      url="&slfs-repo;/releases">here</ulink>.
     </para>
 
     <para revision="systemd">
@@ -51,7 +51,7 @@
     <title>Building software</title>
 
     <para>
-      Building software on LFS QOL is identical to how it's done in the
+      Building software on SLFS is identical to how it's done in the
       LFS books. It goes without saying firstmost that you should have
       <envar>MAKEFLAGS</envar> set to save yourself a lot of time. This is
       useful for the <command>make</command> utility to use the amount of

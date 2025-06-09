@@ -8,7 +8,7 @@
 <chapter id="welcome">
   <?dbhtml filename="welcome.html"?>
 
-  <title>Welcome to LFS QOL</title>
+  <title>Welcome to SLFS</title>
 
   <para>
     This book is designed like BLFS. Packages are organized in their respective

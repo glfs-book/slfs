@@ -63,7 +63,7 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <xref linkend="LFS_QOL_DEPENDENCY"/> <!-- notice no period as this is not
+      <xref linkend="SLFS_DEPENDENCY"/> <!-- notice no period as this is not
       a sentence. If there are more than two, they must be separated by commas
       with the last member having "and" in front of it. The use of a serial
       comma is preferred (a comma after the next to last member before the
@@ -84,7 +84,7 @@
     <!-- As required -->
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <xref linkend="LFS_QOL_DEPENDENCY"/> <!-- notice no period as this is not
+      <xref linkend="SLFS_DEPENDENCY"/> <!-- notice no period as this is not
       a sentence. See above for the use of "and" and commas. Normally, neither
       required nor recommended dependencies should be <ulink>. -->
       <xref linkend="ANOTHER_RECOMMENDED_DEP"/> (required if building
@@ -97,7 +97,7 @@
     <!-- As required -->
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <xref linkend="LFS_QOL_DEPENDENCY"/> and
+      <xref linkend="SLFS_DEPENDENCY"/> and
       <ulink url="http://www.some.url/">EXTERNAL DEPENDENCY</ulink>
       <!-- notice no period as this is not a sentence. See above for the use
       of commas and "and". The order should be <xref> before <ulink>.-->
@@ -228,7 +228,7 @@ mv doc/* /usr/share/doc/template-&template-version;</userinput></screen>
 
     <para>
       <parameter>--PARAMETER</parameter>: This parameter does something
-      mandatory for LFS QOL purposes. It will be in the instructions above. It
+      mandatory for SLFS purposes. It will be in the instructions above. It
       is not optional and is why it is listed as a parameter and not an option.
     </para>
 

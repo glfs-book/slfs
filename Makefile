@@ -1,5 +1,5 @@
 # vim:ts=3
-# Makefile for LFS_QOL Book generation.
+# Makefile for SLFS Book generation.
 # By Tushar Teredesai <tushar@linuxfromscratch.org>
 # Edited by Zeckma <zeckma.tech@gmail.com>
 # 2004-01-31
@@ -11,8 +11,8 @@
 # Adjust these to suit your installation, or include the variables
 # you wish to change in local.mk, which must be created manually.
 AUTO_CLEAN         ?= 1
-LFS_QOL_THEME      ?= dark
-LFS_QOL_THEME_PATH ?= stylesheets/lfs-xsl
+SLFS_THEME      ?= dark
+SLFS_THEME_PATH ?= stylesheets/lfs-xsl
 RENDERTMP          := $(shell mktemp -d)
 HTML_ROOT          ?= $(HOME)/public_html
 DUMP_ROOT          ?= $(HOME)
@@ -57,20 +57,20 @@ ifneq ($(STAB), development)
 endif
 
 ifeq ($(REV), sysv)
-  BASEDIR         ?= $(HTML_ROOT)/lfs-qol
-  DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-commands
-  LFS_QOLHTML     ?= lfs-qol-html.xml
-  LFS_QOLHTML2    ?= lfs-qol-html2.xml
-  LFS_QOLFULL     ?= lfs-qol-full.xml
+  BASEDIR         ?= $(HTML_ROOT)/slfs
+  DUMPDIR         ?= $(DUMP_ROOT)/slfs-commands
+  SLFSHTML        ?= slfs-html.xml
+  SLFSHTML2       ?= slfs-html2.xml
+  SLFSFULL        ?= slfs-full.xml
 else
-  BASEDIR         ?= $(HTML_ROOT)/lfs-qol-systemd
-  DUMPDIR         ?= $(DUMP_ROOT)/lfs-qol-sysd-commands
-  LFS_QOLHTML     ?= lfs-qol-systemd-html.xml
-  LFS_QOLHTML2    ?= lfs-qol-systemd-html2.xml
-  LFS_QOLFULL     ?= lfs-qol-systemd-full.xml
+  BASEDIR         ?= $(HTML_ROOT)/slfs-systemd
+  DUMPDIR         ?= $(DUMP_ROOT)/slfs-sysd-commands
+  SLFSHTML        ?= slfs-systemd-html.xml
+  SLFSHTML2       ?= slfs-systemd-html2.xml
+  SLFSFULL        ?= slfs-systemd-full.xml
 endif
 
-lfs-qol: html wget-list
+slfs: html wget-list
 
 help:
 	@echo ""
@@ -86,24 +86,24 @@ help:
 	@echo ""
 	@echo "  BASEDIR=<dir>        Put the output in directory <dir>."
 	@echo "                       Defaults to"
-	@echo "                       '$(HTML_ROOT)/lfs-qol' if REV=sysv (or unset)"
+	@echo "                       '$(HTML_ROOT)/slfs' if REV=sysv (or unset)"
 	@echo "                       or to"
-	@echo "                       '$(HTML_ROOT)/lfs-qol-systemd' if REV=systemd"
+	@echo "                       '$(HTML_ROOT)/slfs-systemd' if REV=systemd"
 	@echo ""
 	@echo "  V=<val>              If <val> is a non-empty value, all"
 	@echo "                       steps to produce the output is shown."
 	@echo "                       Default is unset."
 	@echo ""
-	@echo "  LFS_QOL_THEME_PATH=<path> Sets the path of themes (CSS files)."
+	@echo "  SLFS_THEME_PATH=<path> Sets the path of themes (CSS files)."
 	@echo "                            'stylesheets/lfs-xsl' is the default."
 	@echo ""
-	@echo "  LFS_QOL_THEME=<theme>     Sets the theme of the book, ie. light/dark."
+	@echo "  SLFS_THEME=<theme>     Sets the theme of the book, ie. light/dark."
 	@echo "                            The dark theme is the default."
 	@echo ""
 	@echo "Targets:"
 	@echo "  help                 Show this help text."
 	@echo ""
-	@echo "  lfs-qol              Builds targets 'html' and 'wget-list'."
+	@echo "  slfs                 Builds targets 'html' and 'wget-list'."
 	@echo ""
 	@echo "  html                 Builds the HTML pages of the book."
 	@echo ""
@@ -118,25 +118,25 @@ help:
 	@echo "                       containing all valid URLs."
 	@echo ""
 
-all: lfs-qol
+all: slfs
 world: all dump-commands test-links
 
 html: $(BASEDIR)/index.html
-$(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
+$(BASEDIR)/index.html: $(RENDERTMP)/$(SLFSHTML) version wget-list
 	@echo "Generating chunked XHTML files..."
 	$(Q)xsltproc --nonet                                    \
                 --stringparam chunk.quietly $(CHUNK_QUIET) \
                 --stringparam rootid "$(ROOT_ID)"          \
                 --stringparam base.dir $(BASEDIR)/         \
-                stylesheets/lfs-qol-chunked.xsl            \
-                $(RENDERTMP)/$(LFS_QOLHTML)
+                stylesheets/slfs-chunked.xsl            \
+                $(RENDERTMP)/$(SLFSHTML)
 
 	@echo "Copying CSS code, images, and patches..."
 	$(Q)if [ ! -e $(BASEDIR)/stylesheets ]; then \
       mkdir -p $(BASEDIR)/stylesheets;          \
    fi;
 
-	$(Q)cp $(LFS_QOL_THEME_PATH)/$(LFS_QOL_THEME).lfs.css $(BASEDIR)/stylesheets/lfs.css
+	$(Q)cp $(SLFS_THEME_PATH)/$(SLFS_THEME).lfs.css $(BASEDIR)/stylesheets/lfs.css
 	$(Q)cp stylesheets/lfs-xsl/lfs-print.css $(BASEDIR)/stylesheets
 	$(Q)sed -i 's|../stylesheet|stylesheet|' $(BASEDIR)/index.html
 
@@ -163,15 +163,15 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(LFS_QOLHTML) version wget-list
 
 	$(Q)$(CLEAN)
 
-validate: $(RENDERTMP)/$(LFS_QOLFULL)
-$(RENDERTMP)/$(LFS_QOLFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
+validate: $(RENDERTMP)/$(SLFSFULL)
+$(RENDERTMP)/$(SLFSFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
 	$(Q)[ -d $(RENDERTMP) ] || mkdir -p $(RENDERTMP)
 	$(Q)trap '$(CLEAN)' EXIT
 
 	@echo "Rendering the book for $(REV)..."
 	$(Q)xsltproc --nonet                               \
                 --xinclude                            \
-                --output $(RENDERTMP)/$(LFS_QOLHTML2) \
+                --output $(RENDERTMP)/$(SLFSHTML2) \
                 --stringparam profile.revision $(REV) \
                 stylesheets/lfs-xsl/profile.xsl       \
                 index.xml
@@ -180,36 +180,36 @@ $(RENDERTMP)/$(LFS_QOLFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) versio
 	$(Q)xmllint --nonet                             \
                --noent                             \
                --postvalid                         \
-               --output $(RENDERTMP)/$(LFS_QOLFULL)   \
-               $(RENDERTMP)/$(LFS_QOLHTML2)
+               --output $(RENDERTMP)/$(SLFSFULL)   \
+               $(RENDERTMP)/$(SLFSHTML2)
 
-profile-html: $(RENDERTMP)/$(LFS_QOLHTML)
-$(RENDERTMP)/$(LFS_QOLHTML): $(RENDERTMP)/$(LFS_QOLFULL) version
+profile-html: $(RENDERTMP)/$(SLFSHTML)
+$(RENDERTMP)/$(SLFSHTML): $(RENDERTMP)/$(SLFSFULL) version
 	@echo "Generating profiled XML for XHTML..."
 	$(Q)xsltproc --nonet                              \
                 --stringparam profile.condition html \
-                --output $(RENDERTMP)/$(LFS_QOLHTML)    \
+                --output $(RENDERTMP)/$(SLFSHTML)    \
                 stylesheets/lfs-xsl/profile.xsl      \
-                $(RENDERTMP)/$(LFS_QOLFULL)
+                $(RENDERTMP)/$(SLFSFULL)
 
 wget-list: $(BASEDIR)/wget-list
-$(BASEDIR)/wget-list: $(RENDERTMP)/$(LFS_QOLFULL) version
+$(BASEDIR)/wget-list: $(RENDERTMP)/$(SLFSFULL) version
 	@echo "Generating wget list for $(REV) at $(BASEDIR)/wget-list ..."
 	$(Q)mkdir -p $(BASEDIR)
 	$(Q)xsltproc --nonet                       \
                 --output $(BASEDIR)/wget-list \
                 stylesheets/wget-list.xsl     \
-                $(RENDERTMP)/$(LFS_QOLFULL)
+                $(RENDERTMP)/$(SLFSFULL)
 
 test-links: $(BASEDIR)/test-links
-$(BASEDIR)/test-links: $(RENDERTMP)/$(LFS_QOLFULL) version
+$(BASEDIR)/test-links: $(RENDERTMP)/$(SLFSFULL) version
 	@echo "Generating test-links file..."
 	$(Q)mkdir -p $(BASEDIR)
 	$(Q)xsltproc --nonet                        \
                 --stringparam list_mode full   \
                 --output $(BASEDIR)/test-links \
                 stylesheets/wget-list.xsl      \
-                $(RENDERTMP)/$(LFS_QOLFULL)
+                $(RENDERTMP)/$(SLFSFULL)
 
 	@echo "Checking URLs, first pass..."
 	$(Q)rm -f $(BASEDIR)/{good,bad,true_bad}_urls
@@ -237,7 +237,7 @@ $(BASEDIR)/test-links: $(RENDERTMP)/$(LFS_QOLFULL) version
 bootscripts:
 	$(Q)trap '$(CLEAN)' EXIT
 	@VERSION=`grep "bootscripts-version " general.ent | cut -d\" -f2`; \
-   BOOTSCRIPTS="lfs-qol-bootscripts-$$VERSION";                       \
+   BOOTSCRIPTS="slfs-bootscripts-$$VERSION";                       \
    if [ ! -e $$BOOTSCRIPTS.tar.xz ]; then                             \
      rm -rf $(RENDERTMP)/$$BOOTSCRIPTS;                               \
      mkdir $(RENDERTMP)/$$BOOTSCRIPTS;                                \
@@ -251,7 +251,7 @@ bootscripts:
 systemd-units:
 	$(Q)trap '$(CLEAN)' EXIT
 		@VERSION=`grep "systemd-units-version " general.ent | cut -d\" -f2`; \
-	UNITS="lfs-qol-systemd-units-$$VERSION";                                \
+	UNITS="slfs-systemd-units-$$VERSION";                                \
 	if [ ! -e $$UNITS.tar.xz ]; then                                     \
 		rm -rf $(RENDERTMP)/$$UNITS;                                       \
 		mkdir $(RENDERTMP)/$$UNITS;                                        \
@@ -267,15 +267,15 @@ test-options:
 	$(Q)$(CLEAN)
 
 dump-commands: $(DUMPDIR)
-$(DUMPDIR): $(RENDERTMP)/$(LFS_QOLFULL) version
+$(DUMPDIR): $(RENDERTMP)/$(SLFSFULL) version
 	@echo "Dumping book commands at $(DUMPDIR)..."
 	$(Q)xsltproc --output $(DUMPDIR)/          \
                 stylesheets/dump-commands.xsl \
-                $(RENDERTMP)/$(LFS_QOLFULL)
+                $(RENDERTMP)/$(SLFSFULL)
 	$(Q)touch $(DUMPDIR)
 	$(Q)$(CLEAN)
 
-.PHONY: lfs-qol all world html validate profile-html wget-list \
+.PHONY: slfs all world html validate profile-html wget-list \
   test-links dump-commands bootscripts systemd-units version test-options
 
 version:

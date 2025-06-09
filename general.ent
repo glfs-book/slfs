@@ -44,9 +44,9 @@
 <!ENTITY maintainer-firstname "GLFS">
 <!ENTITY maintainer-address   "zeckma.tech@gmail.com;">
 
-<!ENTITY lfs-website          "https://www.&lfs-domainname;">
-<!ENTITY glfs-website         "https://&glfs-domainname;/glfs">
-<!ENTITY lfs-qol-website      "https://&glfs-domainname;/lfs-qol">
+<!ENTITY lfs-website  "https://www.&lfs-domainname;">
+<!ENTITY glfs-website "https://&glfs-domainname;/glfs">
+<!ENTITY slfs-website "https://&glfs-domainname;/slfs">
 <!-- downloads_root must have an entity because it is needed for scripts
      Note:  s/_/-/ in comment to avoid grep error
      It is also needed for systemd units
@@ -60,7 +60,7 @@
 
 <!ENTITY hints-root           "https://www.&lfs-domainname;/hints">
 <!ENTITY patch-downloads      "https://www.linuxfromscratch.org/patches/downloads">
-<!ENTITY patch-root           "&lfs-qol-website;/patches">
+<!ENTITY patch-root           "&slfs-website;/patches">
 <!ENTITY misc-dl-root         "https://github.com/glfs-book/glfs-misc-downloads/releases/download">
 <!ENTITY errata               "https://www.&lfs-domainname;/blfs/errata/&blfs-version;/">
 <!ENTITY blfs-ticket-root     "https://wiki.&lfs-domainname;/blfs/ticket/">
@@ -94,9 +94,9 @@
 <!ENTITY sysprof-url          "https://wiki.gnome.org/Apps/Sysprof">
 <!ENTITY man                  "https://man.archlinux.org/man/">
 
-<!ENTITY lfs-qol-repo            "https://github.com/glfs-book/lfs-qol">
-<!ENTITY lfs-qol-issues          "&lfs-qol-repo;/issues">
-<!ENTITY lfs-qol-pull            "&lfs-qol-repo;/pull">
+<!ENTITY slfs-repo            "https://github.com/glfs-book/slfs">
+<!ENTITY slfs-issues          "&slfs-repo;/issues">
+<!ENTITY slfs-pull            "&slfs-repo;/pull">
 
 <!-- Convenience entities -->
 <!ENTITY root                 "<systemitem class='username'>root</systemitem>">
@@ -115,8 +115,8 @@
   This book viewable online is in a constant flux of updates, and updates about
   as often as the BLFS Git/SVN version. While there isn't a viewable online
   version of the stable release, you can either render it yourself by following
-  <ulink url='&lfs-qol-repo;'/>, or you can download a <ulink
-  url='&lfs-qol-repo;/releases'>release</ulink>.
+  <ulink url='&slfs-repo;'/>, or you can download a <ulink
+  url='&slfs-repo;/releases'>release</ulink>.
 </para>">
 ]]>
 <![ %release; [

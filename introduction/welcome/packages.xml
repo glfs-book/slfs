@@ -11,7 +11,7 @@
 
   <title>Getting the Source Packages</title>
 
-  <para>Within the LFS QOL instructions, each package has two references for
+  <para>Within the SLFS instructions, each package has two references for
   finding the source files for the package&mdash;an HTTP link and an FTP link
   (some packages may only list one of these links). Every effort has been made
   to ensure that these links are accurate. However, the World Wide Web is in

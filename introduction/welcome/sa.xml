@@ -22,7 +22,7 @@
 
     <para>
       There are many packages that push out updates that fix vulnerabilties,
-      and some packages fix CVEs pretty often. LFS QOL will ocassionally have an
+      and some packages fix CVEs pretty often. SLFS will ocassionally have an
       update that upgrades a package that fixes a CVE. It's important to always
       upgrade packages on your system that contain security vulnerabilities,
       and there is a way for checking for those updates.
@@ -35,8 +35,8 @@
 
     <para>
       To check for packages that have had a CVE fixed, go to the
-      <ulink url="&lfs-qol-issues;?q=is%3Aclosed+is%3Aissue+label%3Asecurity">
-      LFS QOL issue page</ulink> that has a filter enabled
+      <ulink url="&slfs-issues;?q=is%3Aclosed+is%3Aissue+label%3Asecurity">
+      SLFS issue page</ulink> that has a filter enabled
       (<computeroutput>is:closed is:issue label:security</computeroutput>).
       All packages listed there that have the
       <computeroutput>security</computeroutput> label are packages that fixed

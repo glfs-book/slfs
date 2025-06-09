@@ -1,7 +1,7 @@
-# Linux From Scratch - Quality of Life (LFS-QOL)
+# Supplemental Linux From Scratch (SLFS)
 
-This book is dedicated to documenting the installation of some packages on an
-LFS system that do not appear in LFS, MLFS, BLFS, and GLFS.
+This book is dedicated to supplementing an LFS, MLFS, BLFS, and/or GLFS x86-64
+system by providing package not found in the other LFS books. 
 
 This book boasts several libraries and utilities not covered in the `*LFS`
 books. On top of that, it also provides: SVR4-related tooling, binary-only
@@ -11,9 +11,9 @@ more.
 
 # Where to read
 
-Go to https://glfs-book.github.io/lfs-qol/ and start going through the book!
+Go to https://glfs-book.github.io/slfs/ and start going through the book!
 
-The book online is rolling release but there is a stable version in the LFS QOL
+The book online is rolling release but there is a stable version in the SLFS
 source via the stable branch.
 
 You can switch to it by running the following command:
@@ -24,7 +24,7 @@ git checkout stable
 
 Then render the book with `make STAB=release [other options]`.
 
-There are also [Releases](https://github.com/glfs-book/lfs-qol/releases) that
+There are also [Releases](https://github.com/glfs-book/slfs/releases) that
 you can download. All of them contain both the SysV and Systemd editions of the
 book, chunked HTML.
 
@@ -43,19 +43,19 @@ You can change the revision, ie. systemd vs sysv by adding `REV=<rev>` to the
 
 Example: `make REV=systemd`.
 
-The default target (sysv) builds the HTML in `~/public_html/lfs-qol`,
-whereas for systemd, it would be in `~/public_html/lfs-qol-systemd`.
+The default target (sysv) builds the HTML in `~/public_html/slfs`,
+whereas for systemd, it would be in `~/public_html/slfs-systemd`.
 It will by default make each package and section its own page then link
 everything together for a smooth experience.
 
-You can set a path to LFS QOL themes by running
-`make LFS_QOL_THEME_PATH=<path>`. The default is `stylesheets/lfs-xsl`.
+You can set a path to SLFS themes by running
+`make SLFS_THEME_PATH=<path>`. The default is `stylesheets/lfs-xsl`.
 
 The dark theme is also the default, but you can switch the theme by
-running `make LFS_QOL_THEME=<theme>`. `<theme>` can equal:
+running `make SLFS_THEME=<theme>`. `<theme>` can equal:
 - `light`
 - `dark`
 
-Note that if you set `LFS_QOL_THEME_PATH`, you can set `LFS_QOL_THEME` to more
+Note that if you set `SLFS_THEME_PATH`, you can set `SLFS_THEME` to more
 than just what the available options are shown above, but only the available
 themes that are in that path.

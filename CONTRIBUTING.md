@@ -8,14 +8,14 @@ This project is primarily written in Docbook XML. Most issues and updates
 pertain to the XML that gets put into the final text of the rendered book. If
 you wish to contribute somehow but don't know XML and/or don't want to write
 any XML, you can make issues over on
-[issues](https://github.com/glfs-book/lfs-qol/issues).
+[issues](https://github.com/glfs-book/slfs/issues).
 
 If you are feeling more savvy, familarize yourself with the book, how it's
 written, where essential files are located, then make an update as you see fit,
 and make a PR. This bit requires a more in-depth explanation and where it
 really diverges from the LFS Editor's Manual. If you are a BLFS editor, editing
 this book will not be too different. Read sections 3.1.2, 3.2, and 3.3 for
-LFS QOL specific information.
+SLFS specific information.
 
 # 3. For the savvy
 ## 3.1. Where things are located
@@ -47,7 +47,7 @@ At the root of the source, you'll find these files and directories:
 
 #### 3.1.1.1. `.github/workflows/`
 This directory contains YAML files that are used by Github CIs to render the
-book and put it up on the LFS QOL website hosted on Github. It rarely needs
+book and put it up on the SLFS website hosted on Github. It rarely needs
 updating.
 #### 3.1.1.2. `archive/`
 This directory contains XML files that are no longer considered needed or
@@ -92,7 +92,7 @@ This file is the Makefile used by **make** in order to render the book. Rarely
 needs to get updated.
 #### 3.1.1.12. `expand_date`
 This file is a Python script that expands the date variable in XML files,
-although this behavior has fallen out of favor in LFS QOL but remains strong in
+although this behavior has fallen out of favor in SLFS but remains strong in
 BLFS. Rarely needs to get updated.
 #### 3.1.1.13. `general.ent`
 This file is an XML entity file containing important variables used by the
@@ -144,7 +144,7 @@ directories at the root of the source:
 - `index.xml`
 
 Some packages in the directories may need to get updated whenever a version
-gets updated. Unlike BLFS, LFS QOL does not use md5sums, SBUs, or size. It does
+gets updated. Unlike BLFS, SLFS does not use md5sums, SBUs, or size. It does
 use links and package versions, however. The links have to be correct, as well
 as the instructions.
 
@@ -216,7 +216,7 @@ to clone, pull, and push. Once you have it installed, you are going to need to
 fork this repository to your Github account. Once you have it forked, you are
 going to need to clone that fork:
 ```Bash
-git clone https://github.com/<username>/lfs-qol
+git clone https://github.com/<username>/slfs
 ```
 Now that you have cloned the repo, you can make changes to the default branch
 `trunk`, or you can make another one:
@@ -248,4 +248,4 @@ There may be changes requested. This is okay and is routine. Repeat section
 3.2. as necessary and Github will automatically pull in the new changes to the
 PR. Rinse and repeat until the PR is merged.
 
-After that, pat yourself on the back, as you are now a LFS QOL contributor.
+After that, pat yourself on the back, as you are now a SLFS contributor.

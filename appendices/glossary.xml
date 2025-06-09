@@ -268,17 +268,6 @@
       </glossdef>
     </glossentry>
 
-    <glossentry id="gLFS-QOL">
-      <glossterm>
-        <acronym>LFS-QOL</acronym>
-      </glossterm>
-      <glossdef>
-        <para>
-          Linux From Scratch - Quality of Life
-        </para>
-      </glossdef>
-    </glossentry>
-
     <glossentry id="gLGPL">
       <glossterm>
         <acronym>LGPL</acronym>
@@ -407,6 +396,17 @@
       <glossdef>
         <para>
           Software Development Kit
+        </para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry id="gSLFS">
+      <glossterm>
+        <acronym>SLFS</acronym>
+      </glossterm>
+      <glossdef>
+        <para>
+          Supplemental Linux From Scratch
         </para>
       </glossdef>
     </glossentry>

@@ -115,7 +115,7 @@ EOF</userinput></screen>
 
     <bridgehead renderas="sect3">Recommended Dependencies</bridgehead>
 
-    <para>These are dependencies the LFS QOL editors have determined
+    <para>These are dependencies the SLFS editors have determined
     are important to give the package reasonable capabilities.  If a
     recommended dependency is not said to be <quote>runtime</quote>, package
     installation instructions assume it is installed.  If it
@@ -129,8 +129,8 @@ EOF</userinput></screen>
 
     <para>These are dependencies the package <emphasis>may</emphasis> use.  Integration
     of optional dependencies may be automatic by the package, or
-    additional steps not presented by LFS QOL may be necessary.  Optional dependencies are
-    sometimes listed without explicit LFS QOL instructions.  In this case you must
+    additional steps not presented by SLFS may be necessary.  Optional dependencies are
+    sometimes listed without explicit SLFS instructions.  In this case you must
     determine how to perform the installation yourself.</para>
 
     <para>&nbsp;</para> <!-- add extra white space to improve readability -->

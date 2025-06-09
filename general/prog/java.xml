@@ -76,7 +76,7 @@
 
     <para>
       To start, we set up a binary installation of the JDK created
-      by the LFS QOL editors. It is installed in the <filename>/opt</filename>
+      by the SLFS editors. It is installed in the <filename>/opt</filename>
       directory to allow for multiple installations, including a source based
       version.
     </para>

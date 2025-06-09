@@ -96,7 +96,7 @@ https://archive.org/download/123-unix/123UNIX$i.IMG; done</userinput></screen>
       And if you do run into issues with this version of binutils, then you'll
       actually be able to report this upstream. If your binutils fails to build,
       <emphasis>DO NOT</emphasis> use a newer version. Report this to the
-      LFS-QOL editors in order for this to be fixed for everyone without
+      SLFS editors in order for this to be fixed for everyone without
       possibly opening up the door to critical regressions.
     </para></warning>
 

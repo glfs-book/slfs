@@ -10,7 +10,7 @@
   <date>$Date$</date>
 
   <title>
-    Linux<superscript>&reg;</superscript> From Scratch - Quality of Life
+    Supplemental Linux<superscript>&reg;</superscript> From Scratch
     <phrase revision="systemd">(Systemd</phrase>
     <phrase revision="sysv">(System V</phrase> Edition)
   </title>
@@ -48,8 +48,8 @@
 
   <abstract>
     <para>
-      This book is dedicated to documenting the installation of some packages
-      on an x86_64 LFS system that do not appear in LFS, MLFS, BLFS, and GLFS.
+      This book is dedicated to supplementing an LFS, MLFS, BLFS, and/or GLFS
+      x86_64 system by providing packages not found in the other LFS books.
     </para>
   </abstract>
 
