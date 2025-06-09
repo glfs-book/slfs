@@ -94,13 +94,14 @@
       commands:
     </para>
 
-<screen><userinput>mkdir build    &amp;&amp;
-cd    build    &amp;&amp;
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
 
-meson setup --prefix=/usr       \
-            --buildtype=release \</userinput><userinput revision="sysv">
-            -D systemd=disabled \</userinput><userinput>
-            -D tests=false      \
+meson setup --prefix=/usr              \
+            --buildtype=release        \</userinput><userinput revision="sysv">
+            -D systemd=disabled        \</userinput><userinput>
+            -D system_bubblewrap=bwrap \
+            -D tests=false             \
             .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -121,6 +122,11 @@ ninja</userinput></screen>
     <para revision="sysv">
       <parameter>-D systemd=disabled</parameter>: This parameter disables
       Systemd support.
+    </para>
+
+    <para>
+      <parameter>-D system_bubblewrap=bwrap</parameter>: Ensures the build
+      system doesn't download <application>Bubblewrap</application>.
     </para>
 
     <para>
