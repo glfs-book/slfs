@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY seatd-download-http "https://git.sr.ht/~kennylevinsen/seatd/archive/&seatd-version;.tar.gz">
+  <!ENTITY seatd-download-ftp  " ">
+]>
+
+<sect1 id="seatd" xreflabel="seatd-&seatd-version;">
+  <?dbhtml filename="seatd.html"?>
+
+  <title>seatd-&seatd-version;</title>
+
+  <indexterm zone="seatd">
+    <primary sortas="a-seatd">seatd</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to seatd</title>
+
+    <para>
+      The <application>seatd</application> package provides a universal seat
+      management library. It is what a lot of Wayland compositors use to manage
+      seats, a session for a user in which applications can interact with.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&seatd-download-http;"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Download (FTP): <ulink url="&seatd-download-ftp;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+ 
+    <bridgehead renderas="sect3">seatd Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      &logind-nocomma;
+      (this package needs a backend to properly
+      create a seat, <phrase revision="sysv">e</phrase>logind
+      <phrase revision="systemd"> from <application>Systemd</application>
+      </phrase> being a suitable one)
+    </para>
+
+  </sect2>
+ 
+  <sect2 role="installation">
+    <title>Installation of seatd</title>
+    
+    <para>
+      Install <application>seatd</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr             \
+            --buildtype=release       \
+            -D server=disabled        \
+            -D libseat-seatd=disabled \
+            .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the <systemitem class="username">root</systemitem> user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &options-meson;
+
+    &meson-buildtype-release;
+
+    <para>
+      <parameter>-D server=disabled</parameter>: Disables building the
+      <application>seatd</application> daemon.
+    </para>
+
+    <para>
+      <parameter>-D libseat-seatd=disabled</parameter>: This parameter disables
+      building support for the in-house logind daemon in
+      <filename class="libraryfile">libseat</filename> and instead relies on
+      the system-installed <phrase revision="sysv">e</phrase>logind instead.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Library</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libseat
+        </seg>
+        <seg>
+          none
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libseat">
+        <term><filename class="libraryfile">libseat</filename></term>
+        <listitem>
+          <para>
+            contains functions to handle seat management
+          </para>
+          <indexterm zone="seatd libseat">
+            <primary sortas="c-libseat">libseat</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
