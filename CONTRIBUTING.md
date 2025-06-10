@@ -38,7 +38,6 @@ At the root of the source, you'll find these files and directories:
 - `Makefile`
 - `expand_date`
 - `general.ent`
-- `generate-doc-stub.py`
 - `git-version.sh`
 - `gnome.ent`
 - `obfuscate.sh`
@@ -98,29 +97,26 @@ BLFS. Rarely needs to get updated.
 This file is an XML entity file containing important variables used by the
 book's XML and also includes different entity files. This file needs to get
 updated every stable release.
-#### 3.1.1.14. `generate-doc-stub.py`
-This symlink points to `contributor-tools/docstubgen/docstubgen`, whose purpose
-has already been described above in section 3.1.1.3.
-#### 3.1.1.15. `git-version.sh`
+#### 3.1.1.14. `git-version.sh`
 This file is a shell script that generates the version and revision the book
 should be rendered for, and outputs according text to `conditional.ent` and
 `version.ent`. Rarely needs to get updated.
-#### 3.1.1.16. `gnome.ent`
+#### 3.1.1.15. `gnome.ent`
 This file is an XML entity file that contains GNOME specific entities used by a
 small selection of XML files. Rarely needs to get updated.
-#### 3.1.1.17. `obfuscate.sh`
+#### 3.1.1.16. `obfuscate.sh`
 This file is a shell script that obfuscates email addresses in XML and HTML
 files. Rarely needs to get updated.
-#### 3.1.1.18. `packages.ent`
+#### 3.1.1.17. `packages.ent`
 This file is an XML entity file that contains version variables. Certain
 version variables are used by certain packages, although usually there will
 only be one variable used by a given package. For example, &hyprutils-version;
 is used by hyprutils. These variables determine the package's version.
 Whenever a package needs an update, this file needs to get edited.
-#### 3.1.1.19. `tidy.conf`
+#### 3.1.1.18. `tidy.conf`
 This file is a configuration file used by **tidy**. Rarely needs to get
 updated.
-#### 3.1.1.20. `xent.ent`
+#### 3.1.1.19. `xent.ent`
 This file is an XML entity file that contains content that gets repeated
 throughout the book. Update or add to as needed.
 
