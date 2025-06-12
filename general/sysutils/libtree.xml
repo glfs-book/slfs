@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libtree-download-http
+    "https://github.com/haampie/libtree/archive/v&libtree-version;/libtree-v&libtree-version;.tar.gz">
+]>
+
+<sect1 id="libtree" xreflabel="libtree-&libtree-version;">
+  <?dbhtml filename="libtree.html"?>
+
+  <title>libtree-&libtree-version;</title>
+
+  <indexterm zone="libtree">
+    <primary sortas="a-libtree">libtree</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libtree</title>
+
+    <para>
+      <application>libtree</application> is a utility to view the
+      shared library dependency tree of a binary.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libtree-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libtree</title>
+
+    <para>
+      Install <application>libtree</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>make PREFIX=/usr</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          libtree
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libtree-bin">
+        <term><command>libtree</command></term>
+        <listitem>
+          <para>
+            lists the shared objects a binary depends upon in a tree
+          </para>
+          <indexterm zone="libtree libtree-bin">
+            <primary sortas="b-libtree-bin">libtree</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY iputils-download-http "https://github.com/iputils/iputils/releases/download/&iputils-version;/iputils-&iputils-version;.tar.gz">
+]>
+
+<sect1 id="iputils" xreflabel="iputils-&iputils-version;">
+  <?dbhtml filename="iputils.html"?>
+
+  <title>iputils-&iputils-version;</title>
+
+  <indexterm zone="iputils">
+    <primary sortas="a-iputils">iputils</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to iputils</title>
+
+    <para>
+      The <application>iputils</application> contains a collection of
+      networking utilities.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&iputils-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+ 
+    <bridgehead renderas="sect3">iputils Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/libidn2.html">libidn2</ulink>
+    </para>
+
+  </sect2>
+ 
+  <sect2 role="installation">
+    <title>Installation of iputils</title>
+
+    <para>
+      First, create the installation directory as the &root; user:
+    </para>
+
+<screen role="root"><userinput>mkdir -pv /opt/iputils-&iputils-version; &amp;&amp;
+ln -svfn iputils-&iputils-version; /opt/iputils</userinput></screen>
+
+    <para>
+      Install <application>iputils</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/opt/iputils-&iputils-version;        \
+            --buildtype=release                   \
+            -D INSTALL_SYSTEMD_UNITS=false        \
+            .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the <systemitem class="username">root</systemitem> user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &options-meson;
+
+    &meson-buildtype-release;
+
+    <para>
+      <parameter>--prefix=/opt/iputils-&iputils-version;</parameter>: Installs
+      the package into a versioned subdirectory of /opt in order to avoid
+      filename collisions with the ping command installed in LFS.
+    </para>
+
+    <para>
+      <parameter>-D INSTALL_SYSTEMD_UNITS=false</parameter>: Disables some dead
+      code which is not used anywhere in the package.
+    </para>
+
+    <para>
+      <option>-D USE_IDN=false</option>: This option disables IDN support. Use
+      it if you have not installed the recommended dependency.
+    </para>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring iputils</title>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        As the &root; user, create the 
+        <filename>/etc/profile.d/iputils.sh</filename> file to be able to use
+        the newly installed tools:
+      </para>
+
+<!-- this should override the inetutils ping installed in LFS because our
+new folder is before /usr/bin in PATH, back in the day UNIX people did similar
+things to switch between System V and BSD personalities (see the rabbit hole
+linked in svr4-tools-intro) -->
+
+<screen role="root"><userinput>cat &gt; /etc/profile.d/iputils.sh &lt;&lt; "EOF"
+<literal># Begin /etc/profile.d/iputils.sh
+
+pathprepend /opt/iputils/bin PATH
+
+# End /etc/profile.d/iputils.sh</literal>
+EOF</userinput></screen>
+
+      <para>
+        Immediately after installation, update the current PATH for your 
+        current shell as a normal user:
+      </para>
+
+<screen><userinput>source /etc/profile.d/iputils.sh</userinput></screen>
+
+      <para>
+        To use <command>mandb</command> to include the iputils man pages
+        in its database, issue, as the &root; user:
+      </para>
+
+<screen role="root"><userinput>cat &gt;&gt; /etc/man_db.conf &lt;&lt; "EOF" &amp;&amp;
+<literal># Begin iputils addition
+MANDATORY_MANPATH     /opt/iputils/share/man
+MANPATH_MAP           /opt/iputils/bin           /opt/iputils/share/man
+MANDB_MAP             /opt/iputils/share/man     /var/cache/man/iputils
+# End iputils addition</literal>
+EOF
+
+mkdir -p /var/cache/man &amp;&amp;
+mandb -c /opt/iputils/share/man</userinput></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          arping, clockdiff, ping, and tracepath
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /opt/iputils, symbolic link to /opt/iputils-&iputils-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="arping">
+        <term><command>arping</command></term>
+        <listitem>
+          <para>
+            sends an ARP request to a neighboring host
+          </para>
+          <indexterm zone="iputils arping">
+            <primary sortas="b-arping">arping</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="clockdiff">
+        <term><command>clockdiff</command></term>
+        <listitem>
+          <para>
+            measures clock difference between hosts
+          </para>
+          <indexterm zone="iputils clockdiff">
+            <primary sortas="b-clockdiff">clockdiff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ping">
+        <term><command>ping</command></term>
+        <listitem>
+          <para>
+            sends an ICMP ECHO request to a host
+          </para>
+          <indexterm zone="iputils ping">
+            <primary sortas="b-ping">ping</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tracepath">
+        <term><command>tracepath</command></term>
+        <listitem>
+          <para>
+            traces the path to a network host
+          </para>
+          <indexterm zone="iputils tracepath">
+            <primary sortas="b-tracepath">tracepath</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
