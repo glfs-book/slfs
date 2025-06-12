@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>June 12th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - glaze: 5.3.1 -&gt; 5.4.1 (security). Fixes
+          <ulink url="&slfs-issues;/184">#184</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 9th, 2025</para>
       <itemizedlist>
         <listitem>

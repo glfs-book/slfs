@@ -10,7 +10,6 @@
 <sect1 id="hyprland" xreflabel="Hyprland-&hyprland-version;">
   <?dbhtml filename="hyprland.html"?>
 
-
   <title>Hyprland-&hyprland-version;</title>
 
   <indexterm zone="hyprland">
@@ -93,24 +92,36 @@
       commands:
     </para>
 
+    <screen><userinput>make release PREFIX=/usr</userinput></screen>
+
+<!--
 <screen><userinput>rm -fv scripts/generateVersion.sh &amp;&amp;
 make release PREFIX=/usr</userinput></screen>
+-->
 
     <para>
       Now, as the &root; user:
     </para>
 
+    <screen role="root"><userinput>make install</userinput></screen>
+
+<!--
 <screen role="root"><userinput>make install &amp;&amp;
 rm -fv /usr/include/hyprland/src/version.h.in</userinput></screen>
+-->
+
+<!-- Not necessary since 0.49.0
 
     <para revision="sysv">
       Finally, remove an a unnecessary Systemd file as the &root; user:
     </para>
 
 <screen role="root" revision="sysv"><userinput>rm -rvf /usr/lib/systemd</userinput></screen>
+-->
 
   </sect2>
-  
+
+<!--  
   <sect2 role="commands">
     <title>Command Explanations</title>
 
@@ -128,6 +139,7 @@ rm -fv /usr/include/hyprland/src/version.h.in</userinput></screen>
     </para>
 
   </sect2>
+-->
 
   <sect2 role="configuration">
     <title>Configuring Hyprland</title>
