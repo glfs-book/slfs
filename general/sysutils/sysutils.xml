@@ -19,6 +19,7 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="dunst.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="eza.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="iputils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tealdeer.xml"/>
 
 </chapter>
