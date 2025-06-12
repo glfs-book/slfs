@@ -44,6 +44,10 @@
       <para>June 12th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - yt-dlp: 2025.05.22 -&gt; 2025.06.09. Fixes
+          <ulink url="&slfs-issues;/185">#185</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - glaze: 5.3.1 -&gt; 5.4.1 (security). Fixes
           <ulink url="&slfs-issues;/184">#184</ulink>.</para>
         </listitem>
