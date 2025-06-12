@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY sxwm-download-http
+    "https://github.com/uint23/sxwm/archive/v&sxwm-version;/sxwm-&sxwm-version;.tar.gz">
+]>
+
+<sect1 id="sxwm-wm" xreflabel="sxwm-&sxwm-version;">
+  <?dbhtml filename="sxwm-wm.html"?>
+	
+  <title>sxwm-&sxwm-version;</title>
+
+  <indexterm zone="sxwm-wm">
+    <primary sortas="a-sxwm-wm">sxwm</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to sxwm</title>
+
+    <para>
+      The <application>sxwm</application> package provides a simple X11 window
+      manager, taking roots from <application>DWM</application>,
+      <application>tinywm</application>, and other window managers.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&sxwm-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">sxwm Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink> and
+      <ulink url="&blfs-svn;/x/xorg-server.html">Xorg-Server</ulink> (runtime)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of sxwm</title>
+
+    <para>
+      Install <application>sxwm</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<!-- TODO: Remove manual copying in next release -->
+<screen role="root"><userinput>make PREFIX=/usr install  &amp;&amp;
+mkdir -pv /usr/share/sxwm &amp;&amp;
+cp -v default_sxrc /usr/share/sxwm</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring sxwm</title>
+
+    <sect3 id="sxwm-config">
+      <title>Config Files</title>
+      <para>
+        <filename>~/.config/sxwmrc</filename>. The default version
+        is in <filename class="directory">/usr/share/sxwm</filename> and will
+        not be used. It can be copied to
+        <filename class="directory">~/.config/sxwmrc</filename> manually.
+      </para>
+
+      <indexterm zone="sxwm-wm sxwm-config">
+        <primary sortas="e-AA.config">~/.config/sxwmrc</primary>
+      </indexterm>
+
+    </sect3>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        Create the configuration file:
+      </para>
+
+<!-- TODO: Change default_sxrc to default_sxwmrc in next release. -->
+<screen><userinput>mkdir -pv ~/.config &amp;&amp;
+cp -v /usr/share/sxwm/default_sxrc ~/.config/sxwmrc</userinput></screen>
+
+      <para>
+        Edit the configuration file as necessary to fit your workflow.
+<!-- TODO: WILL BE IN NEXT RELEASE!!
+        You can
+        read how to configure <application>sxwm</application> by running
+        <command>man sxwm</command>.
+-->
+      </para>
+
+      <para>
+        If <application>sxwm</application> is the only Window Manager you want
+        to use, you can start it with an <filename>.xinitrc</filename> file in
+        your home folder. Be sure to backup your current
+        <filename>.xinitrc</filename> before proceeding. 
+      </para>
+
+<screen><userinput>echo "exec sxwm" &gt;&gt; ~/.xinitrc</userinput></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          sxwm
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/sxwm
+          <!-- TODO: NEXT RELEASE
+          and /usr/share/xsessions -->
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="sxwm-bin">
+        <term><command>sxwm</command></term>
+        <listitem>
+          <para>
+            is the <application>sxwm</application> Window Manager
+          </para>
+          <indexterm zone="sxwm-wm sxwm-bin">
+            <primary sortas="b-sxwm-bin">sxwm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

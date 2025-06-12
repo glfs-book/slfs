@@ -44,6 +44,10 @@
       <para>June 12th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - sxwm: Added. Fixes
+          <ulink url="&slfs-issues;/174">#174</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - yt-dlp: 2025.05.22 -&gt; 2025.06.09. Fixes
           <ulink url="&slfs-issues;/185">#185</ulink>.</para>
         </listitem>
