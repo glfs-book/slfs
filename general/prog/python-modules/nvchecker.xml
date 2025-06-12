@@ -57,14 +57,9 @@
       <bridgehead renderas="sect5">Recommended</bridgehead>
       <para role='recommended'>
         <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
-        <ulink url="&blfs-svn;/x/libnotify.html">libnotify</ulink>, and
-        <ulink url="&pymod;pygobject3">PyGObject</ulink>
-      </para>
-
-      <bridgehead renderas="sect5">Optional</bridgehead>
-      <para role='optional'>
-        <ulink url="https://github.com/uiri/toml">PyTOML</ulink>
-        (for <command>nvchecker-ini2toml</command>)
+        <ulink url="&blfs-svn;/x/libnotify.html">libnotify</ulink>,
+        <ulink url="&pymod;pygobject3">PyGObject</ulink>, and
+        <xref linkend="toml"/>
       </para>
 
     </sect3>

@@ -103,6 +103,7 @@ version, so keep this at that. -->
 <!ENTITY structlog-version                   "25.4.0">
 <!ENTITY platformdirs-version                "4.3.8">
 <!ENTITY pycurl-version                      "7.45.6">
+<!ENTITY toml-version                      "0.10.2">
 <!ENTITY tornado-version                     "6.5.1">
 <!-- Python Modules -->
 <!ENTITY nvchecker-version                   "2.18">

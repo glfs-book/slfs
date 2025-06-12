@@ -64,6 +64,11 @@
       </listitem>
       <listitem>
         <para>
+          <xref linkend="toml"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
           <xref linkend="tornado"/>
         </para>
       </listitem>
@@ -78,6 +83,9 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
     href="python-dependencies/pycurl.xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="python-dependencies/toml.xml"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
     href="python-dependencies/tornado.xml"/>
