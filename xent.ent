@@ -68,3 +68,65 @@
 <!ENTITY static-libraries
   "<para><parameter>--disable-static</parameter>: This switch prevents
   installation of static versions of the libraries.</para>">
+<!ENTITY pip3-cmd-explain
+  "<sect3 role='commands'>
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>-w dist</parameter>: Builds the appropriate
+      <quote>wheel</quote> for this module in the directory
+      <filename class='directory'>dist</filename>.
+    </para>
+
+    <para>
+      <parameter>--no-build-isolation</parameter>: Tells
+      <command>pip3</command> to run the build in the system environment
+      instead of creating a temporary build environment.
+    </para>
+
+    <para>
+      <parameter>--no-deps</parameter>: Prevents <command>pip3</command> from
+      building wheels for the project's dependencies.
+    </para>
+
+    <para>
+      <parameter>--no-index</parameter>: Ignores the package index
+      (only looking at <parameter>--find-links</parameter> URLs instead).
+    </para>
+
+    <para>
+      <parameter>--find-links dist</parameter>: Looks for links to archives
+      such as wheel (<filename class='extension'>.whl</filename>) files in the
+      directory <filename class='directory'>dist</filename>.
+    </para>
+
+    <para>
+      <parameter>--no-cache-dir</parameter>: Disables the cache to prevent
+      a warning when installing as the &root; user.
+    </para>
+
+    <para>
+      <parameter>--no-user</parameter>: Prevent mistakenly running the
+      install command as a non-root user.
+    </para>
+
+    <para>
+      <option>--upgrade</option>: Upgrade the package to the newest
+       available version. This option is used with the install command
+       if a version of the package is already installed.
+    </para>
+
+    <para>
+      <option>--force-reinstall</option>: Reinstall the package even if
+      it is up-to-date. This option is used with the install command
+      if reinstalling the package or reverting to an earlier version
+      of the package.
+    </para>
+
+    <para>
+      <option>--no-deps</option>: Do not install package dependencies.
+      This option may be needed with the <option>--upgrade</option> or
+      <option>--force-reinstall</option> options.
+    </para>
+
+  </sect3>">

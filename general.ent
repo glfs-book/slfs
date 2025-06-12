@@ -185,6 +185,8 @@ export -f as_root</userinput></screen>
 <!ENTITY qt5-deps
          "(<xref linkend='qt5'/> or <xref role='nodep' linkend='qt5-alternate'/>)">
 
+<!ENTITY pydep "&blfs-svn;/general/python-dependencies#">
+<!ENTITY pymod "&blfs-svn;/general/python-modules#">
 <!ENTITY build-wheel-cmd "pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir">
 <!ENTITY build-wheel "<screen><userinput>&build-wheel-cmd; $PWD</userinput></screen>">
 

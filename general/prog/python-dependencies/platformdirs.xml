@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../../general.ent">
+  %general-entities;
+
+  <!ENTITY platformdirs-download-http "https://files.pythonhosted.org/packages/source/p/platformdirs/platformdirs-&platformdirs-version;.tar.gz">
+]>
+
+  <sect2 id="platformdirs" xreflabel="platformdirs-&platformdirs-version;">
+
+    <title>platformdirs-&platformdirs-version;</title>
+
+    <indexterm zone="platformdirs">
+      <primary sortas="a-platformdirs">platformdirs</primary>
+    </indexterm>
+
+    <sect3 role="package">
+      <title>Introduction to platformdirs Module</title>
+
+      <para>
+        The <application>platformdirs</application> module provides standard
+        directory paths on different platforms so that data is saved to the
+        right path.
+      </para>
+
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Download (HTTP): <ulink url="&platformdirs-download-http;"/>
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <bridgehead renderas="sect4">platformdirs Dependencies</bridgehead>
+
+      <bridgehead renderas="sect5">Required</bridgehead>
+      <para role='required'>
+        <ulink url='&pydep;hatch-vcs'>hatch_vcs</ulink>
+      </para>
+
+    </sect3>
+
+    <sect3 role="installation">
+      <title>Installation of platformdirs</title>
+
+      <para>Build the module:</para>
+
+      &build-wheel;
+
+      <para>
+        Now, as the &root; user:
+      </para>
+
+<screen role="root"><userinput>&install-wheel; platformdirs</userinput></screen>
+
+    </sect3>
+
+    &pip3-cmd-explain;
+
+    <sect3 role="content">
+      <title>Contents</title>
+
+      <segmentedlist>
+        <segtitle>Installed Programs</segtitle>
+        <segtitle>Installed Libraries</segtitle>
+        <segtitle>Installed Directories</segtitle>
+
+        <seglistitem>
+          <seg>None</seg>
+          <seg>None</seg>
+          <seg>
+            /usr/lib/python&python3-majorver;/site-packages/platformdirs and
+            /usr/lib/python&python3-majorver;/site-packages/platformdirs-&platformdirs-version;.dist-info
+          </seg>
+        </seglistitem>
+      </segmentedlist>
+
+    </sect3>
+
+  </sect2>

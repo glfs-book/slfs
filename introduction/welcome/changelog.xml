@@ -44,6 +44,10 @@
       <para>June 12th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - nvchecker: Added. Fixes
+          <ulink url="&slfs-issues;/175">#175</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - sxwm: Added. Fixes
           <ulink url="&slfs-issues;/174">#174</ulink>.</para>
         </listitem>

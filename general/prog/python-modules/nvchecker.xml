@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../../general.ent">
+  %general-entities;
+
+  <!ENTITY nvchecker-download-http "https://files.pythonhosted.org/packages/source/n/nvchecker/nvchecker-&nvchecker-version;.tar.gz">
+]>
+
+  <sect2 id="nvchecker" xreflabel="nvchecker-&nvchecker-version;">
+
+    <title>nvchecker-&nvchecker-version;</title>
+
+    <indexterm zone="nvchecker">
+      <primary sortas="a-nvchecker">nvchecker</primary>
+    </indexterm>
+
+    <sect3 role="package">
+      <title>Introduction to nvchecker Module</title>
+
+      <para>
+        The <application>nvchecker</application> module provides a solution
+        for checking versions of packages. Arch Linux and other teams rely on
+        this module for checking for updates to provide the latest software to
+        their users.
+      </para>
+
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Download (HTTP): <ulink url="&nvchecker-download-http;"/>
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <bridgehead renderas="sect4">Additional Downloads</bridgehead>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Recommended patch for <command>updcheck</command> from
+            <ulink url='https://github.com/glfs-book/lfs-tools'>lfs-tools</ulink>:
+            <ulink url='https://github.com/glfs-book/lfs-tools/raw/refs/heads/trunk/updcheck/nvchecker.diff'/>
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <bridgehead renderas="sect4">nvchecker Dependencies</bridgehead>
+
+      <bridgehead renderas="sect5">Required</bridgehead>
+      <para role='required'>
+        <xref linkend="platformdirs"/>,
+        <xref linkend="pycurl"/>,
+        <xref linkend="structlog"/>, and
+        <xref linkend="tornado"/>
+      </para>
+
+      <bridgehead renderas="sect5">Recommended</bridgehead>
+      <para role='recommended'>
+        <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
+        <ulink url="&blfs-svn;/x/libnotify.html">libnotify</ulink>, and
+        <ulink url="&pymod;pygobject3">PyGObject</ulink>
+      </para>
+
+      <bridgehead renderas="sect5">Optional</bridgehead>
+      <para role='optional'>
+        <ulink url="https://github.com/uiri/toml">PyTOML</ulink>
+        (for <command>nvchecker-ini2toml</command>)
+      </para>
+
+    </sect3>
+
+    <sect3 role="installation">
+      <title>Installation of nvchecker</title>
+
+      <para>Build the module:</para>
+
+      &build-wheel;
+
+      <para>
+        Now, as the &root; user:
+      </para>
+
+<screen role="root"><userinput>&install-wheel; nvchecker</userinput></screen>
+
+    </sect3>
+
+    &pip3-cmd-explain;
+
+    <sect3 role="content">
+      <title>Contents</title>
+
+      <segmentedlist>
+        <segtitle>Installed Programs</segtitle>
+        <segtitle>Installed Libraries</segtitle>
+        <segtitle>Installed Directories</segtitle>
+
+        <seglistitem>
+          <seg>
+            nvchecker,
+            nvchecker-ini2toml,
+            nvchecker-notify,
+            nvcmp, and
+            nvtake
+          </seg>
+          <seg>None</seg>
+          <seg>
+            /usr/lib/python&python3-majorver;/site-packages/nvchecker,
+            /usr/lib/python&python3-majorver;/site-packages/nvchecker-&nvchecker-version;.dist-info,
+            and /usr/lib/python&python3-majorver;/site-packages/nvchecker-source
+          </seg>
+        </seglistitem>
+      </segmentedlist>
+
+    </sect3>
+
+  </sect2>

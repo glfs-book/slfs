@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../../general.ent">
+  %general-entities;
+
+  <!ENTITY pycurl-download-http "https://files.pythonhosted.org/packages/source/p/pycurl/pycurl-&pycurl-version;.tar.gz">
+]>
+
+  <sect2 id="pycurl" xreflabel="pycurl-&pycurl-version;">
+
+    <title>pycurl-&pycurl-version;</title>
+
+    <indexterm zone="pycurl">
+      <primary sortas="a-pycurl">pycurl</primary>
+    </indexterm>
+
+    <sect3 role="package">
+      <title>Introduction to pycurl Module</title>
+
+      <para>
+        The <application>pycurl</application> module offers access to
+        <application>cURL</application> in <application>Python</application>
+        scripts.
+      </para>
+
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Download (HTTP): <ulink url="&pycurl-download-http;"/>
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <bridgehead renderas="sect4">pycurl Dependencies</bridgehead>
+
+      <bridgehead renderas="sect5">Required</bridgehead>
+      <para role='required'>
+        <ulink url='&blfs-svn;/basicnet/curl.html'>cURL</ulink>
+      </para>
+
+    </sect3>
+
+    <sect3 role="installation">
+      <title>Installation of pycurl</title>
+
+      <para>Build the module:</para>
+
+      &build-wheel;
+
+      <para>
+        Now, as the &root; user:
+      </para>
+
+<screen role="root"><userinput>&install-wheel; pycurl &amp;&amp;
+mv -v /usr/share/doc/pycurl{,-&pycurl-version;}</userinput></screen>
+
+    </sect3>
+
+    &pip3-cmd-explain;
+
+    <sect3 role="content">
+      <title>Contents</title>
+
+      <segmentedlist>
+        <segtitle>Installed Programs</segtitle>
+        <segtitle>Installed Libraries</segtitle>
+        <segtitle>Installed Directories</segtitle>
+
+        <seglistitem>
+          <seg>None</seg>
+          <seg>None</seg>
+          <seg>
+            /usr/lib/python&python3-majorver;/site-packages/pycurl,
+            /usr/lib/python&python3-majorver;/site-packages/pycurl-&pycurl-version;.dist-info,
+            and /usr/share/doc/pycurl-&pycurl-version;
+          </seg>
+        </seglistitem>
+      </segmentedlist>
+
+    </sect3>
+
+  </sect2>

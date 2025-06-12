@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../../general.ent">
+  %general-entities;
+
+  <!ENTITY tornado-download-http "https://files.pythonhosted.org/packages/source/t/tornado/tornado-&tornado-version;.tar.gz">
+]>
+
+  <sect2 id="tornado" xreflabel="tornado-&tornado-version;">
+
+    <title>tornado-&tornado-version;</title>
+
+    <indexterm zone="tornado">
+      <primary sortas="a-tornado">tornado</primary>
+    </indexterm>
+
+    <sect3 role="package">
+      <title>Introduction to tornado Module</title>
+
+      <para>
+        The <application>tornado</application> module offers an easy solution
+        to logging.
+      </para>
+
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Download (HTTP): <ulink url="&tornado-download-http;"/>
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <bridgehead renderas="sect4">tornado Dependencies</bridgehead>
+
+      <bridgehead renderas="sect5">Recommended</bridgehead>
+      <para role='recommended'>
+        <xref linkend="pycurl"/> (for the <application>cURL</application>
+        client)
+      </para>
+
+    </sect3>
+
+    <sect3 role="installation">
+      <title>Installation of tornado</title>
+
+      <para>Build the module:</para>
+
+      &build-wheel;
+
+      <para>
+        Now, as the &root; user:
+      </para>
+
+<screen role="root"><userinput>&install-wheel; tornado</userinput></screen>
+
+    </sect3>
+
+    &pip3-cmd-explain;
+
+    <sect3 role="content">
+      <title>Contents</title>
+
+      <segmentedlist>
+        <segtitle>Installed Programs</segtitle>
+        <segtitle>Installed Libraries</segtitle>
+        <segtitle>Installed Directories</segtitle>
+
+        <seglistitem>
+          <seg>None</seg>
+          <seg>None</seg>
+          <seg>
+            /usr/lib/python&python3-majorver;/site-packages/tornado and
+            /usr/lib/python&python3-majorver;/site-packages/tornado-&tornado-version;.dist-info
+          </seg>
+        </seglistitem>
+      </segmentedlist>
+
+    </sect3>
+
+  </sect2>
