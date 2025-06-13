@@ -33,6 +33,13 @@
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">socat Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="https://packages.debian.org/sid/libwrap0">tcp-wrappers</ulink>
+    </para>
+
   </sect2>
 
   <sect2 role="installation">
