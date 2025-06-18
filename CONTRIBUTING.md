@@ -131,8 +131,9 @@ directories at the root of the source:
 - `binary/`
 - `book/`
 - `emu/`
-- `gen-game/`
+- `gaming/`
 - `general/`
+- `graph/`
 - `introduction/`
 - `svr4/`
 - `wm/`
@@ -156,23 +157,26 @@ needs to get updated.
 #### 3.1.2.4. `emu/`
 This directory contains XML files rendered for the Emulators part. Contains
 packages.
-#### 3.1.2.5. `gen-game/`
+#### 3.1.2.5. `gaming/`
 This directory contains XML files rendered for the General Gaming Software
 part. Contains packages.
 #### 3.1.2.6. `general/`
 This directory contains XML files rendered for the General Libraries and
 Utilities part. Contains packages.
-#### 3.1.2.7. `introduction/`
+#### 3.1.2.7. `graph/`
+This directory contains XML files rendered for the Graphical Components.
+Contains packages.
+#### 3.1.2.8. `introduction/`
 This directory contains XML files rendered for the Introduction part of the
 book. Contains `welcome/changelog.xml` which does need to get updated often.
 Rest of the XML files usually don't.
-#### 3.1.2.8. `svr4/`
+#### 3.1.2.9. `svr4/`
 This directory contains XML files rendered for the SVR4 part of the book.
 Contains packages.
-#### 3.1.2.9. `wm/`
+#### 3.1.2.10. `wm/`
 This directory contains XML files rendered for the Window Managers,
 Compositors, and Desktop Environments part. Contains packages.
-#### 3.1.2.10. `changelog.xml`
+#### 3.1.2.11. `changelog.xml`
 This symlink points to `introduction/welcome/changelog.xml`, an XML file that
 details changes made to the book since the last release. All changes should be
 noted here, and the message should be similar or exact to the git commit
@@ -183,7 +187,7 @@ use for LFS/BLFS. Changes that shouldn't have a changelog entry are simple
 typos, grammar changes, fixing rendering failures, wording, etc. (small
 changes) and internal changes (not counting changes to `packages.ent`, those
 count as updates that need to have a changelog entry).
-#### 3.1.2.11. `index.xml`
+#### 3.1.2.12. `index.xml`
 This file is an XML file that determines which main XML files to include for
 rendering. Think of it as the master XML file, or your `int main()`, but for
 XML. Rarely needs changing unless a new section is added.

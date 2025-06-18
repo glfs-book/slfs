@@ -16,11 +16,12 @@ $Date$
   <!-- Parts -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="introduction/introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="general/general.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="svr4/svr4.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="binary/binary.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="graph/graph.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wm/wm.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="emu/emu.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gen-game/gen-game.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gaming/gaming.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="binary/binary.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="svr4/svr4.xml"/>
 
   <!-- Appendices -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="appendices/creat-comm.xml"/>

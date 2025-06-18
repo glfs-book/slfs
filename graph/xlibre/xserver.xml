@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY xserver-base "https://github.com/X11Libre/xserver/archive">
+  <!ENTITY xserver-download
+    "&xserver-base;/&xserver-version;/xserver-&xserver-version;.tar.gz">
+  <!ENTITY blfs-xserver
+    "<ulink url='&blfs-svn;/x/xorg-server.html'>Xorg-Server</ulink>">
+  <!ENTITY modesetting_drv
+    "<filename class='libraryfile'>modesetting_drv</filename>">
+  <!ENTITY BLFS113 "https://www.linuxfromscratch.org/blfs/view/11.3/x/x7driver.html">
+  <!ENTITY BLFS76 "https://www.linuxfromscratch.org/blfs/view/7.6/x/x7driver.html">
+  <!ENTITY xserver-with-nvidia "yes">
+]>
+
+<sect1 id="xserver" xreflabel="xserver-&xserver-minor;">
+  <?dbhtml filename="xserver.html"?>
+
+  <title>xserver-&xserver-minor;</title>
+
+  <indexterm zone="xserver">
+    <primary sortas="a-xserver">xserver</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to xserver</title>
+
+    <para>
+      The <application>xserver</application> is the X11Libre fork of the
+      <application>Xorg-Server</application>. The Xorg project's
+      <application>Xorg-Server's</application> repository is also called
+      <application>xserver</application> but they expand the name to
+      <application>Xorg-Server</application> as noted by the distribution
+      tarball. This fork doesn't for now.
+    </para>
+
+    <important><para>
+      This page assumes that you have followed the kernel setup in
+      &blfs-xserver; and know how that page works. This page will call back to
+      it multiple times.
+    </para></important>
+
+    <note>
+      <para>
+        Does this package work with <application>NVIDIA</application>:
+        &xserver-with-nvidia;.
+      </para>
+      <para>
+        Tested with <application>NVIDIA-&nvidia-version;</application>.
+      </para>
+    </note>
+
+    &abi-break;
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&xserver-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">xserver Dependencies</bridgehead>
+    <para>
+      See &blfs-xserver; for dependencies as that and this package have the
+      same dependencies.
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of xserver</title>
+
+    <note><para>
+      The tearfree patch from BLFS does apply with this package. However, there
+      are no tears that have been observed with this fork.
+    </para></note>
+
+    <para>
+      Install the xserver by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup ..              \
+      --prefix=$XORG_PREFIX \
+      --localstatedir=/var  \
+      -D glamor=true        \
+      -D xkb_output_dir=/var/lib/xkb &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>ninja test</command>. You will need
+      to run <command>ldconfig</command> as the &root; user first or some tests
+      may fail.
+    </para>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root" revision="sysv"><userinput>ninja install &amp;&amp;
+mkdir -pv /etc/X11/xorg.conf.d &amp;&amp;
+install -v -d -m1777 /tmp/.{ICE,X11}-unix &amp;&amp;
+if [ -z "$(grep .ICE-unix /etc/sysconfig/createfiles)" ]; then
+cat &gt;&gt; /etc/sysconfig/createfiles &lt;&lt; "EOF"
+<literal>/tmp/.ICE-unix dir 1777 root root</literal>
+EOF
+fi
+if [ -z "$(grep .X11-unix /etc/sysconfig/createfiles)" ]; then
+cat &gt;&gt; /etc/sysconfig/createfiles &lt;&lt; "EOF"
+<literal>/tmp/.X11-unix dir 1777 root root</literal>
+EOF
+fi</userinput></screen>
+
+<screen role="root" revision="systemd"><userinput>ninja install &amp;&amp;
+mkdir -pv /etc/X11/xorg.conf.d</userinput></screen>
+
+    <para>
+      Move the TearFree configuration file out of the way if it exists as the
+      &root; user, as it cannot be used:
+    </para>
+
+<screen role="root"><userinput>if [ -f /etc/X11/xorg.conf.d/20-tearfree.conf]; then
+  mv -v /etc/X11/xorg.conf.d/20-tearfree.conf{,.nouse}
+fi</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>-D glamor=true</parameter>: Ensure building the Glamor
+      module.  It's needed to build the &modesetting_drv; driver
+      which replaces the traditional Device Dependent X (DDX) drivers.
+    </para>
+
+<!-- This option doesn't exist anymore and I don't need this to compile the
+     server anymore.
+
+    <para>
+      <option>-D secure-rpc=false</option>: This option disables building RPC
+      support if <xref linkend="libtirpc"/> is not installed.
+    </para>
+-->
+<!-- This doesn't sit right with me.
+
+    <para revision='sysv'>
+      <parameter>-D systemd_logind=true</parameter>:
+      This switch makes the building system error out if
+      <xref linkend='dbus'/> is not installed. The BLFS editors discourage
+      building this package without <xref linkend='dbus'/> installed.
+    </para>
+-->
+
+    <para>
+      <option>-D suid_wrapper=true</option>: Builds the suid-root
+      wrapper for legacy DDX driver support on rootless xserver systems.
+    </para>
+
+    <para revision="sysv">
+      <command>cat &gt;&gt; /etc/sysconfig/createfiles...</command>: These
+      commands create the <filename class="directory">/tmp/.ICE-unix</filename>
+      and <filename class="directory">/tmp/.X11-unix</filename> directories at
+      startup, and ensures that the permissions and ownership are correct as
+      required by the server.
+    </para>
+
+    <para>
+      <option>-D xephyr=true</option>: This option allows building Xephyr if its
+      dependencies are met.
+    </para>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring xserver</title>
+
+    <para>
+      With this fork, you will have to reinstall the <ulink
+      url="&blfs-svn;/x/x7driver.html">Xorg Input Drivers</ulink>. If you
+      installed an Xorg Video Driver from <ulink
+      url="&BLFS113;">BLFS-11.3</ulink> or <ulink
+      url="&BLFS76;">BLFS-7.6</ulink> as well, you
+      will have to reinstall it. If you installed <ulink
+      url="&blfs-svn;/x/mesa.html">Mesa</ulink> and/or <ulink
+      url="&glfs-website;/shareddeps/nvidia.html">NVIDIA</ulink>, you will not
+      need to reinstall them.
+    </para>
+
+    <para>
+      For <application>NVIDIA</application> however, you do need to make a
+      configuration file to proceed past a warning being treated as an error as
+      the &root; user:
+    </para>
+
+<screen role="root"><userinput>cat &gt; /etc/X11/xorg.conf.d/10-nvidia-abi.conf &lt;&lt; "EOF"
+<literal>Section "ServerFlags"
+    Option "IgnoreABI" "true"
+EndSection</literal>
+EOF</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          gtf, X, Xnest, Xorg, Xvfb, and optionally Xephyr
+        </seg>
+        <seg>
+          several under $XORG_PREFIX/lib/xorg/modules/xlibre-25.0 including the
+          &modesetting_drv; driver
+        </seg>
+        <seg>
+          /etc/X11/xorg.conf.d,
+          $XORG_PREFIX/include/xorg,
+          $XORG_PREFIX/lib/xorg, and
+          $XORG_PREFIX/share/X11/xorg.conf.d
+        </seg>
+
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="gtf-x7">
+        <term><command>gtf</command></term>
+        <listitem>
+          <para>
+            calculates VESA GTF mode lines
+          </para>
+          <indexterm zone="xserver gtf-x7">
+            <primary sortas="b-gtf">gtf</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="X-x7">
+        <term><command>X</command></term>
+        <listitem>
+          <para>
+            is a symbolic link to Xorg
+          </para>
+          <indexterm zone="xserver X-x7">
+            <primary sortas="b-X">X</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="Xephyr-x7">
+        <term><command>Xephyr</command></term>
+        <listitem>
+          <para>
+            is a nested X server which supports modern X extensions
+          </para>
+          <indexterm zone="xserver Xephyr-x7">
+            <primary sortas="b-Xephyr">Xephyr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="Xnest-x7">
+        <term><command>Xnest</command></term>
+        <listitem>
+          <para>
+            is a nested X server
+          </para>
+          <indexterm zone="xserver Xnest-x7">
+            <primary sortas="b-Xnest">Xnest</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="Xorg-x7">
+        <term><command>Xorg</command></term>
+        <listitem>
+          <para>
+            is the X11R7 X Server
+          </para>
+          <indexterm zone="xserver Xorg-x7">
+            <primary sortas="b-Xorg">Xorg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="Xvfb-x7">
+        <term><command>Xvfb</command></term>
+        <listitem>
+          <para>
+            is the virtual framebuffer X server for X Version 11
+          </para>
+          <indexterm zone="xserver Xvfb-x7">
+            <primary sortas="b-Xvfb">Xvfb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="modesetting_drv-x7">
+        <term><filename class="libraryfile">modesetting_drv.so</filename></term>
+        <listitem>
+          <para>
+            provides a video driver for machines using Kernel Mode Setting (KMS).
+            This will use glamor if that has been enabled and the hardware offers
+            acceleration
+          </para>
+          <indexterm zone="xserver modesetting_drv-x7">
+            <primary sortas="c-modesetting_drv">modesetting_drv.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

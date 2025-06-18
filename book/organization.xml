@@ -30,37 +30,44 @@
     toolchains for those that may need them.
   </para>
 
-  <bridgehead renderas="sect2">Part III - SVR4</bridgehead>
+  <bridgehead renderas="sect2">Part III - Graphical Components</bridgehead>
 
   <para>
-    This part covers SVR4 tooling and various software.
+    This part covers graphical components that may be useful and help with
+    debugging and testing or be useful in their own right.
   </para>
 
-  <bridgehead renderas="sect2">Part IV - Binary Support</bridgehead>
-
-  <para>
-    This part covers packages and setup for optimal binary-only application
-    compatibility on a Linux From Scratch system.
-  </para>
-
-  <bridgehead renderas="sect2">Part V - Window Managers, Compositors, and Desktop Environments</bridgehead>
+  <bridgehead renderas="sect2">Part IV - Window Managers, Compositors, and Desktop Environments</bridgehead>
 
   <para>
     This part covers graphical environments you may wish to use.
   </para>
 
-  <bridgehead renderas="sect2">Part VI - Emulators</bridgehead>
+  <bridgehead renderas="sect2">Part V - Emulators</bridgehead>
 
   <para>
     This part covers many emulators for computers, vide game consoles, and
     more.
   </para>
 
-  <bridgehead renderas="sect2">Part VII - General Gaming Software</bridgehead>
+  <bridgehead renderas="sect2">Part VI - General Gaming Software</bridgehead>
 
   <para>
     This part covers gaming support software that is not covered in BLFS and
     GLFS.
+  </para>
+
+  <bridgehead renderas="sect2">Part VII - Binary Support</bridgehead>
+
+  <para>
+    This part covers packages and setup for optimal binary-only application
+    compatibility on a Linux From Scratch system.
+  </para>
+
+  <bridgehead renderas="sect2">Part VIII - SVR4</bridgehead>
+
+  <para>
+    This part covers SVR4 tooling and various software.
   </para>
 
   <bridgehead renderas="sect2">Appendices</bridgehead>

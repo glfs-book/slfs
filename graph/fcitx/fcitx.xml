@@ -5,7 +5,7 @@
  %general-entities;
 ]>
 
-<chapter id="general-fcitx">
+<chapter id="graph-fcitx">
   <?dbhtml filename="fcitx.html"?>
 
   <title>Fcitx</title>

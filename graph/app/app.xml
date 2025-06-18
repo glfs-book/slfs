@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+ <!ENTITY % general-entities SYSTEM "../../general.ent">
+ %general-entities;
+]>
+
+<chapter id="graph-app">
+  <?dbhtml filename="app.html"?>
+
+  <title>Graphical Applications</title>
+
+  <para>
+    This chapter covers graphical applications that don't belong in a given
+    existing category.
+  </para>
+
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mesa-demos.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="obs-studio.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wbg.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xeyes.xml"/>
+
+</chapter>

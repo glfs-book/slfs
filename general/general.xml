@@ -16,9 +16,5 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sysutils/sysutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="prog/prog.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="shells/shells.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xorg/xorg.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="term/term.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="launch/launch.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx/fcitx.xml"/>
 
 </part>

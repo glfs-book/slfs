@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+ <!ENTITY % general-entities SYSTEM "../../general.ent">
+ %general-entities;
+]>
+
+<chapter id="graph-tk">
+  <?dbhtml filename="tk.html"?>
+
+  <title>Graphical Toolkits</title>
+
+  <para>
+    This chapter covers toolkits that some graphical apps or environments make
+    use of.
+  </para>
+
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="printproto.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libxp.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="motif.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-util-xrm.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-imdkit.xml"/>
+
+</chapter>

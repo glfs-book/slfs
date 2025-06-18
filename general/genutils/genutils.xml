@@ -25,15 +25,12 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="lrzsz.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minicom.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gkermit.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mesa-demos.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ncompress.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="neofetch.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fastfetch.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="obs-studio.xml"/> 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rpmextract.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="scdoc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tmux.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wbg.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yt-dlp.xml"/>
 
 </chapter>

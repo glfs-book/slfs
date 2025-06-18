@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="xlibre-intro" xreflabel="Introduction to X11Libre">
+  <?dbhtml filename="xlibre-intro.html"?>
+
+  <title>Introduction to X11Libre</title>
+
+  <sect2>
+    <title>What is X11Libre?</title>
+    <para>
+      X11Libre is a collection of packages forked from Xorg. However, most of
+      the forks are not any more updated than the official Xorg packages. The
+      main one that gets active development is the
+      <application>xserver</application>. There are no promises of a stable ABI
+      and does not have a stable release. The project has had several changes
+      that are controversial. As such, it is largely up to the user if they
+      want to use the software from the project. It has broken some things but
+      can lead to a smoother experience.
+    </para>
+  </sect2>
+  
+  <sect2>
+    <title>What This Section Will and Will Not Cover</title>
+    <para>
+      This section will only cover the installation and configuration of the
+      <application>xserver</application>. It will also cover on how to proceed.
+      It will not cover its history, why the fork took place, or the nature of
+      the person who forked Xorg. This book only aims to guide users for
+      installing what they need and what pieces are needed to be put in place.
+      Lastly, please do not ask for this project to be put in BLFS/GLFS. The
+      future for this project is very unclear and may die out before SLFS-12.4
+      releases in September. Consider this a reference implementation rather
+      than the future.
+    </para>
+  </sect2>
+
+</sect1>
