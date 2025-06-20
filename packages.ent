@@ -24,6 +24,7 @@
 <!ENTITY pugixml-version                     "1.15">
 <!ENTITY qrcodegencpp-version                "1.8.0">
 <!ENTITY re2-version                         "2024-07-02">
+<!ENTITY rubberband-version                  "4.0.0">
 <!ENTITY sdbus-cpp-version                   "2.1.0">
 <!ENTITY sdl2_net-version                    "2.2.0">
 <!ENTITY seatd-version                       "0.9.1">

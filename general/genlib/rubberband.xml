@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY rubberband-download-http "https://github.com/breakfastquay/rubberband/archive/v&rubberband-version;/rubberband-&rubberband-version;.tar.gz">
+]>
+
+<sect1 id="rubberband" xreflabel="rubberband-&rubberband-version;">
+  <?dbhtml filename="rubberband.html"?>
+
+  <title>rubberband-&rubberband-version;</title>
+
+  <indexterm zone="rubberband">
+    <primary sortas="a-rubberband">rubberband</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to rubberband</title>
+
+    <para>
+      The <application>rubberband</application> package contains libraries and
+      utilities that can effectively stretch audio time-wise and modify the
+      pitch of a given audio file. This can be really useful when editing
+      videos through something like <ulink
+      url="&blfs-svn;/kde/kdenlive.html">kdenlive</ulink>, but can also be used
+      in other software such as <ulink
+      url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>. You will have to
+      recompile the software that can use it and may have to add options to
+      those packages to enable <application>rubberband</application> support.
+    </para>
+
+    <tip><para>
+      In the case of <application>kdenlive</application>, it depends on
+      <ulink url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> for effects. As
+      such, you don't need to recompile <application>kdenlive</application>,
+      but you must recompile <application>MLT</application> with
+      <application>rubberband</application> support. Currently,
+      <application>MLT</application> autodetects if
+      <application>rubberband</application> is present, and will enable the
+      support automatically during configuration, so no additional options are
+      necessary.
+    </para></tip>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&rubberband-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">rubberband Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/libsndfile.html">libsndfile</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/boost.html">boost</ulink>,
+      <ulink url="&blfs-svn;/general/fftw.html">fftw</ulink>,
+      <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/ladspa/">ladspa</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/lv2/">lv2</ulink>,
+      <ulink url="&blfs-svn;/multimedia/libsamplerate.html">libsamplerate</ulink>,
+      <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
+      <ulink url="&arch-pkgs;/extra/x86_64/vamp-plugin-sdk/">vamp-plugin-sdk</ulink>
+    </para>
+
+    <note><para>
+      <application>libsamplerate</application> and
+      <application>Speex</application> can be used as resamplers instead
+      of the built-in implementation. Check
+      <quote>Command Explanations</quote> for more information.
+    </para></note>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of rubberband</title>
+
+    <para>
+      Install <application>rubberband</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+rm -vf /usr/lib/librubberband.a</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <option>-D resampler=</option>: This option can be used to specify the
+      resampler to use. By default, it will use the built-in implementation.
+      You can specify <option>libsamplerate</option>, <option>speex</option>,
+      or <option>speexdsp</option> to override the default. If you are going
+      to do this, it is recommended to use <option>libsamplerate</option>.
+    </para>
+
+    <para>
+      <command>rm -vf /usr/lib/librubberband.a</command>: Removes a useless
+      static library.
+    </para>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          rubberband and rubberband-r3 (duplicate of rubberband)
+        </seg>
+        <seg>
+          librubberband
+        </seg>
+        <seg>
+          /usr/include/rubberband
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+       <varlistentry id="bin-rubberband">
+        <term><command>rubberband</command></term>
+        <listitem>
+          <para>
+            utilizes <filename class="libraryfile">rubberband</filename> to
+            generate new audio files with modified time and pitch
+          </para>
+          <indexterm zone="rubberband bin-rubberband">
+            <primary sortas="b-bin-rubberband">rubberband</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="librubberband">
+        <term><filename class="libraryfile">librubberband</filename></term>
+        <listitem>
+          <para>
+            provides functions for pitch-shifting and time-stretching
+          </para>
+          <indexterm zone="rubberband librubberband">
+            <primary sortas="c-librubberband">librubberband</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
