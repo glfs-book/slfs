@@ -42,7 +42,8 @@
       third party application, must also be made freely available.
     </para>
 
-    
+    &long-build-time;
+
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -135,8 +136,10 @@
       Configure and build the package with the following commands:
     </para>
 
-<screen><userinput>unset JAVA_HOME &amp;&amp;
-unset MAKEFLAGS &amp;&amp;
+<screen><userinput>export MAKEFLAGS_HOLD=$MAKEFLAGS           &amp;&amp;
+unset JAVA_HOME                            &amp;&amp;
+unset CLASSPATH                            &amp;&amp;
+unset MAKEFLAGS                            &amp;&amp;
 bash configure --enable-unlimited-crypto    \
                --disable-warnings-as-errors \
                --with-jobs=$(nproc)         \
@@ -173,6 +176,25 @@ done</userinput></screen>
         <command>cp</command> command.
       </para>
     </note>
+
+
+<!-- Thanks to Douglas for telling me this info! This should always be followed
+     for our distribution tarballs when we generate new ones. For me, without
+     it, 319M balloons to 734M. -->
+    <para>
+      There will be plenty of binaries with debug info that take up over half
+      of the installed size. If you don't care about debugging, you can remove
+      the info:
+    </para>
+
+<screen><userinput>find /opt/jdk-&openjdk-version;+&openjdk-build; -name *.debuginfo -delete</userinput></screen>
+
+    <para>
+      Restore the <envar>MAKEFLAGS</envar> variable:
+    </para>
+
+<screen><userinput>export MAKEFLAGS=$MAKEFLAGS_HOLD &amp;&amp;
+unset  MAKEFLAGS_HOLD</userinput></screen>
 
     <para>
       There are now two <application>OpenJDK</application> SDKs installed
@@ -215,12 +237,6 @@ Type=Application
 Icon=java
 Categories=Application;System;</literal>
 EOF</userinput></screen>
-
-    <note><para>
-      If you want <envar>MAKEFLAGS</envar> set again, don't forget to set it
-      back to what it was, or else <command>make</command> will only use one
-      thread. Furthermore, make sure to set <command>JAVA_HOME</command> again.
-    </para></note>
 
   </sect2>
 

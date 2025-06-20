@@ -114,7 +114,7 @@ version, so keep this at that. -->
 <!ENTITY java-build                          "5">
 <!ENTITY openjdk-major-version               "&java-major-version;">
 <!ENTITY openjdk-version                     "&openjdk-major-version;.0.16">
-<!ENTITY openjdk-build                       "2">
+<!ENTITY openjdk-build                       "7">
 <!-- Shells -->
 <!ENTITY ksh-version                         "1.0.10">
 

@@ -136,13 +136,14 @@ ninja</userinput></screen>
       ideal setup is to make <xref linkend="openjdk"/> the default JDK, but
       also install <ulink
       url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink> so that the JDK
-      version can be overridden per MC instance. In that case, you will need to
-      copy the same steps in the above paragraph, as well as changing the
-      <quote>Java Installation</quote> to point to the desired JDK. When
-      installing the newer JDK, it is recommended to skip making the symlink on
-      that page so that it doesn't become the default. If you made it the
-      default beforehand but wish to change it, run the following command as
-      the &root; user:
+      version can be overridden per MC instance. Newer JDK also requires a
+      newer JDK to bootstrap from, so the one provided in this book will not
+      work for newer JDKs. In any case, you will need to copy the same steps in
+      the above paragraph, as well as changing the <quote>Java
+      Installation</quote> to point to the desired JDK. When installing the
+      newer JDK, it is recommended to skip making the symlink on that page so
+      that it doesn't become the default. If you made it the default beforehand
+      but wish to change it, run the following command as the &root; user:
     </para>
 
 <screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;+&openjdk-build; /opt/jdk</userinput></screen>
@@ -151,17 +152,17 @@ ninja</userinput></screen>
       A multi-JDK setup may look like this:
     </para>
 
-<screen><userinput>$ ls /opt | grep jdk
+<screen><computeroutput>$ </computeroutput><userinput>ls /opt | grep jdk
 </userinput><computeroutput>jdk
+<literal>jdk-&openjdk-version;+&openjdk-build;</literal>
 <literal>jdk-&jdk-modern;</literal>
-<literal>jdk-17.0.15+5</literal>
 ...</computeroutput></screen>
 
-    <para>
-      <userinput>jdk</userinput> can be a symlink to either
-      <computeroutput><literal>jdk-&jdk-modern;</literal></computeroutput> or
-      <computeroutput><literal>jdk-17.0.15+5</literal></computeroutput>.
-    </para>
+<para>
+<userinput>jdk</userinput> can be a symlink to either
+<computeroutput><literal>jdk-&jdk-modern;</literal></computeroutput> or
+<computeroutput><literal>jdk-&openjdk-version;+&openjdk-build;</literal></computeroutput>.
+</para>
 
   </sect2>
 
