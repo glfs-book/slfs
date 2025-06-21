@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY sdl2-download "https://www.libsdl.org/release/sdl2-compat-&sdl2-version;.tar.gz">
+]>
+
+<sect1 id="sdl2" xreflabel="sdl2-compat-&sdl2-version;">
+  <?dbhtml filename="sdl2.html"?>
+
+  <title>sdl2-compat-&sdl2-version;</title>
+
+  <indexterm zone="sdl2">
+    <primary sortas="a-SDL2">sdl2-compat</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to sdl2-compat</title>
+
+    <para>
+      The Simple DirectMedia Layer Version 2 (<application>SDL2</application>
+      for short) is a cross-platform library designed to make it easy to write
+      multimedia software, such as games and emulators. This package is a
+      compatibility layer and uses <xref linkend="sdl3"/> under the hood. It
+      provides support for packages that use SDL2 and have not switched to
+      <application>SDL3</application>, yet.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&sdl2-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+<!--
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch):
+           <ulink url="&patch-root;/sdl2-compat-&sdl2-version;-x-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+-->
+    <bridgehead renderas="sect3">sdl2-compat Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> and
+      <xref linkend="sdl3"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of sdl2-compat</title>
+
+    <para>
+      Install <application>sdl2-compat</application> by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D SDL2COMPAT_STATIC=OFF       \
+      -D SDL2COMPAT_TESTS=OFF        \
+      -W no-dev -G Ninja ..         &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+rm -vf /usr/lib/libSDL2*.{,l}a</userinput></screen>
+
+    <para>
+      If you want to build the tests, issue the following commands:
+    </para>
+
+<!-- Use computeroutput, unlikely many users want to do this. -->
+<screen><computeroutput>mkdir ../build-tests &amp;&amp;
+cd    ../build-tests &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D SDL2COMPAT_INSTALL_TESTS=ON \
+      -D SDL2COMPAT_STATIC=OFF       \
+      -D SDL2COMPAT_TESTS=ON         \
+      -W no-dev -G Ninja ..         &amp;&amp;
+
+ninja &amp;&amp;
+DESTDIR=$PWD/TESTS ninja install</computeroutput></screen>
+
+    <para>
+      Now you will be able to run the tests in <filename
+      class="directory">TESTS/usr/libexec/installed-tests/SDL2_compat</filename>.
+      You will have to run the tests individually. Some of them may need to be
+      manually killed and audio will need to be working so that you can hear
+      from the default audio output. Make sure
+      <application>sdl2-compat</application> is installed before running the
+      tests, or use the <envar>LD_PRELOAD</envar> variable to preload <filename
+      class="libraryfile">libSDL2.so</filename> from <filename
+      class="directory">../build</filename> for each test.
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>lib32 Installation of sdl2-compat</title>
+
+    <para>
+      Install lib32-<application>sdl2-compat</application> by running the
+      following commands:
+    </para>
+
+<screen><userinput>cd ../                   &amp;&amp;
+rm -rf build build-tests &amp;&amp;
+mkdir  build             &amp;&amp;
+cd     build             &amp;&amp;
+
+CC="gcc -m32" CXX="g++ -m32"         \
+PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_INSTALL_LIBDIR=lib32  \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D SDL2COMPAT_STATIC=OFF       \
+      -D SDL2COMPAT_TESTS=OFF        \
+      -W no-dev -G Ninja ..         &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>DESTDIR=$PWD/DESTDIR ninja install      &amp;&amp;
+rm -vf DESTDIR/usr/lib32/libSDL2*.{,l}a &amp;&amp;
+cp -vr DESTDIR/usr/lib32/* /usr/lib32   &amp;&amp;
+rm -rf DESTDIR                          &amp;&amp;
+ldconfig</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &cmake-skip-install-rpath;
+
+    <para>
+      <parameter>-D SDL2COMPAT_STATIC=OFF</parameter>: This parameter disables
+      building the static libraries.
+    </para>
+
+    <para>
+      <parameter>-D SDL2COMPAT_TESTS=OFF</parameter>: This parameter disables
+      building the tests.
+    </para>
+
+    <para>
+      <command>rm -vf /usr/lib/libSDL2*.{,l}a</command>: This command removes
+      useless static libraries.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Program</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>sdl2-config</seg>
+        <seg>libSDL2</seg>
+        <seg>/usr/include/SDL2 and
+             /usr/lib/cmake/SDL2</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="sdl2-config">
+        <term><command>sdl2-config</command></term>
+        <listitem>
+          <para>
+            determines the compile and linker flags that should be used to
+            compile and link programs that use
+            <filename class="libraryfile">libSDL2</filename>
+          </para>
+          <indexterm zone="sdl2 sdl2-config">
+            <primary sortas="b-sdl2-config">sdl2-config</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libsdl2">
+        <term><filename class="libraryfile">libSDL2</filename></term>
+        <listitem>
+          <para>
+            contains functions that provide low level access to audio,
+            keyboard, mouse, joystick, 3D hardware via OpenGL, and
+            2D frame buffer across multiple platforms
+          </para>
+          <indexterm zone="sdl2 libsdl2">
+            <primary sortas="c-libsdl2">libSDL2</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

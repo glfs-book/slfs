@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY sdl3-download "https://www.libsdl.org/release/SDL3-&sdl3-version;.tar.gz">
+]>
+
+<sect1 id="sdl3" xreflabel="SDL3-&sdl3-version;">
+  <?dbhtml filename="sdl3.html"?>
+
+  <title>SDL3-&sdl3-version;</title>
+
+  <indexterm zone="sdl3">
+    <primary sortas="a-SDL3">SDL3</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to SDL3</title>
+
+    <para>
+      The Simple DirectMedia Layer Version 3 (<application>SDL3</application>
+      for short) is a cross-platform library designed to make it easy to write
+      multimedia software, such as games and emulators. It is the new version
+      of SDL and provides more features than SDL2.
+    </para>
+
+    <tip><para>
+      After you install this package, you should also install <xref
+      linkend="sdl2"/> for <application>SDL2</application> support if you need
+      it. The amount of packages that use this package are very low so consider
+      <application>SDL2</application> support a requirement.
+    </para></tip>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&sdl3-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+<!--
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/SDL3-&sdl3-version;-x-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+-->
+
+    <bridgehead renderas="sect3">SDL3 Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
+      &gbm;,
+      <xref linkend="libdecor"/>,
+      <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>,
+      &opengl;,
+      <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
+      <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
+      <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
+      <ulink
+        url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>, and
+      and <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/hidapi/">hidapi</ulink> (with
+      <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>),
+      <ulink url="&blfs-svn;/general/ibus.html">ibus</ulink>,
+      <ulink url="https://jackaudio.org/">JACK2</ulink>, and
+      <ulink url="https://sndio.org/">sndio</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of SDL3</title>
+
+    <para>
+      Install <application>SDL3</application> by running the
+      following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D SDL_TEST_LIBRARY=OFF      \
+      -D SDL_STATIC=OFF            \
+      -D SDL_RPATH=OFF             \
+      -W no-dev -G Ninja ..       &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+    <para>
+      If you want to build the tests, issue the following commands:
+    </para>
+
+<!-- Use computeroutput, unlikely many users want to do this. -->
+<screen><computeroutput>mkdir ../build-tests &amp;&amp;
+cd    ../build-tests &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D SDL_STATIC=OFF            \
+      -D SDL_RPATH=OFF             \
+      -D SDL_TESTS=ON              \
+      -D SDL_INSTALL_TESTS=ON      \
+      -W no-dev -G Ninja ..       &amp;&amp;
+
+ninja &amp;&amp;
+DESTDIR=$PWD/TESTS ninja install</computeroutput></screen>
+
+    <para>
+      Now you will be able to run the tests in <filename
+      class="directory">TESTS/usr/libexec/installed-tests/SDL3</filename>. You
+      will have to run the tests individually. Some of them may need to be
+      manually killed and audio will need to be working so that you can hear
+      from the default audio output. Make sure <application>SDL3</application>
+      is installed before running the tests, or use the
+      <envar>LD_PRELOAD</envar> variable to preload <filename
+      class="libraryfile">libSDL3.so</filename> from <filename
+      class="directory">../build</filename> for each test.
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>lib32 Installation of SDL3</title>
+
+    <para>
+      Install lib32-<application>SDL3</application> by running the
+      following commands:
+    </para>
+
+<screen><userinput>cd ../                   &amp;&amp;
+rm -rf build build-tests &amp;&amp;
+mkdir  build             &amp;&amp;
+cd     build             &amp;&amp;
+
+CC="gcc -m32" CXX="g++ -m32"         \
+PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_INSTALL_LIBDIR=lib32  \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D SDL_TEST_LIBRARY=OFF        \
+      -D SDL_STATIC=OFF              \
+      -D SDL_RPATH=OFF               \
+      -W no-dev -G Ninja ..         &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>DESTDIR=$PWD/DESTDIR ninja install      &amp;&amp;
+cp -vr DESTDIR/usr/lib32/* /usr/lib32   &amp;&amp;
+rm -rf DESTDIR                          &amp;&amp;
+ldconfig</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>-D SDL_TEST_LIBRARY=OFF</parameter>: This parameter disables
+      building an unnecessary static library meant for the tests. It gets built
+      in the tests compilation.
+    </para>
+
+    <para>
+      <parameter>-D SDL_STATIC=OFF</parameter>: This parameter disables
+      building static libraries.
+    </para>
+
+    <para>
+      <parameter>-D SDL_RPATH=OFF</parameter>: This parameter disables
+      installing with rpath. It can cause security issues otherwise.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>None</seg>
+        <seg>libSDL3</seg>
+        <seg>/usr/include/SDL3 and
+             /usr/lib/cmake/SDL3</seg>
+        <!-- We technically have /usr/share/licenses/sdl3, but I don't think
+             we really need to document its presence. -->
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libsdl3">
+        <term><filename class="libraryfile">libSDL3</filename></term>
+        <listitem>
+          <para>
+            contains functions that provide low level access to audio,
+            keyboard, mouse, joystick, 3D hardware via OpenGL, and
+            2D frame buffer across multiple platforms
+          </para>
+          <indexterm zone="sdl3 libsdl3">
+            <primary sortas="c-libsdl3">libSDL3</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -44,6 +44,9 @@
       <para>June 21st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - SDL3: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - X11Libre: Archived. Fixes
           <ulink url="&slfs-issues;/191">#191</ulink>.</para>
         </listitem>

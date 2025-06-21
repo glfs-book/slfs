@@ -24,7 +24,6 @@
 <!ENTITY pugixml-version                     "1.15">
 <!ENTITY qrcodegencpp-version                "1.8.0">
 <!ENTITY re2-version                         "2024-07-02">
-<!ENTITY rubberband-version                  "4.0.0">
 <!ENTITY sdbus-cpp-version                   "2.1.0">
 <!ENTITY sdl2_net-version                    "2.2.0">
 <!ENTITY seatd-version                       "0.9.1">
@@ -156,6 +155,10 @@ the exact same version number... -->
 <!ENTITY fcitx5-anthy-version                "5.1.6">
 <!ENTITY fcitx5-m17n-version                 "5.1.3">
 <!ENTITY fcitx5-configtool-version           "5.1.9">
+<!-- MM-LIB -->
+<!ENTITY rubberband-version                  "4.0.0">
+<!ENTITY sdl3-version                        "3.2.16">
+<!ENTITY sdl2-version                        "2.32.56">
 
 <!-- WM -->
 <!-- CDE -->
