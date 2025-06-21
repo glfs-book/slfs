@@ -10,7 +10,9 @@
 
   <title>Graphical Components</title>
 
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xlibre/xlibre.xml"/>
+  <!--
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xlibre/xlibre.xml"/>
+  -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tk/tk.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="term/term.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="launch/launch.xml"/>

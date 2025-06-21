@@ -119,11 +119,6 @@ version, so keep this at that. -->
 <!ENTITY ksh-version                         "1.0.10">
 
 <!-- GRAPH -->
-<!-- Xlibre -->
-<!ENTITY xserver-minor                       "ca5fb1">
-<!ENTITY xserver-version                     "ca5fb14d0532e24a5b335f1aa8dbd43452478dd3">
-<!-- Used for noting what NVIDIA version compatibility is checked with. -->
-<!ENTITY nvidia-version                      "575.64">
 <!-- Graphical Toolkits -->
 <!ENTITY printproto-version                  "1.0.5">
 <!ENTITY libxp-version                       "1.0.4">
