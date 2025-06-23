@@ -54,7 +54,7 @@
       <ulink url="&blfs-svn;/general/librsvg.html">librsvg</ulink>,
       <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
       <xref linkend="libzip"/>,
-      &opengl;,
+      &wayland-gl;,
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
@@ -163,8 +163,13 @@ echo "Building $packagedir"
     ;;
 
     aquamarine-[0-9]* )
-      sed -i 's/OpenGL::OpenGL/OpenGL::GL/g' \
+
+      <literal># If Mesa libGL is installed, force CMake to use it</literal>
+      if ! pkgconf libglvnd; then
+        sed -i 's/OpenGL::OpenGL/OpenGL::GL/g'   \
           CMakeLists.txt
+      fi
+
       mkdir build
       cd    build
         cmake -D CMAKE_INSTALL_PREFIX=/usr       \

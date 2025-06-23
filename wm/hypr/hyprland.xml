@@ -54,7 +54,7 @@
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
       <xref linkend="libliftoff"/>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
-      &opengl;,
+      &wayland-gl;,
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <xref linkend="re2"/>,

@@ -41,7 +41,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Required patch if using Mesa libGL:
           <ulink url="&patch-root;/obs/obs-studio-&obs-studio-version;-allow_mesa.patch"/>
         </para>
       </listitem>
@@ -164,8 +164,9 @@
         </listitem>
         <listitem>
           <para>
+            &egl; and
             <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
-            (required for recording on Wayland)
+            (required for Wayland support)
           </para>
         </listitem>
       </itemizedlist>
@@ -200,10 +201,12 @@
 
     <para>
       Apply a patch to allow EGL libraries from
-      <application>Mesa</application>:
+      <application>Mesa</application> if needed:
     </para>
 
-<screen><userinput>patch -Np1 -i ../obs-studio-&obs-studio-version;-allow_mesa.patch</userinput></screen>
+<screen><userinput>if ! pkgconf libglvnd; then
+  patch -Np1 -i ../obs-studio-&obs-studio-version;-allow_mesa.patch
+fi</userinput></screen>
 
     <para>
       If you want to enable browser support, ensure you have downloaded the

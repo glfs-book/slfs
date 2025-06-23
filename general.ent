@@ -198,14 +198,16 @@ export -f as_root</userinput></screen>
 
 <!ENTITY gobject-introspection "<xref linkend='glib2'/> (with GObject Introspection)">
 
-<!ENTITY opengl
-         "OpenGL (<ulink url='&glfs-website;/shareddeps/libglvnd.html'>libglvnd</ulink>
-          or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>;
-          only the normal installation is required for either)">
+<!ENTITY gl
+         "<ulink url='&glfs-website;/shareddeps/libglvnd.html'>libglvnd</ulink>
+          or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>">
+<!ENTITY opengl "OpenGL (&gl;)">
+<!ENTITY egl    "EGL (&gl;)">
+<!ENTITY gles   "GLESv2 (&gl;)">
+<!ENTITY wayland-gl "OpenGL + EGL + GLESv2 (&gl;)">
 <!ENTITY gbm
          "GBM (<ulink url='&glfs-website;/shareddeps/gbm.html'>GBM from Mesa</ulink>
-          or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>;
-          only the normal installation is required for either)">
+          or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>)">
 
 <!ENTITY % xinclude-entities SYSTEM "xent.ent">
 %xinclude-entities;
