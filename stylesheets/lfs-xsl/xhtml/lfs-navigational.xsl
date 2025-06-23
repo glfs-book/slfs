@@ -15,6 +15,19 @@
       <xsl:call-template name="system.head.content"/>
       <xsl:call-template name="head.content"/>
       <xsl:call-template name="user.head.content"/>
+      <xsl:variable name="up" select="parent::*"/>
+      <xsl:variable name="home" select="/*[1]"/>
+      <xsl:if test="$home != .">
+	<link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
+      </xsl:if>
+      <xsl:if test="$home = .">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+        <div class="book">
+          <div class="titlepage">
+            <img src="images/slfs-logo.png" alt="SLFS Logo" width="150" height="150"/>
+          </div>
+        </div>
+      </xsl:if>
     </head>
   </xsl:template>
 

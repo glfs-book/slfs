@@ -143,7 +143,7 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(SLFSHTML) version wget-list
 	$(Q)if [ ! -e $(BASEDIR)/images ]; then \
       mkdir -p $(BASEDIR)/images;          \
    fi;
-	$(Q)cp images/*.png $(BASEDIR)/images
+	$(Q)cp images/*.{ico,png} $(BASEDIR)/images
 
 	$(Q)cd $(BASEDIR)/; sed -e "s@../images@images@g"           \
                            -i *.html
