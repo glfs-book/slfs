@@ -82,10 +82,10 @@ version, so keep this at that. -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20241231">
-<!ENTITY cuda-version                        "12.8.1">
-<!ENTITY cuda-nvidia-version                 "570.124.06">
+<!ENTITY cuda-version                        "12.9.1">
+<!ENTITY cuda-nvidia-version                 "575.57.08">
 <!ENTITY gcc-version                         "15.1.0">
-<!ENTITY gnat-binary-version                 "&gcc-version;-rc1">
+<!ENTITY gnat-binary-version                 "&gcc-version;-2">
 <!ENTITY intercal-version                    "0.33">
 <!-- START PYTHON -->
 <!ENTITY python3-major                "3">
