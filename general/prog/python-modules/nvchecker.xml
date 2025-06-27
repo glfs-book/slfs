@@ -67,6 +67,12 @@
     <sect3 role="installation">
       <title>Installation of nvchecker</title>
 
+      <para>
+        If you downloaded the recommended patch, apply it now:
+      </para>
+
+      <screen><userinput>patch -Np1 -i ../nvchecker.diff</userinput></screen>
+
       <para>Build the module:</para>
 
       &build-wheel;
