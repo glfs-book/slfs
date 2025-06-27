@@ -111,7 +111,7 @@
         </listitem>
         <listitem>
           <para>
-            <ulink url="&blfs-svn;/multimedia/intel-vaapi-driver.html">intel-vaapi-driver</ulink>
+            <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>
             and
             <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>
             (required for Intel QSV11 hardware encoding)
