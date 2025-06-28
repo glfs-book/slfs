@@ -67,7 +67,7 @@ version, so keep this at that. -->
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.44.0">
+<!ENTITY fastfetch-version                   "2.45.0">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.3">
 <!ENTITY tmux-version                        "3.5a">
