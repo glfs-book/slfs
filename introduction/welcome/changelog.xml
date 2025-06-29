@@ -44,6 +44,10 @@
       <para>June 28th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[Toxikuu] - yt-dlp: 2025.06.09 -&gt; 2025.06.25. Fixes
+          <ulink url="&slfs-issues;/206">#206</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[Toxikuu] - fastfetch: 2.44.0 -&gt; 2.45.0. Fixes
           <ulink url="&slfs-issues;/194">#194</ulink>.</para>
         </listitem>
