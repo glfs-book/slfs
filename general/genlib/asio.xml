@@ -5,7 +5,7 @@
   %general-entities;
 
   <!ENTITY asio-download-http
-    "https://github.com/chriskohlhoff/asio/archive/refs/tags/asio-&asio-version;.tar.gz">
+    "https://github.com/chriskohlhoff/asio/archive/asio-&asio-version;.tar.gz">
 ]>
 
 <sect1 id="asio" xreflabel="asio-&asio-version;">
