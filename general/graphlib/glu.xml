@@ -24,7 +24,6 @@
       This package provides the Mesa OpenGL Utility library.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -59,12 +58,11 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup ..                     \
-      --prefix=$XORG_PREFIX        \
-      $(pkgconf libglvnd &amp;&amp;        \
-      echo -D gl_provider=glvnd || \
-      echo -D gl_provider=gl)      \
-      --buildtype=release &amp;&amp;
+meson setup --prefix=$XORG_PREFIX   \
+            --buildtype=release     \
+            $(! pkgconf libglvnd   &amp;&amp;
+            echo -D gl_provider=gl) \
+            .. &amp;&amp;
 
 ninja</userinput></screen>
 
@@ -90,10 +88,9 @@ rm -vf /usr/lib/libGLU.a</userinput></screen>
 -->
 
     <para>
-      <command>$(pkgconf ...)</command>: These commands check which provider
-      OpenGL has been installed from based on <command>pkgconf</command> files.
-      Then it passes the correct provider to <command>meson</command> to ensure
-      this package works properly.
+      <command>$(! pkgconf ...)</command>: These commands check if the OpenGL
+      provider is not <application>libglvnd</application>, and if it's not, it
+      sets <application>Mesa</application> as the vendor.
     </para>
 
   </sect2>
