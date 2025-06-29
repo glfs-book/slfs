@@ -82,7 +82,7 @@ ninja</userinput></screen>
     </para>
 
 <screen role="root"><userinput>ninja install &amp;&amp;
-rm -vf /usr/lib/libSDL2*.{,l}a</userinput></screen>
+rm -vf /usr/lib/libSDL2_test.a</userinput></screen>
 
     <para>
       If you want to build the tests, issue the following commands:
@@ -147,7 +147,7 @@ ninja</userinput></screen>
     </para>
 
 <screen role="root"><userinput>DESTDIR=$PWD/DESTDIR ninja install      &amp;&amp;
-rm -vf DESTDIR/usr/lib32/libSDL2*.{,l}a &amp;&amp;
+rm -vf DESTDIR/usr/lib32/libSDL2_test.a &amp;&amp;
 cp -vr DESTDIR/usr/lib32/* /usr/lib32   &amp;&amp;
 rm -rf DESTDIR                          &amp;&amp;
 ldconfig</userinput></screen>
@@ -170,8 +170,8 @@ ldconfig</userinput></screen>
     </para>
 
     <para>
-      <command>rm -vf /usr/lib/libSDL2*.{,l}a</command>: This command removes
-      useless static libraries.
+      <command>rm -vf /usr/lib/libSDL2_test.a</command>: This command removes a
+      useless static library.
     </para>
 
   </sect2>
