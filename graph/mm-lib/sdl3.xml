@@ -29,7 +29,7 @@
     <tip><para>
       After you install this package, you should also install <xref
       linkend="sdl2"/> for <application>SDL2</application> support if you need
-      it. The amount of packages that use this package are very low so consider
+      it. The amount of packages that use this package is very low so consider
       <application>SDL2</application> support a requirement.
     </para></tip>
 
@@ -72,7 +72,7 @@
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
       <ulink
         url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
-      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>, and
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       and <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
