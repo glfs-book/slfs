@@ -41,6 +41,56 @@
     -->
 
     <listitem>
+      <para>July 3rd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - libime: 1.1.10 -&gt; 1.1.11. Fixes
+          <ulink url="&slfs-issues;/205">#205</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.7.1 -&gt; 0.8.0. Fixes
+          <ulink url="&slfs-issues;/204">#204</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 5.4.1 -&gt; 5.5.2. Fixes
+          <ulink url="&slfs-issues;/203">#203</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-table-extra: 5.1.7 -&gt; 5.1.8. Fixes
+          <ulink url="&slfs-issues;/202">#202</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-qt: 5.1.9 -&gt; 5.1.10. Fixes
+          <ulink url="&slfs-issues;/201">#201</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-m17n: 5.1.3 -&gt; 5.1.4. Fixes
+          <ulink url="&slfs-issues;/200">#200</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-lua: 5.0.14 -&gt; 5.0.15. Fixes
+          <ulink url="&slfs-issues;/199">#199</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-gtk: 5.1.3 -&gt; 5.1.4. Fixes
+          <ulink url="&slfs-issues;/198">#198</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-chinese-addons: 5.1.8 -&gt; 5.1.9. Fixes
+          <ulink url="&slfs-issues;/197">#197</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-anthy: 5.1.6 -&gt; 5.1.7. Fixes
+          <ulink url="&slfs-issues;/196">#196</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5: 5.1.12 -&gt; 5.1.14. Fixes
+          <ulink url="&slfs-issues;/195">#195</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 28th, 2025</para>
       <itemizedlist>
         <listitem>
