@@ -71,7 +71,7 @@ version, so keep this at that. -->
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.3">
 <!ENTITY tmux-version                        "3.5a">
-<!ENTITY yt-dlp-version                      "2025.06.25">
+<!ENTITY yt-dlp-version                      "2025.06.30">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.12.2">
 <!ENTITY eza-version                         "0.21.6">

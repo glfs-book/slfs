@@ -44,6 +44,10 @@
       <para>July 3rd, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[Toxikuu] - yt-dlp: 2025.06.25 -&gt; 2025.06.30. Fixes
+          <ulink url="&slfs-issues;/213">#213</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libime: 1.1.10 -&gt; 1.1.11. Fixes
           <ulink url="&slfs-issues;/205">#205</ulink>.</para>
         </listitem>
