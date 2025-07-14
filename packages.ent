@@ -109,8 +109,8 @@ version, so keep this at that. -->
 <!ENTITY unlambda-version                    "2.0.0">
 <!-- JAVA -->
 <!ENTITY java-major-version                  "17">
-<!ENTITY java-version                        "&java-major-version;.0.15">
-<!ENTITY java-build                          "5">
+<!ENTITY java-version                        "&java-major-version;.0.16">
+<!ENTITY java-build                          "7">
 <!ENTITY openjdk-major-version               "&java-major-version;">
 <!ENTITY openjdk-version                     "&openjdk-major-version;.0.16">
 <!ENTITY openjdk-build                       "7">

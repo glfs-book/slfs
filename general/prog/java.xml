@@ -4,8 +4,9 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY ojdk-bin-tag            "openjdk-&java-version;+&java-build;-bin">
-  <!ENTITY openjdk-download-binary "&misc-dl-root;/&ojdk-bin-tag;/&ojdk-bin-tag;.tar.xz">
+  <!ENTITY ojdk-bin-tag "openjdk-&java-version;+&java-build;-bin">
+  <!ENTITY jdk-dl-root "https://anduin.linuxfromscratch.org/BLFS/OpenJDK/LTS-17">
+  <!ENTITY openjdk-download-binary "&jdk-dl-root;/&ojdk-bin-tag;/&ojdk-bin-tag;.tar.xz">
 ]>
 
 <sect1 id="java" xreflabel="Java-&java-version;+&java-build;">
