@@ -41,6 +41,44 @@
     -->
 
     <listitem>
+      <para>July 15th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - MelonDS: 1.0rc -&gt; 1.0. Fixes
+          <ulink url="&slfs-issues;/227">#227</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fastfetch: 2.45.0 -&gt; 2.46.0. Fixes
+          <ulink url="&slfs-issues;/225">#225</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - eza: 0.22.0 -&gt; 0.22.1. Fixes
+          <ulink url="&slfs-issues;/224">#224</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - BTOP++: 1.4.3 -&gt; 1.4.4. Fixes
+          <ulink url="&slfs-issues;/223">#223</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprwayland-scanner: 0.4.4 -&gt; 0.4.5. Fixes
+          <ulink url="&slfs-issues;/222">#222</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.8.0 -&gt; 0.8.1. Fixes
+          <ulink url="&slfs-issues;/221">#221</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprgraphics: 0.1.4 -&gt; 0.1.5. Fixes
+          <ulink url="&slfs-issues;/220">#220</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - aquamarine: 0.8.0 -&gt; 0.9.1. Fixes
+          <ulink url="&slfs-issues;/219">#219</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 14th, 2025</para>
       <itemizedlist>
         <listitem>

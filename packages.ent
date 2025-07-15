@@ -44,7 +44,7 @@
 <!-- General Utilities -->
 <!ENTITY cava-version                        "0.10.4">
 <!ENTITY htop-version                        "3.4.1">
-<!ENTITY btop-version                        "1.4.3">
+<!ENTITY btop-version                        "1.4.4">
 <!ENTITY cldr-emoji-annotation-version       "38">
 <!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">
 <!ENTITY inxi-rev                            "1">
@@ -67,14 +67,14 @@ version, so keep this at that. -->
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.45.0">
+<!ENTITY fastfetch-version                   "2.46.0">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.3">
 <!ENTITY tmux-version                        "3.5a">
 <!ENTITY yt-dlp-version                      "2025.06.30">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.12.2">
-<!ENTITY eza-version                         "0.22.0">
+<!ENTITY eza-version                         "0.22.1">
 <!ENTITY iputils-version                     "20250605">
 <!ENTITY libtree-version                     "3.1.1">
 <!ENTITY tealdeer-version                    "1.7.2">
@@ -165,12 +165,12 @@ the exact same version number... -->
 <!ENTITY cde-de-version                      "2.5.2">
 <!-- Hypr -->
 <!ENTITY hyprland-protocols-version          "0.6.4">
-<!ENTITY hyprutils-version                   "0.8.0">
+<!ENTITY hyprutils-version                   "0.8.1">
 <!ENTITY hyprlang-version                    "0.6.3">
 <!ENTITY hyprcursor-version                  "0.1.12">
-<!ENTITY hyprwayland-scanner-version         "0.4.4">
-<!ENTITY aquamarine-version                  "0.8.0">
-<!ENTITY hyprgraphics-version                "0.1.4">
+<!ENTITY hyprwayland-scanner-version         "0.4.5">
+<!ENTITY aquamarine-version                  "0.9.1">
+<!ENTITY hyprgraphics-version                "0.1.5">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-qtutils-version            "0.1.4">
 <!ENTITY hyprland-version                    "0.49.0">
@@ -199,7 +199,7 @@ the exact same version number... -->
 <!ENTITY p20-emu-version                     "d75a83ca9b107e1ae1a54598e4045c2843bd823e">
 <!-- Game-Emu -->
 <!-- NDS -->
-<!ENTITY melonds-version                     "1.0rc">
+<!ENTITY melonds-version                     "1.0">
 <!-- GBA -->
 <!ENTITY mgba-minor-version                  "eeb52e">
 <!ENTITY mgba-version                        "eeb52e40274a8240fe066a16b93d9d46c4b677b9">
