@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libmspack-root "https://github.com/kyz/libmspack/archive">
+  <!ENTITY libmspack-download
+    "&libmspack-root;/v&libmspack-version;/libmspack-&libmspack-version;.tar.gz">
+]>
+
+<sect1 id="libmspack" xreflabel="libmspack-&libmspack-version;">
+  <?dbhtml filename="libmspack.html"?>
+
+  <title>libmspack-&libmspack-version;</title>
+
+  <indexterm zone="libmspack">
+    <primary sortas="a-libmspack">libmspack</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libmspack</title>
+
+    <para>
+      The <application>libmspack</application> package provides a library that
+      handles some Microsoft compression formats such as CAB, CHM, and HLP. It
+      also provides <command>cabextract</command> which extracts Microsoft
+      cabinet files.
+    </para>
+    
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&libmspack-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libmspack</title>
+
+    <para>
+      Install <application>libmspack</application> by executing the following
+      commands:
+    </para>
+
+<screen><userinput>cd libmspack                                &amp;&amp;
+autoreconf -fi                              &amp;&amp;
+./configure --prefix=/usr --disable-static  &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+    <para>
+      Now install the <command>cabextract</command> program by running the
+      following commands:
+    </para>
+
+<screen><userinput>cd ../cabextract                            &amp;&amp;
+autoreconf -fi -I/usr/share/gettext/m4      &amp;&amp;
+./configure --prefix=/usr                    \
+            --disable-static                 \
+            --with-external-libmspack=yes   &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          cabextract
+        </seg>
+        <seg>
+          libmspack
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="cabextract">
+        <term><command>cabextract</command></term>
+        <listitem>
+          <para>
+            extracts Microsoft cabinet (<filename
+            class="extension">.CAB</filename>) files
+          </para>
+          <indexterm zone="libmspack cabextract">
+            <primary sortas="b-cabextract">cabextract</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lib-libmspack">
+        <term><filename class="libraryfile">libmspack</filename></term>
+        <listitem>
+          <para>
+            contains functions for working with some Microsoft compression
+            formats
+          </para>
+          <indexterm zone="libmspack lib-libmspack">
+            <primary sortas="c-lib-libmspack">libmspack</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
