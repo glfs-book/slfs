@@ -44,7 +44,8 @@
       <para>July 18th, 2025</para>
       <itemizedlist>
         <listitem>
-          <para>[Toxikuu] - fastfetch: 2.46.0 -&gt; 2.47.0.</para>
+          <para>[Toxikuu] - fastfetch: 2.46.0 -&gt; 2.47.0. Fixes
+          <ulink url="&slfs-issues;/231">#231</ulink>.</para>
         </listitem>
       </itemizedlist>
     </listitem>
