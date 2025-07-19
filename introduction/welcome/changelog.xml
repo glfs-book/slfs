@@ -44,6 +44,10 @@
       <para>July 18th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Winetricks: Added. Fixes
+          <ulink url="&slfs-issues;/212">#212</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libmspack: Added.</para>
         </listitem>
         <listitem>

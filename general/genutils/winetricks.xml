@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY wt-root "https://github.com/Winetricks/winetricks/archive">
+  <!ENTITY winetricks-download
+    "&wt-root;/&winetricks-version;/winetricks-&winetricks-version;.tar.gz">
+]>
+
+<sect1 id="winetricks" xreflabel="Winetricks-&winetricks-version;">
+  <?dbhtml filename="winetricks.html"?>
+
+  <title>Winetricks-&winetricks-version;</title>
+
+  <indexterm zone="winetricks">
+    <primary sortas="a-winetricks">Winetricks</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Winetricks</title>
+
+    <para>
+      Winetricks is a shell script that can fix various issues with <ulink
+      url="&glfs-website;/wine/wine.html">Wine</ulink>. Most often, these
+      issues arise from files being missing that some applications may expect,
+      such as font files. This package can download those files, and extract
+      them if needed.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&winetricks-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Winetricks Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> or
+      <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink> and
+      <ulink url="&glfs-website;/wine/wine.html">Wine</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/7zip.html">7zip</ulink>,
+      &unzip;,
+      <xref linkend="libmspack"/>,
+      <ulink url="&blfs-svn;/general/unrar.html">UnRar</ulink>, and
+      <ulink url="&blfs-svn;/xsoft/xdg-utils.html">xdg-utils</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/kdialog">kdialog</ulink> (for KDE)
+      or
+      <ulink url="&arch-pkgs;/extra/x86_64/zenity">zentiy</ulink> (for GNOME);
+      this package uses either to provide a GUI interface but is optional
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Winetricks</title>
+
+    <para>
+      Install Winetricks as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          winetricks
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="winetricks-bin">
+        <term><command>winetricks</command></term>
+        <listitem>
+         <para>
+           installs various files some Windows applications expect
+         </para>
+          <indexterm zone="winetricks winetricks-bin">
+            <primary sortas="b-winetricks-bin">winetricks</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
