@@ -44,6 +44,10 @@
       <para>July 18th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[Toxikuu] - eza: 0.22.1 -&gt; 0.23.0. Fixes
+          <ulink url="&slfs-issues;/236">#236</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Winetricks: Added. Fixes
           <ulink url="&slfs-issues;/212">#212</ulink>.</para>
         </listitem>
