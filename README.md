@@ -48,14 +48,15 @@ whereas for systemd, it would be in `~/public_html/slfs-systemd`.
 It will by default make each package and section its own page then link
 everything together for a smooth experience.
 
-You can set a path to SLFS themes by running
-`make SLFS_THEME_PATH=<path>`. The default is `stylesheets/lfs-xsl`.
+You can set a path to the themes by running `make THEME_PATH=<path>`. The
+default is `stylesheets/lfs-xsl`. You can find more at
+https://github.com/glfs-book/lfs-themes.
 
 The dark theme is also the default, but you can switch the theme by
-running `make SLFS_THEME=<theme>`. `<theme>` can equal:
+running `make THEME=<theme>`. `<theme>` can equal:
 - `light`
 - `dark`
 
-Note that if you set `SLFS_THEME_PATH`, you can set `SLFS_THEME` to more
+Note that if you set `THEME_PATH`, you can set `THEME` to more
 than just what the available options are shown above, but only the available
 themes that are in that path.

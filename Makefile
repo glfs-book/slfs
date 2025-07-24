@@ -10,15 +10,15 @@
 
 # Adjust these to suit your installation, or include the variables
 # you wish to change in local.mk, which must be created manually.
-AUTO_CLEAN         ?= 1
-SLFS_THEME      ?= dark
-SLFS_THEME_PATH ?= stylesheets/lfs-xsl
-RENDERTMP          := $(shell mktemp -d)
-HTML_ROOT          ?= $(HOME)/public_html
-DUMP_ROOT          ?= $(HOME)
-CHUNK_QUIET        ?= 1
-ROOT_ID             =
-SHELL               = /bin/bash
+AUTO_CLEAN  ?= 1
+THEME       ?= dark
+THEME_PATH  ?= stylesheets/lfs-xsl
+RENDERTMP   := $(shell mktemp -d)
+HTML_ROOT   ?= $(HOME)/public_html
+DUMP_ROOT   ?= $(HOME)
+CHUNK_QUIET ?= 1
+ROOT_ID      =
+SHELL        = /bin/bash
 
 ALLXML := $(filter-out $(RENDERTMP)/%, \
 	$(wildcard *.xml */*.xml */*/*.xml */*/*/*.xml */*/*/*/*.xml))
@@ -94,11 +94,11 @@ help:
 	@echo "                       steps to produce the output is shown."
 	@echo "                       Default is unset."
 	@echo ""
-	@echo "  SLFS_THEME_PATH=<path> Sets the path of themes (CSS files)."
-	@echo "                            'stylesheets/lfs-xsl' is the default."
+	@echo "  THEME_PATH=<path>    Sets the path of themes (CSS files)."
+	@echo "                       'stylesheets/lfs-xsl' is the default."
 	@echo ""
-	@echo "  SLFS_THEME=<theme>     Sets the theme of the book, ie. light/dark."
-	@echo "                            The dark theme is the default."
+	@echo "  THEME=<theme>        Sets the theme of the book, ie. light/dark."
+	@echo "                       The dark theme is the default."
 	@echo ""
 	@echo "Targets:"
 	@echo "  help                 Show this help text."
@@ -136,7 +136,7 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(SLFSHTML) version wget-list
       mkdir -p $(BASEDIR)/stylesheets;          \
    fi;
 
-	$(Q)cp $(SLFS_THEME_PATH)/$(SLFS_THEME).lfs.css $(BASEDIR)/stylesheets/lfs.css
+	$(Q)cp $(THEME_PATH)/$(THEME).lfs.css $(BASEDIR)/stylesheets/lfs.css
 	$(Q)cp stylesheets/lfs-xsl/lfs-print.css $(BASEDIR)/stylesheets
 	$(Q)sed -i 's|../stylesheet|stylesheet|' $(BASEDIR)/index.html
 
