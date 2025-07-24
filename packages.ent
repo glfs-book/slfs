@@ -207,7 +207,7 @@ the exact same version number... -->
 <!ENTITY mgba-version                        "eeb52e40274a8240fe066a16b93d9d46c4b677b9">
 <!-- GCN/Wii -->
 <!-- REQUIRED -->
-<!ENTITY dolphin-version                     "2503a">
+<!ENTITY dolphin-version                     "2506a">
 <!ENTITY dolphin-qt-external                 "495517af2b922c10c24f543e0fd6ea3ddf774e50">
 <!ENTITY dolphin-sfml-external               "7f1162dfea4969bc17417563ac55d93b72e84c1e">
 <!ENTITY dolphin-vk-mem-alloc-external       "3bab6924988e5f19bf36586a496156cf72f70d9f">
@@ -217,7 +217,7 @@ the exact same version number... -->
 <!ENTITY dolphin-implot-external             "18c72431f8265e2b0b5378a3a73d8a883b2175ff">
 <!ENTITY dolphin-mgba-external               "8739b22fbc90fdf0b4f6612ef9c0520f0ba44a51">
 <!ENTITY dolphin-minizip-ng-external         "55db144e03027b43263e5ebcb599bf0878ba58de">
-<!ENTITY dolphin-rcheevos-external           "d54cf8f1059cebc90a6f5ecdf03df69259f22054">
+<!ENTITY dolphin-rcheevos-external           "0115d9198ff7a73ff6568027dfb948ef6031818c">
 <!ENTITY dolphin-spirv-cross-external        "ebe2aa0cd80f5eb5cd8a605da604cacf72205f3b">
 <!ENTITY dolphin-tinygltf-external           "c5641f2c22d117da7971504591a8f6a41ece488b">
 <!ENTITY dolphin-xxhash-external             "e626a72bc2321cd320e953a0ccf1584cad60f363">

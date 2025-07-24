@@ -117,8 +117,7 @@ EOF</userinput></screen>
 <screen><userinput>mkdir dolphin-emu &amp;&amp;
 cd    dolphin-emu &amp;&amp;
 grep -v '^#' ../dolphin-list | wget -i- -c \
-    -B &dolphin-dl-root; &amp;&amp;
-wget -c &patch-root;/dolphin/dolphin-xcb_env-1.patch</userinput></screen>
+    -B &dolphin-dl-root;</userinput></screen>
 
   </sect2>
 
@@ -195,6 +194,7 @@ mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput><
 
 <screen><userinput>cd dolphin-&dolphin-version;</userinput></screen>
 
+<!--
     <para>
       Apply a patch to force <application>XCB</application> to be used
       in <application>Dolphin</application> on
@@ -203,6 +203,7 @@ mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput><
     </para>
 
 <screen><userinput>patch -Np1 -i ../dolphin-xcb_env-1.patch</userinput></screen>
+-->
 
     <para>
       Install <application>Dolphin</application> by running the following
