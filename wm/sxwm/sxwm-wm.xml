@@ -58,10 +58,7 @@
       Now, as the &root; user:
     </para>
 
-<!-- TODO: Remove manual copying in next release -->
-<screen role="root"><userinput>make PREFIX=/usr install  &amp;&amp;
-mkdir -pv /usr/share/sxwm &amp;&amp;
-cp -v default_sxrc /usr/share/sxwm</userinput></screen>
+<screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
 
   </sect2>
 
@@ -72,7 +69,7 @@ cp -v default_sxrc /usr/share/sxwm</userinput></screen>
       <title>Config Files</title>
       <para>
         <filename>~/.config/sxwmrc</filename>. The default version
-        is in <filename class="directory">/usr/share/sxwm</filename> and will
+        is in <filename class="directory">/usr/share</filename> and will
         not be used. It can be copied to
         <filename class="directory">~/.config/sxwmrc</filename> manually.
       </para>
@@ -89,17 +86,13 @@ cp -v default_sxrc /usr/share/sxwm</userinput></screen>
         Create the configuration file:
       </para>
 
-<!-- TODO: Change default_sxrc to default_sxwmrc in next release. -->
 <screen><userinput>mkdir -pv ~/.config &amp;&amp;
-cp -v /usr/share/sxwm/default_sxrc ~/.config/sxwmrc</userinput></screen>
+cp -v /usr/share/sxwmrc ~/.config/sxwmrc</userinput></screen>
 
       <para>
         Edit the configuration file as necessary to fit your workflow.
-<!-- TODO: WILL BE IN NEXT RELEASE!!
-        You can
-        read how to configure <application>sxwm</application> by running
+        You can read how to configure sxwm by running
         <command>man sxwm</command>.
--->
       </para>
 
       <para>
@@ -131,9 +124,7 @@ cp -v /usr/share/sxwm/default_sxrc ~/.config/sxwmrc</userinput></screen>
           None
         </seg>
         <seg>
-          /usr/share/sxwm
-          <!-- TODO: NEXT RELEASE
-          and /usr/share/xsessions -->
+          /usr/share/xsessions
         </seg>
       </seglistitem>
     </segmentedlist>

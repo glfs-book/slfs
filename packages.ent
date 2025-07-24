@@ -179,7 +179,7 @@ the exact same version number... -->
 <!-- i3 -->
 <!ENTITY i3-version                          "4.24">
 <!-- SXWM -->
-<!ENTITY sxwm-version                        "1.5">
+<!ENTITY sxwm-version                        "1.6">
 <!-- Wayfire -->
 <!ENTITY wf-version                          "0.9.0">
 <!ENTITY wf-config-version                   "&wf-version;">

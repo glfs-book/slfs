@@ -44,6 +44,10 @@
       <para>July 24th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - sxwm: 1.5 -&gt; 1.6. Fixes
+          <ulink url="&slfs-issues;/228">#228</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - wbg: 1.2.0 -&gt; 1.3.0. Fixes
           <ulink url="&slfs-issues;/242">#242</ulink>.</para>
         </listitem>
