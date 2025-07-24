@@ -44,6 +44,18 @@
       <para>July 24th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - yt-dlp: 2025.06.30 -&gt; 2025.07.21.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Wofi: 1.4.1 -&gt; 1.5.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.50.0 -&gt; 0.50.1.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - OSTree: 2025.3 -&gt; 2025.4.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - sxwm: 1.5 -&gt; 1.6. Fixes
           <ulink url="&slfs-issues;/228">#228</ulink>.</para>
         </listitem>

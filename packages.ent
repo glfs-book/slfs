@@ -73,7 +73,7 @@ version, so keep this at that. -->
 <!ENTITY scdoc-version                       "1.11.3">
 <!ENTITY tmux-version                        "3.5a">
 <!ENTITY winetricks-version                  "20250102">
-<!ENTITY yt-dlp-version                      "2025.06.30">
+<!ENTITY yt-dlp-version                      "2025.07.21">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.12.2">
 <!ENTITY eza-version                         "0.23.0">
@@ -140,7 +140,7 @@ the exact same version number... -->
 <!ENTITY rofi-full-version                   "1.7.9.1">
 <!ENTITY rofi-version                        "1.7.9">
 <!ENTITY rofi-wayland-version                "&rofi-version;+wayland1">
-<!ENTITY wofi-version                        "1.4.1">
+<!ENTITY wofi-version                        "1.5">
 <!-- App -->
 <!ENTITY mesa-demos-version                  "9.0.0">
 <!ENTITY obs-studio-version                  "31.0.3">
@@ -175,7 +175,7 @@ the exact same version number... -->
 <!ENTITY hyprgraphics-version                "0.1.5">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-qtutils-version            "0.1.4">
-<!ENTITY hyprland-version                    "0.50.0">
+<!ENTITY hyprland-version                    "0.50.1">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.24">
 <!-- SXWM -->
@@ -249,7 +249,7 @@ the exact same version number... -->
 <!-- BINARY SUPPORT -->
 <!-- Binary Support -->
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY ostree-version                      "2025.3">
+<!ENTITY ostree-version                      "2025.4">
 <!ENTITY flatpak-version                     "1.16.1">
 
 <!-- SVR4 -->
