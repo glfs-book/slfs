@@ -56,6 +56,7 @@
   <sect2 role="installation">
     <title>Installation of wbg</title>
 
+<!---
     <para>
       First apply a fix that avoids an error about possible uninitialized
       values:
@@ -63,6 +64,7 @@
 
 <screen><userinput>sed 's/float t\[6\]/float t\[6\] = {0}/' \
   -i 3rd-party/nanosvg/src/nanosvg.h</userinput></screen>
+-->
 
     <para>
       Install <application>wbg</application> by running the following
