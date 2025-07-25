@@ -128,7 +128,7 @@ version, so keep this at that. -->
 <!ENTITY xcb-imdkit-version                  "1.0.9">
 <!-- Terminal Emulators -->
 <!ENTITY alacritty-version                   "0.15.1">
-<!ENTITY foot-version                        "1.23.0">
+<!ENTITY foot-version                        "1.23.1">
 <!-- Launchers -->
 <!-- According to upstream, 1.7.9.1 was "just a tarball fix, no code change".
 As a side effect of that they just slapped the 1.7.9.1 tarballs in the 1.7.9
