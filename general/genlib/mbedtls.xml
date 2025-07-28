@@ -10,7 +10,6 @@
 <sect1 id="mbedtls" xreflabel="Mbed-TLS-&mbedtls-version;">
   <?dbhtml filename="mbedtls.html"?>
 
-
   <title>Mbed-TLS-&mbedtls-version;</title>
 
   <indexterm zone="mbedtls">
@@ -53,13 +52,12 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-CFLAGS="-Wno-unterminated-string-initialization"   \
-CXXFLAGS="-Wno-unterminated-string-initialization" \
-cmake -D CMAKE_INSTALL_PREFIX=/usr                 \
-      -D CMAKE_BUILD_TYPE=Release                  \
-      -D CMAKE_SKIP_RPATH=ON                       \
-      -D USE_SHARED_MBEDTLS_LIBRARY=ON             \
-      -D USE_STATIC_MBEDTLS_LIBRARY=OFF            \
+cmake -D CMAKE_INSTALL_PREFIX=/usr      \
+      -D CMAKE_BUILD_TYPE=Release       \
+      -D CMAKE_SKIP_RPATH=ON            \
+      -D USE_SHARED_MBEDTLS_LIBRARY=ON  \
+      -D USE_STATIC_MBEDTLS_LIBRARY=OFF \
+      -D ENABLE_TESTING=OFF             \
       -G Ninja .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -81,11 +79,6 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
-    <para>
-      <envar>C{,XX}FLAGS="-Wno-unterminated-string-initialization"</envar>:
-      These variables disable a false positive being triggered by GCC-15.x.x.
-    </para>
-
     &cmake-skip-install-rpath;
 
     <para>
@@ -96,6 +89,11 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
     <para>
       <parameter>-D USE_STATIC_MBEDTLS_LIBRARY=OFF</parameter>: This parameter
       ensures the main libraries are not statically built.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_TESTING=OFF</parameter>: This parameter disables
+      building tests that make the building process twice as long.
     </para>
 
     <para>

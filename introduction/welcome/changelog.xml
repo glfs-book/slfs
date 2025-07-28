@@ -41,6 +41,18 @@
     -->
 
     <listitem>
+      <para>July 28th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Mbed-TLS: 3.6.3 -&gt; 3.6.4.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprlang (Hypr Libraries): 0.6.3 -&gt; 0.6.4.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 25th, 2025</para>
       <itemizedlist>
         <listitem>
