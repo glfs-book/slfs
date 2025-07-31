@@ -1,7 +1,7 @@
 # Supplemental Linux From Scratch (SLFS)
 
 This book is dedicated to supplementing an LFS, MLFS, BLFS, and/or GLFS x86-64
-system by providing package not found in the other LFS books. 
+system by providing packages not found in the other LFS books. 
 
 This book boasts several libraries and utilities not covered in the `*LFS`
 books. On top of that, it also provides: SVR4-related tooling, binary-only
