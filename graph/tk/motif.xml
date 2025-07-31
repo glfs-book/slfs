@@ -112,8 +112,8 @@ export YACC=byacc</userinput></screen>
     </para>
 
 <screen><userinput>sed -i '1 i\%option main' tools/wml/wmluiltok.l &amp;&amp;
-CFLAGS="-std=gnu17"       \
-CXXFLAGS="-std=gnu17"     \
+CFLAGS+=" -std=gnu17"     \
+CXXFLAGS+=" -std=gnu17"   \
 ./configure --prefix=/usr \
             --with-x      \
             --enable-motif22-compatibility \

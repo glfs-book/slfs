@@ -102,7 +102,7 @@
     </para>
 
 <screen><userinput>./autogen.sh &amp;&amp;
-CFLAGS="-std=gnu17" \
+CFLAGS+=" -std=gnu17" \
 ./configure --prefix=/usr --disable-static &amp;&amp;
 make</userinput></screen>
 
