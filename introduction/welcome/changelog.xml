@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>July 31st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.8.1 -&gt; 0.8.2. Fixes
+          <ulink url="&slfs-issues;/243">#243</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 28th, 2025</para>
       <itemizedlist>
         <listitem>
