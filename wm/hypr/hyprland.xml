@@ -88,7 +88,7 @@
     <title>Installation of Hyprland</title>
 
     <para>
-      Install <application>Hyprland</application> by running the following
+      Install Hyprland by running the following
       commands:
     </para>
 
@@ -235,7 +235,7 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>Hyprland</command></term>
         <listitem>
           <para>
-            is the <application>Hyprland</application> compositor
+            is the Hyprland compositor
           </para>
           <indexterm zone="hyprland Hyprland">
             <primary sortas="b-Hyprland">Hyprland</primary>

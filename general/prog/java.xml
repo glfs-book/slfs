@@ -114,7 +114,7 @@
     <para>
       Begin by extracting the appropriate binary tarball for your
       architecture and changing to the extracted directory. Install the binary
-      <application>OpenJDK</application> with the following commands as the
+      OpenJDK with the following commands as the
       <systemitem class="username">root</systemitem> user:
     </para>
 

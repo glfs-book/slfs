@@ -21,7 +21,7 @@
     <title>Introduction to enet</title>
 
     <para>
-      The <application>enet</application> package provides a UDP networking
+      The enet package provides a UDP networking
       library.
     </para>
 
@@ -39,7 +39,7 @@
     <title>Installation of enet</title>
 
     <para>
-      Install <application>enet</application> by running the following
+      Install enet by running the following
       commands:
     </para>
 

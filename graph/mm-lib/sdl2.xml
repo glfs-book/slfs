@@ -20,12 +20,12 @@
     <title>Introduction to sdl2-compat</title>
 
     <para>
-      The Simple DirectMedia Layer Version 2 (<application>SDL2</application>
+      The Simple DirectMedia Layer Version 2 (SDL2
       for short) is a cross-platform library designed to make it easy to write
       multimedia software, such as games and emulators. This package is a
       compatibility layer and uses <xref linkend="sdl3"/> under the hood. It
       provides support for packages that use SDL2 and have not switched to
-      <application>SDL3</application>, yet.
+      SDL3, yet.
     </para>
 
     <itemizedlist spacing="compact">
@@ -61,7 +61,7 @@
     <title>Installation of sdl2-compat</title>
 
     <para>
-      Install <application>sdl2-compat</application> by running the following
+      Install sdl2-compat by running the following
       commands:
     </para>
 
@@ -109,7 +109,7 @@ DESTDIR=$PWD/TESTS ninja install</computeroutput></screen>
       You will have to run the tests individually. Some of them may need to be
       manually killed and audio will need to be working so that you can hear
       from the default audio output. Make sure
-      <application>sdl2-compat</application> is installed before running the
+      sdl2-compat is installed before running the
       tests, or use the <envar>LD_PRELOAD</envar> variable to preload <filename
       class="libraryfile">libSDL2.so</filename> from <filename
       class="directory">../build</filename> for each test.
@@ -121,7 +121,7 @@ DESTDIR=$PWD/TESTS ninja install</computeroutput></screen>
     <title>lib32 Installation of sdl2-compat</title>
 
     <para>
-      Install lib32-<application>sdl2-compat</application> by running the
+      Install lib32-sdl2-compat by running the
       following commands:
     </para>
 

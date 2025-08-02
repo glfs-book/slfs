@@ -22,7 +22,7 @@
     <title>Introduction to CUDA</title>
 
     <para>
-      The <application>CUDA</application> proprietary toolkit provides tools
+      The CUDA proprietary toolkit provides tools
       for running code on NVIDIA GPUs. This is otherwise known as hardware
       acceleration.
     </para>
@@ -40,7 +40,7 @@
       want to download this runfile. For this reason, it is not recommended to
       download it when using limited hotspot data. Its size can largely be
       attributed to containing compilers as well as the
-      <application>NVIDIA</application> driver. The driver only accounts for
+      NVIDIA driver. The driver only accounts for
       10% of the runfile's size.
     </para></note>
 
@@ -80,7 +80,7 @@
 ln -sfv cuda-&cuda-version; /opt/cuda</userinput></screen>
 
     <para>
-      Install <application>CUDA</application> by running the following
+      Install CUDA by running the following
       commands as the &root; user:
     </para>
 
@@ -120,7 +120,7 @@ rm -rf cuda_&cuda-version;_&cuda-nvidia-version;_linux</userinput></screen>
       The above instructions extract the runfile and installs components
       manually. In the past, this was not needed. However,
       <command>cuda_installer</command> fails to load as it relies on an older
-      <application>libxml2</application> ABI. This process will be kept even
+      libxml2 ABI. This process will be kept even
       when the ABI gets fixed as it allows for more control, despite being more
       complicated.
     </para></note>
@@ -142,7 +142,7 @@ rm -rf cuda_&cuda-version;_&cuda-nvidia-version;_linux</userinput></screen>
 
     <para>
       Finally, patch a header file to fix building against
-      <application>glibc-2.41</application>, again as the &root; user:
+      glibc-2.41, again as the &root; user:
     </para>
 
 <screen role="root"><userinput>patch -Np1 /opt/cuda-&cuda-version;/targets/x86_64-linux/include/crt/math_functions.h \

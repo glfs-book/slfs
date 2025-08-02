@@ -21,9 +21,9 @@
     <title>Introduction to heirloom-ex-vi</title>
 
     <para>
-      The <application>heirloom-ex-vi</application> package, also known as
+      The heirloom-ex-vi package, also known as
       <quote>The Traditional Vi</quote>, is a portable version of 2.11BSD/SVR4
-      <application>vi</application>.
+      vi.
     </para>
 
     <itemizedlist spacing="compact">
@@ -73,7 +73,7 @@
 <screen><userinput>patch -Np1 -i ../heirloom-ex-vi-&heirloom-ex-vi-minor-version;-paths.patch</userinput></screen>
 
     <para>
-      Install <application>heirloom-ex-vi</application> by running the following
+      Install heirloom-ex-vi by running the following
       command:
     </para>
 

@@ -21,7 +21,7 @@
     <title>Introduction to mGBA</title>
 
     <para>
-      The <application>mGBA</application> package provides a GBA emulator. It
+      The mGBA package provides a GBA emulator. It
       can also be used with other emulators.
     </para>
 
@@ -65,7 +65,7 @@
     <title>Installation of mGBA</title>
 
     <para>
-      Install <application>mGBA</application> by running the following
+      Install mGBA by running the following
       commands:
     </para>
 
@@ -134,8 +134,8 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
         <term><command>mgba</command></term>
         <listitem>
           <para>
-            is the <application>SDL2</application> frontend for
-            <application>mGBA</application>
+            is the SDL2 frontend for
+            mGBA
           </para>
           <indexterm zone="mgba mgba-bin">
             <primary sortas="b-mgba-bin">mgba</primary>
@@ -147,8 +147,8 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
         <term><command>mgba-qt</command></term>
         <listitem>
           <para>
-            is the <application>Qt-6</application> frontend for
-            <application>mGBA</application>
+            is the Qt-6 frontend for
+            mGBA
           </para>
           <indexterm zone="mgba mgba-qt">
             <primary sortas="b-mgba-qt">mgba-qt</primary>
@@ -160,7 +160,7 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
         <term><filename class="libraryfile">libmgba</filename></term>
         <listitem>
           <para>
-            contains the <application>mGBA</application> core which can be
+            contains the mGBA core which can be
             used by frontends and other emulators
           </para>
           <indexterm zone="mgba libmgba">

@@ -61,7 +61,7 @@
     <title>Installation of libdecor</title>
 
     <para>
-      Install <application>libdecor</application> by running the following
+      Install libdecor by running the following
       commands:
     </para>
 
@@ -94,7 +94,7 @@ ninja</userinput></screen>
 
     <para>
       <parameter>-D gtk=disabled</parameter>: This parameter disables building
-      the <application>GTK-3</application> plugin. Remove it if you installed
+      the GTK-3 plugin. Remove it if you installed
       <ulink url="&blfs-svn;/x/gtk3.html">GTK-3</ulink>.
     </para>
 

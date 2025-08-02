@@ -20,7 +20,7 @@
     <title>Introduction to iputils</title>
 
     <para>
-      The <application>iputils</application> contains a collection of
+      The iputils contains a collection of
       networking utilities.
     </para>
 
@@ -52,7 +52,7 @@
 ln -svfn iputils-&iputils-version; /opt/iputils</userinput></screen>
 
     <para>
-      Install <application>iputils</application> by running the following
+      Install iputils by running the following
       commands:
     </para>
 

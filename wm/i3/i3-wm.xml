@@ -21,7 +21,7 @@
     <title>Introduction to i3</title>
 
     <para>
-      The <application>i3</application> package contains an easy-to-use tiling
+      The i3 package contains an easy-to-use tiling
       Window Manager.
     </para>
 
@@ -75,7 +75,7 @@
     <title>Installation of i3</title>
 
     <para>
-      Install <application>i3</application> by running the following
+      Install i3 by running the following
       commands:
     </para>
 
@@ -130,7 +130,7 @@ mv -v /usr/share/doc/i3{,-&i3-version;}</userinput></screen>
 
       <para>
         If you did not already make the configuration file, it can be created
-        when first launching <application>i3</application> when you are asked
+        when first launching i3 when you are asked
         if you want to generate a default configuration file. Now inspect the
 	file and make any changes if you wish. You may need to if you have not
         installed any of the optional dependencies.
@@ -144,7 +144,7 @@ mv -v /usr/share/doc/i3{,-&i3-version;}</userinput></screen>
       </para>
 
       <para>
-        If <application>i3</application> is the only Window Manager you want to
+        If i3 is the only Window Manager you want to
         use, you can start it with an <filename>.xinitrc</filename> file in
         your home folder. Be sure to backup your current
         <filename>.xinitrc</filename> before proceeding. 
@@ -200,7 +200,7 @@ mv -v /usr/share/doc/i3{,-&i3-version;}</userinput></screen>
         <term><command>i3</command></term>
         <listitem>
           <para>
-            is the <application>i3</application> Window Manager
+            is the i3 Window Manager
           </para>
           <indexterm zone="i3-wm i3-bin">
             <primary sortas="b-i3-bin">i3</primary>
@@ -262,7 +262,7 @@ mv -v /usr/share/doc/i3{,-&i3-version;}</userinput></screen>
         <term><command>i3-input</command></term>
         <listitem>
           <para>
-            is the input daemon used by <application>i3</application>
+            is the input daemon used by i3
           </para>
           <indexterm zone="i3-wm i3-input">
             <primary sortas="b-i3-input">i3-input</primary>

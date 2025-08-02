@@ -20,10 +20,10 @@
     <title>Introduction to Mupen64Plus Components</title>
 
     <para>
-      This page will install multiple <application>Mupen64Plus</application>
+      This page will install multiple Mupen64Plus
       components and plugins, as well as a command-line frontend as a bare
       necessity. If you do not wish to install a graphical frontend, this page
-      will provide all the parts of  <application>Mupen64Plus</application> you
+      will provide all the parts of  Mupen64Plus you
       will need.
     </para>
 
@@ -154,19 +154,19 @@ popd</userinput></screen>
 
     <para>
       <parameter>-D GL_PROFILE=On</parameter>: This turns on the OpenGL
-      profiling in the <application>GLideN64</application> plugin.
+      profiling in the GLideN64 plugin.
     </para>
 
     <para>
       <parameter>-D MUPENPLUSAPI=On</parameter>: This parameter forces the
-      build system to build the <application>Mupen64Plus</application> version
-      of the <application>GLideN64</application> plugin.
+      build system to build the Mupen64Plus version
+      of the GLideN64 plugin.
     </para>
 
     <para>
       <parameter>-D USE_SYSTEM_LIBS=On</parameter>: This parameter forces the
       build system to use the system-installed dependencies of the
-      <application>GLideN64</application> plugin.
+      GLideN64 plugin.
     </para>
 
   </sect2>
@@ -176,15 +176,15 @@ popd</userinput></screen>
 
     <para>
       From this point, you have a couple of options on how to interact with
-      <application>Mupen64Plus</application>. You can either use
+      Mupen64Plus. You can either use
       <command>mupen64plus</command>, which is the
-      <application>Mupen64Plus</application> command-line frontend, or you can
+      Mupen64Plus command-line frontend, or you can
       use a graphical frontend such as <ulink
       url="https://github.com/mupen64plus/mupen64plus-ui-python">mupen64plus-ui-python</ulink>.
       Graphical frontends generally have many bells and whistles on top of
       being more user friendly. There are also
-      <application>Mupen64Plus</application> launchers, which instead of using
-      the system-installed <application>Mupen64Plus</application> components,
+      Mupen64Plus launchers, which instead of using
+      the system-installed Mupen64Plus components,
       they use their own in-house components/forks. A good launcher is <ulink
       url="https://github.com/Rosalie241/RMG">RMG</ulink>, well-known for being
       easy to use and set up, but has more and harsher dependencies.
@@ -254,7 +254,7 @@ popd</userinput></screen>
 
       <para>
         If you plan to only use <command>mupen64plus</command>, the
-        command-line <application>Mupen64Plus</application> frontend, you will
+        command-line Mupen64Plus frontend, you will
         have to configure the options manually. You can generate a default
         configuration file from simply running <command>mupen64plus</command>
         once. It will stack all the default configuation files from
@@ -352,7 +352,7 @@ popd</userinput></screen>
         <listitem>
           <para>
             is the command-line frontend for
-            <application>Mupen64Plus</application>
+            Mupen64Plus
           </para>
           <indexterm zone="m64plus-components mupen64plus">
             <primary sortas="b-mupen64plus">mupen64plus</primary>
@@ -364,7 +364,7 @@ popd</userinput></screen>
         <term><filename class="libraryfile">libmupen64plus</filename></term>
         <listitem>
           <para>
-            is the <application>Mupen64Plus</application> core that can be used
+            is the Mupen64Plus core that can be used
             by various frontends and loads the necessary plugins
           </para>
           <indexterm zone="m64plus-components libmupen64plus">

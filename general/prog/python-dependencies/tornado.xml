@@ -19,7 +19,7 @@
       <title>Introduction to tornado Module</title>
 
       <para>
-        The <application>tornado</application> module offers an easy solution
+        The tornado module offers an easy solution
         to logging.
       </para>
 
@@ -35,7 +35,7 @@
 
       <bridgehead renderas="sect5">Recommended</bridgehead>
       <para role='recommended'>
-        <xref linkend="pycurl"/> (for the <application>cURL</application>
+        <xref linkend="pycurl"/> (for the cURL
         client)
       </para>
 

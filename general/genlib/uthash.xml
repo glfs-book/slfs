@@ -38,7 +38,7 @@
     <title>Installation of uthash</title>
 
     <para>
-      Install <application>uthash</application> as the &root; user:
+      Install uthash as the &root; user:
     </para>
 
 <screen role="root"><userinput>cp -av include/* /usr/include</userinput></screen>

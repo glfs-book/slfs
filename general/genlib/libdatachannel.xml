@@ -83,7 +83,7 @@ mv -T plog-*    deps/plog &amp;&amp;
 mv -T usrsctp-* deps/usrsctp</userinput></screen>
 
     <para>
-      Install <application>libdatachannel</application> by running the following
+      Install libdatachannel by running the following
       commands:
     </para>
 
@@ -119,12 +119,12 @@ ninja</userinput></screen>
 
     <para>
       <parameter>-D CMAKE_POLICY_VERSION_MINIMUM=3.5</parameter>: This allows
-      building with newer <application>CMake</application> versions.
+      building with newer CMake versions.
     </para>
 
     <para>
       <parameter>-D USE_GNUTLS=0</parameter>: This disables building against
-      the optional <application>GnuTLS</application>.
+      the optional GnuTLS.
     </para>
 
     <para>

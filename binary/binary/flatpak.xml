@@ -90,7 +90,7 @@
     <title>Installation of Flatpak</title>
 
     <para>
-      Install <application>Flatpak</application> by running the following
+      Install Flatpak by running the following
       commands:
     </para>
 
@@ -126,12 +126,12 @@ ninja</userinput></screen>
 
     <para>
       <parameter>-D system_bubblewrap=bwrap</parameter>: Ensures the build
-      system doesn't download <application>Bubblewrap</application>.
+      system doesn't download Bubblewrap.
     </para>
 
     <para>
       <parameter>-D tests=false</parameter>: This parameter disables tests.
-      Remove this parameter if you have <application>socat</application>
+      Remove this parameter if you have socat
       installed.
     </para>
 
@@ -213,7 +213,7 @@ ninja</userinput></screen>
         <listitem>
           <para>
             is used by <command>flatpak</command> to utilize
-            <application>Bubblewrap</application> features
+            Bubblewrap features
           </para>
           <indexterm zone="flatpak flatpak-bwrap">
             <primary sortas="b-flatpak-bwrap">flatpak-bwrap</primary>
@@ -225,7 +225,7 @@ ninja</userinput></screen>
         <term><command>flatpak-coredumpctl</command></term>
         <listitem>
           <para>
-            can debug an application in <application>gdb</application> that
+            can debug an application in gdb that
             crashed inside <command>flatpak</command>.
           </para>
           <indexterm zone="flatpak flatpak-coredumpctl">
@@ -239,7 +239,7 @@ ninja</userinput></screen>
         <listitem>
           <para>
             is used by <command>flatpak</command> to utilize
-            <application>xdg-dbus-proxy</application> features
+            xdg-dbus-proxy features
           </para>
           <indexterm zone="flatpak flatpak-dbus-proxy">
             <primary sortas="b-flatpak-dbus-proxy">flatpak-dbus-proxy</primary>
@@ -265,7 +265,7 @@ ninja</userinput></screen>
         <listitem>
           <para>
             is used by <command>flatpak</command> to access the
-            <application>xdg-desktop-portal</application>
+            xdg-desktop-portal
           </para>
           <indexterm zone="flatpak flatpak-portal">
             <primary sortas="b-flatpak-portal">flatpak-portal</primary>
@@ -291,7 +291,7 @@ ninja</userinput></screen>
         <listitem>
           <para>
             is used by <command>flatpak</command> to help with the
-            <application>flatpak</application> system.
+            flatpak system.
           </para>
           <indexterm zone="flatpak flatpak-system-helper">
             <primary sortas="b-flatpak-system-helper">flatpak-system-helper</primary>
@@ -351,7 +351,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libflatpak</filename></term>
         <listitem>
           <para>
-            contains functions used by the <application>Flatpak</application>
+            contains functions used by the Flatpak
             utilities
           </para>
           <indexterm zone="flatpak libflatpak">

@@ -21,9 +21,9 @@
     <title>Introduction to Wayfire</title>
 
     <para>
-      <application>Wayfire</application> is a
-      <application>Wayland</application> compositor which takes a lot of
-      effects from the now deprecated <application>Compiz</application> Xorg
+      Wayfire is a
+      Wayland compositor which takes a lot of
+      effects from the now deprecated Compiz Xorg
       compositor. It aims to be customizable, yet lightweight. Unlike other
       compositors, it is also 3D and supports multiple perspectives for seeing
       windows.
@@ -86,7 +86,7 @@
     <title>Installation of Wayfire</title>
 
     <para>
-      Install <application>Wayfire</application> by running the following
+      Install Wayfire by running the following
       commands:
     </para>
 
@@ -246,7 +246,7 @@ ninja</userinput></screen>
         <term><command>wayfire</command></term>
         <listitem>
           <para>
-            is the <application>Wayfire</application> compositor
+            is the Wayfire compositor
           </para>
           <indexterm zone="wayfire wayfire-bin">
             <primary sortas="b-wayfire-bin">wayfire</primary>
@@ -259,7 +259,7 @@ ninja</userinput></screen>
         <listitem>
           <para>
             provides basic functions for blur implementations in
-            <application>Wayfire</application>
+            Wayfire
           </para>
           <indexterm zone="wayfire libwayfire-blur-base">
             <primary sortas="b-libwayfire-blur-base">libwayfire-blur-base</primary>
@@ -272,7 +272,7 @@ ninja</userinput></screen>
         <listitem>
           <para>
             contains several functions used by
-            <application>Wayfire</application> and its libraries
+            Wayfire and its libraries
           </para>
           <indexterm zone="wayfire libwf-utils">
             <primary sortas="b-libwf-utils">libwf-utils</primary>
@@ -284,7 +284,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libwftouch</filename></term>
         <listitem>
           <para>
-            is the static library for <application>Wayfire</application> touch
+            is the static library for Wayfire touch
             functionality
           </para>
           <indexterm zone="wayfire libwftouch.a">

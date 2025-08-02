@@ -22,7 +22,7 @@
     <title>Introduction to eza</title>
 
     <para>
-      The <application>eza</application> package provides a Rust alternative to
+      The eza package provides a Rust alternative to
       <command>ls</command>.
     </para>
 
@@ -54,7 +54,7 @@
   <sect2 role="installation">
     <title>Installation of eza</title>
     <para>
-      Install <application>eza</application> by running the following
+      Install eza by running the following
       commands:
     </para>
 

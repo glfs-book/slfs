@@ -21,8 +21,8 @@
     <title>Introduction to foot</title>
 
     <para>
-      The <application>foot</application> package provides a
-      <application>Wayland</application> terminal emulator.
+      The foot package provides a
+      Wayland terminal emulator.
     </para>
 
     <itemizedlist spacing="compact">
@@ -64,7 +64,7 @@
     <title>Installation of foot</title>
 
     <para>
-      Install <application>foot</application> by running the following
+      Install foot by running the following
       commands:
     </para>
 
@@ -81,7 +81,7 @@ ninja</userinput></screen>
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      If you built <application>scdoc</application>, make the documentation
+      If you built scdoc, make the documentation
       directory versioned as the &root; user:
     </para>
 
@@ -157,7 +157,7 @@ cp /etc/xdg/foot/foot.ini ~/.config/foot</userinput></screen>
         <term><command>foot</command></term>
         <listitem>
           <para>
-            is a <application>Wayland</application> terminal emulator
+            is a Wayland terminal emulator
           </para>
           <indexterm zone="foot foot-bin">
             <primary sortas="b-foot-bin">foot</primary>
@@ -170,7 +170,7 @@ cp /etc/xdg/foot/foot.ini ~/.config/foot</userinput></screen>
         <listitem>
           <para>
             starts <command>foot</command> instances in a
-            <application>foot</application> server
+            foot server
           </para>
           <indexterm zone="foot footclient">
             <primary sortas="b-footclient">footclient</primary>

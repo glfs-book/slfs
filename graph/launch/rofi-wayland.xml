@@ -21,11 +21,11 @@
     <title>Introduction to Rofi-Wayland</title>
 
     <para>
-      <application>Rofi-Wayland</application> provides an application launcher
-      for the <application>X</application> Window System as well as
-      <application>Wayland</application>. It has the same functionality as
+      Rofi-Wayland provides an application launcher
+      for the X Window System as well as
+      Wayland. It has the same functionality as
       <xref linkend="rofi"/> and more. If you only use the
-      <application>X</application> Window System, you can just install <xref
+      X Window System, you can just install <xref
       linkend="rofi"/> instead.
     </para>
 
@@ -69,7 +69,7 @@
     <title>Installation of Rofi-Wayland</title>
 
     <para>
-      Install <application>Rofi-Wayland</application> by running the following
+      Install Rofi-Wayland by running the following
       commands:
     </para>
 
@@ -118,8 +118,8 @@ ninja</userinput></screen>
         <term><command>rofi</command></term>
         <listitem>
           <para>
-            is an <application>X11</application> and
-            <application>Wayland</application> application laucher
+            is an X11 and
+            Wayland application laucher
           </para>
           <indexterm zone="rofi-wayland rofi-wayland-bin">
             <primary sortas="b-rofi-wayland-bin">rofi</primary>

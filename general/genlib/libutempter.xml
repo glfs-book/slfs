@@ -20,7 +20,7 @@
     <title>Introduction to libutempter</title>
 
     <para>
-      The <application>libutempter</application> package is a library
+      The libutempter package is a library
       that allows non-privileged apps to write utmp info.
     </para>
 
@@ -48,7 +48,7 @@
     <title>Installation of libutempter</title>
 
     <para>
-      Install <application>libutempter</application> by executing the following
+      Install libutempter by executing the following
       commands:
     </para>
 

@@ -23,7 +23,7 @@
     <title>Introduction to Dolphin</title>
 
     <para>
-      The <application>Dolphin</application> package (not to be confused with
+      The Dolphin package (not to be confused with
       the <ulink url="&blfs-svn;/kde/dolphin.html">KF6 dolphin file
       manager</ulink>) provides a GCN and Wii emulator.
     </para>
@@ -196,9 +196,9 @@ mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput><
 
 <!--
     <para>
-      Apply a patch to force <application>XCB</application> to be used
-      in <application>Dolphin</application> on
-      <application>Wayland</application> to avoid being unable to initialize
+      Apply a patch to force XCB to be used
+      in Dolphin on
+      Wayland to avoid being unable to initialize
       graphics when launching a game:
     </para>
 
@@ -206,7 +206,7 @@ mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput><
 -->
 
     <para>
-      Install <application>Dolphin</application> by running the following
+      Install Dolphin by running the following
       commands:
     </para>
 
@@ -246,11 +246,11 @@ ninja</userinput></screen>
     <para>
       <parameter>-D USE_SYSTEM_LIBMGBA=OFF</parameter>: This parameter forces
       the build system to build the vendored copy of
-      <application>mGBA</application>; otherwise, there will be compilation
+      mGBA; otherwise, there will be compilation
       errors if <xref linkend="mgba"/> is installed due to different versions
-      (compiling an older <application>mGBA</application> results in
+      (compiling an older mGBA results in
       compilation errors because of it requiring an older
-      <application>FFmpeg</application> version).
+      FFmpeg version).
     </para>
 
   </sect2>
@@ -260,11 +260,11 @@ ninja</userinput></screen>
     <title>Using Dolphin</title>
 
     <para>
-      Using <application>Dolphin</application> is generally straight forward.
-      However, if you are on <application>Wayland</application>, and are not
+      Using Dolphin is generally straight forward.
+      However, if you are on Wayland, and are not
       launching the application via a launcher, then the program will most
       likely not have a variable set in the same breath, which leads to
-      <application>Dolphin</application> not being able to launch any game.
+      Dolphin not being able to launch any game.
       You need to run
       <computeroutput>env QT_QPA_PLATFORM=xcb dolphin-emu</computeroutput> in
       order to bypass this. You might want to set an alias for
@@ -308,7 +308,7 @@ ninja</userinput></screen>
         <term><command>dolphin-emu</command></term>
         <listitem>
           <para>
-            is the GUI version of <application>Dolphin</application>
+            is the GUI version of Dolphin
           </para>
           <indexterm zone="dolphin dolphin-emu">
             <primary sortas="b-dolphin-emu">dolphin-emu</primary>
@@ -320,7 +320,7 @@ ninja</userinput></screen>
         <term><command>dolphin-emu-nogui</command></term>
         <listitem>
           <para>
-            is the command-line version of <application>Dolphin</application>
+            is the command-line version of Dolphin
           </para>
           <indexterm zone="dolphin dolphin-emu-nogui">
             <primary sortas="b-dolphin-emu-nogui">dolphin-emu-nogui</primary>

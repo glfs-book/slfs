@@ -21,7 +21,7 @@
     <title>Introduction to s4-3b1-pc7300</title>
 
     <para>
-      The <application>s4-3b1-pc7300</application> package contains a kernel
+      The s4-3b1-pc7300 package contains a kernel
       module and various tools to support reading and and writing to and from
       CTIX and AT&amp;T 3B1 UNIX System Software hard disks.
     </para>
@@ -154,7 +154,7 @@ make -f Makefile.daveb running</userinput></screen>
     </important>
 
     <para>
-      Now install the <application>s4-3b1-pc7300</application> userland tools
+      Now install the s4-3b1-pc7300 userland tools
       by running the following commands:
     </para>
 

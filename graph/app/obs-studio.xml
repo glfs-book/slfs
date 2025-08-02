@@ -21,7 +21,7 @@
     <title>Introduction to OBS Studio</title>
 
     <para>
-      <application>OBS Studio</application> is a screen recorder that can be
+      OBS Studio is a screen recorder that can be
       piped to various media containers and remote servers. It is geared
       towards streaming but also has a very much supported general recording
       usecase.
@@ -201,7 +201,7 @@
 
     <para>
       Apply a patch to allow EGL libraries from
-      <application>Mesa</application> if needed:
+      Mesa if needed:
     </para>
 
 <screen><userinput>if ! pkgconf libglvnd; then
@@ -217,7 +217,7 @@ fi</userinput></screen>
 mv cef_binary_&obs-cef-version;_linux_x86_64 cef-&obs-cef-version;</userinput></screen>
 
     <para>
-      Install <application>OBS Studio</application> by running the following
+      Install OBS Studio by running the following
       commands:
     </para>
 
@@ -366,7 +366,7 @@ ninja</userinput></screen>
         <term><command>obs</command></term>
         <listitem>
           <para>
-            is the <application>OBS Studio</application> program
+            is the OBS Studio program
           </para>
           <indexterm zone="obs-studio obs">
             <primary sortas="b-obs">obs</primary>
@@ -378,7 +378,7 @@ ninja</userinput></screen>
         <term><command>obs-ffmpeg-mux</command></term>
         <listitem>
           <para>
-            is the <application>FFmpeg</application> multiplexer that
+            is the FFmpeg multiplexer that
             <command>obs</command> uses
           </para>
           <indexterm zone="obs-studio obs-ffmpeg-mux">
@@ -391,8 +391,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libobs-frontend-api</filename></term>
         <listitem>
           <para>
-            contains API functions for the <application>OBS
-            Studio</application> frontend
+            contains API functions for the OBS
+            Studio frontend
           </para>
           <indexterm zone="obs-studio libobs-frontend-api">
             <primary sortas="c-libobs-frontend-api">libobs-frontend-api</primary>
@@ -404,8 +404,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libobs-opengl</filename></term>
         <listitem>
           <para>
-            provided OpenGL rendering functions for <application>OBS
-            Studio</application>
+            provided OpenGL rendering functions for OBS
+            Studio
           </para>
           <indexterm zone="obs-studio libobs-opengl">
             <primary sortas="c-libobs-opengl">libobs-opengl</primary>
@@ -417,8 +417,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libobs-scripting</filename></term>
         <listitem>
           <para>
-            provides functions for <application>OBS
-            Studio</application> scripts
+            provides functions for OBS
+            Studio scripts
           </para>
           <indexterm zone="obs-studio libobs-scripting">
             <primary sortas="c-libobs-scripting">libobs-scripting</primary>
@@ -430,8 +430,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libobs</filename></term>
         <listitem>
           <para>
-            contains all the functions used by <application>OBS
-            Studio</application> and its plugins
+            contains all the functions used by OBS
+            Studio and its plugins
           </para>
           <indexterm zone="obs-studio libobs">
             <primary sortas="c-libobs">libobs</primary>

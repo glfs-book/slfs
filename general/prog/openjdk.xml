@@ -22,11 +22,11 @@
     <title>Introduction to OpenJDK</title>
 
     <para>
-      <application>OpenJDK</application> is an open-source implementation
+      OpenJDK is an open-source implementation
       of Oracle's Java Standard Edition platform.
-      <application>OpenJDK</application> is useful for developing
-      <application>Java</application> programs, and provides a complete
-      runtime environment to run <application>Java</application> programs.
+      OpenJDK is useful for developing
+      Java programs, and provides a complete
+      runtime environment to run Java programs.
     </para>
 
     <para>
@@ -117,7 +117,7 @@
       <para>
         Before proceeding, you should ensure that your environment
         <envar>PATH</envar> variable contains the location of the Java
-        compiler used for bootstrapping <application>OpenJDK</application>.
+        compiler used for bootstrapping OpenJDK.
         This is the only requirement for the environment. Modern Java
         installations do not need <envar>JAVA_HOME</envar> and
         <envar>CLASSPATH</envar> is not used here. Furthermore, OpenJDK
@@ -197,10 +197,10 @@ done</userinput></screen>
 unset  MAKEFLAGS_HOLD</userinput></screen>
 
     <para>
-      There are now two <application>OpenJDK</application> SDKs installed
+      There are now two OpenJDK SDKs installed
       in <filename class="directory">/opt</filename>. You should decide on
       which one you would like to use as the default. Normally, you would opt
-      for the just installed <application>OpenJDK</application>. If so, do
+      for the just installed OpenJDK. If so, do
       the following as the &root; user:
     </para>
 
@@ -314,7 +314,7 @@ EOF</userinput></screen>
 
     <para>
       <option>--with-boot-jdk</option>: This switch provides the
-      location of the temporary <application>JDK</application>. It is normally
+      location of the temporary JDK. It is normally
       not needed if <command>java</command> is found in the <envar>PATH</envar>.
     </para>
 <!-- Seems to have disappeared
@@ -849,7 +849,7 @@ popd</userinput></screen>
         <listitem>
           <para>
             is a native implementation that transforms a packed file
-            produced by <application>pack200</application> into a jar
+            produced by pack200 into a jar
             file.
           </para>
           <indexterm zone="openjdk unpack200">

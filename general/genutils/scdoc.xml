@@ -20,7 +20,7 @@
     <title>Introduction to scdoc</title>
 
     <para>
-      The <application>scdoc</application> package provides a man page
+      The scdoc package provides a man page
       generator.
     </para>
 
@@ -38,7 +38,7 @@
     <title>Installation of scdoc</title>
 
     <para>
-      Install <application>scdoc</application> by executing the following
+      Install scdoc by executing the following
       commands:
     </para>
 

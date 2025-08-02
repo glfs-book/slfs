@@ -23,7 +23,7 @@
 
     <para>
       The xdg-desktop-portal-wlr package provides a portal backend for
-      <application>Wlroots</application> compositors.
+      Wlroots compositors.
     </para>
 
     <itemizedlist spacing="compact">
@@ -66,7 +66,7 @@
     <title>Installation of xdg-desktop-portal-wlr</title>
 
     <para>
-      Install <application>xdg-desktop-portal-wlr</application> by running
+      Install xdg-desktop-portal-wlr by running
       the following commands:
     </para>
 
@@ -130,7 +130,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             allows you to access portals in a
-            <application>Wlroots</application> session
+            Wlroots session
           </para>
           <indexterm zone="xdg-desktop-portal-wlr xdg-desktop-portal-wlr-bin">
             <primary sortas="b-xdg-desktop-portal-wlr-bin">xdg-desktop-portal-wlr</primary>

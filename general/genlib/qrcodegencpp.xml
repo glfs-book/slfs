@@ -63,7 +63,7 @@ cp -vR qrcodegen-cmake-&qrcodegencpp-version;-cmake3/{cmake,CMakeLists.txt} . &a
 rm -rf qrcodegen-cmake-&qrcodegencpp-version;-cmake3</userinput></screen>
 
     <para>
-      Install <application>QR-Code-generator</application> by running the following
+      Install QR-Code-generator by running the following
       commands:
     </para>
 

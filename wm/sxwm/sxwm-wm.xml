@@ -21,9 +21,9 @@
     <title>Introduction to sxwm</title>
 
     <para>
-      The <application>sxwm</application> package provides a simple X11 window
-      manager, taking roots from <application>DWM</application>,
-      <application>tinywm</application>, and other window managers.
+      The sxwm package provides a simple X11 window
+      manager, taking roots from DWM,
+      tinywm, and other window managers.
     </para>
 
     <itemizedlist spacing="compact">
@@ -48,7 +48,7 @@
     <title>Installation of sxwm</title>
 
     <para>
-      Install <application>sxwm</application> by running the following
+      Install sxwm by running the following
       commands:
     </para>
 
@@ -96,7 +96,7 @@ cp -v /usr/share/sxwmrc ~/.config/sxwmrc</userinput></screen>
       </para>
 
       <para>
-        If <application>sxwm</application> is the only Window Manager you want
+        If sxwm is the only Window Manager you want
         to use, you can start it with an <filename>.xinitrc</filename> file in
         your home folder. Be sure to backup your current
         <filename>.xinitrc</filename> before proceeding. 
@@ -138,7 +138,7 @@ cp -v /usr/share/sxwmrc ~/.config/sxwmrc</userinput></screen>
         <term><command>sxwm</command></term>
         <listitem>
           <para>
-            is the <application>sxwm</application> Window Manager
+            is the sxwm Window Manager
           </para>
           <indexterm zone="sxwm-wm sxwm-bin">
             <primary sortas="b-sxwm-bin">sxwm</primary>

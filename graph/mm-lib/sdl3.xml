@@ -20,7 +20,7 @@
     <title>Introduction to SDL3</title>
 
     <para>
-      The Simple DirectMedia Layer Version 3 (<application>SDL3</application>
+      The Simple DirectMedia Layer Version 3 (SDL3
       for short) is a cross-platform library designed to make it easy to write
       multimedia software, such as games and emulators. It is the new version
       of SDL and provides more features than SDL2.
@@ -28,9 +28,9 @@
 
     <tip><para>
       After you install this package, you should also install <xref
-      linkend="sdl2"/> for <application>SDL2</application> support if you need
+      linkend="sdl2"/> for SDL2 support if you need
       it. The amount of packages that use this package is very low so consider
-      <application>SDL2</application> support a requirement.
+      SDL2 support a requirement.
     </para></tip>
 
     <itemizedlist spacing="compact">
@@ -91,7 +91,7 @@
     <title>Installation of SDL3</title>
 
     <para>
-      Install <application>SDL3</application> by running the
+      Install SDL3 by running the
       following commands:
     </para>
 
@@ -137,7 +137,7 @@ DESTDIR=$PWD/TESTS ninja install</computeroutput></screen>
       class="directory">TESTS/usr/libexec/installed-tests/SDL3</filename>. You
       will have to run the tests individually. Some of them may need to be
       manually killed and audio will need to be working so that you can hear
-      from the default audio output. Make sure <application>SDL3</application>
+      from the default audio output. Make sure SDL3
       is installed before running the tests, or use the
       <envar>LD_PRELOAD</envar> variable to preload <filename
       class="libraryfile">libSDL3.so</filename> from <filename
@@ -150,7 +150,7 @@ DESTDIR=$PWD/TESTS ninja install</computeroutput></screen>
     <title>lib32 Installation of SDL3</title>
 
     <para>
-      Install lib32-<application>SDL3</application> by running the
+      Install lib32-SDL3 by running the
       following commands:
     </para>
 

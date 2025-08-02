@@ -21,7 +21,7 @@
     <title>Introduction to SDL2_net</title>
 
     <para>
-      The <application>sdl2_net</application> package provides a cross-platform
+      The sdl2_net package provides a cross-platform
       networking library.
     </para>
 
@@ -47,7 +47,7 @@
     <title>Installation of SDL2_net</title>
 
     <para>
-      Install <application>SDL2_net</application> by running the following
+      Install SDL2_net by running the following
       commands:
     </para>
 

@@ -21,7 +21,7 @@
     <title>Introduction to tealdeer</title>
 
     <para>
-      The <application>tealdeer</application> package provides a fast
+      The tealdeer package provides a fast
       <command>tldr</command> program which is an alternative to
       <command>man</command>. It aims to be more concise, approachable, and
       simple than what is offered by most man pages.
@@ -49,7 +49,7 @@
   <sect2 role="installation">
     <title>Installation of tealdeer</title>
     <para>
-      Install <application>tealdeer</application> by running the following
+      Install tealdeer by running the following
       commands:
     </para>
 
@@ -103,7 +103,7 @@
         <term><command>tldr</command></term>
         <listitem>
           <para>
-            is the <application>tealdeer</application> <command>tldr</command>
+            is the tealdeer <command>tldr</command>
           </para>
           <indexterm zone="tealdeer tldr-tealdeer">
             <primary sortas="b-tldr-tealdeer">tldr</primary>

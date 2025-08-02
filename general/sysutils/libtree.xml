@@ -21,7 +21,7 @@
     <title>Introduction to libtree</title>
 
     <para>
-      <application>libtree</application> is a utility to view the
+      libtree is a utility to view the
       shared library dependency tree of a binary.
     </para>
 
@@ -39,7 +39,7 @@
     <title>Installation of libtree</title>
 
     <para>
-      Install <application>libtree</application> by running the following
+      Install libtree by running the following
       commands:
     </para>
 

@@ -20,21 +20,21 @@
     <title>Introduction to xeyes</title>
 
     <para>
-      The <application>xeyes</application> package provides an application that
-      displays eyes that follow the XCURSOR in an <application>X</application>
+      The xeyes package provides an application that
+      displays eyes that follow the XCURSOR in an X
       Window System environment. Its usecase is limited and even at the time it
       was made, it was considered gimmicky. It got followed up by better
       programs that did the premise better. The last usecase it has nowadays
       is determining which GUI applications use Wayland or fall back to Xorg.
-      This is because <application>xeyes</application> can only follow the
+      This is because xeyes can only follow the
       cursor if it is found in an Xorg environment. The general Xorg server on
-      Wayland is shared by <application>Xwayland</application>. So when an
-      application is running in it, <application>xeyes</application> will be
+      Wayland is shared by Xwayland. So when an
+      application is running in it, xeyes will be
       able to see the cursor when it hovers over said window. For Wayland apps,
       the cursor cannot be found at all. Thus, you can tell which apps use
       Wayland or not. If you are just using Xorg, this app practically has no
       use. If you are using Wayland and want to, for example, see progress on
-      Wayland support for <application>Wine</application>, this application
+      Wayland support for Wine, this application
       will show if it is using Wayland or Xorg.
     </para>
 
@@ -59,7 +59,7 @@
     <title>Installation of xeyes</title>
 
     <para>
-      Install <application>xeyes</application> by executing the following
+      Install xeyes by executing the following
       commands:
     </para>
 

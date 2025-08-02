@@ -20,7 +20,7 @@
     <title>Introduction to htop</title>
 
     <para>
-      The <application>htop</application> package provides a TUI
+      The htop package provides a TUI
       <footnote><para>
         Text-based User Interface.
       </para></footnote>
@@ -52,7 +52,7 @@
     <title>Installation of htop</title>
 
     <para>
-      Install <application>htop</application> by running the following
+      Install htop by running the following
       commands:
     </para>
 

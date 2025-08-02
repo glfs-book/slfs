@@ -20,7 +20,7 @@
     <title>Introduction to tmux</title>
 
     <para>
-      The <application>tmux</application> package provides a terminal
+      The tmux package provides a terminal
       multiplexer and an alternative to <ulink
       url="&blfs-svn;/general/screen.html">Screen</ulink>.
     </para>
@@ -51,7 +51,7 @@
     <title>Installation of tmux</title>
 
     <para>
-      Install <application>tmux</application> by running the following
+      Install tmux by running the following
       commands:
     </para>
 

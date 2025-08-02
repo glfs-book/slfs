@@ -20,7 +20,7 @@
     <title>Introduction to xcb-imdkit</title>
 
     <para>
-      The <application>xcb-imdkit</application> package provides an
+      The xcb-imdkit package provides an
       implementation of the X Input Method protocol using XCB.
     </para>
 
@@ -55,7 +55,7 @@
     <title>Installation of xcb-imdkit</title>
 
     <para>
-      Install <application>xcb-imdkit</application> by running the following
+      Install xcb-imdkit by running the following
       commands:
     </para>
 

@@ -16,7 +16,7 @@
       X11Libre is a collection of packages forked from Xorg. However, most of
       the forks are not any more updated than the official Xorg packages. The
       main one that gets active development is the
-      <application>xserver</application>. There are no promises of a stable ABI
+      xserver. There are no promises of a stable ABI
       and does not have a stable release. The project has had several changes
       that are controversial. As such, it is largely up to the user if they
       want to use the software from the project. It has broken some things but
@@ -28,7 +28,7 @@
     <title>What This Section Will and Will Not Cover</title>
     <para>
       This section will only cover the installation and configuration of the
-      <application>xserver</application>. It will also cover on how to proceed.
+      xserver. It will also cover on how to proceed.
       It will not cover its history, why the fork took place, or the nature of
       the person who forked Xorg. This book only aims to guide users for
       installing what they need and what pieces are needed to be put in place.

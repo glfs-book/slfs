@@ -21,7 +21,7 @@
     <title>Introduction to heirloom-sh</title>
 
     <para>
-      The <application>heirloom-sh</application> package is a portable variant
+      The heirloom-sh package is a portable variant
       of the traditional Unix Bourne Shell.
     </para>
 
@@ -75,7 +75,7 @@
 <screen><userinput>patch -Np1 -i ../heirloom-sh-&heirloom-sh-version;-glibc234-3.patch</userinput></screen>
 
     <para>
-      Install <application>heirloom-sh</application> by running the following
+      Install heirloom-sh by running the following
       command:
     </para>
 

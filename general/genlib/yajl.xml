@@ -85,13 +85,13 @@ patch -Np1 -i ../yajl-&yajl-version;-memory_leak.patch
 </userinput></screen>
 
     <para>
-      Fix building with <application>CMake-4.0.0</application>:
+      Fix building with CMake-4.0.0:
     </para>
 
 <screen><userinput>patch -Np1 -i ../6fe59ca50dfd65bdb3d1c87a27245b2dd1a072f9.patch</userinput></screen>
 
     <para>
-      Install <application>yajl</application> by running the following
+      Install yajl by running the following
       commands:
     </para>
 

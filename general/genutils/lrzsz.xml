@@ -23,7 +23,7 @@
     <title>Introduction to lrzsz</title>
 
     <para>
-      The <application>lrzsz</application> package is for UNIX communication,
+      The lrzsz package is for UNIX communication,
       providing the XMODEM, YMODEM, and ZMODEM file transfer protocols.
     </para>
 
@@ -138,7 +138,7 @@ rm -vf acconfig.h &amp;&amp;
 autoreconf -fiv</userinput></screen>
 
     <para>
-      Install <application>lrzsz</application> by executing the following
+      Install lrzsz by executing the following
       commands:
     </para>
 
@@ -190,7 +190,7 @@ done</userinput></screen>
     <para>
       <command>for i in {r,s}{b,x,z} ; do...</command>: This command block
       creates compatibility symlinks for the original
-      <application>rzsz</application> package, which is required for
+      rzsz package, which is required for
       <xref linkend="minicom"/>.
     </para>
 

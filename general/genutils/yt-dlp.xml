@@ -21,7 +21,7 @@
     <title>Introduction to yt-dlp</title>
 
     <para>
-      The <application>yt-dlp</application> package provides a program that can
+      The yt-dlp package provides a program that can
       download YouTube videos from their servers and convert a given downloaded
       video into another format.
     </para>
@@ -59,7 +59,7 @@
     <title>Installation of yt-dlp</title>
 
     <para>
-      Install <application>yt-dlp</application> by running the following
+      Install yt-dlp by running the following
       commands:
     </para>
 

@@ -22,7 +22,7 @@
     <title>Introduction to libspng</title>
 
     <para>
-      The <application>libspng</application> package provides a C library for
+      The libspng package provides a C library for
       handling PNG files.
     </para>
 
@@ -47,7 +47,7 @@
     <title>Installation of libspng</title>
 
     <para>
-      Install <application>libspng</application> by running the following
+      Install libspng by running the following
       commands:
     </para>
 
@@ -68,7 +68,7 @@ ninja</userinput></screen>
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      Now create a <application>pkg-config</application> file symlink for
+      Now create a pkg-config file symlink for
       packages that expect <filename>spng.pc</filename> instead of
       <filename>libspng.pc</filename> as the &root; user:
     </para>

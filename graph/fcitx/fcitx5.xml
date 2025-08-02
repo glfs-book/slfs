@@ -66,7 +66,7 @@
     <title>Installation of Fcitx5</title>
 
     <para>
-      Install <application>Fcitx5</application> by running the following
+      Install Fcitx5 by running the following
       commands:
     </para>
 
@@ -131,7 +131,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
 
     <para>
       <option>-D ENABLE_DOC=ON</option>: Use this switch if you want to
-      build the documentation (requires <application>doxygen</application>).
+      build the documentation (requires doxygen).
     </para>
 
   </sect2>

@@ -21,7 +21,7 @@
     <title>Introduction to idle</title>
 
     <para>
-      The <application>idle</application> package is a minimalistic Lisa
+      The idle package is a minimalistic Lisa
       1/2 emulator.
     </para>
 
@@ -93,7 +93,7 @@
     <warning><para>
       <emphasis>ONLY</emphasis> apply the following patch if you
       <emphasis>REALLY</emphasis> know what you're doing. This patch pretends
-      the Lisa II/5 as properly emulated by the <application>idle</application>
+      the Lisa II/5 as properly emulated by the idle
       emulator is actually a Lisa II/10, without actually introducing any new
       behaviour or adding any new hardware from the Lisa II/10. It is
       <emphasis>VERY</emphasis> likely to introduce problems in software
@@ -104,7 +104,7 @@
       hard disk size by looking at the system model, and attempting to format a
       10MB drive on a Lisa II/5, or a 5MB drive on a Lisa II/10, for that matter,
       <emphasis>WILL</emphasis> result in errors from
-      <application>mkfs</application>.</para>
+      mkfs.</para>
 
       <para>If, after you read the above, you still want to apply the patch, run
       the following:</para>
@@ -114,7 +114,7 @@
 <screen><computeroutput>patch -Np1 -i ../idle-&idle-minor-version;-pretend-we-are-a-lisa-2-10.patch</computeroutput></screen></warning>
 
     <para>
-      Install <application>idle</application> by running the following
+      Install idle by running the following
       command:
     </para>
 
@@ -151,7 +151,7 @@ rm -rf idle_win32_bin</userinput></screen>
         If you have not applied the systemwide ROMs patch, you will have to put
         the <filename class="directory">bios/</filename> folder from
         <filename>idle_win32_bin.zip</filename>
-        into every folder you plan on executing <application>idle</application>
+        into every folder you plan on executing idle
         from.
       </para>
 

@@ -22,7 +22,7 @@
     <title>Introduction to wayfire-plugins-extra</title>
 
     <para>
-      The <application>wayfire-plugins-extra</application> package provides
+      The wayfire-plugins-extra package provides
       more plugins for <xref linkend="wayfire"/> that you may want or need. For
       example, for focus follows mouse, you will need the <filename
       class="libraryfile">follow-focus</filename> plugin from this package.
@@ -59,7 +59,7 @@
     <title>Installation of wayfire-plugins-extra</title>
 
     <para>
-      Install <application>wayfire-plugins-extra</application> by running the following
+      Install wayfire-plugins-extra by running the following
       commands:
     </para>
 

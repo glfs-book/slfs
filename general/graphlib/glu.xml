@@ -51,7 +51,7 @@
     <title>Installation of GLU</title>
 
     <para>
-      Install <application>GLU</application> by running the following
+      Install GLU by running the following
       commands:
     </para>
 
@@ -89,8 +89,8 @@ rm -vf /usr/lib/libGLU.a</userinput></screen>
 
     <para>
       <command>$(! pkgconf ...)</command>: These commands check if the OpenGL
-      provider is not <application>libglvnd</application>, and if it's not, it
-      sets <application>Mesa</application> as the vendor.
+      provider is not libglvnd, and if it's not, it
+      sets Mesa as the vendor.
     </para>
 
   </sect2>
@@ -125,7 +125,7 @@ rm -vf /usr/lib/libGLU.a</userinput></screen>
         <term><filename class="libraryfile">libGLU</filename></term>
         <listitem>
           <para>
-            is the <application>Mesa</application> OpenGL
+            is the Mesa OpenGL
             Utility library
           </para>
           <indexterm zone="glu libGLU">

@@ -21,7 +21,7 @@
     <title>Introduction to seatd</title>
 
     <para>
-      The <application>seatd</application> package provides a universal seat
+      The seatd package provides a universal seat
       management library. It is what a lot of Wayland compositors use to manage
       seats, a session for a user in which applications can interact with.
     </para>
@@ -46,7 +46,7 @@
       &logind-nocomma;
       (this package needs a backend to properly
       create a seat, <phrase revision="sysv">e</phrase>logind
-      <phrase revision="systemd"> from <application>Systemd</application>
+      <phrase revision="systemd"> from Systemd
       </phrase> being a suitable one)
     </para>
 
@@ -56,7 +56,7 @@
     <title>Installation of seatd</title>
     
     <para>
-      Install <application>seatd</application> by running the following
+      Install seatd by running the following
       commands:
     </para>
 
@@ -88,7 +88,7 @@ ninja</userinput></screen>
 
     <para>
       <parameter>-D server=disabled</parameter>: Disables building the
-      <application>seatd</application> daemon.
+      seatd daemon.
     </para>
 
     <para>

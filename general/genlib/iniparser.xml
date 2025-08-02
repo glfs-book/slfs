@@ -21,7 +21,7 @@
     <title>Introduction to iniparser</title>
 
     <para>
-      The <application>iniparser</application> package provides a C
+      The iniparser package provides a C
       library for parsing <filename class="extension">.ini</filename> files.
     </para>
 
@@ -51,7 +51,7 @@
     <title>Installation of iniparser</title>
 
     <para>
-      Install <application>iniparser</application> by running the following
+      Install iniparser by running the following
       commands:
     </para>
 

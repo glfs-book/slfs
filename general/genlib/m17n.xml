@@ -68,7 +68,7 @@
     <title>Installation of m17n</title>
 
     <para>
-      First, install the <application>m17n</application> database by running
+      First, install the m17n database by running
       the following commands:
     </para>
 
@@ -84,7 +84,7 @@ make</userinput></screen>
 <screen role="root"><userinput>make install</userinput></screen>
 
     <para>
-      Then, install <application>m17n</application> by running the following
+      Then, install m17n by running the following
       commands:
     </para>
 

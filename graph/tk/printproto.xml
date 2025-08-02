@@ -19,7 +19,7 @@
     <title>Introduction to printproto</title>
 
     <para>
-      The <application>printproto</application> package provides the protocol
+      The printproto package provides the protocol
       headers for the <xref linkend="libxp"/> package.
     </para>
 
@@ -45,7 +45,7 @@
     <title>Installation of printproto</title>
 
     <para>
-      Install <application>printproto</application> by running the following
+      Install printproto by running the following
       commands:
     </para>
 

@@ -21,7 +21,7 @@
     <title>Introduction to XHomer</title>
 
     <para>
-      The <application>XHomer</application> package provides an emulator for
+      The XHomer package provides an emulator for
       the DEC Pro 350 computer, a PDP-11-based machine that was sold in the
       early to mid-80s.
     </para>
@@ -65,7 +65,7 @@
     <para>
       Apply a patch to allow for proper restoring of terminal settings in
       certain commonly used scenarios of closing
-      <application>XHomer</application>:
+      XHomer:
     </para>
 
 <screen><userinput>patch -Np1 -i ../xhomer-&xhomer-version;-close-properly.patch</userinput></screen>
@@ -77,7 +77,7 @@
 <screen><userinput>patch -Np1 -i ../xhomer-&xhomer-version;-fix-util-build.patch</userinput></screen>
 
     <para>
-      Install <application>XHomer</application> by running the following
+      Install XHomer by running the following
       command:
     </para>
 

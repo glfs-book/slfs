@@ -24,7 +24,7 @@ so this will do for now -->
     <title>Introduction to cldr-emoji-annotation</title>
 
     <para>
-      The <application>cldr-emoji-annotation</application> package provides
+      The cldr-emoji-annotation package provides
       the emoji-related annotation files from Unicode's CLDR.
     </para>
 
@@ -59,7 +59,7 @@ so this will do for now -->
 <screen><userinput>patch -Np1 -i ../cldr-emoji-annotation-&cldr-emoji-annotation-version;-final-updates.patch</userinput></screen>
 
     <para>
-      Install <application>cldr-emoji-annotation</application> by executing the following
+      Install cldr-emoji-annotation by executing the following
       commands:
     </para>
 

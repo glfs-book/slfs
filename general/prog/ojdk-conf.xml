@@ -94,7 +94,7 @@ mandb -c /opt/jdk/man</userinput></screen>
     <title>Setting up the Certificate Authority Certificates for Java</title>
 
     <para>
-      <application>OpenJDK</application> uses its own format for the
+      OpenJDK uses its own format for the
       CA certificates. The Java security modules use
       <envar>$JAVA_HOME</envar><filename>/lib/security/cacerts</filename> by
       default. In order to keep all the certificates in one place, we use

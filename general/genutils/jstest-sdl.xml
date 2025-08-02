@@ -21,7 +21,7 @@
     <title>Introduction to jstest-sdl</title>
 
     <para>
-      The <application>jstest-sdl</application> package provides a program for
+      The jstest-sdl package provides a program for
       testing gamepad/joystick inputs, which can help with mapping controllers
       manually as described in <xref linkend="m64plus-components"/>.
     </para>
@@ -48,7 +48,7 @@
     <title>Installation of jstest-sdl</title>
 
     <para>
-      Install <application>jstest-sdl</application> by running the following
+      Install jstest-sdl by running the following
       commands:
     </para>
 
@@ -68,7 +68,7 @@ make</userinput></screen>
 
     <para>
       <command>sed -i 's/\-ltinfo//g' Makefile</command>: This command avoids
-      linking against an <application>Ncurses</application> library that wasn't
+      linking against an Ncurses library that wasn't
       built in LFS.
     </para>
 

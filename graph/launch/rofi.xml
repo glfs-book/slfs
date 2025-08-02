@@ -21,8 +21,8 @@
     <title>Introduction to Rofi</title>
 
     <para>
-      <application>Rofi</application> provides an application launcher for the
-      <application>X</application> Window System. It can launch applications
+      Rofi provides an application launcher for the
+      X Window System. It can launch applications
       found in <envar>$PATH</envar>, such as <command>firefox</command>. It can
       also launch applications from <filename
       class="extension">.desktop</filename> files in <filename
@@ -30,8 +30,8 @@
       class="directory">~/.local/share/applications</filename>, and other
       paths, such as
       <filename>/usr/share/applications/firefox.desktop</filename>. This
-      specific edition of <application>Rofi</application> does not support
-      <application>Wayland</application> compositors.
+      specific edition of Rofi does not support
+      Wayland compositors.
     </para>
 
     <itemizedlist spacing="compact">
@@ -72,7 +72,7 @@
     <title>Installation of Rofi</title>
 
     <para>
-      Install <application>Rofi</application> by running the following
+      Install Rofi by running the following
       commands:
     </para>
 
@@ -121,7 +121,7 @@ ninja</userinput></screen>
         <term><command>rofi</command></term>
         <listitem>
           <para>
-            is an <application>X11</application> application laucher
+            is an X11 application laucher
           </para>
           <indexterm zone="rofi rofi-bin">
             <primary sortas="b-rofi-bin">rofi</primary>

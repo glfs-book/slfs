@@ -18,8 +18,8 @@
     <title>Introduction to Python Modules</title>
 
     <para>
-      The <application>Python</application> module packages add useful objects
-      to the <application>Python</application> language. Modules utilized by
+      The Python module packages add useful objects
+      to the Python language. Modules utilized by
       packages throughout SLFS are listed here, along with their dependencies.
     </para>
 

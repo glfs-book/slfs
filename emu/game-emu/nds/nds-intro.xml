@@ -18,7 +18,7 @@
       The Nintendo DS (NDS/DS) is a video game handheld console made by
       Nintendo which was available from 2004 to 2011. It uses two 32-bit ARM
       CPUs (a main processor and a coprocessor). A revision came out later, the
-      Nintendo DSi. <application>MelonDS</application> can handle ROMs for both
+      Nintendo DSi. MelonDS can handle ROMs for both
       of them.
     </para>
 
@@ -28,7 +28,7 @@
     <title>MelonDS</title>
 
     <para>
-      <application>MelonDS</application> is a NDS and NDSi emulator that is
+      MelonDS is a NDS and NDSi emulator that is
       fairly new but has less issues that older emulators of its kind. NDSi
       is a work in progress, however.
     </para>

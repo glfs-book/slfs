@@ -21,9 +21,9 @@
     <title>Introduction to Dunst</title>
 
     <para>
-      <application>Dunst</application> provides a notification daemon that is
-      light and customizable for the <application>X</application> Window System
-      and <application>Wayland</application> compositors.
+      Dunst provides a notification daemon that is
+      light and customizable for the X Window System
+      and Wayland compositors.
     </para>
 
     <itemizedlist spacing="compact">
@@ -58,7 +58,7 @@
     <title>Installation of Dunst</title>
 
     <para>
-      Install <application>Dunst</application> by running the following
+      Install Dunst by running the following
       commands:
     </para>
 
@@ -121,8 +121,8 @@ cp /etc/dunst/dunstrc ~/.config/dunst</userinput></screen>
       <para>
         <command>dunst</command> also needs to be started for it to be able to
         send any notification. While this can be autostarted by
-        <application>D-Bus</application>, multiple notification daemons may be
-        installed, so <application>D-Bus</application> will be the one to
+        D-Bus, multiple notification daemons may be
+        installed, so D-Bus will be the one to
         choose what gets autostarted. Thus, there are a couple of options.
       </para>
 
@@ -229,7 +229,7 @@ EOF</userinput></screen>
         <term><command>dunst</command></term>
         <listitem>
           <para>
-            is the <application>Dunst</application> notification daemon
+            is the Dunst notification daemon
           </para>
           <indexterm zone="dunst dunst-bin">
             <primary sortas="b-dunst-bin">dunst</primary>
@@ -242,7 +242,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             is a command-line utility for controlling
-            <application>Dunst</application>
+            Dunst
           </para>
           <indexterm zone="dunst dunstctl">
             <primary sortas="b-dunstctl">dunstctl</primary>

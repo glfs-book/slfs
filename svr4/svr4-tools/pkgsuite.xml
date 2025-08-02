@@ -21,7 +21,7 @@
     <title>Introduction to pkgsuite</title>
 
     <para>
-      The <application>pkgsuite</application> package is a patched-up version
+      The pkgsuite package is a patched-up version
       of the Heirloom Packaging tools, which is itself a patched-up portable
       version of the UNIX SVR4 packaging utilities.
     </para>
@@ -52,7 +52,7 @@
       &unzip;
       (to unpack the distribution),
       <ulink url="&blfs-svn;/general/which.html">Which</ulink>
-      (<application>GNU Which</application> is the one that needs to be
+      (GNU Which is the one that needs to be
       installed, <emphasis>NOT</emphasis> the shell script, or else it will
       silently fail and will give the wrong paths to executables), and
       <xref linkend="heirloom-ng"/> (at runtime)
@@ -71,7 +71,7 @@
 <screen><userinput>patch -Np1 -i ../pkgsuite-&pkgsuite-minor-version;-paths.patch</userinput></screen>
 
     <para>
-      Install <application>pkgsuite</application> by running the following
+      Install pkgsuite by running the following
       command:
     </para>
 

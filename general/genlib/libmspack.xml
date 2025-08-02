@@ -22,7 +22,7 @@
     <title>Introduction to libmspack</title>
 
     <para>
-      The <application>libmspack</application> package provides a library that
+      The libmspack package provides a library that
       handles some Microsoft compression formats such as CAB, CHM, and HLP. It
       also provides <command>cabextract</command> which extracts Microsoft
       cabinet files.
@@ -42,7 +42,7 @@
     <title>Installation of libmspack</title>
 
     <para>
-      Install <application>libmspack</application> by executing the following
+      Install libmspack by executing the following
       commands:
     </para>
 

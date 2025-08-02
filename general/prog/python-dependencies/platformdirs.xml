@@ -19,7 +19,7 @@
       <title>Introduction to platformdirs Module</title>
 
       <para>
-        The <application>platformdirs</application> module provides standard
+        The platformdirs module provides standard
         directory paths on different platforms so that data is saved to the
         right path.
       </para>

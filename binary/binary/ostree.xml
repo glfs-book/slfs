@@ -61,7 +61,7 @@
     <title>Installation of OSTree</title>
 
     <para>
-      Install <application>OSTree</application> by running the following
+      Install OSTree by running the following
       commands:
     </para>
 
@@ -121,7 +121,7 @@ make</userinput></screen>
         <listitem>
           <para>
             changes the view of a mounted root filesystem to an
-            <application>ostree</application> deployment
+            ostree deployment
           </para>
           <indexterm zone="ostree ostree-prepare-root">
             <primary sortas="b-ostree-prepare-root">ostree-prepare-root</primary>
@@ -145,7 +145,7 @@ make</userinput></screen>
         <term><command>rofiles-fuse</command></term>
         <listitem>
           <para>
-            uses <application>Fuse</application> to create a view where
+            uses Fuse to create a view where
             directories and files are immutable
           </para>
           <indexterm zone="ostree rofiles-fuse">

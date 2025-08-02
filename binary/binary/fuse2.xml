@@ -79,7 +79,7 @@
 autoreconf -i -I/usr/share/gettext/m4</userinput></screen>
 
     <para>
-      Install <application>Fuse2</application> by running the following
+      Install Fuse2 by running the following
       commands:
     </para>
 
@@ -156,7 +156,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             is a suid root program to mount and unmount
-            <application>Fuse2</application> filesystems 
+            Fuse2 filesystems 
           </para>
           <indexterm zone="fuse2 fusermount">
             <primary sortas="b-fusermount">fusermount</primary>

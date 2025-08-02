@@ -21,7 +21,7 @@
     <title>Introduction to MelonDS</title>
 
     <para>
-      The <application>MelonDS</application> package provides an NDS emulator.
+      The MelonDS package provides an NDS emulator.
     </para>
 
     <itemizedlist spacing="compact">
@@ -57,7 +57,7 @@
     <title>Installation of MelonDS</title>
 
     <para>
-      Install <application>MelonDS</application> by running the following
+      Install MelonDS by running the following
       commands:
     </para>
 

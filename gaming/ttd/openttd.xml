@@ -21,7 +21,7 @@
     <title>Introduction to OpenTTD</title>
 
     <para>
-      The <application>OpenTTD</application> package is an open source and
+      The OpenTTD package is an open source and
       improved-upon version of Transportation Tycoon Deluxe.
     </para>
 
@@ -72,7 +72,7 @@
     <title>Installation of OpenTTD</title>
 
     <para>
-      Install <application>OpenTTD</application> by running the following
+      Install OpenTTD by running the following
       commands:
     </para>
 
@@ -125,7 +125,7 @@ mv -v /usr/share/doc/openttd{,-&openttd-version;}</userinput></screen>
         <term><command>openttd</command></term>
         <listitem>
           <para>
-            is the <application>OpenTTD</application> launcher
+            is the OpenTTD launcher
           </para>
           <indexterm zone="openttd openttd-bin">
             <primary sortas="b-openttd-bin">openttd</primary>

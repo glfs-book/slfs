@@ -19,7 +19,7 @@
       <title>Introduction to nvchecker Module</title>
 
       <para>
-        The <application>nvchecker</application> module provides a solution
+        The nvchecker module provides a solution
         for checking versions of packages. Arch Linux and other teams rely on
         this module for checking for updates to provide the latest software to
         their users.

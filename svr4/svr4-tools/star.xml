@@ -51,14 +51,14 @@
 popd</userinput></screen>
 
     <para>
-      Compile <application>star</application> by running the following
+      Compile star by running the following
       commands, and ensure an older GNU standard is used:
     </para>
 
 <screen><userinput>psmake/smake -e CC="cc -std=gnu17"</userinput></screen>
 
     <para>
-      Now, as the &root; user, install <application>star</application> and the
+      Now, as the &root; user, install star and the
       supplementary tools:
     </para>
 

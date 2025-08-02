@@ -19,7 +19,7 @@
       <title>Introduction to toml Module</title>
 
       <para>
-        The <application>toml</application> module can process and convert
+        The toml module can process and convert
         things from and to TOML.
       </para>
 

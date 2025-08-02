@@ -21,8 +21,8 @@
     <title>Introduction to Wofi</title>
 
     <para>
-      <application>Wofi</application> provides an application launcher
-      for <application>Wayland</application> compositors. It has most of the
+      Wofi provides an application launcher
+      for Wayland compositors. It has most of the
       same functionality <xref linkend="rofi"/>.
     </para>
 
@@ -52,7 +52,7 @@
     <title>Installation of Wofi</title>
 
     <para>
-      Install <application>Wofi</application> by running the following
+      Install Wofi by running the following
       commands:
     </para>
 
@@ -100,7 +100,7 @@ ninja</userinput></screen>
         <term><command>wofi</command></term>
         <listitem>
           <para>
-            is a <application>Wayland</application> application laucher
+            is a Wayland application laucher
           </para>
           <indexterm zone="wofi wofi-bin">
             <primary sortas="b-wofi-bin">wofi</primary>

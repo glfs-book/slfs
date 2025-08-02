@@ -21,7 +21,7 @@
     <title>Introduction to p20-emu</title>
 
     <para>
-      The <application>p20-emu</application> package is a Plexus P/20
+      The p20-emu package is a Plexus P/20
       emulator.
     </para>
 
@@ -92,7 +92,7 @@
 <screen><userinput>patch -Np1 -i ../p20-emu-&p20-emu-minor-version;-system-roms.patch</userinput></screen>
 
     <para>
-      Install <application>p20-emu</application> by running the following
+      Install p20-emu by running the following
       command:
     </para>
 

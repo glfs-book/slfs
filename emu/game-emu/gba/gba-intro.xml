@@ -28,7 +28,7 @@
     <title>mGBA</title>
 
     <para>
-      <application>mGBA</application> is a GBA emulator that aims to be more
+      mGBA is a GBA emulator that aims to be more
       accurate than other GBA emulators, as well as providing a better feature
       set. It supports GBA games, as well as regular Game Boy and Game Boy
       Color games.

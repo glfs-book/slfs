@@ -22,8 +22,8 @@
     <para>
       The Hypr libraries provide needed utilties for the entire Hypr ecosystem.
       While two of the packages installed in this page are not strictly
-      required (<application>hyprland-qt-support</application> and
-      <application>hyprland-qtutils</application>), they are needed for some
+      required (hyprland-qt-support and
+      hyprland-qtutils), they are needed for some
       dialog boxes and this book assumes that you have built them.
     </para>
 
@@ -284,7 +284,7 @@ done</userinput></screen>
         <term><command>hyprland-dialog</command></term>
         <listitem>
           <para>
-            shows certain dialog using <application>Qt-6</application>
+            shows certain dialog using Qt-6
           </para>
           <indexterm zone="hyprlib hyprland-dialog">
             <primary sortas="b-hyprland-dialog">hyprland-dialog</primary>
@@ -297,7 +297,7 @@ done</userinput></screen>
         <listitem>
           <para>
             shows a pop up box telling users to donate using
-            <application>Qt-6</application>
+            Qt-6
           </para>
           <indexterm zone="hyprlib hyprland-donate-screen">
             <primary sortas="b-hyprland-donate-screen">hyprland-donate-screen</primary>
@@ -310,7 +310,7 @@ done</userinput></screen>
         <listitem>
           <para>
             shows a pop up box telling users to update using
-            <application>Qt-6</application>
+            Qt-6
           </para>
           <indexterm zone="hyprlib hyprland-update-screen">
             <primary sortas="b-hyprland-update-screen">hyprland-update-screen</primary>
@@ -322,7 +322,7 @@ done</userinput></screen>
         <term><command>hyprwayland-scanner</command></term>
         <listitem>
           <para>
-            generates C++ code from <application>Wayland</application> protocol
+            generates C++ code from Wayland protocol
             XML files
           </para>
           <indexterm zone="hyprlib hyprwayland-scanner">
@@ -371,7 +371,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprland-quick-style-implplugin</filename></term>
         <listitem>
           <para>
-            is the <application>Hyprland</application> Quick Style IMPL plugin
+            is the Hyprland Quick Style IMPL plugin
           </para>
           <indexterm zone="hyprlib libhyprland-quick-style-implplugin">
             <primary sortas="c-libhyprland-quick-style-implplugin">libhyprland-quick-style-implplugin</primary>
@@ -383,7 +383,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprland-quick-style-impl</filename></term>
         <listitem>
           <para>
-            is the <application>Hyprland</application> Quick Style IMPL library
+            is the Hyprland Quick Style IMPL library
           </para>
           <indexterm zone="hyprlib libhyprland-quick-style-impl">
             <primary sortas="c-libhyprland-quick-style-impl">libhyprland-quick-style-impl</primary>
@@ -395,7 +395,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprland-quick-styleplugin</filename></term>
         <listitem>
           <para>
-            is the <application>Hyprland</application> Quick Style plugin
+            is the Hyprland Quick Style plugin
           </para>
           <indexterm zone="hyprlib libhyprland-quick-styleplugin">
             <primary sortas="c-libhyprland-quick-styleplugin">libhyprland-quick-styleplugin</primary>
@@ -407,7 +407,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprland-quick-style</filename></term>
         <listitem>
           <para>
-            is the <application>Hyprland</application> Quick Style library
+            is the Hyprland Quick Style library
           </para>
           <indexterm zone="hyprlib libhyprland-quick-style">
             <primary sortas="c-libhyprland-quick-style">libhyprland-quick-style</primary>

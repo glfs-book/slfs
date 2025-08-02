@@ -19,8 +19,8 @@
       <title>Introduction to pycurl Module</title>
 
       <para>
-        The <application>pycurl</application> module offers access to
-        <application>cURL</application> in <application>Python</application>
+        The pycurl module offers access to
+        cURL in Python
         scripts.
       </para>
 

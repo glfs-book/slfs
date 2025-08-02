@@ -21,7 +21,7 @@
     <title>Introduction to heirloom-ng</title>
 
     <para>
-      The <application>heirloom-ng</application> package is a collection of
+      The heirloom-ng package is a collection of
       standard Unix utilities that is intended to provide maximum compatibility
       with traditional Unix while incorporating additional features necessary
       today.
@@ -76,7 +76,7 @@
 <screen><userinput>patch -Np1 -i ../heirloom-ng-59f7cc-dont-link-nonexistent-files.patch</userinput></screen>
 
     <para>
-      Install <application>heirloom-ng</application> by running the following
+      Install heirloom-ng by running the following
       command:
     </para>
 
@@ -91,8 +91,8 @@ CC="cc -std=gnu17" make</userinput></screen>
   
     <para>
       As the &root; user, remove binaries also shipped by 
-      <application>heirloom-doctools</application> and
-      <application>heirloom-devtools</application>:
+      heirloom-doctools and
+      heirloom-devtools:
     </para>
 
 <screen role="root"><userinput>rm -vf /usr/5bin/col /usr/5bin/what</userinput></screen>
@@ -104,7 +104,7 @@ CC="cc -std=gnu17" make</userinput></screen>
 
     <para>
       <command>sed -i 's/\-ltinfo//g' build/mk.config</command>: This command avoids
-      linking against an <application>Ncurses</application> library that wasn't
+      linking against an Ncurses library that wasn't
       built in LFS.
     </para>
 

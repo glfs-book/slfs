@@ -23,7 +23,7 @@
 
     <para>
       The sdbus-c++ package provides a C++ API for
-      <application>D-Bus</application>.
+      D-Bus.
     </para>
 
     <itemizedlist spacing="compact">
@@ -59,7 +59,7 @@
     <title>Installation of sdbus-c++</title>
 
     <para>
-      Install <application>sdbus-c++</application> by running the following
+      Install sdbus-c++ by running the following
       commands:
     </para>
 
@@ -126,7 +126,7 @@ mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</userinput></screen>
         <term><filename class="libraryfile">libsdbus-c++</filename></term>
         <listitem>
           <para>
-            provides API functions for <application>D-Bus</application> in C++
+            provides API functions for D-Bus in C++
           </para>
           <indexterm zone="sdbus-cpp libsdbus-cpp">
             <primary sortas="c-libsdbus-cpp">libsdbus-c++</primary>

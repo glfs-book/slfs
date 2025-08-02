@@ -21,7 +21,7 @@
     <title>Introduction to cava</title>
 
     <para>
-      The <application>cava</application> package provides an audio visualizer.
+      The cava package provides an audio visualizer.
     </para>
 
     <itemizedlist spacing="compact">
@@ -62,7 +62,7 @@
     <title>Installation of cava</title>
 
     <para>
-      Install <application>cava</application> by running the following
+      Install cava by running the following
       commands:
     </para>
 

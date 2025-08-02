@@ -21,9 +21,9 @@
     <title>Introduction to inxi</title>
 
     <para>
-      The <application>inxi</application> package provides a command-line
+      The inxi package provides a command-line
       program which grabs information about the system that you request via a
-      <application>Perl</application> script.
+      Perl script.
     </para>
 
     <itemizedlist spacing="compact">

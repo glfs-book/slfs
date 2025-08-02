@@ -120,7 +120,7 @@ cp -v binutils-&lotus123-binutils-version;/binutils/obj{copy,dump} . &amp;&amp;
 cp -v binutils-&lotus123-binutils-version;/ld/ld-new ld</userinput></screen>
 
     <para>
-      In order to compile <application>Lotus 1-2-3</application>, execute the
+      In order to compile Lotus 1-2-3, execute the
       following commands:
     </para>
 
@@ -143,7 +143,7 @@ make</userinput></screen>
 
     <para>
       <parameter>sed -i 's/\-ltinfo//g' ...</parameter>: This command avoids 
-      linking against an <application>Ncurses</application> library that wasn't
+      linking against an Ncurses library that wasn't
       built in LFS.
     </para>
 

@@ -22,7 +22,7 @@
     <title>Introduction to fcft</title>
 
     <para>
-      The <application>fcft</application> package provides a library for
+      The fcft package provides a library for
       loading fonts and rasterizing glyphs.
     </para>
 
@@ -62,7 +62,7 @@
     <title>Installation of fcft</title>
 
     <para>
-      Install <application>fcft</application> by running the following
+      Install fcft by running the following
       commands:
     </para>
 
@@ -79,7 +79,7 @@ ninja</userinput></screen>
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      If you built <application>scdoc</application>, make the documentation
+      If you built scdoc, make the documentation
       directory versioned as the &root; user:
     </para>
 

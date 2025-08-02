@@ -20,7 +20,7 @@
     <title>Introduction to BTOP++</title>
 
     <para>
-      The <application>BTOP++</application> package provides a TUI
+      The BTOP++ package provides a TUI
       <footnote><para>
         Text-based User Interface.
       </para></footnote>
@@ -50,7 +50,7 @@
     <title>Installation of BTOP++</title>
 
     <para>
-      Install <application>BTOP++</application> by running the following
+      Install BTOP++ by running the following
       commands:
     </para>
 

@@ -21,7 +21,7 @@
     <title>Introduction to tllist</title>
 
     <para>
-      The <application>tllist</application> package provides a header-only C
+      The tllist package provides a header-only C
       library for typed linked lists.
     </para>
 
@@ -39,7 +39,7 @@
     <title>Installation of tllist</title>
 
     <para>
-      Install <application>tllist</application> by running the following
+      Install tllist by running the following
       commands:
     </para>
 

@@ -21,7 +21,7 @@
     <title>Introduction to Mesa-Demos</title>
 
     <para>
-      The <application>Mesa-Demos</application> package provides multiple demos
+      The Mesa-Demos package provides multiple demos
       to test the installation of mutliple graphics APIs and drivers for those
       APIs, such as OpenGL, EGL, Vulkan, and more.
     </para>
@@ -123,7 +123,7 @@
 <screen><userinput>patch -Np1 -i ../mesa-demos-system-data.patch</userinput></screen>
 
     <para>
-      Install <application>Mesa-Demos</application> by running the following
+      Install Mesa-Demos by running the following
       commands:
     </para>
 
@@ -381,7 +381,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <listitem>
           <para>
             displays 3D rotating gears through normal OpenGL via a
-            <application>GLUT</application> variant or OpenGL ES
+            GLUT variant or OpenGL ES
           </para>
           <indexterm zone="mesa-demos gears">
             <primary sortas="b-gears">gears</primary>
@@ -431,7 +431,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <listitem>
           <para>
             displays an RGB triangle using normal OpenGL via a
-            <application>GLUT</application> variant or OpenGL ES
+            GLUT variant or OpenGL ES
           </para>
           <indexterm zone="mesa-demos tri">
             <primary sortas="b-tri">tri</primary>

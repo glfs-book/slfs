@@ -21,7 +21,7 @@
     <title>Introduction to FreeBee</title>
 
     <para>
-      The <application>FreeBee</application> package is an AT&amp;T 3B1/7300 UNIX
+      The FreeBee package is an AT&amp;T 3B1/7300 UNIX
       PC emulator.
     </para>
 
@@ -71,7 +71,7 @@
     <title>Installation of FreeBee</title>
 
     <para>
-      Unpack the <application>musashi</application> submodule into the right place:
+      Unpack the musashi submodule into the right place:
     </para>
 
 <screen><userinput>unzip ../&musashi-submodule-version;.zip -d src/ &amp;&amp;
@@ -88,7 +88,7 @@ mv src/Musashi-&musashi-submodule-version; src/musashi</userinput></screen>
 <screen><userinput>patch -Np1 -i ../freebee-&freebee-minor-version;-system-roms.patch</userinput></screen>
 
     <para>
-      Install <application>FreeBee</application> by running the following
+      Install FreeBee by running the following
       command:
     </para>
 
@@ -161,12 +161,12 @@ mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin<
         the <filename class="directory">roms/</filename> folder as documented
         in the <filename>README</filename> file from
         <filename>3b1_roms.zip</filename> into every folder you run
-        <application>FreeBee</application> from, although it is possible to
-        explicitly set the ROM path in the <application>FreeBee</application>
+        FreeBee from, although it is possible to
+        explicitly set the ROM path in the FreeBee
         config file if you do not want to do that.
       </para>
 
-      <note><para>Refer to the <application>FreeBee</application> documentation
+      <note><para>Refer to the FreeBee documentation
       to learn how to configure the config file.</para></note>
 
     </sect3>

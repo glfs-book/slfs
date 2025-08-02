@@ -19,7 +19,7 @@
       <title>Introduction to structlog Module</title>
 
       <para>
-        The <application>structlog</application> module offers an easy solution
+        The structlog module offers an easy solution
         to logging.
       </para>
 

@@ -21,7 +21,7 @@
     <title>Introduction to PrismLauncher</title>
 
     <para>
-      The <application>PrismLauncher</application> package provides a Minecraft
+      The PrismLauncher package provides a Minecraft
       Launcher.
     </para>
 
@@ -46,7 +46,7 @@
 
     <important><para>
       While you can install the most recent version of
-      <application>OpenJDK</application> (version 20 and above), you'll need to
+      OpenJDK (version 20 and above), you'll need to
       edit the build system of this package, tick an option in the launcher
       menu, and will lose support in older Minecraft versions, including mods
       and other things <emphasis>IF</emphasis> you did not make <xref
@@ -80,7 +80,7 @@
 <screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;+&openjdk-build; /opt/jdk</userinput></screen>
 
     <para>
-      If you have installed <application>OpenJDK</application> version 20 or
+      If you have installed OpenJDK version 20 or
       above and have made it the default JDK, edit the build system to allow
       building with Java 8 instead of 7:
     </para>
@@ -91,7 +91,7 @@
     -i libraries/{javacheck,launcher}/CMakeLists.txt</userinput></screen>
 
     <para>
-      Install <application>PrismLauncher</application> by running the following
+      Install PrismLauncher by running the following
       commands:
     </para>
 
@@ -118,7 +118,7 @@ ninja</userinput></screen>
     <para>
       This launcher should walk you through how to set it up. However, one
       major thing needs to be done if you installed
-      <application>OpenJDK</application> version 20 or above and made it the
+      OpenJDK version 20 or above and made it the
       default. After you create an instance, you will need to edit that
       instance, go to the <quote>Settings</quote> section, then tick
       <quote>Skip Java Compatibility Checks</quote> to avoid Minecraft from

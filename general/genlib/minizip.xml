@@ -20,8 +20,8 @@
     <title>Introduction to minizip</title>
 
     <para>
-      The <application>minizip</application> package provides a library for
-      mini zip and unzip, based on <application>Zlib</application>.
+      The minizip package provides a library for
+      mini zip and unzip, based on Zlib.
     </para>
 
     
@@ -45,7 +45,7 @@
     </para></note>
 
     <para>
-      Install <application>minizip</application> by running the following
+      Install minizip by running the following
       commands:
     </para>
 

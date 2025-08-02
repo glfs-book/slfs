@@ -23,7 +23,7 @@
 
     <para>
       The nv-codec-headers package provides headers for interacting with
-      <application>NVIDIA</application> codec APIs.
+      NVIDIA codec APIs.
     </para>
 
     
@@ -41,7 +41,7 @@
     <title>Installation of nv-codec-headers</title>
 
     <para>
-      Install <application>nv-codec-headers</application> by running the following
+      Install nv-codec-headers by running the following
       command as the &root; user:
     </para>
 
@@ -49,7 +49,7 @@
 
     <para>
       If you are doing multilib, make a symlink for the
-      <application>pkgconf</application> file as the &root; user:
+      pkgconf file as the &root; user:
     </para>
 
 <screen role="root"><userinput>ln -sfv /usr/lib{,32}/pkgconfig/ffnvcodec.pc</userinput></screen>

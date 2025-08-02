@@ -29,11 +29,11 @@
     <title>Introduction to xserver</title>
 
     <para>
-      The <application>xserver</application> is the X11Libre fork of the
-      <application>Xorg-Server</application>. The Xorg project's
-      <application>Xorg-Server's</application> repository is also called
-      <application>xserver</application> but they expand the name to
-      <application>Xorg-Server</application> as noted by the distribution
+      The xserver is the X11Libre fork of the
+      Xorg-Server. The Xorg project's
+      Xorg-Server's repository is also called
+      xserver but they expand the name to
+      Xorg-Server as noted by the distribution
       tarball. This fork doesn't for now.
     </para>
 
@@ -45,11 +45,11 @@
 
     <note>
       <para>
-        Does this package work with <application>NVIDIA</application>:
+        Does this package work with NVIDIA:
         &xserver-with-nvidia;.
       </para>
       <para>
-        Tested with <application>NVIDIA-&nvidia-version;</application>.
+        Tested with NVIDIA-&nvidia-version;.
       </para>
     </note>
 
@@ -195,7 +195,7 @@ fi</userinput></screen>
     </para>
 
     <para>
-      For <application>NVIDIA</application> however, you do need to make a
+      For NVIDIA however, you do need to make a
       configuration file to proceed past a warning being treated as an error as
       the &root; user:
     </para>

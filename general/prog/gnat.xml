@@ -31,8 +31,8 @@
 
     <para>
       The compiler and associated tools on this page are known as the
-      <application>GNAT</application> technology, developed by the Adacore
-      company, using the <application>GCC</application> backend.
+      GNAT technology, developed by the Adacore
+      company, using the GCC backend.
     </para>
 
     <para>
@@ -51,8 +51,8 @@
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <para>
       If you have not already built or downloaded
-      <application>GNAT</application> tools, this download is required as
-      <application>GNAT</application> is written in Ada.
+      GNAT tools, this download is required as
+      GNAT is written in Ada.
     </para>
     <itemizedlist spacing="compact">
       <listitem>
@@ -85,14 +85,14 @@
     <title>Installation of GNAT Binaries</title>
 
     <para>
-      As <application>GNAT</application> is written in Ada, Ada tools need to
-      be on the system in order to build <application>GNAT</application>. If
+      As GNAT is written in Ada, Ada tools need to
+      be on the system in order to build GNAT. If
       you already built such tools or have the binaries on your system, you can
       skip to the next section.
     </para>
 
     <para>
-      Install the <application>GNAT</application> binaries by running the
+      Install the GNAT binaries by running the
       following commands as the &root; user while still in the directory the
       tarball is in:
     </para>
@@ -103,7 +103,7 @@ chown -R root:root /opt/gnat</userinput></screen>
 
     <para>
       Now adjust the <filename>PATH</filename> variable so
-      the <application>GNAT</application> software can be found
+      the GNAT software can be found
       and used:
     </para>
 
@@ -112,7 +112,7 @@ export PATH=/opt/gnat/bin:$PATH_HOLD</userinput></screen>
 
     <para>
       Ensure <command>ld</command> and <command>as</command>
-      from the <application>GNAT</application> package aren't
+      from the GNAT package aren't
       used as to prevent issues with aging by issuing the
       following as the &root; user:
     </para>
@@ -199,7 +199,7 @@ else
 fi</userinput></screen>
 
     <para>
-      Now install <application>GNAT</application> by running the following
+      Now install GNAT by running the following
       commands:
     </para>
 
@@ -217,11 +217,11 @@ fi</userinput></screen>
 make</userinput></screen>
 
     <note><para>
-      When you recompile <application>GCC</application>, make sure to include
+      When you recompile GCC, make sure to include
       <parameter>ada</parameter> in the
       <parameter>--enable-languages=</parameter> parameter, or else you will
       lose Ada support and will need to install the
-      <application>GNAT</application> binaries again.
+      GNAT binaries again.
     </para></note>
 
     <para>
@@ -236,8 +236,8 @@ sed -e 's/{ target nonpic } //' \
 
     <para>
       If you have installed additional packages such as
-      <application>valgrind</application> and <application>gdb</application>,
-      the <application>GCC</application> part of the
+      valgrind and gdb,
+      the GCC part of the
       test suite will run more tests than in LFS. Some of those will
       report FAIL and others XPASS (pass when expected to FAIL).
       As of GCC-&gcc-version;, about 74 FAIL occur in the “guality”
@@ -279,20 +279,20 @@ ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/&gcc-version;/liblto_plugin.so \
     <title>Cleaning Up and Testing</title>
 
     <para>
-      Now that <application>GNAT</application> has been installed,
+      Now that GNAT has been installed,
       it is time to clean up and test your installation to make sure
       everything is working as expected.
     </para>
 
     <para>
-      If you downloaded the <application>GNAT</application> binaries,
+      If you downloaded the GNAT binaries,
       remove them as the &root; user:
     </para>
 
     <screen role="root"><userinput>rm -rf /opt/gnat*</userinput></screen>
 
     <para>
-      If you downloaded the <application>GNAT</application> binaries, restore
+      If you downloaded the GNAT binaries, restore
       the <filename>PATH</filename> variable to what it was beforehand:
     </para>
 
@@ -374,7 +374,7 @@ rm -v testgnat*</userinput></screen>
 
     <para>
       <command>mkdir build; cd build</command>: The
-      <application>GCC</application> documentation recommends
+      GCC documentation recommends
       building the package in a dedicated build directory.
     </para>
 
@@ -392,9 +392,9 @@ rm -v testgnat*</userinput></screen>
 
     <para>
       <parameter>--with-system-zlib</parameter>: Uses the system
-      <application>zlib</application> instead of the bundled one.
-      <application>zlib</application> is used for compressing
-      and decompressing <application>GCC</application>'s intermediate
+      zlib instead of the bundled one.
+      zlib is used for compressing
+      and decompressing GCC's intermediate
       language in LTO (Link Time Optimization) object files.
     </para>
 
@@ -417,8 +417,8 @@ rm -v testgnat*</userinput></screen>
       This command builds support for Ada, C, and C++. Refer to <ulink
       url="&blfs-svn;/general/gcc.html"/>
       to find what other languages are supported. Make sure to add
-      <parameter>ada</parameter> to the option if you recompile <application>
-      GCC</application>.
+      <parameter>ada</parameter> to the option if you recompile 
+      GCC.
     </para>
 
     <para>
@@ -441,7 +441,7 @@ rm -v testgnat*</userinput></screen>
 
     <para>
       <command>mv -v /usr/lib/*gdb.py ...</command>: The installation
-      stage puts some files used by <application>gdb</application> under the
+      stage puts some files used by gdb under the
       <filename class="directory">/usr/lib</filename> directory. This generates
       spurious error messages when performing <command>ldconfig</command>. This
       command moves the files to another location.
@@ -530,7 +530,7 @@ rm -v testgnat*</userinput></screen>
         <listitem>
           <para>
             is useful for renaming files to meet the standard
-            <application>Ada</application> default file naming conventions
+            Ada default file naming conventions
           </para>
           <indexterm zone="gnat gnatchop">
             <primary sortas="b-gnatchop">gnatchop</primary>
@@ -543,7 +543,7 @@ rm -v testgnat*</userinput></screen>
         <listitem>
           <para>
             is used to remove files associated with a
-            <application>GNAT</application> project
+            GNAT project
           </para>
           <indexterm zone="gnat gnatclean">
             <primary sortas="b-gnatclean">gnatclean</primary>
@@ -592,7 +592,7 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatmake</command></term>
         <listitem>
           <para>
-            is the <application>Ada</application> compiler, which performs
+            is the Ada compiler, which performs
             compilation, binding and linking
           </para>
           <indexterm zone="gnat gnatmake">
@@ -606,7 +606,7 @@ rm -v testgnat*</userinput></screen>
         <listitem>
           <para>
             will list the files associated with a
-            <application>GNAT</application> project
+            GNAT project
           </para>
           <indexterm zone="gnat gnatname">
             <primary sortas="b-gnatname">gnatname</primary>
@@ -618,7 +618,7 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatprep</command></term>
         <listitem>
           <para>
-            is the <application>GNAT</application> external preprocessor
+            is the GNAT external preprocessor
           </para>
           <indexterm zone="gnat gnatprep">
             <primary sortas="b-gnatprep">gnatprep</primary>

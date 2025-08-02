@@ -21,7 +21,7 @@
     <title>Introduction to minicom</title>
 
     <para>
-      The <application>minicom</application> package provides a serial
+      The minicom package provides a serial
       communication program.
     </para>
 
@@ -52,7 +52,7 @@
     <title>Installation of minicom</title>
 
     <para>
-      Install <application>minicom</application> by running the following
+      Install minicom by running the following
       commands:
     </para>
 

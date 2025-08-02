@@ -65,7 +65,7 @@
     <title>Installation of libime</title>
 
     <para>
-      Unpack the <application>kenlm</application> submodule into the right place:
+      Unpack the kenlm submodule into the right place:
     </para>
 
 <screen><userinput>tar -xvf ../&libime-kenlm;.tar.gz -C src/libime/core &amp;&amp;
@@ -73,7 +73,7 @@ rmdir src/libime/core/kenlm &amp;&amp;
 mv src/libime/core/kenlm-&libime-kenlm; src/libime/core/kenlm</userinput></screen>
 
     <para>
-      Install <application>libime</application> by running the following
+      Install libime by running the following
       commands:
     </para>
 
@@ -125,7 +125,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
 
     <para>
       <option>-D ENABLE_DOC=ON</option>: Use this switch if you want to
-      build the documentation (requires <application>doxygen</application>).
+      build the documentation (requires doxygen).
     </para>
 
   </sect2>

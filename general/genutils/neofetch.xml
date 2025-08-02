@@ -20,16 +20,16 @@
     <title>Introduction to neofetch</title>
 
     <para>
-      The <application>neofetch</application> package contains the 
-      <application>neofetch</application> script which outputs information 
+      The neofetch package contains the 
+      neofetch script which outputs information 
       about the system alongside ASCII art of the system's distro.
     </para>
 
     <note>
       <para>
         Neofetch has been archived since Apr 26, 2024. It is advisable to use a
-        more maintained fork or alternative such as <application>
-        hyfetch</application> or <application>fastfetch</application>.
+        more maintained fork or alternative such as 
+        hyfetch or fastfetch.
       </para>
     </note>
 
@@ -47,7 +47,7 @@
     <title>Installation of neofetch</title>
 
     <para>
-      The <application>neofetch</application> package does not need to be
+      The neofetch package does not need to be
       compiled and can be directly installed by running the following command
       as the &root; user:
     </para>

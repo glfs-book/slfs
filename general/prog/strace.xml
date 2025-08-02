@@ -46,7 +46,7 @@
     <title>Installation of strace</title>
 
     <para>
-      Install <application>strace</application> by running the following
+      Install strace by running the following
       commands:
     </para>
 

@@ -63,14 +63,14 @@
 
     <para>
       First apply fixes to allow building with
-      <application>boost-1.87</application> and later:
+      boost-1.87 and later:
     </para>
 
 <screen><userinput>patch -Np1 -i ../websocketpp-&websocketpp-version;-boost-1.87-compat.patch
 sed 's|"${WEBSOCKETPP_BOOST_LIBS}"|${WEBSOCKETPP_BOOST_LIBS}|' -i CMakeLists.txt</userinput></screen>
 
     <para>
-      Install <application>websocketpp</application> by running the following
+      Install websocketpp by running the following
       commands:
     </para>
 
@@ -100,7 +100,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
 
     <para>
       <parameter>-D CMAKE_POLICY_VERSION_MINIMUM=3.5</parameter>: This allows
-      building with newer <application>CMake</application> versions.
+      building with newer CMake versions.
     </para>
 
     <para>

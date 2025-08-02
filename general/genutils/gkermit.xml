@@ -24,7 +24,7 @@
     <title>Introduction to G-Kermit</title>
 
     <para>
-      The <application>G-Kermit</application> package provides a Unix program
+      The G-Kermit package provides a Unix program
       for transferring files with the Kermit protocol.
     </para>
 
@@ -75,7 +75,7 @@ tar -xvf ../&gkermit-tarball-version;.tar.gz</userinput></screen>
 <screen><userinput>patch -Np1 -i ../gkermit-&gkermit-version;-fix-implicit-declaration.patch</userinput></screen>
 
     <para>
-      Install <application>gkermit</application> by executing the following
+      Install gkermit by executing the following
       commands:
     </para>
 

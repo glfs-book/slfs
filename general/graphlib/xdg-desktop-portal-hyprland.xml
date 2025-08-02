@@ -22,7 +22,7 @@
 
     <para>
       The xdg-desktop-portal-hyprland package provides a portal backend for
-      <application>Hyprland</application>.
+      Hyprland.
     </para>
 
     <itemizedlist spacing="compact">
@@ -71,7 +71,7 @@
     <title>Installation of xdg-desktop-portal-hyprland</title>
 
     <para>
-      Install <application>xdg-desktop-portal-hyprland</application> by running
+      Install xdg-desktop-portal-hyprland by running
       the following commands:
     </para>
 
@@ -154,7 +154,7 @@ rm -rvf /usr/lib/systemd</userinput></screen>
         <listitem>
           <para>
             allows you to access portals in a
-            <application>Hyprland</application> session
+            Hyprland session
           </para>
           <indexterm zone="xdg-desktop-portal-hyprland xdg-desktop-portal-hyprland-bin">
             <primary sortas="b-xdg-desktop-portal-hyprland-bin">xdg-desktop-portal-hyprland</primary>

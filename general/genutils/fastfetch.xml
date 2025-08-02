@@ -20,7 +20,7 @@
     <title>Introduction to fastfetch</title>
 
     <para>
-      <application>Fastfetch</application> is a maintained, feature-rich and
+      Fastfetch is a maintained, feature-rich and
       performance oriented system information tool. It is an alternative to
       <xref linkend="neofetch"/> and written in C.
     </para>

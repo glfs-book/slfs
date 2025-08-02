@@ -20,7 +20,7 @@
     <title>Introduction to xcb-util-xrm</title>
 
     <para>
-      The <application>xcb-util-xrm</application> package provides XCB utility
+      The xcb-util-xrm package provides XCB utility
       functions for the X Resource Manager.
     </para>
 
@@ -47,7 +47,7 @@
     <title>Installation of xcb-util-xrm</title>
 
     <para>
-      Install <application>xcb-util-xrm</application> by running the following
+      Install xcb-util-xrm by running the following
       commands:
     </para>
 

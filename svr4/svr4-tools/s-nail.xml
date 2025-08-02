@@ -21,8 +21,8 @@
     <title>Introduction to s-nail</title>
 
     <para>
-      The <application>s-nail</application> package is a mail user agent
-      derived from <application>Berkeley Mail 8.1</application>.
+      The s-nail package is a mail user agent
+      derived from Berkeley Mail 8.1.
     </para>
 
     
@@ -61,7 +61,7 @@ VAL_MANDIR=/usr/share/man/5man VAL_SYSCONFDIR=/etc \
 make config</userinput></screen>
 
     <para>
-      Install <application>s-nail</application> by running the following
+      Install s-nail by running the following
       command:
     </para>
 

@@ -21,8 +21,8 @@
     <title>Introduction to wbg</title>
 
     <para>
-      The <application>wbg</application> package provides a
-      <application>Wayland</application> wallpaper setter.
+      The wbg package provides a
+      Wayland wallpaper setter.
     </para>
 
     <itemizedlist spacing="compact">
@@ -67,7 +67,7 @@
 -->
 
     <para>
-      Install <application>wbg</application> by running the following
+      Install wbg by running the following
       commands:
     </para>
 
@@ -116,7 +116,7 @@ ninja</userinput></screen>
         <listitem>
           <para>
             creates a wallpaper from an image on
-            <application>Wayland</application>
+            Wayland
           </para>
           <indexterm zone="wbg wbg-bin">
             <primary sortas="b-wbg-bin">wbg</primary>

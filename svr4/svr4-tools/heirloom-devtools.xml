@@ -21,10 +21,10 @@
     <title>Introduction to heirloom-devtools</title>
 
     <para>
-      The <application>heirloom-devtools</application> package provides
-      <application>yacc</application>, <application>lex</application>,
-      <application>m4</application>, <application>make</application>, and
-      <application>SCCS</application>. Those tools are portable derivatives of
+      The heirloom-devtools package provides
+      yacc, lex,
+      m4, make, and
+      SCCS. Those tools are portable derivatives of
       the tools released as a part of OpenSolaris, which were derived from the
       original UNIX versions.
     </para>
@@ -85,14 +85,14 @@
 
     <para>
       Execute the following command to tell this package to use
-      <application>libtirpc</application>:
+      libtirpc:
     </para>
 
 <screen><userinput>sed -i 's=-O=-O -I/usr/include/tirpc=g' mk.config</userinput></screen>
 
     <para>
-      If you have <application>heirloom-sh</application> installed, execute the
-      following commands to tell <application>heirloom-devtools</application>
+      If you have heirloom-sh installed, execute the
+      following commands to tell heirloom-devtools
       where to find it:
     </para>
 
@@ -118,7 +118,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
     </para></important>
 
     <para>
-      Install <application>heirloom-devtools</application> by running the following
+      Install heirloom-devtools by running the following
       command:
     </para>
 

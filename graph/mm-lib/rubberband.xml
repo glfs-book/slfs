@@ -20,7 +20,7 @@
     <title>Introduction to rubberband</title>
 
     <para>
-      The <application>rubberband</application> package contains libraries and
+      The rubberband package contains libraries and
       utilities that can effectively stretch audio time-wise and modify the
       pitch of a given audio file. This can be really useful when editing
       videos through something like <ulink
@@ -28,17 +28,17 @@
       in other software such as <ulink
       url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>. You will have to
       recompile the software that can use it and may have to add options to
-      those packages to enable <application>rubberband</application> support.
+      those packages to enable rubberband support.
     </para>
 
     <tip><para>
-      In the case of <application>kdenlive</application>, it depends on
+      In the case of kdenlive, it depends on
       <ulink url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> for effects. As
-      such, you don't need to recompile <application>kdenlive</application>,
-      but you must recompile <application>MLT</application> with
-      <application>rubberband</application> support. Currently,
-      <application>MLT</application> autodetects if
-      <application>rubberband</application> is present, and will enable the
+      such, you don't need to recompile kdenlive,
+      but you must recompile MLT with
+      rubberband support. Currently,
+      MLT autodetects if
+      rubberband is present, and will enable the
       support automatically during configuration, so no additional options are
       necessary.
     </para></tip>
@@ -71,8 +71,8 @@
     </para>
 
     <note><para>
-      <application>libsamplerate</application> and
-      <application>Speex</application> can be used as resamplers instead
+      libsamplerate and
+      Speex can be used as resamplers instead
       of the built-in implementation. Check
       <quote>Command Explanations</quote> for more information.
     </para></note>
@@ -83,7 +83,7 @@
     <title>Installation of rubberband</title>
 
     <para>
-      Install <application>rubberband</application> by running the following
+      Install rubberband by running the following
       commands:
     </para>
 

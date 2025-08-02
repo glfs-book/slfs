@@ -23,7 +23,7 @@
     <title>Introduction to Anthy</title>
 
     <para>
-      The <application>Anthy</application> package provides
+      The Anthy package provides
       a kana-kanji conversion engine for Japanese.
     </para>
     
@@ -41,7 +41,7 @@
     <title>Installation of Anthy</title>
 
     <para>
-      Install <application>Anthy</application> by executing the following
+      Install Anthy by executing the following
       commands:
     </para>
 
