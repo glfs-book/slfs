@@ -66,6 +66,8 @@
  
   </sect2>
 
+<!-- REMOVED IN LINUX-6.16
+
   <sect2 role="kernel" id="s4-3b1-pc7300-kernel">
     <title>Kernel Configuration</title>
 
@@ -82,6 +84,7 @@
       <primary sortas="d-s4-3b1-pc7300">s4-3b1-pc7300</primary>
     </indexterm>
   </sect2>
+-->
 
   <sect2 role="installation">
     <title>Installation of s4-3b1-pc7300</title>

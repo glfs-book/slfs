@@ -4,43 +4,48 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY tomlplusplus-download-http
+  <!ENTITY tomlplusplus-download
     "https://github.com/marzer/tomlplusplus/archive/v&tomlplusplus-version;/tomlplusplus-&tomlplusplus-version;.tar.gz">
 ]>
 
-<sect1 id="tomlplusplus" xreflabel="tomlplusplus-&tomlplusplus-version;">
+<sect1 id="tomlplusplus" xreflabel="toml++-&tomlplusplus-version;">
   <?dbhtml filename="tomlplusplus.html"?>
 
-
-  <title>tomlplusplus-&tomlplusplus-version;</title>
+  <title>toml++-&tomlplusplus-version;</title>
 
   <indexterm zone="tomlplusplus">
-    <primary sortas="a-tomlplusplus">tomlplusplus</primary>
+    <primary sortas="a-toml++">toml++</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to tomlplusplus</title>
+    <title>Introduction to toml++</title>
 
     <para>
-      The tomlplusplus package is a TOML configuration parser for C++.
+      The toml++ package is a TOML configuration parser for C++.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&tomlplusplus-download-http;"/>
+          Download: <ulink url="&tomlplusplus-download;"/>
         </para>
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">toml++ Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of tomlplusplus</title>
+    <title>Installation of toml++</title>
 
     <para>
-      Install <application>tomlplusplus</application> by running the following
+      Install <application>toml++</application> by running the following
       commands:
     </para>
 
@@ -56,6 +61,13 @@ ninja</userinput></screen>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+    <para><option>-D generate_cmake_config=false</option>: This option
+    disables depending on CMake but as a result doesn't generate CMake
+    find_package files some build systems require.</para>
   </sect2>
 
   <sect2 role="content">
@@ -74,7 +86,7 @@ ninja</userinput></screen>
           libtomlplusplus
         </seg>
         <seg>
-          /usr/include/toml++ and /usr/lib/cmake/tomlplusplus
+          /usr/include/toml++ and  /usr/lib/cmake/tomlplusplus
         </seg>
       </seglistitem>
     </segmentedlist>

@@ -41,6 +41,15 @@
     -->
 
     <listitem>
+      <para>August 2nd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - toml++: Add CMake to Recommended.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>July 31st, 2025</para>
       <itemizedlist>
         <listitem>
