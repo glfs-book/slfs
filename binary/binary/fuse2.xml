@@ -10,7 +10,6 @@
 <sect1 id="fuse2" xreflabel="Fuse2-&fuse2-version;">
   <?dbhtml filename="fuse2.html"?>
 
-
   <title>Fuse2-&fuse2-version;</title>
 
   <indexterm zone="fuse2">
@@ -122,7 +121,7 @@ install -v -m644    doc/{how-fuse-works,kernel.txt} \
 #
 #user_allow_other</literal>
 EOF</userinput></screen>
-    
+
   </sect2>
 
   <sect2 role="content">

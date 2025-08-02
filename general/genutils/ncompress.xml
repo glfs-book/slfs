@@ -23,7 +23,6 @@
       The ncompress package provides a SVR4-compatible implementation of <command>compress</command>.
     </para>
 
-    
     <itemizedlist spacing="compact">
       <listitem>
         <para>

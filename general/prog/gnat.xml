@@ -20,7 +20,7 @@
 
   <sect2 role="package">
     <title>About GNAT</title>
-    
+
     <para>
       Ada is a modern programming language designed for large, long-lived
       applications&mdash;and embedded systems in particular&mdash;where
@@ -132,7 +132,6 @@ find /opt/gnat/bin -name as -exec mv -v {} {}.old \;</userinput></screen>
         will overwrite your existing GCC C and C++ compilers and
         libraries. Running the full suite of tests is recommended.
       </para>
-      
       <para>
         Do not continue with the <command>make install</command>
         command until you are confident the build was successful.

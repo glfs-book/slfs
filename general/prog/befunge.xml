@@ -23,7 +23,7 @@
       The Befunge-93 package contains the reference implementation of the
       Befunge language.
     </para>
-    
+
     <itemizedlist spacing="compact">
       <listitem>
         <para>

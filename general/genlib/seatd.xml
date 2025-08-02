@@ -54,7 +54,6 @@
  
   <sect2 role="installation">
     <title>Installation of seatd</title>
-    
     <para>
       Install seatd by running the following
       commands:

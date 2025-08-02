@@ -189,7 +189,7 @@ ldconfig</userinput></screen>
       url="&blfs-svn;/postlfs/profile.html">The Bash Shell Startup
       Files</ulink>) for CUDA:
     </para>
-      
+
 <screen role="root"><userinput>cat &gt; /etc/profile.d/cuda.sh &lt;&lt; "EOF"
 <literal># Begin /etc/profile.d/cuda.sh
 
