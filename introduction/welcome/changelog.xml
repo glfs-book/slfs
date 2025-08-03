@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>August 3nd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[seal331] - s4-3b1-pc7300: Unbreak compile with Linux 6.16.
+          Fixes <ulink url="&slfs-issues;/245">#245</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 2nd, 2025</para>
       <itemizedlist>
         <listitem>
