@@ -1,0 +1,128 @@
+diff -Naur s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45-clean/sysv/namei.c s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45/sysv/namei.c
+--- s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45-clean/sysv/namei.c	2025-08-03 09:20:52.709072668 +0300
++++ s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45/sysv/namei.c	2025-08-03 09:40:25.455831023 +0300
+@@ -130,7 +130,7 @@
+ 	return add_nondir(dentry, inode);
+ }
+ 
+-static int sysv_mkdir(struct mnt_idmap *idmap, struct inode * dir,
++static struct dentry *sysv_mkdir(struct mnt_idmap *idmap, struct inode * dir,
+ 		      struct dentry *dentry, umode_t mode)
+ {
+ 	struct inode * inode;
+@@ -157,7 +157,7 @@
+ 
+         d_instantiate(dentry, inode);
+ out:
+-	return err;
++	return ERR_PTR(err);
+ 
+ out_fail:
+ 	inode_dec_link_count(inode);
+diff -Naur s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45-clean/sysv/super.c s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45/sysv/super.c
+--- s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45-clean/sysv/super.c	2025-08-03 09:20:52.709173149 +0300
++++ s4-3b1-pc7300-efe55b8cc917e3e27bcae9786c5b5dec0469be45/sysv/super.c	2025-08-03 09:42:32.595818909 +0300
+@@ -24,6 +24,7 @@
+ #include <linux/init.h>
+ #include <linux/slab.h>
+ #include <linux/buffer_head.h>
++#include <linux/fs_context.h>
+ #include "sysv.h"
+ 
+ /*
+@@ -410,12 +411,13 @@
+ 	return 1;
+ }
+ 
+-static int sysv_fill_super(struct super_block *sb, void *data, int silent)
++static int sysv_fill_super(struct super_block *sb, struct fs_context *fc)
+ {
+ 	struct buffer_head *bh1, *bh = NULL;
+ 	struct sysv_sb_info *sbi;
+ 	unsigned long blocknr;
+ 	int size = 0, i;
++	int silent = fc->sb_flags & SB_SILENT;
+ 	
+ 	BUILD_BUG_ON(1024 != sizeof (struct xenix_super_block));
+ 	BUILD_BUG_ON(512 != sizeof (struct sysv4_super_block));
+@@ -532,10 +534,11 @@
+ 	return 1;
+ }
+ 
+-static int v7_fill_super(struct super_block *sb, void *data, int silent)
++static int v7_fill_super(struct super_block *sb, struct fs_context *fc)
+ {
+ 	struct sysv_sb_info *sbi;
+ 	struct buffer_head *bh;
++	int silent = fc->sb_flags & SB_SILENT;
+ 
+ 	if (440 != sizeof (struct v7_super_block))
+ 		panic("V7 FS: bad super-block size");
+@@ -589,33 +592,51 @@
+ 
+ /* Every kernel module contains stuff like this. */
+ 
+-static struct dentry *sysv_mount(struct file_system_type *fs_type,
+-	int flags, const char *dev_name, void *data)
++static int sysv_get_tree(struct fs_context *fc)
+ {
+-	return mount_bdev(fs_type, flags, dev_name, data, sysv_fill_super);
++	return get_tree_bdev(fc, sysv_fill_super);
+ }
+ 
+-static struct dentry *v7_mount(struct file_system_type *fs_type,
+-	int flags, const char *dev_name, void *data)
++static int v7_get_tree(struct fs_context *fc)
+ {
+-	return mount_bdev(fs_type, flags, dev_name, data, v7_fill_super);
++	return get_tree_bdev(fc, v7_fill_super);
++}
++
++static const struct fs_context_operations sysv_context_ops = {
++	.get_tree	= sysv_get_tree,
++};
++
++static const struct fs_context_operations v7_context_ops = {
++	.get_tree	= v7_get_tree,
++};
++
++static int sysv_init_fs_context(struct fs_context *fc)
++{
++	fc->ops = &sysv_context_ops;
++	return 0;
++}
++
++static int v7_init_fs_context(struct fs_context *fc)
++{
++	fc->ops = &v7_context_ops;
++	return 0;
+ }
+ 
+ static struct file_system_type sysv_fs_type = {
+-	.owner		= THIS_MODULE,
+-	.name		= "sysv",
+-	.mount		= sysv_mount,
+-	.kill_sb	= kill_block_super,
+-	.fs_flags	= FS_REQUIRES_DEV,
++	.owner			= THIS_MODULE,
++	.name			= "sysv",
++	.kill_sb		= kill_block_super,
++	.fs_flags		= FS_REQUIRES_DEV,
++	.init_fs_context	= sysv_init_fs_context,
+ };
+ MODULE_ALIAS_FS("sysv");
+ 
+ static struct file_system_type v7_fs_type = {
+-	.owner		= THIS_MODULE,
+-	.name		= "v7",
+-	.mount		= v7_mount,
+-	.kill_sb	= kill_block_super,
+-	.fs_flags	= FS_REQUIRES_DEV,
++	.owner			= THIS_MODULE,
++	.name			= "v7",
++	.kill_sb		= kill_block_super,
++	.fs_flags		= FS_REQUIRES_DEV,
++	.init_fs_context	= v7_init_fs_context,
+ };
+ MODULE_ALIAS_FS("v7");
+ MODULE_ALIAS("v7");

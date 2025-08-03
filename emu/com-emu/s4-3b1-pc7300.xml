@@ -54,6 +54,12 @@
           <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch"/>
         </para>
       </listitem>
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch"/>
+        </para>
+      </listitem>
     </itemizedlist>
 
     <bridgehead renderas="sect3">s4-3b1-pc7300 Dependencies</bridgehead>
@@ -100,6 +106,13 @@
     </para>
 
 <screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch</userinput></screen>
+
+    <para>
+      Apply a second patch to make the kernel module compatible with Linux
+      6.16:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch</userinput></screen>
 
     <para>
       Apply a patch to build the supporting library as a shared library instead
