@@ -163,6 +163,13 @@ find /opt/gnat/bin -name as -exec mv -v {} {}.old \;</userinput></screen>
 esac</userinput></screen>
 
     <para>
+      Ensure compatibility with glibc-2.42 or later:
+    </para>
+
+<screen><userinput remap="pre">sed -i '/struct_termio_sz/d' \
+  libsanitizer/sanitizer_common/*</userinput></screen>
+
+    <para>
       Create the build directory and check for multilib support:
     </para>
 
