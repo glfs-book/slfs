@@ -98,10 +98,10 @@ mandb -c /opt/jdk/man</userinput></screen>
       CA certificates. The Java security modules use
       <envar>$JAVA_HOME</envar><filename>/lib/security/cacerts</filename> by
       default. In order to keep all the certificates in one place, we use
-      <filename>/etc/ssl/java/cacerts</filename>. The instructions
+      <filename>/etc/pki/tls/java/cacerts</filename>. The instructions
       on the <ulink url="&blfs-svn;/postlfs/make-ca.html">make-ca</ulink> page
       previously created the file located in <filename
-      class="directory">/etc/ssl/java</filename>. Set up a symlink in the
+      class="directory">/etc/pki/tls/java</filename>. Set up a symlink in the
       default location as the &root; user:
     </para>
 
