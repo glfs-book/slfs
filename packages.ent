@@ -88,7 +88,6 @@ version, so keep this at that. -->
 <!ENTITY cuda-nvidia-version                 "575.57.08">
 <!ENTITY gcc-version                         "15.1.0">
 <!ENTITY gnat-binary-version                 "&gcc-version;-2">
-<!ENTITY intercal-version                    "0.33">
 <!-- START PYTHON -->
 <!ENTITY python3-major                "3">
 <!ENTITY python3-minor                "13">
