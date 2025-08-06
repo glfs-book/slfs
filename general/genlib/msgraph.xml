@@ -4,7 +4,6 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY gnome-download-http  "https://download.gnome.org/sources">
   <!ENTITY msgraph-download-http "&gnome-download-http;/msgraph/0.3/msgraph-&msgraph-version;.tar.xz">
 ]>
 
@@ -62,15 +61,15 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup --prefix=/usr --buildtype=release -Dtests=false .. &amp;&amp;
+meson setup --prefix=/usr --buildtype=release -D tests=false .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
       This package does come with a test suite, but it requires the external
       program
       <ulink url="https://gitlab.freedesktop.org/pwithnall/uhttpmock">uhttpmock</ulink>.
-      If you want to run the tests, install uhttpmock and remove -Dtests=false,
-      and then run <command>ninja test</command>
+      If you want to run the tests, install uhttpmock and remove -D tests=false,
+      and then run <command>ninja test</command>.
     </para>
 
     <para>
@@ -87,7 +86,7 @@ ninja</userinput></screen>
     <para>
       To configure msgraph to allow access to Microsoft OneDrive with packages
       that use gvfs, you should rebuild gvfs in BLFS without the
-      <parameter>-Donedrive=false</parameter> option. After doing this, you
+      <parameter>-D onedrive=false</parameter> option. After doing this, you
       should go to GNOME Control Center/GNOME Settings and link your
       Microsoft account through the Online Accounts section, and you should
       be able to mount your OneDrive file storage account in Nautilus.
@@ -107,7 +106,7 @@ ninja</userinput></screen>
           None
         </seg>
         <seg>
-          libmsgraph-1.so
+          libmsgraph-1
         </seg>
         <seg>
           /usr/include/msg and
@@ -122,14 +121,14 @@ ninja</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="libmsgraph">
-        <term><filename class="libraryfile">libmsgraph-1.so</filename></term>
+        <term><filename class="libraryfile">libmsgraph-1</filename></term>
         <listitem>
           <para>
             contains functions that allow applications to interact with the
             Microsoft Graph API.
           </para>
           <indexterm zone="msgraph libmsgraph">
-            <primary sortas="c-libmsgraph">libmsgraph-1.so</primary>
+            <primary sortas="c-libmsgraph">libmsgraph-1</primary>
           </indexterm>
         </listitem>
       </varlistentry>
