@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY gnome-download-http  "https://download.gnome.org/sources">
+  <!ENTITY msgraph-download-http "&gnome-download-http;/msgraph/0.3/msgraph-&msgraph-version;.tar.xz">
+]>
+
+<sect1 id="msgraph" xreflabel="msgraph-&msgraph-version;">
+
+  <?dbhtml filename="msgraph.html"?>
+  
+  <title>msgraph-&msgraph-version;</title>
+
+  <indexterm zone="msgraph">
+    <primary sortas="a-msgraph">msgraph</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to msgraph</title>
+
+    <para>
+      The msgraph package contains a shared library for accessing the Microsoft
+      Graph API. This is useful for adding support for OneDrive into gvfs,
+      which is becoming more important for students and remote workers.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&msgraph-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">msgraph Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <!-- The remainder of the dependencies are all required by g-o-a.
+           This includes libsoup, libxml2, json-glib, and glib. -->
+      <ulink url="&blfs-svn;/gnome/gnome-online-accounts.html">gnome-online-accounts</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="https://gitlab.freedesktop.org/pwithnall/uhttpmock">uhttpmock (for tests)</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of msgraph</title>
+
+    <para>
+      Install msgraph by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release -Dtests=false .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      This package does come with a test suite, but it requires the external
+      program
+      <ulink url="https://gitlab.freedesktop.org/pwithnall/uhttpmock">uhttpmock</ulink>.
+      If you want to run the tests, install uhttpmock and remove -Dtests=false,
+      and then run <command>ninja test</command>
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="using">
+    <title>Using msgraph</title>
+
+    <para>
+      To configure msgraph to allow access to Microsoft OneDrive with packages
+      that use gvfs, you should rebuild gvfs in BLFS without the
+      <parameter>-Donedrive=false</parameter> option. After doing this, you
+      should go to GNOME Control Center/GNOME Settings and link your
+      Microsoft account through the Online Accounts section, and you should
+      be able to mount your OneDrive file storage account in Nautilus.
+    </para>
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libmsgraph-1.so
+        </seg>
+        <seg>
+          /usr/include/msg and
+          /usr/share/doc/msgraph-&msgraph-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libmsgraph">
+        <term><filename class="libraryfile">libmsgraph-1.so</filename></term>
+        <listitem>
+          <para>
+            contains functions that allow applications to interact with the
+            Microsoft Graph API.
+          </para>
+          <indexterm zone="msgraph libmsgraph">
+            <primary sortas="c-libmsgraph">libmsgraph-1.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>
