@@ -68,8 +68,9 @@ ninja</userinput></screen>
       This package does come with a test suite, but it requires the external
       program
       <ulink url="https://gitlab.freedesktop.org/pwithnall/uhttpmock">uhttpmock</ulink>.
-      If you want to run the tests, install uhttpmock and remove -D tests=false,
-      and then run <command>ninja test</command>.
+      If you want to run the tests, install uhttpmock and remove the
+      <parameter>-D tests=false</parameter> parameter, and then run
+      <command>ninja test</command>.
     </para>
 
     <para>

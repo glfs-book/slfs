@@ -35,6 +35,10 @@
 ]]>
 ]]><!-- End %release -->
 
+<!-- Include the GNOME entities -->
+<!ENTITY % gnome-entities SYSTEM       "gnome.ent"
+%gnome-entities;
+
 <!ENTITY copyrightdate   "2024-&year;">
 <!ENTITY copyholder      "The GLFS Development Team">
 <!ENTITY lfs-domainname  "linuxfromscratch.org">
@@ -93,7 +97,6 @@
 <!ENTITY w3m-url              "http://w3m.sourceforge.net/">
 <!ENTITY sysprof-url          "https://wiki.gnome.org/Apps/Sysprof">
 <!ENTITY man                  "https://man.archlinux.org/man/">
-<!ENTITY gnome-download-http  "https://download.gnome.org/sources">
 
 
 <!ENTITY slfs-repo            "https://github.com/glfs-book/slfs">
