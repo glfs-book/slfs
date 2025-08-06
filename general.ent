@@ -36,7 +36,7 @@
 ]]><!-- End %release -->
 
 <!-- Include the GNOME entities -->
-<!ENTITY % gnome-entities SYSTEM       "gnome.ent"
+<!ENTITY % gnome-entities SYSTEM       "gnome.ent">
 %gnome-entities;
 
 <!ENTITY copyrightdate   "2024-&year;">
