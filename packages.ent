@@ -66,6 +66,7 @@ version, so keep this at that. -->
 <!ENTITY lotus123-binutils-version           "2.38">
 <!ENTITY lrzsz-version                       "0.12.20">
 <!ENTITY minicom-version                     "2.10">
+<!ENTITY gkermit-version                     "2.01">
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
@@ -196,7 +197,6 @@ the exact same version number... -->
 <!ENTITY musashi-submodule-version           "fc7a6fc602e2fbcd24851670a5242358765feacf">
 <!ENTITY s4-3b1-pc7300-minor-version         "efe55b">
 <!ENTITY s4-3b1-pc7300-version               "efe55b8cc917e3e27bcae9786c5b5dec0469be45">
-<!ENTITY gkermit-version                     "2.01">
 <!ENTITY p20-emu-minor-version               "d75a83">
 <!ENTITY p20-emu-version                     "d75a83ca9b107e1ae1a54598e4045c2843bd823e">
 <!-- Game-Emu -->
