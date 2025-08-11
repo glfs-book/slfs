@@ -183,7 +183,7 @@ install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput
             is a fast, cross-platform OpenGL terminal emulator
           </para>
           <indexterm zone="alacritty alacritty-bin">
-            <primary sortas="alacritty-bin">alacritty</primary>
+            <primary sortas="b-alacritty-bin">alacritty</primary>
           </indexterm>
         </listitem>
       </varlistentry>
