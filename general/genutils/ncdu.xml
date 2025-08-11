@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY ncdu-download-http "https://dev.yorhel.nl/download/ncdu-&ncdu-version;.tar.gz">
+]>
+
+<sect1 id="ncdu" xreflabel="ncdu-&ncdu-version;">
+  <?dbhtml filename="ncdu.html"?>
+
+  <title>ncdu-&ncdu-version;</title>
+
+  <indexterm zone="ncdu">
+    <primary sortas="a-ncdu">ncdu</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to ncdu</title>
+
+    <para>
+      The ncdu package provides a lightweight ncurses-based disk space analyzer.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&ncdu-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+   
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of ncdu</title>
+
+    <para>
+      Install ncdu by executing the following commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          ncdu
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ncdu-bin">
+        <term><command>ncdu</command></term>
+        <listitem>
+          <para>
+            is a disk space analyzer
+          </para>
+          <indexterm zone="ncdu ncdu-bin">
+            <primary sortas="b-ncdu">ncdu</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>  
+
+</sect1>

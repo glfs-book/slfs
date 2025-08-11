@@ -44,6 +44,10 @@
       <para>August 11th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[seal331] - ncdu: Added. Fixes
+          <ulink url="&slfs-issues;/246">#246</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[seal331] - xtrace: Added.</para>
         </listitem>
       </itemizedlist>

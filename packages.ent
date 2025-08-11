@@ -68,6 +68,7 @@ version, so keep this at that. -->
 <!ENTITY minicom-version                     "2.10">
 <!ENTITY gkermit-version                     "2.01">
 <!ENTITY gkermit-tarball-version             "gku201">
+<!ENTITY ncdu-version                        "1.22">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
 <!ENTITY fastfetch-version                   "2.48.1">
