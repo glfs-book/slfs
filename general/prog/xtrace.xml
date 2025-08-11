@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY xtrace-download-http "https://github.com/yuq/xtrace/archive/&xtrace-version;.tar.gz">
+]>
+
+<sect1 id="xtrace" xreflabel="xtrace-&xtrace-minor-version;">
+  <?dbhtml filename="xtrace.html"?>
+
+
+  <title>xtrace-&xtrace-minor-version;</title>
+
+  <indexterm zone="xtrace">
+    <primary sortas="a-xtrace">xtrace</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to xtrace</title>
+
+    <para>
+      The xtrace package provides a utility to track X11 messages being
+      exchanged between a client and an X server.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&xtrace-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  <!-- As far as I can see, nope, this actually does not depend on Xorg libs.
+       There's nothing about it in configure.ac except a couple commented-out
+       lines, and I can't find any references to dlopen(), libX11 or any other
+       methods of dynamically loading libraries I know of outside of a single
+       file that doesn't get compiled in. -seal331 -->
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of xtrace</title>
+
+    <para>
+      Compile xtrace by running the following commands:
+    </para>
+
+<screen><userinput>autoreconf -fiv &amp;&amp;
+./configure --prefix=/usr &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      In order to avoid conflicts with the xtrace binary installed by Glibc,
+      execute the following commands as the &root; user to install the package:
+    </para>
+
+<screen role="root"><userinput>DESTDIR=$PWD/DESTDIR make install &amp;&amp;
+mv -v DESTDIR/usr/bin/xtrace{,_x11} &amp;&amp;
+mv -v DESTDIR/usr/share/man/man1/xtrace{,_x11}.1 &amp;&amp;
+cp -vR DESTDIR/usr/* /usr</userinput></screen>
+
+  </sect2>
+  
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          xtrace_x11
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/xtrace
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="xtrace-prog">
+        <term><command>xtrace</command></term>
+        <listitem>
+         <para>
+           traces X11 messages, most often used for debugging
+         </para>
+          <indexterm zone="xtrace xtrace-prog">
+            <primary sortas="b-xtrace">xtrace</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
