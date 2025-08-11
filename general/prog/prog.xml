@@ -24,6 +24,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="socat.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="unlambda.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xtrace.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wev.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="java-header.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="java.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ojdk-conf.xml"/>
