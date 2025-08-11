@@ -98,7 +98,7 @@
     </para>
 
 <screen role="root"><userinput>tar -xf gnat-x86_64-linux-&gnat-binary-version;.tar.gz -C /opt &amp;&amp;
-ln -sv gnat-x86_64-linux-&gcc-version;-1 /opt/gnat &amp;&amp;
+ln  -sv gnat-x86_64-linux-&gnat-binary-version; /opt/gnat      &amp;&amp;
 chown -R root:root /opt/gnat</userinput></screen>
 
     <para>
@@ -162,12 +162,14 @@ find /opt/gnat/bin -name as -exec mv -v {} {}.old \;</userinput></screen>
   ;;
 esac</userinput></screen>
 
+<!--
     <para>
       Ensure compatibility with glibc-2.42 or later:
     </para>
 
 <screen><userinput remap="pre">sed -i '/struct_termio_sz/d' \
   libsanitizer/sanitizer_common/*</userinput></screen>
+-->
 
     <para>
       Create the build directory and check for multilib support:

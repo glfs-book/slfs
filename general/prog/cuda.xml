@@ -8,7 +8,6 @@
     "https://developer.download.nvidia.com/compute/cuda/&cuda-version;/local_installers/cuda_&cuda-version;_&cuda-nvidia-version;_linux.run">
 ]>
 
-
 <sect1 id="cuda" xreflabel="CUDA-&cuda-version;">
   <?dbhtml filename="cuda.html"?>
 
@@ -35,6 +34,12 @@
       </listitem>
     </itemizedlist>
 
+    <important><para>
+      The NVIDIA driver version listed in the runfile name is the minimum
+      NVIDIA driver version required. You must install an older version of CUDA
+      if you cannot install a newer driver version.
+    </para></important>
+
     <note><para>
       The download size is over 5G, so you should consider if and when you will
       want to download this runfile. For this reason, it is not recommended to
@@ -44,6 +49,7 @@
       10% of the runfile's size.
     </para></note>
 
+<!--
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -53,6 +59,7 @@
         </para>
       </listitem>
     </itemizedlist>
+-->
 
     <bridgehead renderas="sect3">CUDA Dependencies</bridgehead>
 
@@ -92,16 +99,16 @@ pushd cuda_&cuda-version;_&cuda-nvidia-version;_linux/builds &amp;&amp;
   mv version.json /opt/cuda-&cuda-version; &amp;&amp;
   mkdir -p /opt/cuda-&cuda-version;/bin &amp;&amp;
   cuda_components=(
-    cuda_nsight/{bin,nsightee_plugins},
-    cuda_nvvp/{bin,libnvvp},
-    cuda_sanitizer_api/compute-sanitizer,
-    nsight_compute,
+    cuda_nsight/{bin,nsightee_plugins}<!--
+    cuda_nvvp/{bin,libnvvp}-->
+    cuda_sanitizer_api/compute-sanitizer
+    nsight_compute
     nsight_systems
   )
   for i in ${cuda_components[@]}; do
     cp -vR $i /opt/cuda-&cuda-version;
   done &amp;&amp;
-  rm -rf cuda_nvvp cuda_nsight cuda_sanitizer_api &amp;&amp;
+  rm -rf cuda_nsight cuda_sanitizer_api &amp;&amp;
   ln -sfv ../compute-sanitizer/compute-sanitizer \
     /opt/cuda-&cuda-version;/bin/compute-sanitizer &amp;&amp;
   mv EULA.txt /opt/cuda-&cuda-version; &amp;&amp;
@@ -140,6 +147,7 @@ rm -rf cuda_&cuda-version;_&cuda-nvidia-version;_linux</userinput></screen>
       being developed but takes a long time to adapt to newer software.
     </para></important>
 
+<!--
     <para>
       Finally, patch a header file to fix building against
       glibc-2.41, again as the &root; user:
@@ -147,6 +155,7 @@ rm -rf cuda_&cuda-version;_&cuda-nvidia-version;_linux</userinput></screen>
 
 <screen role="root"><userinput>patch -Np1 /opt/cuda-&cuda-version;/targets/x86_64-linux/include/crt/math_functions.h \
   -i cuda-glibc-2.41-1.patch</userinput></screen>
+-->
 
   </sect2>
 

@@ -44,6 +44,12 @@
       <para>August 11th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - CUDA: 12.9.1 -&gt; 13.0.0.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - GNAT: 15.1.0 -&gt; 15.2.0.</para>
+        </listitem>
+        <listitem>
           <para>[seal331] - wev: Added. Fixes
           <ulink url="&slfs-issues;/258">#258</ulink>.</para>
         </listitem>
