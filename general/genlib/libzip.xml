@@ -37,8 +37,13 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> and
-      <ulink url="&blfs-svn;/postlfs/gnutls.html">GnuTLS</ulink>
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/postlfs/gnutls.html">GnuTLS</ulink> and
+      <xref linkend="mbedtls"/>
     </para>
 
   </sect2>
