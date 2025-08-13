@@ -130,7 +130,7 @@ install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring foot</title>
+    <title>Configuring Alacritty</title>
 
     <sect3 id="alacritty-config">
       <title>Config Files</title>
