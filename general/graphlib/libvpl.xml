@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libvpl-download-http "https://github.com/intel/libvpl/archive/refs/tags/v&libvpl-version;/libvpl-&libvpl-version;.tar.gz">
+]>
+
+<sect1 id="libvpl" xreflabel="libvpl-&libvpl-version;">
+  <?dbhtml filename="libvpl.html"?>
+
+  <title>libvpl-&libvpl-version;</title>
+
+  <indexterm zone="libvpl">
+    <primary sortas="a-libvpl">libvpl</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libvpl</title>
+
+    <para>
+      The libvpl package contains a set of libraries that provide the API,
+      dispatcher, and examples for the Intel Video Processing API. libvpl calls
+      upon the Intel MediaSDK and the Intel OneVPL runtimes depending on which
+      GPU is in use.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libvpl-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">libvpl Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/general/gmmlib.html">gmmlib</ulink>,
+      <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>,
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>, and
+      <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Required at runtime</bridgehead>
+    <para role="required">
+      <xref role="runtime" linkend="intel-mediasdk"/> (for GPUs
+      built into the Broadwell (5th Generation) through Tiger Lake (11th
+      Generation) CPUs), and
+      <xref role="runtime" linkend="intel-onevpl"/> (for GPUs built
+      into the Tiger Lake (11th Generation) and later CPUs as well as the Iris
+      Xe and Arc series of GPUs)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libvpl</title>
+        
+    <para>
+      Install libvpl by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr     \
+      -D CMAKE_INSTALL_SYSCONFDIR=/etc \
+      -D CMAKE_BUILD_TYPE=Release      \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON   \
+      -D BUILD_EXAMPLES=OFF            \
+      -D BUILD_TESTS=ON                \
+      -W no-dev ..                     &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>ctest</command>.
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libvpl
+        </seg>
+        <seg>
+          /etc/vpl and
+          /usr/{include,lib/cmake,share}/vpl
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libvpl-lib">
+        <term><filename class="libraryfile">libvpl</filename></term>
+        <listitem>
+          <para>
+            provides the Intel Video Processing API, including a dispatcher to
+            call upon the right runtime depending on which GPU is in use
+          </para>
+          <indexterm zone="libvpl libvpl-lib">
+            <primary sortas="c-libvpl">libvpl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>
