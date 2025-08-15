@@ -85,10 +85,6 @@ make</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
-    <note><para>
-      Invoke <userinput>cmake -L ../CMakeLists.txt</userinput> for a full list of options.
-    </para></note>
-
     <para>
       <parameter>-D BUILD_TESTS=OFF</parameter>: This parameter disables the
       tests as they are broken and require several external dependencies.
@@ -98,6 +94,8 @@ make</userinput></screen>
       <parameter>-D MFX_ENABLE_AENC=ON</parameter>: This parameter enables the
       AENC extension.
     </para>
+
+    &options-cmake;
 
   </sect2>
 

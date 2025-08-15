@@ -89,6 +89,13 @@ make</userinput></screen>
 
   </sect2>
 
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &options-cmake;
+
+  </sect2>
+
   <sect2 role="content">
     <title>Contents</title>
 

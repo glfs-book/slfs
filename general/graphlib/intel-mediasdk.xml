@@ -105,10 +105,6 @@ make</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
-    <note><para>
-      Invoke <userinput>cmake -L ../CMakeLists.txt</userinput> for a full list of options.
-    </para></note>
-
     <para>
       <parameter>-D BUILD_ALL=ON</parameter>: This parameter builds support for
       all Intel iGPUs included with the Broadwell series through the Tiger Lake
@@ -147,6 +143,9 @@ make</userinput></screen>
       <parameter>-D MFX_APPS_DIR=/usr/lib/mfx</parameter>: This parameter
       places the samples that were compiled into /usr/lib/mfx.
     </para>
+
+    &options-cmake;
+
   </sect2>
 
   <sect2 role="content">

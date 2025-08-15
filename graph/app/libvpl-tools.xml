@@ -98,6 +98,13 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
 
   </sect2>
 
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &options-cmake;
+
+  </sect2>
+
   <sect2 role="content">
     <title>Contents</title>
 
