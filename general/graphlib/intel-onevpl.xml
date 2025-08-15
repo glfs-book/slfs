@@ -22,8 +22,8 @@
     <para>
       The intel-onevpl package contains a set of libraries that provide
       support for video acceleration for encoding and decoding tasks on modern
-      Intel GPUs. This includes every GPU produced from the Tiger Lake (11th
-      Generation) CPUs and later, including the Arc and Iris Xe GPUs.
+      Intel GPUs. This includes every GPU built into the Tiger Lake (11th
+      Generation) CPUs and later, as well as the Arc and Iris Xe GPUs.
     </para>
 
     &long-build-time;
@@ -133,7 +133,7 @@ make</userinput></screen>
         <listitem>
           <para>
             provides support for GPU accelerated video encoding and decoding
-            on Intel GPUs from the Tiger Lake generation and higher
+            on Intel GPUs from the Tiger Lake CPU generation and later
           </para>
           <indexterm zone="intel-onevpl libmfx-gen">
             <primary sortas="c-libmfx-gen">libmfx-gen</primary>

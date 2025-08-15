@@ -22,10 +22,11 @@
     <para>
       The Intel-MediaSDK package contains a set of libraries that provide
       support for video acceleration for encoding and decoding tasks on legacy
-      Intel GPUs. This includes Intel iGPUs from the 5th Generation CPUs
-      (Broadwell) through the 11th Generation CPUs (Tiger Lake). This package
-      also provides a dispatcher library that is needed by applications like
-      ffmpeg to properly enable support for GPU acceleration with Intel GPUs.
+      Intel GPUs. This includes Intel iGPUs from the 5th Generation Core CPUs
+      (Broadwell) through the 11th Generation Core CPUs (Tiger Lake). This
+      package also provides a dispatcher library that is needed by applications
+      such as ffmpeg to properly enable support for GPU acceleration with Intel
+      GPUs.
     </para>
 
     &long-build-time;
@@ -220,7 +221,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libmfx</filename></term>
         <listitem>
           <para>
-            provides a dispatcher for the Intel MediaSDK
+            provides a dispatcher for the Broadwell through Tiger Lake iGPUs
           </para>
           <indexterm zone="intel-mediasdk libmfx">
             <primary sortas="c-libmfx">libmfx</primary>
@@ -232,7 +233,8 @@ make</userinput></screen>
         <term><filename class="libraryfile">libmfxhw64</filename></term>
         <listitem>
           <para>
-            provides a dispatcher for libvpl to use when a newer GPU is in use
+            provides a dispatcher for libvpl to use when an unsupported GPU is
+            in use, forwarding the request to the newer runtime
           </para>
           <indexterm zone="intel-mediasdk libmfxhw64">
             <primary sortas="c-libmfxhw64">libmfxhw64</primary>

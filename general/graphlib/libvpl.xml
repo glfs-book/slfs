@@ -50,11 +50,10 @@
     <bridgehead renderas="sect4">Required at runtime</bridgehead>
     <para role="required">
       <xref role="runtime" linkend="intel-mediasdk"/> (for GPUs
-      built into the Broadwell (5th Generation) through Tiger Lake (11th
-      Generation) CPUs), and
+      built into the Broadwell through Tiger Lake CPUs), or
       <xref role="runtime" linkend="intel-onevpl"/> (for GPUs built
-      into the Tiger Lake (11th Generation) and later CPUs as well as the Iris
-      Xe and Arc series of GPUs)
+      into the Tiger Lake and later CPUs as well as the Iris Xe and Arc series
+      of GPUs)
     </para>
 
   </sect2>
