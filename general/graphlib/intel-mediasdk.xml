@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY intel-mediasdk-download-http "https://github.com/Intel-Media-SDK/MediaSDK/archive/refs/tags/intel-mediasdk-&intel-mediasdk-version;.tar.gz">
+]>
+
+<sect1 id="intel-mediasdk" xreflabel="Intel-MediaSDK-&intel-mediasdk-version;">
+  <?dbhtml filename="intel-mediasdk.html"?>
+
+  <title>Intel-MediaSDK-&intel-mediasdk-version;</title>
+
+  <indexterm zone="intel-mediasdk">
+    <primary sortas="a-intel-mediasdk">Intel-MediaSDK</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Intel-MediaSDK</title>
+
+    <para>
+      The Intel-MediaSDK package contains a set of libraries that provide
+      support for video acceleration for encoding and decoding tasks on legacy
+      Intel GPUs. This includes Intel iGPUs from the 5th Generation CPUs
+      (Broadwell) through the 11th Generation CPUs (Tiger Lake). This package
+      also provides a dispatcher library that is needed by applications like
+      ffmpeg to properly enable support for GPU acceleration with Intel GPUs.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&intel-mediasdk-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Intel-MediaSDK Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/general/gmmlib.html">gmmlib</ulink>,
+      <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>,
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <para>
+      This package extracts to MediaSDK-intel-mediasdk-&intel-mediasdk-version;.
+    </para>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Intel-MediaSDK</title>
+
+    <para>
+      First, fix two build failures caused by GCC-15:
+    </para>
+    
+<screen><userinput remap="pre">sed -i '/&lt;string.h&gt;/a #include &lt;cstdint&gt;' api/mfx_dispatch/linux/mfxparser.cpp &amp;&amp;
+sed -i '/&lt;math.h&gt;/a #include &lt;cstdint&gt;'   samples/sample_vpp/src/sample_vpp_frc_adv.cpp</userinput></screen>
+        
+    <para>
+      Install Intel-MediaSDK by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr        \
+      -D CMAKE_BUILD_TYPE=Release         \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON      \
+      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+      -D BUILD_ALL=ON                     \
+      -D BUILD_TOOLS=ON                   \
+      -D ENABLE_ITT=OFF                   \
+      -D ENABLE_OPENCL=OFF                \
+      -D ENABLE_WAYLAND=ON                \
+      -D ENABLE_X11_DRI3=ON               \
+      -D MFX_APPS_DIR=/usr/lib/mfx        \
+      -W no-dev ..                        &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>ctest</command>.
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <note><para>
+      Invoke <userinput>cmake -L ../CMakeLists.txt</userinput> for a full list of options.
+    </para></note>
+
+    <para>
+      <parameter>-D BUILD_ALL=ON</parameter>: This parameter builds support for
+      all Intel iGPUs included with the Broadwell series through the Tiger Lake
+      series, as well as support for all codecs.
+    </para>
+
+    <para>
+      <parameter>-D BUILD_TOOLS=ON</parameter>: This parameter builds all of
+      the tools needed for utilizing the GPUs that this package supports.
+    </para>
+    
+    <para>
+      <parameter>-D ENABLE_ITT=OFF</parameter>: This parameter disables support
+      for ITT (VTune) instrumentation support. This support requires several
+      packages which are no longer available.
+    </para>
+    
+    <para>
+      <parameter>-D ENABLE_OPENCL=OFF</parameter>: This parameter disables
+      support for OpenCL acceleration via the Intel Media SDK. This has been
+      disabled because the packages needed have been discontinued for years and
+      are no longer available.
+    </para>
+    
+    <para>
+      <parameter>-D ENABLE_WAYLAND=ON</parameter>: This parameter enables
+      support for GPU acceleration for supported Intel GPUs when using Wayland.
+    </para>
+    
+    <para>
+      <parameter>-D ENABLE_X11_DRI3=ON</parameter>: This parameter enables
+      support for GPU acceleration through DRI3 for supported Intel GPUs.
+    </para>
+    
+    <para>
+      <parameter>-D MFX_APPS_DIR=/usr/lib/mfx</parameter>: This parameter
+      places the samples that were compiled into /usr/lib/mfx.
+    </para>
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+
+      <seglistitem>
+        <seg>
+          asg-hevc,
+          hevc_fei_extractor, and
+          mfx-tracer-config
+        </seg>
+        <seg>
+          libmfx,
+          libmfxhw64,
+          and libmfx-tracer
+        </seg>
+        <seg>
+          /usr/{include,lib,share}/mfx
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="asg-hevc">
+        <term><command>asg-hevc</command></term>
+        <listitem>
+          <para>
+            encodes files using the HEVC codec while using this package for
+            GPU acceleration
+          </para>
+          <indexterm zone="intel-mediasdk asg-hevc">
+            <primary sortas="b-asg-hevc">asg-hevc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hevc_fei_extractor">
+        <term><command>hevc_fei_extractor</command></term>
+        <listitem>
+          <para>
+            dumps fei-specific information from HEVC bit streams
+          </para>
+          <indexterm zone="intel-mediasdk hevc_fei_extractor">
+            <primary sortas="b-hevc_fei_extractor">hevc_fei_extractor</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mfx-tracer-config">
+        <term><command>mfx-tracer-config</command></term>
+        <listitem>
+          <para>
+            generates configuration for the MFX tracer
+          </para>
+          <indexterm zone="intel-mediasdk mfx-tracer-config">
+            <primary sortas="b-mfx-tracer-config">mfx-tracer-config</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libmfx">
+        <term><filename class="libraryfile">libmfx</filename></term>
+        <listitem>
+          <para>
+            provides a dispatcher for the Intel MediaSDK
+          </para>
+          <indexterm zone="intel-mediasdk libmfx">
+            <primary sortas="c-libmfx">libmfx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry id="libmfxhw64">
+        <term><filename class="libraryfile">libmfxhw64</filename></term>
+        <listitem>
+          <para>
+            provides a dispatcher for libvpl to use when a newer GPU is in use
+          </para>
+          <indexterm zone="intel-mediasdk libmfxhw64">
+            <primary sortas="c-libmfxhw64">libmfxhw64</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry id="libmfx-tracer">
+        <term><filename class="libraryfile">libmfx-tracer</filename></term>
+        <listitem>
+          <para>
+            provides functions that trace API calls within libmfx
+          </para>
+          <indexterm zone="intel-mediasdk libmfx-tracer">
+            <primary sortas="c-libmfx-tracer">libmfx-tracer</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>

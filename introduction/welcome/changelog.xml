@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>August 15th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - Intel-MediaSDK: Added. Part of
+          <ulink url="&slfs-issues;/190">#190</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 11th, 2025</para>
       <itemizedlist>
         <listitem>
