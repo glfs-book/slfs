@@ -150,6 +150,7 @@ the exact same version number... -->
 <!ENTITY rofi-wayland-version                "&rofi-version;+wayland1">
 <!ENTITY wofi-version                        "1.5.1">
 <!-- App -->
+<!ENTITY libvpl-tools-version                "1.4.0">
 <!ENTITY mesa-demos-version                  "9.0.0">
 <!ENTITY obs-studio-version                  "31.0.3">
 <!ENTITY obs-cef-version                     "6533">

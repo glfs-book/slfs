@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libvpl-tools-download-http "https://github.com/intel/libvpl-tools/archive/v&libvpl-tools-version;/libvpl-tools-&libvpl-tools-version;.tar.gz">
+]>
+
+<sect1 id="libvpl-tools" xreflabel="libvpl-tools-&libvpl-tools-version;">
+  <?dbhtml filename="libvpl-tools.html"?>
+
+  <title>libvpl-tools-&libvpl-tools-version;</title>
+
+  <indexterm zone="libvpl-tools">
+    <primary sortas="a-libvpl-tools">libvpl-tools</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libvpl-tools</title>
+
+    <para>
+      The libvpl-tools package provides a set of utilities useful for diagnosing
+      problems with the Intel Video Processing API. In addition, it also provides
+      sample utilties that can be used to test the API.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libvpl-tools-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">libvpl-tools Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/general/gmmlib.html">gmmlib</ulink>,
+      <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>,
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
+      <xref linkend="libvpl"/>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">wayland-protocols</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libvpl-tools</title>
+
+    <para>
+      First, fix a build failure caused by GCC-15:
+    </para>
+    
+<screen><userinput remap="pre">sed -i '/sample_vpp_frc_adv.h/a #include &lt;cstdint&gt;' tools/legacy/sample_vpp/src/sample_vpp_frc_adv.cpp</userinput></screen>
+
+    <para>
+      Install libvpl-tools by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr     \
+      -D CMAKE_BUILD_TYPE=Release      \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON   \
+      -D BUILD_TESTS=ON                \
+      -W no-dev ..                     &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>ctest</command>.
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+    <para>
+      Finally, clean up the installed programs by renaming some to more
+      appropriate names as the &root; user:
+    </para>
+
+<screen role="root"><userinput>mv -v /usr/bin/metrics_monitor        /usr/bin/vpl-metrics-monitor         &amp;&amp;
+mv -v /usr/bin/sample_decode          /usr/bin/vpl-sample-decode           &amp;&amp;
+mv -v /usr/bin/sample_encode          /usr/bin/vpl-sample-encode           &amp;&amp;
+mv -v /usr/bin/sample_multi_transcode /usr/bin/vpl-sample-multi_transcode  &amp;&amp;
+mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          val-surface-sharing,
+          vpl-import-export,
+          vpl-inspect,
+          vpl-metrics-monitor,
+          vpl-sample-decode,
+          vpl-sample-encode,
+          vpl-sample-multi-transcode,
+          vpl-sample-vpp, and
+          vpl-system-analyzer
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/{lib,share}/libvpl-tools
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="val-surface-sharing">
+        <term><command>val-surface-sharing</command></term>
+        <listitem>
+          <para>
+            tests the Intel Video Processing API to ensure that surface sharing
+            functionality is working correctly
+          </para>
+          <indexterm zone="libvpl-tools val-surface-sharing">
+            <primary sortas="b-val-surface-sharing">val-surface-sharing</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vpl-import-export">
+        <term><command>vpl-import-export</command></term>
+        <listitem>
+          <para>
+            tests the Intel Video Processing API to ensure that the encoding
+            and decoding functionality is working correctly
+          </para>
+          <indexterm zone="libvpl-tools vpl-import-export">
+            <primary sortas="b-vpl-import-export">vpl-import-export</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vpl-inspect">
+        <term><command>vpl-inspect</command></term>
+        <listitem>
+          <para>
+            prints information about the implementation of the Intel Video
+            Processing API used on a given system
+          </para>
+          <indexterm zone="libvpl-tools vpl-inspect">
+            <primary sortas="b-vpl-inspect">vpl-inspect</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vpl-metrics-monitor">
+        <term><command>vpl-metrics-monitor</command></term>
+        <listitem>
+          <para>
+            monitors GPU usage when running video encoding/decoding operations
+          </para>
+          <indexterm zone="libvpl-tools vpl-metrics-monitor">
+            <primary sortas="b-vpl-metrics-monitor">vpl-metrics-monitor</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry id="vpl-sample-decode">
+        <term><command>vpl-sample-decode</command></term>
+        <listitem>
+          <para>
+            performs basic decoding tasks to demonstrate how to use the Intel
+            Video Processing API
+          </para>
+          <indexterm zone="libvpl-tools vpl-sample-decode">
+            <primary sortas="b-vpl-sample-decode">vpl-sample-decode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vpl-sample-encode">
+        <term><command>vpl-sample-encode</command></term>
+        <listitem>
+          <para>
+            performs basic encoding tasks to demonstrate how to use the Intel
+            Video Processing API
+          </para>
+          <indexterm zone="libvpl-tools vpl-sample-encode">
+            <primary sortas="b-vpl-sample-encode">vpl-sample-encode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vpl-sample-multi-transcode">
+        <term><command>vpl-sample-multi-transcode</command></term>
+        <listitem>
+          <para>
+            performs basic transcoding tasks to multiple video files at a time
+            to demonstrate how to use the Intel Video Processing API
+          </para>
+          <indexterm zone="libvpl-tools vpl-sample-multi-transcode">
+            <primary sortas="b-vpl-sample-multi-transcode">vpl-sample-multi-transcode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vpl-sample-vpp">
+        <term><command>vpl-sample-vpp</command></term>
+        <listitem>
+          <para>
+            performs basic tasks using the video processing procedures,
+            demonstrating how to configure pipeline operations depending on
+            the difference between input and output formats
+          </para>
+          <indexterm zone="libvpl-tools vpl-sample-vpp">
+            <primary sortas="b-vpl-sample-vpp">vpl-sample-vpp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vpl-system-analyzer">
+        <term><command>vpl-system-analyzer</command></term>
+        <listitem>
+          <para>
+            outputs diagnostic information about whether an Intel GPU is
+            supported by the Video Processing API, and which of the two
+            backends will be used at runtime
+          </para>
+          <indexterm zone="libvpl-tools vpl-system-analyzer">
+            <primary sortas="b-vpl-system-analzyer">vpl-system-analyzer</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+      
+    </variablelist>
+  </sect2>
+</sect1>
