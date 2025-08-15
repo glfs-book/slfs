@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY intel-onevpl-download-http "https://github.com/intel/vpl-gpu-rt/archive/refs/tags/intel-onevpl-&intel-onevpl-version;.tar.gz">
+]>
+
+<sect1 id="intel-onevpl" xreflabel="intel-onevpl-&intel-onevpl-version;">
+  <?dbhtml filename="intel-onevpl.html"?>
+
+  <title>intel-onevpl-&intel-mediasdk-version;</title>
+
+  <indexterm zone="intel-onevpl">
+    <primary sortas="a-intel-onevpl">intel-onevpl</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to intel-onevpl</title>
+
+    <para>
+      The intel-onevpl package contains a set of libraries that provide
+      support for video acceleration for encoding and decoding tasks on modern
+      Intel GPUs. This includes every GPU produced from the Tiger Lake (11th
+      Generation) CPUs and later, including the Arc and Iris Xe GPUs.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&intel-onevpl-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Intel-MediaSDK Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/general/gmmlib.html">gmmlib</ulink>,
+      <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>,
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
+    </para>
+
+    <para>
+      This package extracts to vpl-gpu-rt-intel-onevpl-&intel-onevpl-version;.
+    </para>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of intel-onevpl</title>
+        
+    <para>
+      Install intel-onevpl by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D BUILD_TESTS=OFF             \
+      -D MFX_ENABLE_AENC=ON          \
+      -W no-dev ..                   &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      This package does not come with a working test suite.
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <note><para>
+      Invoke <userinput>cmake -L ../CMakeLists.txt</userinput> for a full list of options.
+    </para></note>
+
+    <para>
+      <parameter>-D BUILD_TESTS=OFF</parameter>: This parameter disables the
+      tests as they are broken and require several external dependencies.
+    </para>
+
+    <para>
+      <parameter>-D MFX_ENABLE_AENC=ON</parameter>: This parameter enables the
+      AENC extension.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libmfx-gen
+        </seg>
+        <seg>
+          /usr/lib/libmfx-gen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libmfx-gen">
+        <term><filename class="libraryfile">libmfx-gen</filename></term>
+        <listitem>
+          <para>
+            provides support for GPU accelerated video encoding and decoding
+            on Intel GPUs from the Tiger Lake generation and higher
+          </para>
+          <indexterm zone="intel-onevpl libmfx-gen">
+            <primary sortas="c-libmfx-gen">libmfx-gen</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>
