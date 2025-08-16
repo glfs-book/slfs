@@ -66,6 +66,8 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
+      <ulink url="&blfs-svn;/postlfs/profile.html">Bash Shell Startup
+      Files</ulink> and
       <ulink url="&blfs-svn;/general/hwdata.html">hwdata</ulink>
     </para>
 
@@ -107,16 +109,12 @@ grep -v '^#' ../hypr-list | wget -i- -c \
     <title>Installation of Hypr Libraries</title>
 
     <para>
-      First, <emphasis>IF</emphasis> you have not followed the
-      <ulink url="&blfs-svn;/kde/kf6-intro.html">KDE Frameworks 6
-      Pre-installation Configuration</ulink> and have not configured KDE to
-      install in <filename class="directory">/usr</filename>, add to
-      <filename>/etc/profile.d/qt6.sh</filename> to ensure QML files can be
-      loaded/imported as the &root; user:
+      Create <filename>/etc/profile.d/hypr.sh</filename> to ensure QML files
+      can be loaded and imported as the &root; user:
     </para>
 
-<screen role="root"><userinput>cat &gt;&gt; /etc/profile.d/qt6.sh &lt;&lt; "EOF"
-<literal># Begin Hypr extension for /etc/profile.d/qt6.sh
+<screen role="root"><userinput>cat &gt; /etc/profile.d/hypr.sh &lt;&lt; "EOF"
+<literal># Begin /etc/profile.d/hypr.sh
 
 pathappend /usr/lib/plugins        QT_PLUGIN_PATH
 pathappend $QT6DIR/lib/plugins     QT_PLUGIN_PATH
@@ -124,14 +122,15 @@ pathappend $QT6DIR/lib/plugins     QT_PLUGIN_PATH
 pathappend /usr/lib/qt6/qml        QML2_IMPORT_PATH
 pathappend $QT6DIR/lib/qml         QML2_IMPORT_PATH
 
-# End extension for /etc/profile.d/qt6.sh
+# End /etc/profile.d/hypr.sh
 EOF</literal></userinput></screen>
 
     <para>
-      Now go ahead and source the startup script again:
+      Now go ahead and source the main profile script which will load the Hypr
+      profile script as well:
     </para>
 
-<screen><userinput>source /etc/profile.d/qt6.sh</userinput></screen>
+<screen><userinput>source /etc/profile</userinput></screen>
 
     &as_root;
 
