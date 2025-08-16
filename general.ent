@@ -2,7 +2,7 @@
 <!ENTITY % conditional-entities SYSTEM "conditional.ent">
 %conditional-entities;
 
-<!ENTITY xlfs-version "12.3">
+<!ENTITY xlfs-version "12.4">
 <!ENTITY % relnum     "&xlfs-version;">
 
 <![ %development; [
@@ -107,8 +107,8 @@
 <!ENTITY root                 "<systemitem class='username'>root</systemitem>">
 <!ENTITY gi-docgen-url        "https://gnome.pages.gitlab.gnome.org/gi-docgen/">
 
-<!ENTITY blfs-bootscripts-version     "20240209">
-<!ENTITY systemd-units-version        "20240205">
+<!ENTITY blfs-bootscripts-version     "20250225">
+<!ENTITY systemd-units-version        "20241211">
 
 <!ENTITY blfs-wiki                    "https://wiki.&lfs-domainname;/blfs/wiki">
 <!ENTITY blfs-svn                     "https://&lfs-domainname;/blfs/view/&blfs-version;">
