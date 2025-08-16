@@ -41,6 +41,33 @@
     -->
 
     <listitem>
+      <para>August 15th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - OBS-Studio: updated the dependencies to add proper
+          support for Intel hardware encoding. Fixes
+          <ulink url="&slfs-issues;/190">#190</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - libvpl-tools: Added. Part of
+          <ulink url="&slfs-issues;/190">#190</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - libvpl: Added. Part of
+          <ulink url="&slfs-issues;/190">#190</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - intel-onevpl: Added. Part of
+          <ulink url="&slfs-issues;/190">#190</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - Intel-MediaSDK: Added. Part of
+          <ulink url="&slfs-issues;/190">#190</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 11th, 2025</para>
       <itemizedlist>
         <listitem>

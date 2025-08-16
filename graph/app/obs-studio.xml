@@ -111,7 +111,10 @@
         </listitem>
         <listitem>
           <para>
-            <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>
+            <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>,
+            <xref linkend="intel-mediasdk"/> (for GPUs from Broadwell to Tiger Lake),
+            <xref linkend="intel-onevpl"/> (for GPUs from Tiger Lake onward),
+            <xref linkend="libvpl"/>,
             and
             <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>
             (required for Intel QSV11 hardware encoding)
