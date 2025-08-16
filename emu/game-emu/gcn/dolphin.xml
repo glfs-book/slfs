@@ -44,7 +44,6 @@
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>,
       &opengl;,
-      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
       <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, and
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
@@ -65,6 +64,7 @@
       <xref linkend="minizip"/>,
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
       <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
     </para>
@@ -86,7 +86,6 @@
 
 <screen><userinput>cat &gt; dolphin-list &lt;&lt; "EOF"
 <literal>dolphin-emu/dolphin/archive/&dolphin-version;/dolphin-&dolphin-version;.tar.gz
-dolphin-emu/ext-win-qt/archive/&dolphin-qt-external;.tar.gz
 SFML/SFML/archive/&dolphin-sfml-external;.tar.gz
 GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/&dolphin-vk-mem-alloc-external;.tar.gz
 mozilla/cubeb/archive/&dolphin-cubeb-external;.tar.gz
@@ -140,8 +139,7 @@ done</userinput></screen>
       running the following commands:
     </para>
 
-<screen><userinput>mv -T ext-win-qt-* dolphin-&dolphin-version;/Externals/Qt &amp;&amp;
-mv -T SFML-* dolphin-&dolphin-version;/Externals/SFML/SFML &amp;&amp;
+<screen><userinput>mv -T SFML-* dolphin-&dolphin-version;/Externals/SFML/SFML &amp;&amp;
 mv -T VulkanMemoryAllocator-* \
       dolphin-&dolphin-version;/Externals/VulkanMemoryAllocator &amp;&amp;
 mv -T cubeb-* dolphin-&dolphin-version;/Externals/cubeb/cubeb &amp;&amp;
@@ -204,6 +202,12 @@ mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput><
 
 <screen><userinput>patch -Np1 -i ../dolphin-xcb_env-1.patch</userinput></screen>
 -->
+
+    <para>
+      Remove a dirty suffix that prevents building for netplay support:
+    </para>
+
+<screen><userinput>sed -i 's/--dirty/&amp;=""/' CMake/ScmRevGen.cmake</userinput></screen>
 
     <para>
       Install Dolphin by running the following

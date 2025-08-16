@@ -216,7 +216,7 @@ the exact same version number... -->
 <!-- GCN/Wii -->
 <!-- REQUIRED -->
 <!ENTITY dolphin-version                     "2506a">
-<!ENTITY dolphin-qt-external                 "495517af2b922c10c24f543e0fd6ea3ddf774e50">
+<!-- <!ENTITY dolphin-qt-external                 "495517af2b922c10c24f543e0fd6ea3ddf774e50"> -->
 <!ENTITY dolphin-sfml-external               "7f1162dfea4969bc17417563ac55d93b72e84c1e">
 <!ENTITY dolphin-vk-mem-alloc-external       "3bab6924988e5f19bf36586a496156cf72f70d9f">
 <!ENTITY dolphin-cubeb-external              "54217bca3f3e0cd53c073690a23dd25d83557909">
