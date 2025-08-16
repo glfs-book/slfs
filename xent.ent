@@ -1,3 +1,7 @@
+<!ENTITY source-profile
+  "<para>Now source the main profile:</para>
+   <screen><userinput>source /etc/profile</userinput></screen>">
+
 <!ENTITY abi-break
   "<important><para>Updating this package is known
   to break ABI.</para></important>">

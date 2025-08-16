@@ -125,12 +125,7 @@ pathappend $QT6DIR/lib/qml         QML2_IMPORT_PATH
 # End /etc/profile.d/hypr.sh
 EOF</literal></userinput></screen>
 
-    <para>
-      Now go ahead and source the main profile script which will load the Hypr
-      profile script as well:
-    </para>
-
-<screen><userinput>source /etc/profile</userinput></screen>
+    &source-profile;
 
     &as_root;
 

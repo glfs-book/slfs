@@ -68,6 +68,12 @@
       <ulink url="&glfs-website;/shareddeps/nvidia.html">NVIDIA</ulink>
     </para>
 
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/postlfs/profile.html">Bash Shell Startup
+      Files</ulink>
+    </para>
+
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/gdb.html">GDB</ulink> and
@@ -207,12 +213,7 @@ pathprepend /opt/cuda/bin           PATH
 # End /etc/profile.d/cuda.sh</literal>
 EOF</userinput></screen>
 
-    <para>
-      Immediately after installation, update the current PATH
-      for your current shell:
-    </para>
-
-    <screen><userinput>source /etc/profile.d/cuda.sh</userinput></screen>
+    &source-profile;
 
   </sect2>
 
