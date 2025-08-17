@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY xcb-util-errors-download
+    "https://xcb.freedesktop.org/dist/xcb-util-errors-&xcb-util-errors-version;.tar.xz">
+]>
+
+<sect1 id="xcb-util-errors" xreflabel="xcb-util-errors-&xcb-util-errors-version;">
+  <?dbhtml filename="xcb-util-errors.html"?>
+	
+  <title>xcb-util-errors-&xcb-util-errors-version;</title>
+
+  <indexterm zone="xcb-util-errors">
+    <primary sortas="a-xcb-util-errors">xcb-util-errors</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to xcb-util-errors</title>
+
+    <para>
+      The xcb-util-errors package provides XCB utility
+      functions that provide human readable X11 errors.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&xcb-util-errors-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">xcb-util-errors Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink> and
+      <ulink url="&blfs-svn;/x/xcb-proto.html">xcb-util</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of xcb-util-errors</title>
+
+    <para>
+      Install xcb-util-errors by running the following
+      commands:
+    </para>
+
+<screen><userinput>./configure $XORG_CONFIG &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libxcb-errors
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libxcb-errors">
+        <term><filename class="libraryfile">libxcb-errors</filename></term>
+        <listitem>
+          <para>
+            gives human-readable errors and codes
+          </para>
+          <indexterm zone="xcb-util-errors libxcb-errors">
+            <primary sortas="c-libxcb-errors">libxcb-errors</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

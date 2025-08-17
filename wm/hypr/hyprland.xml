@@ -66,8 +66,8 @@
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
-      <ulink url="https://glfs-book.github.io/glfs/shareddeps/xcb-utils.html">XCB Utils</ulink>
-      (xcb-util-errors is necessary; only normal installation is necessary), and
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
+      <xref linkend="xcb-util-errors"/>, and
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 

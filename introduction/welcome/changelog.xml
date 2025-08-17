@@ -41,6 +41,15 @@
     -->
 
     <listitem>
+      <para>August 17th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - xcb-util-errors: Moved from GLFS to SLFS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 16th, 2025</para>
       <itemizedlist>
         <listitem>
