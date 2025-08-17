@@ -91,13 +91,13 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
       <?dbhtml list-presentation="table"?>
 
       <varlistentry id="xtrace-prog">
-        <term><command>xtrace</command></term>
+        <term><command>xtrace_x11</command></term>
         <listitem>
          <para>
            traces X11 messages, most often used for debugging
          </para>
           <indexterm zone="xtrace xtrace-prog">
-            <primary sortas="b-xtrace">xtrace</primary>
+            <primary sortas="b-xtrace_x11">xtrace_x11</primary>
           </indexterm>
         </listitem>
       </varlistentry>
