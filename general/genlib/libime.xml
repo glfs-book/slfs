@@ -25,6 +25,8 @@
       implementing generic input methods.
     </para>
 
+    &build-use-internet;
+
     <itemizedlist spacing="compact">
       <listitem>
         <para>
