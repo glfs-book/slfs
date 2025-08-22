@@ -5,12 +5,13 @@
   %general-entities;
 
   <!ENTITY yajl-download-http
-    "https://github.com/lloyd/yajl/archive/&yajl-version;/yajl-&yajl-version;.tar.gz">
+    "https://github.com/lloyd/yajl/archive/refs/tags/&yajl-version;/yajl-&yajl-version;.tar.gz">
+  <!-- archive/refs/tags is explicit here, as Github otherwise complains
+       that archive/&yajl-version; can point to several revisions. -->
 ]>
 
 <sect1 id="yajl" xreflabel="yajl-&yajl-version;">
   <?dbhtml filename="yajl.html"?>
-
 
   <title>yajl-&yajl-version;</title>
 
