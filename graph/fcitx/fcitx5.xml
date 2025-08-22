@@ -49,8 +49,13 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
       <xref linkend="cldr-emoji-annotation"/>,
-      <ulink url="&blfs-svn;/general/enchant.html">enchant</ulink>, and
+      <ulink url="&blfs-svn;/general/enchant.html">enchant</ulink>,
+      <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
+      <ulink url="&blfs-svn;/general/iso-codes.html">ISO Codes</ulink>,
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>), and
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
     </para>
 
