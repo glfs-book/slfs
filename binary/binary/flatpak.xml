@@ -46,7 +46,7 @@
       <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>,
-      <ulink url="&blfs-svn;/general/json-glib.html">json-glib</ulink>,
+      <ulink url="&blfs-svn;/general/json-glib.html">JSON-GLib</ulink>,
       <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
       &logind;
       <xref linkend="ostree"/>,
