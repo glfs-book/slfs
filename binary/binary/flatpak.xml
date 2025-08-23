@@ -78,6 +78,7 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
+      <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
       <ulink url="https://gitlab.freedesktop.org/pwithnall/malcontent">malcontent</ulink>
       (for parental features),
       <xref linkend="socat"/>
@@ -98,11 +99,12 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup --prefix=/usr              \
-            --buildtype=release        \</userinput><userinput revision="sysv">
-            -D systemd=disabled        \</userinput><userinput>
-            -D system_bubblewrap=bwrap \
-            -D tests=false             \
+meson setup --prefix=/usr                       \
+            --buildtype=release                 \</userinput><userinput revision="sysv">
+            -D systemd=disabled                 \</userinput><userinput>
+            -D system_bubblewrap=bwrap          \
+            -D system_dbus_proxy=xdg-dbus-proxy \
+            -D tests=false                      \
             .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -128,6 +130,11 @@ ninja</userinput></screen>
     <para>
       <parameter>-D system_bubblewrap=bwrap</parameter>: Ensures the build
       system doesn't download Bubblewrap.
+    </para>
+
+    <para>
+      <parameter>-D system_dbus_proxy=xdg-dbus-proxy</parameter>: Ensures the
+      build system doesn't download xdg-dbus-proxy.
     </para>
 
     <para>
