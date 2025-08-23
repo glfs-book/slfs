@@ -134,7 +134,7 @@ patch -Np1 -i ../lrzsz-&lrzsz-version;-c23.patch</userinput></screen>
 <screen><userinput>touch config.rpath &amp;&amp;
 rm -vf missing &amp;&amp;
 rm -vf acconfig.h &amp;&amp;
-autoreconf -fiv</userinput></screen>
+autoreconf -fiv -I/usr/share/gettext/m4</userinput></screen>
 
     <para>
       Install lrzsz by executing the following
