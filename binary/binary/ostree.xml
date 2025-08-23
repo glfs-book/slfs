@@ -44,6 +44,7 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
+      <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>,
       <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
       <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
       <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>, and
