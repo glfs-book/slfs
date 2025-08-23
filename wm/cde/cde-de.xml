@@ -102,8 +102,10 @@
     </para>
 
 <screen><userinput>./autogen.sh &amp;&amp;
-CFLAGS+=" -std=gnu17" \
-./configure --prefix=/usr --disable-static &amp;&amp;
+CFLAGS+=" -std=gnu17"         \
+./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --disable-static &amp;&amp;
 make</userinput></screen>
 
     <note><para>This package may print escape sequences during the build
