@@ -205,7 +205,7 @@ systemctl enable dtlogin.service
           libDtXinerama, and libtt
         </seg>
         <seg>
-          /usr/dt, /usr/etc/cde, /usr/include/csa, /usr/include/Dt,
+          /usr/dt, /usr/include/csa, /usr/include/Dt,
           /usr/include/Tt, /usr/lib/cde, /usr/lib/dtksh, /usr/libexec/cde,
           /usr/share/cde, and /var/spool/calendar
         </seg>
