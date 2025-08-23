@@ -81,11 +81,7 @@ EOF
 mkdir -p /var/cache/man &amp;&amp;
 mandb -c /opt/jdk/man</userinput></screen>
 
-    <para>
-      Now ensure the variables are set:
-    </para>
-
-<screen><userinput>source /etc/profile.d/openjdk.sh</userinput></screen>
+    &source-profile;
 
   </sect2>
 

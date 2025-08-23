@@ -39,7 +39,6 @@
     <para role="required">
       <ulink url="&blfs-svn;/general/fontconfig.html">fontconfig</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
-      &logind;
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
@@ -54,7 +53,8 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <xref linkend="scdoc"/> and
+      <xref linkend="libutempter"/>,
+      <xref linkend="scdoc"/>, and
       <ulink url="&arch-pkgs;/extra/x86_64/utf8proc/">utf8proc</ulink>
     </para>
 
