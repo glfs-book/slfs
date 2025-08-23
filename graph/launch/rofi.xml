@@ -63,7 +63,7 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&arch-pkgs;/extra/x86_64/xcb-imdkit/">XCBImdkit</ulink>
+      <xref linkend="xcb-imdkit"/>
     </para>
 
   </sect2>
