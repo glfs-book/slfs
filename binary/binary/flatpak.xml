@@ -71,7 +71,8 @@
       <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
       <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>,
       <ulink url="&blfs-svn;/general/xdg-dbus-proxy.html">xdg-dbus-proxy</ulink>,
-      <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>, and
+      <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>
+      (with <ulink url="&blfs-svn;/general/libportal.html">libportal</ulink>), and
       <ulink url="&blfs-svn;/pst/xmlto.html">xmlto</ulink>
     </para>
 
