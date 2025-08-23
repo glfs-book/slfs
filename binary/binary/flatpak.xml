@@ -42,7 +42,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/appstream.html">AppStream</ulink>,
-      <ulink url="&blfs-svn;/general/dbus.html">dbus</ulink>,
+      <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
       <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>,
