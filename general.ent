@@ -127,8 +127,8 @@
 <![ %release; [
   <!ENTITY important-stability "<para>
   This is the stable release of this book and is known to have working
-  instructions and matches up with LFS and BLFS &xlfs-version;. External links
-  will point to stable sources.
+  instructions and matches up with LFS, BLFS, and GLFS &xlfs-version;. External
+  links will point to stable sources.
 </para>">
 ]]>
 
