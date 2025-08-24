@@ -47,9 +47,8 @@
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>,
       <ulink url="&blfs-svn;/general/json-glib.html">JSON-GLib</ulink>,
-      <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
       &logind;
-      <xref linkend="ostree"/>,
+      <xref linkend="ostree"/> (with cURL and gpgme),
       <ulink url="&blfs-svn;/postlfs/p11-kit.html">p11-kit</ulink>, and
       <ulink url="&blfs-svn;/general/python-modules.html#pyparsing">pyparsing</ulink>
     </para>
@@ -67,6 +66,7 @@
       <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
       <ulink url="&blfs-svn;/general/libarchive.html">libarchive</ulink>,
       <ulink url="&blfs-svn;/general/libseccomp.html">libseccomp</ulink>,
+      <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
       <ulink url="&blfs-svn;/x/libXau.html">libXau</ulink>,
       <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
       <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>,

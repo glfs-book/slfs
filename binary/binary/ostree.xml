@@ -44,9 +44,10 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>,
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> and
+      <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>
+      (required for Flatpak),
       <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
-      <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
       <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>, and
       &logind-nocomma;
     </para>
@@ -54,6 +55,7 @@
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="https://linuxfromscratch.org/blfs/view/12.3/basicnet/libsoup.html">libsoup</ulink>
+      and <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>
     </para>
 
   </sect2>
@@ -66,7 +68,11 @@
       commands:
     </para>
 
-<screen><userinput>./configure --prefix=/usr --sysconfdir=/etc --disable-static &amp;&amp;
+<screen><userinput>./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --disable-static  \
+            --with-curl       \
+            --with-soup=no   &amp;&amp;
 make</userinput></screen>
 
     <para>
