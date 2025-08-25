@@ -1,0 +1,44 @@
+diff -Naur orig-pkgsuite/pkgsuite-ea428661c1eb40ae7ad24d6ff449bfeda59de725/src/libadm/getpass.c pkgsuite-ea428661c1eb40ae7ad24d6ff449bfeda59de725/src/libadm/getpass.c
+
+--- orig-pkgsuite/pkgsuite-ea428661c1eb40ae7ad24d6ff449bfeda59de725/src/libadm/getpass.c	2024-05-06 15:41:19.000000000 -0600
++++ pkgsuite-ea428661c1eb40ae7ad24d6ff449bfeda59de725/src/libadm/getpass.c	2025-08-24 17:50:20.700417205 -0600
+@@ -41,7 +41,7 @@
+ #include <signal.h>
+ #include <unistd.h>
+ /* #include <stropts.h> */
+-#include <termio.h>
++#include <termios.h>
+ 
+ static void catch(int);
+ static int intrupt;
+@@ -66,7 +66,7 @@
+ static char *
+ __getpass(const char *prompt, int size)
+ {
+-	struct termio ttyb;
++	struct termios ttyb;
+ 	unsigned short flags;
+ 	char *p;
+ 	int c;
+@@ -87,10 +87,10 @@
+ 	setbuf(fi, NULL);
+ 	sig = signal(SIGINT, catch);
+ 	intrupt = 0;
+-	(void) ioctl(fileno(fi), TCGETA, &ttyb);
++	(void) tcgetattr(fileno(fi), &ttyb);
+ 	flags = ttyb.c_lflag;
+ 	ttyb.c_lflag &= ~(ECHO | ECHOE | ECHOK | ECHONL);
+-	(void) ioctl(fileno(fi), TCSETAF, &ttyb);
++	(void) tcsetattr(fileno(fi), TCSAFLUSH, &ttyb);
+ #ifdef	__sun
+ 	FLOCKFILE(lk, stderr);
+ #else
+@@ -105,7 +105,7 @@
+ 	}
+ 	*p = '\0';
+ 	ttyb.c_lflag = flags;
+-	(void) ioctl(fileno(fi), TCSETAW, &ttyb);
++	(void) tcsetattr(fileno(fi), TCSADRAIN, &ttyb);
+ 	(void) putc('\n', stderr);
+ #ifdef	__sun
+ 	FUNLOCKFILE(lk);
