@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>August 26th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - strace: 6.15 -&gt; 6.16. Fixes
+          <ulink url="&slfs-issues;/270">#270</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 17th, 2025</para>
       <itemizedlist>
         <listitem>

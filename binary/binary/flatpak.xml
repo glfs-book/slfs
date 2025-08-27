@@ -145,6 +145,29 @@ ninja</userinput></screen>
 
   </sect2>
 
+  <sect2 role="configuration">
+    <title>Configuring Flatpak</title>
+
+    <para>
+      Now that Flatpak is installed, you should add a repository/remote to
+      install flatpaks from. Flathub is the most popular choice. You can do
+      that with:
+    </para>
+
+<screen role="nodump"><userinput>flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo</userinput></screen>
+
+    <para>
+      You can run it as a regular user or as &root;. If you run it as a regular
+      user, polkit will ask for authentication. In such case, ensure polkit
+      works first. If all went well, no error should be outputted. Then you
+      will be able to install flatpaks from Flathub. All installed applications
+      will be in <filename
+      class="directory">/var/lib/flatpak/exports/bin</filename>. Add that
+      directory to your <envar>$PATH</envar> if you wish.
+    </para>
+
+  </sect2>
+
   <sect2 role="content">
     <title>Contents</title>
 
