@@ -10,7 +10,7 @@
 <sect1 id="intel-onevpl" xreflabel="intel-onevpl-&intel-onevpl-version;">
   <?dbhtml filename="intel-onevpl.html"?>
 
-  <title>intel-onevpl-&intel-mediasdk-version;</title>
+  <title>intel-onevpl-&intel-onevpl-version;</title>
 
   <indexterm zone="intel-onevpl">
     <primary sortas="a-intel-onevpl">intel-onevpl</primary>
