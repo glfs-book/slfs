@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>August 30th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - Update the modern JDK version entity to 24.0.2+12,
+          matching BLFS for security reasons.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 26th, 2025</para>
       <itemizedlist>
         <listitem>
