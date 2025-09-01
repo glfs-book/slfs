@@ -257,7 +257,7 @@ popd</userinput></screen>
         command-line Mupen64Plus frontend, you will
         have to configure the options manually. You can generate a default
         configuration file from simply running <command>mupen64plus</command>
-        once. It will stack all the default configuation files from
+        once. It will stack all the default configuration files from
         <filename class="directory">/usr/share/mupen64plus</filename> into
         <filename>~/.config/mupen64plus/mupen64plus.cfg</filename>. It will
         automatically stack configuration files from the plugins it chooses if

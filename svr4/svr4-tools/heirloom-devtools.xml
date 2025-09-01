@@ -78,7 +78,7 @@
 <screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-final-updates.patch</userinput></screen>
 
     <para>
-      Now, apply a patch to fix the compililation of the make utility:
+      Now, apply a patch to fix the compilation of the make utility:
     </para>
 
 <screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch</userinput></screen>

@@ -121,7 +121,7 @@ ninja</userinput></screen>
         <term><command>rofi</command></term>
         <listitem>
           <para>
-            is an X11 application laucher
+            is an X11 application launcher
           </para>
           <indexterm zone="rofi rofi-bin">
             <primary sortas="b-rofi-bin">rofi</primary>

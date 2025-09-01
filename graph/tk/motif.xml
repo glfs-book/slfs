@@ -136,7 +136,7 @@ mv -v /usr/share/Xm/* /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
 rmdir -v /usr/share/Xm</userinput></screen>
 
     <para>
-      Still as the &root; user, install some auxillary files:
+      Still as the &root; user, install some auxiliary files:
     </para>
 
 <screen role="root"><userinput>install -v -m755 -d /usr/share/X11/app-defaults &amp;&amp;

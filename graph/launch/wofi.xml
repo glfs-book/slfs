@@ -100,7 +100,7 @@ ninja</userinput></screen>
         <term><command>wofi</command></term>
         <listitem>
           <para>
-            is a Wayland application laucher
+            is a Wayland application launcher
           </para>
           <indexterm zone="wofi wofi-bin">
             <primary sortas="b-wofi-bin">wofi</primary>

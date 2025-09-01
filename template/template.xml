@@ -90,7 +90,7 @@
       <xref linkend="ANOTHER_RECOMMENDED_DEP"/> (required if building
         <xref role="nodep" linkend="SOME_FANCY_PACKAGE"/>) <!-- You may need
       to refer to another package, which is not a dependency. Use the role
-      attibute with value "nodep". -->
+      attribute with value "nodep". -->
       <!-- See above for runtime dependencies -->
     </para>
 
