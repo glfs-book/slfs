@@ -174,7 +174,7 @@ div.navfooter {
   display:none;
 }
 
-/* Except for the forst page (TOC), where the bottom is the only
+/* Except for the first page (TOC), where the bottom is the only
    place where navigation is displayed. */
 
 div.book + div.navfooter {

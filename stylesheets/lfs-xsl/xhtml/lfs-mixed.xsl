@@ -4,9 +4,9 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 version="1.0">
 
-  <!-- This stylesheet contains misc templates for output formating.
+  <!-- This stylesheet contains misc templates for output formatting.
        This file is for that templates that don't fit in other files
-       and that not afect the chunk algorithm. -->
+       and that not affect the chunk algorithm. -->
 
   <!-- Individual elements templates -->
 
@@ -198,7 +198,7 @@
   </xsl:template>
 
     <!-- para/simplelist:
-           Self-made template. Add a line break and process the childs.
+           Self-made template. Add a line break and process the children.
            If @type is specified, the original templates should be used,
            but not tested. -->
   <xsl:template match="para/simplelist">
@@ -219,7 +219,7 @@
   </xsl:template>
 
 
-  <!-- Named formating templates -->
+  <!-- Named formatting templates -->
 
     <!-- Body attributes:
            Add to the body XHTML output tag a class attribute with the book type

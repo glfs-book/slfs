@@ -20,7 +20,7 @@
     <title>Introduction to Hypr Libraries</title>
 
     <para>
-      The Hypr libraries provide needed utilties for the entire Hypr ecosystem.
+      The Hypr libraries provide needed utilities for the entire Hypr ecosystem.
       While two of the packages installed in this page are not strictly
       required (hyprland-qt-support and
       hyprland-qtutils), they are needed for some

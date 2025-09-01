@@ -30,7 +30,7 @@ echo "<!ENTITY % development \"$DEVELOPMENT\">" >> conditional.ent
 echo "<!ENTITY % release     \"$RELEASE\">"     >> conditional.ent
 
 if ! git status > /dev/null; then
-    # Either it's not a git repository, or git is unavaliable.
+    # Either it's not a git repository, or git is unavailable.
     # Just workaround.
     echo "<!ENTITY year              \"????\">"            >> conditional.ent
     echo "<!ENTITY version           \"unknown\">"         >  version.ent

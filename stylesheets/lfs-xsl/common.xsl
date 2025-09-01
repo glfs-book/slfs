@@ -111,7 +111,7 @@
         </xsl:when>
         <xsl:when test="$section.autolabel != 0">
           <xsl:choose>
-            <!-- If the first sect2 isn't numbered, renumber the remainig sections -->
+            <!-- If the first sect2 isn't numbered, renumber the remaining sections -->
             <xsl:when test="string-length(../sect2[1]/title) = 0">
               <xsl:variable name="totalsect2">
                 <xsl:number count="sect2"/>

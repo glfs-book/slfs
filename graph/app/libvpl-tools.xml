@@ -22,7 +22,7 @@
     <para>
       The libvpl-tools package provides a set of utilities useful for diagnosing
       problems with the Intel Video Processing API. In addition, it also provides
-      sample utilties that can be used to test the API.
+      sample utilities that can be used to test the API.
     </para>
 
     &long-build-time;
@@ -256,7 +256,7 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
             backends will be used at runtime
           </para>
           <indexterm zone="libvpl-tools vpl-system-analyzer">
-            <primary sortas="b-vpl-system-analzyer">vpl-system-analyzer</primary>
+            <primary sortas="b-vpl-system-analyzer">vpl-system-analyzer</primary>
           </indexterm>
         </listitem>
       </varlistentry>

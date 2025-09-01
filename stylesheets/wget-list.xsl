@@ -50,7 +50,7 @@
   <xsl:template match="listitem/para/ulink">
       <!-- The next strings need be revised periodically to add missing
       files or to skip false positives. Skip also possible
-      duplicated URLs that may be splitted for PDF output -->
+      duplicated URLs that may be split for PDF output -->
     <xsl:if test="(contains(@url, '.gz') or contains(@url, '.bz2')
                   or contains(@url, '.tgz') or contains(@url, '.tar')
                   or contains(@url, 'patch.txt') or contains(@url, '.zip')
@@ -74,7 +74,7 @@
   <xsl:template match="ulink" mode="full">
       <!-- The next strings need be revised periodically to add missing
       files or to skip false positives. Skip also possible
-      duplicated URLs that may be splitted for PDF output -->
+      duplicated URLs that may be split for PDF output -->
     <xsl:if test="(contains(@url, '.gz') or contains(@url, '.bz2')
                   or contains(@url, '.tgz') or contains(@url, '.tar')
                   or contains(@url, '.txt') or contains(@url, 'compressdoc')

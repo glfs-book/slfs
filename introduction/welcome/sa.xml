@@ -21,8 +21,8 @@
     </para>
 
     <para>
-      There are many packages that push out updates that fix vulnerabilties,
-      and some packages fix CVEs pretty often. SLFS will ocassionally have an
+      There are many packages that push out updates that fix vulnerabilities,
+      and some packages fix CVEs pretty often. SLFS will occasionally have an
       update that upgrades a package that fixes a CVE. It's important to always
       upgrade packages on your system that contain security vulnerabilities,
       and there is a way for checking for those updates.

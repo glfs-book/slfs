@@ -22,7 +22,7 @@
 
     <para>
       The Mesa-Demos package provides multiple demos
-      to test the installation of mutliple graphics APIs and drivers for those
+      to test the installation of multiple graphics APIs and drivers for those
       APIs, such as OpenGL, EGL, Vulkan, and more.
     </para>
 

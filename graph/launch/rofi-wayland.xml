@@ -119,7 +119,7 @@ ninja</userinput></screen>
         <listitem>
           <para>
             is an X11 and
-            Wayland application laucher
+            Wayland application launcher
           </para>
           <indexterm zone="rofi-wayland rofi-wayland-bin">
             <primary sortas="b-rofi-wayland-bin">rofi</primary>
