@@ -69,10 +69,10 @@
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vm755 yt-dlp /usr/bin</userinput></screen>
+<screen role="root"><userinput>install -vDm755 yt-dlp -t /usr/bin/</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="content">
     <title>Contents</title>
 
