@@ -89,6 +89,16 @@ for i in {1,5}; do
   install -vDm644 target/man-&eza-version;/*.$i -t /usr/share/man/man$i/
 done</userinput></screen>
 
+    <para>
+      If you wish to install shell completions, execute the relevant commands
+      for your shell(s) as the <systemitem class="username">root</systemitem>
+      user:
+    </para>
+<screen role="root"><userinput>install -vDm644 completions/bash/eza      -t /usr/share/bash-completion/completions/
+install -vDm644 completions/fish/eza.fish -t /usr/share/fish/vendor_completions.d/
+install -vDm644 completions/zsh/_eza      -t /usr/share/zsh/site-functions/
+</userinput></screen>
+
   </sect2>
 
   <sect2 role="content">
