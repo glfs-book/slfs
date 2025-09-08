@@ -154,7 +154,7 @@ echo "Building $packagedir"
       mkdir build
       cd build
         meson setup --prefix=/usr ..
-    ;;
+    ;;<!--
 
     aquamarine-[0-9]* )
 
@@ -170,7 +170,7 @@ echo "Building $packagedir"
               -D CMAKE_BUILD_TYPE=Release        \
               -D CMAKE_SKIP_INSTALL_RPATH=ON     \
               -G Ninja ..
-    ;;
+    ;;-->
 
     hyprland-qt-support-[0-9]* )
       mkdir build

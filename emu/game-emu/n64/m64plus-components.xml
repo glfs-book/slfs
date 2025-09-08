@@ -42,7 +42,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
-      <xref linkend="glu"/>,
+      &glu;,
       <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
       &opengl;,
       <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, and

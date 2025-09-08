@@ -205,14 +205,17 @@ export -f as_root</userinput></screen>
 
 <!ENTITY gl
          "<ulink url='&glfs-website;/shareddeps/libglvnd.html'>libglvnd</ulink>
-          or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>">
-<!ENTITY opengl "OpenGL (&gl;)">
-<!ENTITY egl    "EGL (&gl;)">
-<!ENTITY gles   "GLESv2 (&gl;)">
-<!ENTITY wayland-gl "OpenGL + EGL + GLESv2 (&gl;)">
+          or <ulink url='&blfs-svn;/x/mesa.html'>Mesa</ulink>">
+<!ENTITY mesa-gl-note "; Mesa's GL is not supported">
+<!ENTITY opengl "OpenGL (&gl;&mesa-gl-note;)">
+<!ENTITY egl    "EGL (&gl;&mesa-gl-note;)">
+<!ENTITY gles   "GLESv2 (&gl;&mesa-gl-note;)">
+<!ENTITY wayland-gl "OpenGL + EGL + GLESv2 (&gl;&mesa-gl-note;)">
 <!ENTITY gbm
          "GBM (<ulink url='&glfs-website;/shareddeps/gbm.html'>GBM from Mesa</ulink>
           or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>)">
+<!ENTITY glu
+         "<ulink url='&glfs-website;/shareddeps/glu.html'>GLU</ulink>">
 
 <!ENTITY % xinclude-entities SYSTEM "xent.ent">
 %xinclude-entities;

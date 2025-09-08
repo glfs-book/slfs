@@ -39,12 +39,12 @@
 
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
-      <listitem>
+<!--      <listitem>
         <para>
           Required patch if using Mesa libGL:
           <ulink url="&patch-root;/obs/obs-studio-&obs-studio-version;-allow_mesa.patch"/>
         </para>
-      </listitem>
+      </listitem> -->
       <listitem>
         <para>
           Recommended download:
@@ -202,6 +202,10 @@
 <screen><userinput>sed '/^#include &lt;cmath&gt;/a #include &lt;cstdint&gt;' \
   -i deps/json11/json11.cpp</userinput></screen>
 
+
+<!-- This is still borked for Mesa's EGL. But it's a burden to maintain this
+     patch. Upstream won't fix it as the burden falls on CMake. -->
+<!--
     <para>
       Apply a patch to allow EGL libraries from
       Mesa if needed:
@@ -210,6 +214,7 @@
 <screen><userinput>if ! pkgconf libglvnd; then
   patch -Np1 -i ../obs-studio-&obs-studio-version;-allow_mesa.patch
 fi</userinput></screen>
+-->
 
     <para>
       If you want to enable browser support, ensure you have downloaded the

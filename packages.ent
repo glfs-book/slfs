@@ -36,7 +36,7 @@
 <!ENTITY yajl-version                        "2.1.0">
 <!-- Graphical Libraries -->
 <!ENTITY fcft-version                        "3.3.2">
-<!ENTITY glu-version                         "9.0.3">
+<!-- <!ENTITY glu-version                         "9.0.3"> -->
 <!ENTITY intel-mediasdk-version              "23.2.2">
 <!ENTITY libdecor-version                    "0.2.3">
 <!ENTITY libliftoff-version                  "0.5.0">

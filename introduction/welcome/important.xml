@@ -48,6 +48,26 @@
   </sect2>
 
   <sect2>
+    <title>OpenGL</title>
+
+    <para>
+      There are two main OpenGL vendors on linux: Mesa and libglvnd. BLFS
+      installs Mesa as the vendor. GLFS installs libglvnd as the vendor. This
+      book mainly sees OpenGL in general and most packages work just fine.
+      However, some are known to require fixes, either simple or too elaborate.
+      They require extra resources to test, which the team behind this book
+      does not have. So Mesa's OpenGL implementations are not supported. As a
+      starting point, you can see <ulink
+      url="&slfs-repo;/releases/tag/12.4">SLFS 12.4</ulink> and see how to go
+      about fixing what is broken. See <ulink
+      url="&glfs-website;/shareddeps/aboutgl.html">GLFS: About OpenGL</ulink>
+      for more information about why support for Mesa's OpenGL implementations
+      have been dropped from both this book and GLFS.
+    </para>
+
+  </sect2>
+
+  <sect2>
     <title>Building software</title>
 
     <para>

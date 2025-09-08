@@ -103,7 +103,7 @@
         <listitem>
           <para>
             <ulink url="&blfs-svn;/x/freeglut.html">Freeglut</ulink>
-            (with <xref linkend="glu"/>): Recommended for X11 demos; will be
+            (with &glu;): Recommended for X11 demos; will be
             automatically downloaded if it is not disabled or installed.
           </para>
         </listitem>

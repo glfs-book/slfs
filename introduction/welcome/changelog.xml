@@ -41,6 +41,15 @@
     -->
 
     <listitem>
+      <para>September 8th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Unsupport Mesa's OpenGL; GLU: Moved to GLFS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>August 31st, 2025</para>
       <itemizedlist>
         <listitem>
