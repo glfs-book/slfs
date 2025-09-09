@@ -15,7 +15,7 @@
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rofi.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rofi-wayland.xml"/>
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rofi-wayland.xml"/> -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wofi.xml"/>
 
 </chapter>

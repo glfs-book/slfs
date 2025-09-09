@@ -5,13 +5,13 @@
   %general-entities;
 
   <!ENTITY rofi-download-http
-    "https://github.com/davatorium/rofi/releases/download/&rofi-version;/rofi-&rofi-full-version;.tar.xz">
+    "https://github.com/davatorium/rofi/releases/download/&rofi-version;/rofi-&rofi-version;.tar.xz">
 ]>
 
-<sect1 id="rofi" xreflabel="Rofi-&rofi-full-version;">
+<sect1 id="rofi" xreflabel="Rofi-&rofi-version;">
   <?dbhtml filename="rofi.html"?>
 
-  <title>Rofi-&rofi-full-version;</title>
+  <title>Rofi-&rofi-version;</title>
 
   <indexterm zone="rofi">
     <primary sortas="a-rofi">Rofi</primary>
@@ -30,9 +30,10 @@
       class="directory">~/.local/share/applications</filename>, and other
       paths, such as
       <filename>/usr/share/applications/firefox.desktop</filename>. This
-      specific edition of Rofi does not support
-      Wayland compositors.
+      version now supports Wayland.
     </para>
+
+    &build-use-internet;
 
     <itemizedlist spacing="compact">
       <listitem>
@@ -58,7 +59,9 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/x/hicolor-icon-theme.html">hicolor-icon-theme</ulink>
+      <ulink url="&blfs-svn;/x/hicolor-icon-theme.html">hicolor-icon-theme</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
