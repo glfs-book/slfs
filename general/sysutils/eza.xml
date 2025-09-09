@@ -68,7 +68,7 @@
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vm755 target/release/eza /usr/bin/</userinput></screen>
+<screen role="root"><userinput>install -vDm755 target/release/eza -t /usr/bin/</userinput></screen>
 
     <para>
       If you want to install man pages, you will need to download
