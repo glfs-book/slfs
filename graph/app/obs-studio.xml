@@ -197,11 +197,11 @@
   <sect2 role="installation">
     <title>Installation of OBS Studio</title>
 
+<!--
     <para>
       Fix building with GCC-15.x.x:
     </para>
 
-<!--
 <screen><userinput>sed '/^#include &lt;cmath&gt;/a #include &lt;cstdint&gt;' \
   -i deps/json11/json11.cpp</userinput></screen>
 -->
