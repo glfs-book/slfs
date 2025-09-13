@@ -37,7 +37,6 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <xref linkend="fuse2"/> or
       <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink> and
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>
     </para>
@@ -54,7 +53,8 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="https://linuxfromscratch.org/blfs/view/12.3/basicnet/libsoup.html">libsoup</ulink>
+      <xref linkend="fuse2"/>,
+      <ulink url="https://linuxfromscratch.org/blfs/view/12.3/basicnet/libsoup.html">libsoup</ulink>,
       and <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>
     </para>
 
