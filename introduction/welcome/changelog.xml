@@ -41,6 +41,24 @@
     -->
 
     <listitem>
+      <para>September 13th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Fuse2: Moved to General Libraries.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - OSTree: Moved to General Utilities.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Flatpak: Moved to General Utilities.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Binary Section: Removed.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 9th, 2025</para>
       <itemizedlist>
         <listitem>

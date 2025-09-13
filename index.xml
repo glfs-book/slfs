@@ -20,7 +20,6 @@ $Date$
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wm/wm.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="emu/emu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gaming/gaming.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="binary/binary.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="svr4/svr4.xml"/>
 
   <!-- Appendices -->

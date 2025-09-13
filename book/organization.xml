@@ -57,14 +57,7 @@
     GLFS.
   </para>
 
-  <bridgehead renderas="sect2">Part VII - Binary Support</bridgehead>
-
-  <para>
-    This part covers packages and setup for optimal binary-only application
-    compatibility on a Linux From Scratch system.
-  </para>
-
-  <bridgehead renderas="sect2">Part VIII - SVR4</bridgehead>
+  <bridgehead renderas="sect2">Part VII - SVR4</bridgehead>
 
   <para>
     This part covers SVR4 tooling and various software.
