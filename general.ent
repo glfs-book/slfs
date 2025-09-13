@@ -212,7 +212,7 @@ export -f as_root</userinput></screen>
 <!ENTITY gles   "GLESv2 (&gl;&mesa-gl-note;)">
 <!ENTITY wayland-gl "OpenGL + EGL + GLESv2 (&gl;&mesa-gl-note;)">
 <!ENTITY gbm
-         "GBM (<ulink url='&glfs-website;/shareddeps/gbm.html'>GBM from Mesa</ulink>
+         "GBM (<ulink url='&glfs-website;/shareddeps/libgbm.html'>libgbm</ulink>
           or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>)">
 <!ENTITY glu
          "<ulink url='&glfs-website;/shareddeps/glu.html'>GLU</ulink>">
