@@ -180,6 +180,7 @@ version, so keep this at that. -->
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-qtutils-version            "0.1.4">
 <!ENTITY hyprland-version                    "0.50.1">
+<!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.24">
 <!-- SXWM -->

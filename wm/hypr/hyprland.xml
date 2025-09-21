@@ -4,7 +4,10 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY hyprland-download-http "https://github.com/hyprwm/Hyprland/releases/download/v&hyprland-version;/source-v&hyprland-version;.tar.gz">
+  <!ENTITY hyprland-download-http
+    "https://github.com/hyprwm/Hyprland/archive/v&hyprland-version;/Hyprland-&hyprland-version;.tar.gz">
+  <!ENTITY udis86-sub
+    "https://github.com/canihavesomecoffee/udis86/archive/&hypr-udis86-version;/udis86-&hypr-udis86-version;.tar.gz">
 ]>
 
 <sect1 id="hyprland" xreflabel="Hyprland-&hyprland-version;">
@@ -31,6 +34,16 @@
       <listitem>
         <para>
           Download (HTTP): <ulink url="&hyprland-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required submodule:
+          <ulink url="&udis86-sub;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -88,36 +101,30 @@
     <title>Installation of Hyprland</title>
 
     <para>
-      Install Hyprland by running the following
-      commands:
+      Extract the udis86 submodule in place:
     </para>
 
-    <screen><userinput>make release PREFIX=/usr</userinput></screen>
+<screen><userinput>tar -xf ../udis86-&hypr-udis86-version;.tar.gz &amp;&amp;
+mv -T udis86-&hypr-udis86-version; subprojects/udis86</userinput></screen>
 
-<!--
-<screen><userinput>rm -fv scripts/generateVersion.sh &amp;&amp;
-make release PREFIX=/usr</userinput></screen>
--->
+    <para>
+      Install Hyprland by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr   \
+      -DCMAKE_BUILD_TYPE=Release    \
+      -DCMAKE_SKIP_INSTALL_RPATH=ON \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
 
     <para>
       Now, as the &root; user:
     </para>
 
-    <screen role="root"><userinput>make install</userinput></screen>
-
-<!--
-<screen role="root"><userinput>make install &amp;&amp;
-rm -fv /usr/include/hyprland/src/version.h.in</userinput></screen>
--->
-
-<!-- Not necessary since 0.49.0
-
-    <para revision="sysv">
-      Finally, remove an a unnecessary Systemd file as the &root; user:
-    </para>
-
-<screen role="root" revision="sysv"><userinput>rm -rvf /usr/lib/systemd</userinput></screen>
--->
+<screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
 
