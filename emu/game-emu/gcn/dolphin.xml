@@ -93,10 +93,12 @@ arsenm/sanitizers-cmake/archive/&dolphin-sanitize-external;.tar.gz
 libusb/hidapi/archive/&dolphin-hidapi-external;.tar.gz
 epezent/implot/archive/&dolphin-implot-external;.tar.gz
 mgba-emu/mgba/archive/&dolphin-mgba-external;.tar.gz
+miniupnp/miniupnp/archive/&dolphin-miniupnp-external;.tar.gz
 zlib-ng/minizip-ng/archive/&dolphin-minizip-ng-external;.tar.gz
 RetroAchievements/rcheevos/archive/&dolphin-rcheevos-external;.tar.gz
 KhronosGroup/SPIRV-Cross/archive/&dolphin-spirv-cross-external;.tar.gz
 syoyo/tinygltf/archive/&dolphin-tinygltf-external;.tar.gz
+e-dant/watcher/archive/&dolphin-watcher-external;.tar.gz
 Cyan4973/xxHash/archive/&dolphin-xxhash-external;.tar.gz
 zlib-ng/zlib-ng/archive/&dolphin-zlib-ng-external;.tar.gz
 
@@ -148,10 +150,12 @@ mv -T sanitizers-cmake-* \
 mv -T hidapi-* dolphin-&dolphin-version;/Externals/hidapi/hidapi-src &amp;&amp;
 mv -T implot-* dolphin-&dolphin-version;/Externals/implot/implot &amp;&amp;
 mv -T mgba-* dolphin-&dolphin-version;/Externals/mGBA/mgba &amp;&amp;
+mv -T miniupnp-* dolphin-&dolphin-version;/Externals/miniupnpc/miniupnp &amp;&amp;
 mv -T minizip-ng-* dolphin-&dolphin-version;/Externals/minizip-ng/minizip-ng &amp;&amp;
 mv -T rcheevos-* dolphin-&dolphin-version;/Externals/rcheevos/rcheevos &amp;&amp;
 mv -T SPIRV-Cross-* dolphin-&dolphin-version;/Externals/spirv_cross/SPIRV-Cross &amp;&amp;
 mv -T tinygltf-* dolphin-&dolphin-version;/Externals/tinygltf/tinygltf &amp;&amp;
+mv -T watcher-* dolphin-&dolphin-version;/Externals/watcher/watcher &amp;&amp;
 mv -T xxHash-* dolphin-&dolphin-version;/Externals/xxhash/xxHash &amp;&amp;
 mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput></screen>
 

@@ -41,6 +41,64 @@
     -->
 
     <listitem>
+      <para>September 21st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - nvchecker: 2.18 -&gt; 2.19.
+          Fixes <ulink url="&slfs-issues;/308">#308</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprgraphics: 0.1.5 -&gt; 0.1.6.
+          Fixes <ulink url="&slfs-issues;/307">#307</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Dolphin: 2506a -&gt; 2509.
+          Fixes <ulink url="&slfs-issues;/306">#306</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - eza: 0.23.2 -&gt; 0.23.3.
+          Fixes <ulink url="&slfs-issues;/305">#305</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - cava: 0.10.4 -&gt; 0.10.6.
+          Fixes <ulink url="&slfs-issues;/304">#304</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - BTOP++: 1.4.4 -&gt; 1.4.5.
+          Fixes <ulink url="&slfs-issues;/303">#303</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - re2: 2025-08-05 -&gt; 2025-08-12.
+          Fixes <ulink url="&slfs-issues;/302">#302</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - OpenTTD: 15.0-beta2 -&gt; 15.0-beta3.
+          Fixes <ulink url="&slfs-issues;/301">#301</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprland-qtutils: 0.1.4 -&gt; 0.1.5.
+          Fixes <ulink url="&slfs-issues;/300">#300</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.50.1 -&gt; 0.51.0.
+          Fixes <ulink url="&slfs-issues;/299">#299</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 5.7.0 -&gt; 5.7.1.
+          Fixes <ulink url="&slfs-issues;/298">#298</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - foot: 1.23.1 -&gt; 1.24.0.
+          Fixes <ulink url="&slfs-issues;/297">#297</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - CUDA: 13.0.0 -&gt; 13.0.1.
+          Fixes <ulink url="&slfs-issues;/296">#296</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 13th, 2025</para>
       <itemizedlist>
         <listitem>

@@ -92,6 +92,11 @@ ninja</userinput></screen>
 <screen role="root"><userinput>ninja install &amp;&amp;
 mv -v /usr/share/doc/openttd{,-&openttd-version;}</userinput></screen>
 
+    <note><para>
+      OpenTTD will install into <filename
+      class="directory">/usr/games</filename>.
+    </para></note>
+
   </sect2>
 
   <sect2 role="content">
@@ -110,7 +115,8 @@ mv -v /usr/share/doc/openttd{,-&openttd-version;}</userinput></screen>
           None
         </seg>
         <seg>
-          /usr/share/doc/openttd-&openttd-version; and
+          /usr/games,
+          /usr/share/doc/openttd-&openttd-version;, and
           /usr/share/openttd
         </seg>
       </seglistitem>
