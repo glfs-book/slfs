@@ -107,8 +107,7 @@ ninja</userinput></screen>
         <term><command>grim</command></term>
         <listitem>
           <para>
-            creates a wallpaper from an image on
-            Wayland
+            creates a screenshot from the screen on Wayland
           </para>
           <indexterm zone="grim grim-bin">
             <primary sortas="b-grim-bin">grim</primary>
