@@ -145,10 +145,12 @@ version, so keep this at that. -->
 <!ENTITY rofi-version                        "2.0.0">
 <!ENTITY wofi-version                        "1.5.1">
 <!-- App -->
+<!ENTITY grim-version                        "1.5.0">
 <!ENTITY libvpl-tools-version                "1.4.0">
 <!ENTITY mesa-demos-version                  "9.0.0">
 <!ENTITY obs-studio-version                  "31.1.2">
 <!ENTITY obs-cef-version                     "6533">
+<!ENTITY slurp-version                       "1.5.0">
 <!ENTITY wbg-version                         "1.3.0">
 <!ENTITY xeyes-version                       "1.3.1">
 <!-- Fcitx -->

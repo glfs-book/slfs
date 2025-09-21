@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY grim-download-http
+    "https://gitlab.freedesktop.org/emersion/grim/-/archive/v&grim-version;/grim-v&grim-version;.tar.gz">
+]>
+
+<sect1 id="grim" xreflabel="grim-&grim-version;">
+  <?dbhtml filename="grim.html"?>
+
+  <title>grim-&grim-version;</title>
+
+  <indexterm zone="grim">
+    <primary sortas="a-grim">grim</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to grim</title>
+
+    <para>
+      The grim package provides a tool for taking screenshots in a Wayland
+      environment. A common setup is combining this package with <xref
+      linkend="slurp"/> to take a screenshot of a specific region on the fly.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&grim-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">grim Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <xref linkend="scdoc"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of grim</title>
+
+    <para>
+      Install grim by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          grim
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="grim-bin">
+        <term><command>grim</command></term>
+        <listitem>
+          <para>
+            creates a wallpaper from an image on
+            Wayland
+          </para>
+          <indexterm zone="grim grim-bin">
+            <primary sortas="b-grim-bin">grim</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

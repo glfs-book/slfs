@@ -44,6 +44,10 @@
       <para>September 21st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - grim and slurp: Added.
+          Fixes <ulink url="&slfs-issues;/285">#285</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - nvchecker: 2.18 -&gt; 2.19.
           Fixes <ulink url="&slfs-issues;/308">#308</ulink>.</para>
         </listitem>

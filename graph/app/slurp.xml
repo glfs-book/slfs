@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY slurp-download-http
+    "https://github.com/emersion/slurp/archive/v&slurp-version;/slurp-&slurp-version;.tar.gz">
+]>
+
+<sect1 id="slurp" xreflabel="slurp-&slurp-version;">
+  <?dbhtml filename="slurp.html"?>
+
+  <title>slurp-&slurp-version;</title>
+
+  <indexterm zone="slurp">
+    <primary sortas="a-slurp">slurp</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to slurp</title>
+
+    <para>
+      The slurp package selects a region of the screen in a Wayland
+      environment. When used with <xref linkend="grim"/>, it is able to select
+      a specific region to be captured in a screenshot, like Microsoft's
+      Snipping Tool on Windows.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&slurp-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">slurp Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <xref linkend="scdoc"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of slurp</title>
+
+    <para>
+      Install slurp by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          slurp
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="slurp-bin">
+        <term><command>slurp</command></term>
+        <listitem>
+          <para>
+            selects a region of a Wayland screen
+          </para>
+          <indexterm zone="slurp slurp-bin">
+            <primary sortas="b-slurp-bin">slurp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
