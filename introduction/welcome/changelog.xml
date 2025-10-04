@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>October 4th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Toxikuu] - yt-dlp: 2025.09.05 -&gt; 2025.09.26.
+          Fixes <ulink url="&slfs-issues;/315">#315</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 21st, 2025</para>
       <itemizedlist>
         <listitem>
