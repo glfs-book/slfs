@@ -41,6 +41,16 @@
     -->
 
     <listitem>
+      <para>October 4th, 2025</para>
+      <itemizedlist>
+        <listitem>
+            <para>[Toxikuu] - eza: 0.23.3 -&gt; 0.23.4.
+            Fixes <ulink url="&slfs-issues;/318">#318</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 21st, 2025</para>
       <itemizedlist>
         <listitem>

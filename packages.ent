@@ -85,7 +85,7 @@ version, so keep this at that. -->
 <!ENTITY yt-dlp-version                      "2025.09.05">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.13.0">
-<!ENTITY eza-version                         "0.23.3">
+<!ENTITY eza-version                         "0.23.4">
 <!ENTITY iputils-version                     "20250605">
 <!ENTITY libtree-version                     "3.1.1">
 <!ENTITY tealdeer-version                    "1.7.2">
