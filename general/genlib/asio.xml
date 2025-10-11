@@ -11,7 +11,6 @@
 <sect1 id="asio" xreflabel="asio-&asio-version;">
   <?dbhtml filename="asio.html"?>
 
-
   <title>asio-&asio-version;</title>
 
   <indexterm zone="asio">

@@ -1,15 +1,15 @@
 <!-- GENERAL -->
 <!-- General Libraries -->
 <!ENTITY anthy-version                       "1:0.4-3">
-<!ENTITY asio-version                        "1-34-2">
+<!ENTITY asio-version                        "1-36-0">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY glaze-version                       "5.7.1">
+<!ENTITY glaze-version                       "5.7.2">
 <!ENTITY iniparser-version                   "4.2.6">
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libime-version                      "1.1.11">
 <!ENTITY libime-kenlm                        "bcd4af619a2fa45f5876d8855f7876cc09f663af">
-<!ENTITY libjuice-version                    "1.6.1">
+<!ENTITY libjuice-version                    "1.6.2">
 <!ENTITY libsrtp-version                     "2.7.0">
 <!ENTITY libdatachannel-version              "0.23.2">
 <!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
@@ -93,7 +93,7 @@ version, so keep this at that. -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20241231">
-<!ENTITY cuda-version                        "13.0.1">
+<!ENTITY cuda-version                        "13.0.2">
 <!ENTITY cuda-nvidia-version                 "580.82.07">
 <!ENTITY gcc-version                         "15.2.0">
 <!ENTITY gnat-binary-version                 "15.1.0-2">
@@ -107,8 +107,8 @@ version, so keep this at that. -->
 <!ENTITY python3-site                        "/usr/lib/python&python3-majorver;/site-packages">
 <!-- Python Dependencies -->
 <!ENTITY structlog-version                   "25.4.0">
-<!ENTITY platformdirs-version                "4.4.0">
-<!ENTITY pycurl-version                      "7.45.6">
+<!ENTITY platformdirs-version                "4.5.0">
+<!ENTITY pycurl-version                      "7.45.7">
 <!ENTITY toml-version                        "0.10.2">
 <!ENTITY tornado-version                     "6.5.2">
 <!-- Python Modules -->
@@ -165,23 +165,23 @@ version, so keep this at that. -->
 <!ENTITY fcitx5-configtool-version           "5.1.10">
 <!-- MM-LIB -->
 <!ENTITY rubberband-version                  "4.0.0">
-<!ENTITY sdl3-version                        "3.2.22">
+<!ENTITY sdl3-version                        "3.2.24">
 <!ENTITY sdl2-version                        "2.32.56">
 
 <!-- WM -->
 <!-- CDE -->
 <!ENTITY cde-de-version                      "2.5.2">
 <!-- Hypr -->
-<!ENTITY hyprland-protocols-version          "0.6.4">
-<!ENTITY hyprutils-version                   "0.8.4">
+<!ENTITY hyprland-protocols-version          "0.7.0">
+<!ENTITY hyprutils-version                   "0.10.0">
 <!ENTITY hyprlang-version                    "0.6.4">
 <!ENTITY hyprcursor-version                  "0.1.13">
 <!ENTITY hyprwayland-scanner-version         "0.4.5">
-<!ENTITY aquamarine-version                  "0.9.4">
-<!ENTITY hyprgraphics-version                "0.1.6">
+<!ENTITY aquamarine-version                  "0.9.5">
+<!ENTITY hyprgraphics-version                "0.2.0">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-qtutils-version            "0.1.5">
-<!ENTITY hyprland-version                    "0.51.0">
+<!ENTITY hyprland-version                    "0.51.1">
 <!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.24">

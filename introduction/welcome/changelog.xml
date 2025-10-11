@@ -12,7 +12,6 @@
 <sect1 id="changelog" xreflabel="Change Log">
   <?dbhtml filename="changelog.html"?>
 
-
   <title>Change Log</title>
 
   <!-- <para>Please note that the Change Log only lists which editor was
@@ -41,6 +40,60 @@
     -->
 
     <listitem>
+      <para>October 10th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - asio: 1.34.2 -&gt; 1.36.0.
+          Fixes <ulink url="&slfs-issues;/310">#310</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 5.7.1 -&gt; 5.7.2.
+          Fixes <ulink url="&slfs-issues;/311">#311</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.51.0 -&gt; 0.51.1.
+          Fixes <ulink url="&slfs-issues;/312">#312</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libjuice: 1.6.1 -&gt; 1.6.2.
+          Fixes <ulink url="&slfs-issues;/313">#313</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - pycurl: 7.45.6 -&gt; 7.45.7.
+          Fixes <ulink url="&slfs-issues;/314">#314</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - CUDA: 13.0.1 -&gt; 13.0.2.
+          Fixes <ulink url="&slfs-issues;/323">#323</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprgraphics: 0.1.6 -&gt; 0.2.0.
+          Fixes <ulink url="&slfs-issues;/325">#325</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprland-protocols: 0.6.4 -&gt; 0.7.0.
+          Fixes <ulink url="&slfs-issues;/326">#326</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.8.4 -&gt; 0.10.0.
+          Fixes <ulink url="&slfs-issues;/327">#327</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - platformdirs: 4.4.0 -&gt; 4.5.0.
+          Fixes <ulink url="&slfs-issues;/328">#328</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - SDL3: 3.2.22 -&gt; 3.2.24.
+          Fixes <ulink url="&slfs-issues;/329">#329</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - aquamarine: 0.9.4 -&gt; 0.9.5.
+          Fixes <ulink url="&slfs-issues;/332">#332</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>October 4th, 2025</para>
       <itemizedlist>
         <listitem>
@@ -48,8 +101,8 @@
           Fixes <ulink url="&slfs-issues;/315">#315</ulink>.</para>
         </listitem>
         <listitem>
-            <para>[Toxikuu] - eza: 0.23.3 -&gt; 0.23.4.
-            Fixes <ulink url="&slfs-issues;/318">#318</ulink>.</para>
+          <para>[Toxikuu] - eza: 0.23.3 -&gt; 0.23.4.
+          Fixes <ulink url="&slfs-issues;/318">#318</ulink>.</para>
         </listitem>
       </itemizedlist>
     </listitem>
