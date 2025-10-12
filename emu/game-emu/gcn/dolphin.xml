@@ -43,8 +43,7 @@
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>,
-      &opengl;,
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, and
+      &opengl;, and
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
@@ -65,6 +64,7 @@
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
+      <xref linkend="sdl3"/>,
       <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
     </para>
