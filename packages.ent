@@ -93,8 +93,13 @@ version, so keep this at that. -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20241231">
+
 <!ENTITY cuda-version                        "13.0.2">
-<!ENTITY cuda-nvidia-version                 "580.82.07">
+<!-- ALWAYS check
+     https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=RHEL&target_version=10&target_type=runfile_local
+     for the cuda-nvidia-version AND update the ENTITY. -->
+<!ENTITY cuda-nvidia-version                 "580.95.05">
+
 <!ENTITY gcc-version                         "15.2.0">
 <!ENTITY gnat-binary-version                 "15.1.0-2">
 <!-- START PYTHON -->
