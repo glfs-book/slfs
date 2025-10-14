@@ -18,6 +18,5 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="launch/launch.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="app/app.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcitx/fcitx.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mm-lib/mm-lib.xml"/>
 
 </part>

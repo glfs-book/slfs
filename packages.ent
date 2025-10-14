@@ -134,6 +134,10 @@ version, so keep this at that. -->
 <!ENTITY openjdk-build                       "6">
 <!-- Shells -->
 <!ENTITY ksh-version                         "1.0.10">
+<!-- MM-LIB -->
+<!ENTITY rubberband-version                  "4.0.0">
+<!ENTITY sdl3-version                        "3.2.24">
+<!ENTITY sdl2-version                        "2.32.56">
 
 <!-- GRAPH -->
 <!-- Graphical Toolkits -->
@@ -168,10 +172,6 @@ version, so keep this at that. -->
 <!ENTITY fcitx5-anthy-version                "5.1.7">
 <!ENTITY fcitx5-m17n-version                 "5.1.4">
 <!ENTITY fcitx5-configtool-version           "5.1.10">
-<!-- MM-LIB -->
-<!ENTITY rubberband-version                  "4.0.0">
-<!ENTITY sdl3-version                        "3.2.24">
-<!ENTITY sdl2-version                        "2.32.56">
 
 <!-- WM -->
 <!-- CDE -->
