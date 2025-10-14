@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY ladspa-sdk-download-http
+    "http://www.ladspa.org/download/ladspa_sdk_&ladspa-sdk-version;.tgz">
+]>
+
+<sect1 id="ladspa-sdk" xreflabel="LADSPA-SDK-&ladspa-sdk-version;">
+  <?dbhtml filename="ladspa-sdk.html"?>
+
+  <title>LADSPA-SDK-&ladspa-sdk-version;</title>
+
+  <indexterm zone="ladspa-sdk">
+    <primary sortas="a-ladspa-sdk">LADSPA-SDK</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to LADSPA-SDK</title>
+
+    <para>
+      The Linux Audio Developer's Simple Plugin API (LADSPA) standard is used
+      for piping multiple effects and audio processors into various tools and
+      libraries. The LADSPA SDK contains several plugins and the interface
+      header file which can be used by several packages. <ulink
+      url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink> and <ulink
+      url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> are notable examples.
+      To have support in those packages, you must install this package first
+      to not only provide the API, but the plugins as well.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&ladspa-sdk-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <note><para>
+      The site that hosts the download has been known to go offline. In such a
+      case, go to the <ulink
+      url="https://web.archive.org/">WayBack Machine</ulink> and paste the
+      download link into the bar. From there, find a snapshot and it should
+      give a suitable link to download from.
+    </para></note>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/ladspa/ladspa_sdk_&ladspa-sdk-version;-arch-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">LADSPA-SDK Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/libsndfile.html">libsndfile</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of LADSPA-SDK</title>
+
+    <para>
+      Apply a patch that fixes a memory leak, a linkage error, and Makefile
+      flags:
+    </para>
+
+<screen
+  remap="pre"><userinput>patch -Np1 -i ../ladspa_sdk_&ladspa-sdk-version;-arch-1.patch</userinput></screen>
+
+    <para>
+      Install LADSPA-SDK by running the following
+      commands:
+    </para>
+
+<screen><userinput>make -C src targets</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make -C src install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Plugins</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          analyseplugin,
+          applyplugin, and
+          listplugins
+        </seg>
+        <seg>
+          amp,
+          delay,
+          filter,
+          noise, and
+          sine (in /usr/lib/ladspa)
+        </seg>
+        <seg>
+          /usr/lib/ladspa
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+       <varlistentry id="analyseplugin">
+        <term><command>analyseplugin</command></term>
+        <listitem>
+          <para>
+            analyzes a given LADSPA plugin
+          </para>
+          <indexterm zone="ladspa-sdk analyseplugin">
+            <primary sortas="b-analyseplugin">analyseplugin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="applyplugin">
+        <term><command>applyplugin</command></term>
+        <listitem>
+          <para>
+            passes over an audio file with a given plugin and outputs the new
+            audio file
+          </para>
+          <indexterm zone="ladspa-sdk applyplugin">
+            <primary sortas="b-applyplugin">applyplugin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="listplugins">
+        <term><command>listplugins</command></term>
+        <listitem>
+          <para>
+            gives a list of available LADSPA plugins
+          </para>
+          <indexterm zone="ladspa-sdk listplugins">
+            <primary sortas="b-listplugins">listplugins</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

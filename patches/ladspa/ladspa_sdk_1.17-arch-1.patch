@@ -1,0 +1,51 @@
+From: Arch Linux (https://gitlab.archlinux.org/archlinux/packaging/packages/ladspa/-/tree/1.17-6)
+Has: distribution-flags, fix-memleak-in-plugin-scanning, plugin-underlinking
+
+diff -ruN a/src/Makefile b/src/Makefile
+--- a/src/Makefile	2021-09-10 10:44:43.000000000 +0200
++++ b/src/Makefile	2025-08-25 10:37:35.112693475 +0200
+@@ -15,10 +15,10 @@
+ 
+ INCLUDES	=	-I.
+ LIBRARIES	=	-ldl -lm -lsndfile
+-CFLAGS		=	$(INCLUDES) -Wall -Werror -O2 -fPIC 		\
+-			-DDEFAULT_LADSPA_PATH=$(INSTALL_PLUGINS_DIR)
++CFLAGS		+=	$(INCLUDES) -Wall -Werror -O2 -fPIC 		\
++			-DDEFAULT_LADSPA_PATH=$(INSTALL_PLUGINS_DIR) ${LDFLAGS}
+ BINFLAGS	=	-fPIE -pie
+-CXXFLAGS	=	$(CFLAGS)
++CXXFLAGS	+=	$(CFLAGS)
+ PLUGINS		=	../plugins/amp.so				\
+ 			../plugins/delay.so				\
+ 			../plugins/filter.so				\
+diff -ruN a/src/search.c b/src/search.c
+--- a/src/search.c	2021-09-10 10:44:43.000000000 +0200
++++ b/src/search.c	2025-08-25 10:25:18.017636567 +0200
+@@ -83,6 +83,8 @@
+ 	dlclose(pvPluginHandle);
+ 	free(pcFilename);
+       }
++    } else {
++      free(pcFilename);
+     }
+   }
+ }
+diff -ruN a/src/Makefile b/src/Makefile
+--- a/src/Makefile	2021-09-10 10:44:43.000000000 +0200
++++ b/src/Makefile	2023-09-02 18:54:57.552762072 +0200
+@@ -41,6 +41,7 @@
+ 		plugins/$*.o						\
+ 		-shared							\
+ 		$(CFLAGS)						\
++		-lm								\
+ 		-fvisibility=hidden					\
+ 		-fvisibility-inlines-hidden				\
+ 		-s							\
+@@ -52,6 +53,7 @@
+ 		plugins/$*.o						\
+ 		-shared							\
+ 		$(CXXFLAGS)						\
++		-lm								\
+ 		-fvisibility=hidden					\
+ 		-fvisibility-inlines-hidden				\
+ 		-s							\
