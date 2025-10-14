@@ -136,6 +136,7 @@ version, so keep this at that. -->
 <!ENTITY ksh-version                         "1.0.10">
 <!-- MM-LIB -->
 <!ENTITY ladspa-sdk-version                  "1.17">
+<!ENTITY noise-suppression-version           "1.10">
 <!ENTITY rubberband-version                  "4.0.0">
 <!ENTITY sdl3-version                        "3.2.24">
 <!ENTITY sdl2-version                        "2.32.56">

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY ns-repo "https://github.com/werman/noise-suppression-for-voice">
+  <!ENTITY ns-root
+    "&ns-repo;/archive/v&noise-suppression-version;">
+  <!ENTITY noise-suppression-download-http
+    "&ns-root;/noise-suppression-for-voice-&noise-suppression-version;.tar.gz">
+]>
+
+<sect1 id="noise-suppression" xreflabel="Noise-Suppression-&noise-suppression-version;">
+  <?dbhtml filename="noise-suppression.html"?>
+
+  <title>Noise-Suppression-&noise-suppression-version;</title>
+
+  <indexterm zone="noise-suppression">
+    <primary sortas="a-noise-suppression">Noise-Suppression</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Noise-Suppression</title>
+
+    <para>
+      Noise Suppression for Voice, based on RnNoise, filters out noise like
+      fans and the like, for audio that has voice recordings. This is a useful
+      tool used for editing audio. <ulink
+      url="&blfs-svn;/kde/kdenlive.html">Kdenlive</ulink> makes use of this
+      plugin for filtering audio. Install this first before installing Kdenlive
+      to enable support for audio filtering.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&noise-suppression-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Noise-Suppression Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>, and
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/webkitgtk.html">WebKitGTK</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Noise-Suppression</title>
+
+    <para>
+      Install Noise-Suppression by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed LADSPA Plugins</segtitle>
+      <segtitle>Installed LV2 Plugins</segtitle>
+      <segtitle>Installed VST Plugins</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          librnnoise_ladspa
+        </seg>
+        <seg>
+          librnnoise_mono and librnnoise_stereo
+        </seg>
+        <seg>
+          rnnoise
+        </seg>
+        <seg>
+          /usr/lib/ladspa,
+          /usr/lib/lv2,
+          /usr/lib/lxvst, and
+          /usr/lib/vst3
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>

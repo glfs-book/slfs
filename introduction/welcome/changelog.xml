@@ -43,6 +43,9 @@
       <para>October 14th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Noise-Suppression: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - LADSPA-SDK: Added.</para>
         </listitem>
         <listitem>

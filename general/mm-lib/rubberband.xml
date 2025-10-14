@@ -63,7 +63,7 @@
       <ulink url="&blfs-svn;/general/boost.html">boost</ulink>,
       <ulink url="&blfs-svn;/general/fftw.html">fftw</ulink>,
       <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/ladspa/">ladspa</ulink>,
+      <xref linkend="ladspa-sdk"/>,
       <ulink url="&arch-pkgs;/extra/x86_64/lv2/">lv2</ulink>,
       <ulink url="&blfs-svn;/multimedia/libsamplerate.html">libsamplerate</ulink>,
       <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
