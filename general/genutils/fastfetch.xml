@@ -43,6 +43,7 @@
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
+      <ulink url="&blfs-svn;/x/vulkan-headers.html">Vulkan-Headers</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
@@ -72,9 +73,13 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
-      -D CMAKE_BUILD_TYPE=Release  \
-      -D BUILD_FLASHFETCH=OFF      \
+cmake -D CMAKE_INSTALL_PREFIX=/usr    \
+      -D CMAKE_BUILD_TYPE=Release     \
+      -D BUILD_FLASHFETCH=OFF         \
+      -D PACKAGES_DISABLE_CHOCO=ON    \
+      -D PACKAGES_DISABLE_MACPORTS=ON \
+      -D PACKAGES_DISABLE_SCOOP=ON    \
+      -D PACKAGES_DISABLE_WINGET=ON   \
       ..  &amp;&amp;
 
 make</userinput></screen>
@@ -101,6 +106,14 @@ make</userinput></screen>
       <parameter>-D BUILD_FLASHFETCH=OFF</parameter>: This switch disables
       building the historical flashfetch binary. If you need it for any reason,
       set this switch to <parameter>ON</parameter>.
+    </para>
+
+    <para>
+      <parameter>-D PACKAGES_DISABLE_*=ON</parameter>: This switch disables
+      detection for various package managers. While there are more available
+      package managers, only the ones that don't support Linux have been
+      disabled. If you'd like to support these package managers, set their
+      switches to <parameter>OFF</parameter>.
     </para>
 
   </sect2>
