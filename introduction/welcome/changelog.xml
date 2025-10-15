@@ -43,6 +43,10 @@
       <para>October 14th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - tealdeer: 1.7.2 -&gt; 1.8.0. Fixes
+          <ulink url="&slfs-issues;/331">#331</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Noise-Suppression: Added.</para>
         </listitem>
         <listitem>
