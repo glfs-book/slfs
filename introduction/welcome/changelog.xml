@@ -47,6 +47,17 @@
           <ulink url="&slfs-issues;/278">#322</ulink>.</para>
         </listitem>
         <listitem>
+          <para>[renodr] - strace: 6.16 -&gt; 6.17. Fixes
+          <ulink url="&slfs-issues;/330">#330</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - tealdeer: 1.7.2 -&gt; 1.8.0. Fixes
+          <ulink url="&slfs-issues;/331">#331</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Noise-Suppression: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - LADSPA-SDK: Added.</para>
         </listitem>
         <listitem>

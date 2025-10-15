@@ -21,7 +21,9 @@
     <title>Introduction to strace</title>
 
     <para>
-      The strace package provides a diagnostic, debugging, and instructional userspace utility.
+      The strace package provides a diagnostic, debugging, and instructional
+      userspace utility that traces all of the system calls a program makes
+      during it's execution.
     </para>
 
     <itemizedlist spacing="compact">
@@ -65,11 +67,15 @@ make</userinput></screen>
     <title>Command Explanations</title>
 
     <para>
-      <parameter>--enable-mpers=no</parameter>: By default, strace is built to support both the m32 and mx32 personalities. This parameter disables that behavior.
+      <parameter>--enable-mpers=no</parameter>: By default, strace is built
+      to support both the m32 and mx32 personalities. This parameter disables
+      that behavior. Remove this parameter if you are debugging programs that
+      use m32 or mx32 personalities.
     </para>
 
     <para>
-      <parameter>--with-libunwind</parameter>: This parameter builds strace with libunwind support.
+      <option>--with-libunwind</option>: This option builds strace
+      with libunwind support. This is useful for unwinding stack traces.
     </para>
 
     <note><para>
