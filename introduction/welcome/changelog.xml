@@ -43,6 +43,10 @@
       <para>October 14th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[fastfetch] - fastfetch: 2.51.1 -&gt; 2.52.0. Fixes
+          <ulink url="&slfs-issues;/278">#322</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - strace: 6.16 -&gt; 6.17. Fixes
           <ulink url="&slfs-issues;/330">#330</ulink>.</para>
         </listitem>
