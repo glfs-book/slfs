@@ -119,7 +119,7 @@ version, so keep this at that. -->
 <!-- Python Modules -->
 <!ENTITY nvchecker-version                   "2.19">
 <!-- END PYTHON -->
-<!ENTITY strace-version                      "6.16">
+<!ENTITY strace-version                      "6.17">
 <!ENTITY socat-version                       "1.8.0.3">
 <!ENTITY unlambda-version                    "2.0.0">
 <!ENTITY xtrace-minor-version                "fd1e5a">
