@@ -21,9 +21,9 @@
     <title>Introduction to yt-dlp</title>
 
     <para>
-      The yt-dlp package provides a feature-rich command-line audio/video
-      downloader, supporting thousands of websites, including YouTube. It can
-      convert downloads into other formats using FFmpeg.
+      The yt-dlp package provides a CLI utility to download audio and video
+      files from thousands of websites, including YouTube. It can convert
+      downloads into other formats using FFmpeg.
     </para>
 
     <itemizedlist spacing="compact">
@@ -103,7 +103,7 @@
         <term><command>yt-dlp</command></term>
         <listitem>
          <para>
-           is the feature-rich command-line audio and video downloader
+           downloads and converts audio and video files
          </para>
           <indexterm zone="yt-dlp yt-dlp-bin">
             <primary sortas="b-yt-dlp-bin">yt-dlp</primary>
