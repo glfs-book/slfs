@@ -46,6 +46,10 @@
           <para>[Toxikuu] - yt-dlp: 2025.09.26 -&gt; 2025.10.14. Fixes
           <ulink url="&slfs-issues;/336">#336</ulink>.</para>
         </listitem>
+        <listitem>
+          <para>[Toxikuu] - fastfetch: 2.52.0 -&gt; 2.53.0. Fixes
+          <ulink url="&slfs-issues;/338">#338</ulink>.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
