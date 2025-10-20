@@ -150,7 +150,7 @@ version, so keep this at that. -->
 <!ENTITY xcb-util-xrm-version                "1.3">
 <!ENTITY xcb-imdkit-version                  "1.0.9">
 <!-- Terminal Emulators -->
-<!ENTITY alacritty-version                   "0.15.1">
+<!ENTITY alacritty-version                   "0.16.1">
 <!ENTITY foot-version                        "1.24.0">
 <!-- Launchers -->
 <!ENTITY rofi-version                        "2.0.0">
