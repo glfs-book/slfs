@@ -43,6 +43,10 @@
       <para>October 20th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[Toxikuu] - glaze: 5.7.2 -&gt; 6.0.0. Fixes
+          <ulink url="&slfs-issues;/335">#335</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[Toxikuu] - Alacritty: 0.15.1 -&gt; 0.16.1. Fixes
           <ulink url="&slfs-issues;/337">#337</ulink>.</para>
         </listitem>
