@@ -4,15 +4,15 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY ojdk-tarball              "jdk-&openjdk-version;+&openjdk-build;.tar.gz">
+  <!ENTITY ojdk-tarball              "jdk-&openjdk-version;&openjdk-suffix;.tar.gz">
   <!ENTITY ojdk-repo                 "https://github.com/openjdk/jdk&openjdk-major-version;u">
   <!ENTITY ojdk-download             "&ojdk-repo;/archive/&ojdk-tarball;">
 ]>
 
-<sect1 id="openjdk" xreflabel="OpenJDK-&openjdk-version;+&openjdk-build;">
+<sect1 id="openjdk" xreflabel="OpenJDK-&openjdk-version;&openjdk-suffix;">
   <?dbhtml filename="openjdk.html" ?>
 
-  <title>OpenJDK-&openjdk-version;+&openjdk-build;</title>
+  <title>OpenJDK-&openjdk-version;&openjdk-suffix;</title>
 
   <indexterm zone="openjdk">
     <primary sortas="a-OpenJDK">OpenJDK</primary>
@@ -161,9 +161,9 @@ make images</userinput></screen>
       &root; user:
     </para>
 
-<screen role="root"><userinput>install -vdm755 /opt/jdk-&openjdk-version;+&openjdk-build;             &amp;&amp;
-cp -Rv build/*/images/jdk/* /opt/jdk-&openjdk-version;+&openjdk-build; &amp;&amp;
-chown -R root:root /opt/jdk-&openjdk-version;+&openjdk-build;          &amp;&amp;
+<screen role="root"><userinput>install -vdm755 /opt/jdk-&openjdk-version;&openjdk-suffix; &amp;&amp;
+cp -Rv build/*/images/jdk/* /opt/jdk-&openjdk-version;&openjdk-suffix; &amp;&amp;
+chown -R root:root /opt/jdk-&openjdk-version;&openjdk-suffix; &amp;&amp;
 for s in 16 24 32 48; do
   install -vDm644 src/java.desktop/unix/classes/sun/awt/X11/java-icon${s}.png \
                   /usr/share/icons/hicolor/${s}x${s}/apps/java.png
@@ -187,7 +187,7 @@ done</userinput></screen>
       the info:
     </para>
 
-<screen><userinput>find /opt/jdk-&openjdk-version;+&openjdk-build; -name *.debuginfo -delete</userinput></screen>
+<screen><userinput>find /opt/jdk-&openjdk-version;&openjdk-suffix; -name *.debuginfo -delete</userinput></screen>
 
     <para>
       Restore the <envar>MAKEFLAGS</envar> variable:
@@ -204,7 +204,7 @@ unset  MAKEFLAGS_HOLD</userinput></screen>
       the following as the &root; user:
     </para>
 
-<screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;+&openjdk-build; /opt/jdk</userinput></screen>
+<screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;&openjdk-suffix; /opt/jdk</userinput></screen>
 
     <para>
       If desired, you can create .desktop files to add entries
@@ -366,9 +366,7 @@ EOF</userinput></screen>
         To check the installation, issue:
       </para>
 
-<screen role="root"><userinput>pushd /opt/jdk &amp;&amp;
-  bin/keytool -list -cacerts
-popd</userinput></screen>
+<screen role="root"><userinput>/opt/jdk/bin/keytool -list -cacerts</userinput></screen>
 
     <para>
       At the prompt <computeroutput>Enter keystore password:</computeroutput>,
