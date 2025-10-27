@@ -61,8 +61,8 @@
 
     <bridgehead renderas="sect4">Optional (Runtime)</bridgehead>
     <para role="optional">
-      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/grim/">grim</ulink> and
-      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/slurp/">slurp</ulink>
+      <xref role="runtime" linkend="grim"/> and
+      <xref role="runtime" linkend="slurp"/>
     </para>
 
   </sect2>
@@ -71,16 +71,27 @@
     <title>Installation of xdg-desktop-portal-hyprland</title>
 
     <para>
-      Install xdg-desktop-portal-hyprland by running
-      the following commands:
+      Install xdg-desktop-portal-hyprland by running the following commands:
     </para>
 
-<screen><userinput>rm -rf subprojects/sdbus-cpp &amp;&amp;
+<screen revision="sysv"><userinput>rm -rf subprojects           &amp;&amp;
 mkdir build                  &amp;&amp;
 cd    build                  &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D CMAKE_BUILD_TYPE=Release  \
+      -D SYSTEMD_SERVICES=OFF      \
+      -G Ninja ..            &amp;&amp;
+
+ninja</userinput></screen>
+
+<screen revision="systemd"><userinput>rm -rf subprojects           &amp;&amp;
+mkdir build                  &amp;&amp;
+cd    build                  &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D SYSTEMD_SERVICES=ON       \
       -G Ninja ..            &amp;&amp;
 
 ninja</userinput></screen>
@@ -89,24 +100,16 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root" revision="sysv"><userinput>ninja install &amp;&amp;
-rm -rvf /usr/lib/systemd</userinput></screen>
-
-<screen role="root" revision="systemd"><userinput>ninja install</userinput></screen>
+<screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="commands">
     <title>Command Explanations</title>
 
     <para>
-      <command>rm -rf subprojects/sdbus-cpp</command>: This command removes
-      vendored source code that FTBFS.
-    </para>
-
-    <para revision="sysv">
-      <command>rm -rvf /usr/lib/systemd</command>: This command removes
-      unnecessary Systemd files.
+      <command>rm -rf subprojects</command>: This command removes vendored
+      source code.
     </para>
 
   </sect2>
@@ -153,8 +156,7 @@ rm -rvf /usr/lib/systemd</userinput></screen>
         <term><command>xdg-desktop-portal-hyprland</command></term>
         <listitem>
           <para>
-            allows you to access portals in a
-            Hyprland session
+            allows you to access portals in a Hyprland session
           </para>
           <indexterm zone="xdg-desktop-portal-hyprland xdg-desktop-portal-hyprland-bin">
             <primary sortas="b-xdg-desktop-portal-hyprland-bin">xdg-desktop-portal-hyprland</primary>

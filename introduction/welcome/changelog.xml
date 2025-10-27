@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>October 27th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Toxikuu] - xdg-desktop-portal-hyprland: 1.3.10 -> 1.3.11. Fixes
+          <ulink url="&slfs-issues;/340">#340</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>October 23rd, 2025</para>
       <itemizedlist>
         <listitem>
