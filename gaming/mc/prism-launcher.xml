@@ -77,7 +77,7 @@
       command as the &root; user:
     </para>
 
-<screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;+&openjdk-build; /opt/jdk</userinput></screen>
+<screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;&openjdk-suffix; /opt/jdk</userinput></screen>
 
     <para>
       If you have installed OpenJDK version 20 or
@@ -146,7 +146,7 @@ ninja</userinput></screen>
       but wish to change it, run the following command as the &root; user:
     </para>
 
-<screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;+&openjdk-build; /opt/jdk</userinput></screen>
+<screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;&openjdk-suffix; /opt/jdk</userinput></screen>
 
     <para>
       A multi-JDK setup may look like this:
@@ -154,14 +154,14 @@ ninja</userinput></screen>
 
 <screen><computeroutput>$ </computeroutput><userinput>ls /opt | grep jdk
 </userinput><computeroutput>jdk
-<literal>jdk-&openjdk-version;+&openjdk-build;</literal>
+<literal>jdk-&openjdk-version;&openjdk-suffix;</literal>
 <literal>jdk-&jdk-modern;</literal>
 ...</computeroutput></screen>
 
 <para>
 <userinput>jdk</userinput> can be a symlink to either
 <computeroutput><literal>jdk-&jdk-modern;</literal></computeroutput> or
-<computeroutput><literal>jdk-&openjdk-version;+&openjdk-build;</literal></computeroutput>.
+<computeroutput><literal>jdk-&openjdk-version;&openjdk-suffix;</literal></computeroutput>.
 </para>
 
   </sect2>
