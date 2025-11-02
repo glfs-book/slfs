@@ -43,6 +43,10 @@
       <para>November 2nd, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - sxwm: 1.6 -&gt; 1.7. Fixes
+          <ulink url="&slfs-issues;/334">#334</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - SDL3: 3.2.24 -&gt; 3.2.26. Fixes
           <ulink url="&slfs-issues;/349">#349</ulink>.</para>
         </listitem>

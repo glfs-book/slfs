@@ -194,7 +194,7 @@ version, so keep this at that. -->
 <!-- i3 -->
 <!ENTITY i3-version                          "4.24">
 <!-- SXWM -->
-<!ENTITY sxwm-version                        "1.6">
+<!ENTITY sxwm-version                        "1.7">
 <!-- Wayfire -->
 <!ENTITY wf-version                          "0.9.0">
 <!ENTITY wf-config-version                   "&wf-version;">
