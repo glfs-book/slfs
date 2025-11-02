@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY wlroots-root
+    "https://gitlab.freedesktop.org/wlroots/wlroots/-/archive">
+  <!ENTITY wlroots-download-http
+    "&wlroots-root;/&wlroots-version;/wlroots-&wlroots-version;.tar.bz2">
+]>
+
+<sect1 id="wlroots" xreflabel="wlroots-&wlroots-version;">
+  <?dbhtml filename="wlroots.html"?>
+
+  <title>wlroots-&wlroots-version;</title>
+
+  <indexterm zone="wlroots">
+    <primary sortas="a-wlroots">wlroots</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to wlroots</title>
+
+    <para>
+      wlroots is a Wayland compositor library, the backbone of most Wayland
+      compositors. Compositors that use a different base may have used this
+      package in the beginning of the compositor's history for providing most
+      of the work.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&wlroots-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">wlroots Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            &gbm;: For GBM allocation.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/general/hwdata.html">hwdata</ulink>,
+            <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>, and
+            <xref linkend="libliftoff"/>:
+            For the DRM backend; can be used to generically choose a renderer
+            instead of being implicit.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>:
+            For the libinput backend.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/general/lcms2.html">Little-CMS</ulink>:
+            For color management.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            &wayland-gl;: For the OpenGL renderer.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="seatd"/>: For session handling.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
+            and <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>:
+            For the Vulkan renderer.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
+            <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, and
+            <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>:
+            For Xorg application/library support.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+
+    <important><para>
+      Skipping any of the recommended dependencies can lead to configuration,
+      build, or runtime failures in various compositors. An example is GLESv2:
+      if it is not found, OpenGL rendering as a whole will be disabled. OpenGL
+      rendering is the primary, and in most often cases, the only available
+      renderer a given compositor can use if it does not rely on the
+      recommended DRM backend to choose a renderer for the compositor. Consider
+      most of the dependencies listed above required besides what is required
+      for the Vulkan renderer and Xorg support.
+    </para></important>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink> (for examples)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of wlroots</title>
+
+    <para>
+      Install wlroots by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr          \
+            --buildtype=release    \
+            --wrap-mode=nofallback \
+            .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &meson-wrap-nofallback;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libwlroots-&wlroots-minor;
+        </seg>
+        <seg>
+          /usr/include/wlroots-&wlroots-minor;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libwlroots">
+        <term><filename class="libraryfile">libwlroots-&wlroots-minor;</filename></term>
+        <listitem>
+          <para>
+            provides functions for Wayland compositors
+          </para>
+          <indexterm zone="wlroots libwlroots">
+            <primary sortas="b-libwlroots">libwlroots-&wlroots-minor;</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

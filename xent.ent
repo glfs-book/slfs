@@ -80,6 +80,11 @@
   "<para><parameter>--buildtype=release</parameter>: Specify a buildtype
   suitable for stable releases of the package, as the default may
   produce unoptimized binaries.</para>">
+<!ENTITY meson-wrap-nofallback
+  "<para><parameter>--wrap-mode=nofallback</parameter>: This switch prevents
+   <command>meson</command> from using subproject fallbacks for any dependency
+   declarations in the build files, preventing it from downloading any optional
+   dependencies which are not installed on the system.</para>">
 <!ENTITY static-libraries
   "<para><parameter>--disable-static</parameter>: This switch prevents
   installation of static versions of the libraries.</para>">

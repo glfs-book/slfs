@@ -43,6 +43,10 @@
       <para>November 2nd, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Wayfire: 0.9.0 -&gt; 0.10.0; wlroots: Added.
+          Fixes <ulink url="&slfs-issues;/362">#362</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - sxwm: 1.6 -&gt; 1.7. Fixes
           <ulink url="&slfs-issues;/334">#334</ulink>.</para>
         </listitem>

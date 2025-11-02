@@ -21,13 +21,13 @@
     <title>Introduction to Wayfire</title>
 
     <para>
-      Wayfire is a
-      Wayland compositor which takes a lot of
-      effects from the now deprecated Compiz Xorg
-      compositor. It aims to be customizable, yet lightweight. Unlike other
-      compositors, it is also 3D and supports multiple perspectives for seeing
-      windows.
+      Wayfire is a Wayland compositor which takes a lot of effects from the now
+      deprecated Compiz Xorg compositor. It aims to be customizable, yet
+      lightweight. Unlike other compositors, it is also 3D and supports
+      multiple perspectives for seeing windows.
     </para>
+
+    &build-use-internet;
 
     <itemizedlist spacing="compact">
       <listitem>
@@ -45,8 +45,6 @@
       &gbm;,
       <ulink url="&blfs-svn;/general/glm.html">GLM</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
-      <ulink url="&blfs-svn;/general/hwdata.html">hwdata</ulink>,
-      <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
@@ -57,27 +55,22 @@
       &wayland-gl;,
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
-      <xref linkend="seatd"/>,
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
-      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
+      and <xref linkend="wlroots"/>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <xref linkend="libliftoff"/>,
       <xref linkend="wf-config"/> (if not installed, it will be downloaded from
-      the internet),
-      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, and
-      <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
+      the internet) and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="https://github.com/doctest/doctest">doctest</ulink> (for
-      tests) and
-      <ulink url="https://gitlab.freedesktop.org/wlroots/wlroots">wlroots</ulink>
-      (the newest version cannot be used)
+      tests)
     </para>
 
   </sect2>
@@ -106,6 +99,13 @@ ninja</userinput></screen>
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
+
+    <para>
+      Remove useless static libraries:
+    </para>
+
+<screen role="root"><userinput>rm -vf /usr/lib/lib{wftouch,yyjson}.a \
+       /usr/lib/libwayfire-{move-drag-interface,workspace-wall}.a</userinput></screen>
 
     <para>
       Copy the default configuration file to <filename
@@ -181,9 +181,8 @@ ninja</userinput></screen>
           wayfire
         </seg>
         <seg>
-          libwayfire-blur-base,
-          libwf-util, and
-          libwftouch (static)
+          libwayfire-blur-base and
+          libwf-utils
         </seg>
         <seg>
           alpha,
@@ -194,7 +193,6 @@ ninja</userinput></screen>
           cube,
           decoration,
           default-config-backend,
-          demo-ipc,
           expo,
           extra-gestures,
           fast-switcher,
@@ -220,6 +218,7 @@ ninja</userinput></screen>
           stipc,
           switcher,
           swipe,
+          vk-color-management,
           vswitch,
           wayfire-shell,
           window-rules,
@@ -276,19 +275,6 @@ ninja</userinput></screen>
           </para>
           <indexterm zone="wayfire libwf-utils">
             <primary sortas="b-libwf-utils">libwf-utils</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="libwftouch.a">
-        <term><filename class="libraryfile">libwftouch</filename></term>
-        <listitem>
-          <para>
-            is the static library for Wayfire touch
-            functionality
-          </para>
-          <indexterm zone="wayfire libwftouch.a">
-            <primary sortas="b-libwftouch.a">libwftouch</primary>
           </indexterm>
         </listitem>
       </varlistentry>

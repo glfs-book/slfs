@@ -49,8 +49,8 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/general/glibmm.html">GLibmm-2.66</ulink> and
-      <xref linkend="nlohmann-json"/>
+      <ulink url="&blfs-svn;/general/boost.html">boost</ulink> and
+      <ulink url="&blfs-svn;/general/glibmm.html">GLibmm-2.66</ulink>
     </para>
 
   </sect2>
@@ -81,43 +81,33 @@ ninja</userinput></screen>
     <title>Contents</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
       <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
 
       <seglistitem>
-        <seg>
-          None
-        </seg>
-        <seg>
-          None
-        </seg>
         <seg>
           annotate,
           autorotate-iio,
           bench,
           crosshair,
+          extra-animations,
           focus-change,
           focus-steal-prevent,
           follow-focus,
           force-fullscreen,
           ghost,
           glib-main-loop,
-          hide-cur,
+          hide-cursor,
           join-views,
           keycolor,
           mag,
           obs,
           pin-view,
           showrepaint,
+          showtouch,
           view-shot,
           water,
           winzoom, and
           workspace-names
-        </seg>
-        <seg>
-          None
         </seg>
       </seglistitem>
     </segmentedlist>
