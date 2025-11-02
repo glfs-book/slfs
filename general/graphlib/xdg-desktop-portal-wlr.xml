@@ -23,7 +23,7 @@
 
     <para>
       The xdg-desktop-portal-wlr package provides a portal backend for
-      Wlroots compositors.
+      wlroots compositors.
     </para>
 
     <itemizedlist spacing="compact">
@@ -51,13 +51,13 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <xref linkend="scdoc"/>
     </para>
 
-    <bridgehead renderas="sect4">Optional (Runtime)</bridgehead>
+    <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/grim/">grim</ulink> and
-      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/slurp/">slurp</ulink>
+      <xref linkend="grim"/>,
+      <xref linkend="scdoc"/>, and
+      <xref linkend="slurp"/>
     </para>
 
   </sect2>
@@ -129,8 +129,7 @@ EOF</userinput></screen>
         <term><command>xdg-desktop-portal-wlr</command></term>
         <listitem>
           <para>
-            allows you to access portals in a
-            Wlroots session
+            allows you to access portals in a wlroots session
           </para>
           <indexterm zone="xdg-desktop-portal-wlr xdg-desktop-portal-wlr-bin">
             <primary sortas="b-xdg-desktop-portal-wlr-bin">xdg-desktop-portal-wlr</primary>

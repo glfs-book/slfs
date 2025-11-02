@@ -43,6 +43,50 @@
       <para>November 2nd, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - GlideN64: 0ab1c5 -&gt; 339684.
+          Fixes <ulink url="&slfs-issues;/361">#361</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xdg-desktop-portal-wlr: 0.7.1 -&gt; 0.8.0.
+          Fixes <ulink url="&slfs-issues;/359">#359</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libime: 1.1.11 -&gt; 1.1.12.
+          Fixes <ulink url="&slfs-issues;/358">#358</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libdecor: 0.2.3 -&gt; 0.2.4.
+          Fixes <ulink url="&slfs-issues;/357">#357</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 6.0.0 -&gt; 6.0.1.
+          Fixes <ulink url="&slfs-issues;/356">#356</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-qt: 5.1.10 -&gt; 5.1.11.
+          Fixes <ulink url="&slfs-issues;/355">#355</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-m17n: 5.1.4 -&gt; 5.1.5.
+          Fixes <ulink url="&slfs-issues;/354">#354</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-configtool: 5.1.10 -&gt; 5.1.11.
+          Fixes <ulink url="&slfs-issues;/353">#353</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-chinese-addons: 5.1.9 -&gt; 5.1.10.
+          Fixes <ulink url="&slfs-issues;/352">#352</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5: 5.1.14 -&gt; 5.1.16.
+          Fixes <ulink url="&slfs-issues;/351">#351</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - structlog: 25.4.0 -&gt; 25.5.0.
+          Fixes <ulink url="&slfs-issues;/350">#350</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Wayfire: 0.9.0 -&gt; 0.10.0; wlroots: Added.
           Fixes <ulink url="&slfs-issues;/362">#362</ulink>.</para>
         </listitem>
