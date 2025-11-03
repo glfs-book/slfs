@@ -59,7 +59,7 @@
     <para role="optional">
       <ulink url="&arch-pkgs;/extra/x86_64/kdialog">kdialog</ulink> (for KDE)
       or
-      <ulink url="&arch-pkgs;/extra/x86_64/zenity">zentiy</ulink> (for GNOME);
+      <ulink url="&arch-pkgs;/extra/x86_64/zenity">zenity</ulink> (for GNOME);
       this package uses either to provide a GUI interface but is optional
     </para>
 
