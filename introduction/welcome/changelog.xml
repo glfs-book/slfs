@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>November 3rd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - yt-dlp: 2025.10.14 -&gt; 2025.10.22. Fixes
+          <ulink url="&slfs-issues;/360">#360</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 2nd, 2025</para>
       <itemizedlist>
         <listitem>
