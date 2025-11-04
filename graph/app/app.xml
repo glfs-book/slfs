@@ -15,6 +15,7 @@
     existing category.
   </para>
 
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="awww.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="grim.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libvpl-tools.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mesa-demos.xml"/>
