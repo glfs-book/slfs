@@ -47,7 +47,7 @@
     <bridgehead renderas="sect4">Optional</bridgehead>
 
     <para role="optional">
-      <ulink url="&blfs-svn;/multimedia/dav1d.html">dav1d</ulink>, and
+      <ulink url="&blfs-svn;/multimedia/dav1d.html">dav1d</ulink> and
       <xref linkend="scdoc"/> (to build the man pages)
     </para>
 
