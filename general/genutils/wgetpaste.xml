@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY wgetpaste-download-http "https://github.com/zlin/wgetpaste/releases/download/&wgetpaste-version;/wgetpaste-&wgetpaste-version;.tar.xz">
+]>
+
+<sect1 id="wgetpaste" xreflabel="wgetpaste-&wgetpaste-version;">
+  <?dbhtml filename="wgetpaste.html"?>
+
+  <title>wgetpaste-&wgetpaste-version;</title>
+
+  <indexterm zone="wgetpaste">
+    <primary sortas="a-wgetpaste">wgetpaste</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to wgetpaste</title>
+
+    <para>
+      The wgetpaste package contains a script which uploads text files to 
+      pastebin services.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&wgetpaste-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of wgetpaste</title>
+
+    <para>
+      The wgetpaste package does not need to be
+      compiled and can be directly installed by running the following command
+      as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 wgetpaste -t /usr/bin/</userinput></screen>
+
+    <para>
+      If you want to install the shell completion file for zsh, execute the
+      following as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm644 _wgetpaste -t /usr/share/zsh/site-functions/</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          wgetpaste
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="wgetpaste-bin">
+        <term><command>wgetpaste</command></term>
+        <listitem>
+          <para>
+            uploads text files onto pastebin services
+          </para>
+          <indexterm zone="wgetpaste wgetpaste-bin">
+            <primary sortas="b-wgetpaste-bin">wgetpaste</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+  </sect2>
+</sect1>
