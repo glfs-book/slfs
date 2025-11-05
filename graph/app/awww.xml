@@ -21,7 +21,8 @@
     <title>Introduction to awww</title>
 
     <para>
-      The awww package provides an Answer to your Wayland Wallpaper Woes.
+      The awww (Answer to your Wayland Wallpaper Woes) package provides a
+      powerful wallpaper daemon for Wayland, controlled at runtime.
     </para>
 
     &build-use-internet;
@@ -75,9 +76,14 @@
       Now, as the &root; user:
     </para>
 
-<!-- swww mentions to be replaced by "awww" in the next update -->
 <screen role="root"><userinput>install -vDm755 target/release/swww -t /usr/bin/ &amp;&amp;
 install -vDm755 target/release/swww-daemon -t /usr/bin/</userinput></screen>
+
+<!-- uncomment with next update -seal331 5th November 2025
+<screen role="root"><userinput>install -vDm755 target/release/awww -t /usr/bin/ &amp;&amp;
+install -vDm755 target/release/awww-daemon -t /usr/bin/ &amp;&amp;
+ln -sfv /usr/bin/awww /usr/bin/swww &amp;&amp;
+ln -sfv /usr/bin/awww-daemon /usr/bin/swww-daemon</userinput></screen> -->
 
     <para>
       If you wish to install shell completions, execute the relevant commands 
@@ -94,11 +100,19 @@ install -vDm755 target/release/swww-daemon -t /usr/bin/</userinput></screen>
 install -vDm644 completions/_swww /usr/share/zsh/site-functions/_swww
 install -vDm644 completions/swww.fish /usr/share/fish/vendor_completions.d/swww.fish</userinput></screen>
 
+<!-- uncomment with next update -seal331 5th November 2025
+<screen role="root"><userinput>install -vDm644 completions/awww.bash /usr/share/bash-completion/completions/awww
+install -vDm644 completions/_awww /usr/share/zsh/site-functions/_awww
+install -vDm644 completions/awww.fish /usr/share/fish/vendor_completions.d/awww.fish</userinput></screen>
+-->
+
     <para>
       If you built the man pages, install them as the &root; user:
     </para>
 
-<screen role="root"><userinput>sudo install -vDm644 doc/generated/* -t /usr/share/man/man1/</userinput></screen>
+<!-- intentionally no futureproofing for renaming here because we use a
+     wildcard -seal331 5th November 2025 -->
+<screen role="root"><userinput>install -vDm644 doc/generated/* -t /usr/share/man/man1/</userinput></screen>
 
   </sect2>
 
@@ -112,7 +126,6 @@ install -vDm644 completions/swww.fish /usr/share/fish/vendor_completions.d/swww.
 
   </sect2>
 
-<!-- swww mentions to be replaced by "awww" in the next update too -->
   <sect2 role="content">
     <title>Contents</title>
 
@@ -123,7 +136,10 @@ install -vDm644 completions/swww.fish /usr/share/fish/vendor_completions.d/swww.
 
       <seglistitem>
         <seg>
-          swww, and swww-daemon
+          <!-- uncomment with next update -seal331 5th November 2025
+          awww, awww-daemon, swww (link to awww), and swww-daemon (link to
+          swww-daemon) -->
+          swww and swww-daemon
         </seg>
         <seg>
           None
@@ -139,10 +155,38 @@ install -vDm644 completions/swww.fish /usr/share/fish/vendor_completions.d/swww.
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
+<!-- uncomment with next update -seal331 5th November 2025
+      <varlistentry id="awww-bin">
+        <term><command>awww</command></term>
+        <listitem>
+          <para>
+            is the control tool for awww-daemon
+          </para>
+          <indexterm zone="awww awww-bin">
+            <primary sortas="b-awww-bin">awww</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="awww-daemon">
+        <term><command>awww-daemon</command></term>
+        <listitem>
+          <para>
+            is the backend for the Answer to your Wayland Wallpaper Woes
+          </para>
+          <indexterm zone="awww awww-daemon">
+            <primary sortas="b-awww-daemon">awww-daemon</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+-->
+
       <varlistentry id="swww-bin">
         <term><command>swww</command></term>
         <listitem>
           <para>
+            <!-- uncomment with next update -seal331 5th November 2025
+            is a symlink pointing to <command>awww</command> -->
             is the control tool for swww-daemon
           </para>
           <indexterm zone="awww swww-bin">
@@ -155,6 +199,8 @@ install -vDm644 completions/swww.fish /usr/share/fish/vendor_completions.d/swww.
         <term><command>swww-daemon</command></term>
         <listitem>
           <para>
+            <!-- uncomment with next update -seal331 5th November 2025
+            is a symlink pointing to <command>awww-daemon</command> -->
             is the backend for the Answer to your Wayland Wallpaper Woes
           </para>
           <indexterm zone="awww swww-daemon">
