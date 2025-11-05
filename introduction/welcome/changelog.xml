@@ -43,6 +43,10 @@
       <para>November 5th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[seal331] - xtrace: fd1e5a -&gt; ced509. Fixes
+          <ulink url="&slfs-issues;/341">#341</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[seal331] - awww: Added.
           Fixes <ulink url="&slfs-issues;/294">#294</ulink>.</para>
         </listitem>
