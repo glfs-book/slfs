@@ -87,7 +87,7 @@ ln -sfv /usr/bin/awww-daemon /usr/bin/swww-daemon</userinput></screen> -->
 
     <para>
       If you wish to install shell completions, execute the relevant commands 
-      for your shell(s) as the root user:
+      for your shell(s) as the &root; user:
     </para>
 
 <!-- awww also provides shell autocomplete files for a shell called "elvish".
@@ -97,13 +97,13 @@ ln -sfv /usr/bin/awww-daemon /usr/bin/swww-daemon</userinput></screen> -->
      -seal331 4th November 2025 -->
 
 <screen role="root"><userinput>install -vDm644 completions/swww.bash /usr/share/bash-completion/completions/swww
-install -vDm644 completions/_swww /usr/share/zsh/site-functions/_swww
-install -vDm644 completions/swww.fish /usr/share/fish/vendor_completions.d/swww.fish</userinput></screen>
+install -vDm644 completions/_swww -t /usr/share/zsh/site-functions/
+install -vDm644 completions/swww.fish -t /usr/share/fish/vendor_completions.d/</userinput></screen>
 
 <!-- uncomment with next update -seal331 5th November 2025
 <screen role="root"><userinput>install -vDm644 completions/awww.bash /usr/share/bash-completion/completions/awww
-install -vDm644 completions/_awww /usr/share/zsh/site-functions/_awww
-install -vDm644 completions/awww.fish /usr/share/fish/vendor_completions.d/awww.fish</userinput></screen>
+install -vDm644 completions/_awww -t /usr/share/zsh/site-functions/
+install -vDm644 completions/awww.fish -t /usr/share/fish/vendor_completions.d/</userinput></screen>
 -->
 
     <para>
