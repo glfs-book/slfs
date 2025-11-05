@@ -81,6 +81,7 @@ version, so keep this at that. -->
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.3">
 <!ENTITY tmux-version                        "3.5a">
+<!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20250102">
 <!ENTITY yt-dlp-version                      "2025.10.22">
 <!-- System Utilities -->
@@ -90,6 +91,7 @@ version, so keep this at that. -->
 <!ENTITY libtree-version                     "3.1.1">
 <!ENTITY tealdeer-version                    "1.8.0">
 <!-- Programming -->
+<!ENTITY autoconf-archive-version            "2024.10.16">
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20241231">
@@ -122,8 +124,8 @@ version, so keep this at that. -->
 <!ENTITY strace-version                      "6.17">
 <!ENTITY socat-version                       "1.8.0.3">
 <!ENTITY unlambda-version                    "2.0.0">
-<!ENTITY xtrace-minor-version                "fd1e5a">
-<!ENTITY xtrace-version                      "fd1e5a94628acc6277904c547992825aefa119c6">
+<!ENTITY xtrace-minor-version                "ced509">
+<!ENTITY xtrace-version                      "ced509f9760c532e0297fed6cfa07389e2be082a">
 <!ENTITY wev-version                         "1.1.0">
 <!-- JAVA -->
 <!ENTITY java-major-version                  "17">
@@ -159,6 +161,7 @@ version, so keep this at that. -->
 <!ENTITY rofi-version                        "2.0.0">
 <!ENTITY wofi-version                        "1.5.1">
 <!-- App -->
+<!ENTITY awww-version                        "0.11.2">
 <!ENTITY grim-version                        "1.5.0">
 <!ENTITY libvpl-tools-version                "1.4.0">
 <!ENTITY mesa-demos-version                  "9.0.0">

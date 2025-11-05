@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY awww-download-http
+    "https://codeberg.org/LGFae/awww/archive/v&awww-version;.tar.gz">
+]>
+
+<sect1 id="awww" xreflabel="awww-&awww-version;">
+  <?dbhtml filename="awww.html"?>
+
+  <title>awww-&awww-version;</title>
+
+  <indexterm zone="awww">
+    <primary sortas="a-awww">awww</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to awww</title>
+
+    <para>
+      The awww (Answer to your Wayland Wallpaper Woes) package provides a
+      powerful wallpaper daemon for Wayland, controlled at runtime.
+    </para>
+
+    &build-use-internet;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&awww-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">awww Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+
+    <para role="optional">
+      <ulink url="&blfs-svn;/multimedia/dav1d.html">dav1d</ulink> and
+      <xref linkend="scdoc"/> (to build the man pages)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of awww</title>
+    <para>
+      Install awww by running the following
+      commands:
+    </para>
+
+<screen><userinput>cargo build --release</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>cargo test --release</command>.
+    </para>
+
+    <para>
+      If you installed scdoc and wish to build the
+      man pages, execute the following commands:
+    </para>
+<screen><userinput>./doc/gen.sh</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 target/release/swww -t /usr/bin/ &amp;&amp;
+install -vDm755 target/release/swww-daemon -t /usr/bin/</userinput></screen>
+
+<!-- uncomment with next update -seal331 5th November 2025
+<screen role="root"><userinput>install -vDm755 target/release/awww -t /usr/bin/ &amp;&amp;
+install -vDm755 target/release/awww-daemon -t /usr/bin/ &amp;&amp;
+ln -sfv /usr/bin/awww /usr/bin/swww &amp;&amp;
+ln -sfv /usr/bin/awww-daemon /usr/bin/swww-daemon</userinput></screen> -->
+
+    <para>
+      If you wish to install shell completions, execute the relevant commands 
+      for your shell(s) as the &root; user:
+    </para>
+
+<!-- awww also provides shell autocomplete files for a shell called "elvish".
+     I have no clue what that shell is, let alone where does it store its
+     autocomplete files. If someone figures that out feel free to add the
+     install command for that shell here, the file is "completions/swww.elv".
+     -seal331 4th November 2025 -->
+
+<screen role="root"><userinput>install -vDm644 completions/swww.bash /usr/share/bash-completion/completions/swww
+install -vDm644 completions/_swww -t /usr/share/zsh/site-functions/
+install -vDm644 completions/swww.fish -t /usr/share/fish/vendor_completions.d/</userinput></screen>
+
+<!-- uncomment with next update -seal331 5th November 2025
+<screen role="root"><userinput>install -vDm644 completions/awww.bash /usr/share/bash-completion/completions/awww
+install -vDm644 completions/_awww -t /usr/share/zsh/site-functions/
+install -vDm644 completions/awww.fish -t /usr/share/fish/vendor_completions.d/</userinput></screen>
+-->
+
+    <para>
+      If you built the man pages, install them as the &root; user:
+    </para>
+
+<!-- intentionally no futureproofing for renaming here because we use a
+     wildcard -seal331 5th November 2025 -->
+<screen role="root"><userinput>install -vDm644 doc/generated/* -t /usr/share/man/man1/</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <option>--features=avif</option>: Use this switch if you want to be able
+      to display AVIF images (requires dav1d).
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          <!-- uncomment with next update -seal331 5th November 2025
+          awww, awww-daemon, swww (link to awww), and swww-daemon (link to
+          swww-daemon) -->
+          swww and swww-daemon
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+<!-- uncomment with next update -seal331 5th November 2025
+      <varlistentry id="awww-bin">
+        <term><command>awww</command></term>
+        <listitem>
+          <para>
+            is the control tool for awww-daemon
+          </para>
+          <indexterm zone="awww awww-bin">
+            <primary sortas="b-awww-bin">awww</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="awww-daemon">
+        <term><command>awww-daemon</command></term>
+        <listitem>
+          <para>
+            is the backend for the Answer to your Wayland Wallpaper Woes
+          </para>
+          <indexterm zone="awww awww-daemon">
+            <primary sortas="b-awww-daemon">awww-daemon</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+-->
+
+      <varlistentry id="swww-bin">
+        <term><command>swww</command></term>
+        <listitem>
+          <para>
+            <!-- uncomment with next update -seal331 5th November 2025
+            is a symlink pointing to <command>awww</command> -->
+            is the control tool for swww-daemon
+          </para>
+          <indexterm zone="awww swww-bin">
+            <primary sortas="b-swww-bin">swww</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="swww-daemon">
+        <term><command>swww-daemon</command></term>
+        <listitem>
+          <para>
+            <!-- uncomment with next update -seal331 5th November 2025
+            is a symlink pointing to <command>awww-daemon</command> -->
+            is the backend for the Answer to your Wayland Wallpaper Woes
+          </para>
+          <indexterm zone="awww swww-daemon">
+            <primary sortas="b-swww-daemon">swww-daemon</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

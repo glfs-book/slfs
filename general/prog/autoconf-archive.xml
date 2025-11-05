@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!-- TODO: replace ftpmirror with ftp once gnu.org stops being DDoSed by
+       those AI idiots 
+       - seal331 13/09/2025 -->
+  <!ENTITY autoconf-archive-download-http "https://ftpmirror.gnu.org/gnu/autoconf-archive/autoconf-archive-&autoconf-archive-version;.tar.xz">
+]>
+
+<sect1 id="autoconf-archive" xreflabel="autoconf-archive-&autoconf-archive-version;">
+  <?dbhtml filename="autoconf-archive.html"?>
+
+  <title>Autoconf Archive &autoconf-archive-version;</title>
+
+  <indexterm zone="autoconf-archive">
+    <primary sortas="a-autoconf-archive">autoconf-archive</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to the Autoconf Archive</title>
+
+    <para>
+      The Autoconf Archive contains more than 500 autoconf macros contributed
+      to GNU.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&autoconf-archive-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of autoconf-archive</title>
+
+    <para>
+      Install autoconf-archive by executing the following
+      commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr \
+--docdir=/usr/share/doc/autoconf-archive-&autoconf-archive-version; &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/autoconf-archive-&autoconf-archive-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>  
+
+</sect1>
