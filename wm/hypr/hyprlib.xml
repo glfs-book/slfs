@@ -181,6 +181,7 @@ echo "Building $packagedir"
               -D CMAKE_SKIP_INSTALL_RPATH=ON     \
               -D INSTALL_QML_PREFIX=/lib/qt6/qml \
               -D DISABLE_TESTS=ON                \
+              -D BUILD_TESTING=OFF               \
               -W no-dev -G Ninja ..
     ;;
   esac
