@@ -43,6 +43,16 @@
       <para>November 5th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - glaze: 6.0.1 -&gt; 6.0.2. Fixes
+          <ulink url="&slfs-issues;/366">#366</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>November 5th, 2025</para>
+      <itemizedlist>
+        <listitem>
           <para>[seal331] - wgetpaste: Added.</para>
         </listitem>
         <listitem>
