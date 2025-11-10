@@ -28,6 +28,16 @@
       written in C++.
     </para>
 
+    <important><para>
+      Be sure to update all the libraries in <xref linkend="hyprlib"/> prior to
+      updating this package to prevent configuration failures, and note that
+      doing so will break ABI against the present version of Hyprland until you
+      rebuild it. In most cases, Hyprland will still be running if the
+      libraries have been updated while in the session, however. In any case,
+      rebuild/update this package immediately after upgrading <xref
+      linkend="hyprlib"/>.
+    </para></important>
+
     &long-build-time;
 
     <itemizedlist spacing="compact">
@@ -114,9 +124,10 @@ mv -T udis86-&hypr-udis86-version; subprojects/udis86</userinput></screen>
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-cmake -DCMAKE_INSTALL_PREFIX=/usr   \
-      -DCMAKE_BUILD_TYPE=Release    \
-      -DCMAKE_SKIP_INSTALL_RPATH=ON \
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D BUILD_TESTING=OFF           \
       -W no-dev -G Ninja .. &amp;&amp;
 ninja</userinput></screen>
 

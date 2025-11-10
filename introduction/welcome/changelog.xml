@@ -43,6 +43,26 @@
       <para>November 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - hyprlib: hyprland-qtutils-v0.1.5 -&gt;
+          hyprland-guiutils-v0.1.0. Fixes
+          <ulink url="&slfs-issues;/372">#372</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.10.0 -&gt; 0.10.1. Fixes
+          <ulink url="&slfs-issues;/369">#369</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.51.1 -&gt; 0.52.1. Fixes
+          <ulink url="&slfs-issues;/368">#368</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprgraphics: 0.2.0 -&gt; 0.3.0. Fixes
+          <ulink url="&slfs-issues;/367">#367</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprtoolkit: Added.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - glaze: 6.0.1 -&gt; 6.0.2. Fixes
           <ulink url="&slfs-issues;/366">#366</ulink>.</para>
         </listitem>

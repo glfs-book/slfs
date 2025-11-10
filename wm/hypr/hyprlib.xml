@@ -20,11 +20,11 @@
     <title>Introduction to Hypr Libraries</title>
 
     <para>
-      The Hypr libraries provide needed utilities for the entire Hypr ecosystem.
-      While two of the packages installed in this page are not strictly
-      required (hyprland-qt-support and
-      hyprland-qtutils), they are needed for some
-      dialog boxes and this book assumes that you have built them.
+      The Hypr libraries provide needed utilities for the entire Hypr
+      ecosystem. While three of the packages installed in this page are not
+      strictly required (hyprtoolkit, hyprland-qt-support, and
+      hyprland-guiutils), they are needed for some dialog boxes and this book
+      assumes that you have built them.
     </para>
 
     &abi-break;
@@ -88,8 +88,9 @@ hyprcursor/archive/v&hyprcursor-version;/hyprcursor-v&hyprcursor-version;.tar.gz
 hyprwayland-scanner/archive/v&hyprwayland-scanner-version;/hyprwayland-scanner-v&hyprwayland-scanner-version;.tar.gz
 aquamarine/archive/v&aquamarine-version;/aquamarine-v&aquamarine-version;.tar.gz
 hyprgraphics/archive/v&hyprgraphics-version;/hyprgraphics-v&hyprgraphics-version;.tar.gz
+hyprtoolkit/archive/v&hyprtoolkit-version;/hyprtoolkit-v&hyprtoolkit-version;.tar.gz
 hyprland-qt-support/archive/v&hyprland-qt-support-version;/hyprland-qt-support-v&hyprland-qt-support-version;.tar.gz
-hyprland-qtutils/archive/v&hyprland-qtutils-version;/hyprland-qtutils-v&hyprland-qtutils-version;.tar.gz</literal>
+hyprland-guiutils/archive/v&hyprland-guiutils-version;/hyprland-guiutils-v&hyprland-guiutils-version;.tar.gz</literal>
 EOF</userinput></screen>
 
     <para>
@@ -172,30 +173,15 @@ echo "Building $packagedir"
               -G Ninja ..
     ;;-->
 
-    hyprland-qt-support-[0-9]* )
+    * )
       mkdir build
       cd    build
         cmake -D CMAKE_INSTALL_PREFIX=/usr       \
               -D CMAKE_BUILD_TYPE=Release        \
               -D CMAKE_SKIP_INSTALL_RPATH=ON     \
               -D INSTALL_QML_PREFIX=/lib/qt6/qml \
-              ..
-        make
-
-        as_root make install
-      popd     # $packagedir
-      rm -rf $packagedir
-      as_root /sbin/ldconfig
-      continue # for loop
-    ;;
-
-    * )
-      mkdir build
-      cd    build
-        cmake -D CMAKE_INSTALL_PREFIX=/usr   \
-              -D CMAKE_BUILD_TYPE=Release    \
-              -D CMAKE_SKIP_INSTALL_RPATH=ON \
-              -G Ninja ..
+              -D DISABLE_TESTS=ON                \
+              -W no-dev -G Ninja ..
     ;;
   esac
 
@@ -245,11 +231,12 @@ done</userinput></screen>
           libhyprland-quick-style-impl,
           libhyprland-quick-styleplugin,
           libhyprland-quick-style,
-          libhyprlang, and
+          libhyprlang,
+          libhyprtoolkit, and
           libhyprutils
         </seg>
         <seg>
-          /usr/include/{aquamarine,hyprcursor,hyprgraphics,hyprutils},
+          /usr/include/{aquamarine,hypr{cursor,graphics,toolkit,utils}},
           /usr/lib/cmake/hyprwayland-scanner,
           /usr/lib/qt6/qml/org/hyprland/style, and
           /usr/share/hyprland-protocols
@@ -418,6 +405,18 @@ done</userinput></screen>
           </para>
           <indexterm zone="hyprlib libhyprlang">
             <primary sortas="c-libhyprlang">libhyprlang</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprtoolkit">
+        <term><filename class="libraryfile">libhyprtoolkit</filename></term>
+        <listitem>
+          <para>
+            provides GUI toolkit functions for use with some Hypr packages
+          </para>
+          <indexterm zone="hyprlib libhyprtoolkit">
+            <primary sortas="c-libhyprtoolkit">libhyprtoolkit</primary>
           </indexterm>
         </listitem>
       </varlistentry>
