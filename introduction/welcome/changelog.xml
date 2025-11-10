@@ -43,6 +43,10 @@
       <para>November 10th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - hyprutils: 0.10.1 -&gt; 0.10.2. Fixes
+          <ulink url="&slfs-issues;/374">#374</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - hyprlib: hyprland-qtutils-v0.1.5 -&gt;
           hyprland-guiutils-v0.1.0. Fixes
           <ulink url="&slfs-issues;/372">#372</ulink>.</para>
