@@ -149,6 +149,8 @@ version, so keep this at that. -->
 <!ENTITY printproto-version                  "1.0.5">
 <!ENTITY libxp-version                       "1.0.4">
 <!ENTITY motif-version                       "2.3.8">
+<!ENTITY scenefx-minor                       "0.4">
+<!ENTITY scenefx-version                     "&scenefx-minor;.1">
 <!ENTITY wlroots-minor                       "0.19">
 <!ENTITY wlroots-version                     "&wlroots-minor;.2">
 <!ENTITY xcb-util-errors-version             "1.0.1">
@@ -199,6 +201,8 @@ version, so keep this at that. -->
 <!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.24">
+<!-- MangoWC -->
+<!ENTITY mangowc-version                     "0.10.5">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
 <!-- Wayfire -->

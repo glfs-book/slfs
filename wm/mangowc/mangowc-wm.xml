@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY mangowc-root
+    "https://github.com/DreamMaoMao/mangowc/archive">
+  <!ENTITY mangowc-download-http
+    "&mangowc-root;/&mangowc-version;/mangowc-&mangowc-version;.tar.gz">
+]>
+
+<sect1 id="mangowc-wm" xreflabel="MangoWC-&mangowc-version;">
+  <?dbhtml filename="mangowc-wm.html"?>
+
+  <title>MangoWC-&mangowc-version;</title>
+
+  <indexterm zone="mangowc-wm">
+    <primary sortas="a-mangowc-wm">MangoWC</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to MangoWC</title>
+
+    <para>
+      MangoWC is a Wlroots-based Wayland compositor dependent on SceneFX for
+      animations and effects. It is small, based on DWL. Its configuration is
+      handled via a configuration file instead of source code.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&mangowc-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">mangowc Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+            <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
+      and <xref linkend="wlroots"/>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, and
+      <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
+      (for Xorg application/library support)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of MangoWC</title>
+
+    <para>
+      Install MangoWC by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring MangoWC</title>
+
+    <sect3 id="mangowc-wm-config">
+      <title>Config Files</title>
+      <para>
+        <filename>~/.config/mango/config.conf</filename>. The default version
+        is in <filename class="directory">/etc/mango</filename>. It can be used
+        but is a fallback and not recommended. It can be copied to
+        <filename class="directory">~/.config/mango</filename> manually.
+      </para>
+
+      <indexterm zone="mangowc-wm mangowc-wm-config">
+        <primary sortas="e-AA.config">~/.config/mango/config.conf</primary>
+      </indexterm>
+
+    </sect3>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        Create the configuration file:
+      </para>
+
+<screen><userinput>mkdir -pv ~/.config/mango &amp;&amp;
+cp -v /etc/mango/config.conf ~/.config/mango</userinput></screen>
+
+      <para>
+        Edit the configuration file as necessary to fit your workflow.
+        You can read how to configure MangoWC by reading the
+        <ulink url="https://github.com/DreamMaoMao/mangowc/wiki">MangoWC
+        Wiki</ulink>.
+      </para>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          mango and mmsg
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="mango">
+        <term><command>mango</command></term>
+        <listitem>
+          <para>
+            is a SceneFX Wlroots-based Wayland compositor
+          </para>
+          <indexterm zone="mangowc-wm mango">
+            <primary sortas="a-mango">mango</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mmsg">
+        <term><command>mmsg</command></term>
+        <listitem>
+          <para>
+            sends and retrieves messages to and from <command>mango</command>
+          </para>
+          <indexterm zone="mangowc-wm mmsg">
+            <primary sortas="a-mango">mmsg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

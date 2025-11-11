@@ -13,6 +13,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cde/cde.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hypr/hypr.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="i3/i3.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mangowc/mangowc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sxwm/sxwm.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wf/wf.xml"/>
 
