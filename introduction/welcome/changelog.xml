@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>November 12th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - intel-onevpl: 25.4.1 -&gt; 25.4.3. Fixes
+          <ulink url="&slfs-issues;/370">#370</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 11th, 2025</para>
       <itemizedlist>
         <listitem>
