@@ -20,22 +20,26 @@
     <title>Introduction to xeyes</title>
 
     <para>
-      The xeyes package provides an application that
-      displays eyes that follow the XCURSOR in an X
-      Window System environment. Its usecase is limited and even at the time it
-      was made, it was considered gimmicky. It got followed up by better
-      programs that did the premise better. The last usecase it has nowadays
-      is determining which GUI applications use Wayland or fall back to Xorg.
-      This is because xeyes can only follow the
-      cursor if it is found in an Xorg environment. The general Xorg server on
-      Wayland is shared by Xwayland. So when an
-      application is running in it, xeyes will be
-      able to see the cursor when it hovers over said window. For Wayland apps,
-      the cursor cannot be found at all. Thus, you can tell which apps use
-      Wayland or not. If you are just using Xorg, this app practically has no
-      use. If you are using Wayland and want to, for example, see progress on
-      Wayland support for Wine, this application
-      will show if it is using Wayland or Xorg.
+      The xeyes package provides an application that displays a pair eyes which
+      follow the XCURSOR in an X Window System environment.
+    </para>
+    <para>
+      Its usecase is rather limited. Even in its time, it was considered
+      gimmicky. It got followed up by better programs that handled the premise
+      better. The remaining usecase it fulfills nowadays is determining which
+      GUI applications use Wayland or fall back to Xorg.
+    </para>
+    <para>
+      The xeyes application can only follow the cursor if it is found in an
+      Xorg environment. The general Xorg server on Wayland is shared by
+      Xwayland. When an application is running in it, xeyes is able to see the
+      cursor when it hovers over the Xorg application. For Wayland
+      applications and within the general environment, the cursor cannot be
+      found at all. This allows for easy determination of what apps use
+      Xorg. If you are just using Xorg, this package has been superceded by
+      others. If you are using Wayland and want to see progress on
+      Wayland support for various packages, this application will show if they
+      are using Wayland or Xorg.
     </para>
 
     <itemizedlist spacing="compact">
