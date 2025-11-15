@@ -20,7 +20,7 @@
     <title>Introduction to wgetpaste</title>
 
     <para>
-      The wgetpaste package contains a script which uploads text files to 
+      The wgetpaste package contains a script which uploads text files to
       pastebin services.
     </para>
 

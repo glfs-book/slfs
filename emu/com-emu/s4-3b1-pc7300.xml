@@ -33,7 +33,7 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -69,7 +69,7 @@
       &unzip;
       (to unpack the distribution)
     </para>
- 
+
   </sect2>
 
 <!-- REMOVED IN LINUX-6.16
@@ -358,7 +358,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
           <para>
             provides functions for accessing AT&amp;T 3B1 UNIX
             PC/PC-7300 hard drives, hard drive images and their
-            filesystems 
+            filesystems
           </para>
           <indexterm zone="s4-3b1-pc7300 libs4">
             <primary sortas="c-libs4">libs4</primary>

@@ -138,5 +138,5 @@ install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
     </variablelist>
 
   </sect2>
-  
+
 </sect1>

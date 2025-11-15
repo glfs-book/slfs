@@ -425,7 +425,7 @@ rm -v testgnat*</userinput></screen>
       This command builds support for Ada, C, and C++. Refer to <ulink
       url="&blfs-svn;/general/gcc.html"/>
       to find what other languages are supported. Make sure to add
-      <parameter>ada</parameter> to the option if you recompile 
+      <parameter>ada</parameter> to the option if you recompile
       GCC.
     </para>
 

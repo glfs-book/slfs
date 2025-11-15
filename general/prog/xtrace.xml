@@ -63,7 +63,7 @@ mv -v DESTDIR/usr/share/man/man1/xtrace{,_x11}.1 &amp;&amp;
 cp -vR DESTDIR/usr/* /usr</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="content">
     <title>Contents</title>
 

@@ -10,7 +10,7 @@
 <sect1 id="msgraph" xreflabel="msgraph-&msgraph-version;">
 
   <?dbhtml filename="msgraph.html"?>
-  
+
   <title>msgraph-&msgraph-version;</title>
 
   <indexterm zone="msgraph">

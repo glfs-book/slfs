@@ -31,7 +31,7 @@
         </para>
       </listitem>
     </itemizedlist>
- 
+
     <bridgehead renderas="sect3">iputils Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
@@ -40,7 +40,7 @@
     </para>
 
   </sect2>
- 
+
   <sect2 role="installation">
     <title>Installation of iputils</title>
 
@@ -105,7 +105,7 @@ ninja</userinput></screen>
     <sect3><title>Configuration Information</title>
 
       <para>
-        As the &root; user, create the 
+        As the &root; user, create the
         <filename>/etc/profile.d/iputils.sh</filename> file to be able to use
         the newly installed tools:
       </para>
@@ -124,7 +124,7 @@ pathprepend /opt/iputils/bin PATH
 EOF</userinput></screen>
 
       <para>
-        Immediately after installation, update the current PATH for your 
+        Immediately after installation, update the current PATH for your
         current shell as a normal user:
       </para>
 

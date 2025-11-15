@@ -40,7 +40,7 @@
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
       <xref linkend="fcitx5"/>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
-      <ulink url="&blfs-svn;/x/gtk3.html">GTK3</ulink>, 
+      <ulink url="&blfs-svn;/x/gtk3.html">GTK3</ulink>,
       <ulink url="&blfs-svn;/x/gtk4.html">GTK4</ulink> (only one of the two is
       required, but both are recommended), and
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>
@@ -107,7 +107,7 @@ being installed in /usr -->
 
       <seglistitem>
         <seg>
-          fcitx5-gtk3-immodule-probing and fcitx5-gtk4-immodule-probing, 
+          fcitx5-gtk3-immodule-probing and fcitx5-gtk4-immodule-probing,
         </seg>
         <seg>
           libFcitx5GClient
