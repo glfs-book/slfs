@@ -48,7 +48,6 @@
     <para role="required">
       Display server (<ulink url="&blfs-svn;/x/xorg-server.html">Xorg-Server</ulink> or
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>),
-
       <ulink url="&blfs-svn;/general/icu.html">ICU</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>, and
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo)
@@ -62,7 +61,6 @@
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/python-modules.html#asciidoc">asciidoc</ulink>,
-
       <ulink url="&blfs-svn;/general/libheif.html">libheif</ulink>,
       <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
       <ulink url="&blfs-svn;/general/libjxl.html">libjxl</ulink>,
@@ -70,10 +68,9 @@
       <ulink url="&blfs-svn;/general/librsvg.html">librsvg</ulink>,
       <ulink url="&blfs-svn;/general/libtiff.html">libtiff</ulink>,
       <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
-
       <ulink url="&arch-pkgs;/extra/x86_64/libnsbmp/">libnsbmp</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/libnsgif/">libnsgif</ulink>,
-      <ulink url="&arch-pkgs;/extra/any/qoi/">qoi</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/libnsgif/">libnsgif</ulink>, and
+      <ulink url="&arch-pkgs;/extra/any/qoi/">qoi</ulink>
     </para>
 
   </sect2>
@@ -127,7 +124,7 @@ ninja</userinput></screen>
 
     <para>
       <parameter>-D windows=all</parameter>: This parameter builds support for
-      wayland and Xll, and determine which to use at runtime.
+      wayland and X11, and determine which to use at runtime.
     </para>
 
     <para>
