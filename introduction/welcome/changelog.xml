@@ -40,6 +40,15 @@
     -->
 
     <listitem>
+      <para>November 15th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - *: Purge trailing whitespace.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 12th, 2025</para>
       <itemizedlist>
         <listitem>

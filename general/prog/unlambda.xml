@@ -83,7 +83,7 @@ cc -o c/unlambda c/unlambda.c -I/usr/include/gc -lgc</userinput></screen>
           unlambda
         </seg>
         <seg>
-          None 
+          None
         </seg>
         <seg>
           None

@@ -5,7 +5,7 @@
   %general-entities;
 
   <!-- TODO: replace ftpmirror with ftp once gnu.org stops being DDoSed by
-       those AI idiots 
+       those AI idiots
        - seal331 13/09/2025 -->
   <!ENTITY autoconf-archive-download-http "https://ftpmirror.gnu.org/gnu/autoconf-archive/autoconf-archive-&autoconf-archive-version;.tar.xz">
 ]>
@@ -78,6 +78,6 @@ make</userinput></screen>
       </seglistitem>
     </segmentedlist>
 
-  </sect2>  
+  </sect2>
 
 </sect1>

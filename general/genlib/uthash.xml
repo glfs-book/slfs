@@ -44,7 +44,7 @@
 <screen role="root"><userinput>cp -av include/* /usr/include</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="content">
     <title>Contents</title>
 

@@ -54,7 +54,7 @@
 <screen role="root"><userinput>ln -sfv /usr/lib{,32}/pkgconfig/ffnvcodec.pc</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="content">
     <title>Contents</title>
 

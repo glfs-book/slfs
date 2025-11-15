@@ -94,7 +94,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      If you have passed the <option>-D ENABLE_DOC=ON</option> parameter to 
+      If you have passed the <option>-D ENABLE_DOC=ON</option> parameter to
       CMake, build the documentation by executing the following commands:
     </para>
 
@@ -167,7 +167,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
 
       <seglistitem>
         <seg>
-          comp-spell-dict, fcitx5, fcitx5-configtool, fcitx5-diagnose, 
+          comp-spell-dict, fcitx5, fcitx5-configtool, fcitx5-diagnose,
           fcitx5-remote, and fcitx5-wayland-launcher
         </seg>
         <seg>

@@ -92,7 +92,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
 <screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="commands">
     <title>Command Explanations</title>
 

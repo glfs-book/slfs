@@ -82,7 +82,7 @@ EOF</userinput></screen>
     <para>
       To download the needed files using
       <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink>,
-      use the following commands: 
+      use the following commands:
     </para>
 
 <screen><userinput>mkdir m64plus &amp;&amp;

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!-- always fetching git master... yes this isn't best practice, but the 
+  <!-- always fetching git master... yes this isn't best practice, but the
        actual download URLs have % signs in them and I have no idea how to
        make XML handle that -->
   <!ENTITY anthy-download-http "https://salsa.debian.org/debian/anthy/-/archive/debian/anthy-debian.tar.gz">
@@ -34,7 +34,7 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
   </sect2>
 
   <sect2 role="installation">
@@ -71,7 +71,7 @@ make</userinput></screen>
           anthy-agent and anthy-dic-tool
         </seg>
         <seg>
-          libanthy, libanthydic, and libanthyinput 
+          libanthy, libanthydic, and libanthyinput
         </seg>
         <seg>
           /usr/include/anthy and /usr/share/anthy
@@ -88,7 +88,7 @@ make</userinput></screen>
         <term><command>anthy-agent</command></term>
         <listitem>
           <para>
-            is a tool which integrates Anthy input into applications 
+            is a tool which integrates Anthy input into applications
           </para>
           <indexterm zone="anthy anthy-agent">
             <primary sortas="b-anthy-agent">anthy-agent</primary>

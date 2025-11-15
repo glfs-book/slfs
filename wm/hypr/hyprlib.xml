@@ -97,7 +97,7 @@ EOF</userinput></screen>
     <para>
       To download the needed files using
       <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink>,
-      use the following commands: 
+      use the following commands:
     </para>
 
 <screen><userinput>mkdir hyprlib &amp;&amp;
@@ -201,7 +201,7 @@ done</userinput></screen>
 <screen><userinput>exit</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="commands">
     <title>Command Explanations</title>
 

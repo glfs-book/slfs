@@ -69,10 +69,10 @@
     <para>
       First, fix two build failures caused by GCC-15:
     </para>
-    
+
 <screen><userinput remap="pre">sed -i '/&lt;string.h&gt;/a #include &lt;cstdint&gt;' api/mfx_dispatch/linux/mfxparser.cpp &amp;&amp;
 sed -i '/&lt;math.h&gt;/a #include &lt;cstdint&gt;'   samples/sample_vpp/src/sample_vpp_frc_adv.cpp</userinput></screen>
-        
+
     <para>
       Install Intel-MediaSDK by running the following
       commands:
@@ -120,30 +120,30 @@ make</userinput></screen>
       <parameter>-D BUILD_TOOLS=ON</parameter>: This parameter builds all of
       the tools needed for utilizing the GPUs that this package supports.
     </para>
-    
+
     <para>
       <parameter>-D ENABLE_ITT=OFF</parameter>: This parameter disables support
       for ITT (VTune) instrumentation support. This support requires several
       packages which are no longer available.
     </para>
-    
+
     <para>
       <parameter>-D ENABLE_OPENCL=OFF</parameter>: This parameter disables
       support for OpenCL acceleration via the Intel Media SDK. This has been
       disabled because the packages needed have been discontinued for years and
       are no longer available.
     </para>
-    
+
     <para>
       <parameter>-D ENABLE_WAYLAND=ON</parameter>: This parameter enables
       support for GPU acceleration for supported Intel GPUs when using Wayland.
     </para>
-    
+
     <para>
       <parameter>-D ENABLE_X11_DRI3=ON</parameter>: This parameter enables
       support for GPU acceleration through DRI3 for supported Intel GPUs.
     </para>
-    
+
     <para>
       <parameter>-D MFX_APPS_DIR=/usr/lib/mfx</parameter>: This parameter
       places the samples that were compiled into /usr/lib/mfx.
@@ -232,7 +232,7 @@ make</userinput></screen>
           </indexterm>
         </listitem>
       </varlistentry>
-      
+
       <varlistentry id="libmfxhw64">
         <term><filename class="libraryfile">libmfxhw64</filename></term>
         <listitem>
@@ -245,7 +245,7 @@ make</userinput></screen>
           </indexterm>
         </listitem>
       </varlistentry>
-      
+
       <varlistentry id="libmfx-tracer">
         <term><filename class="libraryfile">libmfx-tracer</filename></term>
         <listitem>

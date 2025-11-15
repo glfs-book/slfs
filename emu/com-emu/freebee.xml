@@ -32,7 +32,7 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -63,7 +63,7 @@
       (to unpack the distributions) and
       <ulink url="&blfs-svn;/general/sdl2.html">SDL2</ulink>
     </para>
- 
+
   </sect2>
 
   <sect2 role="installation">

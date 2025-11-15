@@ -130,6 +130,6 @@ ln -sfv rpmextract.sh /usr/bin/rpmextract</userinput></screen>
 
     </variablelist>
 
-  </sect2>  
+  </sect2>
 
 </sect1>

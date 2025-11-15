@@ -99,8 +99,8 @@ make</userinput></screen>
           libFcitx5Qt6DBusAddons and libFcitx5Qt6WidgetsAddons
         </seg>
         <seg>
-          libfcitx5platforminputcontextplugin (Qt plugin) and 
-          libfcitx-quickphrase-editor5 (Fcitx plugin) 
+          libfcitx5platforminputcontextplugin (Qt plugin) and
+          libfcitx-quickphrase-editor5 (Fcitx plugin)
         </seg>
         <seg>
           /usr/include/Fcitx5Qt6 and /usr/lib/fcitx5/qt6
