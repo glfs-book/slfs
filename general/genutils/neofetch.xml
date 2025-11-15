@@ -20,15 +20,15 @@
     <title>Introduction to neofetch</title>
 
     <para>
-      The neofetch package contains the 
-      neofetch script which outputs information 
+      The neofetch package contains the
+      neofetch script which outputs information
       about the system alongside ASCII art of the system's distro.
     </para>
 
     <note>
       <para>
         Neofetch has been archived since Apr 26, 2024. It is advisable to use a
-        more maintained fork or alternative such as 
+        more maintained fork or alternative such as
         hyfetch or fastfetch.
       </para>
     </note>

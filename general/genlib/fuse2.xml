@@ -155,7 +155,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             is a suid root program to mount and unmount
-            Fuse2 filesystems 
+            Fuse2 filesystems
           </para>
           <indexterm zone="fuse2 fusermount">
             <primary sortas="b-fusermount">fusermount</primary>
@@ -168,7 +168,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             is the command <command>mount</command> calls to mount a Fuse2
-            filesystem 
+            filesystem
           </para>
           <indexterm zone="fuse2 mount.fuse">
             <primary sortas="b-mount.fuse">mount.fuse</primary>

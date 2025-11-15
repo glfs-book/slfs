@@ -62,7 +62,7 @@
     <para>
       First, fix a build failure caused by GCC-15:
     </para>
-    
+
 <screen><userinput remap="pre">sed -i '/sample_vpp_frc_adv.h/a #include &lt;cstdint&gt;' tools/legacy/sample_vpp/src/sample_vpp_frc_adv.cpp</userinput></screen>
 
     <para>
@@ -193,7 +193,7 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
           </indexterm>
         </listitem>
       </varlistentry>
-      
+
       <varlistentry id="vpl-sample-decode">
         <term><command>vpl-sample-decode</command></term>
         <listitem>
@@ -260,7 +260,7 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
           </indexterm>
         </listitem>
       </varlistentry>
-      
+
     </variablelist>
   </sect2>
 </sect1>

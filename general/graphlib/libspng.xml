@@ -76,7 +76,7 @@ ninja</userinput></screen>
 <screen role="root"><userinput>ln -sfv libspng.pc /usr/lib/pkgconfig/spng.pc</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="commands">
     <title>Command Explanations</title>
 

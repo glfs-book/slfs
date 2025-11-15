@@ -36,7 +36,7 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -65,7 +65,7 @@
     <para role="recommended">
       <xref linkend="heirloom-sh"/>
     </para>
- 
+
   </sect2>
 
   <sect2 role="installation">
@@ -154,7 +154,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <seg>
           admin, cdc (link to rmdel), comb, delta, get, help, lex, m4, make,
           prs, prt, rmdel, sact (link to unget), sccs, sccsdiff, svr4.make
-          (link to make), unget, val, vc, what, and yacc 
+          (link to make), unget, val, vc, what, and yacc
         </seg>
         <seg>
           libl and liby (both static)

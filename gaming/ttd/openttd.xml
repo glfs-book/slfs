@@ -10,7 +10,7 @@
 
 <sect1 id="openttd" xreflabel="OpenTTD-&openttd-version;">
   <?dbhtml filename="openttd.html"?>
-  
+
   <title>OpenTTD-&openttd-version;</title>
 
   <indexterm zone="openttd">

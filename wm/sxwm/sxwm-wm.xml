@@ -10,7 +10,7 @@
 
 <sect1 id="sxwm-wm" xreflabel="sxwm-&sxwm-version;">
   <?dbhtml filename="sxwm-wm.html"?>
-	
+
   <title>sxwm-&sxwm-version;</title>
 
   <indexterm zone="sxwm-wm">
@@ -99,7 +99,7 @@ cp -v /usr/share/sxwmrc ~/.config/sxwmrc</userinput></screen>
         If sxwm is the only Window Manager you want
         to use, you can start it with an <filename>.xinitrc</filename> file in
         your home folder. Be sure to backup your current
-        <filename>.xinitrc</filename> before proceeding. 
+        <filename>.xinitrc</filename> before proceeding.
       </para>
 
 <screen><userinput>echo "exec sxwm" &gt;&gt; ~/.xinitrc</userinput></screen>

@@ -46,6 +46,9 @@
           <para>[tox] - scdoc: 1.11.3 -&gt; 1.11.4. Fixes
           <ulink url="&slfs-issues;/380">#380</ulink>.</para>
         </listitem>
+        <listitem>
+          <para>[tox] - *: Purge trailing whitespace.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
