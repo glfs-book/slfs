@@ -46,6 +46,9 @@
           <para>[tox] - glaze: 6.0.2 -&gt; 6.0.3. Fixes
           <ulink url="&slfs-issues;/379">#379</ulink>.</para>
         </listitem>
+        <listitem>
+          <para>[tox] - *: Purge trailing whitespace.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

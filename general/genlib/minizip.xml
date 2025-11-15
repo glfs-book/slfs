@@ -9,7 +9,7 @@
 
 <sect1 id="minizip" xreflabel="minizip from zlib-&zlib-version;">
   <?dbhtml filename="minizip.html"?>
-	
+
   <title>minizip from zlib-&zlib-version;</title>
 
   <indexterm zone="minizip">
