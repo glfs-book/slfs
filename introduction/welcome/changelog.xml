@@ -43,6 +43,10 @@
       <para>November 15th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fastfetch: 2.53.0 -&gt; 2.55.0. Fixes
+          <ulink url="&slfs-issues;/378">#378</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - *: Purge trailing whitespace.</para>
         </listitem>
       </itemizedlist>
