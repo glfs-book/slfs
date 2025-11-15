@@ -20,8 +20,7 @@
     <title>Introduction to scdoc</title>
 
     <para>
-      The scdoc package provides a man page
-      generator.
+      The scdoc package provides a man page generator.
     </para>
 
     <itemizedlist spacing="compact">
@@ -31,15 +30,14 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
   </sect2>
 
   <sect2 role="installation">
     <title>Installation of scdoc</title>
 
     <para>
-      Install scdoc by executing the following
-      commands:
+      Install scdoc by executing the following commands:
     </para>
 
 <screen><userinput>make PREFIX=/usr LDFLAGS="$LDFLAGS"</userinput></screen>
@@ -56,9 +54,8 @@
     <title>Command Explanations</title>
 
     <para>
-      <envar>LDFLAGS="$LDFLAGS"</envar>: This ensures that if
-      <envar>$LDFLAGS</envar> is set, that the build system respects it.
-      Otherwise, it will unset the variable for the build process.
+      <envar>LDFLAGS="$LDFLAGS"</envar>: This ensures that the build system
+      respects <envar>$LDFLAGS</envar> if set.
     </para>
 
   </sect2>
@@ -103,6 +100,6 @@
 
     </variablelist>
 
-  </sect2>  
+  </sect2>
 
 </sect1>
