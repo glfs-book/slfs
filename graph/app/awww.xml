@@ -86,7 +86,7 @@ ln -sfv /usr/bin/awww /usr/bin/swww &amp;&amp;
 ln -sfv /usr/bin/awww-daemon /usr/bin/swww-daemon</userinput></screen> -->
 
     <para>
-      If you wish to install shell completions, execute the relevant commands 
+      If you wish to install shell completions, execute the relevant commands
       for your shell(s) as the &root; user:
     </para>
 

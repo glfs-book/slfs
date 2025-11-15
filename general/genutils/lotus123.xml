@@ -136,12 +136,12 @@ make</userinput></screen>
 <screen role="root"><userinput>make prefix=/usr install</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="commands">
     <title>Command Explanations</title>
 
     <para>
-      <parameter>sed -i 's/\-ltinfo//g' ...</parameter>: This command avoids 
+      <parameter>sed -i 's/\-ltinfo//g' ...</parameter>: This command avoids
       linking against an Ncurses library that wasn't
       built in LFS.
     </para>

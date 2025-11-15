@@ -46,6 +46,9 @@
           <para>[tox] - tealdeer: 1.8.0 -&gt; 1.8.1. Fixes
           <ulink url="&slfs-issues;/382">#382</ulink>.</para>
         </listitem>
+        <listitem>
+          <para>[tox] - *: Purge trailing whitespace.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

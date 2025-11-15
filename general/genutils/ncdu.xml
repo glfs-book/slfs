@@ -30,7 +30,7 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
   </sect2>
 
   <sect2 role="installation">
@@ -91,6 +91,6 @@ make</userinput></screen>
 
     </variablelist>
 
-  </sect2>  
+  </sect2>
 
 </sect1>

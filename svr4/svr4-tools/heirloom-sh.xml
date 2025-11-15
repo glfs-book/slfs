@@ -32,7 +32,7 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -55,7 +55,7 @@
     <para role="required">
       <xref linkend="heirloom-ng"/>
     </para>
- 
+
   </sect2>
 
   <sect2 role="installation">

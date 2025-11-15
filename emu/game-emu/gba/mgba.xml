@@ -88,7 +88,7 @@ ninja</userinput></screen>
 mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="commands">
     <title>Command Explanations</title>
 

@@ -12,7 +12,7 @@
 
   <para>
     BLFS has more information regarding compilation, /usr vs /usr/local,
-    boot scripts, etc. at 
+    boot scripts, etc. at
     <ulink url="&blfs-svn;/introduction/important.html"/>.
     Unlike this book, this would be a chapter in BLFS.
     A lot of that information has been omitted as this book is more linear
