@@ -32,7 +32,7 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
     <bridgehead renderas="sect3">s-nail Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required Runtime</bridgehead>
@@ -45,7 +45,7 @@
       <ulink url="&blfs-svn;/postlfs/mitkrb.html">MIT Kerberos</ulink> and
       <ulink url="https://spamassassin.apache.org/">Apache SpamAssassin</ulink>
     </para>
- 
+
   </sect2>
 
   <sect2 role="installation">

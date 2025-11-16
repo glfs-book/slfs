@@ -81,7 +81,7 @@
 <screen role="root"><userinput>install -vm644 inxi.1 /usr/share/man/man1</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="content">
     <title>Contents</title>
 

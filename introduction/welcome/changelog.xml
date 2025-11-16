@@ -45,6 +45,9 @@
         <listitem>
           <para>[tox] - imv: Added.</para>
         </listitem>
+        <listitem>
+          <para>[tox] - *: Purge trailing whitespace.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

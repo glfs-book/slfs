@@ -115,7 +115,7 @@ ninja</userinput></screen>
 rm -vf /usr/lib/libyajl_s.a</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="commands">
     <title>Command Explanations</title>
 

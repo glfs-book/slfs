@@ -73,8 +73,8 @@
       </listitem>
       <listitem>
         <para>
-          <filename class="directory">/usr/5bin/posix2001</filename>:   
-          tools adhering to POSIX.1-2001 with SUSv3 extensions  
+          <filename class="directory">/usr/5bin/posix2001</filename>:
+          tools adhering to POSIX.1-2001 with SUSv3 extensions
         </para>
       </listitem>
       <listitem>

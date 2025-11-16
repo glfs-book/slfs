@@ -35,7 +35,7 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -146,6 +146,6 @@ mv -v /usr/share/man/man1/gkermit.l /usr/share/man/man1/gkermit.1</userinput></s
 
     </variablelist>
 
-  </sect2>  
+  </sect2>
 
 </sect1>

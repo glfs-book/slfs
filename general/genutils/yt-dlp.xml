@@ -4,6 +4,11 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
+  <!-- This technically should be in the Python Modules section. However, it
+       has been here instead, and moving it would lead users to believe it has
+       been axed or will lead to users thinking yt-dlp simply isn't in the
+       book. Thus, it's staying here. -->
+
   <!ENTITY yt-dlp-download-http
     "https://github.com/yt-dlp/yt-dlp/archive/&yt-dlp-version;/yt-dlp-&yt-dlp-version;.tar.gz">
 ]>
@@ -21,8 +26,8 @@
     <title>Introduction to yt-dlp</title>
 
     <para>
-      The yt-dlp package provides a CLI utility to download audio and video
-      files from thousands of websites, including YouTube. It can convert
+      The yt-dlp package provides a Python3 CLI utility to download audio and
+      video files from thousands of websites, including YouTube. It can convert
       downloads into other formats using FFmpeg.
     </para>
 
@@ -38,7 +43,7 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/general/zip.html">Zip</ulink>
+      <ulink url="&pydep;hatchling">Hatchling</ulink>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
@@ -50,8 +55,11 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/python-modules.html#requests">requests</ulink> and
-      <ulink url="&blfs-svn;/general/brotli.html">brotli</ulink>
+      <ulink url="&blfs-svn;/general/brotli.html">brotli</ulink> (with Python3
+      bindings),
+      <ulink url="&pydep;certifi">certifi</ulink>,
+      <ulink url="&pymod;requests">Requests</ulink>, and
+      <ulink url="&pydep;urllib3">Urllib3</ulink>
     </para>
 
   </sect2>
@@ -63,13 +71,13 @@
       Install yt-dlp by running the following commands:
     </para>
 
-<screen><userinput>make yt-dlp</userinput></screen>
+    &build-wheel;
 
     <para>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vDm755 yt-dlp -t /usr/bin/</userinput></screen>
+    <screen role="root"><userinput>&install-wheel; yt_dlp</userinput></screen>
 
   </sect2>
 
@@ -89,7 +97,8 @@
           None
         </seg>
         <seg>
-          None
+          /usr/lib/python&python3-majorver;/site-packages/yt_dlp and
+          /usr/lib/python&python3-majorver;/site-packages/yt_dlp-&yt-dlp-version;.dist-info
         </seg>
       </seglistitem>
     </segmentedlist>
