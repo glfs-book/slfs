@@ -46,7 +46,8 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      Display server (<ulink url="&blfs-svn;/x/xorg-server.html">Xorg-Server</ulink> or
+      Graphical environment (<ulink
+      url="&blfs-svn;/x/xorg-server.html">Xorg-Server</ulink> or
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>),
       <ulink url="&blfs-svn;/general/icu.html">ICU</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>, and
@@ -60,7 +61,7 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/python-modules.html#asciidoc">asciidoc</ulink>,
+      <ulink url="&pymod;asciidoc">asciidoc</ulink>,
       <ulink url="&blfs-svn;/general/libheif.html">libheif</ulink>,
       <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
       <ulink url="&blfs-svn;/general/libjxl.html">libjxl</ulink>,
