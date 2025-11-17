@@ -48,8 +48,7 @@
     <title>Installation of glaze</title>
 
     <para>
-      Install glaze by running the following
-      commands:
+      Install glaze by running the following commands:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
