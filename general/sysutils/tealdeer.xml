@@ -49,8 +49,7 @@
   <sect2 role="installation">
     <title>Installation of tealdeer</title>
     <para>
-      Install tealdeer by running the following
-      commands:
+      Install tealdeer by running the following commands:
     </para>
 
 <screen><userinput>cargo build --release</userinput></screen>
@@ -63,7 +62,7 @@
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vm755 target/release/tldr /usr/bin</userinput></screen>
+<screen role="root"><userinput>install -vDm755 target/release/tldr -t /usr/bin</userinput></screen>
 
     <para>
       Now download the page cache (this will need to be done for every user):
