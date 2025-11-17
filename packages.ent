@@ -54,6 +54,7 @@
 <!ENTITY cldr-emoji-annotation-version       "38">
 <!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">
 <!ENTITY flatpak-version                     "1.16.1">
+<!ENTITY imv-version                         "5.0.0">
 <!ENTITY inxi-rev                            "1">
 <!ENTITY inxi-version                        "3.3.39-&inxi-rev;">
 <!ENTITY jstest-sdl-minor-version            "710687">

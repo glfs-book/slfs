@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY imv-download-http
+    "https://git.sr.ht/~exec64/imv/archive/v&imv-version;.tar.gz">
+]>
+
+<sect1 id="imv" xreflabel="imv-&imv-version;">
+  <?dbhtml filename="imv.html"?>
+
+  <title>imv-&imv-version;</title>
+
+  <indexterm zone="imv">
+    <primary sortas="a-imv">imv</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to imv</title>
+
+    <para>
+      The imv package provides an image viewer.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&imv-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Optional patch:
+          <ulink url="https://raw.githubusercontent.com/alpinelinux/aports/refs/heads/master/community/imv/move-wayland-and-x11-to-libexec.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">imv Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      Graphical environment (<ulink
+      url="&blfs-svn;/x/xorg-server.html">Xorg-Server</ulink> or
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>),
+      <ulink url="&blfs-svn;/general/icu.html">ICU</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>, and
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo)
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&glfs-website;/shareddeps/glu.html">GLU</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&pymod;asciidoc">asciidoc</ulink>,
+      <ulink url="&blfs-svn;/general/libheif.html">libheif</ulink>,
+      <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
+      <ulink url="&blfs-svn;/general/libjxl.html">libjxl</ulink>,
+      <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
+      <ulink url="&blfs-svn;/general/librsvg.html">librsvg</ulink>,
+      <ulink url="&blfs-svn;/general/libtiff.html">libtiff</ulink>,
+      <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/libnsbmp/">libnsbmp</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/libnsgif/">libnsgif</ulink>, and
+      <ulink url="&arch-pkgs;/extra/any/qoi/">qoi</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of imv</title>
+
+    <para>
+      Optionally, apply a patch to move the Wayland and X11 backends to the
+      libexec directory:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../move-wayland-and-x11-to-libexec.patch</userinput></screen>
+
+    <para>
+      Force imv to link to the common ICU library:
+    </para>
+
+<!-- https://raw.githubusercontent.com/alpinelinux/aports/7a73ae2bf717a71642a4455a777c6cc996c24c22/community/imv/imv-4.5.0-Link-to-the-common-ICU-library.patch -->
+<screen><userinput>sed -i 's/icu-io/icu-uc/g' meson.build</userinput></screen>
+
+    <para>
+      Install imv by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup ..              \
+      --prefix=/usr         \
+      --buildtype=release   \
+      -D windows=all        \
+      -D unicode=icu        \
+      -D test=disabled      \
+      -D contrib-commands=false &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &meson-buildtype-release;
+
+    <para>
+      <parameter>-D windows=all</parameter>: This parameter builds support for
+      wayland and X11, and determine which to use at runtime.
+    </para>
+
+    <para>
+      <parameter>-D unicode=icu</parameter>: This parameter sets ICU as the
+      Unicode backend.
+    </para>
+
+    <para>
+      <parameter>-D tests=disabled</parameter>: This parameter disables tests.
+    </para>
+
+    <para>
+      <parameter>-D contrib-commands=false</parameter>: This parameter prevents
+      the installation of contributed commands. If you wish to install them,
+      remove this parameter.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          imv,
+          imv-msg,
+          imv-wayland, and
+          imv-x11
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="imv-bin">
+        <term><command>imv</command></term>
+        <listitem>
+          <para>
+            is an image viewer
+          </para>
+          <indexterm zone="imv imv-bin">
+            <primary sortas="b-imv-bin">imv</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="imv-msg">
+        <term><command>imv-msg</command></term>
+        <listitem>
+          <para>
+            sends commands to a running imv instance
+          </para>
+          <indexterm zone="imv imv-msg">
+            <primary sortas="b-imv-msg">imv-msg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="imv-wayland">
+        <term><command>imv-wayland</command></term>
+        <listitem>
+          <para>
+            is the Wayland backend for imv
+          </para>
+          <indexterm zone="imv imv-wayland">
+            <primary sortas="b-imv-wayland">imv-wayland</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="imv-x11">
+        <term><command>imv-x11</command></term>
+        <listitem>
+          <para>
+            is the X11 backend for imv
+          </para>
+          <indexterm zone="imv imv-x11">
+            <primary sortas="b-imv-x11">imv-x11</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
