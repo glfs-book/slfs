@@ -79,7 +79,7 @@ version, so keep this at that. -->
 <!ENTITY neofetch-version                    "7.1.0">
 <!ENTITY fastfetch-version                   "2.53.0">
 <!ENTITY rpmextract-version                  "1.0">
-<!ENTITY scdoc-version                       "1.11.3">
+<!ENTITY scdoc-version                       "1.11.4">
 <!ENTITY tmux-version                        "3.5a">
 <!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20250102">
@@ -89,7 +89,7 @@ version, so keep this at that. -->
 <!ENTITY eza-version                         "0.23.4">
 <!ENTITY iputils-version                     "20250605">
 <!ENTITY libtree-version                     "3.1.1">
-<!ENTITY tealdeer-version                    "1.8.0">
+<!ENTITY tealdeer-version                    "1.8.1">
 <!-- Programming -->
 <!ENTITY autoconf-archive-version            "2024.10.16">
 <!ENTITY befunge-minor-version               "2_25">
