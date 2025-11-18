@@ -37,7 +37,7 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
+      &sdl2;
     </para>
 
   </sect2>
@@ -71,8 +71,7 @@ make</userinput></screen>
 
     <para>
       <parameter>--disable-sdltest --disable-examples</parameter>: These
-      parameters disable linking against a library that was deleted in <ulink
-      url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>.
+      parameters disable linking against a library that was deleted in &sdl2;.
     </para>
 
   </sect2>

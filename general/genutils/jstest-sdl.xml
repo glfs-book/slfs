@@ -38,7 +38,7 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
+      &sdl2;
     </para>
 
   </sect2>

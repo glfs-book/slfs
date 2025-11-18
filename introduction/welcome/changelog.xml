@@ -40,6 +40,15 @@
     -->
 
     <listitem>
+      <para>November 18th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - sdl2-compat; SDL3: Removed, now in GLFS+BLFS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 17th, 2025</para>
       <itemizedlist>
         <listitem>

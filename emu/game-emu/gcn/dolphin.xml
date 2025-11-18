@@ -64,7 +64,7 @@
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
-      <xref linkend="sdl3"/>,
+      &sdl3;,
       <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
     </para>

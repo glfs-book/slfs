@@ -42,7 +42,7 @@
       &unzip;,
       &opengl;,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, and
+      &sdl2;, and
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 

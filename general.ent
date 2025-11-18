@@ -216,6 +216,10 @@ export -f as_root</userinput></screen>
           or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>)">
 <!ENTITY glu
          "<ulink url='&glfs-website;/shareddeps/glu.html'>GLU</ulink>">
+<!ENTITY sdl2
+         "<ulink url='&blfs-svn;/multimedia/sdl2.html'>sdl2-compat</ulink>">
+<!ENTITY sdl3
+         "<ulink url='&blfs-svn;/multimedia/sdl3.html'>SDL3</ulink>">
 
 <!ENTITY % xinclude-entities SYSTEM "xent.ent">
 %xinclude-entities;
