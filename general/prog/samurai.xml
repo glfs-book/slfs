@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY samurai-download-http "https://github.com/michaelforney/samurai/archive/&samurai-version;/samurai-&samurai-version;.tar.gz">
+]>
+
+<sect1 id="samurai" xreflabel="samurai-&samurai-minor;">
+  <?dbhtml filename="samurai.html"?>
+
+  <title>samurai-&samurai-minor;</title>
+
+  <indexterm zone="samurai">
+    <primary sortas="a-samurai">samurai</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to samurai</title>
+
+    <para>
+      The samurai package provides a drop-in replacement for the Ninja package.
+      It aims for full compatibility.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&samurai-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of samurai</title>
+
+    <para>
+      Install samurai by running the following commands:
+    </para>
+
+    <screen><userinput>make CC=cc CFLAGS+=" -std=c99"</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring samurai</title>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        If you want <command>samu</command> to be used whenever
+        <command>ninja</command> is ran, move the original Ninja
+        copy out of the way and make a symlink as the &root; user:
+      </para>
+
+<screen role="root"><userinput>mv /usr/bin/ninja{,.old} &amp;&amp;
+ln -svf samu /usr/bin/ninja</userinput></screen>
+
+      <para>
+        <command>samu</command> won't run on all logical CPUs or threads by
+        default, similar to <command>make</command>. The premise to make it do
+        so is the same process: pass
+        <literal>-j<replaceable>&lt;x&gt;</replaceable></literal>, where
+        <literal><replaceable>&lt;x&gt;</replaceable></literal> is the number
+        of logical CPUs you want used, whenever <command>samu</command> (or
+        <command>ninja</command> if you made the symlink) is ran. You can get
+        around having to specify it everytime by setting
+        <envar>SAMUFLAGS</envar> and including
+        <literal>-j<replaceable>&lt;x&gt;</replaceable></literal> to it,
+        like so:
+      </para>
+
+<screen><computeroutput>export SAMUFLAGS=-j$(nproc)</computeroutput></screen>
+
+      <para>
+        A trick you can do is make <envar>SAMUFLAGS</envar>
+        contain <envar>$MAKEFLAGS</envar> if <envar>MAKEFLAGS</envar> only
+        contains the <literal>-j</literal> option, like so:
+      </para>
+
+      <screen><userinput>export SAMUFLAGS=$MAKEFLAGS</userinput></screen>
+
+      <para>
+        Add it to a Bash profile script like
+        <filename>~/.bash_profile</filename> to avoid having to set it after
+        logging in.
+      </para>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          samu
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="samu">
+        <term><command>samu</command></term>
+        <listitem>
+          <para>
+            is a drop-in replacement for <command>ninja</command>
+          </para>
+          <indexterm zone="samurai samu">
+            <primary sortas="b-samu">samu</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
