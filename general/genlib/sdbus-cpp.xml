@@ -89,7 +89,7 @@ ninja</userinput></screen>
 
     <para>
       <parameter>-D CMAKE_INSTALL_DOCDIR=/usr/share/doc/sdbus-c++-&sdbus-cpp-version;</parameter>:
-      This command installs documentation to a versioned directory, consistent
+      This parameter installs documentation to a versioned directory, consistent
       with other packages.
     </para>
 
