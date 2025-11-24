@@ -43,6 +43,10 @@
       <para>November 23rd, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - hyprlang: 0.6.4 -&gt; 0.6.6. Fixes
+          <ulink url="&slfs-issues;/389">#389</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - sdbus-c++: 2.1.0 -&gt; 2.2.1. Fixes
           <ulink url="&slfs-issues;/391">#391</ulink>.</para>
         </listitem>
