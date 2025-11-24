@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>November 23rd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - sdbus-c++: 2.1.0 -&gt; 2.2.1. Fixes
+          <ulink url="&slfs-issues;/391">#391</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 18th, 2025</para>
       <itemizedlist>
         <listitem>

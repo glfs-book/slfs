@@ -69,6 +69,7 @@ cd    build &amp;&amp;
 cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
       -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/sdbus-c++-&sdbus-cpp-version; \
       -G Ninja .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -77,8 +78,7 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>ninja install &amp;&amp;
-mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</userinput></screen>
+<screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
 
@@ -88,9 +88,9 @@ mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</userinput></screen>
     &cmake-skip-install-rpath;
 
     <para>
-      <command>mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</command>:
-      This command makes the docs numbered and consistent with every other
-      packages in the docs.
+      <parameter>-D CMAKE_INSTALL_DOCDIR=/usr/share/doc/sdbus-c++-&sdbus-cpp-version;</parameter>:
+      This command installs documentation to a versioned directory, consistent
+      with other packages.
     </para>
 
   </sect2>
