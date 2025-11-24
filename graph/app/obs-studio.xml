@@ -101,7 +101,8 @@
         </listitem>
         <listitem>
           <para>
-            <xref linkend="cuda"/> and <xref linkend="nv-codec-headers"/>
+            <xref linkend="cuda"/> and <ulink
+            url="&glfs-website;/shareddeps/nv-codec-headers.html">nv-codec-headers</ulink>
             (required for NVIDIA hardware encoding)
           </para>
         </listitem>

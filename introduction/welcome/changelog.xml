@@ -43,6 +43,9 @@
       <para>November 23rd, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - nv-codec-headers (ffnvcodec): Moved to GLFS.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - hyprlang: 0.6.4 -&gt; 0.6.6. Fixes
           <ulink url="&slfs-issues;/389">#389</ulink>.</para>
         </listitem>
