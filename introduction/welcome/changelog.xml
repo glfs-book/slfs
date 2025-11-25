@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>November 24th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - Update the book's Python version to 3.14. All modules
+          including yt-dlp have been tested against it.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 23rd, 2025</para>
       <itemizedlist>
         <listitem>

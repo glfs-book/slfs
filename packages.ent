@@ -106,8 +106,8 @@ version, so keep this at that. -->
 <!ENTITY gnat-binary-version                 "15.1.0-2">
 <!-- START PYTHON -->
 <!ENTITY python3-major                       "3">
-<!ENTITY python3-minor                       "13">
-<!ENTITY python3-patch                       "4">
+<!ENTITY python3-minor                       "14">
+<!ENTITY python3-patch                       "0">
 <!ENTITY python3-majorver                    "&python3-major;.&python3-minor;">
 <!ENTITY python3-version                     "&python3-majorver;.&python3-patch;">
 <!ENTITY python3-lib-suffix                  "cpython-&python3-major;&python3-minor;-&lt;arch&gt;-linux-gnu">
