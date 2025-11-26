@@ -10,7 +10,6 @@
 <sect1 id="idle" xreflabel="idle-&idle-minor-version;">
   <?dbhtml filename="idle.html"?>
 
-
   <title>idle-&idle-minor-version;</title>
 
   <indexterm zone="idle">
@@ -67,7 +66,7 @@
     <para role="required">
       &unzip;
       (to unpack the distributions) and
-      <ulink url="&blfs-svn;/multimedia/sdl.html">sdl12-compat</ulink>
+      <xref linkend="sdl"/>
     </para>
 
   </sect2>

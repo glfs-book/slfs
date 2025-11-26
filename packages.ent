@@ -143,6 +143,7 @@ version, so keep this at that. -->
 <!ENTITY ladspa-sdk-version                  "1.17">
 <!ENTITY noise-suppression-version           "1.10">
 <!ENTITY rubberband-version                  "4.0.0">
+<!ENTITY sdl-version                         "1.2.70">
 
 <!-- GRAPH -->
 <!-- Graphical Toolkits -->

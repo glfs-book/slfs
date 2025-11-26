@@ -40,6 +40,15 @@
     -->
 
     <listitem>
+      <para>November 26th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - sdl12-compat: Added, needed by idle.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 24th, 2025</para>
       <itemizedlist>
         <listitem>

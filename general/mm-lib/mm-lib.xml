@@ -18,5 +18,6 @@
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ladspa-sdk.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="noise-suppression.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rubberband.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sdl.xml"/>
 
 </chapter>
