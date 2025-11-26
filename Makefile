@@ -17,13 +17,10 @@ RENDERTMP   := $(shell mktemp -d)
 HTML_ROOT   ?= $(HOME)/public_html
 DUMP_ROOT   ?= $(HOME)
 CHUNK_QUIET ?= 1
-ROOT_ID      =
 SHELL        = /bin/bash
 
-ALLXML := $(filter-out $(RENDERTMP)/%, \
-	$(wildcard *.xml */*.xml */*/*.xml */*/*/*.xml */*/*/*/*.xml))
-ALLXSL := $(filter-out $(RENDERTMP)/%, \
-	$(wildcard *.xsl */*.xsl */*/*.xsl */*/*/*.xsl */*/*/*/*.xsl))
+ALLXML := $(shell find . -mindepth 1 -name '*.xml' ! -path '$(RENDERTMP)/*')
+ALLXSL := $(shell find . -mindepth 1 -name '*.xsl' ! -path '$(RENDERTMP)/*')
 
 ifdef V
   Q =
@@ -126,33 +123,26 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(SLFSHTML) version wget-list
 	@echo "Generating chunked XHTML files..."
 	$(Q)xsltproc --nonet                                    \
                 --stringparam chunk.quietly $(CHUNK_QUIET) \
-                --stringparam rootid "$(ROOT_ID)"          \
                 --stringparam base.dir $(BASEDIR)/         \
                 stylesheets/slfs-chunked.xsl            \
                 $(RENDERTMP)/$(SLFSHTML)
-
+	
 	@echo "Copying CSS code, images, and patches..."
-	$(Q)if [ ! -e $(BASEDIR)/stylesheets ]; then \
-      mkdir -p $(BASEDIR)/stylesheets;          \
-   fi;
-
+	$(Q)mkdir -p $(BASEDIR)/stylesheets
+	
 	$(Q)cp $(THEME_PATH)/$(THEME).lfs.css $(BASEDIR)/stylesheets/lfs.css
 	$(Q)cp stylesheets/lfs-xsl/lfs-print.css $(BASEDIR)/stylesheets
 	$(Q)sed -i 's|../stylesheet|stylesheet|' $(BASEDIR)/index.html
-
-	$(Q)if [ ! -e $(BASEDIR)/images ]; then \
-      mkdir -p $(BASEDIR)/images;          \
-   fi;
+	
+	$(Q)mkdir -p $(BASEDIR)/images
 	$(Q)cp images/*.{ico,png} $(BASEDIR)/images
-
+	
 	$(Q)cd $(BASEDIR)/; sed -e "s@../images@images@g"           \
                            -i *.html
-
-	$(Q)if [ ! -e $(BASEDIR)/patches ]; then \
-		mkdir -p $(BASEDIR)/patches;          \
-   fi;
+	
+	$(Q)mkdir -p $(BASEDIR)/patches
 	$(Q)cp -r patches/* $(BASEDIR)/patches
-
+	
 	@echo "Running Tidy and obfuscate.sh on chunked XHTML..."
 	$(Q)for filename in `find $(BASEDIR) -name "*.html"`; do       \
       tidy -config tidy.conf $$filename;                          \
@@ -160,14 +150,14 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(SLFSHTML) version wget-list
       bash obfuscate.sh $$filename;                               \
       sed -i -e "1,20s@text/html@application/xhtml+xml@g" $$filename; \
    done;
-
+	
 	$(Q)$(CLEAN)
 
 validate: $(RENDERTMP)/$(SLFSFULL)
 $(RENDERTMP)/$(SLFSFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
-	$(Q)[ -d $(RENDERTMP) ] || mkdir -p $(RENDERTMP)
+	$(Q)mkdir -p $(RENDERTMP)
 	$(Q)trap '$(CLEAN)' EXIT
-
+	
 	@echo "Rendering the book for $(REV)..."
 	$(Q)xsltproc --nonet                               \
                 --xinclude                            \
@@ -175,14 +165,14 @@ $(RENDERTMP)/$(SLFSFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
                 --stringparam profile.revision $(REV) \
                 stylesheets/lfs-xsl/profile.xsl       \
                 index.xml
-
+	
 	@echo "Validating the book..."
 	$(Q)xmllint --nonet                             \
                --noent                             \
                --postvalid                         \
                --output $(RENDERTMP)/$(SLFSFULL)   \
                $(RENDERTMP)/$(SLFSHTML2)
-
+	
 profile-html: $(RENDERTMP)/$(SLFSHTML)
 $(RENDERTMP)/$(SLFSHTML): $(RENDERTMP)/$(SLFSFULL) version
 	@echo "Generating profiled XML for XHTML..."
@@ -210,7 +200,7 @@ $(BASEDIR)/test-links: $(RENDERTMP)/$(SLFSFULL) version
                 --output $(BASEDIR)/test-links \
                 stylesheets/wget-list.xsl      \
                 $(RENDERTMP)/$(SLFSFULL)
-
+	
 	@echo "Checking URLs, first pass..."
 	$(Q)rm -f $(BASEDIR)/{good,bad,true_bad}_urls
 	$(Q)for URL in `cat $(BASEDIR)/test-links`; do                     \
@@ -221,7 +211,7 @@ $(BASEDIR)/test-links: $(RENDERTMP)/$(SLFSFULL) version
             echo $$URL >> $(BASEDIR)/good_urls 2>&1;                  \
          fi;                                                          \
    done
-
+	
 	@echo "Checking URLs, second pass..."
 	$(Q)for URL2 in `cat $(BASEDIR)/bad_urls`; do                       \
          wget --spider --tries=2 --timeout=60 $$URL2 >>/dev/null 2>&1; \
@@ -231,7 +221,7 @@ $(BASEDIR)/test-links: $(RENDERTMP)/$(SLFSFULL) version
            echo $$URL2 >> $(BASEDIR)/good_urls 2>&1;                   \
          fi; \
    done
-
+	
 	$(Q)$(CLEAN)
 
 bootscripts:
