@@ -19,10 +19,8 @@ DUMP_ROOT   ?= $(HOME)
 CHUNK_QUIET ?= 1
 SHELL        = /bin/bash
 
-ALLXML := $(filter-out $(RENDERTMP)/%, \
-	$(wildcard *.xml */*.xml */*/*.xml */*/*/*.xml */*/*/*/*.xml))
-ALLXSL := $(filter-out $(RENDERTMP)/%, \
-	$(wildcard *.xsl */*.xsl */*/*.xsl */*/*/*.xsl */*/*/*/*.xsl))
+ALLXML := $(shell find . -mindepth 1 -name '*.xml' ! -path '$(RENDERTMP)/*')
+ALLXSL := $(shell find . -mindepth 1 -name '*.xsl' ! -path '$(RENDERTMP)/*')
 
 ifdef V
   Q =
