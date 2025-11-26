@@ -43,6 +43,10 @@
       <para>November 26th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - FluidSynth: Added. Fixes
+          <ulink url="&slfs-issues;/390">#390</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - sdl12-compat: Added, needed by idle.</para>
         </listitem>
       </itemizedlist>

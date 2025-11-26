@@ -63,7 +63,7 @@
       <ulink
         url="https://chromium.googlesource.com/breakpad/breakpad">breakpad</ulink>,
       <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>, and
-      <ulink url="&arch-pkgs;/extra/x86_64/fluidsynth/">fluidsynth</ulink>
+      <xref linkend="fluidsynth"/>
     </para>
 
   </sect2>

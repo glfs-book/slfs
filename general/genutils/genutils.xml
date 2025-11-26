@@ -20,6 +20,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="btop.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cldr-emoji-annotation.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="flatpak.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fluidsynth.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="imv.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="inxi.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="jstest-sdl.xml"/>
