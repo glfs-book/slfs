@@ -86,7 +86,7 @@ version, so keep this at that. -->
 <!ENTITY tmux-version                        "3.5a">
 <!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20250102">
-<!ENTITY yt-dlp-version                      "2025.10.22">
+<!ENTITY yt-dlp-version                      "2025.11.12">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.13.0">
 <!ENTITY eza-version                         "0.23.4">
@@ -182,8 +182,8 @@ version, so keep this at that. -->
 <!ENTITY fcitx5-gtk-version                  "5.1.4">
 <!ENTITY fcitx5-lua-version                  "5.0.15">
 <!ENTITY fcitx5-chinese-addons-version       "5.1.10">
-<!ENTITY fcitx5-table-extra-version          "5.1.8">
-<!ENTITY fcitx5-anthy-version                "5.1.7">
+<!ENTITY fcitx5-table-extra-version          "5.1.9">
+<!ENTITY fcitx5-anthy-version                "5.1.8">
 <!ENTITY fcitx5-m17n-version                 "5.1.5">
 <!ENTITY fcitx5-configtool-version           "5.1.11">
 

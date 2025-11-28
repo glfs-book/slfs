@@ -40,6 +40,24 @@
     -->
 
     <listitem>
+      <para>November 28th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - fcitx5-anthy: 5.1.7 -&gt; 5.1.8. Fixes
+          <ulink url="&slfs-issues;/364">#364</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-table-extra: 5.1.8 -&gt; 5.1.9. Fixes
+          <ulink url="&slfs-issues;/365">#365</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - yt-dlp: 2025.10.22 -> 2025.11.12. Fixes
+          <ulink url="&slfs-issues;/381">#381</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 26th, 2025</para>
       <itemizedlist>
         <listitem>

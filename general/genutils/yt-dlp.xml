@@ -49,8 +49,9 @@
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
-      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>, and
-      <ulink url="&blfs-svn;/postlfs/make-ca.html">make-ca</ulink>
+      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
+      <ulink url="&blfs-svn;/postlfs/make-ca.html">make-ca</ulink>, and
+      <ulink url="&blfs-svn;/general/nodejs.html">Node.js</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
@@ -78,6 +79,31 @@
     </para>
 
     <screen role="root"><userinput>&install-wheel; yt_dlp</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring yt-dlp</title>
+
+    <para>
+      YouTube has made it so JavaScript challenges need to be done in order to
+      pull from its site. If you download YouTube videos using this package,
+      download a JavaScript runtime/engine like <ulink
+      url="&blfs-svn;/general/nodejs.html">Node.js</ulink>. The following
+      instructions assume you have it installed. Next, create a system
+      configuration file, telling yt-dlp to use Node.js for JS challenges and
+      automatically download the challenge scripts required, as the &root;
+      user:
+    </para>
+
+<screen role="root"><userinput>cat &gt; /etc/yt-dlp.conf &lt;&lt; EOF
+<literal>--js-runtimes node --remote-components ejs:github</literal>
+EOF</userinput></screen>
+
+    <para>
+      Now yt-dlp will use Node.js to solve JS challenges when downloading
+      YouTube videos, automatically downloading scripts by yt-dlp to do so.
+    </para>
 
   </sect2>
 
