@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>November 29th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - wlr-randr: Added. Fixes
+          <ulink url="&slfs-issues;/377">#377</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 28th, 2025</para>
       <itemizedlist>
         <listitem>

@@ -34,6 +34,7 @@
 <!ENTITY tomlplusplus-version                "3.4.0">
 <!ENTITY uthash-version                      "2.3.0">
 <!ENTITY websocketpp-version                 "0.8.2">
+<!ENTITY wlr-randr-version                   "0.5.0">
 <!ENTITY yajl-version                        "2.1.0">
 <!-- Graphical Libraries -->
 <!ENTITY fcft-version                        "3.3.2">

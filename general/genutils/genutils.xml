@@ -38,6 +38,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tmux.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wgetpaste.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="winetricks.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wlr-randr.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yt-dlp.xml"/>
 
 </chapter>
