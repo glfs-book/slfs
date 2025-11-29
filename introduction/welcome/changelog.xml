@@ -43,6 +43,9 @@
       <para>November 29th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fish: Added.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - wlr-randr: Added. Fixes
           <ulink url="&slfs-issues;/377">#377</ulink>.</para>
         </listitem>

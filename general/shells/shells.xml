@@ -15,6 +15,7 @@
     reason or another and may be dependencies of packages in this book.
   </para>
 
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fish.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ksh.xml"/>
 
 </chapter>
