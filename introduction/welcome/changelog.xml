@@ -43,6 +43,22 @@
       <para>November 29th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - aquamarine: 0.9.5 -&gt; 0.10.0. Fixes
+          <ulink url="&slfs-issues;/400">#400</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprgraphics: 0.3.0 -&gt; 0.4.0. Fixes
+          <ulink url="&slfs-issues;/402">#402</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprtoolkit: 0.3.0 -&gt; 0.4.0. Fixes
+          <ulink url="&slfs-issues;/403">#403</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.10.2 -&gt; 0.10.4. Fixes
+          <ulink url="&slfs-issues;/404">#404</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - fish: Added.</para>
         </listitem>
         <listitem>

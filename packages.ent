@@ -194,13 +194,13 @@ version, so keep this at that. -->
 <!ENTITY cde-de-version                      "2.5.2">
 <!-- Hypr -->
 <!ENTITY hyprland-protocols-version          "0.7.0">
-<!ENTITY hyprutils-version                   "0.10.2">
+<!ENTITY hyprutils-version                   "0.10.4">
 <!ENTITY hyprlang-version                    "0.6.6">
 <!ENTITY hyprcursor-version                  "0.1.13">
 <!ENTITY hyprwayland-scanner-version         "0.4.5">
-<!ENTITY aquamarine-version                  "0.9.5">
-<!ENTITY hyprgraphics-version                "0.3.0">
-<!ENTITY hyprtoolkit-version                 "0.3.0">
+<!ENTITY aquamarine-version                  "0.10.0">
+<!ENTITY hyprgraphics-version                "0.4.0">
+<!ENTITY hyprtoolkit-version                 "0.4.0">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-guiutils-version           "0.1.0">
 <!ENTITY hyprland-version                    "0.52.1">
