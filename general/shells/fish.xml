@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY fish-download-http "https://github.com/fish-shell/fish-shell/releases/download/&fish-version;/fish-&fish-version;.tar.xz">
+]>
+
+<sect1 id="fish" xreflabel="fish-&fish-version;">
+  <?dbhtml filename="fish.html"?>
+
+  <title>fish-&fish-version;</title>
+
+  <indexterm zone="fish">
+    <primary sortas="a-fish">fish</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to fish</title>
+
+    <para>
+      The fish package provides a friendly interactive shell.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&fish-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">fish Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> and
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&pymod;sphinx">Sphinx</ulink> (to build documentation)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of fish</title>
+
+    <para>
+      Install fish by executing the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr     \
+      -D CMAKE_INSTALL_SYSCONFDIR=/etc \
+      -D CMAKE_BUILD_TYPE=Release      \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON   \
+      -D FISH_USE_SYSTEM_PCRE2=ON      \
+      -D WITH_GETTEXT=ON               \
+      -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/fish-&fish-version; \
+      -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring fish</title>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        As the &root; user, update <filename>/etc/shells</filename> to include
+        the fish shell:
+      </para>
+
+<screen role="root"><userinput>cat &gt;&gt; /etc/shells &lt;&lt; "EOF"
+<literal>/usr/bin/fish</literal>
+EOF</userinput></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+     &cmake-skip-install-rpath;
+
+    <para>
+      <parameter>-D CMAKE_INSTALL_DOCDIR=/usr/share/doc/fish-&fish-version;</parameter>:
+      This parameter installs documentation in a versioned directory, consistent
+      with other packages.
+    </para>
+    <para>
+      <parameter>-D FISH_USE_SYSTEM_PCRE2=ON</parameter>: This parameter tells
+      fish to link against the pcre2 installed in LFS.
+    </para>
+    <para>
+      <parameter>-D WITH_GETTEXT=ON</parameter>: This parameter enables
+      translations.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          fish,
+          fish_indent,
+          fish_key_reader, and
+          create_manpage_completions.py
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /etc/fish,
+          /usr/share/fish, and
+          /usr/share/doc/fish-&fish-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="fish-bin">
+        <term><command>fish</command></term>
+        <listitem>
+          <para>
+            is the friendly interactive shell
+          </para>
+          <indexterm zone="fish fish">
+            <primary sortas="b-fish">fish</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fish_indent">
+        <term><command>fish_indent</command></term>
+        <listitem>
+          <para>
+            prettifies fish code
+          </para>
+          <indexterm zone="fish fish_indent">
+            <primary sortas="b-fish_indent">fish_indent</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fish_key_reader">
+        <term><command>fish_key_reader</command></term>
+        <listitem>
+          <para>
+            shows how to bind a certain key sequence
+          </para>
+          <indexterm zone="fish fish_key_reader">
+            <primary sortas="b-fish_key_reader">fish_key_reader</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="create_manpage_completions.py">
+        <term><command>create_manpage_completions.py</command></term>
+        <listitem>
+          <para>
+            generates fish completions from a man page
+          </para>
+          <indexterm zone="fish create_manpage_completions.py">
+            <primary sortas="b-create_manpage_completions.py">create_manpage_completions.py</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
