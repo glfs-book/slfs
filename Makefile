@@ -17,7 +17,6 @@ RENDERTMP   := $(shell mktemp -d)
 HTML_ROOT   ?= $(HOME)/public_html
 DUMP_ROOT   ?= $(HOME)
 CHUNK_QUIET ?= 1
-ROOT_ID      =
 SHELL        = /bin/bash
 
 ALLXML := $(shell find . -mindepth 1 -name '*.xml' ! -path '$(RENDERTMP)/*')
@@ -124,7 +123,6 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(SLFSHTML) version wget-list
 	@echo "Generating chunked XHTML files..."
 	$(Q)xsltproc --nonet                                    \
                 --stringparam chunk.quietly $(CHUNK_QUIET) \
-                --stringparam rootid "$(ROOT_ID)"          \
                 --stringparam base.dir $(BASEDIR)/         \
                 stylesheets/slfs-chunked.xsl            \
                 $(RENDERTMP)/$(SLFSHTML)
