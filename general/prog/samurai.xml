@@ -58,8 +58,8 @@
 
       <para>
         If you want <command>samu</command> to be used whenever
-        <command>ninja</command> is ran, move the original Ninja
-        copy out of the way and make a symlink as the &root; user:
+        <command>ninja</command> is run, move the original Ninja
+        out of the way and make a symlink as the &root; user:
       </para>
 
 <screen role="root"><userinput>mv /usr/bin/ninja{,.old} &amp;&amp;
@@ -67,32 +67,31 @@ ln -svf samu /usr/bin/ninja</userinput></screen>
 
       <para>
         <command>samu</command> won't run on all logical CPUs or threads by
-        default, similar to <command>make</command>. The premise to make it do
-        so is the same process: pass
+        default, similar to <command>make</command>. The process to make it do
+        so is the same: pass
         <literal>-j<replaceable>&lt;x&gt;</replaceable></literal>, where
         <literal><replaceable>&lt;x&gt;</replaceable></literal> is the number
-        of logical CPUs you want used, whenever <command>samu</command> (or
-        <command>ninja</command> if you made the symlink) is ran. You can get
-        around having to specify it everytime by setting
-        <envar>SAMUFLAGS</envar> and including
-        <literal>-j<replaceable>&lt;x&gt;</replaceable></literal> to it,
-        like so:
+        of logical CPUs you want to use whenever <command>samu</command> (or
+        <command>ninja</command> if you made the symlink) is run. You can get
+        around having to specify it every time by including
+        <literal>-j<replaceable>&lt;x&gt;</replaceable></literal> in
+        <envar>SAMUFLAGS</envar> like so:
       </para>
 
 <screen><computeroutput>export SAMUFLAGS=-j$(nproc)</computeroutput></screen>
 
       <para>
-        A trick you can do is make <envar>SAMUFLAGS</envar>
-        contain <envar>$MAKEFLAGS</envar> if <envar>MAKEFLAGS</envar> only
-        contains the <literal>-j</literal> option, like so:
+        If <envar>MAKEFLAGS</envar> only contains the <literal>-j</literal>
+        option, you can set <envar>SAMUFLAGS</envar> to
+        <envar>MAKEFLAGS</envar> like so:
       </para>
 
       <screen><userinput>export SAMUFLAGS=$MAKEFLAGS</userinput></screen>
 
       <para>
-        Add it to a Bash profile script like
-        <filename>~/.bash_profile</filename> to avoid having to set it after
-        logging in.
+        If you'd like to avoid manually setting <envar>SAMUFLAGS</envar> each
+        time you log in, add it to a Bash profile script like
+        <filename>~/.bash_profile</filename>.
       </para>
 
     </sect3>
