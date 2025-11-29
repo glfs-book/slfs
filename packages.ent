@@ -83,7 +83,7 @@ version, so keep this at that. -->
 <!ENTITY fastfetch-version                   "2.55.1">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.4">
-<!ENTITY tmux-version                        "3.5a">
+<!ENTITY tmux-version                        "3.6">
 <!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20250102">
 <!ENTITY yt-dlp-version                      "2025.11.12">
