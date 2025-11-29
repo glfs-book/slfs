@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY wlr-randr-download-http
+    "https://gitlab.freedesktop.org/emersion/wlr-randr/-/archive/v&wlr-randr-version;/wlr-randr-v&wlr-randr-version;.tar.bz2">
+]>
+
+<sect1 id="wlr-randr" xreflabel="wlr-randr-&wlr-randr-version;">
+  <?dbhtml filename="wlr-randr.html"?>
+
+  <title>wlr-randr-&wlr-randr-version;</title>
+
+  <indexterm zone="wlr-randr">
+    <primary sortas="a-wlr-randr">wlr-randr</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to wlr-randr</title>
+
+    <para>
+      The wlr-randr package provides a utility to manage outputs of a Wayland
+      compositor. wlr-randr can query display information and set display
+      resolution and refresh rate.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&wlr-randr-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">wlr-randr Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <xref linkend="scdoc"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of wlr-randr</title>
+
+    <para>
+      Install wlr-randr by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup ..             \
+      --prefix=/usr        \
+      --buildtype=release &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &meson-buildtype-release;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          wlr-randr
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="wlr-randr-bin">
+        <term><command>wlr-randr</command></term>
+        <listitem>
+          <para>
+            is an output management utility for Wayland
+          </para>
+          <indexterm zone="wlr-randr wlr-randr">
+            <primary sortas="b-wlr-randr">wlr-randr</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
