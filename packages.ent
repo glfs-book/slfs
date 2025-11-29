@@ -4,7 +4,7 @@
 <!ENTITY asio-version                        "1-36-0">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY glaze-version                       "6.0.3">
+<!ENTITY glaze-version                       "6.1.0">
 <!ENTITY iniparser-version                   "4.2.6">
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libime-version                      "1.1.12">
@@ -84,7 +84,7 @@ version, so keep this at that. -->
 <!ENTITY fastfetch-version                   "2.55.1">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.4">
-<!ENTITY tmux-version                        "3.5a">
+<!ENTITY tmux-version                        "3.6">
 <!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20250102">
 <!ENTITY yt-dlp-version                      "2025.11.12">

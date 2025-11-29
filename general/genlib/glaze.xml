@@ -86,7 +86,7 @@ ninja</userinput></screen>
     </para>
     <para>
       <parameter>-D glaze_DEVELOPER_MODE=OFF</parameter>: This parameter
-      disables building features targetted towards developers.
+      disables building features targeted towards developers.
     </para>
     <para>
       <parameter>-D glaze_ENABLE_FUZZING=OFF</parameter>: This parameter
