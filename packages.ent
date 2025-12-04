@@ -145,6 +145,7 @@ version, so keep this at that. -->
 <!-- Shells -->
 <!ENTITY ksh-version                         "1.0.10">
 <!-- MM-LIB -->
+<!ENTITY faad2-version                       "2.11.2">
 <!ENTITY ladspa-sdk-version                  "1.17">
 <!ENTITY noise-suppression-version           "1.10">
 <!ENTITY rubberband-version                  "4.0.0">

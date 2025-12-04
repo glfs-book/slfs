@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY faad2-archive
+    "https://github.com/knik0/faad2/archive">
+  <!ENTITY faad2-download-http
+    "&faad2-archive;/&faad2-version;/faad2-&faad2-version;.tar.gz">
+]>
+
+<sect1 id="faad2" xreflabel="FAAD2-&faad2-version;">
+  <?dbhtml filename="faad2.html"?>
+
+  <title>FAAD2-&faad2-version;</title>
+
+  <indexterm zone="faad2">
+    <primary sortas="a-faad2">FAAD2</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to FAAD2</title>
+
+    <para>
+      FAAD2 provides a freeware AAC decoder.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&faad2-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">FAAD2 Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of FAAD2</title>
+
+    <para>
+      Install FAAD2 by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+    <screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &cmake-skip-install-rpath;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          faad
+        </seg>
+        <seg>
+          libfaad_drm and
+          libfaad
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="faad">
+        <term><command>faad</command></term>
+        <listitem>
+          <para>
+            decodes AAC files
+          </para>
+          <indexterm zone="faad2 faad">
+            <primary sortas="b-faad">faad</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libfaad_drm">
+        <term><filename class="libraryfile">libfaad_drm</filename></term>
+        <listitem>
+          <para>
+            containts functions for decoding AAC files that are restricted by
+            DRM
+          </para>
+          <indexterm zone="faad2 libfaad_drm">
+            <primary sortas="c-libfaad_drm">libfaad_drm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libfaad">
+        <term><filename class="libraryfile">libfaad</filename></term>
+        <listitem>
+          <para>
+            provides functions for decoding AAC files
+          </para>
+          <indexterm zone="faad2 libfaad">
+            <primary sortas="c-libfaad">libfaad</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

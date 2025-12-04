@@ -43,6 +43,13 @@
       <para>December 4th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - MelonDS: 1.0 -&gt; 1.1. Fixes
+          <ulink url="&slfs-issues;/393">#393</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - FAAD2: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - OSTree: 2025.6 -&gt; 2025.7. Fixes
           <ulink url="&slfs-issues;/392">#392</ulink>.</para>
         </listitem>
