@@ -209,7 +209,7 @@ version, so keep this at that. -->
 <!-- i3 -->
 <!ENTITY i3-version                          "4.24">
 <!-- MangoWC -->
-<!ENTITY mangowc-version                     "0.10.5">
+<!ENTITY mangowc-version                     "0.10.7">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
 <!-- Wayfire -->
