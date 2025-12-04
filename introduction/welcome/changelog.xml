@@ -43,6 +43,10 @@
       <para>December 4th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - intel-onevpl: 25.4.3 -&gt; 25.4.5. Fixes
+          <ulink url="&slfs-issues;/408">#408</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - MangoWC: 0.10.5 -&gt; 0.10.7. Fixes
           <ulink url="&slfs-issues;/399">#399</ulink>.</para>
         </listitem>
