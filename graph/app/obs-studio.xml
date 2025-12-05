@@ -27,6 +27,15 @@
       usecase.
     </para>
 
+    <important><para>
+      This package is broken with versions of Qt-6.10 and above. Use 6.9.x to
+      fix the build. Furthermore, updated versions of OBS will segfault when
+      launched. The SLFS editors are still looking into these issues and for
+      potential fixes. If you know how to fix this package, please send a reply
+      at SLFS issue <ulink url="&slfs-issues;/324">#324 (OBS-Studio:
+      &obs-studio-version; -&gt; 32.0.3)</ulink>.
+    </para></important>
+
     &long-build-time;
 
     <itemizedlist spacing="compact">
