@@ -27,15 +27,6 @@
       usecase.
     </para>
 
-    <important><para>
-      This package is broken with versions of Qt-6.10 and above. Use 6.9.x to
-      fix the build. Furthermore, updated versions of OBS will segfault when
-      launched. The SLFS editors are still looking into these issues and for
-      potential fixes. If you know how to fix this package, please send a reply
-      at SLFS issue <ulink url="&slfs-issues;/324">#324 (OBS-Studio:
-      &obs-studio-version; -&gt; 32.0.3)</ulink>.
-    </para></important>
-
     &long-build-time;
 
     <itemizedlist spacing="compact">
@@ -56,6 +47,12 @@
         </para>
       </listitem>
 -->
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&patch-root;/obs/obs-studio-&obs-studio-version;-qt6.10-1.patch"/>
+        </para>
+      </listitem>
       <listitem>
         <para>
           Recommended download:
@@ -229,6 +226,27 @@
   patch -Np1 -i ../obs-studio-&obs-studio-version;-allow_mesa.patch
 fi</userinput></screen>
 -->
+
+    <para>
+      Fix building with Qt-6.10:
+    </para>
+
+<screen
+  remap="pre"><userinput>patch -Np1 -i ../obs-studio-&obs-studio-version;-qt6.10-1.patch</userinput></screen>
+
+    <para>
+      If FFmpeg is 8.0 or above, allow the code to build against it:
+    </para>
+
+<!-- We check avformat here, since it's one of the libraries which had it's
+     version change with FFmpeg-8.0. FFmpeg doesn't supply a .pc file like
+     ffmpeg.pc or ffplay.pc. We also use pkgconf here because it's easier to
+     check if the library is at least a given version. Moreover, applying this
+     fix on a system with FFmpeg-7.1 will cause a build failure. -->
+<screen remap="pre"><userinput>if pkgconf --atleast-version 62 libavformat; then
+  sed -i 's/FF_/AV_/g' \
+    plugins/obs-ffmpeg/obs-ffmpeg-vaapi.c
+fi</userinput></screen>
 
     <para>
       If you want to enable browser support, ensure you have downloaded the
