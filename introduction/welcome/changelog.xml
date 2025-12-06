@@ -40,6 +40,28 @@
     -->
 
     <listitem>
+      <para>December 6th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.52.1 -&gt; 0.52.2. Fixes
+          <ulink url="&slfs-issues;/416">#416</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprlang: 0.6.6 -&gt; 0.6.7. Fixes
+          <ulink url="&slfs-issues;/417">#417</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprtoolkit: 0.4.0 -&gt; 0.4.1. Fixes
+          <ulink url="&slfs-issues;/418">#418</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprland-guiutils: 0.1.0 -&gt; 0.2.0. Fixes
+          <ulink url="&slfs-issues;/419">#419</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 4th, 2025</para>
       <itemizedlist>
         <listitem>
