@@ -87,6 +87,8 @@ ninja</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
+    &meson-buildtype-release;
+
     <para>
       <parameter>-D demo=false</parameter>: This parameter disables building
       the demos. Remove it if you installed the optional dependencies.

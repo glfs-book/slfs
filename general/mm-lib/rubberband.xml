@@ -105,6 +105,8 @@ rm -vf /usr/lib/librubberband.a</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
+    &meson-buildtype-release;
+
     <para>
       <option>-D resampler=</option>: This option can be used to specify the
       resampler to use. By default, it will use the built-in implementation.

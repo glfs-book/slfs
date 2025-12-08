@@ -85,6 +85,13 @@ ninja</userinput></screen>
 
   </sect2>
 
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &meson-buildtype-release;
+
+  </sect2>
+
   <sect2 role="content">
     <title>Contents</title>
 
