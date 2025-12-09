@@ -1,0 +1,31 @@
+--- a/files/imv.in
++++ b/files/imv.in
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ if [ -n "${WAYLAND_DISPLAY}" ]; then
+-  exec @bindir@/imv-wayland "$@"
++  exec @libexecdir@/imv-wayland "$@"
+ else
+-  exec @bindir@/imv-x11 "$@"
++  exec @libexecdir@/imv-x11 "$@"
+ fi
+--- a/meson.build
++++ b/meson.build
+@@ -194,7 +194,7 @@
+       link_with: libimv,
+       dependencies: [deps_for_imv, get_variable('deps_for_' + ws)],
+       install: true,
+-      install_dir: get_option('bindir'),
++      install_dir: get_option('libexecdir'),
+     )
+   endif
+ endforeach
+@@ -214,7 +214,7 @@
+     install_dir: get_option('bindir'),
+     install_mode: 'rwxr-xr-x',
+     configuration: {
+-      'bindir': get_option('prefix') / get_option('bindir')
++      'libexecdir': get_option('prefix') / get_option('libexecdir')
+     }
+   )
+ endif

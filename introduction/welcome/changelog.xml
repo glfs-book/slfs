@@ -43,6 +43,16 @@
       <para>December 6th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - imv: 5.0.0 -&gt; 5.0.1. Fixes
+          <ulink url="&slfs-issues;/420">#420</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>December 6th, 2025</para>
+      <itemizedlist>
+        <listitem>
           <para>[zeckma] - Hyprland: 0.52.1 -&gt; 0.52.2. Fixes
           <ulink url="&slfs-issues;/416">#416</ulink>.</para>
         </listitem>
