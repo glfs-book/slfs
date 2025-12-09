@@ -99,6 +99,8 @@ mv -v /usr/share/doc/i3{,-&i3-version;}</userinput></screen>
   <sect2 role="commands">
     <title>Command Explanations</title>
 
+    &meson-buildtype-release;
+
     <para>
       <command>mv -v /usr/share/doc/i3{,-&i3-version;}</command>: This command
       makes the doc directory versioned to be consistent with other packages.
