@@ -36,8 +36,8 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Optional patch:
-          <ulink url="https://raw.githubusercontent.com/alpinelinux/aports/refs/heads/master/community/imv/move-wayland-and-x11-to-libexec.patch"/>
+          Recommended patch:
+          <ulink url="&patch-root;/imv/imv-&imv-version;-libexecdir-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -80,18 +80,11 @@
     <title>Installation of imv</title>
 
     <para>
-      Optionally, apply a patch to move the Wayland and X11 backends to the
-      libexec directory:
+      Apply a patch to move the Wayland and X11 backends to the libexec
+      directory:
     </para>
 
-<screen><userinput>patch -Np1 -i ../move-wayland-and-x11-to-libexec.patch</userinput></screen>
-
-    <para>
-      Force imv to link to the common ICU library:
-    </para>
-
-<!-- https://raw.githubusercontent.com/alpinelinux/aports/7a73ae2bf717a71642a4455a777c6cc996c24c22/community/imv/imv-4.5.0-Link-to-the-common-ICU-library.patch -->
-<screen><userinput>sed -i 's/icu-io/icu-uc/g' meson.build</userinput></screen>
+<screen><userinput>patch -Np1 -i ../imv-&imv-version;-libexecdir-1.patch</userinput></screen>
 
     <para>
       Install imv by running the following commands:
@@ -100,12 +93,13 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup ..              \
-      --prefix=/usr         \
-      --buildtype=release   \
-      -D windows=all        \
-      -D unicode=icu        \
-      -D test=disabled      \
+meson setup ..                  \
+      --prefix=/usr             \
+      --libexecdir=/usr/libexec \
+      --buildtype=release       \
+      -D windows=all            \
+      -D unicode=icu            \
+      -D test=disabled          \
       -D contrib-commands=false &amp;&amp;
 
 ninja</userinput></screen>
@@ -124,8 +118,14 @@ ninja</userinput></screen>
     &meson-buildtype-release;
 
     <para>
+      <parameter>--libexecdir=/usr/libexec</parameter>: If the recommended
+      patch was applied, this parameter moves the Wayland and X11 backends to
+      <filename class="directory">/usr/libexec</filename>.
+    </para>
+
+    <para>
       <parameter>-D windows=all</parameter>: This parameter builds support for
-      wayland and X11, and determine which to use at runtime.
+      Wayland and X11; imv determines which to use at runtime.
     </para>
 
     <para>
