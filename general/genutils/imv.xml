@@ -120,7 +120,7 @@ ninja</userinput></screen>
     <para>
       <parameter>--libexecdir=/usr/libexec</parameter>: If the recommended
       patch was applied, this parameter moves the Wayland and X11 backends to
-      /usr/libexec.
+      <filename class="directory">/usr/libexec</filename>.
     </para>
 
     <para>
