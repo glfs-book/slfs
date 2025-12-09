@@ -21,9 +21,8 @@
     <title>Introduction to inxi</title>
 
     <para>
-      The inxi package provides a command-line
-      program which grabs information about the system that you request via a
-      Perl script.
+      The inxi package provides a command-line program which grabs
+      information about the system that you request via a Perl script.
     </para>
 
     <itemizedlist spacing="compact">
@@ -72,13 +71,13 @@
       As the &root; user, install the package:
     </para>
 
-<screen role="root"><userinput>install -vm755 inxi /usr/bin</userinput></screen>
+<screen role="root"><userinput>install -vDm755 inxi -t /usr/bin/</userinput></screen>
 
     <para>
       Install the documentation as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vm644 inxi.1 /usr/share/man/man1</userinput></screen>
+<screen role="root"><userinput>install -vDm644 inxi.1 -t /usr/share/man/man1/</userinput></screen>
 
   </sect2>
 
