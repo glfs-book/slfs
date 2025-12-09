@@ -43,6 +43,10 @@
       <para>December 8th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - platformdirs: 4.5.0 -&gt; 4.5.1. Fixes
+          <ulink url="&slfs-issues;/423">#423</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - imv: 5.0.0 -&gt; 5.0.1. Fixes
           <ulink url="&slfs-issues;/420">#420</ulink>.</para>
         </listitem>

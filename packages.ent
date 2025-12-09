@@ -119,7 +119,7 @@ version, so keep this at that. -->
 <!ENTITY python3-site                        "/usr/lib/python&python3-majorver;/site-packages">
 <!-- Python Dependencies -->
 <!ENTITY structlog-version                   "25.5.0">
-<!ENTITY platformdirs-version                "4.5.0">
+<!ENTITY platformdirs-version                "4.5.1">
 <!ENTITY pycurl-version                      "7.45.7">
 <!ENTITY toml-version                        "0.10.2">
 <!ENTITY tornado-version                     "6.5.2">
