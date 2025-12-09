@@ -65,6 +65,9 @@ ninja</userinput></screen>
 
   <sect2 role="commands">
     <title>Command Explanations</title>
+
+    &meson-buildtype-release;
+
     <para><option>-D generate_cmake_config=false</option>: This option
     disables depending on CMake but as a result doesn't generate CMake
     find_package files some build systems require.</para>
