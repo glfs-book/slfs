@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>December 8th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - inxi: 3.3.39-1 -&gt; 3.3.40-1. Fixes
+          <ulink url="&slfs-issues;/422">#422</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 6th, 2025</para>
       <itemizedlist>
         <listitem>
