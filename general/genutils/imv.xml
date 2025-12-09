@@ -37,7 +37,7 @@
       <listitem>
         <para>
           Recommended patch:
-          <ulink url="https://glfs-book.github.io/slfs/patches/imv/imv-&imv-version;-libexecdir-1.patch"/>
+          <ulink url="&patch-root;/imv/imv-&imv-version;-libexecdir-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
