@@ -38,7 +38,10 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink>
+      <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink> (to
+      unwind stack traces) and
+      <ulink url="&blfs-svn;/general/valgrind.html">valgrind</ulink> (if you
+      are running the test suite)
     </para>
 
   </sect2>
@@ -54,6 +57,10 @@
 <screen><userinput>./configure --prefix=/usr \
     --enable-mpers=no &amp;&amp;
 make</userinput></screen>
+
+    <para>
+      To test the results, issue: <command>make check</command>
+    </para>
 
     <para>
       Now, as the &root; user:

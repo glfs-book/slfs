@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>December 10th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - strace: 6.17 -&gt; 6.18. Fixes
+          <ulink url="&slfs-issues;/432">#432</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 8th, 2025</para>
       <itemizedlist>
         <listitem>
