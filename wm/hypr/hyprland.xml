@@ -69,7 +69,8 @@
       </phrase>
       &gbm;,
       <xref linkend="glaze"/>,
-      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>
+      (with GObjectIntrospection),
       <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
       <xref linkend="hyprlib"/>,
       <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
@@ -88,14 +89,18 @@
       <xref linkend="tomlplusplus"/>,
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
-      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
-      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
-      <xref linkend="xcb-util-errors"/>, and
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink><footnote><para>
+        Xorg Libraries are required because Hyprland requires Xcursor support,
+        provided by libXcursor in Xorg Libraries. Even if you disable Xwayland
+        support, you will still need Xorg Libraries.
+      </para></footnote>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
+      <xref linkend="xcb-util-errors"/>, and
       <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
     </para>
 
