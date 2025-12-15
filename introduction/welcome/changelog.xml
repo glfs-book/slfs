@@ -43,6 +43,10 @@
       <para>December 15th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - hyprutils: 0.10.4 -&gt; 0.11.0. Fixes
+          <ulink url="&slfs-issues;/421">#421</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libjuice: 1.6.2 -&gt; 1.7.0. Fixes
           <ulink url="&slfs-issues;/406">#406</ulink>.</para>
         </listitem>
