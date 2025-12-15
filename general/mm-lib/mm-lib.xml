@@ -15,7 +15,6 @@
     packages in this or the other LFS books.
   </para>
 
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="faad2.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ladspa-sdk.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="noise-suppression.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rubberband.xml"/>

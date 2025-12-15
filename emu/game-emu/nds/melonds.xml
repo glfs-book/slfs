@@ -39,7 +39,7 @@
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <xref linkend="enet"/>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
-      <xref linkend="faad2"/>,
+      <ulink url="&blfs-svn;/multimedia/faad2.html">FAAD2</ulink>,
       &unzip;,
       &opengl;,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,

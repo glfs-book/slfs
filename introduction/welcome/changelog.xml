@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>December 15th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - FAAD2: Removed. Fixes
+          <ulink url="&slfs-issues;/433">#433</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 14th, 2025</para>
       <itemizedlist>
         <listitem>
