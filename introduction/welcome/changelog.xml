@@ -43,6 +43,14 @@
       <para>December 15th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - libjuice: 1.6.2 -&gt; 1.7.0. Fixes
+          <ulink url="&slfs-issues;/406">#406</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libdatachannel: 0.23.2 -&gt; 0.24.0. Fixes
+          <ulink url="&slfs-issues;/405">#405</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - FAAD2: Removed. Fixes
           <ulink url="&slfs-issues;/433">#433</ulink>.</para>
         </listitem>
