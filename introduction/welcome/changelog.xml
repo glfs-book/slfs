@@ -43,6 +43,10 @@
       <para>December 15th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Mbed-TLS: 3.6.4 -&gt; 3.6.5 (security). Fixes
+          <ulink url="&slfs-issues;/428">#428</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - yt-dlp: 2025.11.12 -&gt; 2025.12.08. Fixes
           <ulink url="&slfs-issues;/431">#431</ulink>.</para>
         </listitem>
