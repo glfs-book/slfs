@@ -38,7 +38,7 @@
 
       <para>Build the module:</para>
 
-      &build-wheel;
+      &build-wheel-pep517;
 
       <para>
         Now, as the &root; user:

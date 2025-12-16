@@ -43,6 +43,18 @@
       <para>December 15th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - tornado: 6.5.2 -&gt; 6.5.3 (security). Fixes
+          <ulink url="&slfs-issues;/440">#440</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - m17n: 1.8.5 -&gt; 1.8.6. Fixes
+          <ulink url="&slfs-issues;/438">#438</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 6.1.0 -&gt; 6.2.0. Fixes
+          <ulink url="&slfs-issues;/437">#437</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - socat: 1.8.0.3 -&gt; 1.8.1.0. Fixes
           <ulink url="&slfs-issues;/439">#439</ulink>.</para>
         </listitem>
