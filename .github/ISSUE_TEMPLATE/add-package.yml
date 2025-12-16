@@ -1,0 +1,71 @@
+name: Add package (new)
+description: Request a package be added
+title: "Add "
+labels: [new package]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <div align="center">
+          <img src="https://github.com/glfs-book/slfs/blob/trunk/images/slfs-logo.svg?raw=true" width="10%">
+          <h1>SLFS</h1>
+        </dev>
+
+        ### Add package
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The name of the package.
+      placeholder: Nushell
+    validations:
+      required: true
+
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream
+      description: A link to the project's upstream.
+      placeholder: https://github.com/nushell/nushell
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the package and how it fits into SLFS.
+      placeholder: |
+        Nu is a modern, structured, functional shell written in rust. Its inclusion in SLFS helps fill out the shells chapter.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What does this package depend on?
+      placeholder: |
+        - Rustc (required)
+        - cURL (optional)
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependants
+    attributes:
+      label: Dependants
+      description: Does anything depend on this package?
+      placeholder: |
+        No
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra information
+      description: Anything else we should know.
+    validations:
+      required: false
