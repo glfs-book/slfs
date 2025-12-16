@@ -45,12 +45,10 @@
     <title>Installation of socat</title>
 
     <para>
-      Install socat by running the following
-      commands:
+      Install socat by running the following commands:
     </para>
 
-<screen><userinput>./configure --prefix=/usr \
-    --mandir=/usr/share/man &amp;&amp;
+<screen><userinput>./configure --prefix=/usr &amp;&amp;
 make</userinput></screen>
 
     <para>
@@ -62,6 +60,13 @@ make</userinput></screen>
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
+
+    <para>
+      If desired, install the documentation as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm644 EXAMPLES doc/*.{html,css} \
+  -t /usr/share/doc/socat-&socat-version;/</userinput></screen>
 
   </sect2>
 

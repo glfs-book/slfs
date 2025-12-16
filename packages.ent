@@ -129,7 +129,7 @@ version, so keep this at that. -->
 <!ENTITY samurai-minor                       "737f70">
 <!ENTITY samurai-version                     "737f702fed670acb25e5e70b4b802690df7a4a8b">
 <!ENTITY strace-version                      "6.18">
-<!ENTITY socat-version                       "1.8.0.3">
+<!ENTITY socat-version                       "1.8.1.0">
 <!ENTITY unlambda-version                    "2.0.0">
 <!ENTITY xtrace-minor-version                "ced509">
 <!ENTITY xtrace-version                      "ced509f9760c532e0297fed6cfa07389e2be082a">
