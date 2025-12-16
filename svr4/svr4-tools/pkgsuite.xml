@@ -4,12 +4,11 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY pkgsuite-download-http "https://github.com/mamccollum/pkgsuite/archive/&pkgsuite-version;.zip">
+  <!ENTITY pkgsuite-download-http "https://github.com/mamccollum/pkgsuite/archive/&pkgsuite-version;/pkgsuite-&pkgsuite-version;.tar.gz">
 ]>
 
 <sect1 id="pkgsuite" xreflabel="pkgsuite-&pkgsuite-minor-version;">
   <?dbhtml filename="pkgsuite.html"?>
-
 
   <title>pkgsuite-&pkgsuite-minor-version;</title>
 
@@ -56,13 +55,11 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      &unzip;
-      (to unpack the distribution),
       <ulink url="&blfs-svn;/general/which.html">Which</ulink>
       <footnote><para>GNU Which is the one that needs to be
       installed, <emphasis>NOT</emphasis> the shell script, or else it will
       silently fail and will give the wrong paths to executables.
-      </para></footnote>, and
+      </para></footnote> and
       <xref linkend="heirloom-ng"/> (at runtime)
     </para>
 

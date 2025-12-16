@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY idle-download-http "https://github.com/seal331/idle/archive/&idle-version;.zip">
+  <!ENTITY idle-download-http "https://github.com/seal331/idle/archive/&idle-version;/idle-&idle-version;.tar.gz">
 ]>
 
 <sect1 id="idle" xreflabel="idle-&idle-minor-version;">
@@ -65,7 +65,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       &unzip;
-      (to unpack the distributions) and
+      (to unpack the required ROMs) and
       <xref linkend="sdl"/>
     </para>
 

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY freebee-download-http "https://github.com/philpem/freebee/archive/&freebee-version;.zip">
+  <!ENTITY freebee-download-http "https://github.com/philpem/freebee/archive/&freebee-version;/freebee-&freebee-version;.tar.gz">
 ]>
 
 <sect1 id="freebee" xreflabel="FreeBee-&freebee-minor-version;">
@@ -38,7 +38,7 @@
       <listitem>
         <para>
           Required submodule:
-          <ulink url="https://github.com/kstenerud/Musashi/archive/&musashi-submodule-version;.zip"/>
+          <ulink url="https://github.com/kstenerud/Musashi/archive/&musashi-submodule-version;/Musashi-&musashi-submodule-version;.tar.gz"/>
         </para>
       </listitem>
       <listitem>
@@ -60,7 +60,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       &unzip;
-      (to unpack the distributions) and
+      (to unpack the required ROMs) and
       &sdl2;
     </para>
 
@@ -70,14 +70,12 @@
     <title>Installation of FreeBee</title>
 
     <para>
-      Unpack the musashi submodule into the right place:
+      Unpack the Musashi submodule into the right place:
     </para>
 
-<screen><userinput>unzip ../&musashi-submodule-version;.zip -d src/ &amp;&amp;
-rmdir src/musashi &amp;&amp;
-mv src/Musashi-&musashi-submodule-version; src/musashi</userinput></screen>
-
-    &extraction-unzip;
+<screen><userinput>tar -xf ../Musashi-&musashi-submodule-version;.tar.gz &amp;&amp;
+mv -T Musashi-&musashi-submodule-version; \
+      src/musashi</userinput></screen>
 
     <para>
       Optionally, apply a patch to search for the ROMs in a system-wide

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY p20-emu-download-http "https://github.com/Spritetm/plexus_20_emu/archive/&p20-emu-version;.zip">
+  <!ENTITY p20-emu-download-http "https://github.com/Spritetm/plexus_20_emu/archive/&p20-emu-version;/plexus_20_emu-&p20-emu-version;.tar.gz">
 ]>
 
 <sect1 id="p20-emu" xreflabel="p20-emu-&p20-emu-minor-version;">
@@ -21,8 +21,7 @@
     <title>Introduction to p20-emu</title>
 
     <para>
-      The p20-emu package is a Plexus P/20
-      emulator.
+      The p20-emu package is a Plexus P/20 emulator.
     </para>
 
     <itemizedlist spacing="compact">
@@ -63,18 +62,10 @@
 
     <bridgehead renderas="sect3">p20-emu Dependencies</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
-    <para role="required">
-      &unzip;
-      (to unpack the distribution)
-    </para>
-
   </sect2>
 
   <sect2 role="installation">
     <title>Installation of p20-emu</title>
-
-    &extraction-unzip;
 
     <para>
       Apply a patch to build without any debugging information, which allows

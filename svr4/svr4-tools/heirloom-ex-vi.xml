@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY heirloom-ex-vi-download-http "https://github.com/n-t-roff/heirloom-ex-vi/archive/&heirloom-ex-vi-version;.zip">
+  <!ENTITY heirloom-ex-vi-download-http "https://github.com/n-t-roff/heirloom-ex-vi/archive/&heirloom-ex-vi-version;/heirloom-ex-vi-&heirloom-ex-vi-version;.tar.gz">
 ]>
 
 <sect1 id="heirloom-ex-vi" xreflabel="heirloom-ex-vi-&heirloom-ex-vi-minor-version;">
@@ -34,8 +34,6 @@
       </listitem>
     </itemizedlist>
 
-    &extraction-unzip;
-
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -47,12 +45,6 @@
     </itemizedlist>
 
     <bridgehead renderas="sect3">heirloom-ex-vi Dependencies</bridgehead>
-
-    <bridgehead renderas="sect4">Required</bridgehead>
-    <para role="required">
-      &unzip;
-      (to unpack the distribution)
-    </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
