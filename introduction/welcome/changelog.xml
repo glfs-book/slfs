@@ -43,6 +43,10 @@
       <para>December 15th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - socat: 1.8.0.3 -&gt; 1.8.1.0. Fixes
+          <ulink url="&slfs-issues;/439">#439</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Mbed-TLS: 3.6.4 -&gt; 3.6.5 (security). Fixes
           <ulink url="&slfs-issues;/428">#428</ulink>.</para>
         </listitem>
