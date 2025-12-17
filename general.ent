@@ -72,7 +72,7 @@
 <!ENTITY lfs-root             "&lfs-website;/lfs/view/&lfs-version;">
 <!ENTITY lfs-dev              "&lfs-website;/lfs/view/development">
 <!ENTITY lfs-ticket-root      "https://wiki.&lfs-domainname;/lfs/ticket/">
-<!ENTITY gnu-http             "https://ftp.gnu.org/gnu">
+<!ENTITY gnu-http             "https://ftpmirror.gnu.org/gnu">
 <!ENTITY gnu-ftp              "ftp://ftp.gnu.org/gnu">
 <!ENTITY gnupg-http           "https://www.gnupg.org/ftp/gcrypt">
 <!ENTITY gnupg-ftp            "ftp://ftp.gnupg.org/gcrypt">
