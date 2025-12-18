@@ -15,7 +15,7 @@ written, where essential files are located, then make an update as you see fit,
 and make a PR. This bit requires a more in-depth explanation and where it
 really diverges from the LFS Editor's Manual. If you are a BLFS editor, editing
 this book will not be too different. Read sections 3.1.2, 3.2, and 3.3 for
-SLFS specific information.
+SLFS-specific information.
 
 # 3. For the savvy
 ## 3.1. Where things are located
@@ -102,7 +102,7 @@ This file is a shell script that generates the version and revision the book
 should be rendered for, and outputs according text to `conditional.ent` and
 `version.ent`. Rarely needs to get updated.
 #### 3.1.1.15. `gnome.ent`
-This file is an XML entity file that contains GNOME specific entities used by a
+This file is an XML entity file that contains GNOME-specific entities used by a
 small selection of XML files. Rarely needs to get updated.
 #### 3.1.1.16. `obfuscate.sh`
 This file is a shell script that obfuscates email addresses in XML and HTML
@@ -200,20 +200,18 @@ there are standards to keep in mind.
 
 1. No tabs except in the Makefile. Use spaces. Unless after a sentence, use two
 at a time.
-2. Keep character count on any given line a maximum of 80 characters and do not
-go over that limit. This keeps the XML from getting ugly and out of hand. There
-are situations where you can't keep it under that limit, such as using links or
-code blocks. That is fine. But if you can help it, please keep under the 80
-character limit.
-3. Use oxford commas (subject1, subject2, and subject3) instead of
-(subject1, subject2 and subject3).
-4. Edit `changelog.xml` as necessary. See section 3.1.2.9.
+2. Keep character count on any given line to a maximum of 80 characters. This
+   keeps the XML from getting ugly and out of hand. There are situations where
+   you can't keep it under that limit, such as using links or code blocks. That
+   is fine. But if you can help it, please keep under the 80 character limit.
+3. Edit `changelog.xml` as necessary. See section 3.1.2.9.
+4. Follow the [style guide](STYLE-GUIDE.md).
 
 ## 3.2. Making an update
 First, you're going to need
 [Git](https://linuxfromscratch.org/blfs/view/stable/general/git.html) in order
 to clone, pull, and push. Once you have it installed, you are going to need to
-fork this repository to your Github account. Once you have it forked, you are
+fork this repository to your GitHub account. Once you have it forked, you are
 going to need to clone that fork:
 ```Bash
 git clone https://github.com/<username>/slfs
@@ -248,4 +246,4 @@ There may be changes requested. This is okay and is routine. Repeat section
 3.2. as necessary and Github will automatically pull in the new changes to the
 PR. Rinse and repeat until the PR is merged.
 
-After that, pat yourself on the back, as you are now a SLFS contributor.
+After that, pat yourself on the back, as you are now an SLFS contributor.
