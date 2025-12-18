@@ -25,11 +25,25 @@ For an opposite example:
 Since 'universal' starts with a consonant sound, specifically '/ˌj/', the
 article 'a' is preferred.
 
-## 2. Commands
+## 2. Source Code
+This section sets some standards for the SLFS source code.
+
+### 2.1 Tabs
+Use spaces instead of tabs in the XML files.
+
+### 2.2 Text Wrapping
+Keep character count on any given line to a maximum of 80 characters. This keep
+the XML from getting ugly and unmaintainable.
+
+There are situations where 80 characters isn't feasible, e.g. in links or code
+blocks. In such situations, the limit is flexible. But if you can help it,
+please keep under the 80 character limit.
+
+## 3. Commands
 This section standardizes the invocation of some common commands. This is done to
 encourage consistency and correctness while also simplifying some actions.
 
-### 2.1 Install
+### 3.1 Install
 Some general rules and examples for using `install`:
 - Where possible, prefer `install` to `cp`.
 - Always pass `-v`.
