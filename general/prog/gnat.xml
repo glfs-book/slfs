@@ -139,7 +139,7 @@ find /opt/gnat/bin -name as -exec mv -v {} {}.old \;</userinput></screen>
         <ulink url="https://gcc.gnu.org/ml/gcc-testresults/"/>.
         You may also want to refer to the information found in the
         GCC section of Chapter 8 in the LFS book
-	(<ulink url="&lfs-root;/chapter08/gcc.html"/>).
+        (<ulink url="&lfs-root;/chapter08/gcc.html"/>).
       </para>
     </important>
 
