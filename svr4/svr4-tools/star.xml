@@ -62,12 +62,14 @@ popd</userinput></screen>
       supplementary tools:
     </para>
 
-<screen role="root"><userinput>install -vDm755 star/OBJ/*/star -t /usr/5bin/ &amp;&amp;
-install -vDm755 star_sym/OBJ/*/star_sym -t /usr/5bin/ &amp;&amp;
-install -vDm755 tartest/OBJ/*/tartest -t /usr/5bin/ &amp;&amp;
-install -vDm644 star/star.1 -t /usr/share/man/5man/man1/ &amp;&amp;
-install -vDm644 star_sym/star_sym.1 -t /usr/share/man/5man/man1/ &amp;&amp;
-install -vDm644 tartest/tartest.1 -t /usr/share/man/5man/man1/
+<screen role="root"><userinput>install -vDm755 star/OBJ/*/star         \
+                star_sym/OBJ/*/star_sym \
+                tartest/OBJ/*/tartest   \
+        -t /usr/5bin/ &amp;&amp;
+install -vDm644 star/star.1             \
+                star_sym/star_sym.1     \
+                tartest/tartest.1       \
+        -t /usr/share/man/5man/man1/
 </userinput></screen>
 
   </sect2>

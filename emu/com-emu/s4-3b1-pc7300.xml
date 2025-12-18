@@ -171,11 +171,11 @@ make CC="cc -std=gnu17"</userinput></screen>
 
 <screen role="root"><userinput>install -vDm755 s4date s4disk s4dump s4export s4fs s4fsck \
                 s4import s4merge s4mkfs s4test s4vol      \
-                -t /usr/bin/ &amp;&amp;
-install -vDm644 s4d.h s4fixed.h     -t /usr/include/        &amp;&amp;
-install -vDm755 libs4.so            -t /usr/lib/            &amp;&amp;
-ln -svf         libs4.so               /usr/lib/libs4.so.0  &amp;&amp;
-ln -svf         libs4.so.0             /usr/lib/libs4.so.0.0</userinput></screen>
+                                -t /usr/bin/             &amp;&amp;
+install -vDm644 s4d.h s4fixed.h -t /usr/include/         &amp;&amp;
+install -vDm755 libs4.so        -t /usr/lib/             &amp;&amp;
+ln -svf         libs4.so           /usr/lib/libs4.so.0   &amp;&amp;
+ln -svf         libs4.so.0         /usr/lib/libs4.so.0.0</userinput></screen>
 
   </sect2>
 

@@ -125,8 +125,10 @@ make -C tools/xprofile_tool</userinput></screen>
     </para>
 
 <screen role="root"><userinput>install -vDm755 idle /usr/bin/idle-emu &amp;&amp;
-install -vDm755 tools/obj2asm/mpw_obj2asm -t /usr/bin/ &amp;&amp;
-install -vDm755 tools/xprofile_tool/xprofile_tool -t /usr/bin/</userinput></screen>
+install -vDm755 tools/obj2asm/mpw_obj2asm \
+                tools/xprofile_tool/xprofile_tool \
+        -t /usr/bin/
+</userinput></screen>
 
     <para>
       If you have applied the systemwide ROMs patch, install those ROMs as the
@@ -135,7 +137,7 @@ install -vDm755 tools/xprofile_tool/xprofile_tool -t /usr/bin/</userinput></scre
 
 <screen role="root"><userinput>unzip ../idle_win32_bin.zip &amp;&amp;
 install -vDm644 idle_win32_bin/bios/* -t /usr/share/idle/bios/
-rm -rf idle_win32_bin</userinput></screen>
+</userinput></screen>
 
   </sect2>
 

@@ -97,7 +97,7 @@ make -C tools</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vDm755 freebee tools/makehdimg -t /usr/bin/ &amp;&amp;
+<screen role="root"><userinput>install -vDm755 freebee   tools/makehdimg   -t /usr/bin/ &amp;&amp;
 install -vDm644 freebee.1 tools/makehdimg.1 -t /usr/share/man/man1/
 </userinput></screen>
 
@@ -106,8 +106,9 @@ install -vDm644 freebee.1 tools/makehdimg.1 -t /usr/share/man/man1/
     </para>
 
 <screen role="root" remap="doc"><userinput>install -vDm644 README{,.serial}.md \
-            sample.freebee.toml doc/3B1\ Memory\ Maps.ods \
-        -t /usr/share/doc/freebee-&freebee-minor-version;
+                sample.freebee.toml \
+                doc/3B1\ Memory\ Maps.ods \
+        -t /usr/share/doc/freebee-&freebee-minor-version;/
 </userinput></screen>
 
     <para>

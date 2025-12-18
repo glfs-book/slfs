@@ -110,7 +110,7 @@ make</userinput></screen>
 
 <!-- install doesn't support recursive copy and there's no doc install
 target... ugh -->
-<screen role="root"><userinput>install -vdm755 /usr/share/doc/libime-&libime-version; &amp;&amp;
+<screen role="root"><userinput>install -vdm755   /usr/share/doc/libime-&libime-version; &amp;&amp;
 cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
 
   </sect2>

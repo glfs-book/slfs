@@ -157,7 +157,7 @@ Mwm*multiClickTime:             300
 Mwm*useIconBox:                 True</literal>
 EOF
 
-install -vDm644 /usr/share/xsessions/mwm.desktop &lt;&lt; "EOF"
+install -vDm644 /dev/stdin /usr/share/xsessions/mwm.desktop &lt;&lt; "EOF"
 <literal>[Desktop Entry]
 Name=MWM
 Comment=The Motif Window Manager

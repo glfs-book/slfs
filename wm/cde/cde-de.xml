@@ -143,14 +143,14 @@ install -vDm644 contrib/desktopentry/cde.desktop -t /usr/share/xsessions/</useri
         <primary sortas="f-cde-de">CDE</primary>
       </indexterm>
 
-      <screen role="root" revision="sysv"><userinput>install -vDm754 blfs/init.d/xdm    -t /etc/rc.d/init.d/ &amp;&amp;
-sed -e '$aDISPLAY_MANAGER=/usr/dt/bin/dtlogin' \
+      <screen role="root" revision="sysv"><userinput>install -vDm754 blfs/init.d/xdm -t /etc/rc.d/init.d/ &amp;&amp;
+sed -e '2iDISPLAY_MANAGER=/usr/dt/bin/dtlogin'         \
     -e 's|DM_OPTIONS=.*|DM_OPTIONS="-quiet -daemon"|g' \
     blfs/sysconfig/xdm |
 install -vDm644 /dev/stdin /etc/sysconfig/xdm &amp;&amp;
 
 if ! grep -q '^dm:5' /etc/inittab; then \
-	echo dm:5:respawn:/etc/rc.d/init.d/xdm >> /etc/inittab; \
+  echo dm:5:respawn:/etc/rc.d/init.d/xdm >> /etc/inittab; \
 fi</userinput></screen><screen role="root" revision="systemd">
 <userinput>install -vdm755 /etc/default /usr/lib/tmpfiles.d &amp;&amp;
 install -vDm644 contrib/rc/systemd/dtlogin.service -t /usr/lib/systemd/system/ &amp;&amp;
