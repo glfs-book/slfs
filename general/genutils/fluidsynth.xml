@@ -137,8 +137,7 @@ cp -v fluidsynth.tmpfiles /usr/lib/tmpfiles.d/fluidsynth.conf</userinput></phras
     </para>
 
 <screen role="root"><userinput>tar -xf ../../fluid-soundfont_&fs-sf2;.orig.tar.gz &amp;&amp;
-install -vdm755 /usr/share/soundfonts         &amp;&amp;
-install -vm644  fluid-soundfont-&fs-sf2;/*.sf2 /usr/share/soundfonts</userinput></screen>
+install -vDm644 fluid-soundfont-&fs-sf2;/*.sf2 -t /usr/share/soundfonts/</userinput></screen>
 
     <para>
       By default, FluidSynth will read from

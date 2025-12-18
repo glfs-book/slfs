@@ -76,7 +76,7 @@ make config</userinput></screen>
       Optionally, make a few compatibility symlinks as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -v -m755 -d /usr/ucb &amp;&amp;
+<screen role="root"><userinput>install -vdm755 /usr/ucb &amp;&amp;
 ln -svf /usr/5bin/s-nail /usr/5bin/mailx &amp;&amp;
 ln -svf /usr/5bin/s-nail /usr/ucb/Mail &amp;&amp;
 ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>

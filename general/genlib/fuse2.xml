@@ -95,9 +95,8 @@ make</userinput></screen>
 
 rm -rf  /tmp/init.d &amp;&amp;
 
-install -v -m755 -d /usr/share/doc/fuse-&fuse2-version; &amp;&amp;
-install -v -m644    doc/{how-fuse-works,kernel.txt} \
-                    /usr/share/doc/fuse-&fuse2-version;</userinput></screen>
+install -vDm644 doc/{how-fuse-works,kernel.txt} \
+        -t /usr/share/doc/fuse-&fuse2-version;/</userinput></screen>
 
   </sect2>
 

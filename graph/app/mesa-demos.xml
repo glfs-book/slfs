@@ -169,7 +169,7 @@ done</userinput></screen>
   xeglgears
 )
 for util in ${mesa_utils[@]}; do
-  install -vm755 DESTDIR/usr/bin/$util /usr/bin
+  install -vDm755 DESTDIR/usr/bin/$util -t /usr/bin/
 done
 cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
 

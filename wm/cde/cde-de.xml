@@ -119,7 +119,7 @@ make</userinput></screen>
     </para>
 
 <screen role="root"><userinput>make install &amp;&amp;
-install -v -m644 contrib/desktopentry/cde.desktop /usr/share/xsessions</userinput></screen>
+install -vDm644 contrib/desktopentry/cde.desktop -t /usr/share/xsessions/</userinput></screen>
 
   </sect2>
 
@@ -143,20 +143,17 @@ install -v -m644 contrib/desktopentry/cde.desktop /usr/share/xsessions</userinpu
         <primary sortas="f-cde-de">CDE</primary>
       </indexterm>
 
-      <screen role="root" revision="sysv"><userinput>install -d -m 755 /etc/rc.d/rc{0,1,2,3,4,5,6,S}.d &amp;&amp;
-install -d -m 755 /etc/rc.d/init.d &amp;&amp;
-install -d -m 755 /etc/sysconfig &amp;&amp;
-install -m 754 blfs/init.d/xdm        /etc/rc.d/init.d/ &amp;&amp;
-install -m 644 blfs/sysconfig/xdm /etc/sysconfig/xdm &amp;&amp;
-echo "DISPLAY_MANAGER=/usr/dt/bin/dtlogin" >> /etc/sysconfig/xdm &amp;&amp;
-sed -i "s/DM_OPTIONS=.*/DM_OPTIONS=\"-quiet -daemon\"/g" /etc/sysconfig/xdm &amp;&amp;
+      <screen role="root" revision="sysv"><userinput>install -vDm754 blfs/init.d/xdm    -t /etc/rc.d/init.d/ &amp;&amp;
+sed -e '$aDISPLAY_MANAGER=/usr/dt/bin/dtlogin' \
+    -e 's|DM_OPTIONS=.*|DM_OPTIONS="-quiet -daemon"|g' \
+    blfs/sysconfig/xdm |
+install -vDm644 /dev/stdin /etc/sysconfig/xdm &amp;&amp;
+
 if ! grep -q '^dm:5' /etc/inittab; then \
 	echo dm:5:respawn:/etc/rc.d/init.d/xdm >> /etc/inittab; \
 fi</userinput></screen><screen role="root" revision="systemd">
-<userinput>install -d -m 755 /etc/default &amp;&amp;
-install -d -m 755 /usr/lib/tmpfiles.d &amp;&amp;
-install -d -m 755 /usr/lib/systemd/system &amp;&amp;
-install -m 644 contrib/rc/systemd/dtlogin.service /usr/lib/systemd/system/ &amp;&amp;
+<userinput>install -vdm755 /etc/default /usr/lib/tmpfiles.d &amp;&amp;
+install -vDm644 contrib/rc/systemd/dtlogin.service -t /usr/lib/systemd/system/ &amp;&amp;
 systemctl enable dtlogin.service
 </userinput></screen>
 
