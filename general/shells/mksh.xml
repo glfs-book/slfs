@@ -20,8 +20,8 @@
     <title>Introduction to mksh</title>
 
     <para>
-      The mksh package provides the MirBSD Korn Shell, a small, fast, reliable
-      shell suitable for both scripting and interactive use.
+      The mksh package provides the MirBSD Korn Shell, which is a small, fast,
+      and reliable shell suitable for both scripting and interactive use.
     </para>
 
     <itemizedlist spacing="compact">
@@ -58,7 +58,7 @@
       Now as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vDm755 mksh -t /usr/bin/
+<screen role="root"><userinput>install -vDm755 mksh -t /usr/bin/ &amp;&amp;
 install -vDm644 mksh.1 -t /usr/share/man/man1/</userinput></screen>
 
   </sect2>
