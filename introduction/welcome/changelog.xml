@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>December 18th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - mksh: Added. Fixes
+          <ulink url="&slfs-issues;/448">#448</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 15th, 2025</para>
       <itemizedlist>
         <listitem>

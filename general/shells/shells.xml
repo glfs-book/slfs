@@ -17,5 +17,6 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fish.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ksh.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mksh.xml"/>
 
 </chapter>
