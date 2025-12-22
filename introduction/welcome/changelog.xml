@@ -40,6 +40,15 @@
     -->
 
     <listitem>
+      <para>December 22nd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - CUDA: Move to GLFS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 18th, 2025</para>
       <itemizedlist>
         <listitem>
