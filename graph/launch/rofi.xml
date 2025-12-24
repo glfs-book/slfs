@@ -48,7 +48,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
-      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with

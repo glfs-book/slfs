@@ -71,7 +71,7 @@
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
       <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>,
-      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink> (with GObject
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink> (with GObject
       Introspection),
       <ulink url="&blfs-svn;/general/jansson.html">Jansson</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,

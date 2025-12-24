@@ -50,7 +50,7 @@
     <para role="recommended">
       <xref linkend="fcitx5-lua"/>,
       <xref linkend="fcitx5-qt"/>. and
-      <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
