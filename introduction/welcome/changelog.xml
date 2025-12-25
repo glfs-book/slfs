@@ -43,6 +43,9 @@
       <para>December 25th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - SIMDe: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - MangoWC: 0.10.7 -&gt; 0.10.8. Fixes
           <ulink url="&slfs-issues;/449">#449</ulink>.</para>
         </listitem>
