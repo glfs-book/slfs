@@ -40,7 +40,7 @@
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/general/dbus.html">dbus</ulink>,
-      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      &ecm;,
       <ulink url="&blfs-svn;/general/fmt.html">fmt</ulink>,
       <ulink url="&blfs-svn;/general/json-c.html">JSON-C</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,

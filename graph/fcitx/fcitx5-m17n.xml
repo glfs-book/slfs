@@ -38,7 +38,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
-      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      &ecm;,
       <xref linkend="fcitx5"/>, and <xref linkend="m17n"/>
     </para>
 

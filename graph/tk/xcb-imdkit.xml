@@ -37,7 +37,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">cmake</ulink>,
-      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      &ecm;,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       <ulink url="&blfs-svn;/x/xcb-util.html">xcb-util</ulink>, and
       <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>
