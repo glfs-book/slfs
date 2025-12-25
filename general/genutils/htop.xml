@@ -51,8 +51,7 @@
     <title>Installation of htop</title>
 
     <para>
-      Install htop by running the following
-      commands:
+      Install htop by running the following commands:
     </para>
 
 <screen><userinput>./configure --prefix=/usr &amp;&amp;
@@ -62,7 +61,7 @@ make</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make install</userinput></screen>
+<screen role="root"><userinput>make pixmapdir=/usr/share/icons/hicolor/128x128/apps install</userinput></screen>
 
   </sect2>
 
