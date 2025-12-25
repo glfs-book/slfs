@@ -71,8 +71,7 @@
     </para>
 
 <screen><userinput>tar -xvf ../&libime-kenlm;.tar.gz -C src/libime/core &amp;&amp;
-rmdir src/libime/core/kenlm &amp;&amp;
-mv src/libime/core/kenlm-&libime-kenlm; src/libime/core/kenlm</userinput></screen>
+mv -vf src/libime/core/kenlm-&libime-kenlm; -T src/libime/core/kenlm</userinput></screen>
 
     <para>
       Install libime by running the following
