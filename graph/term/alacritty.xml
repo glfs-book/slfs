@@ -74,11 +74,9 @@
       If you installed scdoc and wish to build the
       man pages, execute the following commands:
     </para>
-<screen><userinput>pushd extra/man &amp;&amp;
-for f in *.scd; do
+<screen><userinput>for f in extra/man/*.scd; do
     scdoc &lt; $f &gt; ${f%.*}
-done &amp;&amp;
-popd</userinput></screen>
+done</userinput></screen>
 
     <para>
       Now, as the <systemitem class="username">root</systemitem> user:
