@@ -1,6 +1,6 @@
 name: Update package (new)
 description: Report an outdated package
-title: "Update "
+title: "package: old -> new"
 labels: [update]
 body:
   - type: markdown
