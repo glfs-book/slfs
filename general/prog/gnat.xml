@@ -117,7 +117,7 @@ export PATH=/opt/gnat/bin:$PATH_HOLD</userinput></screen>
       following as the &root; user:
     </para>
 
-<screen><userinput>find /opt/gnat/bin -name ld -exec mv -v {} {}.old \; &amp;&amp;
+<screen role="root"><userinput>find /opt/gnat/bin -name ld -exec mv -v {} {}.old \; &amp;&amp;
 find /opt/gnat/bin -name as -exec mv -v {} {}.old \;</userinput></screen>
 
   </sect2>
