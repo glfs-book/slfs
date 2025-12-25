@@ -40,6 +40,44 @@
     -->
 
     <listitem>
+      <para>December 25th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - MangoWC: 0.10.7 -&gt; 0.10.8. Fixes
+          <ulink url="&slfs-issues;/449">#449</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - tornado: 6.5.3 -&gt; 6.5.4. Fixes
+          <ulink url="&slfs-issues;/450">#450</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 6.2.0 -&gt; 6.4.0. Fixes
+          <ulink url="&slfs-issues;/453">#453</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - tmux: 3.6 -&gt; 3.6a. Fixes
+          <ulink url="&slfs-issues;/455">#455</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Flatpak: 1.16.1 -&gt; 1.16.2. Fixes
+          <ulink url="&slfs-issues;/459">#459</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - i3: 4.24 -&gt; 4.25 (security). Fixes
+          <ulink url="&slfs-issues;/460">#460</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libdecor: 0.2.4 -&gt; 0.2.5. Fixes
+          <ulink url="&slfs-issues;/461">#461</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - nvchecker: 2.19 -&gt; 2.20. Fixes
+          <ulink url="&slfs-issues;/465">#465</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 24th, 2025</para>
       <itemizedlist>
         <listitem>

@@ -48,7 +48,7 @@
     <title>Installation of glaze</title>
 
     <para>
-      Install glaze by running the following commands:
+      Prepare the installation of glaze by running the following commands:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -59,9 +59,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D glaze_BUILD_EXAMPLES=OFF  \
       -D glaze_DEVELOPER_MODE=OFF  \
       -D glaze_ENABLE_FUZZING=OFF  \
-      -G Ninja .. &amp;&amp;
-
-ninja</userinput></screen>
+      -G Ninja ..</userinput></screen>
 
     <para>
       Now, as the &root; user:
