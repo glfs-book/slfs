@@ -65,3 +65,15 @@ The default target (sysv) builds the HTML in `~/public_html/slfs`,
 whereas for systemd, it would be in `~/public_html/slfs-systemd`.
 It will by default make each package and section its own page then link
 everything together for a smooth experience.
+
+There are also more variables that can be set which can be used to specify
+where the rendered output goes, where temporary files are located, the
+stability type of the render, and more.
+
+An important thing to be aware of is by default, what is set as RENDERTMP
+(`mktemp -d` by default) will be removed after every file has been
+converted to a new format (HTML, wget-list, command scripts, etc.) by default.
+If you need to keep the directory for whatever reason, pass `AUTO_CLEAN=0` when
+running `make`.
+
+Example: `make RENDERTMP=~/tmp AUTO_CLEAN=0`
