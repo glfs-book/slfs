@@ -43,6 +43,10 @@
       <para>December 25th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Moved Graphical Libraries to Graphical Components from
+          General Libraries and Utilities.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - SIMDe: Added.</para>
         </listitem>
         <listitem>
