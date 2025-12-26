@@ -69,8 +69,7 @@ popd</userinput></screen>
 install -vDm644 star/star.1             \
                 star_sym/star_sym.1     \
                 tartest/tartest.1       \
-        -t /usr/share/man/5man/man1/
-</userinput></screen>
+        -t /usr/share/man/5man/man1/</userinput></screen>
 
   </sect2>
 

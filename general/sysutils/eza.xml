@@ -96,8 +96,7 @@ done</userinput></screen>
     </para>
 <screen role="root"><userinput>install -vDm644 completions/bash/eza      -t /usr/share/bash-completion/completions/
 install -vDm644 completions/fish/eza.fish -t /usr/share/fish/vendor_completions.d/
-install -vDm644 completions/zsh/_eza      -t /usr/share/zsh/site-functions/
-</userinput></screen>
+install -vDm644 completions/zsh/_eza      -t /usr/share/zsh/site-functions/</userinput></screen>
 
   </sect2>
 

@@ -100,8 +100,7 @@ make</userinput></screen>
       &root; user:
     </para>
 
-<screen role="root"><userinput>install -vDm644 ../U1{5,7}-MERGED.BIN -t /usr/share/p20-emu/
-</userinput></screen>
+<screen role="root"><userinput>install -vDm644 ../U1{5,7}-MERGED.BIN -t /usr/share/p20-emu/</userinput></screen>
 
   </sect2>
 

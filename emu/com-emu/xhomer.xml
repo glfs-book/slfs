@@ -89,15 +89,13 @@ gcc UTILITIES/venix2xhomer.c -o UTILITIES/venix2xhomer</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vDm755 xhomer UTILITIES/{lbn,venix}2xhomer -t /usr/bin/
-</userinput></screen>
+<screen role="root"><userinput>install -vDm755 xhomer UTILITIES/{lbn,venix}2xhomer -t /usr/bin/</userinput></screen>
 
     <para>
       Optionally, install the documentation as the &root; user:
     </para>
 
-<screen role="root" remap="doc"><userinput>install -vDm644 DOC/* -t /usr/share/doc/xhomer-&xhomer-version;/
-</userinput></screen>
+<screen role="root" remap="doc"><userinput>install -vDm644 DOC/* -t /usr/share/doc/xhomer-&xhomer-version;/</userinput></screen>
 
   </sect2>
 

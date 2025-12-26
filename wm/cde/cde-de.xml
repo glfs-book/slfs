@@ -154,8 +154,7 @@ if ! grep -q '^dm:5' /etc/inittab; then \
 fi</userinput></screen><screen role="root" revision="systemd">
 <userinput>install -vdm755 /etc/default /usr/lib/tmpfiles.d &amp;&amp;
 install -vDm644 contrib/rc/systemd/dtlogin.service -t /usr/lib/systemd/system/ &amp;&amp;
-systemctl enable dtlogin.service
-</userinput></screen>
+systemctl enable dtlogin.service</userinput></screen>
 
       <para revision="sysv">
         In order to permanently set the default runlevel to 5, starting the

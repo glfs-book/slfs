@@ -115,8 +115,7 @@ install -vDm644 extra/man/*.5 -t /usr/share/man/man5/</userinput></screen>
       <systemitem class="username">root</systemitem> user:
     </para>
 
-<screen remap="doc" role="root"><userinput>install -vDm644 README.md docs/* -t /usr/share/doc/alacritty-&alacritty-version;/
-</userinput></screen>
+<screen remap="doc" role="root"><userinput>install -vDm644 README.md docs/* -t /usr/share/doc/alacritty-&alacritty-version;/</userinput></screen>
 
   </sect2>
 
