@@ -29,7 +29,7 @@ git checkout stable
 
 Then render the book with `make STAB=release [other options]`.
 
-There are also [releases](https://github.com/glfs-book/slfs/releases) vailable
+There are also [releases](https://github.com/glfs-book/slfs/releases) available
 for download. These contain both the SysV and Systemd editions of the book as
 chunked HTML.
 
