@@ -43,6 +43,10 @@
       <para>December 31st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - libvpl-tools: 1.4.0 -&gt; 1.5.0. Fixes
+          <ulink url="&slfs-issues;/464">#464</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - libvpl: 2.15.0 -&gt; 2.16.0. Fixes
           <ulink url="&slfs-issues;/463">#463</ulink>.</para>
         </listitem>

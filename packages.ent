@@ -165,7 +165,7 @@ version, so keep this at that. -->
 <!-- App -->
 <!ENTITY awww-version                        "0.11.2">
 <!ENTITY grim-version                        "1.5.0">
-<!ENTITY libvpl-tools-version                "1.4.0">
+<!ENTITY libvpl-tools-version                "1.5.0">
 <!ENTITY mesa-demos-version                  "9.0.0">
 <!ENTITY obs-studio-version                  "31.1.2">
 <!ENTITY obs-cef-version                     "6533">
