@@ -40,7 +40,7 @@
 <!-- General Utilities -->
 <!ENTITY cava-version                        "0.10.6">
 <!ENTITY htop-version                        "3.4.1">
-<!ENTITY btop-version                        "1.4.5">
+<!ENTITY btop-version                        "1.4.6">
 <!ENTITY cldr-emoji-annotation-version       "38">
 <!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">
 <!ENTITY flatpak-version                     "1.16.2">

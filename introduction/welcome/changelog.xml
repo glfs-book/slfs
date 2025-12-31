@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>December 31st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - BTOP++: 1.4.5 -&gt; 1.4.6. Fixes
+          <ulink url="&slfs-issues;/472">#472</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 25th, 2025</para>
       <itemizedlist>
         <listitem>
