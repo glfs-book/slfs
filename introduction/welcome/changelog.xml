@@ -43,6 +43,10 @@
       <para>December 31st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - libvpl: 2.15.0 -&gt; 2.16.0. Fixes
+          <ulink url="&slfs-issues;/463">#463</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - intel-onevpl: 25.4.5 -&gt; 25.4.6. Fixes
           <ulink url="&slfs-issues;/471">#471</ulink>.</para>
         </listitem>
