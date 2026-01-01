@@ -43,6 +43,10 @@
       <para>December 31st, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fish: 4.2.1 -&gt; 4.3.2. Fixes
+          <ulink url="&slfs-issues;/474">#474</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - libvpl-tools: 1.4.0 -&gt; 1.5.0. Fixes
           <ulink url="&slfs-issues;/464">#464</ulink>.</para>
         </listitem>

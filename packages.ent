@@ -125,7 +125,7 @@ version, so keep this at that. -->
 <!ENTITY openjdk-suffix                      "-ga">
 <!ENTITY openjdk-build                       "10">
 <!-- Shells -->
-<!ENTITY fish-version                        "4.2.1">
+<!ENTITY fish-version                        "4.3.2">
 <!ENTITY ksh-version                         "1.0.10">
 <!ENTITY mksh-version                        "R59c">
 <!-- MM-LIB -->
