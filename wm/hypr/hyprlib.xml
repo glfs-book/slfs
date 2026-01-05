@@ -85,6 +85,7 @@
 <literal>hyprland-protocols/archive/v&hyprland-protocols-version;/hyprland-protocols-v&hyprland-protocols-version;.tar.gz
 hyprutils/archive/v&hyprutils-version;/hyprutils-v&hyprutils-version;.tar.gz
 hyprlang/archive/v&hyprlang-version;/hyprlang-v&hyprlang-version;.tar.gz
+hyprwire/archive/v&hyprwire-version;/hyprwire-v&hyprwire-version;.tar.gz
 hyprcursor/archive/v&hyprcursor-version;/hyprcursor-v&hyprcursor-version;.tar.gz
 hyprwayland-scanner/archive/v&hyprwayland-scanner-version;/hyprwayland-scanner-v&hyprwayland-scanner-version;.tar.gz
 aquamarine/archive/v&aquamarine-version;/aquamarine-v&aquamarine-version;.tar.gz
@@ -224,8 +225,9 @@ done</userinput></screen>
           hyprland-donate-screen,
           hyprland-update-screen,
           hyprland-welcome,
-          hyprland-run, and
-          hyprwayland-scanner
+          hyprland-run,
+          hyprwayland-scanner, and
+          hyprwire-scanner
         </seg>
         <seg>
           libaquamarine,
@@ -236,12 +238,13 @@ done</userinput></screen>
           libhyprland-quick-styleplugin,
           libhyprland-quick-style,
           libhyprlang,
-          libhyprtoolkit, and
-          libhyprutils
+          libhyprtoolkit,
+          libhyprutils, and
+          libhyprwire
         </seg>
         <seg>
-          /usr/include/{aquamarine,hypr{cursor,graphics,toolkit,utils}},
-          /usr/lib/cmake/hyprwayland-scanner,
+          /usr/include/{aquamarine,hypr{cursor,graphics,toolkit,utils,wire}},
+          /usr/lib/cmake/hypr{wayland,wire}-scanner,
           /usr/lib/qt6/qml/org/hyprland/style, and
           /usr/share/hyprland-protocols
         </seg>
@@ -339,6 +342,19 @@ done</userinput></screen>
           </para>
           <indexterm zone="hyprlib hyprwayland-scanner">
             <primary sortas="b-hyprwayland-scanner">hyprwayland-scanner</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprwire-scanner">
+        <term><command>hyprwire-scanner</command></term>
+        <listitem>
+          <para>
+            generates C++ code from hyprwire protocol
+            XML files
+          </para>
+          <indexterm zone="hyprlib hyprwire-scanner">
+            <primary sortas="b-hyprwire-scanner">hyprwire-scanner</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -460,6 +476,19 @@ done</userinput></screen>
           </para>
           <indexterm zone="hyprlib libhyprutils">
             <primary sortas="c-libhyprutils">libhyprutils</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprwire">
+        <term><filename class="libraryfile">libhyprwire</filename></term>
+        <listitem>
+          <para>
+            provides functions to replace D-Bus, but not in place; a new IPC
+            wire protocol and its implementation library
+          </para>
+          <indexterm zone="hyprlib libhyprwire">
+            <primary sortas="c-libhyprwire">libhyprwire</primary>
           </indexterm>
         </listitem>
       </varlistentry>

@@ -90,7 +90,10 @@ SFML/SFML/archive/&dolphin-sfml-external;.tar.gz
 GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/&dolphin-vk-mem-alloc-external;.tar.gz
 mozilla/cubeb/archive/&dolphin-cubeb-external;.tar.gz
 arsenm/sanitizers-cmake/archive/&dolphin-sanitize-external;.tar.gz
+mutouyun/cpp-ipc/archive/&dolphin-cpp-ipc-external;.tar.gz
+weisslj/cpp-optparse/archive/&dolphin-cpp-optparse-external;.tar.gz
 libusb/hidapi/archive/&dolphin-hidapi-external;.tar.gz
+ocornut/imgui/archive/&dolphin-imgui-external;.tar.gz
 epezent/implot/archive/&dolphin-implot-external;.tar.gz
 mgba-emu/mgba/archive/&dolphin-mgba-external;.tar.gz
 miniupnp/miniupnp/archive/&dolphin-miniupnp-external;.tar.gz
@@ -147,7 +150,11 @@ mv -T VulkanMemoryAllocator-* \
 mv -T cubeb-* dolphin-&dolphin-version;/Externals/cubeb/cubeb &amp;&amp;
 mv -T sanitizers-cmake-* \
       dolphin-&dolphin-version;/Externals/cubeb/cubeb/cmake/sanitizers-cmake &amp;&amp;
+mv -T cpp-ipc-* dolphin-&dolphin-version;/Externals/cpp-ipc/cpp-ipc &amp;&amp;
+mv -T cpp-optparse-* \
+      dolphin-&dolphin-version;/Externals/cpp-optparse/cpp-optparse &amp;&amp;
 mv -T hidapi-* dolphin-&dolphin-version;/Externals/hidapi/hidapi-src &amp;&amp;
+mv -T imgui-* dolphin-&dolphin-version;/Externals/imgui/imgui &amp;&amp;
 mv -T implot-* dolphin-&dolphin-version;/Externals/implot/implot &amp;&amp;
 mv -T mgba-* dolphin-&dolphin-version;/Externals/mGBA/mgba &amp;&amp;
 mv -T miniupnp-* dolphin-&dolphin-version;/Externals/miniupnpc/miniupnp &amp;&amp;
