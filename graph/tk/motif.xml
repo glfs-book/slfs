@@ -70,19 +70,19 @@
       Now, apply the various patches from the tarball:
     </para>
 
-<screen><userinput>patch -Np1 -i patch/01_all_solaris.patch &amp;&amp;
+<screen><userinput>patch -Np1 -i patch/01_all_solaris.patch        &amp;&amp;
 patch -Np1 -i patch/02_all_sanitise-paths.patch &amp;&amp;
-patch -Np1 -i patch/03_all_solaris-11.patch &amp;&amp;
-patch -Np1 -i patch/04_all_parallel-make.patch &amp;&amp;
-patch -Np1 -i patch/05_all_install-dirs.patch &amp;&amp;
-patch -Np1 -i patch/06_all_cflags.patch &amp;&amp;
-patch -Np1 -i patch/07_all_no-demos.patch &amp;&amp;
-patch -Np1 -i patch/08_all_xmbind-xorg.patch &amp;&amp;
-patch -Np1 -i patch/09_all_slibtool.patch &amp;&amp;
-patch -Np1 -i patch/10_all_string_h.patch &amp;&amp;
-patch -Np1 -i patch/11_all_acinclude.patch &amp;&amp;
-patch -Np1 -i patch/12_all_noreturn.patch &amp;&amp;
-patch -Np1 -i patch/13_all_xpm-comments.patch &amp;&amp;
+patch -Np1 -i patch/03_all_solaris-11.patch     &amp;&amp;
+patch -Np1 -i patch/04_all_parallel-make.patch  &amp;&amp;
+patch -Np1 -i patch/05_all_install-dirs.patch   &amp;&amp;
+patch -Np1 -i patch/06_all_cflags.patch         &amp;&amp;
+patch -Np1 -i patch/07_all_no-demos.patch       &amp;&amp;
+patch -Np1 -i patch/08_all_xmbind-xorg.patch    &amp;&amp;
+patch -Np1 -i patch/09_all_slibtool.patch       &amp;&amp;
+patch -Np1 -i patch/10_all_string_h.patch       &amp;&amp;
+patch -Np1 -i patch/11_all_acinclude.patch      &amp;&amp;
+patch -Np1 -i patch/12_all_noreturn.patch       &amp;&amp;
+patch -Np1 -i patch/13_all_xpm-comments.patch   &amp;&amp;
 patch -Np1 -i patch/14_all_xpm-width-0.patch</userinput></screen>
 
     <para>
@@ -103,8 +103,8 @@ autoreconf -fiv -I.</userinput></screen>
     </para>
 
 <screen><userinput>export OLDLANG=$LANG &amp;&amp;
-export LANG=C &amp;&amp;
-export LEX=flex &amp;&amp;
+export LANG=C        &amp;&amp;
+export LEX=flex      &amp;&amp;
 export YACC=byacc</userinput></screen>
 
     <para>
@@ -112,26 +112,32 @@ export YACC=byacc</userinput></screen>
     </para>
 
 <screen><userinput>sed -i '1 i\%option main' tools/wml/wmluiltok.l &amp;&amp;
-CFLAGS+=" -std=gnu17"     \
-CXXFLAGS+=" -std=gnu17"   \
-./configure --prefix=/usr \
-            --with-x      \
-            --enable-motif22-compatibility \
-            --disable-static \
-            --enable-utf8 \
-            --enable-xft \
-            --enable-jpeg \
-            --enable-png &amp;&amp;
+
+CFLAGS+=" -std=gnu17"                      \
+CXXFLAGS+=" -std=gnu17"                    \
+./configure --prefix=/usr                  \
+            --with-x                       \
+            --disable-static               \
+            --enable-utf8                  \
+            --enable-xft                   \
+            --enable-jpeg                  \
+            --enable-png                   \
+            --enable-motif22-compatibility &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make install &amp;&amp;
-make -C demos install-data &amp;&amp;
-rm -rvf /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
-install -v -m755 -d /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
+<screen role="root"><userinput>make install               &amp;&amp;
+make -C demos install-data</userinput></screen>
+
+    <para>
+      Still as the &root; user, move the demos into the correct location:
+    </para>
+
+<screen role="root"><userinput>rm -rfv /usr/share/doc/motif-&motif-version;/demos               &amp;&amp;
+install -v -m755 -d /usr/share/doc/motif-&motif-version;/demos   &amp;&amp;
 mv -v /usr/share/Xm/* /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
 rmdir -v /usr/share/Xm</userinput></screen>
 
@@ -173,8 +179,8 @@ EOF</userinput></screen>
     </para>
 
 <screen><userinput>export LANG=$OLDLANG &amp;&amp;
-unset OLDLANG &amp;&amp;
-unset LEX &amp;&amp;
+unset OLDLANG        &amp;&amp;
+unset LEX            &amp;&amp;
 unset YACC</userinput></screen>
 
   </sect2>
