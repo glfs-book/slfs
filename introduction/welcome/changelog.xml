@@ -43,6 +43,10 @@
       <para>January 4th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - W3m: Added. Fixes
+          <ulink url="&slfs-issues;/434">#434</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Hypr Libraries: Added hyprwire.</para>
         </listitem>
         <listitem>
