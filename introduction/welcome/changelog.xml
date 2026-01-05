@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>January 5th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.53.0 -&gt; 0.53.1. Fixes
+          <ulink url="&slfs-issues;/487">#487</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 4th, 2025</para>
       <itemizedlist>
         <listitem>
