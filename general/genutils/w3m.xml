@@ -38,13 +38,17 @@
       <ulink url="&blfs-svn;/general/gc.html">GC</ulink>
     </para>
 
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/x/imlib2.html">imlib2</ulink> and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
-      <ulink url="&blfs-svn;/general/gpm.html">GPM</ulink>,
-      <ulink url="&blfs-svn;/x/imlib2.html">imlib2</ulink>,
-      <xref linkend="m17n"/>, and
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/general/gpm.html">GPM</ulink>, and
+      <xref linkend="m17n"/>
     </para>
 
   </sect2>
@@ -55,7 +59,10 @@
     <para>Install <application>w3m</application> by running the following
     commands:</para>
 
-<screen><userinput>./configure --prefix=/usr --sysconfdir=/etc &amp;&amp;
+<screen><userinput>./configure --prefix=/usr          \
+            --sysconfdir=/etc      \
+            --enable-image=fb,x11  \
+            --with-imagelib=imlib2 &amp;&amp;
 make</userinput></screen>
 
     <para>Now, as the &root; user:</para>
@@ -68,8 +75,15 @@ install -vDm644  doc/{HISTORY,READ*,keymap.*,menu.*,*.html} \
   <sect2 role="commands">
     <title>Command Explanations</title>
 
-    <para><parameter>--sysconfdir=/etc</parameter>: This option puts the
+    <para><parameter>--sysconfdir=/etc</parameter>: This parameter puts the
     configuration files in /etc.</para>
+
+    <para><parameter>--enable-image=fb,x11</parameter>: This parameter enables
+    image support for the framebuffer and X11.</para>
+
+    <para><parameter>--with-imagelib=imlib2</parameter>: This parameter builds
+    against the Imlib2 image library for image support.</para>
+
   </sect2>
 
   <sect2 role="content">
