@@ -212,8 +212,9 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <seg>
           hyprctl,
           hyprland (link to Hyprland),
-          Hyprland, and
-          hyprpm
+          Hyprland,
+          hyprpm, and
+          start-hyprland
         </seg>
         <seg>
           None
@@ -259,7 +260,8 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>Hyprland</command></term>
         <listitem>
           <para>
-            is the Hyprland compositor
+            is the Hyprland compositor; running directly will output a warning,
+            so run <command>start-hyprland</command> instead
           </para>
           <indexterm zone="hyprland Hyprland">
             <primary sortas="b-Hyprland">Hyprland</primary>
@@ -275,6 +277,19 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
           </para>
           <indexterm zone="hyprland hyprpm">
             <primary sortas="b-hyprpm">hyprpm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="start-hyprland">
+        <term><command>start-hyprland</command></term>
+        <listitem>
+          <para>
+            is the recommended way to start Hyprland, which starts a watchdog
+            process
+          </para>
+          <indexterm zone="hyprland start-hyprland">
+            <primary sortas="b-start-hyprland">start-hyprland</primary>
           </indexterm>
         </listitem>
       </varlistentry>
