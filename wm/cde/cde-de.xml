@@ -45,6 +45,7 @@
       </listitem>
     </itemizedlist>
 
+<!-- Not needed for now, but keeping for the future...
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -54,6 +55,7 @@
         </para>
       </listitem>
     </itemizedlist>
+-->
 
   <bridgehead renderas="sect3">CDE Dependencies</bridgehead>
 
@@ -83,36 +85,43 @@
   <sect2 role="installation">
     <title>Installation of CDE</title>
 
+<!-- Not needed now, but commenting for a future patch.
     <para>
       First, apply a patch with multiple upstream fixes and patches:
     </para>
 
 <screen><userinput>patch -Np2 -i ../cde-&cde-de-version;-upstream-fixes.patch</userinput></screen>
+-->
 
     <para>
-      Fix <envar>nullptr</envar> being used in a wrong way:
+      Fix <envar>nullptr</envar> being used incorrectly:
     </para>
 
 <screen><userinput>sed -e 's/\, \*nullptr//g'     \
     -e 's/\&amp;nullptr/nullptr/g' \
     -i programs/dtksh/ksh93/src/cmd/ksh93/sh/xec.c</userinput></screen>
 
+<!-- We're passing -Wno-incompatible-pointer-types here because of problems on
+     non-AMD64 architectures, including aarch64. We don't officially support
+     that of course, but I did this update on a 32-bit system that I'm using
+     for other critical updates. The problem is an interaction with libXt.-->
+
     <para>
       Install CDE by executing the following commands:
     </para>
 
-<screen><userinput>./autogen.sh &amp;&amp;
-CFLAGS+=" -std=gnu17"         \
-./configure --prefix=/usr     \
-            --sysconfdir=/etc \
-            --disable-static &amp;&amp;
+<screen><userinput>./autogen.sh                       &amp;&amp;
+CFLAGS+=" -std=gnu17 -Wno-incompatible-pointer-types" \
+./configure --prefix=/usr                             \
+            --sysconfdir=/etc                         \
+            --disable-static                          &amp;&amp;
 make</userinput></screen>
 
     <note><para>This package may print escape sequences during the build
     process which will make the terminal stop echoing back characters. In
     order to work around this, you need to blindly type in
     <command>reset</command>. After the screen is cleared your terminal will
-    work just fine again.</para></note>
+    work correctly again.</para></note>
 
     <para>
       Now as the &root; user:
@@ -143,19 +152,19 @@ install -v -m644 contrib/desktopentry/cde.desktop /usr/share/xsessions</userinpu
         <primary sortas="f-cde-de">CDE</primary>
       </indexterm>
 
-      <screen role="root" revision="sysv"><userinput>install -d -m 755 /etc/rc.d/rc{0,1,2,3,4,5,6,S}.d &amp;&amp;
-install -d -m 755 /etc/rc.d/init.d &amp;&amp;
-install -d -m 755 /etc/sysconfig &amp;&amp;
-install -m 754 blfs/init.d/xdm        /etc/rc.d/init.d/ &amp;&amp;
-install -m 644 blfs/sysconfig/xdm /etc/sysconfig/xdm &amp;&amp;
-echo "DISPLAY_MANAGER=/usr/dt/bin/dtlogin" >> /etc/sysconfig/xdm &amp;&amp;
+<screen role="root" revision="sysv"><userinput>install -d -m 755 /etc/rc.d/rc{0,1,2,3,4,5,6,S}.d                           &amp;&amp;
+install -d -m 755 /etc/rc.d/init.d                                          &amp;&amp;
+install -d -m 755 /etc/sysconfig                                            &amp;&amp;
+install -m 754 blfs/init.d/xdm        /etc/rc.d/init.d/                     &amp;&amp;
+install -m 644 blfs/sysconfig/xdm /etc/sysconfig/xdm                        &amp;&amp;
+echo "DISPLAY_MANAGER=/usr/dt/bin/dtlogin" >> /etc/sysconfig/xdm            &amp;&amp;
 sed -i "s/DM_OPTIONS=.*/DM_OPTIONS=\"-quiet -daemon\"/g" /etc/sysconfig/xdm &amp;&amp;
 if ! grep -q '^dm:5' /etc/inittab; then \
 	echo dm:5:respawn:/etc/rc.d/init.d/xdm >> /etc/inittab; \
-fi</userinput></screen><screen role="root" revision="systemd">
-<userinput>install -d -m 755 /etc/default &amp;&amp;
-install -d -m 755 /usr/lib/tmpfiles.d &amp;&amp;
-install -d -m 755 /usr/lib/systemd/system &amp;&amp;
+fi</userinput></screen>
+<screen role="root" revision="systemd"><userinput>install -d -m 755 /etc/default                                             &amp;&amp;
+install -d -m 755 /usr/lib/tmpfiles.d                                      &amp;&amp;
+install -d -m 755 /usr/lib/systemd/system                                  &amp;&amp;
 install -m 644 contrib/rc/systemd/dtlogin.service /usr/lib/systemd/system/ &amp;&amp;
 systemctl enable dtlogin.service
 </userinput></screen>
@@ -205,7 +214,7 @@ systemctl enable dtlogin.service
           libDtXinerama, and libtt
         </seg>
         <seg>
-          /usr/dt, /usr/include/csa, /usr/include/Dt,
+          /etc/cde, /usr/dt, /usr/include/csa, /usr/include/Dt,
           /usr/include/Tt, /usr/lib/cde, /usr/lib/dtksh, /usr/libexec/cde,
           /usr/share/cde, and /var/spool/calendar
         </seg>
@@ -221,7 +230,7 @@ systemctl enable dtlogin.service
         <term><command>Xsession</command></term>
         <listitem>
           <para>
-            is the startscript for CDE
+            is the startup script for CDE
           </para>
           <indexterm zone="cde-de Xsession">
             <primary sortas="b-Xsession">Xsession</primary>
@@ -886,7 +895,7 @@ systemctl enable dtlogin.service
         <term><command>dtprintegrate</command></term>
         <listitem>
           <para>
-            sets up the configuration files for the printer components
+            creates the configuration files for the printer components
           </para>
           <indexterm zone="cde-de dtprintegrate">
             <primary sortas="b-dtprintegrate">dtprintegrate</primary>
@@ -1090,7 +1099,7 @@ systemctl enable dtlogin.service
         <term><command>dttypes</command></term>
         <listitem>
           <para>
-            generates a list of action and datatypes definitions
+            generates a list of action and datatype definitions
           </para>
           <indexterm zone="cde-de dttypes">
             <primary sortas="b-dttypes">dttypes</primary>

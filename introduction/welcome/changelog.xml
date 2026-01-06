@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>January 6th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - CDE: 2.5.2 -&gt; 2.5.3 (Security Update). Fixes
+          <ulink url="&slfs-issues;/415">#415</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 5th, 2025</para>
       <itemizedlist>
         <listitem>
