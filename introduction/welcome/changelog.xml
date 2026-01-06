@@ -43,6 +43,14 @@
       <para>January 5th, 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - hyprlang: 0.6.7 -&gt; 0.6.8. Fixes
+          <ulink url="&slfs-issues;/488">#488</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprtoolkit: 0.5.1 -&gt; 0.5.2. Fixes
+          <ulink url="&slfs-issues;/489">#489</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Hyprland: 0.53.0 -&gt; 0.53.1. Fixes
           <ulink url="&slfs-issues;/487">#487</ulink>.</para>
         </listitem>

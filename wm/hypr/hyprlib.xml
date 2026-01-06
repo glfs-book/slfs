@@ -82,17 +82,17 @@
     </para>
 
 <screen><userinput>cat &gt; hypr-list &lt;&lt; "EOF"
-<literal>hyprland-protocols/archive/v&hyprland-protocols-version;/hyprland-protocols-v&hyprland-protocols-version;.tar.gz
-hyprutils/archive/v&hyprutils-version;/hyprutils-v&hyprutils-version;.tar.gz
-hyprlang/archive/v&hyprlang-version;/hyprlang-v&hyprlang-version;.tar.gz
-hyprwire/archive/v&hyprwire-version;/hyprwire-v&hyprwire-version;.tar.gz
-hyprcursor/archive/v&hyprcursor-version;/hyprcursor-v&hyprcursor-version;.tar.gz
-hyprwayland-scanner/archive/v&hyprwayland-scanner-version;/hyprwayland-scanner-v&hyprwayland-scanner-version;.tar.gz
-aquamarine/archive/v&aquamarine-version;/aquamarine-v&aquamarine-version;.tar.gz
-hyprgraphics/archive/v&hyprgraphics-version;/hyprgraphics-v&hyprgraphics-version;.tar.gz
-hyprtoolkit/archive/v&hyprtoolkit-version;/hyprtoolkit-v&hyprtoolkit-version;.tar.gz
-hyprland-qt-support/archive/v&hyprland-qt-support-version;/hyprland-qt-support-v&hyprland-qt-support-version;.tar.gz
-hyprland-guiutils/archive/v&hyprland-guiutils-version;/hyprland-guiutils-v&hyprland-guiutils-version;.tar.gz</literal>
+<literal>hyprland-protocols/archive/v&hyprland-protocols-version;/hyprland-protocols-&hyprland-protocols-version;.tar.gz
+hyprutils/archive/v&hyprutils-version;/hyprutils-&hyprutils-version;.tar.gz
+hyprlang/archive/v&hyprlang-version;/hyprlang-&hyprlang-version;.tar.gz
+hyprwire/archive/v&hyprwire-version;/hyprwire-&hyprwire-version;.tar.gz
+hyprcursor/archive/v&hyprcursor-version;/hyprcursor-&hyprcursor-version;.tar.gz
+hyprwayland-scanner/archive/v&hyprwayland-scanner-version;/hyprwayland-scanner-&hyprwayland-scanner-version;.tar.gz
+aquamarine/archive/v&aquamarine-version;/aquamarine-&aquamarine-version;.tar.gz
+hyprgraphics/archive/v&hyprgraphics-version;/hyprgraphics-&hyprgraphics-version;.tar.gz
+hyprtoolkit/archive/v&hyprtoolkit-version;/hyprtoolkit-&hyprtoolkit-version;.tar.gz
+hyprland-qt-support/archive/v&hyprland-qt-support-version;/hyprland-qt-support-&hyprland-qt-support-version;.tar.gz
+hyprland-guiutils/archive/v&hyprland-guiutils-version;/hyprland-guiutils-&hyprland-guiutils-version;.tar.gz</literal>
 EOF</userinput></screen>
 
     <para>
@@ -146,7 +146,6 @@ EOF</literal></userinput></screen>
 do
 package=$(basename "$package")
 packagedir=${package%.tar.?z*}
-packagedir=$(echo -n "$packagedir" | sed 's/-v\([0-9]\)/-\1/')
 echo "Building $packagedir"
 
   tar -xf $package
