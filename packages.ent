@@ -211,7 +211,8 @@ version, so keep this at that. -->
 <!-- Wayfire -->
 <!ENTITY wf-version                          "0.10.0">
 <!ENTITY wf-config-version                   "&wf-version;">
-<!ENTITY wayfire-version                     "&wf-version;">
+<!--<!ENTITY wayfire-version                     "&wf-version;">-->
+<!ENTITY wayfire-version                     "0.10.1">
 <!ENTITY wayfire-plugins-extra-version       "&wf-version;">
 
 <!-- EMULATORS -->

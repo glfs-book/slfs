@@ -57,7 +57,8 @@
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
-      and <xref linkend="wlroots"/>
+      <xref linkend="wlroots"/>, and
+      <xref linkend="yyjson"/>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
@@ -69,8 +70,11 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
+      <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink>,
+      <ulink url="&blfs-svn;/x/libnotify.html">libnotify</ulink>,
       <ulink url="https://github.com/doctest/doctest">doctest</ulink> (for
-      tests)
+      tests), and
+      <ulink url="https://github.com/juniorrantila/libinotify">libinotify</ulink>
     </para>
 
   </sect2>
@@ -101,10 +105,10 @@ ninja</userinput></screen>
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      Remove useless static libraries:
+      Remove some useless static libraries as the &root; user:
     </para>
 
-<screen role="root"><userinput>rm -vf /usr/lib/lib{wftouch,yyjson}.a \
+<screen role="root"><userinput>rm -vf /usr/lib/libwftouch.a \
        /usr/lib/libwayfire-{move-drag-interface,workspace-wall}.a</userinput></screen>
 
     <para>
@@ -123,7 +127,8 @@ ninja</userinput></screen>
 
     <para>
       <parameter>-D use_system_wfconfig=enabled</parameter>: This parameter
-      ensures the system-installed <xref linkend="wf-config"/>.
+      ensures the system-installed <xref linkend="wf-config"/> is used during
+      compilation.
     </para>
 
     <para>
@@ -154,14 +159,14 @@ ninja</userinput></screen>
     <sect3><title>Configuration Information</title>
 
       <para>
-        Create the config file:
+        Copy the default configuration file:
       </para>
 
 <screen><userinput>cp /usr/share/wayfire/wayfire.ini ~/.config</userinput></screen>
 
       <para>
-        Now inspect the file and make any changes to suit your workflow. If you
-        need to know which plugins are installed, check for the Installed
+        Now, inspect the file and make any changes to suit your workflow. If you
+        need to know which plugins are installed, examine the list of Installed
         Plugins below.
       </para>
 
@@ -233,7 +238,9 @@ ninja</userinput></screen>
           zoom
         </seg>
         <seg>
-          /usr/lib/wayfire and /usr/share/wayfire
+          /usr/include/wayfire,
+          /usr/lib/wayfire,
+          and /usr/share/wayfire
         </seg>
       </seglistitem>
     </segmentedlist>

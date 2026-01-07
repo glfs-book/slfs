@@ -43,6 +43,10 @@
       <para>January 7th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - Wayfire: 0.10.0 -&gt; 0.10.1. Fixes
+          <ulink url="&slfs-issues;/429">#429</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - yyjson: Added. Part of
           <ulink url="&slfs-issues;/429">#429</ulink>.</para>
         </listitem>
