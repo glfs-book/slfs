@@ -49,8 +49,8 @@
       commands:
     </para>
 
-<screen><userinput>cd asio &amp;&amp;
-autoreconf -fi &amp;&amp;
+<screen><userinput>cd asio                   &amp;&amp;
+autoreconf -fi            &amp;&amp;
 ./configure --prefix=/usr &amp;&amp;
 make</userinput></screen>
 
