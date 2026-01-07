@@ -68,8 +68,8 @@
       First, apply several fixes to allow building with boost-1.87 and later:
     </para>
 
-<screen><userinput>patch -Np1 -i ../websocketpp-&websocketpp-version;-boost-1.87-compat.patch
-sed 's|"${WEBSOCKETPP_BOOST_LIBS}"|${WEBSOCKETPP_BOOST_LIBS}|' -i CMakeLists.txt
+<screen><userinput>patch -Np1 -i ../websocketpp-&websocketpp-version;-boost-1.87-compat.patch                       &amp;&amp;
+sed 's|"${WEBSOCKETPP_BOOST_LIBS}"|${WEBSOCKETPP_BOOST_LIBS}|' -i CMakeLists.txt &amp;&amp;
 sed 's/system//' -i CMakeLists.txt</userinput></screen>
 
     <para>
