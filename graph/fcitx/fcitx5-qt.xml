@@ -49,6 +49,14 @@
   <sect2 role="installation">
     <title>Installation of Fcitx5-Qt</title>
 
+    <warning>
+      <para>
+        If you reinstall Qt6 in BLFS, either as an update or a reinstall for
+        a security patch, you will need to reinstall this package.
+        <!-- This is because it installs a plugin in /opt/qt6. -->
+      </para>
+    </warning>
+
     <para>
       Install Fcitx5-Qt by running the following
       commands:
