@@ -48,7 +48,7 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/kde/plasma-all.html">KDE Plasma</ulink>,
+      <ulink url="&blfs-svn;/kde/plasma-all.html">KDE Plasma</ulink> and
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>
     </para>
 

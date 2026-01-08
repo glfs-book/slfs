@@ -183,7 +183,7 @@ version, so keep this at that. -->
 <!ENTITY fcitx5-table-extra-version          "5.1.9">
 <!ENTITY fcitx5-anthy-version                "5.1.8">
 <!ENTITY fcitx5-m17n-version                 "5.1.5">
-<!ENTITY fcitx5-configtool-version           "5.1.11">
+<!ENTITY fcitx5-configtool-version           "5.1.12">
 
 <!-- WM -->
 <!-- CDE -->
