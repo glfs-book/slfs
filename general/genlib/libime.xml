@@ -150,7 +150,8 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
           libIMECore, libIMEPinyin, and libIMETable
         </seg>
         <seg>
-          /usr/include/LibIME, /usr/lib/libime, and /usr/share/libime
+          /usr/include/LibIME, /usr/lib/libime, /usr/share/libime, and several
+          under /usr/lib/cmake/LibIME*
         </seg>
       </seglistitem>
     </segmentedlist>
