@@ -43,6 +43,10 @@
       <para>January 7th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - fcitx5-chinese-addons: 5.1.10 -&gt; 5.1.11. Fixes
+          <ulink url="&slfs-issues;/458">#458</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - libime: 1.1.12 -&gt; 1.1.13. Fixes
           <ulink url="&slfs-issues;/462">#462</ulink>.</para>
         </listitem>
