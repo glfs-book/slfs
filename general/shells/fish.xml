@@ -85,7 +85,8 @@ ninja</userinput></screen>
         the fish shell:
       </para>
 
-<screen role="root"><userinput>cat &gt;&gt; /etc/shells &lt;&lt; "EOF"
+<screen role="root"><userinput>grep -qxF /usr/bin/fish /etc/shells ||
+cat &gt;&gt; /etc/shells &lt;&lt; "EOF"
 <literal>/usr/bin/fish</literal>
 EOF</userinput></screen>
 

@@ -38,7 +38,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink> and
-      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>

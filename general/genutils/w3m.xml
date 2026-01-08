@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY w3m-download-http "https://git.sr.ht/~rkta/w3m/archive/v&w3m-version;.tar.gz">
+]>
+
+<sect1 id="w3m" xreflabel="w3m-&w3m-version;">
+  <?dbhtml filename="w3m.html"?>
+
+
+  <title>W3m-&w3m-version;</title>
+
+  <indexterm zone="w3m">
+    <primary sortas="a-W3m">W3m</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to W3m</title>
+
+    <para><application>w3m</application> is both a pager and a
+    text-mode WWW browser. It can be used as a replacement for the BLFS TUI WWW
+    browsers with support for images and other tags and divs.</para>
+
+    <bridgehead renderas="sect3">Package Information</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>Download (HTTP): <ulink url="&w3m-download-http;"/></para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">W3m Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/gc.html">GC</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/x/imlib2.html">imlib2</ulink> and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
+      <ulink url="&blfs-svn;/general/gpm.html">GPM</ulink>, and
+      <xref linkend="m17n"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of W3m</title>
+
+    <para>Install <application>w3m</application> by running the following
+    commands:</para>
+
+<screen><userinput>./configure --prefix=/usr          \
+            --sysconfdir=/etc      \
+            --enable-image=fb,x11  \
+            --with-imagelib=imlib2 &amp;&amp;
+make</userinput></screen>
+
+    <para>Now, as the &root; user:</para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+install -vDm644  doc/{HISTORY,READ*,keymap.*,menu.*,*.html} \
+             -t  /usr/share/doc/w3m-&w3m-version;</userinput></screen>
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para><parameter>--sysconfdir=/etc</parameter>: This parameter puts the
+    configuration files in /etc.</para>
+
+    <para><parameter>--enable-image=fb,x11</parameter>: This parameter enables
+    image support for the framebuffer and X11.</para>
+
+    <para><parameter>--with-imagelib=imlib2</parameter>: This parameter builds
+    against the Imlib2 image library for image support.</para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>w3m and w3mman</seg>
+        <seg>None</seg>
+        <seg>/usr/libexec/w3m,
+             /usr/share/w3m, and
+             /usr/share/doc/w3m-&w3m-version;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="w3m-prog">
+        <term><command>w3m</command></term>
+        <listitem>
+          <para>is a text based web browser and pager.</para>
+          <indexterm zone="w3m w3m-prog">
+            <primary sortas="b-w3m">w3m</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="w3mman">
+         <!-- Don't remove the extra space, it prevent a FOP warning. -->
+        <term><command>w3mman</command> </term>
+        <listitem>
+          <para>is an interface to the on-line reference manuals in
+          <command>w3m</command>.</para>
+          <indexterm zone="w3m w3mman">
+            <primary sortas="b-w3mman">w3mman</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>

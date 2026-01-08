@@ -68,10 +68,11 @@
       <ulink url="&blfs-svn;/multimedia/alsa-plugins.html">alsa-plugins</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <!--&ecm;,-->
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
       <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>,
-      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink> (with GObject
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink> (with GObject
       Introspection),
       <ulink url="&blfs-svn;/general/jansson.html">Jansson</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
@@ -81,6 +82,7 @@
       &opengl;,
       <ulink url="&blfs-svn;/general/pciutils.html">pciutils</ulink>,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
+      <!--<xref linkend="simde"/>,-->
       <xref linkend="uthash"/>,
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, and
@@ -107,7 +109,7 @@
         </listitem>
         <listitem>
           <para>
-            <xref linkend="cuda"/> and <ulink
+            &cuda; and <ulink
             url="&glfs-website;/shareddeps/nv-codec-headers.html">nv-codec-headers</ulink>
             (required for NVIDIA hardware encoding)
           </para>
@@ -204,16 +206,6 @@
   <sect2 role="installation">
     <title>Installation of OBS Studio</title>
 
-<!--
-    <para>
-      Fix building with GCC-15.x.x:
-    </para>
-
-<screen><userinput>sed '/^#include &lt;cmath&gt;/a #include &lt;cstdint&gt;' \
-  -i deps/json11/json11.cpp</userinput></screen>
--->
-
-
 <!-- This is still borked for Mesa's EGL. But it's a burden to maintain this
      patch. Upstream won't fix it as the burden falls on CMake. -->
 <!--
@@ -228,11 +220,18 @@ fi</userinput></screen>
 -->
 
     <para>
-      Fix building with Qt-6.10:
+      Apply a patch to allow building with Qt-6.10.x, above, and below:
     </para>
 
 <screen
   remap="pre"><userinput>patch -Np1 -i ../obs-studio-&obs-studio-version;-qt6.10-1.patch</userinput></screen>
+
+    <important><para>
+      If you are on Qt-6.10.x, ensure that it was built with the upstream fixes
+      patch. If it wasn't, any package including this one will crash when using
+      qtdeclarative. This should get fixed in Qt-6.11, which is in beta
+      currently.
+    </para></important>
 
     <para>
       If FFmpeg is 8.0 or above, allow the code to build against it:

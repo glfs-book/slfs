@@ -38,7 +38,7 @@
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <xref linkend="enet"/>,
-      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
+      &ecm;,
       <ulink url="&blfs-svn;/multimedia/faad2.html">FAAD2</ulink>,
       &unzip;,
       &opengl;,

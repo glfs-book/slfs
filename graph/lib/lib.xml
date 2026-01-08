@@ -5,18 +5,17 @@
  %general-entities;
 ]>
 
-<chapter id="general-graphlib">
-  <?dbhtml filename="graphlib.html"?>
+<chapter id="graph-lib">
+  <?dbhtml filename="lib.html"?>
 
   <title>Graphical Libraries</title>
 
   <para>
     This chapter covers graphical libraries that some packages that appear
-    later in this book may use.
+    in this book use.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcft.xml"/>
-  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glu.xml"/> -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intel-mediasdk.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intel-onevpl.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libdecor.xml"/>

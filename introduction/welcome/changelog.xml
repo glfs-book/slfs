@@ -40,6 +40,201 @@
     -->
 
     <listitem>
+      <para>January 7th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - websocketpp: Fixed compatibility with Boost 1.90.0.
+          This is needed for when it goes into BLFS soon.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - Wayfire: 0.10.0 -&gt; 0.10.1. Fixes
+          <ulink url="&slfs-issues;/429">#429</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - yyjson: Added. Part of
+          <ulink url="&slfs-issues;/429">#429</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 6th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - CDE: 2.5.2 -&gt; 2.5.3 (Security Update). Fixes
+          <ulink url="&slfs-issues;/415">#415</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 5th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - hyprlang: 0.6.7 -&gt; 0.6.8. Fixes
+          <ulink url="&slfs-issues;/488">#488</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprtoolkit: 0.5.1 -&gt; 0.5.2. Fixes
+          <ulink url="&slfs-issues;/489">#489</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.53.0 -&gt; 0.53.1. Fixes
+          <ulink url="&slfs-issues;/487">#487</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>January 4th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - W3m: Added. Fixes
+          <ulink url="&slfs-issues;/434">#434</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hypr Libraries: Added hyprwire.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcft: 3.3.2 -&gt; 3.3.3. Fixes
+          <ulink url="&slfs-issues;/473">#473</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprgraphics: 0.4.0 -&gt; 0.5.0. Fixes
+          <ulink url="&slfs-issues;/475">#475</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - MangoWC: 0.10.8 -&gt; 0.10.10. Fixes
+          <ulink url="&slfs-issues;/476">#476</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 6.4.0 -&gt; 6.5.1. Fixes
+          <ulink url="&slfs-issues;/477">#477</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.52.2 -&gt; 0.53.0. Fixes
+          <ulink url="&slfs-issues;/478">#478</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprland-guiutils: 0.2.0 -&gt; 0.2.1. Fixes
+          <ulink url="&slfs-issues;/479">#479</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprtoolkit: 0.4.1 -&gt; 0.5.1. Fixes
+          <ulink url="&slfs-issues;/480">#480</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - OpenTTD: 15.0-beta3 -&gt; 15.0. Fixes
+          <ulink url="&slfs-issues;/482">#482</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Dolphin: 2509 -&gt; 2512. Fixes
+          <ulink url="&slfs-issues;/484">#484</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>December 31st, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - fish: 4.2.1 -&gt; 4.3.2. Fixes
+          <ulink url="&slfs-issues;/474">#474</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - libvpl-tools: 1.4.0 -&gt; 1.5.0. Fixes
+          <ulink url="&slfs-issues;/464">#464</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - libvpl: 2.15.0 -&gt; 2.16.0. Fixes
+          <ulink url="&slfs-issues;/463">#463</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - intel-onevpl: 25.4.5 -&gt; 25.4.6. Fixes
+          <ulink url="&slfs-issues;/471">#471</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - BTOP++: 1.4.5 -&gt; 1.4.6. Fixes
+          <ulink url="&slfs-issues;/472">#472</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>December 25th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Moved Graphical Libraries to Graphical Components from
+          General Libraries and Utilities.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - SIMDe: Added.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - MangoWC: 0.10.7 -&gt; 0.10.8. Fixes
+          <ulink url="&slfs-issues;/449">#449</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - tornado: 6.5.3 -&gt; 6.5.4. Fixes
+          <ulink url="&slfs-issues;/450">#450</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 6.2.0 -&gt; 6.4.0. Fixes
+          <ulink url="&slfs-issues;/453">#453</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - tmux: 3.6 -&gt; 3.6a. Fixes
+          <ulink url="&slfs-issues;/455">#455</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Flatpak: 1.16.1 -&gt; 1.16.2. Fixes
+          <ulink url="&slfs-issues;/459">#459</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - i3: 4.24 -&gt; 4.25 (security). Fixes
+          <ulink url="&slfs-issues;/460">#460</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libdecor: 0.2.4 -&gt; 0.2.5. Fixes
+          <ulink url="&slfs-issues;/461">#461</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - nvchecker: 2.19 -&gt; 2.20. Fixes
+          <ulink url="&slfs-issues;/465">#465</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>December 24th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - fastfetch: 2.56.0 -&gt; 2.56.1. Fixes
+          <ulink url="&slfs-issues;/456">#456</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>December 22nd, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - CUDA: Move to GLFS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>December 18th, 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - mksh: Added. Fixes
+          <ulink url="&slfs-issues;/448">#448</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>December 15th, 2025</para>
       <itemizedlist>
         <listitem>

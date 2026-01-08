@@ -50,7 +50,8 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="Optional">
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink> and
+      <ulink url="&blfs-svn;/x/gtkmm4.html">Gtkmm4</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
       <ulink url="&blfs-svn;/general/wayland-protocols.html">wayland-protocols</ulink>
     </para>
 
@@ -58,12 +59,6 @@
 
   <sect2 role="installation">
     <title>Installation of libvpl-tools</title>
-
-    <para>
-      First, fix a build failure caused by GCC-15:
-    </para>
-
-<screen><userinput remap="pre">sed -i '/sample_vpp_frc_adv.h/a #include &lt;cstdint&gt;' tools/legacy/sample_vpp/src/sample_vpp_frc_adv.cpp</userinput></screen>
 
     <para>
       Install libvpl-tools by running the following commands:
@@ -97,7 +92,7 @@ make</userinput></screen>
 <screen role="root"><userinput>mv -v /usr/bin/metrics_monitor        /usr/bin/vpl-metrics-monitor         &amp;&amp;
 mv -v /usr/bin/sample_decode          /usr/bin/vpl-sample-decode           &amp;&amp;
 mv -v /usr/bin/sample_encode          /usr/bin/vpl-sample-encode           &amp;&amp;
-mv -v /usr/bin/sample_multi_transcode /usr/bin/vpl-sample-multi_transcode  &amp;&amp;
+mv -v /usr/bin/sample_multi_transcode /usr/bin/vpl-sample-multi-transcode  &amp;&amp;
 mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></screen>
 
   </sect2>

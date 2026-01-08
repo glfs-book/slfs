@@ -69,7 +69,7 @@
       </phrase>
       &gbm;,
       <xref linkend="glaze"/>,
-      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>
       (with GObjectIntrospection),
       <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
       <xref linkend="hyprlib"/>,
@@ -78,6 +78,7 @@
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
       <xref linkend="libliftoff"/>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/lxqt/muparser.html">muparser</ulink>,
       &wayland-gl;,
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
@@ -211,8 +212,9 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <seg>
           hyprctl,
           hyprland (link to Hyprland),
-          Hyprland, and
-          hyprpm
+          Hyprland,
+          hyprpm, and
+          start-hyprland
         </seg>
         <seg>
           None
@@ -258,7 +260,8 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>Hyprland</command></term>
         <listitem>
           <para>
-            is the Hyprland compositor
+            is the Hyprland compositor; running directly will output a warning,
+            so run <command>start-hyprland</command> instead
           </para>
           <indexterm zone="hyprland Hyprland">
             <primary sortas="b-Hyprland">Hyprland</primary>
@@ -274,6 +277,19 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
           </para>
           <indexterm zone="hyprland hyprpm">
             <primary sortas="b-hyprpm">hyprpm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="start-hyprland">
+        <term><command>start-hyprland</command></term>
+        <listitem>
+          <para>
+            is the recommended way to start Hyprland, which starts a watchdog
+            process
+          </para>
+          <indexterm zone="hyprland start-hyprland">
+            <primary sortas="b-start-hyprland">start-hyprland</primary>
           </indexterm>
         </listitem>
       </varlistentry>

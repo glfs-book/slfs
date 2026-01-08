@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY simde-download-http
+    "https://github.com/simd-everywhere/simde/archive/v&simde-version;/simde-&simde-version;.tar.gz">
+]>
+
+<sect1 id="simde" xreflabel="SIMDe-&simde-version;">
+  <?dbhtml filename="simde.html"?>
+
+  <title>SIMDe-&simde-version;</title>
+
+  <indexterm zone="simde">
+    <primary sortas="a-simde">SIMDe</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to SIMDe</title>
+
+    <para>
+      The SIMDe (SIMD Everywhere) package provides a header-only library
+      implementing portable SIMD intrinsics for hardware that doesn't support
+      them. An example is SSE on ARM, SIMDe can come in and provide those
+      extensions on ARM.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&simde-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">SIMDe Dependencies</bridgehead>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of SIMDe</title>
+
+    <para>
+      Prepare the installation of SIMDe by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -D tests=false      \
+            ..</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/include/simde
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>

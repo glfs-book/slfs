@@ -17,7 +17,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="autoconf-archive.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="befunge.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="byacc.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cuda.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gnat.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="python-dependencies.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="python-modules.xml"/>

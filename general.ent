@@ -214,6 +214,12 @@ export -f as_root</userinput></screen>
           or <ulink url='&glfs-website;/shareddeps/mesa.html'>Mesa</ulink>)">
 <!ENTITY glu
          "<ulink url='&glfs-website;/shareddeps/glu.html'>GLU</ulink>">
+<!ENTITY cuda
+         "CUDA (<ulink url='&glfs-website;/shareddeps/cuda.html'>CUDA</ulink> or
+                <ulink url='&glfs-website;/shareddeps/cuda-r580.html'>CUDA-r580</ulink>)">
+<!ENTITY ecm
+         "<ulink url='&blfs-svn;/kde/extra-cmake-modules.html'>Extra-CMake-Modules
+          (ECM)</ulink>">
 <!ENTITY sdl2
          "<ulink url='&blfs-svn;/multimedia/sdl2.html'>sdl2-compat</ulink>">
 <!ENTITY sdl3

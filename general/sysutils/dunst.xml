@@ -40,7 +40,7 @@
     <para role="required">
       <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
       <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
-      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
       &logind;
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink>, and
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>

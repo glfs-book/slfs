@@ -11,7 +11,6 @@
   <title>General Libraries and Utilities</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="genlib/genlib.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="graphlib/graphlib.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="genutils/genutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sysutils/sysutils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="prog/prog.xml"/>

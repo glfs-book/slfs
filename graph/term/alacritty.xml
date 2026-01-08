@@ -99,6 +99,7 @@ install -vDm644 extra/logo/alacritty-term.svg /usr/share/icons/hicolor/scalable/
       for your shell(s) as the <systemitem class="username">root</systemitem>
       user:
     </para>
+
 <screen role="root"><userinput>install -vDm644 extra/completions/alacritty.bash    /usr/share/bash-completion/completions/alacritty
 install -vDm644 extra/completions/_alacritty     -t /usr/share/zsh/site-functions/
 install -vDm644 extra/completions/alacritty.fish -t /usr/share/fish/vendor_completions.d/</userinput></screen>

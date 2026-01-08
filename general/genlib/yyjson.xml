@@ -4,62 +4,56 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY wofi-download-http
-    "https://hg.sr.ht/~scoopta/wofi/archive/v&wofi-version;.tar.gz">
+  <!ENTITY yyjson-download-http "https://github.com/ibireme/yyjson/archive/&yyjson-version;/yyjson-&yyjson-version;.tar.gz">
 ]>
 
-<sect1 id="wofi" xreflabel="Wofi-&wofi-version;">
-  <?dbhtml filename="wofi.html"?>
+<sect1 id="yyjson" xreflabel="yyjson-&yyjson-version;">
+  <?dbhtml filename="yyjson.html"?>
 
-  <title>Wofi-&wofi-version;</title>
+  <title>yyjson-&yyjson-version;</title>
 
-  <indexterm zone="wofi">
-    <primary sortas="a-wofi">Wofi</primary>
+  <indexterm zone="yyjson">
+    <primary sortas="a-yyjson">yyjson</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Wofi</title>
+    <title>Introduction to yyjson</title>
 
     <para>
-      Wofi provides an application launcher
-      for Wayland compositors. It has most of the
-      same functionality <xref linkend="rofi"/>.
+      The yyjson package contains a high performance JSON library written in C.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wofi-download-http;"/>
+          Download (HTTP): <ulink url="&yyjson-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Wofi Dependencies</bridgehead>
+    <bridgehead renderas="sect3">yyjson Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
-      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
-      <ulink url="&blfs-svn;/x/gtk3.html">GTK-3</ulink>,
-      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with
-      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>), and
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
-
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Wofi</title>
+    <title>Installation of yyjson</title>
 
     <para>
-      Install Wofi by running the following
+      Install yyjson by running the following
       commands:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_SHARED_LIBS=ON      \
+      -G Ninja                  .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
@@ -67,13 +61,6 @@ ninja</userinput></screen>
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
-
-  </sect2>
-
-  <sect2 role="commands">
-    <title>Command Explanations</title>
-
-    &meson-buildtype-release;
 
   </sect2>
 
@@ -87,13 +74,14 @@ ninja</userinput></screen>
 
       <seglistitem>
         <seg>
-          wofi
-        </seg>
-        <seg>
           None
         </seg>
         <seg>
-          /usr/include/wofi-1
+          libyyjson
+        </seg>
+        <seg>
+          /usr/include/yyjson and
+          /usr/lib/cmake/yyjson
         </seg>
       </seglistitem>
     </segmentedlist>
@@ -103,20 +91,18 @@ ninja</userinput></screen>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
-      <varlistentry id="wofi-bin">
-        <term><command>wofi</command></term>
+      <varlistentry id="libyyjson">
+        <term><filename class="libraryfile">libyyjson.so</filename></term>
         <listitem>
           <para>
-            is a Wayland application launcher
+            contains functions that provide a high performance JSON
+            implementation in C
           </para>
-          <indexterm zone="wofi wofi-bin">
-            <primary sortas="b-wofi-bin">wofi</primary>
+          <indexterm zone="yyjson libyyjson">
+            <primary sortas="c-libyyjson">libyyjson</primary>
           </indexterm>
         </listitem>
       </varlistentry>
-
     </variablelist>
-
   </sect2>
-
 </sect1>
