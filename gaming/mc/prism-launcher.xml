@@ -38,6 +38,7 @@
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      &ecm;,
       &opengl;,
       <xref linkend="openjdk"/> (and/or
       <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink>), and
