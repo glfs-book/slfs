@@ -273,7 +273,7 @@ version, so keep this at that. -->
 <!-- Minecraft -->
 <!-- Let's keep this updated for security reasons.
      - Zeckma -->
-<!ENTITY jdk-modern                          "24.0.2+12">
+<!ENTITY jdk-modern                          "21.0.9+10">
 <!ENTITY prism-launcher-version              "9.4">
 <!-- TTD -->
 <!ENTITY openttd-version                     "15.0">
