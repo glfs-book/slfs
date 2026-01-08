@@ -62,7 +62,7 @@ so this will do for now -->
       commands:
     </para>
 
-<screen><userinput>autoreconf -fiv &amp;&amp;
+<screen><userinput>autoreconf -fiv           &amp;&amp;
 ./configure --prefix=/usr &amp;&amp;
 make</userinput></screen>
 
