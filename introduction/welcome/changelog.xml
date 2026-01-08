@@ -43,6 +43,10 @@
       <para>January 7th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - fcitx5: 5.1.16 -&gt; 5.1.17. Fixes
+          <ulink url="&slfs-issues;/457">#457</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - websocketpp: Fixed compatibility with Boost 1.90.0.
           This is needed for when it goes into BLFS soon.</para>
         </listitem>
