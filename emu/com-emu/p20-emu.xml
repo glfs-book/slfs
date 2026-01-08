@@ -93,16 +93,14 @@ make</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -v -Dm755 emu /usr/bin/p20-emu</userinput></screen>
+<screen role="root"><userinput>install -vDm755 emu /usr/bin/p20-emu</userinput></screen>
 
     <para>
       If you have applied the systemwide ROMs patch, install those ROMs as the
       &root; user:
     </para>
 
-<screen role="root"><userinput>install -v -m755 -d /usr/share/p20-emu &amp;&amp;
-install -v -m644 ../U15-MERGED.BIN /usr/share/p20-emu &amp;&amp;
-install -v -m644 ../U17-MERGED.BIN /usr/share/p20-emu</userinput></screen>
+<screen role="root"><userinput>install -vDm644 ../U1{5,7}-MERGED.BIN -t /usr/share/p20-emu/</userinput></screen>
 
   </sect2>
 

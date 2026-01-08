@@ -82,8 +82,7 @@
 
 <screen><userinput>patch -Np1 -i ../yajl-&yajl-version;-CVE-2017-16516.patch &amp;&amp;
 patch -Np1 -i ../yajl-&yajl-version;-CVE-2022-24795.patch &amp;&amp;
-patch -Np1 -i ../yajl-&yajl-version;-memory_leak.patch
-</userinput></screen>
+patch -Np1 -i ../yajl-&yajl-version;-memory_leak.patch</userinput></screen>
 
     <para>
       Fix building with CMake-4.0.0:

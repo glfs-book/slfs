@@ -113,7 +113,7 @@ make</userinput></screen>
 
 <!-- install doesn't support recursive copy and there's no doc install
 target... ugh -->
-<screen role="root"><userinput>install -v -m755 -d /usr/share/doc/fcitx5-&fcitx5-version; &amp;&amp;
+<screen role="root"><userinput>install -vdm755   /usr/share/doc/fcitx5-&fcitx5-version; &amp;&amp;
 cp -rv doc/html/* /usr/share/doc/fcitx5-&fcitx5-version;</userinput></screen>
 
     <para>
@@ -124,9 +124,7 @@ cp -rv doc/html/* /usr/share/doc/fcitx5-&fcitx5-version;</userinput></screen>
 
 <!-- Probably not the best practice to put in XDG_CONFIG_HOME,
      but it works. -->
-<screen><userinput>mkdir -p ~/.config/autostart &amp;&amp;
-cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
-         ~/.config/autostart</userinput></screen>
+<screen><userinput>install -vDm644 /usr/share/applications/org.fcitx.Fcitx5.desktop -t ~/.config/autostart/</userinput></screen>
 
   </sect2>
 

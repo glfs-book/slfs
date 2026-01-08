@@ -74,19 +74,17 @@
       If you installed scdoc and wish to build the
       man pages, execute the following commands:
     </para>
-<screen><userinput>pushd extra/man &amp;&amp;
-for f in *.scd; do
+<screen><userinput>for f in extra/man/*.scd; do
     scdoc &lt; $f &gt; ${f%.*}
-done &amp;&amp;
-popd</userinput></screen>
+done</userinput></screen>
 
     <para>
       Now, as the <systemitem class="username">root</systemitem> user:
     </para>
 
-<screen role="root"><userinput>install -vm755  target/release/alacritty         /usr/bin/alacritty               &amp;&amp;
-install -vDm755 extra/logo/alacritty-term.svg    /usr/share/pixmaps/Alacritty.svg &amp;&amp;
-install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/</userinput></screen>
+<screen role="root"><userinput>install -vDm755 target/release/alacritty      -t /usr/bin/                &amp;&amp;
+install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/ &amp;&amp;
+install -vDm644 extra/logo/alacritty-term.svg /usr/share/icons/hicolor/scalable/apps/Alacritty.svg</userinput></screen>
 
     &desktop-files;
 
@@ -101,24 +99,24 @@ install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/</useri
       for your shell(s) as the <systemitem class="username">root</systemitem>
       user:
     </para>
-<screen role="root"><userinput>install -vDm644 extra/completions/alacritty.bash /usr/share/bash-completion/completions/alacritty
-install -vDm644 extra/completions/_alacritty     /usr/share/zsh/site-functions/_alacritty
-install -vDm644 extra/completions/alacritty.fish /usr/share/fish/vendor_completions.d/alacritty.fish</userinput></screen>
+
+<screen role="root"><userinput>install -vDm644 extra/completions/alacritty.bash    /usr/share/bash-completion/completions/alacritty
+install -vDm644 extra/completions/_alacritty     -t /usr/share/zsh/site-functions/
+install -vDm644 extra/completions/alacritty.fish -t /usr/share/fish/vendor_completions.d/</userinput></screen>
 
     <para>
       If you built the man pages, install them as the
       <systemitem class="username">root</systemitem> user:
     </para>
-<screen role="root"><userinput>install -vDm644 extra/man/*.1 -t /usr/share/man/man1 &amp;&amp;
-install -vDm644 extra/man/*.5 -t /usr/share/man/man5</userinput></screen>
+<screen role="root"><userinput>install -vDm644 extra/man/*.1 -t /usr/share/man/man1/ &amp;&amp;
+install -vDm644 extra/man/*.5 -t /usr/share/man/man5/</userinput></screen>
 
     <para>
       If you wish to install the documentation, execute the following as the
       <systemitem class="username">root</systemitem> user:
     </para>
 
-<screen remap="doc" role="root"><userinput>install -vDm644 docs/* -t /usr/share/doc/alacritty-&alacritty-version; &amp;&amp;
-install -vm644  README.md /usr/share/doc/alacritty-&alacritty-version;</userinput></screen>
+<screen remap="doc" role="root"><userinput>install -vDm644 README.md docs/* -t /usr/share/doc/alacritty-&alacritty-version;/</userinput></screen>
 
   </sect2>
 

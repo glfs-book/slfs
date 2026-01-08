@@ -56,7 +56,7 @@ cc -o c/unlambda c/unlambda.c -I/usr/include/gc -lgc</userinput></screen>
       Now as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -v -m755 c/unlambda /usr/bin/</userinput></screen>
+<screen role="root"><userinput>install -vDm755 c/unlambda -t /usr/bin/</userinput></screen>
 
   </sect2>
 

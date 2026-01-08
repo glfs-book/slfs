@@ -58,7 +58,7 @@ make</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -v -m755 jstest-sdl /usr/bin/</userinput></screen>
+<screen role="root"><userinput>install -vDm755 jstest-sdl -t /usr/bin/</userinput></screen>
 
   </sect2>
 

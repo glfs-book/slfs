@@ -121,10 +121,10 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>ninja install </userinput><phrase revision="systemd"><userinput>                                  </userinput></phrase><userinput>&amp;&amp;
-cp -v fluidsynth.conf </userinput><phrase revision="systemd"><userinput>    </userinput></phrase><userinput>/etc/fluidsynth</userinput><phrase revision="systemd"><userinput>       &amp;&amp;
-cp -v fluidsynth.service  /usr/lib/systemd/user &amp;&amp;
-cp -v fluidsynth.tmpfiles /usr/lib/tmpfiles.d/fluidsynth.conf</userinput></phrase></screen>
+<screen role="root"><userinput>ninja install </userinput><phrase revision="systemd"><userinput>                                               </userinput></phrase><userinput>&amp;&amp;
+install -vDm644 fluidsynth.conf </userinput><phrase revision="systemd"><userinput>      </userinput></phrase><userinput>/etc/fluidsynth</userinput><phrase revision="systemd"><userinput>        &amp;&amp;
+install -vDm644 fluidsynth.service -t /usr/lib/systemd/user/ &amp;&amp;
+install -vDm644 fluidsynth.tmpfiles   /usr/lib/tmpfiles.d/fluidsynth.conf</userinput></phrase></screen>
 
     <para>
       In order for FluidSynth to provide instrumentals during MIDI playback, it
@@ -137,8 +137,7 @@ cp -v fluidsynth.tmpfiles /usr/lib/tmpfiles.d/fluidsynth.conf</userinput></phras
     </para>
 
 <screen role="root"><userinput>tar -xf ../../fluid-soundfont_&fs-sf2;.orig.tar.gz &amp;&amp;
-install -vdm755 /usr/share/soundfonts         &amp;&amp;
-install -vm644  fluid-soundfont-&fs-sf2;/*.sf2 /usr/share/soundfonts</userinput></screen>
+install -vDm644 fluid-soundfont-&fs-sf2;/*.sf2 -t /usr/share/soundfonts/</userinput></screen>
 
     <para>
       By default, FluidSynth will read from

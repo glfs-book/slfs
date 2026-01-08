@@ -42,8 +42,8 @@
       instructions:
     </para>
 
-<screen><userinput>mkdir rmpextract-&rpmextract-version; &amp;&amp;
-cd    rmpextract-&rpmextract-version; &amp;&amp;
+<screen><userinput>mkdir rpmextract-&rpmextract-version; &amp;&amp;
+cd    rpmextract-&rpmextract-version; &amp;&amp;
 for i in {rpm2cpio,rpmextract.sh}; do
   echo $i | wget -i- -c \
     -B &rpmextract-common-dl;/
@@ -59,7 +59,7 @@ done</userinput></screen>
       commands as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vm755 rpm2cpio rpmextract.sh /usr/bin &amp;&amp;
+<screen role="root"><userinput>install -vDm755 rpm2cpio rpmextract.sh -t /usr/bin/ &amp;&amp;
 ln -sfv rpmextract.sh /usr/bin/rpmextract</userinput></screen>
 
   </sect2>

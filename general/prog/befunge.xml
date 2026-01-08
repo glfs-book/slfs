@@ -50,9 +50,7 @@
       Now as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -v -Dm755 bin/bef /usr/bin &amp;&amp;
-install -v -Dm755 bin/befprof /usr/bin &amp;&amp;
-install -v -Dm755 bin/bef2c /usr/bin</userinput></screen>
+<screen role="root"><userinput>install -vDm755 bin/bef{,prof,2c} -t /usr/bin/</userinput></screen>
 
   </sect2>
 

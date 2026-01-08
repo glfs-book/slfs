@@ -131,10 +131,10 @@ mv -v /usr/share/doc/i3{,-&i3-version;}</userinput></screen>
 
       <para>
         If you did not already make the configuration file, it can be created
-        when first launching i3 when you are asked
-        if you want to generate a default configuration file. Now inspect the
-	file and make any changes if you wish. You may need to if you have not
-        installed any of the optional dependencies.
+        when first launching i3 when you are asked if you want to generate a
+        default configuration file. Now inspect the file and make any changes
+        if you wish. You may need to if you have not installed any of the
+        optional dependencies.
       </para>
 
       <para>
