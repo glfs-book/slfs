@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>January 8th</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - fish: 4.3.2 -&gt; 4.3.3. Fixes
+          <ulink url="&slfs-issues;/491">#491</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 7th, 2026</para>
       <itemizedlist>
         <listitem>
