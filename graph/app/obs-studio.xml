@@ -264,8 +264,8 @@ mv cef_binary_&obs-cef-version;_linux_x86_64 cef-&obs-cef-version;</userinput></
 cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr             \
-      -D CMAKE_BUILD_TYPE=Release              \
       -D CMAKE_SKIP_INSTALL_RPATH=ON           \
+      -D OBS_VERSION_OVERRIDE="&obs-version;"         \
       -D ENABLE_BROWSER=ON                     \
       -D CEF_ROOT_DIR=../cef-&obs-cef-version;              \
       -D ENABLE_AJA=OFF                        \
@@ -275,6 +275,14 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr             \
       -G Ninja -Wno-dev .. &amp;&amp;
 
 ninja</userinput></screen>
+
+    <note><para>
+      Normally for Meson and CMake projects, the build type is set to release.
+      However, doing so for OBS-Studio will cause it to have a segmentation
+      fault as CMake uses Interprocedural Optimization, or IPO, which conflicts
+      with the set build type in unexpected ways. The above setup lets CMake
+      figure it out as to not introduce conflicts.
+    </para></note>
 
     <para>
       Now, as the &root; user:
