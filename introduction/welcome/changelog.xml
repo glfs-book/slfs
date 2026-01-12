@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>January 11th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - OBS-Studio: 31.1.2 -&gt; 32.0.4. Fixes
+          <ulink url="&slfs-issues;/324">#324</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 8th, 2026</para>
       <itemizedlist>
         <listitem>
