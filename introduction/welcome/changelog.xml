@@ -43,6 +43,13 @@
       <para>January 11th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - PrismLauncher: 9.4 -&gt; 10.0.2. Fixes
+          <ulink url="&slfs-issues;/492">#492</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - cmark: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - sdl12-compat: 1.2.70 -&gt; 1.2.72. Fixes
           <ulink url="&slfs-issues;/493">#493</ulink>.</para>
         </listitem>

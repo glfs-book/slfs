@@ -69,6 +69,9 @@
       comma is preferred (a comma after the next to last member before the
       "and"). BLFS_DEPENDENCY should be an "id" attribute defined somewhere
       in the book (usually in a <sect1>). -->
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <!-- Necessary BLFS dependency if required. GLFS links may also be
+      required, like for libglvnd or CUDA. -->
       <xref role="runtime" linkend="RUNTIME_DEPENDENCY"/> (runtime)
       <!-- Specifying that a dependency is a runtime one may avoid circular
       dependencies. Add role="runtime" to help jhalfs -->
@@ -334,7 +337,7 @@ EOF</userinput></screen>
           a sentence -->
         </seg>
         <seg>
-          libLIBRARY1.so, libLIBRARY2.so, and libLIBRARY3.so<!-- no period here
+          libLIBRARY1, libLIBRARY2, and libLIBRARY3<!-- no period here
           since it is not a sentence -->
         </seg>
         <seg>
@@ -381,13 +384,13 @@ EOF</userinput></screen>
       </varlistentry>
 
       <varlistentry id="libLIBRARY1">
-        <term><filename class="libraryfile">libLIBRARY1.so</filename></term>
+        <term><filename class="libraryfile">libLIBRARY1</filename></term>
         <listitem>
           <para>
             contains functions that ..... (no period at the end)
           </para>
           <indexterm zone="TEMPLATE libLIBRARY1">
-            <primary sortas="c-libLIBRARY1">libLIBRARY1.so</primary>
+            <primary sortas="c-libLIBRARY1">libLIBRARY1</primary>
           </indexterm>
         </listitem>
       </varlistentry>

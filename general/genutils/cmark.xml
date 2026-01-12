@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY cmark-download-http
+    "https://github.com/commonmark/cmark/archive/&cmark-version;/cmark-&cmark-version;.tar.gz">
+]>
+
+<sect1 id="cmark" xreflabel="cmark-&cmark-version;">
+  <?dbhtml filename="cmark.html"?>
+
+  <title>cmark-&cmark-version;</title>
+
+  <indexterm zone="cmark">
+    <primary sortas="a-cmark">cmark</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to cmark</title>
+
+    <para>
+      The cmark package contains a CommonMark parsing and rendering utility and
+      library in C. BLFS provides the Python version, which the
+      <command>cmark</command> script from it will be moved safely out of the
+      way in this installation.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&cmark-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">cmark Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of cmark</title>
+
+    <para>
+      Install cmark by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -D BUILD_SHARED_LIBS=ON        \
+      -W no-dev -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      As the &root; user, move the Python version of <command>cmark</command>
+      out of the way if it's installed:
+    </para>
+
+<screen role="root"><userinput>if which cmark &amp;&gt; /dev/null; then
+  grep -qF python3 $(which cmark) &amp;&amp;
+  mv   -v          $(which cmark){,-py3}
+fi</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &cmake-skip-install-rpath;
+
+    <para>
+      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: This parameter builds the
+      cmark library as dynamic instead of static.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          cmark and cmark-py3 (if applicable)
+        </seg>
+        <seg>
+          libcmark
+        </seg>
+        <seg>
+          /usr/lib/cmake/cmark
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="cmark-bin">
+        <term><command>cmark</command></term>
+        <listitem>
+          <para>
+            parses and renders CommonMark
+          </para>
+          <indexterm zone="cmark cmark-bin">
+            <primary sortas="b-cmark-bin">cmark-bin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="cmark-py3">
+        <term><command>cmark-py3</command></term>
+        <listitem>
+          <para>
+            is the Python version of <command>cmark</command>, if it was
+            installed previously
+          </para>
+          <indexterm zone="cmark cmark-py3">
+            <primary sortas="b-cmark-py3">cmark-py3</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libcmark">
+        <term><filename class="libraryfile">libcmark</filename></term>
+        <listitem>
+          <para>
+            contains CommonMark parsing and rendering functions
+          </para>
+          <indexterm zone="cmark libcmark">
+            <primary sortas="c-libcmark">libcmark</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+  </sect2>
+
+</sect1>

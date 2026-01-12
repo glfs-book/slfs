@@ -37,12 +37,17 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
+      <xref linkend="cmark"/>,
+      <ulink url="&glfs-website;/qol/gamemode.html">GameMode</ulink>,
+      <ulink url="&blfs-svn;/general/libqrencode.html">libqrencode</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       &ecm;,
+      &unzip;,
       &opengl;,
       <xref linkend="openjdk"/> (and/or
-      <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink>), and
-      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>
+      <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink>),
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>, and
+      <xref linkend="tomlplusplus"/>
     </para>
 
     <important><para>
@@ -59,12 +64,8 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/python-dependencies.html#commonmark">commonmark</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/ghc-filesystem/">ghc_filesystem</ulink>,
-      <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/quazip/">QuaZip</ulink>,
-      <xref linkend="scdoc"/>, and
-      <xref linkend="tomlplusplus"/>
+      <ulink url="&blfs-svn;/general/git.html">Git</ulink> and
+      <xref linkend="scdoc"/>
     </para>
 
   </sect2>

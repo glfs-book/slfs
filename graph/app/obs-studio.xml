@@ -265,7 +265,7 @@ cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr             \
       -D CMAKE_SKIP_INSTALL_RPATH=ON           \
-      -D OBS_VERSION_OVERRIDE="&obs-version;"         \
+      -D OBS_VERSION_OVERRIDE="&obs-studio-version;"         \
       -D ENABLE_BROWSER=ON                     \
       -D CEF_ROOT_DIR=../cef-&obs-cef-version;              \
       -D ENABLE_AJA=OFF                        \
@@ -298,7 +298,7 @@ ninja</userinput></screen>
     &cmake-skip-install-rpath;
 
     <para>
-      <parameter>-D OBS_VERSION_OVERRIDE="&obs-version;"</parameter>: This
+      <parameter>-D OBS_VERSION_OVERRIDE="&obs-studio-version;"</parameter>: This
       switch sets the OBS-Studio version properly, which is otherwise set
       at <literal>0</literal>.
     </para>
