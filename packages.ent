@@ -73,7 +73,7 @@ version, so keep this at that. -->
 <!ENTITY ncdu-version                        "1.22">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.56.1">
+<!ENTITY fastfetch-version                   "2.57.0">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.4">
 <!ENTITY tmux-version                        "3.6a">
@@ -178,11 +178,11 @@ version, so keep this at that. -->
 <!-- Fcitx -->
 <!ENTITY fcitx5-version                      "5.1.17">
 <!ENTITY fcitx5-qt-version                   "5.1.11">
-<!ENTITY fcitx5-gtk-version                  "5.1.4">
+<!ENTITY fcitx5-gtk-version                  "5.1.5">
 <!ENTITY fcitx5-lua-version                  "5.0.15">
 <!ENTITY fcitx5-chinese-addons-version       "5.1.11">
-<!ENTITY fcitx5-table-extra-version          "5.1.9">
-<!ENTITY fcitx5-anthy-version                "5.1.8">
+<!ENTITY fcitx5-table-extra-version          "5.1.10">
+<!ENTITY fcitx5-anthy-version                "5.1.9">
 <!ENTITY fcitx5-m17n-version                 "5.1.5">
 <!ENTITY fcitx5-configtool-version           "5.1.12">
 

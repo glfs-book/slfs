@@ -40,6 +40,28 @@
     -->
 
     <listitem>
+      <para>January 13th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Anthy: 5.1.8 -&gt; 5.1.9. Fixes
+          <ulink url="&slfs-issues;/494">#494</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-GTK: 5.1.4 -&gt; 5.1.5. Fixes
+          <ulink url="&slfs-issues;/495">#495</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Table-Extra: 5.1.9 -&gt; 5.1.10. Fixes
+          <ulink url="&slfs-issues;/496">#496</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fastfetch: 2.56.1 -&gt; 2.57.0. Fixes
+          <ulink url="&slfs-issues;/499">#499</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 11th, 2026</para>
       <itemizedlist>
         <listitem>
