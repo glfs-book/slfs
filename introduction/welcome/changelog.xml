@@ -43,6 +43,10 @@
       <para>January 13th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Wofi: 1.5.1 -&gt; 1.5.3. Fixes
+          <ulink url="&slfs-issues;/498">#498</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Fcitx5-Anthy: 5.1.8 -&gt; 5.1.9. Fixes
           <ulink url="&slfs-issues;/494">#494</ulink>.</para>
         </listitem>
