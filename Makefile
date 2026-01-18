@@ -139,13 +139,13 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(SLFSHTML) version wget-list
 	
 	$(Q)cd $(BASEDIR)/; sed -e "s@../images@images@g"           \
                            -i *.html
-		
+	
 	$(Q)mkdir -p $(BASEDIR)/download
 	$(Q)rm -rf $(BASEDIR)/download/*
 	$(Q)cp -R download/* $(BASEDIR)/download
 	$(Q)rm -rf $(BASEDIR)/patches
 	$(Q)ln -sf download $(BASEDIR)/patches
-
+	
 	@echo "Running Tidy and obfuscate.sh on chunked XHTML..."
 	$(Q)for filename in `find $(BASEDIR) -name "*.html"`; do       \
       tidy -config tidy.conf $$filename;                          \
