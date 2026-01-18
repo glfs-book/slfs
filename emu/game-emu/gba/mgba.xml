@@ -5,7 +5,7 @@
   %general-entities;
 
   <!ENTITY mgba-download-http
-    "https://github.com/mgba-emu/mgba/archive/&mgba-version;.tar.gz">
+    "https://github.com/mgba-emu/mgba/archive/&mgba-version;/mgba-&mgba-version;.tar.gz">
 ]>
 
 <sect1 id="mgba" xreflabel="mGBA-&mgba-minor-version;">
@@ -73,8 +73,8 @@ cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr        \
       -D CMAKE_BUILD_TYPE=Release         \
-      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
       -D CMAKE_SKIP_INSTALL_RPATH=ON      \
+      -D SKIP_GIT=ON                      \
       -G Ninja .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -88,12 +88,32 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
 
   </sect2>
 
+  <sect2 role="using">
+    <title>Using mGBA</title>
+
+    <para>
+      This version of mGBA has a problem with OpenGL and the Qt GUI. On
+      Wayland, mGBA will complain that it can't create an appropriate display
+      device. This is because it fails to create an OpenGL display. When
+      running the Qt GUI, you must run it with <command>QT_QPA_PLATFORM=xcb
+      mgba-qt</command>, forcing XCB windowing for Qt. This will make OpenGL
+      work as expected. This quirk is shared with other emulators like Dolphin,
+      and each application solves the issue in their own way. Dolphin forces
+      XCB in the application itself.
+    </para>
+
+  </sect2>
+
   <sect2 role="commands">
     <title>Command Explanations</title>
 
-    &cmake-policy-version;
-
     &cmake-skip-install-rpath;
+
+    <para>
+      <parameter>-D SKIP_GIT=ON</parameter>: This both skips the dependency on
+      Git and prevents a configuration failure as the extracted directory is
+      not a Git repository.
+    </para>
 
     <para>
       <command>mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</command>: This
