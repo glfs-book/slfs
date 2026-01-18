@@ -37,7 +37,7 @@
       <listitem>
         <para>
           Required CMake files:
-          <ulink url="https://github.com/EasyCoding/qrcodegen-cmake/archive/v&qrcodegencpp-version;-cmake3/qrcodegen-cmake-&qrcodegencpp-version;-cmake3.tar.gz"/>
+          <ulink url="https://github.com/EasyCoding/qrcodegen-cmake/archive/v&qrcodegencpp-cmake-version;/qrcodegen-cmake-&qrcodegencpp-cmake-version;.tar.gz"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -58,9 +58,9 @@
       First unpack the CMake files:
     </para>
 
-<screen><userinput>tar -xf ../qrcodegen-cmake-&qrcodegencpp-version;-cmake3.tar.gz &amp;&amp;
-cp -vR qrcodegen-cmake-&qrcodegencpp-version;-cmake3/{cmake,CMakeLists.txt} . &amp;&amp;
-rm -rf qrcodegen-cmake-&qrcodegencpp-version;-cmake3</userinput></screen>
+<screen><userinput>tar -xf ../qrcodegen-cmake-&qrcodegencpp-cmake-version;.tar.gz &amp;&amp;
+cp -vR qrcodegen-cmake-&qrcodegencpp-cmake-version;/{cmake,CMakeLists.txt} . &amp;&amp;
+rm -rf qrcodegen-cmake-&qrcodegencpp-cmake-version;</userinput></screen>
 
     <para>
       Install QR-Code-generator by running the following
