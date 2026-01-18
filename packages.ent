@@ -93,8 +93,6 @@ version, so keep this at that. -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20241231">
-<!ENTITY gcc-version                         "15.2.0">
-<!ENTITY gnat-binary-version                 "15.1.0-2">
 <!-- START PYTHON -->
 <!ENTITY python3-major                       "3">
 <!ENTITY python3-minor                       "14">
