@@ -41,7 +41,7 @@ so this will do for now -->
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/cldr-emoji-annotation/cldr-emoji-annotation-&cldr-emoji-annotation-version;-final-updates.patch"/>
+          <ulink url="&dl-root;/cldr-emoji-annotation/cldr-emoji-annotation-&cldr-emoji-annotation-version;-final-updates.patch"/>
         </para>
       </listitem>
     </itemizedlist>

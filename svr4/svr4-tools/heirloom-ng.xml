@@ -40,13 +40,13 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/heirloom-ng/heirloom-ng-&heirloom-ng-version;-no-static.patch"/>
+          <ulink url="&dl-root;/heirloom-ng/heirloom-ng-&heirloom-ng-version;-no-static.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/heirloom-ng/heirloom-ng-59f7cc-dont-link-nonexistent-files.patch"/>
+          <ulink url="&dl-root;/heirloom-ng/heirloom-ng-59f7cc-dont-link-nonexistent-files.patch"/>
         </para>
       </listitem>
     </itemizedlist>

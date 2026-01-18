@@ -39,13 +39,13 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/xhomer/xhomer-&xhomer-version;-close-properly.patch"/>
+          <ulink url="&dl-root;/xhomer/xhomer-&xhomer-version;-close-properly.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/xhomer/xhomer-&xhomer-version;-fix-util-build.patch"/>
+          <ulink url="&dl-root;/xhomer/xhomer-&xhomer-version;-fix-util-build.patch"/>
         </para>
       </listitem>
     </itemizedlist>

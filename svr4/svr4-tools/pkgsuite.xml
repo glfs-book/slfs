@@ -38,14 +38,14 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/pkgsuite/pkgsuite-&pkgsuite-minor-version;-paths.patch"/>
+          <ulink url="&dl-root;/pkgsuite/pkgsuite-&pkgsuite-minor-version;-paths.patch"/>
         </para>
       </listitem>
 <!--
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/pkgsuite/pkgsuite-&pkgsuite-minor-version;-termios.patch"/>
+          <ulink url="&dl-root;/pkgsuite/pkgsuite-&pkgsuite-minor-version;-termios.patch"/>
         </para>
       </listitem>
 -->

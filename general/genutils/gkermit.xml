@@ -41,7 +41,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/gkermit/gkermit-&gkermit-version;-fix-implicit-declaration.patch"/>
+          <ulink url="&dl-root;/gkermit/gkermit-&gkermit-version;-fix-implicit-declaration.patch"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -50,7 +50,7 @@
       <listitem>
         <para>
           Recommended patch:
-          <ulink url="&patch-root;/freebee/freebee-&freebee-minor-version;-system-roms.patch"/>
+          <ulink url="&dl-root;/freebee/freebee-&freebee-minor-version;-system-roms.patch"/>
         </para>
       </listitem>
     </itemizedlist>

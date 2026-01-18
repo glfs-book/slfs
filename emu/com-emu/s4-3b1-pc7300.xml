@@ -38,25 +38,25 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch"/>
+          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch"/>
+          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch"/>
+          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch"/>
+          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch"/>
         </para>
       </listitem>
     </itemizedlist>

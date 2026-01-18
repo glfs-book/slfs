@@ -39,7 +39,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/heirloom-ex-vi/heirloom-ex-vi-&heirloom-ex-vi-minor-version;-paths.patch"/>
+          <ulink url="&dl-root;/heirloom-ex-vi/heirloom-ex-vi-&heirloom-ex-vi-minor-version;-paths.patch"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -37,7 +37,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/libutempter/libutempter-&libutempter-version;-unbreak-reinstall.patch"/>
+          <ulink url="&dl-root;/libutempter/libutempter-&libutempter-version;-unbreak-reinstall.patch"/>
         </para>
       </listitem>
     </itemizedlist>

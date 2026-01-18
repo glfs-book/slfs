@@ -54,7 +54,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/TEMPLATE-&TEMPLATE-version;-patch_name-patch_version.patch"/>
+          <ulink url="&dl-root;/TEMPLATE/TEMPLATE-&TEMPLATE-version;-patch_name-patch_version.patch"/>
         </para>
       </listitem>
     </itemizedlist>

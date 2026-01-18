@@ -55,7 +55,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&patch-root;/cuda/cuda-glibc-2.41-1.patch"/>
+          <ulink url="&dl-root;/cuda/cuda-glibc-2.41-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
