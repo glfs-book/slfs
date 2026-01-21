@@ -43,6 +43,10 @@
       <para>January 21st, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - intel-onevpl: 25.4.6 -&gt; 26.1.0. Fixes
+          <ulink url="&slfs-issues;/503">#503</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - msgraph: 0.3.3 -&gt; 0.3.4. Fixes
           <ulink url="&slfs-issues;/500">#500</ulink>.</para>
         </listitem>
