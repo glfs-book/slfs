@@ -22,18 +22,19 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cldr-emoji-annotation.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="flatpak.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fluidsynth.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gkermit.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="imv.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="inxi.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="jstest-sdl.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="lotus123.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="lrzsz.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minicom.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gkermit.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ostree.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="monero.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ncdu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ncompress.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="neofetch.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fastfetch.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ostree.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rpmextract.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="scdoc.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tmux.xml"/>

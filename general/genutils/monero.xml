@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY monero-dl-root
+    "https://github.com">
+]>
+
+<sect1 id="monero" xreflabel="Monero-&monero-version;">
+  <?dbhtml filename="monero.html"?>
+
+  <title>Monero-&monero-version;</title>
+
+  <indexterm zone="monero">
+    <primary sortas="a-monero">Monero</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Monero</title>
+
+    <para>
+      The Monero package provides a daemon and wallet tool for accessing
+      the Monero, or XMR, crypto currency. The wallet tool provided by this
+      package is command-line only.
+    </para>
+
+    <note><para>
+      There is a GUI wallet tool made by the Monero project, but it only has
+      support for Qt-5, no longer in BLFS, and Qt-5 in older versions of BLFS
+      no longer builds properly. Thus, you may have to use a third-party GUI
+      wallet tool, which is not recommended, find a way to build Qt-5, or stick
+      with the command-line wallet tool.
+    </para></note>
+
+    &long-build-time;
+
+    <bridgehead renderas="sect3">Monero Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <xref linkend="libsodium"/>,
+      <ulink url="&blfs-svn;/server/unbound.html">Unbound</ulink>, and
+      <xref linkend="libzmq"/>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="hidapi"/>,
+      <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink>,
+      <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>, and
+      <ulink url="&blfs-svn;/general/protobuf.html">Protobuf</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>,
+      <ulink url="&blfs-svn;/general/graphviz.html">Graphviz</ulink>,
+      <ulink url="https://github.com/google/googletest">gtest</ulink>, and
+      <ulink url="https://github.com/miniupnp/miniupnp">miniupnp</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Downloading Monero</title>
+
+    <para>
+      Create a list of the needed tarballs that will be downloaded:
+    </para>
+
+<screen><userinput>cat &gt; monero-list &lt;&lt; "EOF"
+<literal>monero-project/monero/archive/v&monero-version;/monero-&monero-version;.tar.gz
+google/googletest/archive/&monero-gtest;.tar.gz
+miniupnp/miniupnp/archive/&monero-miniupnp;.tar.gz
+tevador/RandomX/archive/&monero-randomx;.tar.gz
+Tencent/rapidjson/archive/&monero-rapidjson;.tar.gz
+monero-project/supercop/archive/&monero-supercop;.tar.gz</literal>
+EOF</userinput></screen>
+
+    <para>
+      Now download the package, its submodules, and needed patches if
+      applicable, using <ulink
+      url="&blfs-svn;/basicnet/wget.html">Wget</ulink>:
+    </para>
+
+<screen><userinput>mkdir monero &amp;&amp;
+cd    monero &amp;&amp;
+grep -v '^#' ../monero-list | wget -i- -c \
+    -B &monero-dl-root;</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Monero</title>
+
+    <para>
+      There should be a dedicated user and group to take control of the
+      <command>monerod</command> daemon after it is started. Issue the
+      following commands as the &root; user:
+    </para>
+
+<screen role="root"><userinput>groupadd -fg 66 monero &amp;&amp;
+useradd -c "Monero Full Node" -d /var/lib/monero -u 66 \
+        -g monero -s /bin/false monero</userinput></screen>
+
+    <para>
+      Extract all the tarballs:
+    </para>
+
+<screen><userinput>for i in *.tar.?z*; do
+  echo "Extracting $i..."
+  tar -xf $i
+done</userinput></screen>
+
+    <para>
+      Now that everything has been extracted, the required extracted submodules
+      need to be moved into <filename
+      class="directory">monero-&monero-version;</filename>. Do that by
+      running the following commands:
+    </para>
+
+<screen><userinput>mv -T googletest-* monero-&monero-version;/external/gtest     &amp;&amp;
+mv -T miniupnp-*   monero-&monero-version;/external/miniupnp  &amp;&amp;
+mv -T RandomX-*    monero-&monero-version;/external/randomx   &amp;&amp;
+mv -T rapidjson-*  monero-&monero-version;/external/rapidjson &amp;&amp;
+mv -T supercop-*   monero-&monero-version;/external/supercop</userinput></screen>
+
+    <para>
+      Now go into the <filename
+      class="directory">monero-&monero-version;</filename> directory:
+    </para>
+
+<screen><userinput>cd monero-&monero-version;</userinput></screen>
+
+    <para>
+      Ensure Protobuf has the right C++ standard set:
+    </para>
+
+<screen><userinput>sed 's|std=c++11|std=c++17|g' \
+  -i contrib/depends/protobuf.mk</userinput></screen>
+
+    <para>
+      Install Monero by running the following
+      commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_GUI_DEPS=ON         \
+      -G Ninja -W no-dev .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 bin/* -t /usr/bin/</userinput></screen>
+
+    <para revision="systemd">
+      Now install Systemd-specific files as the &root; user:
+    </para>
+
+<screen revision="systemd" role="root"><userinput>install -vDm644 ../utils/conf/monerod.conf       -t /etc/ &amp;&amp;
+install -vDm644 ../utils/systemd/monerod.service -t /usr/lib/systemd/system/ &amp;&amp;
+
+install -vDm644 /dev/stdin /usr/lib/tmpfiles.d/monero.conf &lt;&lt; "EOF"
+<literal>d /var/lib/monero 0770 monero monero - -</literal>
+EOF</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="config">
+    <title>Configuration Information</title>
+
+    <sect3 id="monero-config">
+      <title>Config Files</title>
+
+      <para>
+        <filename>/etc/monero.conf</filename>
+      </para>
+
+      <indexterm zone="monero monero-config">
+        <primary sortas="e-etc-monero.conf">/etc/monero.conf</primary>
+      </indexterm>
+
+    </sect3>
+
+    <sect3 revision="systemd" id="monero-init">
+      <title><phrase revision="sysv">Boot Script</phrase>
+             <phrase revision="systemd">Systemd Unit</phrase></title>
+
+      <para>
+        If you want the <command>monerod</command> daemon to
+        start automatically when the system is booted, run the following
+        command as the &root; user:
+      </para>
+
+      <indexterm zone="monero monero-init">
+        <primary sortas="f-monero">monero</primary>
+      </indexterm>
+
+<screen role="root"><userinput>systemctl enable monerod</userinput></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>-D BUILD_GUI_DEPS=ON</parameter>: This parameter ensures the
+      dependencies for the GUI wallet are built, in case the GUI wallet tool
+      gains support for Qt-6, GTK, or something else.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          monero-blockchain-ancestry,
+          monero-blockchain-depth,
+          monero-blockchain-export,
+          monero-blockchain-import,
+          monero-blockchain-mark-spent-outputs,
+          monero-blockchain-prune,
+          monero-blockchain-prune-known-spent-data,
+          monero-blockchain-stats,
+          monero-blockchain-usage,
+          monerod,
+          monero-gen-ssl-cert,
+          monero-gen-trusted-multisig,
+          monero-wallet-cli, and
+          monero-wallet-rpc
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="monerod">
+        <term><command>monerod</command></term>
+        <listitem>
+          <para>
+            is the Monero daemon
+          </para>
+          <indexterm zone="monero monerod">
+            <primary sortas="b-monerod">monerod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="monero-wallet-cli">
+        <term><command>monero-wallet-cli</command></term>
+        <listitem>
+          <para>
+            allows creating and working with a Monero wallet
+          </para>
+          <indexterm zone="monero monero-wallet-cli">
+            <primary sortas="b-monero-wallet-cli">monero-wallet-cli</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="monero-wallet-rpc">
+        <term><command>monero-wallet-rpc</command></term>
+        <listitem>
+          <para>
+            is the RPC version of the CLI wallet
+          </para>
+          <indexterm zone="monero monero-wallet-rpc">
+            <primary sortas="b-monero-wallet-rpc">monero-wallet-rpc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

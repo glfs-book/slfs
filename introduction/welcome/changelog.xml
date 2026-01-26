@@ -43,6 +43,10 @@
       <para>January 25th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Monero: Added. Fixes
+          <ulink url="&slfs-issues;/507">#507</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - HIDAPI: Added.</para>
         </listitem>
         <listitem>
