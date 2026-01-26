@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY hidapi-download
+    "http://github.com/libusb/hidapi/archive/hidapi-&hidapi-version;.tar.gz">
+]>
+
+<sect1 id="hidapi" xreflabel="HIDAPI-&hidapi-version;">
+  <?dbhtml filename="hidapi.html"?>
+
+  <title>HIDAPI-&hidapi-version;</title>
+
+  <indexterm zone="hidapi">
+    <primary sortas="a-hidapi">HIDAPI</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to HIDAPI</title>
+
+    <para>
+      The HIDAPI package provides a library for working with HIDs (Human
+      Interface Devices) and can utilize libusb to better serve this goal.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&hidapi-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <note><para>
+      <filename>hidapi-&hidapi-version;.tar.gz</filename> extracts to
+      <filename class="directory">hidapi-hidapi-&hidapi-version;</filename>.
+    </para></note>
+
+    <bridgehead renderas="sect3">HIDAPI Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+    <!-- Technically CMake is not quite required yet, but the autotools
+         installation method is deprecated and will be removed in a future
+         release. This future proofs the installation method. -->
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="kernel">
+    <title>Kernel Configuration</title>
+
+    <para id="hidapi-kernel">
+      To allow HIDAPI to access HIDs, enable the following options and
+      recompile the kernel if necessary:
+    </para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="hidapi-kernel.xml"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of HIDAPI</title>
+
+    <para>
+      Install HIDAPI by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &cmake-skip-install-rpath;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libhidapi-hidraw and
+          libhidapi-libusb
+        </seg>
+        <seg>
+          /usr/include/hidapi and
+          /usr/lib/cmake/hidapi
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libhidapi-hidraw">
+        <term><filename class="libraryfile">libhidapi-hidraw</filename></term>
+        <listitem>
+          <para>
+            accesses raw HIDs
+          </para>
+          <indexterm zone="hidapi libhidapi-hidraw">
+            <primary sortas="c-libhidapi-hidraw">libhidapi-hidraw</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhidapi-libusb">
+        <term><filename class="libraryfile">libhidapi-libusb</filename></term>
+        <listitem>
+          <para>
+            accesses HIDs via libusb
+          </para>
+          <indexterm zone="hidapi libhidapi-libusb">
+            <primary sortas="c-libhidapi-libusb">libhidapi-libusb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

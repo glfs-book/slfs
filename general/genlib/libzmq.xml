@@ -38,7 +38,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libzip Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libzmq Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">

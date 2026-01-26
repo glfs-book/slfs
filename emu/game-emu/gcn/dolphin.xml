@@ -54,6 +54,7 @@
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
       <xref linkend="enet"/>,
       <ulink url="&blfs-svn;/general/fmt.html">fmt</ulink>,
+      <xref linkend="hidapi"/>,
       <xref linkend="libspng"/>,
       <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
@@ -71,7 +72,6 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&arch-pkgs;/extra/x86_64/hidapi/">hidapi</ulink> and
       <xref linkend="mbedtls"/>
     </para>
 
@@ -92,7 +92,6 @@ mozilla/cubeb/archive/&dolphin-cubeb-external;.tar.gz
 arsenm/sanitizers-cmake/archive/&dolphin-sanitize-external;.tar.gz
 mutouyun/cpp-ipc/archive/&dolphin-cpp-ipc-external;.tar.gz
 weisslj/cpp-optparse/archive/&dolphin-cpp-optparse-external;.tar.gz
-libusb/hidapi/archive/&dolphin-hidapi-external;.tar.gz
 ocornut/imgui/archive/&dolphin-imgui-external;.tar.gz
 epezent/implot/archive/&dolphin-implot-external;.tar.gz
 mgba-emu/mgba/archive/&dolphin-mgba-external;.tar.gz
@@ -109,7 +108,8 @@ zlib-ng/zlib-ng/archive/&dolphin-zlib-ng-external;.tar.gz
 lsalzman/enet/archive/&dolphin-enet-external;.tar.gz
 fmtlib/fmt/archive/&dolphin-fmt-external;.tar.gz
 randy408/libspng/archive/&dolphin-libspng-external;.tar.gz
-libusb/libusb/archive/&dolphin-libusb-external;.tar.gz</literal>
+libusb/libusb/archive/&dolphin-libusb-external;.tar.gz
+libusb/hidapi/archive/&dolphin-hidapi-external;.tar.gz</literal>
 EOF</userinput></screen>
 
     <para>
@@ -153,7 +153,6 @@ mv -T sanitizers-cmake-* \
 mv -T cpp-ipc-* dolphin-&dolphin-version;/Externals/cpp-ipc/cpp-ipc &amp;&amp;
 mv -T cpp-optparse-* \
       dolphin-&dolphin-version;/Externals/cpp-optparse/cpp-optparse &amp;&amp;
-mv -T hidapi-* dolphin-&dolphin-version;/Externals/hidapi/hidapi-src &amp;&amp;
 mv -T imgui-* dolphin-&dolphin-version;/Externals/imgui/imgui &amp;&amp;
 mv -T implot-* dolphin-&dolphin-version;/Externals/implot/implot &amp;&amp;
 mv -T mgba-* dolphin-&dolphin-version;/Externals/mGBA/mgba &amp;&amp;
@@ -195,6 +194,13 @@ mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput><
     </para>
 
 <screen><userinput>mv -T libusb-* dolphin-&dolphin-version;/Externals/libusb/libusb</userinput></screen>
+
+    <para>
+      If you have not installed <xref linkend="hidapi"/>, move the submodule
+      into <filename class="directory">dolphin-&dolphin-version;</filename>:
+    </para>
+
+<screen><userinput>mv -T hidapi-* dolphin-&dolphin-version;/Externals/hidapi/hidapi-src</userinput></screen>
 
     <para>
       Now go into the <filename

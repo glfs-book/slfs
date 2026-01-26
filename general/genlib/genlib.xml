@@ -20,6 +20,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="enet.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fuse2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glaze.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hidapi.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="iniparser.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libev.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libime.xml"/>

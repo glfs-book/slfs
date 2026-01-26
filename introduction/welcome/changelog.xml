@@ -43,6 +43,9 @@
       <para>January 25th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - HIDAPI: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libzmq: Added.</para>
         </listitem>
         <listitem>

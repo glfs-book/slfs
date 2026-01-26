@@ -1,0 +1,5 @@
+HID_SUPPORT="*"
+HID="*"
+HIDRAW="*"
+UHID="*M"
+HID_GENERIC="*"
