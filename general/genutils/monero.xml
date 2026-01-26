@@ -209,6 +209,12 @@ EOF</userinput></screen>
 
 <screen role="root"><userinput>systemctl enable monerod</userinput></screen>
 
+      <note><para>
+        The <command>monerod</command> daemon can take up RAM and CPU
+        resources. This will depend on the system, so you should look at the
+        resources used and see if you want it started at every boot.
+      </para></note>
+
     </sect3>
 
   </sect2>
