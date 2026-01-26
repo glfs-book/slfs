@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libzmq-download-http
+    "http://github.com/zeromq/libzmq/archive/v&libzmq-version;/libzmq-&libzmq-version;.tar.gz">
+  <!-- The GitHub has a tarball that has a configure script made, but the
+       tarball name is zeromq-&libzmq-version;.tar.gz, which can confusion.
+       Thus, the archive version is preferred, and skips over potential
+       configure script attacks. -->
+]>
+
+<sect1 id="libzmq" xreflabel="libzmq-&libzmq-version;">
+  <?dbhtml filename="libzmq.html"?>
+
+  <title>libzmq-&libzmq-version;</title>
+
+  <indexterm zone="libzmq">
+    <primary sortas="a-libzmq">libzmq</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libzmq</title>
+
+    <para>
+      The libzmq, or ZeroMQ/0MQ, package provides a library for extending
+      socket interfaces that are common, and provides abstractions for
+      messages.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libzmq-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">libzip Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/asciidoctor.html">asciidoctor</ulink>,
+      <ulink url="&blfs-svn;/general/valgrind.html">Valgrind</ulink>, and
+      <ulink url="&blfs-svn;/pst/xmlto.html">xmlto</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libzmq</title>
+
+    <para>
+      Install libzmq by running the following commands:
+    </para>
+
+<screen><userinput>./autogen.sh &amp;&amp;
+./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &static-libraries;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libzmq
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libzmq-lib">
+        <term><filename class="libraryfile">libzmq</filename></term>
+        <listitem>
+          <para>
+            contains socket interfacing functions
+          </para>
+          <indexterm zone="libzmq libzmq-lib">
+            <primary sortas="c-libzmq-lib">libzmq</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
