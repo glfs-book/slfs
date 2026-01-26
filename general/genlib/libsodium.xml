@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libsodium-download-http
+    "http://github.com/jedisct1/libsodium/releases/download/&libsodium-version;-RELEASE/libsodium-&libsodium-version;.tar.gz">
+]>
+
+<sect1 id="libsodium" xreflabel="libsodium-&libsodium-version;">
+  <?dbhtml filename="libsodium.html"?>
+
+  <title>libsodium-&libsodium-version;</title>
+
+  <indexterm zone="libsodium">
+    <primary sortas="a-libsodium">libsodium</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libsodium</title>
+
+    <para>
+      The libsodium package provides a cryptography library and is API
+      compatible with NaCl, its predecessor.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download (HTTP): <ulink url="&libsodium-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libsodium</title>
+
+    <para>
+      Install libsodium by running the following commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &static-libraries;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libsodium
+        </seg>
+        <seg>
+          /usr/include/sodium
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libsodium-lib">
+        <term><filename class="libraryfile">libsodium</filename></term>
+        <listitem>
+          <para>
+            contains cryptographic functions
+          </para>
+          <indexterm zone="libsodium libsodium-lib">
+            <primary sortas="c-libsodium-lib">libsodium</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
