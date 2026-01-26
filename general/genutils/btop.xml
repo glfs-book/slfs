@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY btop-download-http "https://github.com/aristocratos/btop/archive/v&btop-version;/btop-&btop-version;.tar.gz">
+  <!ENTITY btop-download "https://github.com/aristocratos/btop/archive/v&btop-version;/btop-&btop-version;.tar.gz">
 ]>
 
 <sect1 id="btop" xreflabel="BTOP++-&btop-version;">
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&btop-download-http;"/>
+          Download: <ulink url="&btop-download;"/>
         </para>
       </listitem>
     </itemizedlist>

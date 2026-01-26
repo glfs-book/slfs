@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY s4-3b1-pc7300-download-http "https://github.com/dgesswein/s4-3b1-pc7300/archive/&s4-3b1-pc7300-version;/s4-3b1-pc7300-&s4-3b1-pc7300-version;.tar.gz">
+  <!ENTITY s4-3b1-pc7300-download "https://github.com/dgesswein/s4-3b1-pc7300/archive/&s4-3b1-pc7300-version;/s4-3b1-pc7300-&s4-3b1-pc7300-version;.tar.gz">
 ]>
 
 <sect1 id="s4-3b1-pc7300" xreflabel="s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&s4-3b1-pc7300-download-http;"/>
+          Download: <ulink url="&s4-3b1-pc7300-download;"/>
         </para>
       </listitem>
     </itemizedlist>

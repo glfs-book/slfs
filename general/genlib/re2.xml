@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY re2-download-http "https://github.com/google/re2/releases/download/&re2-version;/re2-&re2-version;.tar.gz">
+  <!ENTITY re2-download "https://github.com/google/re2/releases/download/&re2-version;/re2-&re2-version;.tar.gz">
 ]>
 
 <sect1 id="re2" xreflabel="re2-&re2-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&re2-download-http;"/>
+          Download: <ulink url="&re2-download;"/>
         </para>
       </listitem>
     </itemizedlist>

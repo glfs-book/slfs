@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libdecor-download-http
+  <!ENTITY libdecor-download
     "https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/&libdecor-version;/libdecor-&libdecor-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libdecor-download-http;"/>
+          Download: <ulink url="&libdecor-download;"/>
         </para>
       </listitem>
     </itemizedlist>

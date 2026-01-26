@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY tealdeer-download-http
+  <!ENTITY tealdeer-download
     "https://github.com/tealdeer-rs/tealdeer/archive/v&tealdeer-version;/tealdeer-&tealdeer-version;.tar.gz">
 ]>
 
@@ -32,7 +32,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&tealdeer-download-http;"/>
+          Download: <ulink url="&tealdeer-download;"/>
         </para>
       </listitem>
     </itemizedlist>

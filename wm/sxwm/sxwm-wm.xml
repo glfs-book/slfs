@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY sxwm-download-http
+  <!ENTITY sxwm-download
     "https://github.com/uint23/sxwm/archive/v&sxwm-version;/sxwm-&sxwm-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&sxwm-download-http;"/>
+          Download: <ulink url="&sxwm-download;"/>
         </para>
       </listitem>
     </itemizedlist>

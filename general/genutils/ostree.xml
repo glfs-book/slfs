@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY ostree-download-http "https://github.com/ostreedev/ostree/releases/download/v&ostree-version;/libostree-&ostree-version;.tar.xz">
+  <!ENTITY ostree-download "https://github.com/ostreedev/ostree/releases/download/v&ostree-version;/libostree-&ostree-version;.tar.xz">
 ]>
 
 <sect1 id="ostree" xreflabel="OSTree-&ostree-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&ostree-download-http;"/>
+          Download: <ulink url="&ostree-download;"/>
         </para>
       </listitem>
     </itemizedlist>

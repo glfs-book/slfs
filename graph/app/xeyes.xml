@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY xeyes-download-http "https://x.org/archive/individual/app/xeyes-&xeyes-version;.tar.xz">
+  <!ENTITY xeyes-download "https://x.org/archive/individual/app/xeyes-&xeyes-version;.tar.xz">
 ]>
 
 <sect1 id="xeyes" xreflabel="xeyes-&xeyes-version;">
@@ -45,7 +45,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xeyes-download-http;"/>
+          Download: <ulink url="&xeyes-download;"/>
         </para>
       </listitem>
     </itemizedlist>

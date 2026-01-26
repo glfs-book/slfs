@@ -7,7 +7,7 @@
   <!-- always fetching git master... yes this isn't best practice, but the
        actual download URLs have % signs in them and I have no idea how to
        make XML handle that -->
-  <!ENTITY anthy-download-http "https://salsa.debian.org/debian/anthy/-/archive/debian/anthy-debian.tar.gz">
+  <!ENTITY anthy-download "https://salsa.debian.org/debian/anthy/-/archive/debian/anthy-debian.tar.gz">
 ]>
 
 <sect1 id="anthy" xreflabel="Anthy-&anthy-version;">
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&anthy-download-http;"/>
+          Download: <ulink url="&anthy-download;"/>
         </para>
       </listitem>
     </itemizedlist>

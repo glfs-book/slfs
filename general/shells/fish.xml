@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY fish-download-http "https://github.com/fish-shell/fish-shell/releases/download/&fish-version;/fish-&fish-version;.tar.xz">
+  <!ENTITY fish-download "https://github.com/fish-shell/fish-shell/releases/download/&fish-version;/fish-&fish-version;.tar.xz">
 ]>
 
 <sect1 id="fish" xreflabel="fish-&fish-version;">
@@ -26,7 +26,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fish-download-http;"/>
+          Download: <ulink url="&fish-download;"/>
         </para>
       </listitem>
     </itemizedlist>

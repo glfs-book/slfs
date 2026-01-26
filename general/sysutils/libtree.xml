@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libtree-download-http
+  <!ENTITY libtree-download
     "https://github.com/haampie/libtree/archive/v&libtree-version;/libtree-v&libtree-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libtree-download-http;"/>
+          Download: <ulink url="&libtree-download;"/>
         </para>
       </listitem>
     </itemizedlist>

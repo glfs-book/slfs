@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY s-nail-download-http "https://ftp.sdaoden.eu/s-nail-&s-nail-version;.tar.xz">
+  <!ENTITY s-nail-download "https://ftp.sdaoden.eu/s-nail-&s-nail-version;.tar.xz">
 ]>
 
 <sect1 id="s-nail" xreflabel="s-nail-&s-nail-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&s-nail-download-http;"/>
+          Download: <ulink url="&s-nail-download;"/>
         </para>
       </listitem>
     </itemizedlist>

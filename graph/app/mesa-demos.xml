@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY mesa-demos-download-http
+  <!ENTITY mesa-demos-download
     "https://gitlab.freedesktop.org/mesa/demos/-/archive/mesa-demos-&mesa-demos-version;/demos-mesa-demos-&mesa-demos-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mesa-demos-download-http;"/>
+          Download: <ulink url="&mesa-demos-download;"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY qrcodegencpp-download-http
+  <!ENTITY qrcodegencpp-download
     "https://github.com/nayuki/QR-Code-generator/archive/v&qrcodegencpp-version;/QR-Code-generator-&qrcodegencpp-version;.tar.gz">
 ]>
 
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&qrcodegencpp-download-http;"/>
+          Download: <ulink url="&qrcodegencpp-download;"/>
         </para>
       </listitem>
     </itemizedlist>

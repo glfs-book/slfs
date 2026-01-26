@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libliftoff-download-http "https://gitlab.freedesktop.org/emersion/libliftoff/-/archive/v&libliftoff-version;/libliftoff-v&libliftoff-version;.tar.gz">
+  <!ENTITY libliftoff-download "https://gitlab.freedesktop.org/emersion/libliftoff/-/archive/v&libliftoff-version;/libliftoff-v&libliftoff-version;.tar.gz">
 ]>
 
 <sect1 id="libliftoff" xreflabel="libliftoff-&libliftoff-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libliftoff-download-http;"/>
+          Download: <ulink url="&libliftoff-download;"/>
         </para>
       </listitem>
     </itemizedlist>

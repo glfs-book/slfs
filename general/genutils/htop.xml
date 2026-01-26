@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY htop-download-http "https://github.com/htop-dev/htop/releases/download/&htop-version;/htop-&htop-version;.tar.xz">
+  <!ENTITY htop-download "https://github.com/htop-dev/htop/releases/download/&htop-version;/htop-&htop-version;.tar.xz">
 ]>
 
 <sect1 id="htop" xreflabel="htop-&htop-version;">
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&htop-download-http;"/>
+          Download: <ulink url="&htop-download;"/>
         </para>
       </listitem>
     </itemizedlist>

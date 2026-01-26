@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY wf-config-download-http
+  <!ENTITY wf-config-download
     "https://github.com/WayfireWM/wf-config/releases/download/v&wf-config-version;/wf-config-&wf-config-version;.tar.xz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wf-config-download-http;"/>
+          Download: <ulink url="&wf-config-download;"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY awww-download-http
+  <!ENTITY awww-download
     "https://codeberg.org/LGFae/awww/archive/v&awww-version;.tar.gz">
 ]>
 
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&awww-download-http;"/>
+          Download: <ulink url="&awww-download;"/>
         </para>
       </listitem>
     </itemizedlist>

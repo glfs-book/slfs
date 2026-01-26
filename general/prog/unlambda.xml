@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY unlambda-download-http "http://ftp.madore.org/pub/madore/unlambda/unlambda-&unlambda-version;.tar.gz">
+  <!ENTITY unlambda-download "http://ftp.madore.org/pub/madore/unlambda/unlambda-&unlambda-version;.tar.gz">
 ]>
 
 <sect1 id="unlambda" xreflabel="unlambda-&unlambda-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&unlambda-download-http;"/>
+          Download: <ulink url="&unlambda-download;"/>
         </para>
       </listitem>
     </itemizedlist>

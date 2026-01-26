@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY idle-download-http "https://github.com/seal331/idle/archive/&idle-version;/idle-&idle-version;.tar.gz">
+  <!ENTITY idle-download "https://github.com/seal331/idle/archive/&idle-version;/idle-&idle-version;.tar.gz">
 ]>
 
 <sect1 id="idle" xreflabel="idle-&idle-minor-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&idle-download-http;"/>
+          Download: <ulink url="&idle-download;"/>
         </para>
       </listitem>
     </itemizedlist>

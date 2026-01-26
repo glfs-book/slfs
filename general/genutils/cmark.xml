@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY cmark-download-http
+  <!ENTITY cmark-download
     "https://github.com/commonmark/cmark/archive/&cmark-version;/cmark-&cmark-version;.tar.gz">
 ]>
 
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cmark-download-http;"/>
+          Download: <ulink url="&cmark-download;"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY grim-download-http
+  <!ENTITY grim-download
     "https://gitlab.freedesktop.org/emersion/grim/-/archive/v&grim-version;/grim-v&grim-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&grim-download-http;"/>
+          Download: <ulink url="&grim-download;"/>
         </para>
       </listitem>
     </itemizedlist>

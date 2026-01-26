@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY yajl-download-http
+  <!ENTITY yajl-download
     "https://github.com/lloyd/yajl/archive/refs/tags/&yajl-version;/yajl-&yajl-version;.tar.gz">
   <!-- archive/refs/tags is explicit here, as Github otherwise complains
        that archive/&yajl-version; can point to several revisions. -->
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&yajl-download-http;"/>
+          Download: <ulink url="&yajl-download;"/>
         </para>
       </listitem>
     </itemizedlist>

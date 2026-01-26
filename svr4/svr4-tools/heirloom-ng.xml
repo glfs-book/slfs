@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY heirloom-ng-download-http "https://github.com/Projeto-Pindorama/heirloom-ng/archive/&heirloom-ng-version;/heirloom-ng-&heirloom-ng-version;.tar.gz">
+  <!ENTITY heirloom-ng-download "https://github.com/Projeto-Pindorama/heirloom-ng/archive/&heirloom-ng-version;/heirloom-ng-&heirloom-ng-version;.tar.gz">
 ]>
 
 <sect1 id="heirloom-ng" xreflabel="heirloom-ng-&heirloom-ng-version;">
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&heirloom-ng-download-http;"/>
+          Download: <ulink url="&heirloom-ng-download;"/>
         </para>
       </listitem>
     </itemizedlist>

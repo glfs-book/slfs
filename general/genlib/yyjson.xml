@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY yyjson-download-http "https://github.com/ibireme/yyjson/archive/&yyjson-version;/yyjson-&yyjson-version;.tar.gz">
+  <!ENTITY yyjson-download "https://github.com/ibireme/yyjson/archive/&yyjson-version;/yyjson-&yyjson-version;.tar.gz">
 ]>
 
 <sect1 id="yyjson" xreflabel="yyjson-&yyjson-version;">
@@ -26,7 +26,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&yyjson-download-http;"/>
+          Download: <ulink url="&yyjson-download;"/>
         </para>
       </listitem>
     </itemizedlist>

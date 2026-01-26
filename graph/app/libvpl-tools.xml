@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libvpl-tools-download-http "https://github.com/intel/libvpl-tools/archive/v&libvpl-tools-version;/libvpl-tools-&libvpl-tools-version;.tar.gz">
+  <!ENTITY libvpl-tools-download "https://github.com/intel/libvpl-tools/archive/v&libvpl-tools-version;/libvpl-tools-&libvpl-tools-version;.tar.gz">
 ]>
 
 <sect1 id="libvpl-tools" xreflabel="libvpl-tools-&libvpl-tools-version;">
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libvpl-tools-download-http;"/>
+          Download: <ulink url="&libvpl-tools-download;"/>
         </para>
       </listitem>
     </itemizedlist>

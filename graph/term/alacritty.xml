@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY alacritty-download-http "https://github.com/alacritty/alacritty/archive/v&alacritty-version;/alacritty-&alacritty-version;.tar.gz">
+  <!ENTITY alacritty-download "https://github.com/alacritty/alacritty/archive/v&alacritty-version;/alacritty-&alacritty-version;.tar.gz">
 ]>
 
 <sect1 id="alacritty" xreflabel="alacritty-&alacritty-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&alacritty-download-http;"/>
+          Download: <ulink url="&alacritty-download;"/>
         </para>
       </listitem>
     </itemizedlist>

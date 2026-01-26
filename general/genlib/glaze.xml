@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY glaze-download-http
+  <!ENTITY glaze-download
     "https://github.com/stephenberry/glaze/archive/v&glaze-version;/glaze-&glaze-version;.tar.gz">
 ]>
 
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&glaze-download-http;"/>
+          Download: <ulink url="&glaze-download;"/>
         </para>
       </listitem>
     </itemizedlist>

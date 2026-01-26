@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY xcb-imdkit-download-http "https://github.com/fcitx/xcb-imdkit/archive/&xcb-imdkit-version;/xcb-imdkit-&xcb-imdkit-version;.tar.gz">
+  <!ENTITY xcb-imdkit-download "https://github.com/fcitx/xcb-imdkit/archive/&xcb-imdkit-version;/xcb-imdkit-&xcb-imdkit-version;.tar.gz">
 ]>
 
 <sect1 id="xcb-imdkit" xreflabel="xcb-imdkit-&xcb-imdkit-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xcb-imdkit-download-http;"/>
+          Download: <ulink url="&xcb-imdkit-download;"/>
         </para>
       </listitem>
     </itemizedlist>

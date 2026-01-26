@@ -4,9 +4,9 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY gnat-binary-download-http
+  <!ENTITY gnat-binary-download
     "https://github.com/alire-project/GNAT-FSF-builds/releases/download/gnat-&gnat-binary-version;/gnat-x86_64-linux-&gnat-binary-version;.tar.gz">
-  <!ENTITY gnat-download-http "&gnu-http;/gcc/gcc-&gcc-version;/gcc-&gcc-version;.tar.xz">
+  <!ENTITY gnat-download "&gnu;/gcc/gcc-&gcc-version;/gcc-&gcc-version;.tar.xz">
 ]>
 
 <sect1 id="gnat" xreflabel="GNAT-&gcc-version;">
@@ -43,7 +43,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&gnat-download-http;"/>
+          Download: <ulink url="&gnat-download;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -57,7 +57,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Binary Download: <ulink url="&gnat-binary-download-http;"/>
+          Binary Download: <ulink url="&gnat-binary-download;"/>
         </para>
       </listitem>
     </itemizedlist>

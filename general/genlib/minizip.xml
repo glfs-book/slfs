@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY zlib-download-http "https://zlib.net/fossils/zlib-&zlib-version;.tar.gz">
+  <!ENTITY zlib-download "https://zlib.net/fossils/zlib-&zlib-version;.tar.gz">
 ]>
 
 <sect1 id="minizip" xreflabel="minizip from zlib-&zlib-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&zlib-download-http;"/>
+          Download: <ulink url="&zlib-download;"/>
         </para>
       </listitem>
     </itemizedlist>

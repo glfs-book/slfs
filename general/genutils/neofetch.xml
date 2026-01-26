@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY neofetch-download-http "https://github.com/dylanaraps/neofetch/archive/&neofetch-version;/neofetch-&neofetch-version;.tar.gz">
+  <!ENTITY neofetch-download "https://github.com/dylanaraps/neofetch/archive/&neofetch-version;/neofetch-&neofetch-version;.tar.gz">
 ]>
 
 <sect1 id="neofetch" xreflabel="neofetch-&neofetch-version;">
@@ -36,7 +36,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&neofetch-download-http;"/>
+          Download: <ulink url="&neofetch-download;"/>
         </para>
       </listitem>
     </itemizedlist>

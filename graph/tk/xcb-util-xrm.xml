@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY xcb-util-xrm-download-http "https://github.com/Airblader/xcb-util-xrm/releases/download/v&xcb-util-xrm-version;/xcb-util-xrm-&xcb-util-xrm-version;.tar.bz2">
+  <!ENTITY xcb-util-xrm-download "https://github.com/Airblader/xcb-util-xrm/releases/download/v&xcb-util-xrm-version;/xcb-util-xrm-&xcb-util-xrm-version;.tar.bz2">
 ]>
 
 <sect1 id="xcb-util-xrm" xreflabel="xcb-util-xrm-&xcb-util-xrm-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xcb-util-xrm-download-http;"/>
+          Download: <ulink url="&xcb-util-xrm-download;"/>
         </para>
       </listitem>
     </itemizedlist>

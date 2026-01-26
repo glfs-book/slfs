@@ -8,7 +8,7 @@
   <!ENTITY TEMPLATE-version "">
   -->
 
-  <!ENTITY TEMPLATE-download-http "https://">
+  <!ENTITY TEMPLATE-download "https://">
 ]>
 
 <!-- Try to keep the indentation used in this file-->
@@ -43,7 +43,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&TEMPLATE-download-http;"/>
+          Download: <ulink url="&TEMPLATE-download;"/>
         </para>
       </listitem>
     </itemizedlist>

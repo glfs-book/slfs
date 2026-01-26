@@ -6,7 +6,7 @@
 
   <!ENTITY scenefx-root
     "https://github.com/wlrfx/scenefx/archive">
-  <!ENTITY scenefx-download-http
+  <!ENTITY scenefx-download
     "&scenefx-root;/&scenefx-version;/scenefx-&scenefx-version;.tar.gz">
 ]>
 
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&scenefx-download-http;"/>
+          Download: <ulink url="&scenefx-download;"/>
         </para>
       </listitem>
     </itemizedlist>

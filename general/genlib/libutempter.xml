@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libutempter-download-http "https://github.com/altlinux/libutempter/archive/&libutempter-tag;/libutempter-&libutempter-tag;.tar.gz">
+  <!ENTITY libutempter-download "https://github.com/altlinux/libutempter/archive/&libutempter-tag;/libutempter-&libutempter-tag;.tar.gz">
 ]>
 
 <sect1 id="libutempter" xreflabel="libutempter-&libutempter-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libutempter-download-http;"/>
+          Download: <ulink url="&libutempter-download;"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY ncompress-download-http "https://github.com/vapier/ncompress/archive/v&ncompress-version;/ncompress-&ncompress-version;.tar.gz">
+  <!ENTITY ncompress-download "https://github.com/vapier/ncompress/archive/v&ncompress-version;/ncompress-&ncompress-version;.tar.gz">
 ]>
 
 <sect1 id="ncompress" xreflabel="ncompress-&ncompress-version;">
@@ -26,7 +26,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&ncompress-download-http;"/>
+          Download: <ulink url="&ncompress-download;"/>
         </para>
       </listitem>
     </itemizedlist>

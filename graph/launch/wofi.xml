@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY wofi-download-http
+  <!ENTITY wofi-download
     "https://hg.sr.ht/~scoopta/wofi/archive/v&wofi-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wofi-download-http;"/>
+          Download: <ulink url="&wofi-download;"/>
         </para>
       </listitem>
     </itemizedlist>

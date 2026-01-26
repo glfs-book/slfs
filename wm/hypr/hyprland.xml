@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY hyprland-download-http
+  <!ENTITY hyprland-download
     "https://github.com/hyprwm/Hyprland/archive/v&hyprland-version;/Hyprland-&hyprland-version;.tar.gz">
   <!ENTITY udis86-sub
     "https://github.com/canihavesomecoffee/udis86/archive/&hypr-udis86-version;/udis86-&hypr-udis86-version;.tar.gz">
@@ -43,7 +43,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&hyprland-download-http;"/>
+          Download: <ulink url="&hyprland-download;"/>
         </para>
       </listitem>
     </itemizedlist>

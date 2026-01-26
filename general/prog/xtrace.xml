@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY xtrace-download-http "https://github.com/yuq/xtrace/archive/&xtrace-version;.tar.gz">
+  <!ENTITY xtrace-download "https://github.com/yuq/xtrace/archive/&xtrace-version;.tar.gz">
 ]>
 
 <sect1 id="xtrace" xreflabel="xtrace-&xtrace-minor-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xtrace-download-http;"/>
+          Download: <ulink url="&xtrace-download;"/>
         </para>
       </listitem>
     </itemizedlist>

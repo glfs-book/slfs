@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY rofi-wayland-download-http
+  <!ENTITY rofi-wayland-download
     "https://github.com/lbonn/rofi/releases/download/&rofi-wayland-version;/rofi-&rofi-wayland-version;.tar.xz">
 ]>
 
@@ -32,7 +32,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&rofi-wayland-download-http;"/>
+          Download: <ulink url="&rofi-wayland-download;"/>
         </para>
       </listitem>
     </itemizedlist>

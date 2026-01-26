@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../../general.ent">
   %general-entities;
 
-  <!ENTITY melonds-download-http
+  <!ENTITY melonds-download
     "https://github.com/melonDS-emu/melonDS/archive/&melonds-version;/melonDS-&melonds-version;.tar.gz">
 ]>
 
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&melonds-download-http;"/>
+          Download: <ulink url="&melonds-download;"/>
         </para>
       </listitem>
     </itemizedlist>

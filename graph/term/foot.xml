@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY foot-download-http
+  <!ENTITY foot-download
     "https://codeberg.org/dnkl/foot/releases/download/&foot-version;/foot-&foot-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&foot-download-http;"/>
+          Download: <ulink url="&foot-download;"/>
         </para>
       </listitem>
     </itemizedlist>

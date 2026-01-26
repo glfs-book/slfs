@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY cde-de-download-http "https://downloads.sourceforge.net/project/cdesktopenv/src/cde-&cde-de-version;.tar.gz">
+  <!ENTITY cde-de-download "https://downloads.sourceforge.net/project/cdesktopenv/src/cde-&cde-de-version;.tar.gz">
 ]>
 
 <sect1 id="cde-de" xreflabel="CDE-&cde-de-version;">
@@ -40,7 +40,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cde-de-download-http;"/>
+          Download: <ulink url="&cde-de-download;"/>
         </para>
       </listitem>
     </itemizedlist>

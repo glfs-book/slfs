@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY iniparser-download-http
+  <!ENTITY iniparser-download
     "https://gitlab.com/iniparser/iniparser/-/archive/v&iniparser-version;/iniparser-v&iniparser-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&iniparser-download-http;"/>
+          Download: <ulink url="&iniparser-download;"/>
         </para>
       </listitem>
     </itemizedlist>

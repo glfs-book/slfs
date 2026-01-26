@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../../general.ent">
   %general-entities;
 
-  <!ENTITY platformdirs-download-http "https://files.pythonhosted.org/packages/source/p/platformdirs/platformdirs-&platformdirs-version;.tar.gz">
+  <!ENTITY platformdirs-download "https://files.pythonhosted.org/packages/source/p/platformdirs/platformdirs-&platformdirs-version;.tar.gz">
 ]>
 
   <sect2 id="platformdirs" xreflabel="platformdirs-&platformdirs-version;">
@@ -27,7 +27,7 @@
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Download (HTTP): <ulink url="&platformdirs-download-http;"/>
+            Download: <ulink url="&platformdirs-download;"/>
           </para>
         </listitem>
       </itemizedlist>

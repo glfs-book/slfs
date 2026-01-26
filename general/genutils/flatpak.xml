@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY flatpak-download-http "https://github.com/flatpak/flatpak/releases/download/&flatpak-version;/flatpak-&flatpak-version;.tar.xz">
+  <!ENTITY flatpak-download "https://github.com/flatpak/flatpak/releases/download/&flatpak-version;/flatpak-&flatpak-version;.tar.xz">
 ]>
 
 <sect1 id="flatpak" xreflabel="Flatpak-&flatpak-version;">
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&flatpak-download-http;"/>
+          Download: <ulink url="&flatpak-download;"/>
         </para>
       </listitem>
     </itemizedlist>

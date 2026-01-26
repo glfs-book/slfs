@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libsrtp-download-http "https://github.com/cisco/libsrtp/archive/v&libsrtp-version;/libsrtp-&libsrtp-version;.tar.gz">
+  <!ENTITY libsrtp-download "https://github.com/cisco/libsrtp/archive/v&libsrtp-version;/libsrtp-&libsrtp-version;.tar.gz">
 ]>
 
 <sect1 id="libsrtp" xreflabel="libsrtp-&libsrtp-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libsrtp-download-http;"/>
+          Download: <ulink url="&libsrtp-download;"/>
         </para>
       </listitem>
     </itemizedlist>

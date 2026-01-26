@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY mksh-download-http "https://mbsd.evolvis.org/MirOS/dist/mir/mksh/mksh-&mksh-version;.tgz">
+  <!ENTITY mksh-download "https://mbsd.evolvis.org/MirOS/dist/mir/mksh/mksh-&mksh-version;.tgz">
 ]>
 
 <sect1 id="mksh" xreflabel="mksh-&mksh-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mksh-download-http;"/>
+          Download: <ulink url="&mksh-download;"/>
         </para>
       </listitem>
     </itemizedlist>

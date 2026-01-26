@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY pkgsuite-download-http "https://github.com/mamccollum/pkgsuite/archive/&pkgsuite-version;/pkgsuite-&pkgsuite-version;.tar.gz">
+  <!ENTITY pkgsuite-download "https://github.com/mamccollum/pkgsuite/archive/&pkgsuite-version;/pkgsuite-&pkgsuite-version;.tar.gz">
 ]>
 
 <sect1 id="pkgsuite" xreflabel="pkgsuite-&pkgsuite-minor-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&pkgsuite-download-http;"/>
+          Download: <ulink url="&pkgsuite-download;"/>
         </para>
       </listitem>
     </itemizedlist>

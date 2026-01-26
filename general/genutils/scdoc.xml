@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY scdoc-download-http "https://git.sr.ht/~sircmpwn/scdoc/archive/&scdoc-version;.tar.gz">
+  <!ENTITY scdoc-download "https://git.sr.ht/~sircmpwn/scdoc/archive/&scdoc-version;.tar.gz">
 ]>
 
 <sect1 id="scdoc" xreflabel="scdoc-&scdoc-version;">
@@ -26,7 +26,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&scdoc-download-http;"/>
+          Download: <ulink url="&scdoc-download;"/>
         </para>
       </listitem>
     </itemizedlist>

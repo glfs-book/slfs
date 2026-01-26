@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY hyprlib-download-http "https://github.com/hyprwm/">
+  <!ENTITY hyprlib-download "https://github.com/hyprwm/">
 ]>
 
 <sect1 id="hyprlib" xreflabel="Hypr Libraries">
@@ -34,7 +34,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&hyprlib-download-http;"/>
+          Download: <ulink url="&hyprlib-download;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -104,7 +104,7 @@ EOF</userinput></screen>
 <screen><userinput>mkdir hyprlib &amp;&amp;
 cd    hyprlib &amp;&amp;
 grep -v '^#' ../hypr-list | wget -i- -c \
-    -B &hyprlib-download-http;</userinput></screen>
+    -B &hyprlib-download;</userinput></screen>
 
   </sect2>
 

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY wev-download-http "https://git.sr.ht/~sircmpwn/wev/archive/&wev-version;.tar.gz">
+  <!ENTITY wev-download "https://git.sr.ht/~sircmpwn/wev/archive/&wev-version;.tar.gz">
 ]>
 
 <sect1 id="wev" xreflabel="wev-&wev-version;">
@@ -26,7 +26,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wev-download-http;"/>
+          Download: <ulink url="&wev-download;"/>
         </para>
       </listitem>
     </itemizedlist>

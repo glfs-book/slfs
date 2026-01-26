@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libdatachannel-download-http
+  <!ENTITY libdatachannel-download
     "https://github.com/paullouisageneau/libdatachannel/archive/v&libdatachannel-version;/libdatachannel-&libdatachannel-version;.tar.gz">
 ]>
 
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libdatachannel-download-http;"/>
+          Download: <ulink url="&libdatachannel-download;"/>
         </para>
       </listitem>
     </itemizedlist>

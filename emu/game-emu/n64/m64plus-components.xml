@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../../general.ent">
   %general-entities;
 
-  <!ENTITY mupen64plus-download-http "https://github.com/mupen64plus/">
+  <!ENTITY mupen64plus-download "https://github.com/mupen64plus/">
 ]>
 
 <sect1 id="m64plus-components" xreflabel="Mupen64Plus Components">
@@ -32,7 +32,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mupen64plus-download-http;"/>
+          Download: <ulink url="&mupen64plus-download;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -88,7 +88,7 @@ EOF</userinput></screen>
 <screen><userinput>mkdir m64plus &amp;&amp;
 cd    m64plus &amp;&amp;
 grep -v '^#' ../m64plus-list | wget -i- -c \
-    -B &mupen64plus-download-http; &amp;&amp;
+    -B &mupen64plus-download; &amp;&amp;
 wget https://github.com/gonetz/GLideN64/archive/&gliden64-version;.tar.gz \
     -O GLideN64-&gliden64-version;.tar.gz</userinput></screen>
 

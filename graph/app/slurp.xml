@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY slurp-download-http
+  <!ENTITY slurp-download
     "https://github.com/emersion/slurp/archive/v&slurp-version;/slurp-&slurp-version;.tar.gz">
 ]>
 
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&slurp-download-http;"/>
+          Download: <ulink url="&slurp-download;"/>
         </para>
       </listitem>
     </itemizedlist>

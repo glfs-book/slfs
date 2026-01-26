@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY nlohmann-json-download-http
+  <!ENTITY nlohmann-json-download
     "https://github.com/nlohmann/json/archive/v&nlohmann-json-version;/json-&nlohmann-json-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&nlohmann-json-download-http;"/>
+          Download: <ulink url="&nlohmann-json-download;"/>
         </para>
       </listitem>
     </itemizedlist>

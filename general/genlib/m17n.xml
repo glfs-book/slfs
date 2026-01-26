@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY m17n-download-http
+  <!ENTITY m17n-download
     "https://download.savannah.nongnu.org/releases/m17n/m17n-lib-&m17n-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&m17n-download-http;"/>
+          Download: <ulink url="&m17n-download;"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY cuda-download-http
+  <!ENTITY cuda-download
     "https://developer.download.nvidia.com/compute/cuda/&cuda-version;/local_installers/cuda_&cuda-version;_&cuda-nvidia-version;_linux.run">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cuda-download-http;"/>
+          Download: <ulink url="&cuda-download;"/>
         </para>
       </listitem>
     </itemizedlist>

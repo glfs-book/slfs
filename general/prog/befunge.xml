@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY befunge93-download-http "https://codeberg.org/catseye/Befunge-93/archive/rel_&befunge-minor-version;.tar.gz">
+  <!ENTITY befunge93-download "https://codeberg.org/catseye/Befunge-93/archive/rel_&befunge-minor-version;.tar.gz">
 ]>
 
 <sect1 id="befunge93" xreflabel="befunge93-&befunge-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&befunge93-download-http;"/>
+          Download: <ulink url="&befunge93-download;"/>
         </para>
       </listitem>
     </itemizedlist>

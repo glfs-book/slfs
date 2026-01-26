@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY ladspa-sdk-download-http
+  <!ENTITY ladspa-sdk-download
     "http://www.ladspa.org/download/ladspa_sdk_&ladspa-sdk-version;.tgz">
 ]>
 
@@ -34,7 +34,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&ladspa-sdk-download-http;"/>
+          Download: <ulink url="&ladspa-sdk-download;"/>
         </para>
       </listitem>
     </itemizedlist>

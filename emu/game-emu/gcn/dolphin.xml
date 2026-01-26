@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../../general.ent">
   %general-entities;
 
-  <!ENTITY dolphin-download-http
+  <!ENTITY dolphin-download
     "https://github.com/dolphin-emu/dolphin">
   <!ENTITY dolphin-dl-root
     "https://github.com">
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&dolphin-download-http;"/>
+          Download: <ulink url="&dolphin-download;"/>
         </para>
       </listitem>
     </itemizedlist>

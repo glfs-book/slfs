@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY xdg-desktop-portal-wlr-download-http
+  <!ENTITY xdg-desktop-portal-wlr-download
     "https://github.com/emersion/xdg-desktop-portal-wlr/archive/v&xdg-desktop-portal-wlr-version;/xdg-desktop-portal-wlr-&xdg-desktop-portal-wlr-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xdg-desktop-portal-wlr-download-http;"/>
+          Download: <ulink url="&xdg-desktop-portal-wlr-download;"/>
         </para>
       </listitem>
     </itemizedlist>

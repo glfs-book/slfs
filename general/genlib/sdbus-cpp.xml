@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY sdbus-cpp-download-http
+  <!ENTITY sdbus-cpp-download
     "https://github.com/Kistler-Group/sdbus-cpp/archive/v&sdbus-cpp-version;/sdbus-cpp-&sdbus-cpp-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&sdbus-cpp-download-http;"/>
+          Download: <ulink url="&sdbus-cpp-download;"/>
         </para>
       </listitem>
     </itemizedlist>

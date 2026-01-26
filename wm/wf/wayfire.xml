@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY wayfire-download-http
+  <!ENTITY wayfire-download
     "https://github.com/WayfireWM/wayfire/releases/download/v&wayfire-version;/wayfire-&wayfire-version;.tar.xz">
 ]>
 
@@ -32,7 +32,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wayfire-download-http;"/>
+          Download: <ulink url="&wayfire-download;"/>
         </para>
       </listitem>
     </itemizedlist>

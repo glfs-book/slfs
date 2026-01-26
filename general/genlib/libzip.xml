@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libzip-download-http "https://libzip.org/download/libzip-&libzip-version;.tar.xz">
+  <!ENTITY libzip-download "https://libzip.org/download/libzip-&libzip-version;.tar.xz">
 ]>
 
 <sect1 id="libzip" xreflabel="libzip-&libzip-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libzip-download-http;"/>
+          Download: <ulink url="&libzip-download;"/>
         </para>
       </listitem>
     </itemizedlist>

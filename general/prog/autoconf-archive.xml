@@ -7,7 +7,7 @@
   <!-- TODO: replace ftpmirror with ftp once gnu.org stops being DDoSed by
        those AI idiots
        - seal331 13/09/2025 -->
-  <!ENTITY autoconf-archive-download-http "https://ftpmirror.gnu.org/gnu/autoconf-archive/autoconf-archive-&autoconf-archive-version;.tar.xz">
+  <!ENTITY autoconf-archive-download "https://ftpmirror.gnu.org/gnu/autoconf-archive/autoconf-archive-&autoconf-archive-version;.tar.xz">
 ]>
 
 <sect1 id="autoconf-archive" xreflabel="autoconf-archive-&autoconf-archive-version;">
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&autoconf-archive-download-http;"/>
+          Download: <ulink url="&autoconf-archive-download;"/>
         </para>
       </listitem>
     </itemizedlist>

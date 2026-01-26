@@ -6,7 +6,7 @@
 
   <!ENTITY wlroots-root
     "https://gitlab.freedesktop.org/wlroots/wlroots/-/archive">
-  <!ENTITY wlroots-download-http
+  <!ENTITY wlroots-download
     "&wlroots-root;/&wlroots-version;/wlroots-&wlroots-version;.tar.bz2">
 ]>
 
@@ -32,7 +32,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wlroots-download-http;"/>
+          Download: <ulink url="&wlroots-download;"/>
         </para>
       </listitem>
     </itemizedlist>

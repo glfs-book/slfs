@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../../general.ent">
   %general-entities;
 
-  <!ENTITY mgba-download-http
+  <!ENTITY mgba-download
     "https://github.com/mgba-emu/mgba/archive/&mgba-version;/mgba-&mgba-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mgba-download-http;"/>
+          Download: <ulink url="&mgba-download;"/>
         </para>
       </listitem>
     </itemizedlist>

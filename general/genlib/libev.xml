@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libev-download-http "http://dist.schmorp.de/libev/Attic/libev-&libev-version;.tar.gz">
+  <!ENTITY libev-download "http://dist.schmorp.de/libev/Attic/libev-&libev-version;.tar.gz">
 ]>
 
 <sect1 id="libev" xreflabel="libev-&libev-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libev-download-http;"/>
+          Download: <ulink url="&libev-download;"/>
         </para>
       </listitem>
     </itemizedlist>

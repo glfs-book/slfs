@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY motif-download-http "https://downloads.sourceforge.net/project/motif/Motif 2.3.8 Source Code/motif-&motif-version;.tar.gz">
+  <!ENTITY motif-download "https://downloads.sourceforge.net/project/motif/Motif 2.3.8 Source Code/motif-&motif-version;.tar.gz">
 ]>
 
 <sect1 id="motif" xreflabel="Motif-&motif-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&motif-download-http;"/>
+          Download: <ulink url="&motif-download;"/>
         </para>
       </listitem>
     </itemizedlist>

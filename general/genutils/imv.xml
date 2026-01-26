@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY imv-download-http
+  <!ENTITY imv-download
     "https://git.sr.ht/~exec64/imv/archive/v&imv-version;.tar.gz">
 ]>
 
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&imv-download-http;"/>
+          Download: <ulink url="&imv-download;"/>
         </para>
       </listitem>
     </itemizedlist>

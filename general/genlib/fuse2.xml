@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY fuse2-download-http "https://github.com/libfuse/libfuse/releases/download/fuse-&fuse2-version;/fuse-&fuse2-version;.tar.gz">
+  <!ENTITY fuse2-download "https://github.com/libfuse/libfuse/releases/download/fuse-&fuse2-version;/fuse-&fuse2-version;.tar.gz">
 ]>
 
 <sect1 id="fuse2" xreflabel="Fuse2-&fuse2-version;">
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fuse2-download-http;"/>
+          Download: <ulink url="&fuse2-download;"/>
         </para>
       </listitem>
     </itemizedlist>

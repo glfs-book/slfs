@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY rubberband-download-http "https://github.com/breakfastquay/rubberband/archive/v&rubberband-version;/rubberband-&rubberband-version;.tar.gz">
+  <!ENTITY rubberband-download "https://github.com/breakfastquay/rubberband/archive/v&rubberband-version;/rubberband-&rubberband-version;.tar.gz">
 ]>
 
 <sect1 id="rubberband" xreflabel="rubberband-&rubberband-version;">
@@ -41,7 +41,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&rubberband-download-http;"/>
+          Download: <ulink url="&rubberband-download;"/>
         </para>
       </listitem>
     </itemizedlist>

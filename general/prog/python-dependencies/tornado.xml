@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../../general.ent">
   %general-entities;
 
-  <!ENTITY tornado-download-http "https://files.pythonhosted.org/packages/source/t/tornado/tornado-&tornado-version;.tar.gz">
+  <!ENTITY tornado-download "https://files.pythonhosted.org/packages/source/t/tornado/tornado-&tornado-version;.tar.gz">
 ]>
 
   <sect2 id="tornado" xreflabel="tornado-&tornado-version;">
@@ -26,7 +26,7 @@
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Download (HTTP): <ulink url="&tornado-download-http;"/>
+            Download: <ulink url="&tornado-download;"/>
           </para>
         </listitem>
       </itemizedlist>

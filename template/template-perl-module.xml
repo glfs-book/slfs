@@ -6,10 +6,10 @@
 
  <!-- for modules referenced outside of perl, put them in general/prog/perl-modules/
    and use a link to &perl_authors;/id/X/XY/XYZZY/Fu-Bar-$Fu-Bar-version; -->
-  <!ENTITY my-download-http "&perl_authors;/id/X/XY/XYZZY/Fu-Bar-&Fu-Bar-version;.tar.gz">
+  <!ENTITY my-download "&perl_authors;/id/X/XY/XYZZY/Fu-Bar-&Fu-Bar-version;.tar.gz">
  <!-- but for modules which are only dependencies of other modules, put them in
    general/pprog/perl-deps with a link to &metacpan_authors; that includes the /id part -->
-  <!ENTITY my-download-http "&metacpan_authors;/X/XY/XYZZY/Fu-Bar-&Fu-Bar-version;.tar.gz">
+  <!ENTITY my-download "&metacpan_authors;/X/XY/XYZZY/Fu-Bar-&Fu-Bar-version;.tar.gz">
  <!-- only one of the above choices -->
   <!ENTITY my-md5sum "fix-me-please-editor-0cc7774186c">
 
@@ -36,7 +36,7 @@
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Download (HTTP): <ulink url="&my-download-http;"/>
+            Download: <ulink url="&my-download;"/>
           </para>
         </listitem>
       </itemizedlist>
@@ -81,7 +81,7 @@
       </para>
 
 <!-- Any specific action for the module (patches, etc) should come first -->
-<screen><userinput>patch -Np1 -i ../Fu-Bar-https-&Fu-Bar-version;-do_something-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../Fu-Bars-&Fu-Bar-version;-do_something-1.patch</userinput></screen>
 
 <!-- If the module uses standard installation instructions: -->
       <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../../general.ent">
   %general-entities;
 
-  <!ENTITY pycurl-download-http "https://files.pythonhosted.org/packages/source/p/pycurl/pycurl-&pycurl-version;.tar.gz">
+  <!ENTITY pycurl-download "https://files.pythonhosted.org/packages/source/p/pycurl/pycurl-&pycurl-version;.tar.gz">
 ]>
 
   <sect2 id="pycurl" xreflabel="pycurl-&pycurl-version;">
@@ -27,7 +27,7 @@
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Download (HTTP): <ulink url="&pycurl-download-http;"/>
+            Download: <ulink url="&pycurl-download;"/>
           </para>
         </listitem>
       </itemizedlist>

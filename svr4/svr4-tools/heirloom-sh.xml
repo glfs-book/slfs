@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY heirloom-sh-download-http "https://downloads.sourceforge.net/heirloom/heirloom-sh/&heirloom-sh-version;/heirloom-sh-&heirloom-sh-version;.tar.bz2">
+  <!ENTITY heirloom-sh-download "https://downloads.sourceforge.net/heirloom/heirloom-sh/&heirloom-sh-version;/heirloom-sh-&heirloom-sh-version;.tar.bz2">
 ]>
 
 <sect1 id="heirloom-sh" xreflabel="heirloom-sh-&heirloom-sh-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&heirloom-sh-download-http;"/>
+          Download: <ulink url="&heirloom-sh-download;"/>
         </para>
       </listitem>
     </itemizedlist>

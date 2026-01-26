@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY sdl-download-http "https://github.com/libsdl-org/sdl12-compat/archive/release-&sdl-version;/sdl12-compat-release-&sdl-version;.tar.gz">
+  <!ENTITY sdl-download "https://github.com/libsdl-org/sdl12-compat/archive/release-&sdl-version;/sdl12-compat-release-&sdl-version;.tar.gz">
 ]>
 
 <sect1 id="sdl" xreflabel="sdl12-compat-&sdl-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&sdl-download-http;"/>
+          Download: <ulink url="&sdl-download;"/>
         </para>
       </listitem>
     </itemizedlist>

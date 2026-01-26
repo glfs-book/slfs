@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY freebee-download-http "https://github.com/philpem/freebee/archive/&freebee-version;/freebee-&freebee-version;.tar.gz">
+  <!ENTITY freebee-download "https://github.com/philpem/freebee/archive/&freebee-version;/freebee-&freebee-version;.tar.gz">
 ]>
 
 <sect1 id="freebee" xreflabel="FreeBee-&freebee-minor-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&freebee-download-http;"/>
+          Download: <ulink url="&freebee-download;"/>
         </para>
       </listitem>
     </itemizedlist>

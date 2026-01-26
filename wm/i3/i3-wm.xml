@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY i3-download-http
+  <!ENTITY i3-download
     "https://github.com/i3/i3/archive/&i3-version;/i3-&i3-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&i3-download-http;"/>
+          Download: <ulink url="&i3-download;"/>
         </para>
       </listitem>
     </itemizedlist>

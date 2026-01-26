@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY prism-launcher-download-http
+  <!ENTITY prism-launcher-download
     "https://github.com/PrismLauncher/PrismLauncher/releases/download/&prism-launcher-version;/PrismLauncher-&prism-launcher-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&prism-launcher-download-http;"/>
+          Download: <ulink url="&prism-launcher-download;"/>
         </para>
       </listitem>
     </itemizedlist>

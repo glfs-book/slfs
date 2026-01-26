@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY xhomer-download-http "http://xhomer.isani.org/xhomer/xhomer-&xhomer-version;.tgz">
+  <!ENTITY xhomer-download "http://xhomer.isani.org/xhomer/xhomer-&xhomer-version;.tgz">
 ]>
 
 <sect1 id="xhomer" xreflabel="XHomer-&xhomer-version;">
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xhomer-download-http;"/>
+          Download: <ulink url="&xhomer-download;"/>
         </para>
       </listitem>
     </itemizedlist>

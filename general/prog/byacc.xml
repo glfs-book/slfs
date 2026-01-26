@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY byacc-download-http "https://invisible-island.net/archives/byacc/byacc-&byacc-version;.tgz">
+  <!ENTITY byacc-download "https://invisible-island.net/archives/byacc/byacc-&byacc-version;.tgz">
 ]>
 
 <sect1 id="byacc" xreflabel="byacc-&byacc-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&byacc-download-http;"/>
+          Download: <ulink url="&byacc-download;"/>
         </para>
       </listitem>
     </itemizedlist>

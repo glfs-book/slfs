@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY heirloom-doctools-download-http "https://github.com/n-t-roff/heirloom-doctools/archive/&heirloom-doctools-version;/heirloom-doctools-&heirloom-doctools-version;.tar.gz">
+  <!ENTITY heirloom-doctools-download "https://github.com/n-t-roff/heirloom-doctools/archive/&heirloom-doctools-version;/heirloom-doctools-&heirloom-doctools-version;.tar.gz">
 ]>
 
 <sect1 id="heirloom-doctools" xreflabel="heirloom-doctools-&heirloom-doctools-minor-version;">
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&heirloom-doctools-download-http;"/>
+          Download: <ulink url="&heirloom-doctools-download;"/>
         </para>
       </listitem>
     </itemizedlist>

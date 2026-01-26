@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY mbedtls-download-http "https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-&mbedtls-version;/mbedtls-&mbedtls-version;.tar.bz2">
+  <!ENTITY mbedtls-download "https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-&mbedtls-version;/mbedtls-&mbedtls-version;.tar.bz2">
 ]>
 
 <sect1 id="mbedtls" xreflabel="Mbed-TLS-&mbedtls-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mbedtls-download-http;"/>
+          Download: <ulink url="&mbedtls-download;"/>
         </para>
       </listitem>
     </itemizedlist>

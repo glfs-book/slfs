@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY sdl2_net-download-http
+  <!ENTITY sdl2_net-download
     "https://github.com/libsdl-org/SDL_net/releases/download/release-&sdl2_net-version;/SDL2_net-&sdl2_net-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&sdl2_net-download-http;"/>
+          Download: <ulink url="&sdl2_net-download;"/>
         </para>
       </listitem>
     </itemizedlist>

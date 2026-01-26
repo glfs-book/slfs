@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libime-download-http
+  <!ENTITY libime-download
     "https://github.com/fcitx/libime/archive/&libime-version;/libime-&libime-version;.tar.gz">
 ]>
 
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libime-download-http;"/>
+          Download: <ulink url="&libime-download;"/>
         </para>
       </listitem>
     </itemizedlist>

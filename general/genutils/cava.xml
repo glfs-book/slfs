@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY cava-download-http
+  <!ENTITY cava-download
     "https://github.com/karlstav/cava/releases/download/&cava-version;/cava-&cava-version;.tar.gz">
 ]>
 
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cava-download-http;"/>
+          Download: <ulink url="&cava-download;"/>
         </para>
       </listitem>
     </itemizedlist>

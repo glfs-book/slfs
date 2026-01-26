@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY wlr-randr-download-http
+  <!ENTITY wlr-randr-download
     "https://gitlab.freedesktop.org/emersion/wlr-randr/-/archive/v&wlr-randr-version;/wlr-randr-v&wlr-randr-version;.tar.bz2">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wlr-randr-download-http;"/>
+          Download: <ulink url="&wlr-randr-download;"/>
         </para>
       </listitem>
     </itemizedlist>

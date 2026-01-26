@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY gkermit-download-http "https://www.kermitproject.org/ftp/kermit/archives/&gkermit-tarball-version;.tar.gz">
+  <!ENTITY gkermit-download "https://www.kermitproject.org/ftp/kermit/archives/&gkermit-tarball-version;.tar.gz">
 ]>
 
 <!-- Seems like g-kermit is the spelling... For all lowercase, let's just do
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&gkermit-download-http;"/>
+          Download: <ulink url="&gkermit-download;"/>
         </para>
       </listitem>
     </itemizedlist>

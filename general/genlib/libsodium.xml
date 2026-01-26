@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libsodium-download-http
+  <!ENTITY libsodium-download
     "http://github.com/jedisct1/libsodium/releases/download/&libsodium-version;-RELEASE/libsodium-&libsodium-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libsodium-download-http;"/>
+          Download: <ulink url="&libsodium-download;"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY printproto-download-http "https://x.org/pub/individual/proto/printproto-&printproto-version;.tar.bz2">
+  <!ENTITY printproto-download "https://x.org/pub/individual/proto/printproto-&printproto-version;.tar.bz2">
 ]>
 
 <sect1 id="printproto" xreflabel="printproto-&printproto-version;">
@@ -26,7 +26,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&printproto-download-http;"/>
+          Download: <ulink url="&printproto-download;"/>
         </para>
       </listitem>
     </itemizedlist>

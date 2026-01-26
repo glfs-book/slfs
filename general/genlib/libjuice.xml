@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libjuice-download-http "https://github.com/paullouisageneau/libjuice/archive/v&libjuice-version;/libjuice-&libjuice-version;.tar.gz">
+  <!ENTITY libjuice-download "https://github.com/paullouisageneau/libjuice/archive/v&libjuice-version;/libjuice-&libjuice-version;.tar.gz">
 ]>
 
 <sect1 id="libjuice" xreflabel="libjuice-&libjuice-version;">
@@ -26,7 +26,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libjuice-download-http;"/>
+          Download: <ulink url="&libjuice-download;"/>
         </para>
       </listitem>
     </itemizedlist>

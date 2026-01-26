@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY wgetpaste-download-http "https://github.com/zlin/wgetpaste/releases/download/&wgetpaste-version;/wgetpaste-&wgetpaste-version;.tar.xz">
+  <!ENTITY wgetpaste-download "https://github.com/zlin/wgetpaste/releases/download/&wgetpaste-version;/wgetpaste-&wgetpaste-version;.tar.xz">
 ]>
 
 <sect1 id="wgetpaste" xreflabel="wgetpaste-&wgetpaste-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wgetpaste-download-http;"/>
+          Download: <ulink url="&wgetpaste-download;"/>
         </para>
       </listitem>
     </itemizedlist>

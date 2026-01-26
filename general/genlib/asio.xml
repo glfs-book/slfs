@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY asio-download-http
+  <!ENTITY asio-download
     "https://github.com/chriskohlhoff/asio/archive/asio-&asio-version;.tar.gz">
 ]>
 
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&asio-download-http;"/>
+          Download: <ulink url="&asio-download;"/>
         </para>
       </listitem>
     </itemizedlist>

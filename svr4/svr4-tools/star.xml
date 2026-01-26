@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY schilytools-download-http "https://codeberg.org/schilytools/schilytools/releases/download/&schilytools-version;/schily-&schilytools-version;.tar.bz2">
+  <!ENTITY schilytools-download "https://codeberg.org/schilytools/schilytools/releases/download/&schilytools-version;/schily-&schilytools-version;.tar.bz2">
 ]>
 
 <sect1 id="star" xreflabel="star from schilytools-&schilytools-version;">
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&schilytools-download-http;"/>
+          Download: <ulink url="&schilytools-download;"/>
         </para>
       </listitem>
     </itemizedlist>

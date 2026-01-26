@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY dunst-download-http
+  <!ENTITY dunst-download
     "https://github.com/dunst-project/dunst/archive/v&dunst-version;/dunst-&dunst-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&dunst-download-http;"/>
+          Download: <ulink url="&dunst-download;"/>
         </para>
       </listitem>
     </itemizedlist>

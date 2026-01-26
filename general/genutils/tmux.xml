@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY tmux-download-http "https://github.com/tmux/tmux/releases/download/&tmux-version;/tmux-&tmux-version;.tar.gz">
+  <!ENTITY tmux-download "https://github.com/tmux/tmux/releases/download/&tmux-version;/tmux-&tmux-version;.tar.gz">
 ]>
 
 <sect1 id="tmux" xreflabel="tmux-&tmux-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&tmux-download-http;"/>
+          Download: <ulink url="&tmux-download;"/>
         </para>
       </listitem>
     </itemizedlist>

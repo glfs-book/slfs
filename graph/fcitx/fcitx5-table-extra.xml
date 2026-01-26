@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY fcitx5-table-extra-download-http
+  <!ENTITY fcitx5-table-extra-download
     "https://github.com/fcitx/fcitx5-table-extra/archive/&fcitx5-table-extra-version;/fcitx5-table-extra-&fcitx5-table-extra-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-table-extra-download-http;"/>
+          Download: <ulink url="&fcitx5-table-extra-download;"/>
         </para>
       </listitem>
     </itemizedlist>

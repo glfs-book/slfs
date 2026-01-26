@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../../general.ent">
   %general-entities;
 
-  <!ENTITY nvchecker-download-http "https://files.pythonhosted.org/packages/source/n/nvchecker/nvchecker-&nvchecker-version;.tar.gz">
+  <!ENTITY nvchecker-download "https://files.pythonhosted.org/packages/source/n/nvchecker/nvchecker-&nvchecker-version;.tar.gz">
 ]>
 
   <sect2 id="nvchecker" xreflabel="nvchecker-&nvchecker-version;">
@@ -28,7 +28,7 @@
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Download (HTTP): <ulink url="&nvchecker-download-http;"/>
+            Download: <ulink url="&nvchecker-download;"/>
           </para>
         </listitem>
       </itemizedlist>

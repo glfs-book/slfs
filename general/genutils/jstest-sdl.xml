@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY jstest-sdl-download-http
+  <!ENTITY jstest-sdl-download
     "https://github.com/meleu/jstest-sdl/archive/&jstest-sdl-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&jstest-sdl-download-http;"/>
+          Download: <ulink url="&jstest-sdl-download;"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY intel-onevpl-download-http "https://github.com/intel/vpl-gpu-rt/archive/refs/tags/intel-onevpl-&intel-onevpl-version;.tar.gz">
+  <!ENTITY intel-onevpl-download "https://github.com/intel/vpl-gpu-rt/archive/refs/tags/intel-onevpl-&intel-onevpl-version;.tar.gz">
 ]>
 
 <sect1 id="intel-onevpl" xreflabel="intel-onevpl-&intel-onevpl-version;">
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&intel-onevpl-download-http;"/>
+          Download: <ulink url="&intel-onevpl-download;"/>
         </para>
       </listitem>
     </itemizedlist>

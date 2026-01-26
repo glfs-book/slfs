@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY fcitx5-lua-download-http
+  <!ENTITY fcitx5-lua-download
     "https://github.com/fcitx/fcitx5-lua/archive/&fcitx5-lua-version;/fcitx5-lua-&fcitx5-lua-version;.tar.gz">
 ]>
 
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-lua-download-http;"/>
+          Download: <ulink url="&fcitx5-lua-download;"/>
         </para>
       </listitem>
     </itemizedlist>

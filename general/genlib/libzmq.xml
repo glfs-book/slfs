@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libzmq-download-http
+  <!ENTITY libzmq-download
     "http://github.com/zeromq/libzmq/archive/v&libzmq-version;/libzmq-&libzmq-version;.tar.gz">
   <!-- The GitHub has a tarball that has a configure script made, but the
        tarball name is zeromq-&libzmq-version;.tar.gz, which can confusion.
@@ -33,7 +33,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libzmq-download-http;"/>
+          Download: <ulink url="&libzmq-download;"/>
         </para>
       </listitem>
     </itemizedlist>

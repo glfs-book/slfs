@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY socat-download-http "http://www.dest-unreach.org/socat/download/socat-&socat-version;.tar.gz">
+  <!ENTITY socat-download "http://www.dest-unreach.org/socat/download/socat-&socat-version;.tar.gz">
 ]>
 
 <sect1 id="socat" xreflabel="socat-&socat-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&socat-download-http;"/>
+          Download: <ulink url="&socat-download;"/>
         </para>
       </listitem>
     </itemizedlist>

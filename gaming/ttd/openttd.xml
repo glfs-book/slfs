@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY openttd-download-http
+  <!ENTITY openttd-download
     "https://cdn.openttd.org/openttd-releases/&openttd-version;/openttd-&openttd-version;-source.tar.xz">
 ]>
 
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&openttd-download-http;"/>
+          Download: <ulink url="&openttd-download;"/>
         </para>
       </listitem>
     </itemizedlist>

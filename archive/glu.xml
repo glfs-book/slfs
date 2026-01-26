@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY glu-download-http "https://archive.mesa3d.org/glu/glu-&glu-version;.tar.xz">
+  <!ENTITY glu-download "https://archive.mesa3d.org/glu/glu-&glu-version;.tar.xz">
   <!ENTITY glu-download-ftp  " ">
 ]>
 
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&glu-download-http;"/>
+          Download: <ulink url="&glu-download;"/>
         </para>
       </listitem>
       <listitem>

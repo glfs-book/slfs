@@ -6,7 +6,7 @@
 
   <!ENTITY mangowc-root
     "https://github.com/DreamMaoMao/mangowc/archive">
-  <!ENTITY mangowc-download-http
+  <!ENTITY mangowc-download
     "&mangowc-root;/&mangowc-version;/mangowc-&mangowc-version;.tar.gz">
 ]>
 
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mangowc-download-http;"/>
+          Download: <ulink url="&mangowc-download;"/>
         </para>
       </listitem>
     </itemizedlist>

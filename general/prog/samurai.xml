@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY samurai-download-http "https://github.com/michaelforney/samurai/archive/&samurai-version;/samurai-&samurai-version;.tar.gz">
+  <!ENTITY samurai-download "https://github.com/michaelforney/samurai/archive/&samurai-version;/samurai-&samurai-version;.tar.gz">
 ]>
 
 <sect1 id="samurai" xreflabel="samurai-&samurai-minor;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&samurai-download-http;"/>
+          Download: <ulink url="&samurai-download;"/>
         </para>
       </listitem>
     </itemizedlist>

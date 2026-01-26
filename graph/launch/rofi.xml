@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY rofi-download-http
+  <!ENTITY rofi-download
     "https://github.com/davatorium/rofi/releases/download/&rofi-version;/rofi-&rofi-version;.tar.xz">
 ]>
 
@@ -38,7 +38,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&rofi-download-http;"/>
+          Download: <ulink url="&rofi-download;"/>
         </para>
       </listitem>
     </itemizedlist>

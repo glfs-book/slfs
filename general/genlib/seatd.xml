@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY seatd-download-http "https://git.sr.ht/~kennylevinsen/seatd/archive/&seatd-version;.tar.gz">
+  <!ENTITY seatd-download "https://git.sr.ht/~kennylevinsen/seatd/archive/&seatd-version;.tar.gz">
   <!ENTITY seatd-download-ftp  " ">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&seatd-download-http;"/>
+          Download: <ulink url="&seatd-download;"/>
         </para>
       </listitem>
       <listitem>

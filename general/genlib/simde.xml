@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY simde-download-http
+  <!ENTITY simde-download
     "https://github.com/simd-everywhere/simde/archive/v&simde-version;/simde-&simde-version;.tar.gz">
 ]>
 
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&simde-download-http;"/>
+          Download: <ulink url="&simde-download;"/>
         </para>
       </listitem>
     </itemizedlist>

@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY cintercal-download-http "https://gitlab.com/esr/intercal/-/archive/&intercal-version;/intercal-&intercal-version;.tar.gz">
+  <!ENTITY cintercal-download "https://gitlab.com/esr/intercal/-/archive/&intercal-version;/intercal-&intercal-version;.tar.gz">
 ]>
 
 <sect1 id="cintercal" xreflabel="cintercal-&intercal-version;">
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cintercal-download-http;"/>
+          Download: <ulink url="&cintercal-download;"/>
         </para>
       </listitem>
     </itemizedlist>

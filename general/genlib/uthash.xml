@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY uthash-download-http
+  <!ENTITY uthash-download
     "https://github.com/troydhanson/uthash/archive/v&uthash-version;/uthash-&uthash-version;.tar.gz">
 ]>
 
@@ -27,7 +27,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&uthash-download-http;"/>
+          Download: <ulink url="&uthash-download;"/>
         </para>
       </listitem>
     </itemizedlist>

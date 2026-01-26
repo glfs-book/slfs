@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY ksh-download-http "https://github.com/ksh93/ksh/archive/v&ksh-version;/ksh-&ksh-version;.tar.gz">
+  <!ENTITY ksh-download "https://github.com/ksh93/ksh/archive/v&ksh-version;/ksh-&ksh-version;.tar.gz">
 ]>
 
 <sect1 id="ksh" xreflabel="ksh-&ksh-version;">
@@ -26,7 +26,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&ksh-download-http;"/>
+          Download: <ulink url="&ksh-download;"/>
         </para>
       </listitem>
     </itemizedlist>

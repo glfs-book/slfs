@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY w3m-download-http "https://git.sr.ht/~rkta/w3m/archive/v&w3m-version;.tar.gz">
+  <!ENTITY w3m-download "https://git.sr.ht/~rkta/w3m/archive/v&w3m-version;.tar.gz">
 ]>
 
 <sect1 id="w3m" xreflabel="w3m-&w3m-version;">
@@ -27,7 +27,7 @@
     <bridgehead renderas="sect3">Package Information</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
-        <para>Download (HTTP): <ulink url="&w3m-download-http;"/></para>
+        <para>Download: <ulink url="&w3m-download;"/></para>
       </listitem>
     </itemizedlist>
 

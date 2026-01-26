@@ -4,7 +4,8 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY msgraph-download-http "&gnome-download-http;/msgraph/0.3/msgraph-&msgraph-version;.tar.xz">
+  <!ENTITY msgraph-download
+    "&gnome-download-http;/msgraph/0.3/msgraph-&msgraph-version;.tar.xz">
 ]>
 
 <sect1 id="msgraph" xreflabel="msgraph-&msgraph-version;">
@@ -29,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&msgraph-download-http;"/>
+          Download: <ulink url="&msgraph-download;"/>
         </para>
       </listitem>
     </itemizedlist>

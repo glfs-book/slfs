@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY cldr-emoji-annotation-download-http "https://github.com/fujiwarat/cldr-emoji-annotation/releases/download/&cldr-emoji-annotation-tarball-version;/cldr-emoji-annotation-&cldr-emoji-annotation-tarball-version;.tar.gz">
+  <!ENTITY cldr-emoji-annotation-download "https://github.com/fujiwarat/cldr-emoji-annotation/releases/download/&cldr-emoji-annotation-tarball-version;/cldr-emoji-annotation-&cldr-emoji-annotation-tarball-version;.tar.gz">
 ]>
 
 <!-- TODO: figure out how to install the proper unicode-cldr and not just this
@@ -31,7 +31,7 @@ so this will do for now -->
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cldr-emoji-annotation-download-http;"/>
+          Download: <ulink url="&cldr-emoji-annotation-download;"/>
         </para>
       </listitem>
     </itemizedlist>

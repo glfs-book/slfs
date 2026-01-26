@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY minicom-download-http "https://salsa.debian.org/minicom-team/minicom/-/archive/&minicom-version;/minicom-&minicom-version;.tar.gz">
+  <!ENTITY minicom-download "https://salsa.debian.org/minicom-team/minicom/-/archive/&minicom-version;/minicom-&minicom-version;.tar.gz">
 ]>
 
 <sect1 id="minicom" xreflabel="minicom-&minicom-version;">
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&minicom-download-http;"/>
+          Download: <ulink url="&minicom-download;"/>
         </para>
       </listitem>
     </itemizedlist>

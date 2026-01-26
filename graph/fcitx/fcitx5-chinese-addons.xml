@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY fcitx5-chinese-addons-download-http
+  <!ENTITY fcitx5-chinese-addons-download
     "https://github.com/fcitx/fcitx5-chinese-addons/archive/&fcitx5-chinese-addons-version;/fcitx5-chinese-addons-&fcitx5-chinese-addons-version;.tar.gz">
 ]>
 
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-chinese-addons-download-http;"/>
+          Download: <ulink url="&fcitx5-chinese-addons-download;"/>
         </para>
       </listitem>
     </itemizedlist>

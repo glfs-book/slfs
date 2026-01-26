@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY wbg-download-http
+  <!ENTITY wbg-download
     "https://codeberg.org/dnkl/wbg/releases/download/&wbg-version;/wbg-&wbg-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wbg-download-http;"/>
+          Download: <ulink url="&wbg-download;"/>
         </para>
       </listitem>
     </itemizedlist>

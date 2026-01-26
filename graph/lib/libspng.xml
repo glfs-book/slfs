@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libspng-download-http
+  <!ENTITY libspng-download
     "https://github.com/randy408/libspng/archive/v&libspng-version;/libspng-&libspng-version;.tar.gz">
 ]>
 
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libspng-download-http;"/>
+          Download: <ulink url="&libspng-download;"/>
         </para>
       </listitem>
     </itemizedlist>

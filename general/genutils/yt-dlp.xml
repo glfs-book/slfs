@@ -9,7 +9,7 @@
        been axed or will lead to users thinking yt-dlp simply isn't in the
        book. Thus, it's staying here. -->
 
-  <!ENTITY yt-dlp-download-http
+  <!ENTITY yt-dlp-download
     "https://github.com/yt-dlp/yt-dlp/archive/&yt-dlp-version;/yt-dlp-&yt-dlp-version;.tar.gz">
 ]>
 
@@ -34,7 +34,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&yt-dlp-download-http;"/>
+          Download: <ulink url="&yt-dlp-download;"/>
         </para>
       </listitem>
     </itemizedlist>

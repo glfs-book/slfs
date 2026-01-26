@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libxp-download-http "https://x.org/archive/individual/lib/libXp-&libxp-version;.tar.xz">
+  <!ENTITY libxp-download "https://x.org/archive/individual/lib/libXp-&libxp-version;.tar.xz">
 ]>
 
 <sect1 id="libxp" xreflabel="libXp-&libxp-version;">
@@ -26,7 +26,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libxp-download-http;"/>
+          Download: <ulink url="&libxp-download;"/>
         </para>
       </listitem>
     </itemizedlist>

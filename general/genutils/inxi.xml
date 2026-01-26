@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY inxi-download-http
+  <!ENTITY inxi-download
     "https://codeberg.org/smxi/inxi/archive/&inxi-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&inxi-download-http;"/>
+          Download: <ulink url="&inxi-download;"/>
         </para>
       </listitem>
     </itemizedlist>

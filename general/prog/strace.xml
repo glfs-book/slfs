@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY strace-download-http "https://github.com/strace/strace/releases/download/v&strace-version;/strace-&strace-version;.tar.xz">
+  <!ENTITY strace-download "https://github.com/strace/strace/releases/download/v&strace-version;/strace-&strace-version;.tar.xz">
 ]>
 
 <sect1 id="strace" xreflabel="strace-&strace-version;">
@@ -29,7 +29,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&strace-download-http;"/>
+          Download: <ulink url="&strace-download;"/>
         </para>
       </listitem>
     </itemizedlist>

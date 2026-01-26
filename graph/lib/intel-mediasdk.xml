@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY intel-mediasdk-download-http "https://github.com/Intel-Media-SDK/MediaSDK/archive/refs/tags/intel-mediasdk-&intel-mediasdk-version;.tar.gz">
+  <!ENTITY intel-mediasdk-download "https://github.com/Intel-Media-SDK/MediaSDK/archive/refs/tags/intel-mediasdk-&intel-mediasdk-version;.tar.gz">
 ]>
 
 <sect1 id="intel-mediasdk" xreflabel="Intel-MediaSDK-&intel-mediasdk-version;">
@@ -34,7 +34,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&intel-mediasdk-download-http;"/>
+          Download: <ulink url="&intel-mediasdk-download;"/>
         </para>
       </listitem>
     </itemizedlist>

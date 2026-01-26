@@ -6,7 +6,7 @@
 
   <!ENTITY fluidsynth-archive
     "https://github.com/FluidSynth/fluidsynth/archive">
-  <!ENTITY fluidsynth-download-http
+  <!ENTITY fluidsynth-download
     "&fluidsynth-archive;/v&fluidsynth-version;/fluidsynth-&fluidsynth-version;.tar.gz">
   <!ENTITY fs-gcem-sub
     "https://github.com/kthohr/gcem/archive/&fs-gcem;/gcem-&fs-gcem;.tar.gz">
@@ -35,7 +35,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fluidsynth-download-http;"/>
+          Download: <ulink url="&fluidsynth-download;"/>
         </para>
       </listitem>
     </itemizedlist>

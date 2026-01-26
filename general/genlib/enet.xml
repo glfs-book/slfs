@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY enet-download-http
+  <!ENTITY enet-download
     "http://enet.bespin.org/download/enet-&enet-version;.tar.gz">
 ]>
 
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&enet-download-http;"/>
+          Download: <ulink url="&enet-download;"/>
         </para>
       </listitem>
     </itemizedlist>

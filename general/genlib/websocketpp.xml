@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY websocketpp-download-http
+  <!ENTITY websocketpp-download
     "https://github.com/zaphoyd/websocketpp/archive/&websocketpp-version;/websocketpp-&websocketpp-version;.tar.gz">
   <!ENTITY websocket-patch-root "https://gitlab.archlinux.org/archlinux/packaging/packages/websocketpp/-/raw/main">
 ]>
@@ -28,7 +28,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&websocketpp-download-http;"/>
+          Download: <ulink url="&websocketpp-download;"/>
         </para>
       </listitem>
     </itemizedlist>

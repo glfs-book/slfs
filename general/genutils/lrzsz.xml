@@ -6,7 +6,7 @@
 
   <!ENTITY lrzsz-gentoo-patch-root-hash "f7f659b24dba90b0278e54a2f4d966e24c7a94fb">
   <!ENTITY lrzsz-gentoo-patch-root "https://github.com/gentoo/gentoo/raw/&lrzsz-gentoo-patch-root-hash;/net-dialup/lrzsz/files">
-  <!ENTITY lrzsz-download-http "https://ohse.de/uwe/releases/lrzsz-&lrzsz-version;.tar.gz">
+  <!ENTITY lrzsz-download "https://ohse.de/uwe/releases/lrzsz-&lrzsz-version;.tar.gz">
 ]>
 
 <sect1 id="lrzsz" xreflabel="lrzsz-&lrzsz-version;">
@@ -30,7 +30,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&lrzsz-download-http;"/>
+          Download: <ulink url="&lrzsz-download;"/>
         </para>
       </listitem>
     </itemizedlist>
