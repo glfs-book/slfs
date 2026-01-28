@@ -43,6 +43,10 @@
       <para>January 28th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fastfetch: 2.57.1 -&gt; 2.58.0. Fixes
+          <ulink url="&slfs-issues;/510">#510</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - byacc: 20241231 -&gt; 20260126. Fixes
           <ulink url="&slfs-issues;/509">#509</ulink>.</para>
         </listitem>
