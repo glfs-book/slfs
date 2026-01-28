@@ -101,7 +101,7 @@ version, so keep this at that. -->
 <!ENTITY autoconf-archive-version            "2024.10.16">
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
-<!ENTITY byacc-version                       "20241231">
+<!ENTITY byacc-version                       "20260126">
 <!-- START PYTHON -->
 <!ENTITY python3-major                       "3">
 <!ENTITY python3-minor                       "14">
