@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>January 28th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - byacc: 20241231 -&gt; 20260126. Fixes
+          <ulink url="&slfs-issues;/509">#509</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 25th, 2026</para>
       <itemizedlist>
         <listitem>
