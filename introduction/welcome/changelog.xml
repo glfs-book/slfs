@@ -43,6 +43,10 @@
       <para>January 28th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - OpenJDK: 17.0.17-ga -&gt; 17.0.18-ga (security).
+          Fixes <ulink url="&slfs-issues;/514">#514</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libdatachannel: 0.24.0 -&gt; 0.24.1. Fixes
           <ulink url="&slfs-issues;/506">#506</ulink>.</para>
         </listitem>

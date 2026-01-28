@@ -393,8 +393,8 @@ EOF</userinput></screen>
         jconsole, jdb, jdeprscan, jdeps, jfr, jhsdb, jimage, jinfo,
         jlink, jmap, jmod, jpackage, jps, jrunscript, jshell, jstack,
         jstat, jstatd, jwebserver, keytool, rmiregistry, and serialver</seg>
-        <seg>/opt/jdk-&openjdk-version;+&openjdk-build;/lib/*</seg>
-        <seg>/opt/jdk-&openjdk-version;+&openjdk-build;</seg>
+        <seg>/opt/jdk-&openjdk-version;&openjdk-suffix;/lib/*</seg>
+        <seg>/opt/jdk-&openjdk-version;&openjdk-suffix;</seg>
       </seglistitem>
     </segmentedlist>
 

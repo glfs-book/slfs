@@ -87,10 +87,10 @@
       building with Java 8 instead of 7:
     </para>
 
-<screen><userinput>sed -e 's/Java 1.7/Java 1.8/g'   \
+<screen><literal>sed -e 's/Java 1.7/Java 1.8/g'   \
     -e 's/-target 7/-target 8/g' \
     -e 's/-source 7/-source 8/g' \
-    -i libraries/{javacheck,launcher}/CMakeLists.txt</userinput></screen>
+    -i libraries/{javacheck,launcher}/CMakeLists.txt</literal></screen>
 
     <para>
       Install PrismLauncher by running the following

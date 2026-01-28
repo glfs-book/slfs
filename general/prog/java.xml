@@ -101,7 +101,7 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of the Java BinaryJDK</title>
+    <title>Installation of the Java Binary JDK</title>
 <!--
     <note>
       <para>
@@ -112,9 +112,8 @@
     </note>
 -->
     <para>
-      Begin by extracting the appropriate binary tarball for your
-      architecture and changing to the extracted directory. Install the binary
-      OpenJDK with the following commands as the
+      Begin by extracting the tarball and changing to the extracted directory.
+      Install the binary OpenJDK with the following commands as the
       <systemitem class="username">root</systemitem> user:
     </para>
 
