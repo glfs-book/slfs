@@ -12,7 +12,7 @@
 <!ENTITY libime-kenlm                        "bcd4af619a2fa45f5876d8855f7876cc09f663af">
 <!ENTITY libjuice-version                    "1.7.0">
 <!ENTITY libsrtp-version                     "2.7.0">
-<!ENTITY libdatachannel-version              "0.24.0">
+<!ENTITY libdatachannel-version              "0.24.1">
 <!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
 <!ENTITY libdatachannel-usrsctp              "fec583d54493f879d2ae44a743423bf8a04371ab">
 <!ENTITY libmspack-version                   "1.11">
@@ -33,7 +33,7 @@
 <!ENTITY re2-version                         "2025-11-05">
 <!ENTITY sdbus-cpp-version                   "2.2.1">
 <!ENTITY sdl2_net-version                    "2.2.0">
-<!ENTITY seatd-version                       "0.9.1">
+<!ENTITY seatd-version                       "0.9.2">
 <!ENTITY simde-version                       "0.8.2">
 <!ENTITY tllist-version                      "1.1.0">
 <!ENTITY tomlplusplus-version                "3.4.0">
@@ -49,7 +49,7 @@
 <!ENTITY btop-version                        "1.4.6">
 <!ENTITY cldr-emoji-annotation-version       "38">
 <!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">
-<!ENTITY flatpak-version                     "1.16.2">
+<!ENTITY flatpak-version                     "1.16.3">
 <!ENTITY fluidsynth-version                  "2.5.2">
 <!ENTITY fs-gcem                             "012ae73c6d0a2cb09ffe86475f5c6fba3926e200">
 <!ENTITY fs-sf2                              "3.1">
@@ -206,15 +206,15 @@ version, so keep this at that. -->
 <!ENTITY hyprwayland-scanner-version         "0.4.5">
 <!ENTITY aquamarine-version                  "0.10.0">
 <!ENTITY hyprgraphics-version                "0.5.0">
-<!ENTITY hyprtoolkit-version                 "0.5.2">
+<!ENTITY hyprtoolkit-version                 "0.5.3">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-guiutils-version           "0.2.1">
-<!ENTITY hyprland-version                    "0.53.1">
+<!ENTITY hyprland-version                    "0.53.3">
 <!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.25">
 <!-- MangoWC -->
-<!ENTITY mangowc-version                     "0.10.10">
+<!ENTITY mangowc-version                     "0.11.0">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
 <!-- Wayfire -->
@@ -285,7 +285,7 @@ version, so keep this at that. -->
 <!ENTITY jdk-modern                          "21.0.9+10">
 <!ENTITY prism-launcher-version              "10.0.2">
 <!-- TTD -->
-<!ENTITY openttd-version                     "15.0">
+<!ENTITY openttd-version                     "15.1">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->

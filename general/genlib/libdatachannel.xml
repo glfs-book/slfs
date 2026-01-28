@@ -37,13 +37,13 @@
       <listitem>
         <para>
           Required submodule:
-          <ulink url="https://github.com/SergiusTheBest/plog/archive/&libdatachannel-plog;.tar.gz"/>
+          <ulink url="https://github.com/SergiusTheBest/plog/archive/&libdatachannel-plog;/plog-&libdatachannel-plog;.tar.gz"/>
         </para>
       </listitem>
       <listitem>
         <para>
           Required submodule:
-          <ulink url="https://github.com/sctplab/usrsctp/archive/&libdatachannel-usrsctp;.tar.gz"/>
+          <ulink url="https://github.com/sctplab/usrsctp/archive/&libdatachannel-usrsctp;/usrsctp-&libdatachannel-usrsctp;.tar.gz"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -76,8 +76,8 @@
       First unpack the submodules:
     </para>
 
-<screen><userinput>tar -xf ../&libdatachannel-plog;.tar.gz &amp;&amp;
-tar -xf ../&libdatachannel-usrsctp;.tar.gz &amp;&amp;
+<screen><userinput>tar -xf ../plog-&libdatachannel-plog;.tar.gz &amp;&amp;
+tar -xf ../usrsctp-&libdatachannel-usrsctp;.tar.gz &amp;&amp;
 
 mv -T plog-*    deps/plog &amp;&amp;
 mv -T usrsctp-* deps/usrsctp</userinput></screen>
