@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY tinyxxd-download
+    "https://github.com/xyproto/tinyxxd/releases/download/v&tinyxxd-version;/tinyxxd-&tinyxxd-version;.tar.gz">
+]>
+
+<sect1 id="tinyxxd" xreflabel="tinyxxd-&tinyxxd-version;">
+  <?dbhtml filename="tinyxxd.html"?>
+
+  <title>tinyxxd-&tinyxxd-version;</title>
+
+  <indexterm zone="tinyxxd">
+    <primary sortas="a-tinyxxd">tinyxxd</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to tinyxxd</title>
+
+    <para>
+      The tinyxxd package provides a drop-in replacement for Vim's hexdump
+      utility, xxd. This standalone implementation is more modern and performant
+      than Vim's.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&tinyxxd-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of tinyxxd</title>
+
+    <para>
+      Install tinyxxd by running the following commands:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 tinyxxd -t /usr/bin/              &amp;&amp;
+ln -sfv tinyxxd /usr/bin/xxd                      &amp;&amp;
+install -vDm755 tinyxxd.1 -t /usr/share/man/man1/ &amp;&amp;
+ln -sfv tinyxxd.1 /usr/share/man/man1/xxd.1</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          tinyxxd and
+          xxd (link to tinyxxd)
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="tinyxxd-bin">
+        <term><command>tinyxxd</command></term>
+        <listitem>
+          <para>
+            drop-in replacement of Vim's hexdump utility, xxd
+          </para>
+          <indexterm zone="tinyxxd tinyxxd">
+            <primary sortas="b-tinyxxd">tinyxxd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

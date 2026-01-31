@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>January 31st, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - tinyxxd: Added. Fixes
+          <ulink url="&slfs-issues;/518">#518</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>January 28th, 2026</para>
       <itemizedlist>
         <listitem>
