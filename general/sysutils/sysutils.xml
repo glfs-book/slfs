@@ -22,5 +22,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="iputils.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libtree.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tealdeer.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tinyxxd.xml"/>
 
 </chapter>
