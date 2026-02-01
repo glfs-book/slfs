@@ -5,7 +5,6 @@
   %general-entities;
 
   <!ENTITY seatd-download "https://git.sr.ht/~kennylevinsen/seatd/archive/&seatd-version;.tar.gz">
-  <!ENTITY seatd-download-ftp  " ">
 ]>
 
 <sect1 id="seatd" xreflabel="seatd-&seatd-version;">
@@ -30,11 +29,6 @@
       <listitem>
         <para>
           Download: <ulink url="&seatd-download;"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Download (FTP): <ulink url="&seatd-download-ftp;"/>
         </para>
       </listitem>
     </itemizedlist>
