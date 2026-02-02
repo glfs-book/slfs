@@ -44,7 +44,7 @@
 <!ENTITY yajl-version                        "2.1.0">
 <!ENTITY yyjson-version                      "0.12.0">
 <!-- General Utilities -->
-<!ENTITY cava-version                        "0.10.6">
+<!ENTITY cava-version                        "0.10.7">
 <!ENTITY cmark-version                       "0.31.1">
 <!ENTITY htop-version                        "3.4.1">
 <!ENTITY btop-version                        "1.4.6">
