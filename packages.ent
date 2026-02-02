@@ -91,7 +91,7 @@ version, so keep this at that. -->
 <!ENTITY w3m-version                         "0.5.5">
 <!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20250102">
-<!ENTITY yt-dlp-version                      "2025.12.08">
+<!ENTITY yt-dlp-version                      "2026.01.31">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.13.0">
 <!ENTITY eza-version                         "0.23.4">

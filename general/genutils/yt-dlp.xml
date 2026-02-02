@@ -69,6 +69,29 @@
     <title>Installation of yt-dlp</title>
 
     <para>
+      If you wish to download YouTube videos, apply a patch to add <ulink
+      url="&blfs-svn;/general/nodejs.html">Node.js</ulink> as a
+      default JavaScript engine
+      <footnote><para>
+        A JavaScript engine is used to solve JavaScript challenges, needed to
+        download from YouTube.
+        <ulink url="&blfs-svn;/general/nodejs.html">Node.js</ulink>
+        is a suitable one already packaged in BLFS.
+      </para></footnote>:
+    </para>
+
+<screen><userinput>patch -Np0 &lt;&lt; EOF
+--- yt_dlp/options.py
++++ yt_dlp/options.py
+@@ -467 +467 @@
+-        default=['deno'],
++        default=['deno', 'node'],
+@@ -473 +473 @@
+-            'Only "deno" is enabled by default. The highest priority runtime that is both enabled and '
++            'Only "deno" and "node" are enabled by default. The highest priority runtime that is both enabled and '
+EOF</userinput></screen>
+
+    <para>
       Install yt-dlp by running the following commands:
     </para>
 
@@ -79,31 +102,6 @@
     </para>
 
     <screen role="root"><userinput>&install-wheel; yt_dlp</userinput></screen>
-
-  </sect2>
-
-  <sect2 role="configuration">
-    <title>Configuring yt-dlp</title>
-
-    <para>
-      YouTube has made it so JavaScript challenges need to be done in order to
-      pull from its site. If you download YouTube videos using this package,
-      download a JavaScript runtime/engine like <ulink
-      url="&blfs-svn;/general/nodejs.html">Node.js</ulink>. The following
-      instructions assume you have it installed. Next, create a system
-      configuration file, telling yt-dlp to use Node.js for JS challenges and
-      automatically download the challenge scripts required, as the &root;
-      user:
-    </para>
-
-<screen role="root"><userinput>cat &gt; /etc/yt-dlp.conf &lt;&lt; EOF
-<literal>--js-runtimes node --remote-components ejs:github</literal>
-EOF</userinput></screen>
-
-    <para>
-      Now yt-dlp will use Node.js to solve JS challenges when downloading
-      YouTube videos, automatically downloading scripts by yt-dlp to do so.
-    </para>
 
   </sect2>
 
