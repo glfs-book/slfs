@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>February 2nd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - cava: 0.10.6 -&gt; 0.10.7. Fixes
+          <ulink url="&slfs-issues;/523">#523</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 1st, 2026</para>
       <itemizedlist>
         <listitem>
