@@ -43,6 +43,10 @@
       <para>February 2nd, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - yt-dlp: 2025.12.08 -&gt; 2026.01.31.
+          Fixes <ulink url="&slfs-issues;/521">#521</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - cava: 0.10.6 -&gt; 0.10.7. Fixes
           <ulink url="&slfs-issues;/523">#523</ulink>.</para>
         </listitem>
