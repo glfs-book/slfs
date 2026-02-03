@@ -51,7 +51,7 @@
 
 <screen role="root"><userinput>install -vDm755 tinyxxd -t /usr/bin/              &amp;&amp;
 ln -sfv tinyxxd /usr/bin/xxd                      &amp;&amp;
-install -vDm755 tinyxxd.1 -t /usr/share/man/man1/ &amp;&amp;
+install -vDm644 tinyxxd.1 -t /usr/share/man/man1/ &amp;&amp;
 ln -sfv tinyxxd.1 /usr/share/man/man1/xxd.1</userinput></screen>
 
   </sect2>
