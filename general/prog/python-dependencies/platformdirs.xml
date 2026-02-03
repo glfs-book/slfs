@@ -56,7 +56,9 @@
 
     </sect3>
 
-    &pip3-cmd-explain;
+    <sect3 role="commands">
+      &pip3-cmd-explain;
+    </sect3>
 
     <sect3 role="content">
       <title>Contents</title>

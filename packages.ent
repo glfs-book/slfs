@@ -90,7 +90,7 @@ version, so keep this at that. -->
 <!ENTITY tmux-version                        "3.6a">
 <!ENTITY w3m-version                         "0.5.5">
 <!ENTITY wgetpaste-version                   "2.34">
-<!ENTITY winetricks-version                  "20250102">
+<!ENTITY winetricks-version                  "20260125">
 <!ENTITY yt-dlp-version                      "2026.01.31">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.13.0">
@@ -216,7 +216,7 @@ version, so keep this at that. -->
 <!-- i3 -->
 <!ENTITY i3-version                          "4.25">
 <!-- MangoWC -->
-<!ENTITY mangowc-version                     "0.11.0">
+<!ENTITY mangowc-version                     "0.12.0">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
 <!-- Wayfire -->

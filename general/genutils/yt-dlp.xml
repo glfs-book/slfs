@@ -105,6 +105,10 @@ EOF</userinput></screen>
 
   </sect2>
 
+  <sect2 role="commands">
+    &pip3-cmd-explain;
+  </sect2>
+
   <sect2 role="content">
     <title>Contents</title>
 

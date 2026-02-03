@@ -89,8 +89,7 @@
   "<para><parameter>--disable-static</parameter>: This switch prevents
   installation of static versions of the libraries.</para>">
 <!ENTITY pip3-cmd-explain
-  "<sect3 role='commands'>
-    <title>Command Explanations</title>
+   "<title>Command Explanations</title>
 
     <para>
       <parameter>-w dist</parameter>: Builds the appropriate
@@ -147,6 +146,4 @@
       <option>--no-deps</option>: Do not install package dependencies.
       This option may be needed with the <option>--upgrade</option> or
       <option>--force-reinstall</option> options.
-    </para>
-
-  </sect3>">
+    </para>">

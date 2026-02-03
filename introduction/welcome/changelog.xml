@@ -40,6 +40,20 @@
     -->
 
     <listitem>
+      <para>February 3rd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Winetricks: 20250102 -&gt; 20260125.
+          Fixes <ulink url="&slfs-issues;/524">#524</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - MangoWC: 0.11.0 -&gt; 0.12.0. Fixes
+          <ulink url="&slfs-issues;/525">#525</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 2nd, 2026</para>
       <itemizedlist>
         <listitem>
