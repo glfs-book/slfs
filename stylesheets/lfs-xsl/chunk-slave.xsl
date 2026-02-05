@@ -12,7 +12,6 @@
 
     <!-- Including our customized elements templates -->
   <xsl:include href="common.xsl"/>
-  <xsl:include href="xhtml/lfs-admon.xsl"/>
   <xsl:include href="xhtml/lfs-mixed.xsl"/>
   <xsl:include href="xhtml/lfs-sections.xsl"/>
   <xsl:include href="xhtml/lfs-titles.xsl"/>

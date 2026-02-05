@@ -11,7 +11,7 @@
 # Adjust these to suit your installation, or include the variables
 # you wish to change in local.mk, which must be created manually.
 AUTO_CLEAN  ?= 1
-THEME       ?= dark
+THEME       ?= dynamic
 THEME_PATH  ?= stylesheets/lfs-xsl
 RENDERTMP   := $(shell mktemp -d)
 HTML_ROOT   ?= $(HOME)/public_html
