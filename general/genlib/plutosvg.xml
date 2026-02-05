@@ -48,6 +48,11 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> (for CMake
+      files needed by CMake build systems)
+    </para>
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>
     </para>
 
@@ -65,7 +70,10 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_SHARED_LIBS=ON      \
+      -W no-dev -G Ninja .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
@@ -79,8 +87,13 @@ ninja</userinput></screen>
     </para>
 
 <screen><userinput>tar -xf ../../plutosvg-&plutosvg-version;.tar.gz &amp;&amp;
-meson setup plutosvg-&plutosvg-version; svg-build \
-            --prefix=/usr --buildtype=release &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_SHARED_LIBS=ON      \
+      -W no-dev -G Ninja           \
+      -B svg-build                 \
+      plutosvg-&plutosvg-version; &amp;&amp;
 ninja -C svg-build</userinput></screen>
 
     <para>
@@ -108,8 +121,7 @@ ninja -C svg-build</userinput></screen>
           libplutovg
         </seg>
         <seg>
-          /usr/include/plutosvg and
-          /usr/include/plutovg
+          /usr/{include,lib/cmake}/pluto{,s}vg
         </seg>
       </seglistitem>
     </segmentedlist>
