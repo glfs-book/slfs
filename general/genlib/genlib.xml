@@ -38,6 +38,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minizip.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="msgraph.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nlohmann-json.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="plutosvg.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="pugixml.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="qrcodegencpp.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="re2.xml"/>

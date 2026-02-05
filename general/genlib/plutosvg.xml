@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY pluto-root
+    "https://github.com/sammycage/pluto">
+  <!ENTITY plutovg-download
+    "&pluto-root;vg/archive/v&plutovg-version;/plutovg-&plutovg-version;.tar.gz">
+  <!ENTITY plutosvg-download
+    "&pluto-root;svg/archive/v&plutosvg-version;/plutosvg-&plutosvg-version;.tar.gz">
+]>
+
+<sect1 id="plutosvg" xreflabel="PlutoSVG-&plutosvg-version;">
+  <?dbhtml filename="plutosvg.html"?>
+
+  <title>PlutoSVG-&plutosvg-version;</title>
+
+  <indexterm zone="plutosvg">
+    <primary sortas="a-plutosvg">PlutoSVG</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to PlutoSVG</title>
+
+    <para>
+      This page installs both the PlutoVG and PlutoSVG packages. PlutoVG
+      provides a 2D vector graphics library, whereas PlutoSVG utilizes PlutoVG
+      to provide an SVG rendering library. PlutoVG will be installed first,
+      then PlutoSVG.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          PlutoVG Download: <ulink url="&plutovg-download;"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          PlutoSVG Download: <ulink url="&plutosvg-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">PlutoSVG Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of PlutoSVG</title>
+
+    <para>
+      PlutoVG will be installed first, so unpack the PlutoVG tarball and
+      navigate to the extracted directory. Afterwards, install PlutoVG by
+      running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+    <para>
+      Now build PlutoSVG:
+    </para>
+
+<screen><userinput>tar -xf ../../plutosvg-&plutosvg-version;.tar.gz &amp;&amp;
+meson setup plutosvg-&plutosvg-version; svg-build \
+            --prefix=/usr --buildtype=release &amp;&amp;
+ninja -C svg-build</userinput></screen>
+
+    <para>
+      Finally, install PlutoSVG as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja -C svg-build install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libplutosvg and
+          libplutovg
+        </seg>
+        <seg>
+          /usr/include/plutosvg and
+          /usr/include/plutovg
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libplutosvg">
+        <term><filename class="libraryfile">libplutosvg</filename></term>
+        <listitem>
+          <para>
+            provides SVG rendering functions
+          </para>
+          <indexterm zone="plutosvg libplutosvg">
+            <primary sortas="c-libplutosvg">libplutosvg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libplutovg">
+        <term><filename class="libraryfile">libplutovg</filename></term>
+        <listitem>
+          <para>
+            provides 2D vector manipulation and rendering functions
+          </para>
+          <indexterm zone="plutosvg libplutovg">
+            <primary sortas="c-libplutovg">libplutovg</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
