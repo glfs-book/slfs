@@ -67,9 +67,9 @@ ninja</userinput></screen>
       out of the way if it's installed:
     </para>
 
-<screen role="root"><userinput>if which cmark &amp;&gt; /dev/null; then
-  grep -qF python3 $(which cmark) &amp;&amp;
-  mv   -v          $(which cmark){,-py3}
+<screen role="root"><userinput>if find /usr/bin/cmark &amp;&gt; /dev/null; then
+  grep -qF python3 /usr/bin/cmark &amp;&amp;
+  mv   -v          /usr/bin/cmark{,-py3}
 fi</userinput></screen>
 
     <para>
