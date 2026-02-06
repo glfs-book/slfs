@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>February 6th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - fish: 4.3.3 -&gt; 4.4.0. Fixes
+          <ulink url="&slfs-issues;/529">#529</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>February 4th, 2026</para>
       <itemizedlist>
         <listitem>
