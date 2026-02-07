@@ -5,7 +5,7 @@
   %general-entities;
 
   <!ENTITY tinyxxd-download
-    "https://github.com/xyproto/tinyxxd/releases/download/v&tinyxxd-version;/tinyxxd-&tinyxxd-version;.tar.gz">
+    "https://github.com/xyproto/tinyxxd/releases/download/v&tinyxxd-version;/tinyxxd-&tinyxxd-version;.tar.xz">
 ]>
 
 <sect1 id="tinyxxd" xreflabel="tinyxxd-&tinyxxd-version;">
