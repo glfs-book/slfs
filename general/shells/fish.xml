@@ -61,7 +61,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr     \
       -D CMAKE_BUILD_TYPE=Release      \
       -D CMAKE_SKIP_INSTALL_RPATH=ON   \
       -D FISH_USE_SYSTEM_PCRE2=ON      \
-      -D WITH_GETTEXT=ON               \
+      -D WITH_MESSAGE_LOCALIZATION=ON  \
       -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/fish-&fish-version; \
       -G Ninja .. &amp;&amp;
 
@@ -109,7 +109,7 @@ EOF</userinput></screen>
       fish to link against the pcre2 installed in LFS.
     </para>
     <para>
-      <parameter>-D WITH_GETTEXT=ON</parameter>: This parameter enables
+      <parameter>-D WITH_MESSAGE_LOCALIZATION=ON</parameter>: This parameter enables
       translations.
     </para>
 

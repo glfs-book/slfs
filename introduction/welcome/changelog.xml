@@ -45,6 +45,10 @@
         <listitem>
           <para>[tox] - i3: 4.25 -&gt; 4.25.1.</para>
         </listitem>
+        <listitem>
+          <para>[renodr] - fish: 4.3.3 -&gt; 4.4.0. Fixes
+          <ulink url="&slfs-issues;/529">#529</ulink>.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
