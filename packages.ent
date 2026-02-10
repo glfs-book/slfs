@@ -28,8 +28,12 @@
 <!ENTITY msgraph-version                     "0.3.4">
 <!ENTITY zlib-version                        "1.3.1">
 <!ENTITY nlohmann-json-version               "3.12.0">
-<!ENTITY plutovg-version                     "1.3.2">
-<!ENTITY plutosvg-version                    "0.0.7">
+<!ENTITY plutovg-major                       "1">
+<!ENTITY plutovg-minor                       "3.2">
+<!ENTITY plutovg-version                     "&plutovg-major;.&plutovg-minor;">
+<!ENTITY plutosvg-major                      "0">
+<!ENTITY plutosvg-minor                      "0.7">
+<!ENTITY plutosvg-version                    "&plutosvg-major;.&plutosvg-minor;">
 <!ENTITY pugixml-version                     "1.15">
 <!ENTITY qrcodegencpp-version                "1.8.0">
 <!ENTITY qrcodegencpp-cmake-version          "1.8.0-cmake4">
