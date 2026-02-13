@@ -31,6 +31,11 @@
           Download: <ulink url="&s4-3b1-pc7300-download;"/>
         </para>
       </listitem>
+      <listitem>
+        <para>
+          Supported kernel version: &s4-kernel;
+        </para>
+      </listitem>
     </itemizedlist>
 
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
@@ -38,79 +43,24 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch"/>
+          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
   </sect2>
 
-<!-- REMOVED IN LINUX-6.16
-
-  <sect2 role="kernel" id="s4-3b1-pc7300-kernel">
-    <title>Kernel Configuration</title>
-
-    <para>
-      This package replaces the SYSV kernel module with an better and improved
-      version. Disable the one in the kernel if it's present and recompile the
-      kernel if necessary:
-    </para>
-
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="s4-3b1-pc7300-kernel.xml"/>
-
-    <indexterm zone="s4-3b1-pc7300 s4-3b1-pc7300-kernel">
-      <primary sortas="d-s4-3b1-pc7300">s4-3b1-pc7300</primary>
-    </indexterm>
-  </sect2>
--->
-
   <sect2 role="installation">
     <title>Installation of s4-3b1-pc7300</title>
 
     <para>
-      Apply a patch to build the sysv kernel module unconditionally:
+      Apply a patch to make the library be built as shared instead of static,
+      build the kernel module unconditionally, and makes the module use
+      up-to-date interfaces and expected operations dictated by the kernel,
+      GCC, and glibc:
     </para>
 
-<screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch</userinput></screen>
-
-    <para>
-      Apply a patch to fix building the kernel module:
-    </para>
-
-<screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch</userinput></screen>
-
-    <para>
-      Apply a second patch to make the kernel module compatible with Linux
-      6.16:
-    </para>
-
-<screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch</userinput></screen>
-
-    <para>
-      Apply a patch to build the supporting library as a shared library instead
-      of a static one:
-    </para>
-
-<screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch</userinput></screen>
+<screen role="pre"><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-1.patch</userinput></screen>
 
     <para>
       Compile the kernel module:
