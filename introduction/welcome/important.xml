@@ -30,9 +30,9 @@
       However, some are known to require fixes, either simple or too elaborate.
       They require extra resources to test, which the team behind this book
       does not have. So Mesa's OpenGL implementations are not supported. As a
-      starting point, you can see <phrase rev="sysv"><ulink
+      starting point, you can see <phrase revision="sysv"><ulink
       url="&lfs-website;/slfs/view/12.4/">SLFS 12.4</ulink></phrase>
-      <phrase rev="systemd"><ulink
+      <phrase revision="systemd"><ulink
       url="&lfs-website;/slfs/view/12.4-systemd/">SLFS 12.4</ulink></phrase>
       and see how to go about fixing what is broken. See <ulink
       url="&glfs-website;/shareddeps/aboutgl.html">GLFS: About OpenGL</ulink>
