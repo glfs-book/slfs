@@ -17,17 +17,10 @@ software, system utilities, and more.
 
 ## Where to read
 
-Go to https://glfs-book.github.io/slfs/ and start going through the book!
+Go to https://linuxfromscratch.org/slfs/view/dev/ or
+https://glfs-book.github.io/slfs/ and start going through the book!
 
-The online book is rolling release but there is a stable version in the SLFS
-source via the stable branch. You can switch to it by running the following
-command:
-
-```Bash
-git checkout stable
-```
-
-Then render the book with `make STAB=release [other options]`.
+You can find more online copies at https://linuxfromscratch.org/slfs/view/.
 
 There are also [releases](https://github.com/glfs-book/slfs/releases) available
 for download.
