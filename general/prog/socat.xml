@@ -66,7 +66,7 @@ make</userinput></screen>
     </para>
 
 <screen role="root"><userinput>install -vDm644 EXAMPLES doc/*.{html,css} \
-  -t /usr/share/doc/socat-&socat-version;/</userinput></screen>
+        -t /usr/share/doc/socat-&socat-version;/</userinput></screen>
 
   </sect2>
 
