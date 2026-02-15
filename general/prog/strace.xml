@@ -54,8 +54,7 @@
       commands:
     </para>
 
-<screen><userinput>./configure --prefix=/usr \
-    --enable-mpers=no &amp;&amp;
+<screen><userinput>./configure --prefix=/usr --enable-mpers=no &amp;&amp;
 make</userinput></screen>
 
     <para>
@@ -77,7 +76,7 @@ make</userinput></screen>
       <parameter>--enable-mpers=no</parameter>: By default, strace is built
       to support both the m32 and mx32 personalities. This parameter disables
       that behavior. Remove this parameter if you are debugging programs that
-      use m32 or mx32 personalities.
+      use either m32 or mx32 personalities.
     </para>
 
     <para>
@@ -133,8 +132,9 @@ make</userinput></screen>
         <term><command>strace-log-merge</command></term>
         <listitem>
          <para>
-           merges the output of <command>strace -ff -tt</command>, prepends PID
-           to each lines, then sorts the result using time stamps
+           merges the output of <command>strace -ff -tt</command>, prepends the
+           PID of a process to each line, and then sorts the result using time
+           stamps
          </para>
           <indexterm zone="strace strace-log-merge">
             <primary sortas="b-strace-log-merge">strace-log-merge</primary>
