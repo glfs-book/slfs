@@ -79,7 +79,7 @@
           <ulink url="&slfs-issues;/547">#547</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - Drop Systemd.</para>
+          <para>[zeckma] - Drop SysVinit.</para>
         </listitem>
       </itemizedlist>
     </listitem>
