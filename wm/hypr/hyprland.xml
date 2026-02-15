@@ -143,6 +143,18 @@ ninja</userinput></screen>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
+    <para>
+      Hyprland has made it so it will pop up a 5-10s warning if you did not
+      launch Hyprland with <command>start-hyprland</command>. This package
+      installs a symlink, <command>hyprland</command>, which points to
+      <command>Hyprland</command>, which is the main program itself. Starting
+      with <command>start-hyprland</command> may be a hassle, so if you wish,
+      relink <command>hyprland</command> to point to
+      <command>start-hyprland</command> as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ln -sfv start-hyprland $LFS/usr/bin/hyprland</userinput></screen>
+
   </sect2>
 
 <!--
@@ -211,7 +223,7 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
       <seglistitem>
         <seg>
           hyprctl,
-          hyprland (link to Hyprland),
+          hyprland (link to Hyprland, or start-hyprland),
           Hyprland,
           hyprpm, and
           start-hyprland
@@ -248,7 +260,9 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>hyprland</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>Hyprland</command>
+            is a symlink pointing to <command>Hyprland</command>, or
+            <command>start-hyprland</command> if you followed the
+            post-installation symlink relinking command
           </para>
           <indexterm zone="hyprland hyprland-link">
             <primary sortas="b-hyprland-link">hyprland</primary>
