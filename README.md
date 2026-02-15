@@ -30,8 +30,7 @@ git checkout stable
 Then render the book with `make STAB=release [other options]`.
 
 There are also [releases](https://github.com/glfs-book/slfs/releases) available
-for download. These contain both the SysV and Systemd editions of the book as
-chunked HTML.
+for download.
 
 ## Installation
 
@@ -40,16 +39,12 @@ installed that deal with these conversions. Please read
 [INSTALL.md](./INSTALL.md) to determine which programs you need to install and
 where to get instructions to install that software.
 
-You can then build the HTML with a simple `make` command. You can change the
-revision by passing `REV=<rev>` to the `make` command. `<rev>` can be:
-- `sysv` (default)
-- `systemd`
-
-Example: `make REV=systemd`
+You can then build the HTML with a simple `make` command.
 
 You can switch the theme by passing `THEME=<theme>` to the `make` command.
 `<theme>` can equal:
-- `dark` (default)
+- `dynamic` (default)
+- `dark`
 - `light`
 - any theme in `THEME_PATH`
 
@@ -61,10 +56,7 @@ https://github.com/glfs-book/lfs-themes.
 
 Example: `make THEME_PATH=../lfs-themes/themes THEME=whitepink`
 
-The default target (sysv) builds the HTML in `~/public_html/slfs`,
-whereas for systemd, it would be in `~/public_html/slfs-systemd`.
-It will by default make each package and section its own page then link
-everything together for a smooth experience.
+The default target renders the HTML in `~/public_html/slfs`.
 
 There are also more variables that can be set which can be used to specify
 where the rendered output goes, where temporary files are located, the

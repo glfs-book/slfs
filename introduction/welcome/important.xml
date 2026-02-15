@@ -21,33 +21,6 @@
   </para>
 
   <sect2>
-    <title>Stability</title>
-
-    &important-stability;
-
-  </sect2>
-
-  <sect2>
-    <title>Init System</title>
-
-    <para revision="sysv">
-      This version of this book is meant for SysV LFS systems. The Systemd
-      version of the book is not viewable online by &copyholder; due to Github
-      Pages restraints. Thus you will need to download or render the book
-      yourself. Follow the <ulink url="&slfs-repo;">SLFS rendering
-      instructions</ulink> in order to render the book yourself. You will need
-      <ulink url="&blfs-svn;/general/git.html">Git</ulink> to clone the
-      repository. You can download the book <ulink
-      url="&slfs-repo;/releases">here</ulink>.
-    </para>
-
-    <para revision="systemd">
-      This version of this book is meant for Systemd LFS systems.
-    </para>
-
-  </sect2>
-
-  <sect2>
     <title>OpenGL</title>
 
     <para>

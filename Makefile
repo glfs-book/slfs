@@ -34,11 +34,11 @@ ifeq ($(AUTO_CLEAN), 0)
 endif
 
 ifndef REV
-  REV = sysv
+  REV = systemd
 endif
-ifneq ($(REV), sysv)
-  ifneq ($(REV), systemd)
-    $(error REV must be 'sysv' (default) or 'systemd')
+ifneq ($(REV), systemd)
+  ifneq ($(REV), sysv)
+    $(error REV must be 'systemd' (default) or 'sysv' (no longer maintained))
   endif
 endif
 
@@ -53,18 +53,18 @@ ifneq ($(STAB), development)
   endif
 endif
 
-ifeq ($(REV), sysv)
+ifeq ($(REV), systemd)
   BASEDIR         ?= $(HTML_ROOT)/slfs
   DUMPDIR         ?= $(DUMP_ROOT)/slfs-commands
   SLFSHTML        ?= slfs-html.xml
   SLFSHTML2       ?= slfs-html2.xml
   SLFSFULL        ?= slfs-full.xml
 else
-  BASEDIR         ?= $(HTML_ROOT)/slfs-systemd
-  DUMPDIR         ?= $(DUMP_ROOT)/slfs-sysd-commands
-  SLFSHTML        ?= slfs-systemd-html.xml
-  SLFSHTML2       ?= slfs-systemd-html2.xml
-  SLFSFULL        ?= slfs-systemd-full.xml
+  BASEDIR         ?= $(HTML_ROOT)/slfs-sysv
+  DUMPDIR         ?= $(DUMP_ROOT)/slfs-sysv-commands
+  SLFSHTML        ?= slfs-sysv-html.xml
+  SLFSHTML2       ?= slfs-sysv-html2.xml
+  SLFSFULL        ?= slfs-sysv-full.xml
 endif
 
 slfs: html wget-list
@@ -77,15 +77,15 @@ help:
 	@echo ""
 	@echo "  REV=<rev>            Build variation of book"
 	@echo "                       Valid values for REV are:"
-	@echo "                       * sysv    - Build book for SysV"
 	@echo "                       * systemd - Build book for systemd"
-	@echo "                       Defaults to 'sysv'"
+	@echo "                       * sysv    - Build book for SysV"
+	@echo "                       Defaults to 'systemd'"
 	@echo ""
 	@echo "  BASEDIR=<dir>        Put the output in directory <dir>."
 	@echo "                       Defaults to"
-	@echo "                       '$(HTML_ROOT)/slfs' if REV=sysv (or unset)"
+	@echo "                       '$(HTML_ROOT)/slfs' if REV=systemd (or unset)"
 	@echo "                       or to"
-	@echo "                       '$(HTML_ROOT)/slfs-systemd' if REV=systemd"
+	@echo "                       '$(HTML_ROOT)/slfs-sysv' if REV=sysv"
 	@echo ""
 	@echo "  V=<val>              If <val> is a non-empty value, all"
 	@echo "                       steps to produce the output is shown."
@@ -94,8 +94,9 @@ help:
 	@echo "  THEME_PATH=<path>    Sets the path of themes (CSS files)."
 	@echo "                       'stylesheets/lfs-xsl' is the default."
 	@echo ""
-	@echo "  THEME=<theme>        Sets the theme of the book, ie. light/dark."
-	@echo "                       The dark theme is the default."
+	@echo "  THEME=<theme>        Sets the theme of the book, ie.
+	@echo "                       light/dark/dynamic."
+	@echo "                       The dynamic theme is the default."
 	@echo ""
 	@echo "Targets:"
 	@echo "  help                 Show this help text."

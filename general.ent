@@ -2,7 +2,7 @@
 <!ENTITY % conditional-entities SYSTEM "conditional.ent">
 %conditional-entities;
 
-<!ENTITY xlfs-version "12.4">
+<!ENTITY xlfs-version "13.0">
 <!ENTITY % relnum     "&xlfs-version;">
 
 <![ %development; [
