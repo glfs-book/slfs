@@ -1,0 +1,52 @@
+From 15ebc433baabd799252609e28bf79afd892b33a4 Mon Sep 17 00:00:00 2001
+From: Yaakov Selkowitz <yselkowi@redhat.com>
+Date: Tue, 16 Dec 2025 22:10:39 -0500
+Subject: [PATCH] Fix discarded const qualifiers from string functions
+
+This is a new warning in GCC 15 that is being promoted to an error due to
+the werror=true in meson.build.
+---
+ notify.c   | 2 +-
+ osc.c      | 2 +-
+ tokenize.c | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/notify.c b/notify.c
+index e8688180..e454b03b 100644
+--- a/notify.c
++++ b/notify.c
+@@ -114,7 +114,7 @@ consume_stdout(struct notification *notif, bool eof)
+     while (left > 0) {
+         line = data;
+         size_t len = left;
+-        char *eol = memchr(line, '\n', left);
++        char *eol = (char *)memchr(line, '\n', left);
+ 
+         if (eol != NULL) {
+             *eol = '\0';
+diff --git a/osc.c b/osc.c
+index 0b492564..375eae5c 100644
+--- a/osc.c
++++ b/osc.c
+@@ -513,7 +513,7 @@ osc_uri(struct terminal *term, char *string)
+          key_value = strtok_r(NULL, ":", &ctx))
+     {
+         const char *key = key_value;
+-        char *operator = strchr(key_value, '=');
++        char *operator = (char *)strchr(key_value, '=');
+ 
+         if (operator == NULL)
+             continue;
+diff --git a/tokenize.c b/tokenize.c
+index 77cc3f1a..70ceb39b 100644
+--- a/tokenize.c
++++ b/tokenize.c
+@@ -45,7 +45,7 @@ tokenize_cmdline(const char *cmdline, char ***argv)
+ 
+     size_t idx = 0;
+     while (*p != '\0') {
+-        char *end = strchr(search_start, delim);
++        char *end = (char *)strchr(search_start, delim);
+         if (end == NULL) {
+             if (delim != ' ') {
+                 LOG_ERR("unterminated %s quote", delim == '"' ? "double" : "single");

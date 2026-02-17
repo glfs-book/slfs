@@ -33,6 +33,16 @@
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&dl-root;/foot/foot-&foot-version;-const_strchr-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
     <bridgehead renderas="sect3">foot Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
@@ -63,9 +73,12 @@
   <sect2 role="installation">
     <title>Installation of foot</title>
 
+    &glibc243-const;
+
+<screen role="pre"><userinput>patch -Np1 -i ../foot-&foot-version;-const_strchr-1.patch</userinput></screen>
+
     <para>
-      Install foot by running the following
-      commands:
+      Install foot by running the following commands:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
