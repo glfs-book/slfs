@@ -35,7 +35,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">scenefx Dependencies</bridgehead>
+    <bridgehead renderas="sect3">SceneFX Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
@@ -52,17 +52,19 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of scenefx</title>
+    <title>Installation of SceneFX</title>
 
     <para>
-      Install scenefx by running the following
-      commands:
+      Install SceneFX by running the following commands:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -D examples=false   \
+            .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
@@ -77,6 +79,13 @@ ninja</userinput></screen>
     <title>Command Explanations</title>
 
     &meson-buildtype-release;
+
+    <para><parameter>-D examples=false</parameter>: This parameter disables
+    building the examples. Due to possibly bad dependency structions, this
+    causes the build to fail if using <xref linkend="samurai"/> until the third
+    attempt of running. The examples cause protocol generation to end
+    prematurely which are needed for the main library and the examples. Ninja
+    papers over the issue.</para>
 
   </sect2>
 
