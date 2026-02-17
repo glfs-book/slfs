@@ -37,6 +37,16 @@
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&dl-root;/wlroots/wlroots-&wlroots-version;-const_strchr-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
     <bridgehead renderas="sect3">wlroots Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
@@ -127,9 +137,12 @@
   <sect2 role="installation">
     <title>Installation of wlroots</title>
 
+    &glibc243-const;
+
+<screen role="pre"><userinput>patch -Np1 -i ../wlroots-&wlroots-version;-const_strchr-1.patch</userinput></screen>
+
     <para>
-      Install wlroots by running the following
-      commands:
+      Install wlroots by running the following commands:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
