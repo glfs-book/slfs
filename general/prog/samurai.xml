@@ -58,12 +58,10 @@
 
       <para>
         If you want <command>samu</command> to be used whenever
-        <command>ninja</command> is run, move the original Ninja
-        out of the way and make a symlink as the &root; user:
+        <command>ninja</command> is run, make a symlink as the &root; user:
       </para>
 
-<screen role="root"><userinput>mv /usr/bin/ninja{,.old} &amp;&amp;
-ln -svf samu /usr/bin/ninja</userinput></screen>
+<screen role="root"><userinput>ln -svf samu /usr/bin/ninja</userinput></screen>
 
       <para>
         <command>samu</command> won't run on all logical CPUs or threads by
