@@ -61,7 +61,10 @@
         <command>ninja</command> is run, make a symlink as the &root; user:
       </para>
 
-<screen role="root"><userinput>ln -svf samu /usr/bin/ninja</userinput></screen>
+<screen role="root"><userinput>if [ "$(file /usr/bin/ninja | grep ELF)" ]; then
+  mv -v /usr/bin/ninja{,.old}
+fi &amp;&amp;
+ln -svf samu /usr/bin/ninja</userinput></screen>
 
       <para>
         <command>samu</command> won't run on all logical CPUs or threads by
