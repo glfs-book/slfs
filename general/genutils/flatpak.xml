@@ -105,6 +105,13 @@
     <title>Installation of Flatpak</title>
 
     <para>
+      If you will be running tests, prevent test generation from copying locale
+      files LFS doesn't install as they all get put in one archive file:
+    </para>
+
+<screen><userinput>sed -i '92,97d' tests/make-test-runtime.sh</userinput></screen>
+
+    <para>
       Install Flatpak by running the following
       commands:
     </para>
@@ -121,6 +128,11 @@ meson setup --prefix=/usr                       \
             .. &amp;&amp;
 
 ninja</userinput></screen>
+
+    <para>
+      If you removed the <parameter>-D tests=false</parameter>, to run the
+      tests, issue <command>ninja test</command>.
+    </para>
 
     <para>
       Now, as the &root; user:
@@ -152,8 +164,7 @@ ninja</userinput></screen>
 
     <para>
       <parameter>-D tests=false</parameter>: This parameter disables tests.
-      Remove this parameter if you have socat
-      installed.
+      Remove this parameter if you have socat installed.
     </para>
 
   </sect2>
