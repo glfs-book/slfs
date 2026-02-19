@@ -66,13 +66,13 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
       -D CMAKE_SKIP_INSTALL_RPATH=ON \
       -W no-dev -G Ninja .. &amp;&amp;
-make</userinput></screen>
+ninja</userinput></screen>
 
     <para>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make install</userinput></screen>
+<screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
 
