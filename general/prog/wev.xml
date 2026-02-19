@@ -41,6 +41,11 @@
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
     </para>
 
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="required">
+      <xref linkend="optional"/>
+    </para>
+
   </sect2>
 
   <sect2 role="installation">
@@ -50,13 +55,26 @@
       Install wev by executing the following commands:
     </para>
 
-<screen><userinput>make</userinput></screen>
+    <screen><userinput>make wev</userinput></screen>
 
     <para>
       Now as the &root; user:
     </para>
 
-<screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
+<screen role="root"><userinput>install -vDm755 wev -t /usr/bin/</userinput></screen>
+
+    <para>
+      If you installed <xref linkend="scdoc"/>, generate the documentation:
+    </para>
+
+    <screen remap="doc"><userinput>make wev.1</userinput></screen>
+
+    <para>
+      If you generated the documentation, install it now as the &root; user:
+    </para>
+
+<screen role="root"
+  remap="doc"><userinput>install -vDm644 wev.1 -t /usr/share/man/man1/</userinput></screen>
 
   </sect2>
 
