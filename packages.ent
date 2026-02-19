@@ -249,8 +249,8 @@ version, so keep this at that. -->
 <!-- NDS -->
 <!ENTITY melonds-version                     "1.1">
 <!-- GBA -->
-<!ENTITY mgba-minor-version                  "97c4de">
-<!ENTITY mgba-version                        "97c4de34889fc990119f7d9a95167f623f17e27d">
+<!ENTITY mgba-minor-version                  "afa6fb">
+<!ENTITY mgba-version                        "afa6fbd72a90e8c5fabd1842d28784a1ce8ae704">
 <!-- GCN/Wii -->
 <!-- REQUIRED -->
 <!ENTITY dolphin-version                     "2512">
@@ -285,7 +285,7 @@ version, so keep this at that. -->
 <!ENTITY mupen64plus-rsp-hle-version         "&mupen64plus-version;">
 <!ENTITY mupen64plus-video-rice-version      "&mupen64plus-version;">
 <!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
-<!ENTITY gliden64-version                    "339684bb7a2fd2cdc885e0db08baebf594d2886e">
+<!ENTITY gliden64-version                    "c8ef81c7d9aede9f67f6ed3d3426c90541f9f13e">
 
 <!-- GAMING -->
 <!-- Minecraft -->
