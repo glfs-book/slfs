@@ -128,6 +128,14 @@ patch -Np1 -i ../lrzsz-&lrzsz-version;-fix-integer-overflow.patch &amp;&amp;
 patch -Np1 -i ../lrzsz-&lrzsz-version;-c23.patch</userinput></screen>
 
     <para>
+      Remove an unneeded prototype that causes a build failure:
+    </para>
+
+<screen><userinput>for i in src/l{r,s}z.c; do
+  sed -i '/extern\ char\ \*strstr/d' $i
+done</userinput></screen>
+
+    <para>
       Add and remove files, then regenerate the autoconf files:
     </para>
 
