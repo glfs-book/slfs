@@ -36,7 +36,7 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/general/cmake.html">cmake</ulink>,
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       &ecm;,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       <ulink url="&blfs-svn;/x/xcb-util.html">xcb-util</ulink>, and
@@ -59,11 +59,13 @@
       commands:
     </para>
 
-<screen><userinput>mkdir build &amp;&amp; cd build &amp;&amp;
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
 cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
       -D CMAKE_SKIP_INSTALL_RPATH=ON \
-      -Wno-dev .. &amp;&amp;
+      -W no-dev -G Ninja .. &amp;&amp;
 make</userinput></screen>
 
     <para>
