@@ -12,7 +12,8 @@
 
   <para>
     This chapter is dedicated to various SVR4-style tools, either old versions
-    from the Heirloom project patched up to work again or modern forks of them.
+    from the Heirloom project patched to work on modern systems, or modern
+    forks of the tools when necessary.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="svr4-tools-intro.xml"/>
