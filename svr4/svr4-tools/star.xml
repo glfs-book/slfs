@@ -23,7 +23,7 @@
     <para>
       Due to various upstream-acknowledged issues in heirloom-ng tar, it is
       preferred to use a different SVR4-compatible tar implementation. This
-      package is exactly that.
+      package provides an alternative implementation.
     </para>
 
     &long-build-time;
@@ -51,15 +51,14 @@
 popd</userinput></screen>
 
     <para>
-      Compile star by running the following
-      commands, and ensure an older GNU standard is used:
+      Compile star by running the following commands, and ensure an older GNU C
+      standard is used:
     </para>
 
 <screen><userinput>psmake/smake -e CC="cc -std=gnu17"</userinput></screen>
 
     <para>
-      Now, as the &root; user, install star and the
-      supplementary tools:
+      Now, as the &root; user, install star and the supplementary tools:
     </para>
 
 <screen role="root"><userinput>install -vDm755 star/OBJ/*/star         \
