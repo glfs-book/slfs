@@ -136,9 +136,7 @@ make -C demos install-data</userinput></screen>
       Still as the &root; user, move the demos into the correct location:
     </para>
 
-<screen role="root"><userinput>make install &amp;&amp;
-make -C demos install-data &amp;&amp;
-rm -rvf /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
+<screen role="root"><userinput>rm -rvf /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
 install -vdm755 /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
 mv -v /usr/share/Xm/* /usr/share/doc/motif-&motif-version;/demos &amp;&amp;
 rmdir -v /usr/share/Xm</userinput></screen>
