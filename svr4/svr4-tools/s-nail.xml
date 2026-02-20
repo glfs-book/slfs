@@ -21,8 +21,7 @@
     <title>Introduction to s-nail</title>
 
     <para>
-      The s-nail package is a mail user agent
-      derived from Berkeley Mail 8.1.
+      The s-nail package is a mail user agent derived from Berkeley Mail 8.1.
     </para>
 
     <itemizedlist spacing="compact">
@@ -35,8 +34,8 @@
 
     <bridgehead renderas="sect3">s-nail Dependencies</bridgehead>
 
-    <bridgehead renderas="sect4">Required Runtime</bridgehead>
-    <para role="required">
+    <bridgehead renderas="sect4">Required at runtime</bridgehead>
+    <para role="required" role="runtime">
       <ulink url="&blfs-svn;/server/mail.html">An MTA</ulink>
     </para>
 
@@ -55,13 +54,14 @@
       First, configure this package by executing the following command:
     </para>
 
-<screen><userinput>VAL_BINDIR=/usr/5bin VAL_LIBEXECDIR=/usr/5lib      \
-VAL_MANDIR=/usr/share/man/5man VAL_SYSCONFDIR=/etc \
+<screen><userinput>VAL_BINDIR=/usr/5bin           \
+VAL_LIBEXECDIR=/usr/5lib       \
+VAL_MANDIR=/usr/share/man/5man \
+VAL_SYSCONFDIR=/etc            \
 make config</userinput></screen>
 
     <para>
-      Install s-nail by running the following
-      command:
+      Install s-nail by running the following command:
     </para>
 
 <screen><userinput>make</userinput></screen>
@@ -76,9 +76,9 @@ make config</userinput></screen>
       Optionally, make a few compatibility symlinks as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vdm755 /usr/ucb &amp;&amp;
+<screen role="root"><userinput>install -vdm755 /usr/ucb                 &amp;&amp;
 ln -svf /usr/5bin/s-nail /usr/5bin/mailx &amp;&amp;
-ln -svf /usr/5bin/s-nail /usr/ucb/Mail &amp;&amp;
+ln -svf /usr/5bin/s-nail /usr/ucb/Mail   &amp;&amp;
 ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
 
   </sect2>
@@ -88,7 +88,7 @@ ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
 
     <para>
       <envar>VAL_MTA=/usr/bin/sendmail</envar>: This variable sets the path to
-      an MTA.
+      an MTA. The default on a BLFS system is /usr/sbin/sendmail.
     </para>
 
     <para>
