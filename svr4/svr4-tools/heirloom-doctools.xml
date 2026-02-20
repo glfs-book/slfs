@@ -52,7 +52,7 @@
       command:
     </para>
 
-<screen><userinput>./configure &amp;&amp;
+<screen><userinput>./configure                 &amp;&amp;
 make PREFIX=/usr            \
      CC="cc -std=gnu17"     \
      YACC=/usr/ccs/bin/yacc \
@@ -62,8 +62,7 @@ make PREFIX=/usr            \
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make PREFIX=/usr MANDIR=/usr/share/man/5man \
-install</userinput></screen>
+<screen role="root"><userinput>make PREFIX=/usr MANDIR=/usr/share/man/5man install</userinput></screen>
 
   </sect2>
 
