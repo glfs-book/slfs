@@ -35,7 +35,7 @@
     <bridgehead renderas="sect3">s-nail Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required at runtime</bridgehead>
-    <para role="required" role="runtime">
+    <para role="runtime">
       <ulink url="&blfs-svn;/server/mail.html">An MTA</ulink>
     </para>
 
