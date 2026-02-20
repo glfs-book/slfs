@@ -21,10 +21,9 @@
     <title>Introduction to heirloom-ng</title>
 
     <para>
-      The heirloom-ng package is a collection of
-      standard Unix utilities that is intended to provide maximum compatibility
-      with traditional Unix while incorporating additional features necessary
-      today.
+      The heirloom-ng package is a collection of standard Unix utilities that
+      is intended to provide maximum compatibility with traditional Unix while
+      incorporating additional features necessary for modern usage.
     </para>
 
     <itemizedlist spacing="compact">
@@ -89,8 +88,7 @@ CC="cc -std=gnu17" make</userinput></screen>
 <screen role="root"><userinput>make install</userinput></screen>
 
     <para>
-      As the &root; user, remove binaries also shipped by
-      heirloom-doctools and
+      As the &root; user, remove binaries also shipped by heirloom-doctools and
       heirloom-devtools:
     </para>
 
@@ -227,7 +225,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>bc</command></term>
         <listitem>
           <para>
-            is the arbitrary‐precision arithmetic language
+            is an arbitrary‐precision arithmetic calculator
           </para>
           <indexterm zone="heirloom-ng bc">
             <primary sortas="b-bc">bc</primary>
@@ -239,7 +237,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>bdiff</command></term>
         <listitem>
           <para>
-            is a wrapper around <command>diff</command> with support for big
+            is a wrapper around <command>diff</command> with support for large
             files
           </para>
           <indexterm zone="heirloom-ng bdiff">
@@ -253,7 +251,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <listitem>
           <para>
             is a read-only wrapper around <command>ed</command> with support
-            for big files
+            for large files
           </para>
           <indexterm zone="heirloom-ng bfs">
             <primary sortas="b-bfs">bfs</primary>
@@ -265,7 +263,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>cal</command></term>
         <listitem>
           <para>
-            prints a calendar
+            prints a calendar to the console
           </para>
           <indexterm zone="heirloom-ng cal">
             <primary sortas="b-cal">cal</primary>
@@ -433,7 +431,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>cpio</command></term>
         <listitem>
           <para>
-            copies file archives in and out
+            copies file archives in and out of CPIO format
           </para>
           <indexterm zone="heirloom-ng cpio">
             <primary sortas="b-cpio">cpio</primary>
@@ -445,7 +443,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>csplit</command></term>
         <listitem>
           <para>
-            reads a file and writes it in pieces
+            reads a file and writes it in several portions
           </para>
           <indexterm zone="heirloom-ng csplit">
             <primary sortas="b-csplit">csplit</primary>
@@ -457,7 +455,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>cut</command></term>
         <listitem>
           <para>
-            cuts out selected fields of each line of a file
+            removes selected fields of each line of a file
           </para>
           <indexterm zone="heirloom-ng cut">
             <primary sortas="b-cut">cut</primary>
@@ -469,7 +467,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>date</command></term>
         <listitem>
           <para>
-            prints or sets the date
+            prints or sets the current date and time
           </para>
           <indexterm zone="heirloom-ng date">
             <primary sortas="b-date">date</primary>
@@ -481,7 +479,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>dc</command></term>
         <listitem>
           <para>
-            is the desk calculator
+            is a desk calculator
           </para>
           <indexterm zone="heirloom-ng dc">
             <primary sortas="b-dc">dc</primary>
@@ -493,7 +491,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>dd</command></term>
         <listitem>
           <para>
-            converts and copies a file
+            converts and/or copies a file
           </para>
           <indexterm zone="heirloom-ng dd">
             <primary sortas="b-dd">dd</primary>
@@ -506,7 +504,8 @@ CC="cc -std=gnu17" make</userinput></screen>
         <listitem>
           <para>
             removes <command>nroff</command>/<command>troff</command>,
-            <command>tbl</command> and <command>eqn</command> constructs
+            <command>tbl</command> and <command>eqn</command> constructs from a
+            file
           </para>
           <indexterm zone="heirloom-ng deroff">
             <primary sortas="b-deroff">deroff</primary>
@@ -590,7 +589,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>dircmp</command></term>
         <listitem>
           <para>
-            compares directories
+            compares directories to each other
           </para>
           <indexterm zone="heirloom-ng dircmp">
             <primary sortas="b-dircmp">dircmp</primary>
@@ -626,7 +625,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>echo</command></term>
         <listitem>
           <para>
-            echoes arguments
+            echoes text back to a console or file
           </para>
           <indexterm zone="heirloom-ng echo">
             <primary sortas="b-echo">echo</primary>
@@ -638,7 +637,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>ed</command></term>
         <listitem>
           <para>
-            is a text editor
+            is a line-oriented text editor
           </para>
           <indexterm zone="heirloom-ng ed">
             <primary sortas="b-ed">ed</primary>
@@ -662,7 +661,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>env</command></term>
         <listitem>
           <para>
-            sets environment for a command invocation
+            sets the environment for a command invocation
           </para>
           <indexterm zone="heirloom-ng env">
             <primary sortas="b-env">env</primary>
@@ -710,7 +709,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>false</command></term>
         <listitem>
           <para>
-            always returns 255
+            always returns a status of 255
           </para>
           <indexterm zone="heirloom-ng false">
             <primary sortas="b-false">false</primary>
@@ -734,7 +733,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>file</command></term>
         <listitem>
           <para>
-            determines file type
+            determines a given file's type
           </para>
           <indexterm zone="heirloom-ng file">
             <primary sortas="b-file">file</primary>
@@ -746,7 +745,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>find</command></term>
         <listitem>
           <para>
-            finds files
+            finds files in a directory or filesystem
           </para>
           <indexterm zone="heirloom-ng find">
             <primary sortas="b-find">find</primary>
@@ -770,7 +769,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>fmtmsg</command></term>
         <listitem>
           <para>
-            displays a message in standard format
+            displays a message in q standard format
           </para>
           <indexterm zone="heirloom-ng fmtmsg">
             <primary sortas="b-fmtmsg">fmtmsg</primary>
@@ -794,7 +793,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>getconf</command></term>
         <listitem>
           <para>
-            gets configuration values
+            retrieves system configuration values for a given database
           </para>
           <indexterm zone="heirloom-ng getconf">
             <primary sortas="b-getconf">getconf</primary>
@@ -830,7 +829,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>groups</command></term>
         <listitem>
           <para>
-            shows group memberships
+            shows group memberships for the current user
           </para>
           <indexterm zone="heirloom-ng groups">
             <primary sortas="b-groups">groups</primary>
@@ -854,7 +853,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>head</command></term>
         <listitem>
           <para>
-            displays first few lines of files
+            displays the first few lines of a file
           </para>
           <indexterm zone="heirloom-ng head">
             <primary sortas="b-head">head</primary>
@@ -866,7 +865,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>hostname</command></term>
         <listitem>
           <para>
-            sets or prints name of current host system
+            sets or prints the name of the current system
           </para>
           <indexterm zone="heirloom-ng hostname">
             <primary sortas="b-hostname">hostname</primary>
@@ -878,7 +877,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>id</command></term>
         <listitem>
           <para>
-            prints user and group IDs and names
+            prints user and group IDs and names for the current user
           </para>
           <indexterm zone="heirloom-ng id">
             <primary sortas="b-id">id</primary>
@@ -890,7 +889,8 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>install</command></term>
         <listitem>
           <para>
-            installs files
+             installs files onto a file system, allowing for customization of
+             the permissions and location of the destination file
           </para>
           <indexterm zone="heirloom-ng install">
             <primary sortas="b-install">install</primary>
@@ -914,7 +914,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>kill</command></term>
         <listitem>
           <para>
-            terminates a process
+            terminates a process passed in as input
           </para>
           <indexterm zone="heirloom-ng kill">
             <primary sortas="b-kill">kill</primary>
@@ -926,7 +926,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>lc</command></term>
         <listitem>
           <para>
-            lists contents of a directory
+            lists the contents of a directory
           </para>
           <indexterm zone="heirloom-ng lc">
             <primary sortas="b-lc">lc</primary>
@@ -938,7 +938,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>line</command></term>
         <listitem>
           <para>
-            reads one line
+            reads a single line of input
           </para>
           <indexterm zone="heirloom-ng line">
             <primary sortas="b-line">line</primary>
@@ -950,7 +950,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>listusers</command></term>
         <listitem>
           <para>
-            prints a list of user logins
+            prints a list of user logins on the system
           </para>
           <indexterm zone="heirloom-ng listusers">
             <primary sortas="b-listusers">listusers</primary>
@@ -962,7 +962,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>ln</command></term>
         <listitem>
           <para>
-            makes links
+            makes symbolic and hard links to files on the system
           </para>
           <indexterm zone="heirloom-ng ln">
             <primary sortas="b-ln">ln</primary>
@@ -974,7 +974,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>logins</command></term>
         <listitem>
           <para>
-            lists login information
+            lists current login information
           </para>
           <indexterm zone="heirloom-ng logins">
             <primary sortas="b-logins">logins</primary>
@@ -986,7 +986,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>logname</command></term>
         <listitem>
           <para>
-            gets a login name
+            retrieves a given login name
           </para>
           <indexterm zone="heirloom-ng logname">
             <primary sortas="b-logname">logname</primary>
@@ -998,7 +998,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>ls</command></term>
         <listitem>
           <para>
-            lists context of a directory
+            lists the contents of a directory
           </para>
           <indexterm zone="heirloom-ng ls">
             <primary sortas="b-ls">ls</primary>
@@ -1034,7 +1034,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>mesg</command></term>
         <listitem>
           <para>
-            permits or denies messages
+            permits or denies messages between users
           </para>
           <indexterm zone="heirloom-ng mesg">
             <primary sortas="b-mesg">mesg</primary>
@@ -1046,7 +1046,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>mkdir</command></term>
         <listitem>
           <para>
-            makes a directory
+            makes a directory in the filesystem
           </para>
           <indexterm zone="heirloom-ng mkdir">
             <primary sortas="b-mkdir">mkdir</primary>
@@ -1070,7 +1070,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>mknod</command></term>
         <listitem>
           <para>
-            builds a device node
+            creates a device node
           </para>
           <indexterm zone="heirloom-ng mknod">
             <primary sortas="b-mknod">mknod</primary>
@@ -1118,7 +1118,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>mvdir</command></term>
         <listitem>
           <para>
-            moves a directory
+            moves a directory to a different location
           </para>
           <indexterm zone="heirloom-ng mvdir">
             <primary sortas="b-mvdir">mvdir</primary>
@@ -1154,7 +1154,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>news</command></term>
         <listitem>
           <para>
-            prints news items
+            prints news items for the system
           </para>
           <indexterm zone="heirloom-ng news">
             <primary sortas="b-news">news</primary>
@@ -1166,7 +1166,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>nice</command></term>
         <listitem>
           <para>
-            runs a command at low priority
+            runs a command at a lower priority
           </para>
           <indexterm zone="heirloom-ng nice">
             <primary sortas="b-nice">nice</primary>
@@ -1238,7 +1238,8 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>paste</command></term>
         <listitem>
           <para>
-            merges same lines of several files or subsequent lines of one file
+            merges the same lines of several files or subsequent lines of one
+            file
           </para>
           <indexterm zone="heirloom-ng paste">
             <primary sortas="b-paste">paste</primary>
@@ -1298,7 +1299,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>pick</command></term>
         <listitem>
           <para>
-            selects arguments
+            selects arguments to a program
           </para>
           <indexterm zone="heirloom-ng pick">
             <primary sortas="b-pick">pick</primary>
@@ -1322,7 +1323,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>pr</command></term>
         <listitem>
           <para>
-            prints files
+            prints the files passed as input
           </para>
           <indexterm zone="heirloom-ng pr">
             <primary sortas="b-pr">pr</primary>
@@ -1334,7 +1335,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>printenv</command></term>
         <listitem>
           <para>
-            prints out the environment
+            prints the current environment to the console
           </para>
           <indexterm zone="heirloom-ng printenv">
             <primary sortas="b-printenv">printenv</primary>
@@ -1346,7 +1347,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>printf</command></term>
         <listitem>
           <para>
-            prints a text string
+            prints a text string with the printf format syntax
           </para>
           <indexterm zone="heirloom-ng printf">
             <primary sortas="b-printf">printf</primary>
@@ -1370,7 +1371,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>ps</command></term>
         <listitem>
           <para>
-            prints process status
+            prints the current process status
           </para>
           <indexterm zone="heirloom-ng ps">
             <primary sortas="b-ps">ps</primary>
@@ -1382,7 +1383,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>psrinfo</command></term>
         <listitem>
           <para>
-            displays processor information
+            displays processor information for the system
           </para>
           <indexterm zone="heirloom-ng psrinfo">
             <primary sortas="b-psrinfo">psrinfo</primary>
@@ -1394,7 +1395,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>ptime</command></term>
         <listitem>
           <para>
-            times a command
+            times a command to determine how long it takes to execute
           </para>
           <indexterm zone="heirloom-ng ptime">
             <primary sortas="b-ptime">ptime</primary>
@@ -1442,7 +1443,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>renice</command></term>
         <listitem>
           <para>
-            alters priority of running processes
+            alters the priority of running processes
           </para>
           <indexterm zone="heirloom-ng renice">
             <primary sortas="b-renice">renice</primary>
@@ -1454,7 +1455,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>rev</command></term>
         <listitem>
           <para>
-            reverses lines of a file
+            reverses the lines of a file
           </para>
           <indexterm zone="heirloom-ng rev">
             <primary sortas="b-rev">rev</primary>
@@ -1466,7 +1467,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>rm</command></term>
         <listitem>
           <para>
-            removes files
+            removes files from the system
           </para>
           <indexterm zone="heirloom-ng rm">
             <primary sortas="b-rm">rm</primary>
@@ -1478,7 +1479,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>rmdir</command></term>
         <listitem>
           <para>
-            removes directories
+            removes directories from the system
           </para>
           <indexterm zone="heirloom-ng rmdir">
             <primary sortas="b-rmdir">rmdir</primary>
@@ -1502,7 +1503,8 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>sed</command></term>
         <listitem>
           <para>
-            is the stream editor
+            is the stream editor, used for making quick modifications to the
+            text in a stream or file
           </para>
           <indexterm zone="heirloom-ng sed">
             <primary sortas="b-sed">sed</primary>
@@ -1526,7 +1528,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>setpgrp</command></term>
         <listitem>
           <para>
-            sets process group ID and session ID
+            sets a process's group ID and/or session ID
           </para>
           <indexterm zone="heirloom-ng setpgrp">
             <primary sortas="b-setpgrp">setpgrp</primary>
@@ -1562,7 +1564,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>sleep</command></term>
         <listitem>
           <para>
-            suspends execution for an interval
+            suspends execution of a program for an interval of time
           </para>
           <indexterm zone="heirloom-ng sleep">
             <primary sortas="b-sleep">sleep</primary>
@@ -1586,7 +1588,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>spell</command></term>
         <listitem>
           <para>
-            finds spelling errors
+            finds spelling errors in a file
           </para>
           <indexterm zone="heirloom-ng spell">
             <primary sortas="b-spell">spell</primary>
@@ -1598,7 +1600,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>split</command></term>
         <listitem>
           <para>
-            splits a file into pieces
+            splits a file into several pieces
           </para>
           <indexterm zone="heirloom-ng split">
             <primary sortas="b-split">split</primary>
@@ -1622,7 +1624,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>su</command></term>
         <listitem>
           <para>
-            helps you become superuser or another user
+            helps you become the superuser or another user
           </para>
           <indexterm zone="heirloom-ng su">
             <primary sortas="b-su">su</primary>
@@ -1634,7 +1636,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>sum</command></term>
         <listitem>
           <para>
-            sums and counts blocks in a file
+            summarizes and counts the blocks in a file
           </para>
           <indexterm zone="heirloom-ng sum">
             <primary sortas="b-sum">sum</primary>
@@ -1646,7 +1648,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>sync</command></term>
         <listitem>
           <para>
-            updates the superblock
+            updates the superblock for a filesystem
           </para>
           <indexterm zone="heirloom-ng sync">
             <primary sortas="b-sync">sync</primary>
@@ -1742,7 +1744,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>test</command></term>
         <listitem>
           <para>
-            validates a condition
+            validates a condition during execution
           </para>
           <indexterm zone="heirloom-ng test">
             <primary sortas="b-test">test</primary>
@@ -1754,7 +1756,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>time</command></term>
         <listitem>
           <para>
-            times a command
+            times a given command
           </para>
           <indexterm zone="heirloom-ng time">
             <primary sortas="b-time">time</primary>
@@ -1802,7 +1804,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>true</command></term>
         <listitem>
           <para>
-            always returns 0
+            always returns a status of 0
           </para>
           <indexterm zone="heirloom-ng true">
             <primary sortas="b-true">true</primary>
@@ -1826,7 +1828,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>tty</command></term>
         <listitem>
           <para>
-            gets the terminal name
+            gets the name of the current terminal
           </para>
           <indexterm zone="heirloom-ng tty">
             <primary sortas="b-tty">tty</primary>
@@ -1838,7 +1840,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>ul</command></term>
         <listitem>
           <para>
-            underlines
+            underlines the text in a file
           </para>
           <indexterm zone="heirloom-ng ul">
             <primary sortas="b-ul">ul</primary>
@@ -1850,7 +1852,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>uname</command></term>
         <listitem>
           <para>
-            gets the system name
+            gets the system name and other parameters
           </para>
           <indexterm zone="heirloom-ng uname">
             <primary sortas="b-uname">uname</primary>
@@ -1934,7 +1936,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>wall</command></term>
         <listitem>
           <para>
-            writes to all users
+            writes a message to the TTY of all users
           </para>
           <indexterm zone="heirloom-ng wall">
             <primary sortas="b-wall">wall</primary>
@@ -1958,7 +1960,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>wc</command></term>
         <listitem>
           <para>
-            prints word count
+            prints the word count of a file or other input
           </para>
           <indexterm zone="heirloom-ng wc">
             <primary sortas="b-wc">wc</primary>
@@ -2006,7 +2008,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>whodo</command></term>
         <listitem>
           <para>
-            prints who is doing what
+            prints who is doing what on a system
           </para>
           <indexterm zone="heirloom-ng whodo">
             <primary sortas="b-whodo">whodo</primary>
@@ -2018,7 +2020,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>write</command></term>
         <listitem>
           <para>
-            writes to another user
+            writes a message to another user's terminal
           </para>
           <indexterm zone="heirloom-ng write">
             <primary sortas="b-write">write</primary>
