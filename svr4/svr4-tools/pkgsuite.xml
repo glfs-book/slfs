@@ -20,9 +20,9 @@
     <title>Introduction to pkgsuite</title>
 
     <para>
-      The pkgsuite package is a patched-up version
-      of the Heirloom Packaging tools, which is itself a patched-up portable
-      version of the UNIX SVR4 packaging utilities.
+      The pkgsuite package is a patched-up version of the Heirloom Packaging
+      tools, which is itself a patched-up portable version of the UNIX SVR4
+      packaging utilities.
     </para>
 
     <itemizedlist spacing="compact">
@@ -76,11 +76,10 @@
 <screen><userinput>patch -Np1 -i ../pkgsuite-&pkgsuite-minor-version;-paths.patch</userinput></screen>
 
     <para>
-      Install pkgsuite by running the following
-      command:
+      Install pkgsuite by running the following commands:
     </para>
 
-<screen><userinput>cd src &amp;&amp;
+<screen><userinput>cd src      &amp;&amp;
 ./configure &amp;&amp;
 make</userinput></screen>
 
@@ -167,7 +166,7 @@ make</userinput></screen>
         <term><command>ckint</command></term>
         <listitem>
           <para>
-            prompts for and verify and validates an integer value
+            prompts for, verifies, and validates an integer value
           </para>
           <indexterm zone="pkgsuite ckint">
             <primary sortas="b-ckint">ckint</primary>
@@ -179,7 +178,7 @@ make</userinput></screen>
         <term><command>ckitem</command></term>
         <listitem>
           <para>
-            prompts for and return a menu item
+            prompts for and returns a menu item
           </para>
           <indexterm zone="pkgsuite ckitem">
             <primary sortas="b-ckitem">ckitem</primary>
@@ -227,7 +226,7 @@ make</userinput></screen>
         <term><command>ckstr</command></term>
         <listitem>
           <para>
-            displays a prompt, validates and returns a string answer
+            displays a prompt, validates the input, and returns a string answer
           </para>
           <indexterm zone="pkgsuite ckstr">
             <primary sortas="b-ckstr">ckstr</primary>
@@ -239,7 +238,7 @@ make</userinput></screen>
         <term><command>cktime</command></term>
         <listitem>
           <para>
-            displays a prompt, verify and returns a time of day
+            displays a prompt, verifies the prompt, and returns a time of day
           </para>
           <indexterm zone="pkgsuite cktime">
             <primary sortas="b-cktime">cktime</primary>
@@ -263,7 +262,7 @@ make</userinput></screen>
         <term><command>ckyorn</command></term>
         <listitem>
           <para>
-            prompts for and validates yes/no
+            prompts for and validates a yes/no answer
           </para>
           <indexterm zone="pkgsuite ckyorn">
             <primary sortas="b-ckyorn">ckyorn</primary>
@@ -759,7 +758,7 @@ make</userinput></screen>
         <term><command>pkgchk</command></term>
         <listitem>
           <para>
-            checks package installation accuracy
+            checks the accuracy of a package installation
           </para>
           <indexterm zone="pkgsuite pkgchk">
             <primary sortas="b-pkgchk">pkgchk</primary>
@@ -771,7 +770,7 @@ make</userinput></screen>
         <term><command>pkginfo</command></term>
         <listitem>
           <para>
-            displays software package information
+            displays information about a software package
           </para>
           <indexterm zone="pkgsuite pkginfo">
             <primary sortas="b-pkginfo">pkginfo</primary>
@@ -807,7 +806,7 @@ make</userinput></screen>
         <term><command>pkgname</command></term>
         <listitem>
           <para>
-            compares package names
+            compares the name of a package
           </para>
           <indexterm zone="pkgsuite pkgname">
             <primary sortas="b-pkgname">pkgname</primary>
@@ -819,7 +818,7 @@ make</userinput></screen>
         <term><command>pkgparam</command></term>
         <listitem>
           <para>
-            displays package parameter values
+            displays parameter values for a package
           </para>
           <indexterm zone="pkgsuite pkgparam">
             <primary sortas="b-pkgparam">pkgparam</primary>
@@ -868,7 +867,7 @@ make</userinput></screen>
         <term><command>pkgtrans</command></term>
         <listitem>
           <para>
-            translates package format
+            translates the format of a package
           </para>
           <indexterm zone="pkgsuite pkgtrans">
             <primary sortas="b-pkgtrans">pkgtrans</primary>
