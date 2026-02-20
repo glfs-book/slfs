@@ -1,3 +1,18 @@
+<![ %ghp; [
+<!ENTITY github-pages
+  "<note><para>This is the GitHub Pages version of this book, which is used as
+  a backup to the main versions of the book. It may be slightly out of date and
+  is rolling release. If you want to use the main version, go <ulink
+  url='&slfs-website;/'>here</ulink>. More releases are found at
+  <ulink url='&lfs-website;/slfs/view/'/>.</para></note>">
+]]>
+<!ENTITY github-pages "">
+
+<!-- This may look awkward, but DocBook ENTITIES are defined once and cannot be
+     redefined from the looks of it, so the one version you want for it to
+     appear must be the one defined first. So this ends up looking like an
+     if-else statement without the else. -->
+
 <!ENTITY source-profile
   "<para>Now source the main profile:</para>
    <screen><userinput>source /etc/profile</userinput></screen>">

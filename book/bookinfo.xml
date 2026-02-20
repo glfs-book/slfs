@@ -49,6 +49,7 @@
     <para>
       This book is dedicated to supplementing an LFS, MLFS, BLFS, and/or GLFS
       x86_64 system by providing packages not found in the other LFS books.
+      &github-pages;
     </para>
   </abstract>
 

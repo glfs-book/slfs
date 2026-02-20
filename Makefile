@@ -12,6 +12,7 @@
 # you wish to change in local.mk, which must be created manually.
 REV         ?= systemd
 STAB        ?= development
+WORKFLOW    ?= n
 AUTO_CLEAN  ?= 1
 THEME       ?= dynamic
 THEME_PATH  ?= stylesheets/lfs-xsl
@@ -269,4 +270,4 @@ $(DUMPDIR): $(RENDERTMP)/$(SLFSFULL) version
   test-links dump-commands bootscripts systemd-units version test-options
 
 version:
-	$(Q)REV=$(REV) STAB=$(STAB) ./git-version.sh
+	$(Q)REV=$(REV) STAB=$(STAB) WORKFLOW=$(WORKFLOW) ./git-version.sh

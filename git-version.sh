@@ -24,10 +24,17 @@ else
     exit 1
 fi
 
+if test x"$WORKFLOW" = x"y"; then
+    GHP="INCLUDE"
+else
+    GHP="IGNORE"
+fi
+
 echo "<!ENTITY % sysv        \"$SYSV\">"        >  conditional.ent
 echo "<!ENTITY % systemd     \"$SYSTEMD\">"     >> conditional.ent
 echo "<!ENTITY % development \"$DEVELOPMENT\">" >> conditional.ent
 echo "<!ENTITY % release     \"$RELEASE\">"     >> conditional.ent
+echo "<!ENTITY % ghp         \"$GHP\">"         >> conditional.ent
 
 if ! git status > /dev/null; then
     # Either it's not a git repository, or git is unavailable.

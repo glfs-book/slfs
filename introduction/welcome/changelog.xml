@@ -42,6 +42,10 @@
     <listitem>
       <para>February 19th, 2026</para>
       <itemizedlist>
+      <listitem>
+         <para>[zeckma] - Inform the reader that the GitHub Pages version is a
+         backup.</para>
+       </listitem>
         <listitem>
           <para>[zeckma] - mGBA: 97c4de -&gt; afa6fb.</para>
         </listitem>
