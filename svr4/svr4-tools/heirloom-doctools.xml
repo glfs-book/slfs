@@ -20,11 +20,10 @@
     <title>Introduction to heirloom-doctools</title>
 
     <para>
-      The heirloom-doctools package provides
-      troff, nroff, and
-      other related tools. Those tools are enhanced versions of the tools
-      released as a part of OpenSolaris, which are themselves variants of
-      ditroff, which are themselves descendants of the original UNIX troff.
+      The heirloom-doctools package provides troff, nroff, and other related
+      tools. Those tools are enhanced versions of the tools released as a part
+      of OpenSolaris, which are themselves variants of ditroff, which are
+      themselves descendants of the original UNIX troff.
     </para>
 
     <itemizedlist spacing="compact">
@@ -406,7 +405,7 @@ install</userinput></screen>
         <term><command>ta</command></term>
         <listitem>
           <para>
-            drives an HP2621 terminal to see stuff quickly
+            drives an HP2621 terminal to see information quickly
           </para>
           <indexterm zone="heirloom-doctools ta">
             <primary sortas="b-ta">ta</primary>
