@@ -21,9 +21,8 @@
     <title>Introduction to heirloom-ex-vi</title>
 
     <para>
-      The heirloom-ex-vi package, also known as
-      <quote>The Traditional Vi</quote>, is a portable version of 2.11BSD/SVR4
-      vi.
+      The heirloom-ex-vi package, also known as <quote>The Traditional Vi</quote>,
+      is a portable version of the 2.11BSD/SVR4 vi.
     </para>
 
     <itemizedlist spacing="compact">
