@@ -5,11 +5,11 @@
   %general-entities;
 ]>
 
-<sect1 id="svr4-tools-intro" xreflabel="Introduction to SVR4-style Tools">
+<sect1 id="svr4-tools-intro" xreflabel="Introduction to the SVR4-style Tools">
   <?dbhtml filename="svr4-tools-intro.html"?>
 
 
-  <title>Introduction to SVR4-style Tools</title>
+  <title>Introduction to the SVR4-style Tools</title>
 
   <sect2>
     <title>What is SVR4?</title>
@@ -17,8 +17,8 @@
     <para>
       SVR4, or System V Release 4, is a version of System V, ie. Unix. The tools
       in this chapter aim to help working with such an environment on an LFS
-      system. There are a few caveats as a result of dealing with an old
-      operating system.
+      system. There are a few caveats to be aware of as a result of dealing with
+      an old operating system.
     </para>
 
   </sect2>
@@ -31,7 +31,8 @@
       locations inside <filename class="directory">/usr</filename>. The purpose
       behind this is to be more accurate to where UNIXen from where these tools
       were ported put said files, and an explanation of where said paths came
-      from is provided below.
+      from is provided below. This also prevents the tools from overwriting
+      copies of the tools installed in LFS.
     </para>
 
     <itemizedlist>
