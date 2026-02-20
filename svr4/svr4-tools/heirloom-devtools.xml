@@ -21,10 +21,8 @@
     <title>Introduction to heirloom-devtools</title>
 
     <para>
-      The heirloom-devtools package provides
-      yacc, lex,
-      m4, make, and
-      SCCS. Those tools are portable derivatives of
+      The heirloom-devtools package provides the SVR4 versions of the yacc,
+      lex, m4, make, and SCCS tools. Those tools are portable derivatives of
       the tools released as a part of OpenSolaris, which were derived from the
       original UNIX versions.
     </para>
@@ -84,16 +82,14 @@
 <screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch</userinput></screen>
 
     <para>
-      Execute the following command to tell this package to use
-      libtirpc:
+      Next, adjust the build configuration to use libtirpc:
     </para>
 
 <screen><userinput>sed -i 's=-O=-O -I/usr/include/tirpc=g' mk.config</userinput></screen>
 
     <para>
-      If you have heirloom-sh installed, execute the
-      following commands to tell heirloom-devtools
-      where to find it:
+      If you have heirloom-sh installed, execute the following commands to tell
+      heirloom-devtools where to find it:
     </para>
 
 <screen><userinput>sed -i 's-/sbin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
@@ -101,25 +97,25 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
 sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
 
     <para>
-      Otherwise, execute the following command:
+      Otherwise, execute the following command to use the normal 'sh':
     </para>
 
-    <!-- computeroutput here as it may be possible jhalfs if down the road
-    used for this book will run this command block blindly. The above
-    command block should really be followed instead as it should install the
-    recommended dep. -->
+    <!-- computeroutput here as it may be possible for jhalfs (if it gains
+    support for SLFS eventually), to read this command block blindly. The
+    above command block should be followed instead as it will install the
+    recommended dependencies. -->
+
 <screen><computeroutput>sed -i 's-/sbin/sh-/bin/sh-g' mk.config</computeroutput></screen>
 
     <important><para>
-      Ensure you are building this package as the regular user and
+      Ensure you are building this package as an unprivileged user and
       <emphasis>NOT</emphasis> as the &root; user, or else the
       <command>make</command> process will fail as it will be unable to create
       a temporary file/directory.
     </para></important>
 
     <para>
-      Install heirloom-devtools by running the following
-      command:
+      Install heirloom-devtools by running the following command:
     </para>
 
 <screen><userinput>CC="cc -std=gnu17" make -j1</userinput></screen>
@@ -295,7 +291,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>prt</command></term>
         <listitem>
           <para>
-            prints parts or all of an SCCS file
+            prints the contents of an SCCS file
           </para>
           <indexterm zone="heirloom-devtools prt">
             <primary sortas="b-prt">prt</primary>
@@ -416,7 +412,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>yacc</command></term>
         <listitem>
           <para>
-            is a yet-another compiler compiler
+            generates a parser
           </para>
           <indexterm zone="heirloom-devtools yacc">
             <primary sortas="b-yacc">yacc</primary>
