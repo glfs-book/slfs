@@ -50,6 +50,8 @@
 
 <screen><userinput>cd contrib/minizip &amp;&amp;
 
+sed -i 's/crypt.h/ints.h/' Makefile.am &amp;&amp;
+
 mv Makefile{,.orig} &amp;&amp;
 autoreconf -fi      &amp;&amp;
 
@@ -60,13 +62,20 @@ make</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make install &amp;&amp;
-rm -vf /usr/include/minizip/crypt.h</userinput></screen>
+<screen role="root"><userinput>make install</userinput></screen>
 
   </sect2>
 
   <sect2 role="commands">
     <title>Command Explanations</title>
+
+    <para>
+      <command>sed -i 's/crypt.h/ints.h/' ...</command>: This command
+      both ensures that a needed header (<filename>ints.h</filename>) is
+      installed and that another header (<filename>crypt.h</filename>) is not,
+      as it conflicts with another header and can cause issues for other
+      packages.
+    </para>
 
     <para>
       <command>mv Makefile{,.orig}; autoconf -fi</command>: These commands
@@ -75,12 +84,6 @@ rm -vf /usr/include/minizip/crypt.h</userinput></screen>
     </para>
 
     &static-libraries;
-
-    <para>
-      <command>rm -vf /usr/include/minizip/crypt.h</command>: This command
-      deletes a C header that conflicts with another one, which can cause build
-      issues for other packages.
-    </para>
 
   </sect2>
 

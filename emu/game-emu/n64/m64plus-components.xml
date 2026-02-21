@@ -113,9 +113,15 @@ wget https://github.com/gonetz/GLideN64/archive/&gliden64-version;.tar.gz \
 do
 package=$(basename "$package")
 packagedir=${package%.tar.?z*}
+type=$(echo $package | sed -e 's/mupen64plus-//' -e 's/-src-[0-9].*//')
 echo "Building $packagedir"
   tar -xf $package
   pushd "$packagedir"/projects/unix
+  if [ $type == "core" ]; then
+    sed -e 's/&lt;zip.h/&lt;minizip\/zip.h/'     \
+        -e 's/&lt;unzip.h/&lt;minizip\/unzip.h/' \
+        -i ../../src/main/savestates.c
+  fi
   make PREFIX=/usr NETPLAY=1 all
   as_root make PREFIX=/usr install
   popd
@@ -145,6 +151,16 @@ popd</userinput></screen>
 
   <sect2 role="commands">
     <title>Command Explanations</title>
+
+    <para>
+      <command>sed -e 's/&lt;zip.h/&lt;minizip\/zip.h/' ...</command>: This
+      command ensures that minizip's <filename>unzip.h</filename> can be found
+      and that minizip's <filename>zip.h</filename> is used, following
+      upstream's change of minizip's pkg-config file so that it no longer
+      specified the proper include path. This <ulink
+      url="https://github.com/madler/zlib/commit/7e6f0784cc0c33e8d5fcb368248168c6656f73c8">change</ulink>
+      was intentional.
+    </para>
 
     <para>
       <parameter>NETPLAY=1</parameter>: This enables netplay support which
