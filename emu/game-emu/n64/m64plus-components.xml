@@ -342,7 +342,7 @@ popd</userinput></screen>
           mupen64plus
         </seg>
         <seg>
-          libmupen64plus.2
+          libmupen64plus
         </seg>
         <seg>
           mupen64plus-audio-sdl,
