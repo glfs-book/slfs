@@ -31,6 +31,12 @@
       downloads into other formats using FFmpeg.
     </para>
 
+    <note><para>
+      If you're downloading videos from YouTube, be aware that the platform
+      often makes changes that break yt-dlp. In this case, there is usually a
+      newer version, in which you should upgrade.
+    </para></note>
+
     <itemizedlist spacing="compact">
       <listitem>
         <para>
