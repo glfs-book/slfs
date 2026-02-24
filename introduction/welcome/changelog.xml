@@ -24,7 +24,7 @@
   <itemizedlist>
     <title>Changelog Entries:</title>
 
-<!-- Changelog template
+    <!-- Changelog template
     <listitem>
       <para>MMMM DD{nd,st,th}, YYYY</para>
       <itemizedlist>
@@ -38,6 +38,24 @@
       </itemizedlist>
     </listitem>
     -->
+
+    <listitem>
+      <para>February 23rd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - minicom: 2.10 -&gt; 2.11. Fixes
+          <ulink url="&slfs-issues;/561">#561</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - yt-dlp: 2026.02.04 -&gt; 2026.02.21 (security).
+          Fixes <ulink url="&slfs-issues;/560">#560</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - dunst: 1.13.0 -&gt; 1.13.1. Fixes
+          <ulink url="&slfs-issues;/551">#551</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>February 21st, 2026</para>
