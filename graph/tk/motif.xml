@@ -64,7 +64,7 @@
       At first, unpack the patch tarball:
     </para>
 
-<screen><userinput>tar xvf ../motif-&motif-version;-patches-5.tar.xz</userinput></screen>
+<screen><userinput>tar -xvf ../motif-&motif-version;-patches-5.tar.xz</userinput></screen>
 
     <para>
       Now, apply the various patches from the tarball:
