@@ -27,7 +27,9 @@
     </para>
 
     <note><para>This package requires either a 32-bit system or a 64-bit
-    system with 32-bit application support.</para></note>
+    system with 32-bit application support via projects like Multilib
+    LFS. Base MLFS should be good enough and you shouldn't need anything
+    else for 32-bit.</para></note>
 
     <itemizedlist spacing="compact">
       <listitem>
