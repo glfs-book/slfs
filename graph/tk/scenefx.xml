@@ -81,7 +81,7 @@ ninja</userinput></screen>
     &meson-buildtype-release;
 
     <para><parameter>-D examples=false</parameter>: This parameter disables
-    building the examples. Due to possibly bad dependency structions, this
+    building the examples. Due to possibly bad dependency instructions, this
     causes the build to fail if using <xref linkend="samurai"/> until the third
     attempt of running. The examples cause protocol generation to end
     prematurely which are needed for the main library and the examples. Ninja
