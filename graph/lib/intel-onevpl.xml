@@ -47,9 +47,10 @@
       <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>
     </para>
 
-    <para>
+    <note><para>
       This package extracts to vpl-gpu-rt-intel-onevpl-&intel-onevpl-version;.
-    </para>
+    </para></note>
+
   </sect2>
 
   <sect2 role="installation">
