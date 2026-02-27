@@ -83,13 +83,10 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/gnome/dconf.html">DConf</ulink>,
-      <ulink url="&blfs-svn;/pst/docbook-4.5-dtd.html">docbook-4.5-dtd</ulink>,
-      <ulink url="&blfs-svn;/pst/docbook.html">docbook-xml-4.5</ulink>,
-      <ulink url="&blfs-svn;/pst/docbook-xsl.html">docbook-xsl-nons</ulink>,
+      <ulink url="&blfs-svn;/gnome/dconf.html">DConf</ulink> (wanted if using
+      a GNOME app via Flatpak),
       <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
       <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
-      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
       <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>,
       <ulink url="https://gitlab.freedesktop.org/pwithnall/malcontent">malcontent</ulink>
       (for parental features),
