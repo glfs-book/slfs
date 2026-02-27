@@ -184,10 +184,10 @@ done</userinput></screen>
     <para>
       There will be plenty of binaries with debug info that take up over half
       of the installed size. If you don't care about debugging, you can remove
-      the info:
+      the info as the &root; user:
     </para>
 
-<screen><userinput>find /opt/jdk-&openjdk-version;&openjdk-suffix; -name *.debuginfo -delete</userinput></screen>
+<screen role="root"><userinput>find /opt/jdk-&openjdk-version;&openjdk-suffix; -name *.debuginfo -delete</userinput></screen>
 
     <para>
       Restore the <envar>MAKEFLAGS</envar> variable:
