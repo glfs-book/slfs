@@ -8,11 +8,11 @@
 <chapter id="hypr">
   <?dbhtml filename="hypr.html"?>
 
-  <title>Hypr</title>
+  <title>Hyprland</title>
 
   <para>
-    This chapter is dedicated to installing packages from the Hypr/Hyprland
-    ecosystem, including Hyprland itself.
+    This chapter is dedicated to installing packages from the Hyprland
+    ecosystem, including the compositor itself.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprlib.xml"/>
