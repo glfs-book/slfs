@@ -43,10 +43,6 @@
 ]]>
 ]]><!-- End %release -->
 
-<!-- Include the GNOME entities -->
-<!ENTITY % gnome-entities SYSTEM       "gnome.ent">
-%gnome-entities;
-
 <!ENTITY copyrightdate   "2024-&year;">
 <!ENTITY copyholder      "The GLFS Development Team">
 <!ENTITY lfs-domainname  "linuxfromscratch.org">
@@ -76,6 +72,7 @@
 <!ENTITY lfs-ticket-root      "https://wiki.&lfs-domainname;/lfs/ticket/">
 <!ENTITY gnu-http             "https://ftpmirror.gnu.org/gnu">
 <!ENTITY gnu-ftp              "ftp://ftp.gnu.org/gnu">
+<!ENTITY gnome-download-http  "https://download.gnome.org/sources">
 <!ENTITY gnupg-http           "https://www.gnupg.org/ftp/gcrypt">
 <!ENTITY gnupg-ftp            "ftp://ftp.gnupg.org/gcrypt">
 <!ENTITY gstreamer-dl         "https://gstreamer.freedesktop.org/src">
