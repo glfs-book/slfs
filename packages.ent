@@ -120,7 +120,7 @@ version, so keep this at that. -->
 <!ENTITY python3-site                        "/usr/lib/python&python3-majorver;/site-packages">
 <!-- Python Dependencies -->
 <!ENTITY structlog-version                   "25.5.0">
-<!ENTITY platformdirs-version                "4.9.1">
+<!ENTITY platformdirs-version                "4.9.2">
 <!ENTITY pycurl-version                      "7.45.7">
 <!ENTITY toml-version                        "0.10.2">
 <!ENTITY tornado-version                     "6.5.4">
@@ -144,14 +144,14 @@ version, so keep this at that. -->
 <!ENTITY openjdk-suffix                      "-ga">
 <!ENTITY openjdk-build                       "8">
 <!-- Shells -->
-<!ENTITY fish-version                        "4.4.0">
+<!ENTITY fish-version                        "4.5.0">
 <!ENTITY ksh-version                         "1.0.10">
 <!ENTITY mksh-version                        "R59c">
 <!-- MM-LIB -->
 <!ENTITY ladspa-sdk-version                  "1.17">
 <!ENTITY noise-suppression-version           "1.10">
 <!ENTITY rubberband-version                  "4.0.0">
-<!ENTITY sdl-version                         "1.2.72">
+<!ENTITY sdl-version                         "1.2.74">
 
 <!-- GRAPH -->
 <!-- Graphical Libraries -->
@@ -217,12 +217,12 @@ version, so keep this at that. -->
 <!ENTITY hyprtoolkit-version                 "0.5.3">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-guiutils-version           "0.2.1">
-<!ENTITY hyprland-version                    "0.53.3">
+<!ENTITY hyprland-version                    "0.54.0">
 <!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.25.1">
 <!-- MangoWC -->
-<!ENTITY mangowc-version                     "0.12.2">
+<!ENTITY mangowc-version                     "0.12.4">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
 <!-- Wayfire -->
@@ -292,9 +292,9 @@ version, so keep this at that. -->
 <!-- Let's keep this updated for security reasons.
      - Zeckma -->
 <!ENTITY jdk-modern                          "21.0.9+10">
-<!ENTITY prism-launcher-version              "10.0.2">
+<!ENTITY prism-launcher-version              "10.0.5">
 <!-- TTD -->
-<!ENTITY openttd-version                     "15.1">
+<!ENTITY openttd-version                     "15.2">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->
