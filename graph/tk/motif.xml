@@ -172,6 +172,8 @@ TryExec=/usr/bin/mwm
 Type=Application</literal>
 EOF</userinput></screen>
 
+    <note>&install-stdin;</note>
+
     <para>
       Finally, unset the environment variables previously set:
     </para>

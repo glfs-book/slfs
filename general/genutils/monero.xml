@@ -175,6 +175,8 @@ install -vDm644 /dev/stdin /usr/lib/tmpfiles.d/monero.conf &lt;&lt; "EOF"
 <literal>d /var/lib/monero 0770 monero monero - -</literal>
 EOF</userinput></screen>
 
+    <note revision="systemd">&install-stdin;</note>
+
   </sect2>
 
   <sect2 role="config">

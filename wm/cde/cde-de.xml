@@ -163,6 +163,8 @@ if ! grep -q '^dm:5' /etc/inittab; then \
   echo dm:5:respawn:/etc/rc.d/init.d/xdm >> /etc/inittab; \
 fi</userinput></screen>
 
+      <note revision="sysv">&install-stdin;</note>
+
 <screen role="root" revision="systemd"><userinput>install -vdm755 /etc/default /usr/lib/tmpfiles.d &amp;&amp;
 install -vDm644 contrib/rc/systemd/dtlogin.service -t /usr/lib/systemd/system/ &amp;&amp;
 systemctl enable dtlogin.service</userinput></screen>
