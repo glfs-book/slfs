@@ -7,20 +7,20 @@
   <!ENTITY hyprlib-download "https://github.com/hyprwm/">
 ]>
 
-<sect1 id="hyprlib" xreflabel="Hypr Libraries">
+<sect1 id="hyprlib" xreflabel="Hyprland Libraries">
   <?dbhtml filename="hyprlib.html"?>
 
-  <title>Hypr Libraries</title>
+  <title>Hyprland Libraries</title>
 
   <indexterm zone="hyprlib">
-    <primary sortas="a-hyprlib">Hypr Libraries</primary>
+    <primary sortas="a-hyprlib">Hyprland Libraries</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Hypr Libraries</title>
+    <title>Introduction to Hyprland Libraries</title>
 
     <para>
-      The Hypr libraries provide needed utilities for the entire Hypr
+      The Hyprland libraries provide needed utilities for the entire Hyprland
       ecosystem. While three of the packages installed in this page are not
       strictly required (hyprtoolkit, hyprland-qt-support, and
       hyprland-guiutils), they are needed for some dialog boxes and this book
@@ -39,7 +39,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Hypr Libraries Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Hyprland Libraries Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
@@ -75,7 +75,7 @@
   </sect2>
 
   <sect2>
-    <title>Downloading Hypr Libraries</title>
+    <title>Downloading Hyprland Libraries</title>
 
     <para>
       First create a list of files to be downloaded:
@@ -109,7 +109,7 @@ grep -v '^#' ../hypr-list | wget -i- -c \
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Hypr Libraries</title>
+    <title>Installation of Hyprland Libraries</title>
 
     <para>
       Create <filename>/etc/profile.d/hypr.sh</filename> to ensure QML files
