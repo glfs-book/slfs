@@ -94,6 +94,27 @@
 <!ENTITY long-build-time
   "<note><para>This may take a while to build. Feel free to do something else
   while this is building.</para></note>">
+<!-- Put &install-stdin; in <note> tags. This is done for revision-specific
+     commands. Trying to put &install-stdin; in <phrase> outside a <para> leads
+     to a validation error. -->
+<!ENTITY install-stdin
+  "<para>The above <command>install</command> command(s) need some
+  explanation. Typically in the books when configuration files get created,
+  <command>cat</command> is used. It uses a Bash feature called
+  <quote>heredoc</quote> which takes optionally multiple lines of input
+  until a given term, and forwards it to something. In the
+  <command>cat</command> command, heredoc is used to feed into
+  <filename>/dev/stdin</filename>, and <command>cat</command> writes from
+  <filename>/dev/stdin</filename> to the specified file.</para>
+  <para>As for <command>install</command>, its use is more in-depth and has a
+  lot more going on. In premise, it is doing the same thing as the
+  <command>cat</command> commands. It heredocs to
+  <filename>/dev/stdin</filename> and is forwarded to a file;
+  <command>install</command> does the writing. In a more straightforward way,
+  it copies <filename>/dev/stdin</filename> to the specified file, which was
+  filled by the heredoc. It has been used over <command>cat</command> so that
+  the permissions can be set and the directory the file needs to be in will be
+  created in the process.</para>">
 <!ENTITY meson-buildtype-release
   "<para><parameter>--buildtype=release</parameter>: Specify a buildtype
   suitable for stable releases of the package, as the default may
