@@ -5,7 +5,7 @@
 <!ENTITY cglm-version                        "0.9.6">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY glaze-version                       "7.0.2">
+<!ENTITY glaze-version                       "7.1.0">
 <!ENTITY hidapi-version                      "0.15.0">
 <!ENTITY iniparser-version                   "4.2.6">
 <!ENTITY libev-version                       "4.33">
@@ -221,8 +221,8 @@ version, so keep this at that. -->
 <!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.25.1">
-<!-- MangoWC -->
-<!ENTITY mangowc-version                     "0.12.4">
+<!-- Mango -->
+<!ENTITY mango-version                       "0.12.5">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
 <!-- Wayfire -->

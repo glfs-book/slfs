@@ -5,15 +5,15 @@
   %general-entities;
 ]>
 
-<chapter id="mangowc">
-  <?dbhtml filename="mangowc.html"?>
+<chapter id="mango">
+  <?dbhtml filename="mango.html"?>
 
-  <title>MangoWC</title>
+  <title>Mango</title>
 
   <para>
-    This chapter is dedicated to installing MangoWC.
+    This chapter is dedicated to installing the Mango Wayland compositor.
   </para>
 
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mangowc-wm.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mango-wm.xml"/>
 
 </chapter>
