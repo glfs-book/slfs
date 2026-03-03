@@ -96,7 +96,7 @@
           <ulink url="&slfs-issues;/538">#538</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - glaze: 6.5.1 -&gt; 7.0.2. Fixes
+          <para>[zeckma] - Glaze: 6.5.1 -&gt; 7.0.2. Fixes
           <ulink url="&slfs-issues;/539">#539</ulink>.</para>
         </listitem>
         <listitem>
@@ -469,7 +469,7 @@
           <ulink url="&slfs-issues;/476">#476</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - glaze: 6.4.0 -&gt; 6.5.1. Fixes
+          <para>[zeckma] - Glaze: 6.4.0 -&gt; 6.5.1. Fixes
           <ulink url="&slfs-issues;/477">#477</ulink>.</para>
         </listitem>
         <listitem>
@@ -540,7 +540,7 @@
           <ulink url="&slfs-issues;/450">#450</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - glaze: 6.2.0 -&gt; 6.4.0. Fixes
+          <para>[zeckma] - Glaze: 6.2.0 -&gt; 6.4.0. Fixes
           <ulink url="&slfs-issues;/453">#453</ulink>.</para>
         </listitem>
         <listitem>
@@ -607,7 +607,7 @@
           <ulink url="&slfs-issues;/438">#438</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - glaze: 6.1.0 -&gt; 6.2.0. Fixes
+          <para>[zeckma] - Glaze: 6.1.0 -&gt; 6.2.0. Fixes
           <ulink url="&slfs-issues;/437">#437</ulink>.</para>
         </listitem>
         <listitem>
@@ -760,7 +760,7 @@
           <ulink url="&slfs-issues;/377">#377</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[tox] - glaze: 6.0.3 -&gt; 6.1.0. Fixes
+          <para>[tox] - Glaze: 6.0.3 -&gt; 6.1.0. Fixes
           <ulink url="&slfs-issues;/401">#401</ulink>.</para>
         </listitem>
         <listitem>
@@ -857,7 +857,7 @@
           <para>[tox] - imv: Added.</para>
         </listitem>
         <listitem>
-          <para>[tox] - glaze: 6.0.2 -&gt; 6.0.3. Fixes
+          <para>[tox] - Glaze: 6.0.2 -&gt; 6.0.3. Fixes
           <ulink url="&slfs-issues;/379">#379</ulink>.</para>
         </listitem>
         <listitem>
@@ -921,7 +921,7 @@
           <para>[zeckma] - hyprtoolkit: Added.</para>
         </listitem>
         <listitem>
-          <para>[tox] - glaze: 6.0.1 -&gt; 6.0.2. Fixes
+          <para>[tox] - Glaze: 6.0.1 -&gt; 6.0.2. Fixes
           <ulink url="&slfs-issues;/366">#366</ulink>.</para>
         </listitem>
       </itemizedlist>
@@ -977,7 +977,7 @@
           Fixes <ulink url="&slfs-issues;/357">#357</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - glaze: 6.0.0 -&gt; 6.0.1.
+          <para>[zeckma] - Glaze: 6.0.0 -&gt; 6.0.1.
           Fixes <ulink url="&slfs-issues;/356">#356</ulink>.</para>
         </listitem>
         <listitem>
@@ -1051,7 +1051,7 @@
       <para>October 20th, 2025</para>
       <itemizedlist>
         <listitem>
-          <para>[Toxikuu] - glaze: 5.7.2 -&gt; 6.0.0. Fixes
+          <para>[Toxikuu] - Glaze: 5.7.2 -&gt; 6.0.0. Fixes
           <ulink url="&slfs-issues;/335">#335</ulink>.</para>
         </listitem>
         <listitem>
@@ -1115,7 +1115,7 @@
           Fixes <ulink url="&slfs-issues;/310">#310</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - glaze: 5.7.1 -&gt; 5.7.2.
+          <para>[zeckma] - Glaze: 5.7.1 -&gt; 5.7.2.
           Fixes <ulink url="&slfs-issues;/311">#311</ulink>.</para>
         </listitem>
         <listitem>
@@ -1223,7 +1223,7 @@
           Fixes <ulink url="&slfs-issues;/299">#299</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - glaze: 5.7.0 -&gt; 5.7.1.
+          <para>[zeckma] - Glaze: 5.7.0 -&gt; 5.7.1.
           Fixes <ulink url="&slfs-issues;/298">#298</ulink>.</para>
         </listitem>
         <listitem>
@@ -1319,7 +1319,7 @@
           <ulink url="&slfs-issues;/268">#268</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - glaze: 5.5.5 -&gt; 5.7.0. Fixes
+          <para>[zeckma] - Glaze: 5.5.5 -&gt; 5.7.0. Fixes
           <ulink url="&slfs-issues;/267">#267</ulink>.</para>
         </listitem>
         <listitem>
