@@ -70,6 +70,12 @@
           <para>[zeckma] - fish: 4.4.0 -&gt; 4.5.0. Fixes
           <ulink url="&slfs-issues;/552">#552</ulink>.</para>
         </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>February 28th, 2026</para>
+      <itemizedlist>
         <listitem>
           <para>[zeckma] - Changelog: Cleaned for next release cycle.</para>
         </listitem>
