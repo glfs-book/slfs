@@ -1,0 +1,129 @@
+Submitted by:            Zeckma
+Date:                    2026-03-06
+Initial Package Version: 2.1.0
+Origin:                  yajl GitHub PRs and yajl-ruby commits
+Upstream Status:         Abandoned
+Description:             Fixes build with CMake-4, CVE-2017-16516,
+                         CVE-2022-24795, and a memory leak. The upstream
+                         for yajl has been abandoned so no fixes will be
+                         a part of yajl.
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 471eee13..deba3a40 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -12,7 +12,7 @@
+ # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ 
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
++CMAKE_MINIMUM_REQUIRED(VERSION 2.8.0...3.10)
+ 
+ PROJECT(YetAnotherJSONParser C)
+ 
+diff --git a/reformatter/CMakeLists.txt b/reformatter/CMakeLists.txt
+index 52a9bee8..267d02e2 100644
+--- a/reformatter/CMakeLists.txt
++++ b/reformatter/CMakeLists.txt
+@@ -35,9 +35,7 @@ IF (NOT WIN32)
+ ENDIF (NOT WIN32)
+ 
+ # copy the binary into the output directory
+-GET_TARGET_PROPERTY(binPath json_reformat LOCATION)
+-
+ ADD_CUSTOM_COMMAND(TARGET json_reformat POST_BUILD
+-    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${binPath} ${binDir})
++    COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE:json_reformat> ${binDir})
+ 
+ INSTALL(TARGETS json_reformat RUNTIME DESTINATION bin)
+diff --git a/verify/CMakeLists.txt b/verify/CMakeLists.txt
+index 967fca16..2f390082 100644
+--- a/verify/CMakeLists.txt
++++ b/verify/CMakeLists.txt
+@@ -29,9 +29,7 @@ ADD_EXECUTABLE(json_verify ${SRCS})
+ TARGET_LINK_LIBRARIES(json_verify yajl_s)
+ 
+ # copy in the binary
+-GET_TARGET_PROPERTY(binPath json_verify LOCATION)
+-
+ ADD_CUSTOM_COMMAND(TARGET json_verify POST_BUILD
+-    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${binPath} ${binDir})
++    COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE:json_verify> ${binDir})
+ 
+ INSTALL(TARGETS json_verify RUNTIME DESTINATION bin)
+diff --git a/src/yajl_encode.c b/src/yajl_encode.c
+index fd08258..0d97cc5 100644
+--- a/src/yajl_encode.c
++++ b/src/yajl_encode.c
+@@ -139,8 +139,8 @@ void yajl_string_decode(yajl_buf buf, const unsigned char * str,
+                     end+=3;
+                     /* check if this is a surrogate */
+                     if ((codepoint & 0xFC00) == 0xD800) {
+-                        end++;
+-                        if (str[end] == '\\' && str[end + 1] == 'u') {
++                        if (end + 2 < len && str[end + 1] == '\\' && str[end + 2] == 'u') {
++                            end++;
+                             unsigned int surrogate = 0;
+                             hexToDigit(&surrogate, str + end + 2);
+                             codepoint =
+diff --git a/src/yajl_buf.c b/src/yajl_buf.c
+index 1aeafde..55c11ad 100644
+--- a/src/yajl_buf.c
++++ b/src/yajl_buf.c
+@@ -45,7 +45,17 @@ void yajl_buf_ensure_available(yajl_buf buf, size_t want)
+ 
+     need = buf->len;
+ 
+-    while (want >= (need - buf->used)) need <<= 1;
++    if (((buf->used > want) ? buf->used : want) > (size_t)(buf->used + want)) {
++        /* We cannot allocate more memory than SIZE_MAX. */
++        abort();
++    }
++    while (want >= (need - buf->used)) {
++        if (need >= (size_t)((size_t)(-1)<<1)>>1) {
++            /* need would overflow. */
++            abort();
++        }
++        need <<= 1;
++    }
+ 
+     if (need != buf->len) {
+         buf->data = (unsigned char *) YA_REALLOC(buf->alloc, buf->data, need);
+diff --git a/src/yajl_tree.c b/src/yajl_tree.c
+index 3d357a3..4b3cf2b 100644
+--- a/src/yajl_tree.c
++++ b/src/yajl_tree.c
+@@ -143,7 +143,7 @@ static yajl_val context_pop(context_t *ctx)
+     ctx->stack = stack->next;
+ 
+     v = stack->value;
+-
++    free (stack->key);
+     free (stack);
+ 
+     return (v);
+@@ -444,6 +444,10 @@ yajl_val yajl_tree_parse (const char *input,
+              snprintf(error_buffer, error_buffer_size, "%s", internal_err_str);
+              YA_FREE(&(handle->alloc), internal_err_str);
+         }
++        while(ctx.stack != NULL) {
++             yajl_val v = context_pop(&ctx);
++             yajl_tree_free(v);
++        }
+         yajl_free (handle);
+         return NULL;
+     }
+diff --git a/src/yajl_tree.c b/src/yajl_tree.c
+index 4b3cf2b..56c7012 100644
+--- a/src/yajl_tree.c
++++ b/src/yajl_tree.c
+@@ -449,6 +449,9 @@ yajl_val yajl_tree_parse (const char *input,
+              yajl_tree_free(v);
+         }
+         yajl_free (handle);
++	//If the requested memory is not released in time, it will cause memory leakage
++	if(ctx.root)
++	     yajl_tree_free(ctx.root);
+         return NULL;
+     }
+ 

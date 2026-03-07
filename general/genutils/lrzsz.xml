@@ -4,8 +4,6 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY lrzsz-gentoo-patch-root-hash "f7f659b24dba90b0278e54a2f4d966e24c7a94fb">
-  <!ENTITY lrzsz-gentoo-patch-root "https://github.com/gentoo/gentoo/raw/&lrzsz-gentoo-patch-root-hash;/net-dialup/lrzsz/files">
   <!ENTITY lrzsz-download "https://ohse.de/uwe/releases/lrzsz-&lrzsz-version;.tar.gz">
 ]>
 
@@ -40,67 +38,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-AR.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-automake-1.12.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-automake-1.13.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-c23.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-c99.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-configure-clang16.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-fix-integer-overflow.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-gettext-0.20.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-gettext-0.22.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-autotools.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-implicit-decl.patch"/>
+          <ulink url="&dl-root;/lrzsz/lrzsz-&lrzsz-version;-third_party_fixes-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -111,21 +49,11 @@
     <title>Installation of lrzsz</title>
 
     <para>
-      Apply several patches to fix various configuration, build, and security
+      Apply a patch to fix various configuration, build, and security
       issues:
     </para>
 
-<screen><userinput>patch -Np1 -i ../lrzsz-autotools.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-implicit-decl.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-&lrzsz-version;-automake-1.12.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-&lrzsz-version;-automake-1.13.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-&lrzsz-version;-gettext-0.20.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-&lrzsz-version;-AR.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-&lrzsz-version;-configure-clang16.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-&lrzsz-version;-gettext-0.22.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-&lrzsz-version;-c99.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-&lrzsz-version;-fix-integer-overflow.patch &amp;&amp;
-patch -Np1 -i ../lrzsz-&lrzsz-version;-c23.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../lrzsz-&lrzsz-version;-third_party_fixes-1.patch</userinput></screen>
 
     <para>
       Remove an unneeded prototype that causes a build failure:
@@ -136,7 +64,7 @@ patch -Np1 -i ../lrzsz-&lrzsz-version;-c23.patch</userinput></screen>
 done</userinput></screen>
 
     <para>
-      Add and remove files, then regenerate the autoconf files:
+      Add and remove some files, then regenerate the autoconf files:
     </para>
 
 <screen><userinput>touch config.rpath &amp;&amp;

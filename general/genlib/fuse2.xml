@@ -36,13 +36,12 @@
       </listitem>
     </itemizedlist>
 
-    <!-- As required -->
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
           Required patch:
-          <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/fuse2/-/raw/main/conditionally-define-closefrom.patch"/>
+          <ulink url="&dl-root;/fuse2/fuse-&fuse2-version;-build_fixes-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -60,7 +59,6 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="fuse2-kernel.xml"/>
 
-
     <indexterm zone="fuse2 fuse2-kernel">
       <primary sortas="d-fuse2">Fuse2</primary>
     </indexterm>
@@ -70,11 +68,11 @@
     <title>Installation of Fuse2</title>
 
     <para>
-      First apply a patch to fix compatibility with glibc-2.34 and up and
+      First apply a patch to fix compatibility with glibc-2.34 and later and
       regenerate the <filename>configure</filename> script:
     </para>
 
-<screen><userinput>patch -Np1 -i ../conditionally-define-closefrom.patch &amp;&amp;
+<screen><userinput>patch -Np1 -i ../fuse-&fuse2-version;-build_fixes-1.patch &amp;&amp;
 autoreconf -i -I/usr/share/gettext/m4</userinput></screen>
 
     <para>

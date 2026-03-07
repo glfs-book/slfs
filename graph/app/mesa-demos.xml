@@ -5,7 +5,7 @@
   %general-entities;
 
   <!ENTITY mesa-demos-download
-    "https://gitlab.freedesktop.org/mesa/demos/-/archive/mesa-demos-&mesa-demos-version;/demos-mesa-demos-&mesa-demos-version;.tar.gz">
+    "https://archive.mesa3d.org/demos/mesa-demos-&mesa-demos-version;.tar.xz">
 ]>
 
 <sect1 id="mesa-demos" xreflabel="Mesa-Demos-&mesa-demos-version;">
@@ -39,12 +39,12 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/mesa-demos/-/raw/main/mesa-demos-system-data.patch"/>
+          <ulink url="&dl-root;/mesa-demos/mesa-demos-&mesa-demos-version;-install_data-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">mesa-demos Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Mesa-Demos Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
@@ -120,11 +120,10 @@
       over during installation:
     </para>
 
-<screen><userinput>patch -Np1 -i ../mesa-demos-system-data.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../mesa-demos-&mesa-demos-version;-install_data-1.patch</userinput></screen>
 
     <para>
-      Install Mesa-Demos by running the following
-      commands:
+      Install Mesa-Demos by running the following commands:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;

@@ -6,7 +6,6 @@
 
   <!ENTITY websocketpp-download
     "https://github.com/zaphoyd/websocketpp/archive/&websocketpp-version;/websocketpp-&websocketpp-version;.tar.gz">
-  <!ENTITY websocket-patch-root "https://gitlab.archlinux.org/archlinux/packaging/packages/websocketpp/-/raw/main">
 ]>
 
 <sect1 id="websocketpp" xreflabel="websocketpp-&websocketpp-version;">
@@ -38,7 +37,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&websocket-patch-root;/websocketpp-&websocketpp-version;-boost-1.87-compat.patch"/>
+          <ulink url="&dl-root;/websocketpp/websocketpp-&websocketpp-version;-boost-1.87.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -68,7 +67,7 @@
       First, apply several fixes to allow building with boost-1.87 and later:
     </para>
 
-<screen><userinput>patch -Np1 -i ../websocketpp-&websocketpp-version;-boost-1.87-compat.patch                       &amp;&amp;
+<screen><userinput>patch -Np1 -i ../websocketpp-&websocketpp-version;-boost-1.87.patch &amp;&amp;
 sed 's|"${WEBSOCKETPP_BOOST_LIBS}"|${WEBSOCKETPP_BOOST_LIBS}|' -i CMakeLists.txt &amp;&amp;
 sed 's/system//' -i CMakeLists.txt</userinput></screen>
 

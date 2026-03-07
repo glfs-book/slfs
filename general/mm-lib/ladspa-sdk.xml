@@ -52,7 +52,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&dl-root;/ladspa/ladspa_sdk_&ladspa-sdk-version;-arch-1.patch"/>
+          <ulink url="&dl-root;/ladspa_sdk/ladspa_sdk_&ladspa-sdk-version;-third_party_fixes-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -75,11 +75,10 @@
     </para>
 
 <screen
-  remap="pre"><userinput>patch -Np1 -i ../ladspa_sdk_&ladspa-sdk-version;-arch-1.patch</userinput></screen>
+  remap="pre"><userinput>patch -Np1 -i ../ladspa_sdk_&ladspa-sdk-version;-third_party_fixes-1.patch</userinput></screen>
 
     <para>
-      Install LADSPA-SDK by running the following
-      commands:
+      Install LADSPA-SDK by running the following commands:
     </para>
 
 <screen><userinput>make -C src targets</userinput></screen>

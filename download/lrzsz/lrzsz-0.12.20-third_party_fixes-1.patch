@@ -1,0 +1,490 @@
+Submitted by:            Zeckma
+Date:                    2026-03-06
+Initial Package Version: 0.12.20
+Origin:                  Fedora and Gentoo, all applied then diffed
+Upstream Status:         Abandoned
+Description:             Fixes several build and configuration issues with a
+                         newer toolchain and software stack, as well as several
+                         security vulnerabilties.
+
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/acinclude.m4 lrzsz-0.12.20/acinclude.m4
+--- lrzsz-0.12.20.orig/acinclude.m4	1998-12-27 15:08:59.000000000 -0700
++++ lrzsz-0.12.20/acinclude.m4	2026-03-06 18:35:26.347454349 -0700
+@@ -13,7 +13,7 @@
+ lrzsz_cv_decl_errno=yes, lrzsz_cv_decl_errno=no)])
+ AC_MSG_RESULT($lrzsz_cv_decl_errno)
+ if test $lrzsz_cv_decl_errno = yes; then
+-  AC_DEFINE([HAVE_ERRNO_DECLARATION])
++  AC_DEFINE([HAVE_ERRNO_DECLARATION], 1, [[HAVE_ERRNO_DECLARATION]])
+ fi
+ ])
+ 
+@@ -57,7 +57,7 @@
+ ], ac_cv_type_speed_t=yes, ac_cv_type_speed_t=no)])dnl
+ AC_MSG_RESULT($ac_cv_type_speed_t)
+ if test $ac_cv_type_speed_t = no; then
+-  AC_DEFINE([speed_t],long)
++  AC_DEFINE([speed_t],long, [speed_t])
+ fi
+ ])
+ 
+@@ -69,7 +69,7 @@
+ #include <sys/select.h>],
+ [struct tm *tp;], lrzsz_cv_header_sys_select=yes, lrzsz_cv_header_sys_select=no)])
+ if test $lrzsz_cv_header_sys_select = no; then
+-  AC_DEFINE(SYS_TIME_WITHOUT_SYS_SELECT)
++  AC_DEFINE(SYS_TIME_WITHOUT_SYS_SELECT, 1, [SYS_TIME_WITHOUT_SYS_SELECT])
+ fi
+ ])
+ 
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/configure.in lrzsz-0.12.20/configure.in
+--- lrzsz-0.12.20.orig/configure.in	1998-12-30 00:50:07.000000000 -0700
++++ lrzsz-0.12.20/configure.in	2026-03-06 18:35:26.362850994 -0700
+@@ -1,7 +1,8 @@
++m4_pattern_allow(.*)
+ dnl Process this file with autoconf to produce a configure script.
+ AC_INIT(src/crctab.c)
+ AM_INIT_AUTOMAKE(lrzsz, 0.12.20)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS([config.h])
+ 
+ 
+ dnl AC_C_CROSS is in AC_PROG_CC since 2.12
+@@ -20,6 +21,11 @@
+ AC_SUBST(PACKAGE)
+ AC_SUBST(VERSION)
+ 
++GT_YES="#"
++GT_NO=""
++AC_SUBST(GT_YES)
++AC_SUBST(GT_NO)
++
+ changequote(,)dnl
+ case $VERSION in
+ 	[0-9]*.[0-9]*.[0-9]*) README_ALPHA="README-alpha";;
+@@ -33,25 +39,25 @@
+ 	[if test "$enableval" = "no" ; then 
+ 		:
+ 	  else
+-		AC_DEFINE(ENABLE_TIMESYNC)
++		AC_DEFINE(ENABLE_TIMESYNC, 1, [ENABLE_TIMESYNC])
+ 	  fi],
+-	[AC_DEFINE(ENABLE_TIMESYNC)])
++	[AC_DEFINE(ENABLE_TIMESYNC, 1, [ENABLE_TIMESYNC])])
+ AC_SUBST(ENABLE_TIMESYNC)
+ AC_ARG_ENABLE(pubdir,
+ 	[--enable-pubdir=/path   include support for a public writeable directory],
+ 	[if test "$enableval" = "no" ; then 
+ 		: 
+ 	  else 
+-	    AC_DEFINE_UNQUOTED(PUBDIR,"$enableval")
++	    AC_DEFINE_UNQUOTED(PUBDIR,"$enableval", [PUBDIR])
+ 	  fi])
+ AC_ARG_ENABLE(mkdir,
+ 	[--disable-mkdir   disable support for creating directories (lrz)],
+ 	[if test "$enableval" = "no" ; then 
+ 		:
+ 	  else
+-	  	AC_DEFINE(ENABLE_MKDIR)
++	  	AC_DEFINE(ENABLE_MKDIR, 1, [ENABLE_MKDIR])
+ 	  fi],
+-	[AC_DEFINE(ENABLE_MKDIR)])
++	[AC_DEFINE(ENABLE_MKDIR, 1, [ENABLE_MKDIR])])
+ AC_ARG_ENABLE(syslog,
+ 	[--enable-syslog=FACILITY,{force,default,optional} include syslogsupport],
+ 	[
+@@ -62,7 +68,7 @@
+ 	    *,*)
+ 			level=`echo $enableval|sed -e 's/^.*,//'`
+ 			fac=`echo $enableval|sed -e 's/,.*$//'`
+-			AC_DEFINE_UNQUOTED(ENABLE_SYSLOG,$fac)
++			AC_DEFINE_UNQUOTED(ENABLE_SYSLOG,$fac, [ENABLE_SYSLOG])
+ 			;;
+ 		*)
+ 			lookup_facility=LOG_UUCP
+@@ -70,16 +76,16 @@
+ 			;;
+ 		esac
+ 	  	if test "$level" = "force" ; then
+-		  AC_DEFINE(ENABLE_SYSLOG_FORCE)
++		  AC_DEFINE(ENABLE_SYSLOG_FORCE, 1, [ENABLE_SYSLOG_FORCE])
+ 	  	else 
+ 	  	  if test "$level" = "optional" ; then
+ 	  	    :
+ 	  	  else
+-		    AC_DEFINE(ENABLE_SYSLOG_DEFAULT)
++		    AC_DEFINE(ENABLE_SYSLOG_DEFAULT, 1, [ENABLE_SYSLOG_DEFAULT])
+ 		  fi
+ 	  	fi
+ 	  fi],[
+-		AC_DEFINE(ENABLE_SYSLOG_DEFAULT)
++		AC_DEFINE(ENABLE_SYSLOG_DEFAULT, 1, [ENABLE_SYSLOG_DEFAULT])
+ 		lookup_facility=LOG_UUCP
+ 	  ])
+ 
+@@ -89,10 +95,10 @@
+ dnl AC_PROG_INSTALL  included in AM_INIT_AUTOMAKE
+ dnl AC_PROG_MAKE_SET included in AM_INIT_AUTOMAKE
+ AC_PROG_RANLIB
++AM_PROG_AR
+ AC_ISC_POSIX
+-AC_AIX
+-AC_MINIX
+-AM_C_PROTOTYPES
++AC_USE_SYSTEM_EXTENSIONS
++AM_GNU_GETTEXT([use-libtool])
+ AC_C_CONST
+ AC_C_INLINE
+ 
+@@ -113,7 +119,7 @@
+ fi
+ case "$CFLAGS" in
+ *-Wstrict-prototypes*)
+-	AC_DEFINE(STRICT_PROTOTYPES)
++	AC_DEFINE(STRICT_PROTOTYPES, 1, [STRICT_PROTOTYPES])
+ 	;;
+ esac
+ 
+@@ -131,7 +137,7 @@
+ LRZSZ_HEADERS_TERM_IO
+ AC_CHECK_HEADERS(termios.h sys/termios.h termio.h sys/termio.h sgtty.h)
+ AC_CHECK_HEADERS(sys/mman.h utime.h syslog.h sys/syslog.h sys/param.h)
+-AC_CHECK_HEADERS(sys/select.h strings.h arpa/inet.h)
++AC_CHECK_HEADERS(sys/select.h strings.h locale.h arpa/inet.h)
+ 
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ AC_TYPE_SIZE_T
+@@ -153,7 +159,7 @@
+ dnl AC_FUNC_UTIME_NULL
+ AC_FUNC_MMAP
+ AC_FUNC_ALLOCA
+-AC_EGREP_HEADER([struct.*utimbuf], utime.h, AC_DEFINE(HAVE_STRUCT_UTIMBUF))
++AC_EGREP_HEADER([struct.*utimbuf], utime.h, AC_DEFINE(HAVE_STRUCT_UTIMBUF, 1, [HAVE_STRUCT_UTIMBUF]))
+ 
+ AC_CHECK_FUNCS(gettimeofday settimeofday)
+ AC_CHECK_FUNCS(strchr memcpy select vprintf)
+@@ -180,7 +186,8 @@
+ #include <sys/types.h>
+ #include <sys/timeb.h>
+ #include <stdio.h>
+-main ()
++#include <stdlib.h>
++int main (void)
+ {
+   struct timeb s, slast;
+   int c = 0;
+@@ -206,10 +213,10 @@
+ lrzsz_cv_sys_ftime_ok=no,
+ lrzsz_cv_sys_ftime_ok=runtime)])
+ case $lrzsz_cv_sys_ftime_ok in
+-yes) AC_DEFINE(HAVE_FTIME) AC_MSG_RESULT(yes) ;;
++yes) AC_DEFINE(HAVE_FTIME, 1, [HAVE_FTIME]) AC_MSG_RESULT(yes) ;;
+ no)  AC_MSG_RESULT(no)
+ 	AC_MSG_WARN(ftime seems to be buggy) ;;
+-runtime) AC_DEFINE(HAVE_FTIME)
++runtime) AC_DEFINE(HAVE_FTIME, 1, [HAVE_FTIME])
+ 	AC_MSG_RESULT(will check at run time) ;;
+ esac
+ ])
+@@ -223,7 +230,7 @@
+ ])
+ if test $libquark_cv_var_timezone = yes ; then
+ 	AC_MSG_RESULT(yes)
+-	AC_DEFINE(HAVE_TIMEZONE_VAR)
++	AC_DEFINE(HAVE_TIMEZONE_VAR, 1, [HAVE_TIMEZONE_VAR])
+ else
+ 	AC_MSG_RESULT(no)
+ fi
+@@ -245,9 +252,9 @@
+ 	])
+ 	if test $lrzsz_cv_lookup_facility = yes ; then
+ 		AC_MSG_RESULT(yes)
+-		AC_DEFINE_UNQUOTED(ENABLE_SYSLOG,$lookup_facility)
++		AC_DEFINE_UNQUOTED(ENABLE_SYSLOG,$lookup_facility, [ENABLE_SYSLOG])
+ 	else
+-		AC_DEFINE(ENABLE_SYSLOG,LOG_USER)
++		AC_DEFINE(ENABLE_SYSLOG,LOG_USER, [ENABLE_SYSLOG])
+ 		AC_MSG_RESULT(no)
+ 	fi
+ fi
+@@ -257,9 +264,10 @@
+ AC_SUBST(LDFLAGS)
+ AC_SUBST(LIBS)
+ 
+-AM_GNU_GETTEXT
++INTLLIBS="$LIBINTL"
++AC_SUBST(INTLLIBS)
+ 
+-AC_DEFINE_UNQUOTED(LOCALEDIR,"$prefix/$DATADIRNAME")
++AC_DEFINE_UNQUOTED(LOCALEDIR,"$prefix/$DATADIRNAME", [LOCALEDIR])
+ AC_LINK_FILES($nls_cv_header_libgt, $nls_cv_header_intl)
+ 
+ AC_OUTPUT([Makefile intl/Makefile lib/Makefile testsuite/Makefile \
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/intl/Makefile.in lrzsz-0.12.20/intl/Makefile.in
+--- lrzsz-0.12.20.orig/intl/Makefile.in	1998-04-26 07:22:35.000000000 -0600
++++ lrzsz-0.12.20/intl/Makefile.in	2026-03-06 18:35:26.362671047 -0700
+@@ -81,7 +81,7 @@
+ 
+ INCLUDES = -I.. -I. -I$(top_srcdir)/intl -I$(top_srcdir)/lib
+ 
+-all: all-@USE_INCLUDED_LIBINTL@
++all: all-no
+ 
+ all-yes: libintl.$la intlh.inst
+ all-no:
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/lib/error.c lrzsz-0.12.20/lib/error.c
+--- lrzsz-0.12.20.orig/lib/error.c	1998-04-26 07:20:52.000000000 -0600
++++ lrzsz-0.12.20/lib/error.c	2026-03-06 18:35:26.367275522 -0700
+@@ -73,7 +73,7 @@
+ 
+ # if HAVE_STRERROR
+ #  ifndef strerror		/* On some systems, strerror is a macro */
+-char *strerror ();
++char *strerror (int);
+ #  endif
+ # else
+ static char *
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/lib/long-options.c lrzsz-0.12.20/lib/long-options.c
+--- lrzsz-0.12.20.orig/lib/long-options.c	1998-04-26 07:22:35.000000000 -0600
++++ lrzsz-0.12.20/lib/long-options.c	2026-03-06 18:35:26.367543324 -0700
+@@ -22,6 +22,7 @@
+ #endif
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <getopt.h>
+ #include "long-options.h"
+ 
+@@ -35,11 +36,11 @@
+ /* Process long options --help and --version, but only if argc == 2.
+    Be careful not to gobble up `--'.  */
+ void
+-parse_long_options (argc, argv,version, usage)
+-     int argc;
+-     char **argv;
+-     void (*version)();
+-     void (*usage)();
++parse_long_options (
++     int argc,
++     char **argv,
++     void (*version)(void),
++     void (*usage)(int))
+ {
+   int c;
+   int saved_opterr;
+@@ -60,7 +61,7 @@
+ 	  (*usage) (0);
+ 
+ 	case 'v':
+-	  (*version) (0);
++	  (*version) ();
+ 	  /* printf ("%s (%s) %s\n", command_name, package, version_string); */
+ 	  exit (0);
+ 
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/lib/Makefile.am lrzsz-0.12.20/lib/Makefile.am
+--- lrzsz-0.12.20.orig/lib/Makefile.am	1998-12-27 09:25:26.000000000 -0700
++++ lrzsz-0.12.20/lib/Makefile.am	2026-03-06 18:35:26.354386821 -0700
+@@ -1,6 +1,4 @@
+ noinst_LIBRARIES=libzmodem.a
+-CFLAGS=@CFLAGS@
+-AUTOMAKE_OPTIONS=ansi2knr
+ 
+ EXTRA_DIST = alloca.c ansi2knr.1 ansi2knr.c \
+ 	getopt.c getopt1.c mkdir.c mktime.c \
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/lib/xstrtol.c lrzsz-0.12.20/lib/xstrtol.c
+--- lrzsz-0.12.20.orig/lib/xstrtol.c	1998-04-26 07:20:52.000000000 -0600
++++ lrzsz-0.12.20/lib/xstrtol.c	2026-03-06 18:35:26.367692524 -0700
+@@ -65,17 +65,17 @@
+ 	}								\
+       while (0)
+ 
+-__unsigned long int __strtol ();
++__unsigned long int __strtol (const char*, char**, int);
+ 
+ /* FIXME: comment.  */
+ 
+ strtol_error
+-__xstrtol (s, ptr, base, val, valid_suffixes)
+-     const char *s;
+-     char **ptr;
+-     int base;
+-     __unsigned long int *val;
+-     const char *valid_suffixes;
++__xstrtol (
++     const char *s,
++     char **ptr,
++     int base,
++     __unsigned long int *val,
++     const char *valid_suffixes)
+ {
+   char *t_ptr;
+   char **p;
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/po/Makefile.in.in lrzsz-0.12.20/po/Makefile.in.in
+--- lrzsz-0.12.20.orig/po/Makefile.in.in	1998-04-26 07:22:40.000000000 -0600
++++ lrzsz-0.12.20/po/Makefile.in.in	2026-03-06 18:35:26.362945781 -0700
+@@ -51,9 +51,9 @@
+ 
+ POTFILES = \
+ 
+-CATALOGS = @CATALOGS@
++CATALOGS = de.gmo
+ CATOBJEXT = @CATOBJEXT@
+-INSTOBJEXT = @INSTOBJEXT@
++INSTOBJEXT = .mo
+ 
+ .SUFFIXES:
+ .SUFFIXES: .c .o .po .pox .gmo .mo .msg .cat
+@@ -110,16 +110,16 @@
+ install-data-no: all
+ install-data-yes: all
+ 	if test -r $(MKINSTALLDIRS); then \
+-	  $(MKINSTALLDIRS) $(datadir); \
++	  $(MKINSTALLDIRS) $(DATADIR); \
+ 	else \
+-	  $(top_srcdir)/mkinstalldirs $(datadir); \
++	  $(top_srcdir)/mkinstalldirs $(DATADIR); \
+ 	fi
+ 	@catalogs='$(CATALOGS)'; \
+ 	for cat in $$catalogs; do \
+ 	  cat=`basename $$cat`; \
+ 	  case "$$cat" in \
+-	    *.gmo) destdir=$(gnulocaledir);; \
+-	    *)     destdir=$(localedir);; \
++	    *.gmo) destdir=$(DESTDIR)$(gnulocaledir);; \
++	    *)     destdir=$(DESTDIR)$(localedir);; \
+ 	  esac; \
+ 	  lang=`echo $$cat | sed 's/\$(CATOBJEXT)$$//'`; \
+ 	  dir=$$destdir/$$lang/LC_MESSAGES; \
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/src/lrz.c lrzsz-0.12.20/src/lrz.c
+--- lrzsz-0.12.20.orig/src/lrz.c	1998-12-30 00:49:24.000000000 -0700
++++ lrzsz-0.12.20/src/lrz.c	2026-03-06 18:35:26.367945782 -0700
+@@ -42,9 +42,9 @@
+ #include "error.h"
+ 
+ #ifndef STRICT_PROTOTYPES
+-extern time_t time();
+-extern char *strerror();
+-extern char *strstr();
++extern time_t time(time_t*);
++extern char *strerror(int);
++extern char *strstr(const char* , const char*);
+ #endif
+ 
+ #ifndef HAVE_ERRNO_DECLARATION
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/src/lsyslog.c lrzsz-0.12.20/src/lsyslog.c
+--- lrzsz-0.12.20.orig/src/lsyslog.c	1998-12-29 10:27:46.000000000 -0700
++++ lrzsz-0.12.20/src/lsyslog.c	2026-03-06 18:35:26.349704379 -0700
+@@ -20,8 +20,10 @@
+ */
+ #include "config.h"
+ #ifdef ENABLE_SYSLOG
++#define _GNU_SOURCE
+ #include "zglobal.h"
+ #include <pwd.h>
++#include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #endif
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/src/lsz.c lrzsz-0.12.20/src/lsz.c
+--- lrzsz-0.12.20.orig/src/lsz.c	1998-12-29 15:07:59.000000000 -0700
++++ lrzsz-0.12.20/src/lsz.c	2026-03-06 18:35:26.368240632 -0700
+@@ -51,9 +51,9 @@
+ #include "error.h"
+ 
+ #ifndef STRICT_PROTOTYPES
+-extern time_t time();
+-extern char *strerror();
+-extern char *strstr();
++extern time_t time(time_t*);
++extern char *strerror(int);
++extern char *strstr(const char*, const char*);
+ #endif
+ 
+ #ifndef HAVE_ERRNO_DECLARATION
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/src/Makefile.am lrzsz-0.12.20/src/Makefile.am
+--- lrzsz-0.12.20.orig/src/Makefile.am	1998-12-28 01:38:47.000000000 -0700
++++ lrzsz-0.12.20/src/Makefile.am	2026-03-06 18:35:26.354532634 -0700
+@@ -4,32 +4,24 @@
+ noinst_HEADERS = timing.h zglobal.h zmodem.h
+ datadir = $(prefix)/@DATADIRNAME@
+ localedir = $(datadir)/locale
+-CFLAGS=@CFLAGS@
+ DISTCLEAN_FILES=lrzszbug
+ 
+ LDADD = ../lib/libzmodem.a @INTLLIBS@
+-AUTOMAKE_OPTIONS=ansi2knr
+ EXTRA_DIST = ansi2knr.1 ansi2knr.c lrzszbug.in
+ INCLUDES = -I.. -I$(srcdir) -I$(top_srcdir)/src -I../intl -I$(top_srcdir)/lib
+ #DEFS = -DLOCALEDIR=\"$(localedir)\" -DOS=\"@host_os@\" -DCPU=\"@host_cpu@\"
+ DEFS = -DNFGVMIN @DEFS@ -DLOCALEDIR=\"$(localedir)\"
+ 
+-install-exec-local:
+-	rm -f $(DESTDIR)/$(bindir)/`echo lsb | sed -e '$(transform)'`
+-	ln $(DESTDIR)/$(bindir)/`echo lsz |sed -e '$(transform)'` \
+-		$(DESTDIR)/$(bindir)/`echo lsb |sed -e '$(transform)'` 
+-	rm -f $(bindir)/`echo lsx | sed -e '$(transform)'`
+-	ln $(DESTDIR)/$(bindir)/`echo lsz |sed -e '$(transform)'` \
+-		$(DESTDIR)/$(bindir)/`echo lsx |sed -e '$(transform)'` 
+-	rm -f $(bindir)/`echo lrb | sed -e '$(transform)'`
+-	ln $(DESTDIR)/$(bindir)/`echo lrz |sed -e '$(transform)'` \
+-		$(DESTDIR)/$(bindir)/`echo lrb |sed -e '$(transform)'` 
+-	rm -f $(bindir)/`echo lrx | sed -e '$(transform)'`
+-	ln $(DESTDIR)/$(bindir)/`echo lrz |sed -e '$(transform)'` \
+-		$(DESTDIR)/$(bindir)/`echo lrx |sed -e '$(transform)'` 
+-#	rm -f $(bindir)/`echo lrzszbug | sed -e '$(transform)'`
+-#	ln $(bindir)/`echo lrzszbug |sed -e '$(transform)'` \
+-#		$(bindir)/`echo lrzszbug |sed -e '$(transform)'` 
++# Caveat: program name transformation is ignored here.
++$(DESTDIR)$(bindir)/lsz $(DESTDIR)$(bindir)/lrz: install-binPROGRAMS
++
++$(DESTDIR)$(bindir)/lsb $(DESTDIR)$(bindir)/lsx: $(DESTDIR)$(bindir)/lsz
++	rm -f $@ ; ln -s `basename $<` $@
++
++$(DESTDIR)$(bindir)/lrb $(DESTDIR)$(bindir)/lrx: $(DESTDIR)$(bindir)/lrz
++	rm -f $@ ; ln -s `basename $<` $@
++
++install-exec-local: $(DESTDIR)$(bindir)/lsb $(DESTDIR)$(bindir)/lsx $(DESTDIR)$(bindir)/lrb $(DESTDIR)$(bindir)/lrx
+ 
+ uninstall-local:
+ 	rm -f $(DESTDIR)/$(bindir)/`echo lsb |sed -e '$(transform)'` 
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/src/tcp.c lrzsz-0.12.20/src/tcp.c
+--- lrzsz-0.12.20.orig/src/tcp.c	1998-12-28 03:41:38.000000000 -0700
++++ lrzsz-0.12.20/src/tcp.c	2026-03-06 18:35:26.364420037 -0700
+@@ -56,7 +56,7 @@
+ 	struct sockaddr_in s;
+ 	struct sockaddr_in t;
+ 	int on=1;
+-	size_t len;
++	socklen_t len;
+ 
+ 	if ((sock = socket (AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {
+ 		error(1,errno,"socket");
+@@ -91,7 +91,7 @@
+ {
+ 	int so;
+ 	struct  sockaddr_in s;
+-	size_t namelen;
++	socklen_t namelen;
+ 	int num=0;
+ 
+ 	namelen = sizeof(s);
+diff '--color=auto' -Naur lrzsz-0.12.20.orig/src/zm.c lrzsz-0.12.20/src/zm.c
+--- lrzsz-0.12.20.orig/src/zm.c	1998-12-29 09:48:38.000000000 -0700
++++ lrzsz-0.12.20/src/zm.c	2026-03-06 18:35:26.365725766 -0700
+@@ -431,10 +431,12 @@
+ 	VPRINTF(3,("zsdata: %lu %s", (unsigned long) length, 
+ 		Zendnames[(frameend-ZCRCE)&3]));
+ 	crc = 0;
+-	do {
+-		zsendline(*buf); crc = updcrc((0377 & *buf), crc);
+-		buf++;
+-	} while (--length>0);
++
++	for( ; length; length--) {
++	  zsendline(*buf); crc = updcrc((0377 & *buf), crc);
++	  buf++;
++	}
++
+ 	xsendline(ZDLE); xsendline(frameend);
+ 	crc = updcrc(frameend, crc);
+ 

@@ -39,25 +39,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-&yajl-version;-CVE-2017-16516.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-&yajl-version;-CVE-2022-24795.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-&yajl-version;-memory_leak.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Required patch:
-          <ulink url="https://github.com/lloyd/yajl/commit/6fe59ca50dfd65bdb3d1c87a27245b2dd1a072f9.patch"/>
+          <ulink url="&dl-root;/yajl/yajl-&yajl-version;-third_party_fixes-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -75,20 +57,11 @@
     <title>Installation of yajl</title>
 
     <para>
-      Since the last commit to this package is almost a decade old, issues have
-      came up and need to be fixed before building. Apply required patches to
-      fix the important ones:
+      The upstream for yajl has been abandoned, but at present contains several
+      security and build issues. Apply a patch to fix them:
     </para>
 
-<screen><userinput>patch -Np1 -i ../yajl-&yajl-version;-CVE-2017-16516.patch &amp;&amp;
-patch -Np1 -i ../yajl-&yajl-version;-CVE-2022-24795.patch &amp;&amp;
-patch -Np1 -i ../yajl-&yajl-version;-memory_leak.patch</userinput></screen>
-
-    <para>
-      Fix building with CMake-4.0.0:
-    </para>
-
-<screen><userinput>patch -Np1 -i ../6fe59ca50dfd65bdb3d1c87a27245b2dd1a072f9.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../yajl-&yajl-version;-third_party_fixes-1.patch</userinput></screen>
 
     <para>
       Install yajl by running the following
