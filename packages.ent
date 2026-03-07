@@ -77,7 +77,7 @@ barely anyone uses these days. This is a known-working upstream-recommended
 version, so keep this at that. -->
 <!ENTITY lotus123-binutils-version           "2.38">
 <!ENTITY lrzsz-version                       "0.12.20">
-<!ENTITY minicom-version                     "2.11">
+<!ENTITY minicom-version                     "2.11.1">
 <!ENTITY monero-version                      "0.18.4.5">
 <!ENTITY monero-gtest                        "b514bdc898e2951020cbdca1304b75f5950d1f59">
 <!ENTITY monero-miniupnp                     "544e6fcc73c5ad9af48a8985c94f0f1d742ef2e0">

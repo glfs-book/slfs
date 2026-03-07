@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>March 6th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - minicom: 2.11 -&gt; 2.11.1. Fixes
+          <ulink url="&slfs-issues;/566">#566</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 3rd, 2026</para>
       <itemizedlist>
         <listitem>
