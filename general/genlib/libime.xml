@@ -40,7 +40,7 @@
       <listitem>
         <para>
           Required submodule:
-          <ulink url="https://github.com/kpu/kenlm/archive/&libime-kenlm;.tar.gz"/>
+          <ulink url="https://github.com/kpu/kenlm/archive/&libime-kenlm;/kenlm-&libime-kenlm;.tar.gz"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -70,8 +70,8 @@
       Unpack the kenlm submodule into the right place:
     </para>
 
-<screen><userinput>tar -xvf ../&libime-kenlm;.tar.gz -C src/libime/core &amp;&amp;
-mv -vf src/libime/core/kenlm-&libime-kenlm; -T src/libime/core/kenlm</userinput></screen>
+<screen><userinput>tar -xf ../kenlm-&libime-kenlm;.tar.gz &amp;&amp;
+mv kenlm-* -T src/libime/core/kenlm</userinput></screen>
 
     <para>
       Install libime by running the following
