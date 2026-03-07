@@ -35,6 +35,10 @@
       </listitem>
     </itemizedlist>
 
+    &dl-rename;
+<screen
+  role="nodump"><userinput>mv -v v&awww-version;.tar.gz awww-v&awww-version;.tar.gz</userinput></screen>
+
     <bridgehead renderas="sect3">awww Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
@@ -55,6 +59,12 @@
 
   <sect2 role="installation">
     <title>Installation of awww</title>
+
+    <note><para>
+      This package expands to the directory <filename
+      class="directory">awww</filename>.
+    </para></note>
+
     <para>
       Install awww by running the following
       commands:

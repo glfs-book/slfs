@@ -33,6 +33,10 @@
       </listitem>
     </itemizedlist>
 
+    &dl-rename;
+<screen
+  role="nodump"><userinput>mv -v &seatd-version;.tar.gz seatd-&seatd-version;.tar.gz</userinput></screen>
+
     <bridgehead renderas="sect3">seatd Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>

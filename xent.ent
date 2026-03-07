@@ -13,6 +13,9 @@
      appear must be the one defined first. So this ends up looking like an
      if-else statement without the else. -->
 
+<!ENTITY dl-rename
+  "<para>Rename the file download(s) before extracting:</para>">
+
 <!ENTITY source-profile
   "<para>Now source the main profile:</para>
    <screen><userinput>source /etc/profile</userinput></screen>">

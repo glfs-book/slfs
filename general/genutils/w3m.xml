@@ -31,6 +31,10 @@
       </listitem>
     </itemizedlist>
 
+    &dl-rename;
+<screen
+  role="nodump"><userinput>mv -v v&w3m-version;.tar.gz w3m-v&w3m-version;.tar.gz</userinput></screen>
+
     <bridgehead renderas="sect3">W3m Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>

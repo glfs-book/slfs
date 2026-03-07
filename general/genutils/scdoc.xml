@@ -31,6 +31,10 @@
       </listitem>
     </itemizedlist>
 
+    &dl-rename;
+<screen
+  role="nodump"><userinput>mv -v &scdoc-version;.tar.gz scdoc-&scdoc-version;.tar.gz</userinput></screen>
+
   </sect2>
 
   <sect2 role="installation">
