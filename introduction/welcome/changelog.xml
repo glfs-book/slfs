@@ -43,6 +43,10 @@
       <para>March 6th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fastfetch: 2.59.0 -&gt; 2.60.0. Fixes
+          <ulink url="&slfs-issues;/570">#570</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Archived Befunge and Unlambda.</para>
         </listitem>
         <listitem>
