@@ -182,7 +182,7 @@ ninja</userinput></screen>
       <command>start-hyprland</command> as the &root; user:
     </para>
 
-<screen role="root"><userinput>ln -sfv start-hyprland $LFS/usr/bin/hyprland</userinput></screen>
+<screen role="root"><userinput>ln -sfv start-hyprland /usr/bin/hyprland</userinput></screen>
 
   </sect2>
 

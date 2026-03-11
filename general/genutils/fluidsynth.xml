@@ -117,6 +117,8 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr             \
       -W no-dev -G Ninja .. &amp;&amp;
 ninja</userinput></screen>
 
+    <para>To run the tests, issue <command>ninja check</command>.</para>
+
     <para>
       Now, as the &root; user:
     </para>

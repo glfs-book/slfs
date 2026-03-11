@@ -40,6 +40,52 @@
     -->
 
     <listitem>
+      <para>March 11th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - W3m: 0.5.5 -&gt; 0.5.6. Fixes
+          <ulink url="&slfs-issues;/565">#565</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - FluidSynth: 2.5.2 -&gt; 2.5.3. Fixes
+          <ulink url="&slfs-issues;/572">#572</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - foot: 1.25.0 -&gt; 1.26.0. Fixes
+          <ulink url="&slfs-issues;/573">#573</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.54.0 -&gt; 0.54.2. Fixes
+          <ulink url="&slfs-issues;/574">#574</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - platformdirs: 4.9.2 -&gt; 4.9.4. Fixes
+          <ulink url="&slfs-issues;/575">#575</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - seatd: 0.9.2 -&gt; 0.9.3. Fixes
+          <ulink url="&slfs-issues;/576">#576</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - yt-dlp: 2026.02.21 -&gt; 2026.03.03. Fixes
+          <ulink url="&slfs-issues;/577">#577</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 7.1.0 -&gt; 7.2.0. Fixes
+          <ulink url="&slfs-issues;/578">#578</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Mango: 0.12.5 -&gt; 0.12.6. Fixes
+          <ulink url="&slfs-issues;/579">#579</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - tornado: 6.5.4 -&gt; 6.5.5 (security). Fixes
+          <ulink url="&slfs-issues;/580">#580</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>March 6th, 2026</para>
       <itemizedlist>
         <listitem>
