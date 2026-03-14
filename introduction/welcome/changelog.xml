@@ -43,6 +43,10 @@
       <para>March 13th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - PCSX2: Added. Fixes
+          <ulink url="&slfs-issues;/517">#517</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libbacktrace: Added.</para>
         </listitem>
         <listitem>

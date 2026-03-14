@@ -25,7 +25,7 @@
     <para>
       The Dolphin package (not to be confused with
       the <ulink url="&blfs-svn;/kde/dolphin.html">KF6 dolphin file
-      manager</ulink>) provides a GCN and Wii emulator.
+      manager</ulink>) provides a Nintendo GameCube (GCN) and Wii emulator.
     </para>
 
     <itemizedlist spacing="compact">

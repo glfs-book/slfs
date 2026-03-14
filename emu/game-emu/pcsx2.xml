@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY pcsx2-download
+    "https://github.com/PCSX2/pcsx2/archive/v&pcsx2-version;/pcsx2-&pcsx2-version;.tar.gz">
+]>
+
+<sect1 id="pcsx2" xreflabel="PCSX2-&pcsx2-version;">
+  <?dbhtml filename="pcsx2.html"?>
+
+  <title>PCSX2-&pcsx2-version;</title>
+
+  <indexterm zone="pcsx2">
+    <primary sortas="a-pcsx2">PCSX2</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to PCSX2</title>
+
+    <para>
+      The PCSX2 package provides a PlayStation 2 (PS2) emulator.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&pcsx2-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Recommended game patch collection:
+          <ulink url="https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">pcsx2 Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
+      &ecm;,
+      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
+      <ulink url="&blfs-svn;/basicnet/libpcap.html">libpcap</ulink>,
+      <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
+      <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
+      <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
+      <xref linkend="plutosvg"/>, and
+      &sdl3;
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
+      &egl;
+      <ulink url="&blfs-svn;/multimedia/gstreamer.html">gstreamer</ulink>,
+      <xref linkend="libbacktrace"/>,
+      <ulink url="&blfs-svn;/kde/kddockwidgets.html">KDDockWidgets</ulink>,
+      <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
+      <xref linkend="shaderc"/>,
+      <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>,
+      <ulink url="&blfs-svn;/x/vulkan-headers.html">Vulkan-Headers</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/multimedia/alsa-utils.html">alsa-utils</ulink> and
+      <ulink url="&blfs-svn;/general/llvm.html">LLVM</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of PCSX2</title>
+
+    <para>
+      Adjust where data gets installed to:
+    </para>
+
+<screen remap="pre"><userinput>sed '/CMAKE_INSTALL_FULL_DATADIR/s@/PCSX2\b@/'"pcsx2@" \
+  -i pcsx2/CMakeLists.txt cmake/BuildParameters.cmake</userinput></screen>
+
+    <para>
+      Install PCSX2 by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr       \
+      -D CMAKE_BUILD_TYPE=Release        \
+      -D QT_NO_PRIVATE_MODULE_WARNING=ON \
+      -D PACKAGE_MODE=ON                 \
+      -D USE_VULKAN=ON                   \
+      -D WAYLAND_API=ON                  \
+      -D X11_API=ON                      \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+ln -svf pcsx2-qt /usr/bin/pcsx2 &amp;&amp;
+ln -sfv /usr/share/pcsx2/resources/icons/AppIconLarge.png \
+        /usr/share/pixmaps/pcsx2.png</userinput></screen>
+
+    <para>
+      Ensure PCSX2 can have net capabilities, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>setcap cap_net_admin,cap_net_raw=eip /usr/bin/pcsx2-qt</userinput></screen>
+
+    <para>
+      If you downloaded the recommended game patch collection, install it in
+      the proper location as the &root; user:
+    </para>
+
+<screen role="root"><userinput>cp -v ../../patches.zip /usr/share/pcsx2/resources</userinput></screen>
+
+    <para>
+      Create a desktop file so it can be launched with launchers, as the &root;
+      user:
+    </para>
+
+<screen role="root"><userinput>mkdir -pv /usr/share/applications &amp;&amp;
+cat &gt; /usr/share/applications/pcsx2.desktop &lt;&lt; EOF
+<literal>[Desktop Entry]
+Name=PCSX2
+Comment=PlayStation 2 emulator
+GenericName=PlayStation 2 emulator
+Exec=pcsx2-qt %f
+Terminal=false
+Icon=pcsx2
+Categories=Game;Emulator;
+StartupNotify=true
+StartupWMClass=pcsx2</literal>
+EOF</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          pcsx2 and pcsx2-qt
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="pcsx2-bin">
+        <term><command>pcsx2</command></term>
+        <listitem>
+          <para>
+            is a PS2 emulator
+          </para>
+          <indexterm zone="pcsx2 pcsx2-bin">
+            <primary sortas="b-pcsx2-bin">pcsx2</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

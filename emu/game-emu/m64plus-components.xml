@@ -22,9 +22,9 @@
     <para>
       This page will install multiple Mupen64Plus
       components and plugins, as well as a command-line frontend as a bare
-      necessity. If you do not wish to install a graphical frontend, this page
-      will provide all the parts of  Mupen64Plus you
-      will need.
+      necessity to provide Nintendo 64 (N64) emulation. If you do not wish to
+      install a graphical frontend, this page will provide all the parts of
+      Mupen64Plus you will need.
     </para>
 
     &long-build-time;

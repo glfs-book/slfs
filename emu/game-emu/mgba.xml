@@ -21,7 +21,7 @@
     <title>Introduction to mGBA</title>
 
     <para>
-      The mGBA package provides a GBA emulator. It
+      The mGBA package provides a GameBoy Advanced (GBA) emulator. It
       can also be used with other emulators.
     </para>
 

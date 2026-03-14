@@ -283,6 +283,7 @@ version, so keep this at that. -->
 <!ENTITY mupen64plus-video-rice-version      "&mupen64plus-version;">
 <!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
 <!ENTITY gliden64-version                    "c8ef81c7d9aede9f67f6ed3d3426c90541f9f13e">
+<!ENTITY pcsx2-version                       "2.6.3">
 
 <!-- GAMING -->
 <!-- Minecraft -->
