@@ -43,6 +43,9 @@
       <para>March 13th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - libbacktrace: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Shaderc: Added.</para>
         </listitem>
       </itemizedlist>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libbacktrace-download
+    "https://github.com/ianlancetaylor/libbacktrace/archive/&libbacktrace-version;/libbacktrace-&libbacktrace-version;.tar.gz">
+]>
+
+<sect1 id="libbacktrace" xreflabel="libbacktrace-&libbacktrace-minor;">
+  <?dbhtml filename="libbacktrace.html"?>
+
+  <title>libbacktrace-&libbacktrace-minor;</title>
+
+  <indexterm zone="libbacktrace">
+    <primary sortas="a-libbacktrace">libbacktrace</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libbacktrace</title>
+
+    <para>
+      The libbacktrace package provides a library that produces backtraces
+      with symbolic information.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&libbacktrace-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&dl-root;/libbacktrace/libbacktrace-&libbacktrace-minor;-pkgconfig-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libbacktrace</title>
+
+    <para>
+      Apply a patch so that a Pkg-config file is generated for the library:
+    </para>
+
+<screen remap="pre"><userinput>patch -Np1 -i ../libbacktrace-&libbacktrace-minor;-pkgconfig-1.patch</userinput></screen>
+
+    <para>
+      Regenerate the autoconf files to ensure they're new:
+    </para>
+
+    <screen remap="pre"><userinput>autoreconf -fi</userinput></screen>
+
+    <para>
+      Install libbacktrace by running the following commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr    \
+            --disable-static \
+            --enable-shared &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+    <screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &static-libraries;
+
+    <para>
+      <parameter>--enable-shared</parameter>: This option tells
+      the build system to build shared libraries as building them is
+      disabled by default.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libbacktrace
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="lib-libbacktrace">
+        <term><filename class="libraryfile">libbacktrace</filename></term>
+        <listitem>
+          <para>
+            provides backtraces with symbolic information
+          </para>
+          <indexterm zone="libbacktrace lib-libbacktrace">
+            <primary sortas="c-lib-libbacktrace">libbacktrace</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
