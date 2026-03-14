@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY binutils-root "https://sourceware.org/pub/binutils/releases">
+  <!ENTITY mipsel-binutils-download
+    "&binutils-root;/binutils-with-gold-&mipsel-binutils-version;.tar.xz">
+  <!ENTITY mipsel-gcc-download
+    "&gnu-http;/gcc/gcc-&mipsel-gcc-version;/gcc-&mipsel-gcc-version;.tar.xz">
+]>
+
+<sect1 id="mipsel" xreflabel="MIPSel Binutils-&mipsel-binutils-version; &amp; GCC-&mipsel-gcc-version;">
+  <?dbhtml filename="mipsel.html"?>
+
+  <title>MIPSel Binutils-&mipsel-binutils-version; &amp; GCC-&mipsel-gcc-version;</title>
+
+  <indexterm zone="mipsel">
+    <primary sortas="a-mipsel">MIPSel</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to MIPSel</title>
+
+    <para>
+      MIPSel is the little-endian (32-bit) variant of MIPS, used by early
+      systems, typically in embedded systems. Video game consoles of that time
+      often used PowerPC, MIPS 64, or MIPS 32 architectures. The toolchain that
+      will be built with the following instructions will aim to target the
+      latter.
+    </para>
+
+    <para>
+      The instructions will build a simple cross compiler for MIPSel using
+      Binutils and GCC. Both will be installed in this page. The target is
+      <literal>mipsel-linux-gnu</literal>, which is shorter than a lot of other
+      triplets.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Binutils Download: <ulink url="&mipsel-binutils-download;"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          GCC Download: <ulink url="&mipsel-gcc-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of MIPSel-Binutils</title>
+
+    <para>
+      Install MIPSel-Binutils by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build-mipsel-binutils &amp;&amp;
+cd    build-mipsel-binutils &amp;&amp;
+
+../configure --prefix=/usr                              \
+             --target=mipsel-linux-gnu                  \
+             --infodir=/usr/share/info/mipsel-linux-gnu \
+             --disable-nls                              \
+             --disable-werror                           \
+             --with-gold=no &amp;&amp;
+
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make   DESTDIR=$PWD/DESTDIR install          &amp;&amp;
+rm -v  DESTDIR/usr/lib/bfd-plugins/libdep.so &amp;&amp;
+cp -Rv DESTDIR/usr/* /usr                    &amp;&amp;
+rm -rf DESTDIR</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Binutils Command Explanations</title>
+
+    <para>
+      <parameter>--disable-nls</parameter>: This option disables
+      NLS support, disabling output diagnostics in languages other than
+      American English. Omit <parameter>--disable-nls</parameter> and
+      invoke <option>--enable-nls</option> to enable NLS support.
+    </para>
+
+    <para>
+      <parameter>--disable-werror</parameter>: This option makes it so
+      warnings won't be considered errors.
+    </para>
+
+    <para>
+      <parameter>--with-gold=no</parameter>: This option disables building
+      gold, which is now considered deathware by many. The tarball used for
+      the installation includes gold due to versioning issues, so this option
+      helps counteract that.
+    </para>
+
+    <para>
+      <parameter>--target=*</parameter>: This option builds files for
+      the architecture passed to it.
+    </para>
+
+    <para>
+      <command>rm -v DESTDIR/usr/lib/bfd-plugins/libdep.so</command>:
+      This command removes an library that conflicts with the original library
+      provided by the original compilation of
+      <ulink url="&lfs-root;/chapter08/binutils.html">Binutils</ulink>.
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of MIPSel-GCC</title>
+
+    <para>
+      Install MIPSel-GCC by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build-mipsel-gcc &amp;&amp;
+cd    build-mipsel-gcc &amp;&amp;
+
+../configure --prefix=/usr             \
+             --target=mipsel-linux-gnu \
+             --disable-shared          \
+             --disable-multilib        \
+             --disable-threads         \
+             --enable-languages=c,c++ &amp;&amp;
+
+make inhibit_libc=true all-gcc</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install-gcc &amp;&amp;
+ln -sfv mipsel-linux-gnu-gcc /usr/bin/mipsel-linux-gnu-cc</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>GCC Command Explanations</title>
+
+    <para>
+      <parameter>--disable-shared</parameter>: This option disables building
+      shared libraries.
+    </para>
+
+    <para>
+      <parameter>--disable-multilib</parameter>: This option ensures
+      that files are created specifically for MIPSel.
+    </para>
+
+    <para>
+      <parameter>--disable-threads</parameter>: This option disables
+      thread support due to building errors in GCC.
+    </para>
+
+    <para>
+      <parameter>--enable-languages=c,c++</parameter>:
+      This command builds support for C and C++. Refer to <ulink
+      url="&blfs-svn;/general/gcc.html"/>
+      to find what other languages are supported.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+    <para>
+      There are no binaries specific to MIPSel besides the format
+      the toolchain is targeting, and thus each binary is prefixed with the
+      architecture triplet, such as <command>mipsel-linux-gnu-gcc</command>.
+      For in-depth descriptions, read both <ulink
+      url="&lfs-root;/chapter08/binutils.html#contents-binutils"/> and <ulink
+      url="&lfs-root;/chapter08/gcc.html#contents-gcc"/>.
+    </para>
+
+  </sect2>
+
+</sect1>

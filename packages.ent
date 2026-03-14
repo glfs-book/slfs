@@ -112,6 +112,8 @@ version, so keep this at that. -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20260126">
+<!ENTITY mipsel-binutils-version             "2.46">
+<!ENTITY mipsel-gcc-version                  "15.2.0">
 <!-- START PYTHON -->
 <!ENTITY python3-major                       "3">
 <!ENTITY python3-minor                       "14">
