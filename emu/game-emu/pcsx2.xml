@@ -150,6 +150,7 @@ GenericName=PlayStation 2 emulator
 Exec=pcsx2-qt %f
 Terminal=false
 Icon=pcsx2
+Type=Application
 Categories=Game;Emulator;
 StartupNotify=true
 StartupWMClass=pcsx2</literal>
