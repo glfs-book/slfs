@@ -23,18 +23,6 @@
       The CDE package contains the Common Desktop Environment, a Motif-based
       desktop environment commonly associated with commercial UNIX
       workstations.
-
-      <warning><para>
-      CDE has had quite a few known security vulnerabilities in it, and it is
-      likely that several more unknown ones still exist. You
-      <emphasis>REALLY</emphasis> do not want to expose a CDE system to the
-      public Internet. In fact, there are five known security vulnerabilities in
-      this release of CDE which still have no fixes.</para>
-
-      <para>Also, you should think strongly about enabling the
-      <command>dtspcd</command> and <command>rpc.ttdbserver</command> daemons.
-      Unless you know what they do, you almost certainly don't need them, and
-      they will increase your machine's attack surface.</para></warning>
     </para>
 
     <itemizedlist spacing="compact">
@@ -122,6 +110,11 @@ make</userinput></screen>
     work around this problem, you need to blindly type in
     <command>reset</command> after the compilation. Your terminal will work
     properly again once the screen has been cleared.</para></note>
+
+    <note><para>The above instructions don't build the
+    <command>dtspcd</command> or <command>rpc.ttdbserver</command> daemons.
+    Unless you know what they do, you probably won't need them. They could
+    open up security issues.</para></note>
 
     <para>
       Now as the &root; user:
