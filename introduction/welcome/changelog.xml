@@ -46,6 +46,9 @@
           <para>[zeckma] - Capstone: Added.</para>
         </listitem>
         <listitem>
+          <para>[zeckma] - GLFW: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - MIPSel: Added.</para>
         </listitem>
       </itemizedlist>
