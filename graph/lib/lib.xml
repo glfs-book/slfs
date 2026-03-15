@@ -16,6 +16,7 @@
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcft.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glfw.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intel-mediasdk.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intel-onevpl.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libdecor.xml"/>

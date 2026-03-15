@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY glfw-download "https://github.com/glfw/glfw/archive/&glfw-version;/glfw-&glfw-version;.tar.gz">
+]>
+
+<sect1 id="glfw" xreflabel="GLFW-&glfw-version;">
+  <?dbhtml filename="glfw.html"?>
+
+
+  <title>GLFW-&glfw-version;</title>
+
+  <indexterm zone="glfw">
+    <primary sortas="a-glfw">GLFW</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to GLFW</title>
+
+    <para>
+      The GLFW package provides a library that handles windowing, input, and
+      events. It can be considered like SDL, and mainly helps developers just
+      starting out learning 3D graphical development.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&glfw-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">GLFW Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of GLFW</title>
+
+    <para>
+      Install GLFW by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_SHARED_LIBS=ON      \
+      -D GLFW_BUILD_EXAMPLES=OFF   \
+      -D GLFW_BUILD_TESTS=OFF      \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libglfw
+        </seg>
+        <seg>
+          /usr/include/GLFW and /usr/lib/cmake/glfw3
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libglfw">
+        <term><filename class="libraryfile">libglfw</filename></term>
+        <listitem>
+          <para>
+            contains functions for handling windowing, input, and events
+          </para>
+          <indexterm zone="glfw libglfw">
+            <primary sortas="c-libglfw">libglfw</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

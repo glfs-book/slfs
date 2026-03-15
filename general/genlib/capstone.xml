@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY capstone-download "https://github.com/capstone-engine/capstone/archive/&capstone-version;/capstone-&capstone-version;.tar.gz">
+]>
+
+<sect1 id="capstone" xreflabel="Capstone-&capstone-version;">
+  <?dbhtml filename="capstone.html"?>
+
+
+  <title>Capstone-&capstone-version;</title>
+
+  <indexterm zone="capstone">
+    <primary sortas="a-capstone">Capstone</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Capstone</title>
+
+    <para>
+      The Capstone package provides a disassembler framework.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&capstone-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Capstone Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <note><para>
+      <command>make</command> can be used to install the package, but will not
+      provide files for finding Capstone via CMake. CMake must be used to
+      install those files, so using CMake is highly recommended.
+    </para></note>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Capstone</title>
+
+    <para>
+      Install Capstone by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_STATIC_LIBS=OFF     \
+      -D BUILD_SHARED_LIBS=ON      \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          cstool
+        </seg>
+        <seg>
+          libcapstone
+        </seg>
+        <seg>
+          /usr/include/capstone and /usr/lib/cmake/capstone
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="cstool">
+        <term><command>cstool</command></term>
+        <listitem>
+          <para>
+            allows working with the Capstone engine
+          </para>
+          <indexterm zone="capstone cstool">
+            <primary sortas="b-cstool">cstool</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libcapstone">
+        <term><filename class="libraryfile">libcapstone</filename></term>
+        <listitem>
+          <para>
+            contains functions for disassembling binaries
+          </para>
+          <indexterm zone="capstone libcapstone">
+            <primary sortas="c-libcapstone">libcapstone</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
