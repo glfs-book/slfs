@@ -97,7 +97,7 @@
       user:
     </para>
 
-<screen role="root"><userinput>install -vDm644 /dev/stdin /etc/yt-dlp.conf &lt;&lt; EOF
+<screen role="root"><userinput>cat &gt; /etc/yt-dlp.conf &lt;&lt; EOF
 <literal>--js-runtimes node --remote-components ejs:github</literal>
 EOF</userinput></screen>
     <para>
