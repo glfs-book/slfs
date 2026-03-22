@@ -30,34 +30,41 @@
     toolchains for those that may need them.
   </para>
 
-  <bridgehead renderas="sect2">Part III - Graphical Components</bridgehead>
+  <bridgehead renderas="sect2">Part III - Servers</bridgehead>
+
+  <para>
+    This part covers packages for setting up a server, which can include web
+    hosting (major servers), mail server software, databases, and other stuff.
+  </para>
+
+  <bridgehead renderas="sect2">Part IV - Graphical Components</bridgehead>
 
   <para>
     This part covers graphical components that may be useful and help with
     debugging and testing or be useful in their own right.
   </para>
 
-  <bridgehead renderas="sect2">Part IV - Window Managers, Compositors, and Desktop Environments</bridgehead>
+  <bridgehead renderas="sect2">Part V - Window Managers, Compositors, and Desktop Environments</bridgehead>
 
   <para>
     This part covers graphical environments you may wish to use.
   </para>
 
-  <bridgehead renderas="sect2">Part V - Emulators</bridgehead>
+  <bridgehead renderas="sect2">Part VI - Emulators</bridgehead>
 
   <para>
     This part covers many emulators for computers, vide game consoles, and
     more.
   </para>
 
-  <bridgehead renderas="sect2">Part VI - General Gaming Software</bridgehead>
+  <bridgehead renderas="sect2">Part VII - General Gaming Software</bridgehead>
 
   <para>
     This part covers gaming support software that is not covered in BLFS and
     GLFS.
   </para>
 
-  <bridgehead renderas="sect2">Part VII - SVR4</bridgehead>
+  <bridgehead renderas="sect2">Part VIII - SVR4</bridgehead>
 
   <para>
     This part covers SVR4 tooling and various software.

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY nginx-download "https://github.com/nginx/nginx/releases/download/release-&nginx-version;/nginx-&nginx-version;.tar.gz">
+]>
+
+<sect1 id="nginx" xreflabel="NGINX-&nginx-version;">
+  <?dbhtml filename="nginx.html"?>
+
+  <title>NGINX-&nginx-version;</title>
+
+  <indexterm zone="nginx">
+    <primary sortas="a-nginx">NGINX</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to NGINX</title>
+
+    <para>
+      The NGINX HTTP web server is one of the most popular alternatives to
+      Apache while aiming to be high performance, highly configurable, and
+      flexible with a lot of support.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&nginx-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">NGINX Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/gd/">gd</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/geoip/">geoip</ulink>,
+      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
+      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>,
+      <ulink url="&arch-pkgs;/extra/any/mailcap/">mailcap</ulink>, and
+      <ulink url="&blfs-svn;/basicnet/rsync.html">rsync</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of nginx</title>
+
+    <para>
+      The <command>nginx</command> daemon is ran by the &root; user, but
+      subprocesses are ran as a regular user and group, which must be created.
+      Create the following group and user using the following commands as the
+      &root; user:
+    </para>
+  
+<screen role="root"><userinput>groupadd -g 25 nginx &amp;&amp;
+useradd -c "NGINX Server" -g nginx \
+        -s /bin/false -u 25 nginx</userinput></screen>
+
+    <para>
+      Install NGINX by running the following commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/etc/nginx                                     \
+            --conf-path=/etc/nginx/nginx.conf                       \
+            --sbin-path=/usr/sbin/nginx                             \
+            --modules-path=/usr/lib/nginx/modules                   \
+            --pid-path=/run/nginx.pid                               \
+            --lock-path=/run/lock/nginx.lock                        \
+            --http-log-path=/var/log/nginx/access.log               \
+            --error-log-path=stderr                                 \
+            --http-client-body-temp-path=/var/lib/nginx/client-body \
+            --http-proxy-temp-path=/var/lib/nginx/proxy             \
+            --http-fastcgi-temp-path=/var/lib/nginx/fastcgi         \
+            --http-scgi-temp-path=/var/lib/nginx/scgi               \
+            --http-uwsgi-temp-path=/var/lib/nginx/uwsgi             \
+            --user=nginx                                            \
+            --group=nginx                                           \
+            --with-compat                                           \
+            --with-threads                                          \
+            --with-pcre-jit                                         \
+            --with-file-aio                                         \
+            --with-http_addition_module                             \
+            --with-http_auth_request_module                         \
+            --with-http_dav_module                                  \
+            --with-http_degradation_module                          \
+            --with-http_flv_module                                  \
+            --with-http_gunzip_module                               \
+            --with-http_gzip_static_module                          \
+            --with-http_mp4_module                                  \
+            --with-http_perl_module=dynamic                         \
+            --with-http_random_index_module                         \
+            --with-http_secure_link_module                          \
+            --with-http_slice_module                                \
+            --with-http_ssl_module                                  \
+            --with-http_stub_status_module                          \
+            --with-http_sub_module                                  \
+            --with-http_v2_module                                   \
+            --with-http_v3_module                                   \
+            --with-stream=dynamic                                   \
+            --with-stream_ssl_module                                \
+            --with-stream_ssl_preread_module &amp;&amp;
+
+make</userinput></screen>
+
+    <note><para>
+      If the source was cloned and not obtained via the tarball, the configure
+      script will be at <filename>auto/configure</filename>.
+    </para></note>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+mkdir -pv /var/lib/nginx &amp;&amp;
+install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>--prefix=/etc/nginx</parameter>: Unlike other package builds
+      that set the prefix to <filename class="directory">/usr</filename>, this
+      prefix is set differently so all the configuration files are put and
+      checked in a sane directory structure/location.
+    </para>
+
+    <para>
+      <parameter>--conf-path=/etc/nginx/nginx.conf</parameter> This parameter
+      ensures the main NGINX daemon configuration file is in <filename
+      class="directory">/etc/nginx</filename>.
+    </para>
+
+    <para>
+      <parameter>--sbin-path=/usr/sbin/nginx</parameter>: This parameter
+      ensures that it does not get installed in <filename
+      class="directory">/etc</filename>
+    </para>
+
+    <para>
+      <parameter>--http-*-path=*</parameter>: These parameters ensure the
+      temporary NGINX state directories and logging are in sane places.
+    </para>
+
+    <para>
+      <parameter>--{user,group}=nginx</parameter>: These parameters hand off
+      subprocess reponsibilities to the <literal>nginx</literal> user and
+      group. If these aren't specified, the respective values would be
+      <literal>nobody</literal> and <literal>nogroup</literal>.
+    </para>
+
+    <para>
+      <parameter>--with-*_module{,=dynamic}</parameter>: These parameters
+      build modules that aren't enabled by default that can be really useful.
+      Those that can be built dynamically are. Most cannot be.
+    </para>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring NGINX</title>
+
+    <sect3 id="nginx-config">
+      <title>Config Files</title>
+      <para>
+        <filename>/etc/nginx/nginx.conf</filename>
+      </para>
+
+      <indexterm zone="nginx nginx-config">
+        <primary
+        sortas="e-etc-nginx-nginx">/etc/nginx/nginx.conf</primary>
+      </indexterm>
+    </sect3>
+
+    <sect3><title>Configuration Information</title>
+
+      <para>
+        Most of the configurationn is done in
+        <filename>/etc/nginx/nginx.conf</filename>. Paths to content which will
+        be served aren't hardcoded, and you can specify where important HTML
+        is. You should read the NGINX <ulink
+        url="https://nginx.org/en/docs/beginners_guide.html">beginner's
+        guide</ulink> to learn how to configure the NGINX daemon.
+      </para>
+
+      <para>
+        If you want Apache-styled per-user handing of HTML paths, you can do
+        something like this in <filename>/etc/nginx/nginx.conf</filename>:
+      </para>
+
+<screen><literal>server {
+  location ~ ^/~(.+?)(/.*)?$ {
+    alias     /home/$1/public_html$2;
+    index     index.html index.htm;
+    autoindex on;
+  }
+}</literal></screen>
+
+      <para>
+        Once you set a location for the HTML, if you want to do a simple test
+        to see if things are working, copy the default HTML content to the
+        given location:
+      </para>
+
+<screen><literal>cp -v /etc/nginx/html/* <replaceable>&lt;location&gt;</replaceable></literal></screen>
+
+    </sect3>
+
+    <sect3 id="nginx-init">
+      <title revision="sysv">Boot Script</title>
+      <title revision="systemd">Systemd Unit</title>
+
+      <para revision="systemd">
+        To automatically start the <command>nginx</command> daemon when the
+        system is rebooted, install a Systemd unit and enable it as the &root;
+        user:
+      </para>
+
+      <indexterm revision="systemd" zone="nginx nginx-init">
+        <primary sortas="f-nginx">NGINX</primary>
+      </indexterm>
+
+<screen revision="systemd"
+  role="root"><userinput>cat &gt; /usr/lib/systemd/system/nginx.service &lt;&lt; "EOF" &amp;&amp;
+<literal>[Unit]
+Description=NGINX Web Server
+After=network-online.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+ExecStart=/usr/sbin/nginx
+ExecStop=/usr/sbin/nginx -s stop
+ExecReload=/usr/sbin/nginx -s reload
+PrivateTmp=true
+SyslogLevel=err
+
+[Install]
+WantedBy=multi-user.target</literal>
+EOF
+
+systemctl enable nginx</userinput></screen>
+
+      <para revision="sysv">There isn't a bootscript for NGINX on SysVinit,
+      yet.</para>
+
+    </sect3>
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          nginx
+        </seg>
+        <seg>
+          Multiple modules in /usr/lib/nginx/modules
+        </seg>
+        <seg>
+          /etc/nginx and /usr/lib/nginx/modules
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="nginx-bin">
+        <term><command>nginx</command></term>
+        <listitem>
+         <para>
+           is the NGINX web server daemon
+         </para>
+          <indexterm zone="nginx nginx-bin">
+            <primary sortas="b-nginx-bin">nginx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

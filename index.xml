@@ -16,6 +16,7 @@ $Date$
   <!-- Parts -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="introduction/introduction.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="general/general.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="servers/servers.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="graph/graph.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wm/wm.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="emu/emu.xml"/>

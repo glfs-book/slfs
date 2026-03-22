@@ -160,6 +160,10 @@ version, so keep this at that. -->
 <!ENTITY rubberband-version                  "4.0.0">
 <!ENTITY sdl-version                         "1.2.74">
 
+<!-- SERVERS -->
+<!-- Major Servers -->
+<!ENTITY nginx-version                       "1.29.6">
+
 <!-- GRAPH -->
 <!-- Graphical Libraries -->
 <!ENTITY fcft-version                        "3.3.3">
