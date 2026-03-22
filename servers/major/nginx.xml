@@ -140,8 +140,8 @@ install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
 
     <para>
       <parameter>--sbin-path=/usr/sbin/nginx</parameter>: This parameter
-      ensures that it does not get installed in <filename
-      class="directory">/etc</filename>
+      ensures that <command>nginx</command> does not get installed in <filename
+      class="directory">/etc</filename>.
     </para>
 
     <para>
@@ -182,7 +182,7 @@ install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
     <sect3><title>Configuration Information</title>
 
       <para>
-        Most of the configurationn is done in
+        Most of the configuration is done in
         <filename>/etc/nginx/nginx.conf</filename>. Paths to content which will
         be served aren't hardcoded, and you can specify where important HTML
         is. You should read the NGINX <ulink
@@ -202,14 +202,6 @@ install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
     autoindex on;
   }
 }</literal></screen>
-
-      <para>
-        Once you set a location for the HTML, if you want to do a simple test
-        to see if things are working, copy the default HTML content to the
-        given location:
-      </para>
-
-<screen><literal>cp -v /etc/nginx/html/* <replaceable>&lt;location&gt;</replaceable></literal></screen>
 
     </sect3>
 
