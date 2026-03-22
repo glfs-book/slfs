@@ -48,7 +48,7 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of nginx</title>
+    <title>Installation of NGINX</title>
 
     <para>
       The <command>nginx</command> daemon is ran by the &root; user, but
@@ -58,7 +58,7 @@
     </para>
   
 <screen role="root"><userinput>groupadd -g 25 nginx &amp;&amp;
-useradd -c "NGINX Server" -g nginx \
+useradd -c "NGINX Web Server" -g nginx \
         -s /bin/false -u 25 nginx</userinput></screen>
 
     <para>
