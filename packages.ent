@@ -108,7 +108,7 @@ version, so keep this at that. -->
 <!ENTITY iputils-version                     "20250605">
 <!ENTITY libtree-version                     "3.1.1">
 <!ENTITY tealdeer-version                    "1.8.1">
-<!ENTITY tinyxxd-version                     "1.3.11">
+<!ENTITY tinyxxd-version                     "1.3.14">
 <!-- Programming -->
 <!ENTITY autoconf-archive-version            "2024.10.16">
 <!ENTITY befunge-minor-version               "2_25">
