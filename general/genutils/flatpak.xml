@@ -54,7 +54,7 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/general/appstream-glib.html">appsteam-glib</ulink>,
+      <ulink url="&blfs-svn;/general/appstream-glib.html">appstream-glib</ulink>,
       <ulink url="&blfs-svn;/basicnet/avahi.html">Avahi</ulink>,
       <ulink url="&blfs-svn;/general/bubblewrap.html">Bubblewrap</ulink>,
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
