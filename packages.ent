@@ -190,7 +190,7 @@ version, so keep this at that. -->
 <!ENTITY scenefx-minor                       "0.4">
 <!ENTITY scenefx-version                     "&scenefx-minor;.1">
 <!ENTITY wlroots-minor                       "0.19">
-<!ENTITY wlroots-version                     "&wlroots-minor;.2">
+<!ENTITY wlroots-version                     "&wlroots-minor;.3">
 <!ENTITY xcb-util-errors-version             "1.0.1">
 <!ENTITY xcb-util-xrm-version                "1.3">
 <!ENTITY xcb-imdkit-version                  "1.0.9">
