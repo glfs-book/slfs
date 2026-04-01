@@ -376,6 +376,18 @@ span.blue {
   color: #2ac;
 }
 
+span.purple { 
+  color: #a99ab8;
+} 
+  
+span.green {
+  color: #6aa894;
+} 
+
+span.violetred {
+  color: #d02090;
+}
+
 /* Index */
 .item {
     float: left;

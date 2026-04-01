@@ -2,11 +2,11 @@
 <!-- General Libraries -->
 <!ENTITY anthy-version                       "1:0.4-3">
 <!ENTITY asio-version                        "1-36-0">
-<!ENTITY capstone-version                    "5.0.5">
+<!ENTITY capstone-version                    "5.0.7">
 <!ENTITY cglm-version                        "0.9.6">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY glaze-version                       "7.2.0">
+<!ENTITY glaze-version                       "7.2.2">
 <!ENTITY hidapi-version                      "0.15.0">
 <!ENTITY iniparser-version                   "4.2.6">
 <!ENTITY libbacktrace-minor                  "b9e400">
@@ -15,7 +15,7 @@
 <!ENTITY libime-version                      "1.1.13">
 <!ENTITY libime-kenlm                        "bcd4af619a2fa45f5876d8855f7876cc09f663af">
 <!ENTITY libjuice-version                    "1.7.0">
-<!ENTITY libsrtp-version                     "2.7.0">
+<!ENTITY libsrtp-version                     "2.8.0">
 <!ENTITY libdatachannel-version              "0.24.1">
 <!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
 <!ENTITY libdatachannel-usrsctp              "fec583d54493f879d2ae44a743423bf8a04371ab">
@@ -81,7 +81,7 @@ version, so keep this at that. -->
 <!ENTITY lotus123-binutils-version           "2.38">
 <!ENTITY lrzsz-version                       "0.12.20">
 <!ENTITY minicom-version                     "2.11.1">
-<!ENTITY monero-version                      "0.18.4.5">
+<!ENTITY monero-version                      "0.18.4.6">
 <!ENTITY monero-gtest                        "b514bdc898e2951020cbdca1304b75f5950d1f59">
 <!ENTITY monero-miniupnp                     "544e6fcc73c5ad9af48a8985c94f0f1d742ef2e0">
 <!ENTITY monero-randomx                      "102f8acf90a7649ada410de5499a7ec62e49e1da">
@@ -93,7 +93,7 @@ version, so keep this at that. -->
 <!ENTITY ncdu-version                        "1.22">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.60.0">
+<!ENTITY fastfetch-version                   "2.61.0">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.4">
 <!ENTITY tmux-version                        "3.6a">
@@ -103,7 +103,7 @@ version, so keep this at that. -->
 <!ENTITY yt-dlp-version                      "2026.03.17">
 <!ENTITY xmlstarlet-version                  "1.6.1">
 <!-- System Utilities -->
-<!ENTITY dunst-version                       "1.13.1">
+<!ENTITY dunst-version                       "1.13.2">
 <!ENTITY eza-version                         "0.23.4">
 <!ENTITY iputils-version                     "20250605">
 <!ENTITY libtree-version                     "3.1.1">
@@ -169,7 +169,7 @@ version, so keep this at that. -->
 
 <!-- SERVERS -->
 <!-- Major Servers -->
-<!ENTITY nginx-version                       "1.29.6">
+<!ENTITY nginx-version                       "1.29.7">
 
 <!-- GRAPH -->
 <!-- Graphical Libraries -->
@@ -196,7 +196,7 @@ version, so keep this at that. -->
 <!ENTITY xcb-imdkit-version                  "1.0.9">
 <!-- Terminal Emulators -->
 <!ENTITY alacritty-version                   "0.16.1">
-<!ENTITY foot-version                        "1.26.0">
+<!ENTITY foot-version                        "1.26.1">
 <!-- Launchers -->
 <!ENTITY rofi-version                        "2.0.0">
 <!ENTITY wofi-version                        "1.5.3">
@@ -205,7 +205,7 @@ version, so keep this at that. -->
 <!ENTITY grim-version                        "1.5.0">
 <!ENTITY libvpl-tools-version                "1.5.0">
 <!ENTITY mesa-demos-version                  "9.0.0">
-<!ENTITY obs-studio-version                  "32.0.4">
+<!ENTITY obs-studio-version                  "32.1.0">
 <!ENTITY obs-cef-version                     "6533">
 <!ENTITY slurp-version                       "1.5.0">
 <!ENTITY wbg-version                         "1.3.0">
@@ -226,7 +226,7 @@ version, so keep this at that. -->
 <!ENTITY cde-de-version                      "2.5.3">
 <!-- Hypr -->
 <!ENTITY hyprland-protocols-version          "0.7.0">
-<!ENTITY hyprutils-version                   "0.11.0">
+<!ENTITY hyprutils-version                   "0.12.0">
 <!ENTITY hyprlang-version                    "0.6.8">
 <!ENTITY hyprwire-version                    "0.3.0">
 <!ENTITY hyprcursor-version                  "0.1.13">
@@ -236,12 +236,12 @@ version, so keep this at that. -->
 <!ENTITY hyprtoolkit-version                 "0.5.3">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-guiutils-version           "0.2.1">
-<!ENTITY hyprland-version                    "0.54.2">
+<!ENTITY hyprland-version                    "0.54.3">
 <!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.25.1">
 <!-- Mango -->
-<!ENTITY mango-version                       "0.12.6">
+<!ENTITY mango-version                       "0.12.8">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
 <!-- Wayfire -->
