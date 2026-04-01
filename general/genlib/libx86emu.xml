@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY lx86e-root
+    "http://github.com/wfeldt/libx86emu/archive">
+  <!ENTITY libx86emu-download
+    "&lx86e-root;/&libx86emu-version;/libx86emu-&libx86emu-version;.tar.gz">
+]>
+
+<sect1 id="libx86emu" xreflabel="libx86emu-&libx86emu-version;">
+  <?dbhtml filename="libx86emu.html"?>
+
+  <title>libx86emu-&libx86emu-version;</title>
+
+  <indexterm zone="libx86emu">
+    <primary sortas="a-libx86emu">libx86emu</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libx86emu</title>
+
+    <para>
+      The libx86emu package contains a library for emulating x86 calls, which
+      is often used for working with firmware and handling VBE calls.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&libx86emu-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libx86emu</title>
+
+    <para>
+      Install libx86emu by running the following commands:
+    </para>
+
+<screen><userinput>make VERSION=&libx86emu-version; \
+     MAJOR_VERSION=&libx86emu-major; \
+     shared</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make VERSION=&libx86emu-version; \
+     MAJOR_VERSION=&libx86emu-major; \
+     LIBDIR=/usr/lib \
+     install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libx86emu
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libx86emu-lib">
+        <term><filename class="libraryfile">libx86emu</filename></term>
+        <listitem>
+          <para>
+            contains functions for x86 emulation
+          </para>
+          <indexterm zone="libx86emu libx86emu-lib">
+            <primary sortas="c-libx86emu-lib">libx86emu</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

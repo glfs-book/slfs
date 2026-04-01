@@ -33,6 +33,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libmspack.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libsodium.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libutempter.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libx86emu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libzip.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libzmq.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="m17n.xml"/>

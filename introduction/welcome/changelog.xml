@@ -43,6 +43,9 @@
       <para>April 1st, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - libx86emu: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - wlroots: 0.19.2 -&gt; 0.19.3. Fixes
           <ulink url="&slfs-issues;/609">#609</ulink>.</para>
         </listitem>

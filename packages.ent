@@ -23,6 +23,8 @@
 <!ENTITY libsodium-version                   "1.0.21">
 <!ENTITY libutempter-version                 "1.2.3">
 <!ENTITY libutempter-tag                     "&libutempter-version;-alt1">
+<!ENTITY libx86emu-major                     "3">
+<!ENTITY libx86emu-version                   "&libx86emu-major;.7">
 <!ENTITY libzip-version                      "1.11.4">
 <!ENTITY libzmq-version                      "4.3.5">
 <!ENTITY m17n-version                        "1.8.6">
