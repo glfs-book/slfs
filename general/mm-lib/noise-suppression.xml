@@ -54,11 +54,6 @@
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
-    <para role="optional">
-      <ulink url="&blfs-svn;/x/webkitgtk.html">WebKitGTK</ulink>
-    </para>
-
   </sect2>
 
   <sect2 role="installation">
