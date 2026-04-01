@@ -188,6 +188,8 @@ export -f as_root</userinput></screen>
 
 <!ENTITY pydep "&blfs-svn;/general/python-dependencies.html#">
 <!ENTITY pymod "&blfs-svn;/general/python-modules.html#">
+<!ENTITY perldep "&blfs-svn;/general/perl-deps.html#perl-">
+<!ENTITY perlmod "&blfs-svn;/general/perl-modules.html#perl-">
 <!ENTITY build-wheel-cmd "pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir">
 <!ENTITY build-wheel "<screen><userinput>&build-wheel-cmd; $PWD</userinput></screen>">
 <!ENTITY build-wheel-pep517 "<screen><userinput>&build-wheel-cmd; --use-pep517 $PWD</userinput></screen>">

@@ -65,6 +65,7 @@
 <!ENTITY fluidsynth-version                  "2.5.3">
 <!ENTITY fs-gcem                             "012ae73c6d0a2cb09ffe86475f5c6fba3926e200">
 <!ENTITY fs-sf2                              "3.1">
+<!ENTITY hwinfo-version                      "25.2">
 <!ENTITY imv-version                         "5.0.1">
 <!ENTITY inxi-rev                            "1">
 <!ENTITY inxi-version                        "3.3.40-&inxi-rev;">

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY hwinfo-download "https://github.com/openSUSE/hwinfo/archive/&hwinfo-version;/hwinfo-&hwinfo-version;.tar.gz">
+]>
+
+<sect1 id="hwinfo" xreflabel="hwinfo-&hwinfo-version;">
+  <?dbhtml filename="hwinfo.html"?>
+
+  <title>hwinfo-&hwinfo-version;</title>
+
+  <indexterm zone="hwinfo">
+    <primary sortas="a-hwinfo">hwinfo</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to hwinfo</title>
+
+    <para>
+      The hwinfo package provides a utility and library for checking the
+      hardware information of the system, backed by OpenSUSE.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&hwinfo-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">hwinfo Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="libx86emu"/>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&perlmod;xml-writer">XML::Writer</ulink> (to allow the use of
+      the <command>convert_hd</command> Perl script)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of hwinfo</title>
+
+    <para>
+      Install hwinfo by running the following commands:
+    </para>
+
+<screen><userinput>make -j1 LIBDIR=/usr/lib HWINFO_VERSION=&hwinfo-version;</userinput></screen>
+
+    <note><para>
+      The <command>./check_hd --check --sort --cfile</command> command part
+      during the build process may seem to hang. This process just takes a
+      while since it's single-threaded.
+    </para></note>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make LIBDIR=/usr/lib HWINFO_VERSION=&hwinfo-version; install &amp;&amp;
+for man in {1,8}; do
+  install -vDm644 doc/*."$man" -t /usr/share/man/man"$man"/
+done</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          check_hd,
+          convert_hd,
+          getsysinfo,
+          hwinfo, and
+          mk_isdnhwdb
+        </seg>
+        <seg>
+          libhd
+        </seg>
+        <seg>
+          /usr/share/hwinfo and
+          /var/lib/hardware/udi
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <note><para>
+      All the programs are installed in <filename
+      class="directory">/usr/sbin</filename>.
+    </para></note>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="check_hd">
+        <term><command>check_hd</command></term>
+        <listitem>
+          <para>
+            checks for hardware data and outputs to a PCI IDS file
+          </para>
+          <indexterm zone="hwinfo check_hd">
+            <primary sortas="b-check_hd">check_hd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="convert_hd">
+        <term><command>convert_hd</command></term>
+        <listitem>
+          <para>
+            converts hardware data from the internal format to other formats
+          </para>
+          <indexterm zone="hwinfo convert_hd">
+            <primary sortas="b-convert_hd">convert_hd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getsysinfo">
+        <term><command>getsysinfo</command></term>
+        <listitem>
+          <para>
+            collects system data for debugging purposes
+          </para>
+          <indexterm zone="hwinfo getsysinfo">
+            <primary sortas="b-getsysinfo">getsysinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hwinfo-bin">
+        <term><command>hwinfo</command></term>
+        <listitem>
+          <para>
+            outputs in-depth hardware data
+          </para>
+          <indexterm zone="hwinfo hwinfo">
+            <primary sortas="b-hwinfo">hwinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mk_isdnhwdb">
+        <term><command>mk_isdnhwdb</command></term>
+        <listitem>
+          <para>
+            is an internal component that makes an internal hardware database
+          </para>
+          <indexterm zone="hwinfo mk_isdnhwdb">
+            <primary sortas="b-mk_isdnhwdb">mk_isdnhwdb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhd">
+        <term><filename class="libraryfile">libhd</filename></term>
+        <listitem>
+          <para>
+            provides functions for scanning hardware information
+          </para>
+          <indexterm zone="hwinfo libhd">
+            <primary sortas="c-libhd">libhd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
