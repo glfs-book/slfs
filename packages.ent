@@ -42,6 +42,8 @@
 <!ENTITY pugixml-version                     "1.15">
 <!ENTITY qrcodegencpp-version                "1.8.0">
 <!ENTITY qrcodegencpp-cmake-version          "1.8.0-cmake4">
+<!ENTITY quazip-major                        "1">
+<!ENTITY quazip-version                      "&quazip-major;.5">
 <!ENTITY re2-version                         "2025-11-05">
 <!ENTITY sdbus-cpp-version                   "2.2.1">
 <!ENTITY sdl2_net-version                    "2.2.0">

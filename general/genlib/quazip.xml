@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY qz-root
+    "https://github.com/stachenov/quazip/archive">
+  <!ENTITY quazip-download
+    "&qz-root;/v&quazip-version;/quazip-&quazip-version;.tar.gz">
+]>
+
+<sect1 id="quazip" xreflabel="QuaZip-&quazip-version;">
+  <?dbhtml filename="quazip.html"?>
+
+  <title>QuaZip-&quazip-version;</title>
+
+  <indexterm zone="quazip">
+    <primary sortas="a-quazip">QuaZip</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to QuaZip</title>
+
+    <para>
+      The QuaZip package provides a C++ version of minizip for Qt. It does not
+      utilize <xref linkend="minizip"/>. It has its own specialized copy.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&quazip-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">QuaZip Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> and
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of QuaZip</title>
+
+    <para>
+      Install QuaZip by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libquazip&quazip-major;-qt6
+        </seg>
+        <seg>
+          /usr/include/QuaZip-Qt6-&quazip-version; and
+          /usr/lib/cmake/QuaZip-Qt6-&quazip-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libquazip">
+        <term><filename class="libraryfile">libquazip</filename></term>
+        <listitem>
+          <para>
+            provides functions for handling ZIP files
+          </para>
+          <indexterm zone="quazip libquazip">
+            <primary sortas="c-libquazip">libquazip</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
