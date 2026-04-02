@@ -128,8 +128,8 @@ done; exit</userinput></screen>
     <title>Installation of Go</title>
 
     <para>
-      As the &root; user, create the directory all the Go components will be
-      installed in:
+      As the &root; user, create the directory that all the Go components will
+      be installed in:
     </para>
 
 <screen role="root"><userinput>mkdir -pv /opt/go-&go-version;</userinput></screen>
@@ -169,6 +169,7 @@ install  -vDm644 ../go.env \
 
 rm -rf /opt/go-&go-version;/pkg/bootstrap    &amp;&amp;
 rm -rf /opt/go-&go-version;/pkg/obj/go-build &amp;&amp;
+rm -rf        /usr/share/doc/go-&go-version; &amp;&amp;
 cp -va ../doc /usr/share/doc/go-&go-version;</userinput></screen>
 
     <para>
