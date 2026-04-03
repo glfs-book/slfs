@@ -8,16 +8,16 @@
     "https://github.com/golang/go/archive">
   <!ENTITY go-download
     "&go-arc;/go&go-version;/go-go&go-version;.tar.gz">
-  <!ENTITY go1.4-download
-    "&go-arc;/&go1.4-version;/go-&go1.4-version;.tar.gz">
-  <!ENTITY go1.17-download
-    "&go-arc;/&go1.17-version;/go-&go1.17-version;.tar.gz">
-  <!ENTITY go1.20-download
-    "&go-arc;/&go1.20-version;/go-&go1.20-version;.tar.gz">
-  <!ENTITY go1.22-download
-    "&go-arc;/&go1.22-version;/go-&go1.22-version;.tar.gz">
-  <!ENTITY go1.24-download
-    "&go-arc;/&go1.24-version;/go-&go1.24-version;.tar.gz">
+  <!ENTITY go1_4-download
+    "&go-arc;/&go1_4-version;/go-&go1_4-version;.tar.gz">
+  <!ENTITY go1_17-download
+    "&go-arc;/&go1_17-version;/go-&go1_17-version;.tar.gz">
+  <!ENTITY go1_20-download
+    "&go-arc;/&go1_20-version;/go-&go1_20-version;.tar.gz">
+  <!ENTITY go1_22-download
+    "&go-arc;/&go1_22-version;/go-&go1_22-version;.tar.gz">
+  <!ENTITY go1_24-download
+    "&go-arc;/&go1_24-version;/go-&go1_24-version;.tar.gz">
 ]>
 
 <sect1 id="go" xreflabel="Go-&go-version;">
@@ -77,11 +77,11 @@
     </para>
 
 <screen remap="pre"><userinput>cat &gt; go-bootstrap-&go-version; &lt;&lt; "EOF"
-<literal>&go1.4-version;/go-&go1.4-version;.tar.gz
-&go1.17-version;/go-&go1.17-version;.tar.gz
-&go1.20-version;/go-&go1.20-version;.tar.gz
-&go1.22-version;/go-&go1.22-version;.tar.gz
-&go1.24-version;/go-&go1.24-version;.tar.gz</literal>
+<literal>&go1_4-version;/go-&go1_4-version;.tar.gz
+&go1_17-version;/go-&go1_17-version;.tar.gz
+&go1_20-version;/go-&go1_20-version;.tar.gz
+&go1_22-version;/go-&go1_22-version;.tar.gz
+&go1_24-version;/go-&go1_24-version;.tar.gz</literal>
 EOF</userinput></screen>
 
     <para>
