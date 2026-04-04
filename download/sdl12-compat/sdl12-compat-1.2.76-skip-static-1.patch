@@ -1,0 +1,40 @@
+diff -Naur sdl12-compat-release-1.2.76.orig/CMakeLists.txt sdl12-compat-release-1.2.76/CMakeLists.txt
+--- sdl12-compat-release-1.2.76.orig/CMakeLists.txt	2026-04-03 19:40:25.000000000 -0500
++++ sdl12-compat-release-1.2.76/CMakeLists.txt	2026-04-03 21:33:23.956836223 -0500
+@@ -145,35 +145,11 @@
+     endforeach(flag_var)
+ endif()
+ 
+-# SDLmain library...
+-if(APPLE)
+-    add_library(SDLmain STATIC src/SDLmain/macosx/SDLMain.m)
+-    set_source_files_properties(src/SDLmain/macosx/SDLMain.m PROPERTIES LANGUAGE C)
+-    if(NOT CMAKE_VERSION VERSION_LESS "3.16")
+-        set_source_files_properties("src/SDLmain/macosx/SDLMain.m" PROPERTIES LANGUAGE OBJC)
+-    endif()
+-elseif(WIN32)
+-    add_library(SDLmain STATIC src/SDLmain/win32/SDL_win32_main.c)
+-    set_target_properties(SDLmain PROPERTIES COMPILE_DEFINITIONS "_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE")  # !!! FIXME: don't use C runtime? We fixed this in SDL2.
+-else()
+-    add_library(SDLmain STATIC src/SDLmain/dummy/SDL_dummy_main.c)
+-endif()
+-add_library(SDL::SDLmain ALIAS SDLmain)
+-target_include_directories(SDLmain PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/SDL>")
+-target_include_directories(SDLmain PUBLIC "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/SDL>")
+-if(MINGW OR CYGWIN)
+-    if(CMAKE_SIZEOF_VOID_P EQUAL 4)
+-        target_link_libraries(SDLmain PUBLIC "$<$<STREQUAL:$<TARGET_PROPERTY:TYPE>,EXECUTABLE>:-Wl,--undefined=_WinMain@16>")
+-    else()
+-        target_link_libraries(SDLmain PUBLIC "$<$<STREQUAL:$<TARGET_PROPERTY:TYPE>,EXECUTABLE>:-Wl,--undefined=WinMain>")
+-    endif()
+-endif()
+-
+ if(SDL12TESTS)
+     add_subdirectory(test)
+ endif()
+ 
+-install(TARGETS SDL SDLmain
++install(TARGETS SDL
+   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}

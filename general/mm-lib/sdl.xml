@@ -21,7 +21,7 @@
 
     <para>
       This package provides an SDL-1.2 compatibility layer using SDL-2 as a
-      backend that need it.
+      backend.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>
@@ -33,7 +33,17 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">SDL Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Recommended patch:
+          <ulink url="&dl-root;/sdl12-compat/sdl12-compat-&sdl-version;-skip-static-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">sdl12-compat Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
@@ -45,6 +55,12 @@
 
   <sect2 role="installation">
     <title>Installation of sdl12-compat</title>
+
+    <para>
+      Patch out the build of the <filename>libSDL.a</filename> static library:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../sdl12-compat-&sdl-version;-skip-static-1.patch</userinput></screen>
 
     <para>
       Install <application>sdl12-compat</application> by running the
@@ -64,13 +80,13 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>ninja install &amp;&amp;
-rm -vf /usr/lib/libSDLmain.a</userinput></screen>
+<screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
 
   <sect2 role="commands">
     <title>Command Explanations</title>
+
     <para><parameter>-D SDL12TESTS=OFF</parameter>: This parameter disables
     building several tests.</para>
   </sect2>
