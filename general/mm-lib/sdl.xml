@@ -21,7 +21,8 @@
 
     <para>
       This package provides an SDL-1.2 compatibility layer using SDL-2 as a
-      backend that need it.
+      backend. There isn't a lot of packages that use SDL-1.2 anymore, but
+      there are still a few, which some are in this book.
     </para>
 
     <bridgehead renderas="sect3">Package Information</bridgehead>
@@ -71,8 +72,12 @@ rm -vf /usr/lib/libSDLmain.a</userinput></screen>
 
   <sect2 role="commands">
     <title>Command Explanations</title>
-    <para><parameter>-D SDL12TESTS=OFF</parameter>: This parameter disables
-    building several tests.</para>
+
+    <para>
+      <parameter>-D SDL12TESTS=OFF</parameter>: This parameter disables
+      building several tests.
+    </para>
+
   </sect2>
 
   <sect2 role="content">
