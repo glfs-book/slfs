@@ -163,7 +163,7 @@ version, so keep this at that. -->
 <!ENTITY openjdk-suffix                      "-ga">
 <!ENTITY openjdk-build                       "8">
 <!-- Shells -->
-<!ENTITY fish-version                        "4.5.0">
+<!ENTITY fish-version                        "4.6.0">
 <!ENTITY ksh-version                         "1.0.10">
 <!ENTITY mksh-version                        "R59c">
 <!-- MM-LIB -->
