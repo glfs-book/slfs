@@ -39,10 +39,12 @@
 
     <para>
       Modern Go is written in the Go language, thus requiring a Go compiler to
-      compile the modern Go compiler. If Go isn't installed already, then the
-      instructions will have you compile multiple older versions of Go,
-      starting with one that was written in C, then compile newer versions from
-      there.
+      compile the new compiler. If Go isn't installed already, then the
+      instructions below will have you compile multiple older versions of Go,
+      starting with one that was written in C, and the instructions compile
+      newer versions from that point.
+      <!-- make sure to check this process at every Go minor in case a newer
+      version is required to bootstrap it -renodr -->
     </para>
 
     &long-build-time;
@@ -54,6 +56,13 @@
         </para>
       </listitem>
     </itemizedlist>
+
+    <bridgehead renderas="sect3">Go Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required (to download older versions of Go)</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/basicnet/wget.html">wget</ulink>
+    </para>
 
   </sect2>
 
@@ -67,9 +76,12 @@
       by newer versions which are written fully in Go.
     </para>
 
-    <note><para>
-      Don't do the process in the main extracted directory.
-    </para></note>
+    <note>
+      <para>
+        Don't do the process in the main extracted directory. This will result
+        in numerous file conflicts later in the process.
+      </para>
+    </note>
 
     <para>
       First create a list of previous Go versions that must be downloaded and
