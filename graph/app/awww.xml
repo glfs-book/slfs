@@ -86,14 +86,10 @@
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>install -vDm755 target/release/swww -t /usr/bin/ &amp;&amp;
-install -vDm755 target/release/swww-daemon -t /usr/bin/</userinput></screen>
-
-<!-- uncomment with next update -seal331 5th November 2025
-<screen role="root"><userinput>install -vDm755 target/release/awww -t /usr/bin/ &amp;&amp;
+<screen role="root"><userinput>install -vDm755 target/release/awww        -t /usr/bin/ &amp;&amp;
 install -vDm755 target/release/awww-daemon -t /usr/bin/ &amp;&amp;
-ln -sfv /usr/bin/awww /usr/bin/swww &amp;&amp;
-ln -sfv /usr/bin/awww-daemon /usr/bin/swww-daemon</userinput></screen> -->
+ln -sfv awww        /usr/bin/swww &amp;&amp;
+ln -sfv awww-daemon /usr/bin/swww-daemon</userinput></screen>
 
     <para>
       If you wish to install shell completions, execute the relevant commands
@@ -106,22 +102,14 @@ ln -sfv /usr/bin/awww-daemon /usr/bin/swww-daemon</userinput></screen> -->
      install command for that shell here, the file is "completions/swww.elv".
      -seal331 4th November 2025 -->
 
-<screen role="root"><userinput>install -vDm644 completions/swww.bash /usr/share/bash-completion/completions/swww
-install -vDm644 completions/_swww -t /usr/share/zsh/site-functions/
-install -vDm644 completions/swww.fish -t /usr/share/fish/vendor_completions.d/</userinput></screen>
-
-<!-- uncomment with next update -seal331 5th November 2025
 <screen role="root"><userinput>install -vDm644 completions/awww.bash /usr/share/bash-completion/completions/awww
 install -vDm644 completions/_awww -t /usr/share/zsh/site-functions/
 install -vDm644 completions/awww.fish -t /usr/share/fish/vendor_completions.d/</userinput></screen>
--->
 
     <para>
       If you built the man pages, install them as the &root; user:
     </para>
 
-<!-- intentionally no futureproofing for renaming here because we use a
-     wildcard -seal331 5th November 2025 -->
 <screen role="root"><userinput>install -vDm644 doc/generated/* -t /usr/share/man/man1/</userinput></screen>
 
   </sect2>
@@ -146,10 +134,7 @@ install -vDm644 completions/awww.fish -t /usr/share/fish/vendor_completions.d/</
 
       <seglistitem>
         <seg>
-          <!-- uncomment with next update -seal331 5th November 2025
-          awww, awww-daemon, swww (link to awww), and swww-daemon (link to
-          swww-daemon) -->
-          swww and swww-daemon
+          awww, awww-daemon, swww (link to awww), and swww-daemon (link to swww-daemon)
         </seg>
         <seg>
           None
@@ -165,7 +150,6 @@ install -vDm644 completions/awww.fish -t /usr/share/fish/vendor_completions.d/</
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
-<!-- uncomment with next update -seal331 5th November 2025
       <varlistentry id="awww-bin">
         <term><command>awww</command></term>
         <listitem>
@@ -189,15 +173,12 @@ install -vDm644 completions/awww.fish -t /usr/share/fish/vendor_completions.d/</
           </indexterm>
         </listitem>
       </varlistentry>
--->
 
       <varlistentry id="swww-bin">
         <term><command>swww</command></term>
         <listitem>
           <para>
-            <!-- uncomment with next update -seal331 5th November 2025
-            is a symlink pointing to <command>awww</command> -->
-            is the control tool for swww-daemon
+            points to <command>awww</command> for backwards-compatibility
           </para>
           <indexterm zone="awww swww-bin">
             <primary sortas="b-swww-bin">swww</primary>
@@ -209,9 +190,7 @@ install -vDm644 completions/awww.fish -t /usr/share/fish/vendor_completions.d/</
         <term><command>swww-daemon</command></term>
         <listitem>
           <para>
-            <!-- uncomment with next update -seal331 5th November 2025
-            is a symlink pointing to <command>awww-daemon</command> -->
-            is the backend for the Answer to your Wayland Wallpaper Woes
+            points to <command>awww-daemon</command> for backwards-compatibility
           </para>
           <indexterm zone="awww swww-daemon">
             <primary sortas="b-swww-daemon">swww-daemon</primary>

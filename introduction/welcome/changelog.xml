@@ -43,6 +43,10 @@
       <para>April 4th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - awww: 0.11.2 -&gt; 0.12.0. Fixes
+          <ulink url="&slfs-issues;/624">#624</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - sdl12-compat: 1.2.74 -&gt; 1.2.76. Fixes
           <ulink url="&slfs-issues;/623">#623</ulink>.</para>
         </listitem>

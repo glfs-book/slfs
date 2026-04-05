@@ -206,7 +206,7 @@ version, so keep this at that. -->
 <!ENTITY rofi-version                        "2.0.0">
 <!ENTITY wofi-version                        "1.5.3">
 <!-- App -->
-<!ENTITY awww-version                        "0.11.2">
+<!ENTITY awww-version                        "0.12.0">
 <!ENTITY grim-version                        "1.5.0">
 <!ENTITY libvpl-tools-version                "1.5.0">
 <!ENTITY mesa-demos-version                  "9.0.0">
