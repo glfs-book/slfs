@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY pcsx-redux-download
+    "https://github.com/grumpycoders/pcsx-redux">
+  <!ENTITY pcsx-redux-dl-root
+    "https://github.com">
+]>
+
+<sect1 id="pcsx-redux" xreflabel="PCSX-Redux-&pcsx-redux-minor;">
+  <?dbhtml filename="pcsx-redux.html"?>
+
+  <title>PCSX-Redux-&pcsx-redux-minor;</title>
+
+  <indexterm zone="pcsx-redux">
+    <primary sortas="a-pcsx-redux">PCSX-Redux</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to PCSX-Redux</title>
+
+    <para>
+      The PCSX-Redux package contains an up-to-date fork of PCSX, a
+      PlayStation 1 emulator.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&pcsx-redux-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">PCSX-Redux Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <xref linkend="capstone"/>,
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
+      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
+      <xref linkend="glfw"/>,
+      <ulink url="&blfs-svn;/general/imagemagick.html">ImageMagick</ulink>,
+      <ulink url="&blfs-svn;/general/libuv.html">libuv</ulink>,
+      &opengl;, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="mipsel"/> and
+      <ulink url="&blfs-svn;/general/zip.html">Zip</ulink>
+      (for OpenBIOS)
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Downloading PCSX-Redux</title>
+
+    <para>
+      Create a list of the needed tarballs that will be downloaded:
+    </para>
+
+<!-- pcsx-redux won't have a prefix for the tarball name, since it... the
+     length isn't pretty for smaller displays. Git hell. -->
+<screen><userinput>cat &gt; pcsx-redux-&pcsx-redux-minor;-list &lt;&lt; "EOF"
+<literal>grumpycoders/pcsx-redux/archive/&pcsx-redux-version;.tar.gz
+serge1/ELFIO/archive/&pcsx-redux-elfio;.tar.gz
+taocpp/PEGTL/archive/&pcsx-redux-pegtl;.tar.gz
+gabomdq/SDL_GameControllerDB/archive/&pcsx-redux-sdlgcdb;.tar.gz
+TartanLlama/expected/archive/&pcsx-redux-expected;.tar.gz
+fmtlib/fmt/archive/&pcsx-redux-fmt;.tar.gz
+ocornut/imgui/archive/&pcsx-redux-imgui;.tar.gz
+mekhontsev/imgui_md/archive/&pcsx-redux-imgui-md;.tar.gz
+exoticlibraries/libcester/archive/&pcsx-redux-libcester;.tar.gz
+grumpycoders/luacov/archive/&pcsx-redux-luacov;.tar.gz
+lunarmodules/luafilesystem/archive/&pcsx-redux-luafs;.tar.gz
+grumpycoders/LuaJIT/archive/&pcsx-redux-luajit;.tar.gz
+bluebird75/luaunit/archive/&pcsx-redux-luaunit;.tar.gz
+luvit/luv/archive/&pcsx-redux-luv;.tar.gz
+keplerproject/lua-compat-5.3/archive/&pcsx-redux-luv-compat;.tar.gz
+Neargye/magic_enum/archive/&pcsx-redux-magic-enum;.tar.gz
+mity/md4c/archive/&pcsx-redux-md4c;.tar.gz
+mackron/miniaudio/archive/&pcsx-redux-miniaudio;.tar.gz
+iafonov/multipart-parser-c/archive/&pcsx-redux-mppc;.tar.gz
+grumpycoders/nanosvg/archive/&pcsx-redux-nanosvg;.tar.gz
+grumpycoders/nanovg/archive/&pcsx-redux-nanovg;.tar.gz
+grumpycoders/psxlua/archive/&pcsx-redux-psxlua;.tar.gz
+nothings/stb/archive/&pcsx-redux-stb;.tar.gz
+wolfpld/tracy/archive/&pcsx-redux-tracy;.tar.gz
+grumpycoders/uC-sdk/archive/&pcsx-redux-uc-sdk;.tar.gz
+Distrotech/ucl/archive/&pcsx-redux-ucl;.tar.gz
+uriparser/uriparser/archive/&pcsx-redux-uriparser;.tar.gz
+grumpycoders/vixl/archive/&pcsx-redux-vixl;.tar.gz
+herumi/xbyak/archive/&pcsx-redux-xbyak;.tar.gz
+grumpycoders/zep/archive/&pcsx-redux-zep;.tar.gz</literal>
+EOF</userinput></screen>
+
+    <para>
+      Now download the package, its submodules, and needed patches if
+      applicable, using <ulink
+      url="&blfs-svn;/basicnet/wget.html">Wget</ulink>:
+    </para>
+
+<screen><userinput>mkdir pcsx-redux-&pcsx-redux-minor; &amp;&amp;
+cd    pcsx-redux-&pcsx-redux-minor; &amp;&amp;
+grep -v '^#' ../pcsx-redux-&pcsx-redux-minor;-list | wget -i- -c \
+    -B &pcsx-redux-dl-root;</userinput></screen>
+
+    <para>
+      Verify every file has been downloaded:
+    </para>
+
+<screen><userinput>for file in $(grep -v '^#' ../pcsx-redux-&pcsx-redux-minor;-list); do
+  if [ ! -f $(basename $file) ]; then
+    echo "$(basename $file) NOT found"
+  fi
+done
+echo "Checking done"</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of PCSX-Redux</title>
+
+    <para>
+      Extract all the tarballs:
+    </para>
+
+<screen><userinput>for i in *.tar.?z*; do
+  echo "Extracting $i..."
+  tar -xf $i
+done</userinput></screen>
+
+    <para>
+      Now that everything has been extracted, the required extracted submodules
+      need to be moved into <filename
+      class="directory">pcsx-redux-&pcsx-redux-minor;...</filename>. Do that by
+      running the following commands:
+    </para>
+
+<screen><userinput>mv -T ELFIO-*                                           \
+      pcsx-redux-*/third_party/ELFIO                   &amp;&amp;
+mv -T PEGTL-*                                           \
+      pcsx-redux-*/third_party/PEGTL                   &amp;&amp;
+mv -T SDL_GameControllerDB-*                            \
+      pcsx-redux-*/third_party/SDL_GameControllerDB    &amp;&amp;
+mv -T expected-*                                        \
+      pcsx-redux-*/third_party/expected                &amp;&amp;
+mv -T fmt-*                                             \
+      pcsx-redux-*/third_party/fmt                     &amp;&amp;
+mv -T imgui-*                                           \
+      pcsx-redux-*/third_party/imgui                   &amp;&amp;
+mv -T imgui_md-*                                        \
+      pcsx-redux-*/third_party/imgui_md                &amp;&amp;
+mv -T libcester-*                                       \
+      pcsx-redux-*/third_party/libcester               &amp;&amp;
+mv -T luacov-*                                          \
+      pcsx-redux-*/third_party/luacov                  &amp;&amp;
+mv -T luafilesystem-*                                   \
+      pcsx-redux-*/third_party/luafilesystem           &amp;&amp;
+mv -T LuaJIT-*                                          \
+      pcsx-redux-*/third_party/luajit                  &amp;&amp;
+mv -T luaunit-*                                         \
+      pcsx-redux-*/third_party/luaunit                 &amp;&amp;
+mv -T luv-*                                             \
+      pcsx-redux-*/third_party/luv                     &amp;&amp;
+mv -T lua-compat-5.3-*                                  \
+      pcsx-redux-*/third_party/luv/deps/lua-compat-5.3 &amp;&amp;
+mv -T magic_enum-*                                      \
+      pcsx-redux-*/third_party/magic_enum              &amp;&amp;
+mv -T md4c-*                                            \
+      pcsx-redux-*/third_party/md4c                    &amp;&amp;
+mv -T miniaudio-*                                       \
+      pcsx-redux-*/third_party/miniaudio               &amp;&amp;
+mv -T multipart-parser-c-*                              \
+      pcsx-redux-*/third_party/multipart-parser-c      &amp;&amp;
+mv -T nanosvg-*                                         \
+      pcsx-redux-*/third_party/nanosvg                 &amp;&amp;
+mv -T nanovg-*                                          \
+      pcsx-redux-*/third_party/nanovg                  &amp;&amp;
+mv -T psxlua-*                                          \
+      pcsx-redux-*/third_party/psxlua                  &amp;&amp;
+mv -T stb-*                                             \
+      pcsx-redux-*/third_party/stb                     &amp;&amp;
+mv -T tracy-*                                           \
+      pcsx-redux-*/third_party/tracy                   &amp;&amp;
+mv -T uC-sdk-*                                          \
+      pcsx-redux-*/third_party/uC-sdk                  &amp;&amp;
+mv -T ucl-*                                             \
+      pcsx-redux-*/third_party/ucl                     &amp;&amp;
+mv -T uriparser-*                                       \
+      pcsx-redux-*/third_party/uriparser               &amp;&amp;
+mv -T vixl-*                                            \
+      pcsx-redux-*/third_party/vixl                    &amp;&amp;
+mv -T xbyak-*                                           \
+      pcsx-redux-*/third_party/xbyak                   &amp;&amp;
+mv -T zep-*                                             \
+      pcsx-redux-*/third_party/zep</userinput></screen>
+
+    <para>
+      Now go into the <filename
+      class="directory">pcsx-redux-&pcsx-redux-minor;...</filename> directory:
+    </para>
+
+<screen><userinput>cd pcsx-redux-&pcsx-redux-version;</userinput></screen>
+
+    <para>
+      Ensure usage of ImageMagick is correct:
+    </para>
+
+<screen><userinput>sed -i 's/convert/magick/g' Makefile</userinput></screen>
+
+    <important><para>
+      Building this package uses a lot of RAM (up to 3 GB per thread). If you
+      don't have enough physical RAM to allow for the usual amount of threads
+      you allocate for <command>make</command>, then lower the amount of
+      threads you will use. It's better to not rely on SWAP for this build.
+    </para></important>
+
+    <para>
+      Install PCSX-Redux by running the following commands:
+    </para>
+
+    <screen><userinput>make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make DESTDIR=/usr install</userinput></screen>
+
+    <para>
+      OpenBIOS is an open source PS1 BIOS that has varying levels of
+      compatibility. Spyro and Crash Bandicoot fail pretty early, but Resident
+      Evil works. There isn't an expansive list covering compatibility with
+      OpenBIOS, yet. If you want to install OpenBIOS, run the following
+      instructions:
+    </para>
+
+    <screen><userinput>make openbios</userinput></screen>
+
+    <para>
+      Now, install OpenBIOS as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make DESTDIR=/usr install-openbios</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed BIOS</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          pcsx-redux
+        </seg>
+        <seg>
+          openbios.bin
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/icons and
+          /usr/share/pcsx-redux
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="pcsx-redux-bin">
+        <term><command>pcsx-redux</command></term>
+        <listitem>
+          <para>
+            is the PCSX Redux PS1 emulator
+          </para>
+          <indexterm zone="pcsx-redux pcsx-redux">
+            <primary sortas="b-pcsx-redux">pcsx-redux</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
