@@ -43,6 +43,54 @@
       <para>April 7th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Fcitx5: 5.1.17 -&gt; 5.1.19. Fixes
+          <ulink url="&slfs-issues;/591">#591</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Anthy: 5.1.9 -&gt; 5.1.10. Fixes
+          <ulink url="&slfs-issues;/592">#592</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Chinese-Addons: 5.1.11 -&gt; 5.1.12. Fixes
+          <ulink url="&slfs-issues;/593">#593</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Configtool: 5.1.12 -&gt; 5.1.13. Fixes
+          <ulink url="&slfs-issues;/594">#594</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-GTK: 5.1.5 -&gt; 5.1.6. Fixes
+          <ulink url="&slfs-issues;/595">#595</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Lua: 5.0.15 -&gt; 5.0.16. Fixes
+          <ulink url="&slfs-issues;/596">#596</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-m17n: 5.1.5 -&gt; 5.1.6. Fixes
+          <ulink url="&slfs-issues;/597">#597</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Qt: 5.1.12 -&gt; 5.1.13. Fixes
+          <ulink url="&slfs-issues;/598">#598</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Table-Extra: 5.1.10 -&gt; 5.1.11. Fixes
+          <ulink url="&slfs-issues;/599">#599</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libime: 1.1.13 -&gt; 1.1.14. Fixes
+          <ulink url="&slfs-issues;/602">#602</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Glaze: 7.2.2 -&gt; 7.2.3. Fixes
+          <ulink url="&slfs-issues;/627">#627</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprgraphics: 0.5.0 -&gt; 0.5.1. Fixes
+          <ulink url="&slfs-issues;/632">#632</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - samurai: 737f70 -&gt; ff9b14. Fixes
           <ulink url="&slfs-issues;/631">#631</ulink>.</para>
         </listitem>

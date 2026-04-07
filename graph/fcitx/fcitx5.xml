@@ -34,6 +34,16 @@
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required submodule:
+          <ulink url="https://github.com/facebook/yoga/archive/&fcitx5-yoga;/yoga-&fcitx5-yoga;.tar.gz"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
     <bridgehead renderas="sect3">Fcitx5 Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
@@ -70,6 +80,13 @@
 
   <sect2 role="installation">
     <title>Installation of Fcitx5</title>
+
+    <para>
+      Unpack the yoga submodule into the right place:
+    </para>
+
+<screen><userinput>tar -xf ../yoga-&fcitx5-yoga;.tar.gz &amp;&amp;
+mv yoga-* -T third_party/yoga</userinput></screen>
 
     <para>
       Install Fcitx5 by running the following
