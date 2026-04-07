@@ -145,8 +145,8 @@ version, so keep this at that. -->
 <!-- Python Modules -->
 <!ENTITY nvchecker-version                   "2.20">
 <!-- END PYTHON -->
-<!ENTITY samurai-minor                       "737f70">
-<!ENTITY samurai-version                     "737f702fed670acb25e5e70b4b802690df7a4a8b">
+<!ENTITY samurai-minor                       "ff9b14">
+<!ENTITY samurai-version                     "ff9b14caa1c27f694a7677f0d5da3e4fff657788">
 <!ENTITY shaderc-version                     "2026.1">
 <!ENTITY strace-version                      "6.19">
 <!ENTITY socat-version                       "1.8.1.1">
