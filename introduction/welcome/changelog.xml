@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>April 7th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - samurai: 737f70 -&gt; 1.3. Fixes
+          <ulink url="&slfs-issues;/631">#631</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 5th, 2026</para>
       <itemizedlist>
         <listitem>

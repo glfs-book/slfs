@@ -7,10 +7,10 @@
   <!ENTITY samurai-download "https://github.com/michaelforney/samurai/archive/&samurai-version;/samurai-&samurai-version;.tar.gz">
 ]>
 
-<sect1 id="samurai" xreflabel="samurai-&samurai-minor;">
+<sect1 id="samurai" xreflabel="samurai-&samurai-version;">
   <?dbhtml filename="samurai.html"?>
 
-  <title>samurai-&samurai-minor;</title>
+  <title>samurai-&samurai-version;</title>
 
   <indexterm zone="samurai">
     <primary sortas="a-samurai">samurai</primary>
