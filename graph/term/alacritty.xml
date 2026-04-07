@@ -108,8 +108,9 @@ install -vDm644 extra/completions/alacritty.fish -t /usr/share/fish/vendor_compl
       If you built the man pages, install them as the
       <systemitem class="username">root</systemitem> user:
     </para>
-<screen role="root"><userinput>install -vDm644 extra/man/*.1 -t /usr/share/man/man1/ &amp;&amp;
-install -vDm644 extra/man/*.5 -t /usr/share/man/man5/</userinput></screen>
+<screen role="root"><userinput>for f in extra/man/*.{1..8}; do
+    install -vDm644 $f -t /usr/share/man/man${f##*.}/
+done</userinput></screen>
 
     <para>
       If you wish to install the documentation, execute the following as the
