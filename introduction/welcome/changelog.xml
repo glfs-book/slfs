@@ -43,6 +43,10 @@
       <para>April 7th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - Alacritty: 0.16.1 -&gt; 0.17.0. Fixes
+          <ulink url="&slfs-issues;/630">#630</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Fcitx5: 5.1.17 -&gt; 5.1.19. Fixes
           <ulink url="&slfs-issues;/591">#591</ulink>.</para>
         </listitem>
