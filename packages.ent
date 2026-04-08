@@ -274,7 +274,7 @@ version, so keep this at that. -->
 <!ENTITY melonds-version                     "1.1">
 <!ENTITY mgba-minor-version                  "afa6fb">
 <!ENTITY mgba-version                        "afa6fbd72a90e8c5fabd1842d28784a1ce8ae704">
-<!ENTITY dolphin-version                     "2512">
+<!ENTITY dolphin-version                     "2603a">
 <!ENTITY dolphin-sfml-external               "0fa201c969e48ecc253581c5841ce73f44d42f49">
 <!ENTITY dolphin-vk-mem-alloc-external       "3bab6924988e5f19bf36586a496156cf72f70d9f">
 <!ENTITY dolphin-cubeb-external              "54217bca3f3e0cd53c073690a23dd25d83557909">
@@ -293,7 +293,7 @@ version, so keep this at that. -->
 <!ENTITY dolphin-xxhash-external             "e626a72bc2321cd320e953a0ccf1584cad60f363">
 <!ENTITY dolphin-zlib-ng-external            "ce01b1e41da298334f8214389cc9369540a7560f">
 <!ENTITY dolphin-enet-external               "2662c0de09e36f2a2030ccc2c528a3e4c9e8138a">
-<!ENTITY dolphin-fmt-external                "e69e5f977d458f2650bb346dadf2ad30c5320281">
+<!ENTITY dolphin-fmt-external                "e424e3f2e607da02742f73db84873b8084fc714c">
 <!ENTITY dolphin-libspng-external            "fb768002d4288590083a476af628e51c3f1d47cd">
 <!ENTITY dolphin-libusb-external             "15a7ebb4d426c5ce196684347d2b7cafad862626">
 <!ENTITY dolphin-hidapi-external             "d6b2a974608dec3b76fb1e36c189f22b9cf3650c">

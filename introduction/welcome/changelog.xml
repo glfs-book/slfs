@@ -43,6 +43,10 @@
       <para>April 8th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - Dolphin: 2512 -&gt; 2603a. Fixes
+          <ulink url="&slfs-issues;/606">#606</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - Mbed-TLS-3.6.5 -&gt; 3.6.6 (Security Update). Fixes
           <ulink url="&slfs-issues;/621">#621</ulink>.</para>
         </listitem>
