@@ -27,7 +27,7 @@
     <para>
       This page installs both the PlutoVG and PlutoSVG packages. PlutoVG
       provides a 2D vector graphics library, whereas PlutoSVG utilizes PlutoVG
-      to provide an SVG rendering library. PlutoVG will be installed first,
+      to provide an SVG rendering library. PlutoVG will be installed first and
       then PlutoSVG.
     </para>
 
@@ -105,27 +105,29 @@ ninja -C svg-build</userinput></screen>
     <para>
       As a post-installation step, you need to fix library sonames that are
       supposed to be symlinks. The sonames are the actual libraries which must
-      be moved to indicate that they are, then <command>ldconfig</command> must
-      be ran afterwards to reinstate them as symlinks. Do that now as the
-      &root; user:
+      be moved to indicate that they are libraries, and then
+      <command>ldconfig</command> must be ran afterwards to reinstate them as
+      symlinks. Do that now as the &root; user:
     </para>
 
-<screen role="root"><userinput>rm -vf /usr/lib/libplutovg.so.&plutovg-version;  &amp;&amp;
-rm -vf /usr/lib/libplutosvg.so.&plutosvg-version; &amp;&amp;
+<screen role="root"><userinput>rm -vf /usr/lib/libplutovg.so.&plutovg-version;     &amp;&amp;
+rm -vf /usr/lib/libplutosvg.so.&plutosvg-version;    &amp;&amp;
 mv -vf /usr/lib/libplutovg.so.&plutovg-major;{,.&plutovg-minor;}  &amp;&amp;
 mv -vf /usr/lib/libplutosvg.so.&plutosvg-major;{,.&plutosvg-minor;} &amp;&amp;
 ldconfig</userinput></screen>
 
     <note><para>
       If you reinstall or upgrade PlutoVG and PlutoSVG, the above set of
-      commands must be ran since the installation will overwrite the symlinks.
+      commands must be run again since the installation process will overwrite
+      the symlinks.
     </para></note>
 
     <important><para>
       If you run the above set of commands more than once without another
       reinstallation or upgrade between, then the actual libraries will be
       deleted and symlinks will be put in their place. You will then have to
-      reinstall PlutoVG and PlutoSVG, then run the commands again.
+      reinstall PlutoVG and PlutoSVG and run the commands again to fix this
+      problem.
     </para></important>
 
   </sect2>
