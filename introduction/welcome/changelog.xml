@@ -43,6 +43,10 @@
       <para>April 8th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - Flatpak: 1.16.3 -&gt; 1.16.5 (Security Update).
+          Fixes <ulink url="&slfs-issues;/637">#637</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - Glaze: 7.2.3 -&gt; 7.3.2. Fixes
           <ulink url="&slfs-issues;/636">#636</ulink>.</para>
         </listitem>
