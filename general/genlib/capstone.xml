@@ -40,8 +40,8 @@
     </para>
 
     <note><para>
-      <command>make</command> can be used to install the package, but will not
-      provide files for finding Capstone via CMake. CMake must be used to
+      <command>make</command> can be used to install the package, but it will
+      not provide files for finding Capstone via CMake. CMake must be used to
       install those files, so using CMake is highly recommended.
     </para></note>
 
@@ -102,7 +102,7 @@ ninja</userinput></screen>
         <term><command>cstool</command></term>
         <listitem>
           <para>
-            allows working with the Capstone engine
+            allows users to work with the Capstone engine
           </para>
           <indexterm zone="capstone cstool">
             <primary sortas="b-cstool">cstool</primary>
