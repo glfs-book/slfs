@@ -115,7 +115,7 @@ grep -v '^#' ../pcsx-redux-&pcsx-redux-minor;-list | wget -i- -c \
     -B &pcsx-redux-dl-root;</userinput></screen>
 
     <para>
-      Verify every file has been downloaded:
+      Next, verify that every file has been downloaded:
     </para>
 
 <screen><userinput>for file in $(grep -v '^#' ../pcsx-redux-&pcsx-redux-minor;-list); do
@@ -131,7 +131,7 @@ echo "Checking done"</userinput></screen>
     <title>Installation of PCSX-Redux</title>
 
     <para>
-      Extract all the tarballs:
+      Extract all of the tarballs:
     </para>
 
 <screen><userinput>for i in *.tar.?z*; do
@@ -206,14 +206,14 @@ mv -T zep-*                                             \
       pcsx-redux-*/third_party/zep</userinput></screen>
 
     <para>
-      Now go into the <filename
+      Now change into the <filename
       class="directory">pcsx-redux-&pcsx-redux-minor;...</filename> directory:
     </para>
 
 <screen><userinput>cd pcsx-redux-&pcsx-redux-version;</userinput></screen>
 
     <para>
-      Ensure usage of ImageMagick is correct:
+      Ensure that the usage of ImageMagick is correct:
     </para>
 
 <screen><userinput>sed -i 's/convert/magick/g' Makefile</userinput></screen>
@@ -241,7 +241,7 @@ mv -T zep-*                                             \
       OpenBIOS is an open source PS1 BIOS that has varying levels of
       compatibility. Spyro and Crash Bandicoot fail pretty early, but Resident
       Evil works. There isn't an expansive list covering compatibility with
-      OpenBIOS, yet. If you want to install OpenBIOS, run the following
+      OpenBIOS yet. If you want to install OpenBIOS, run the following
       instructions:
     </para>
 
