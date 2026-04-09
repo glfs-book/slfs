@@ -43,6 +43,10 @@
       <para>April 9th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - m17n-db: 1.8.10 -&gt; 1.8.11. Fixes
+          <ulink url="&slfs-issues;/641">#643</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - OBS-Studio: 32.1.0 -&gt; 32.1.1. Fixes
           <ulink url="&slfs-issues;/641">#641</ulink>.</para>
         </listitem>
