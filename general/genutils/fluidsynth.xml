@@ -151,8 +151,9 @@ install -vDm644 fluid-soundfont-&fs-sf2;/*.sf2 -t /usr/share/soundfonts/</userin
 <screen role="root" remap="nodump"><userinput>ln -svf <replaceable>&lt;SOUNDFONT&gt;</replaceable> /usr/share/soundfonts/default.sf2</userinput></screen>
 
     <important><para>
-      If you are distributing, be sure to read the licenses of the soundfonts
-      you install to ensure that they can be distributed.
+      If you are distributing this package as part of a distribution, be sure to
+      read the licenses of the soundfonts you install to ensure that they can
+      legally be distributed. If you are in doubt, please contact your lawyer.
     </para></important>
 
   </sect2>
@@ -191,16 +192,17 @@ install -vDm644 fluid-soundfont-&fs-sf2;/*.sf2 -t /usr/share/soundfonts/</userin
 cp -v /etc/fluidsynth ~/.config/fluidsynth</userinput></screen>
 
       <para>
-        The main things you'll want to edit are the soundfont path if you
-        haven't created the default SoundFont symlink and the startup flags.
-        For instance, by default it will try to use ALSA, and depending on the
-        configuration, this will probably fail. You can instead use PulseAudio
-        or Pipewire. You can change other things too.
+        The main configuration values you'll want to edit are the soundfont
+        path (if you haven't created the default SoundFont symlink), and the
+        startup flags. For instance, FluidSynth will default to using ALSA, and
+        depending on the system's configuration, this may fail. You can instead
+        use PulseAudio or Pipewire. There are several other options that you
+        can set in this configuration file as well.
       </para>
 
       <note><para>
         These files only affect FluidSynth when it starts up automatically as a
-        Systemd service. Running FluidSynth manually, you need to specify all
+        Systemd service. If you run FluidSynth manually, you need to specify all
         the options as it won't reference any of the configuration files.
       </para></note>
 
@@ -212,14 +214,14 @@ cp -v /etc/fluidsynth ~/.config/fluidsynth</userinput></screen>
     <title>Using FluidSynth</title>
 
     <para>
-      For some applications that utilize FluidSynth, they expect it to be
-      running before the application is started. If FluidSynth is started after
-      the fact, the application may not be able to reach FluidSynth.
+      Some applications that utilize FluidSynth expect it to be running before
+      the application is launched. If FluidSynth isn't started prior to the
+      application, the application may not be able to connect to FluidSynth.
     </para>
 
     <para>
-      RoseGarden behaves this way, both from source and as a Flatpak, but once
-      FluidSynth is started beforehand, RoseGarden is able to use FluidSynth.
+      RoseGarden behaves this way, both from source and as a Flatpak, but as
+      long as FluidSynth is started first, RoseGarden is able to use FluidSynth.
     </para>
 
   </sect2>
@@ -230,7 +232,8 @@ cp -v /etc/fluidsynth ~/.config/fluidsynth</userinput></screen>
     &cmake-skip-install-rpath;
 
     <para><parameter>-D FLUID_DAEMON_ENV_FILE=/etc/fluidsynth</parameter>: This
-    parameter makes the config file hardcoded to be in a simple path.</para>
+    parameter hardcodes the location of the configuration file to be in an
+    easier and more consistent path.</para>
 
   </sect2>
 
