@@ -55,7 +55,8 @@
 <screen remap="pre"><userinput>patch -Np1 -i ../libbacktrace-&libbacktrace-minor;-pkgconfig-1.patch</userinput></screen>
 
     <para>
-      Regenerate the autoconf files to ensure they're new:
+      Regenerate the autoconf files to account for the patch's changes to
+      the configure script:
     </para>
 
     <screen remap="pre"><userinput>autoreconf -fi</userinput></screen>
@@ -66,7 +67,7 @@
 
 <screen><userinput>./configure --prefix=/usr    \
             --disable-static \
-            --enable-shared &amp;&amp;
+            --enable-shared  &amp;&amp;
 make</userinput></screen>
 
     <para>
