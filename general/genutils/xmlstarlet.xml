@@ -55,7 +55,7 @@
       Install XMLStarlet by running the following commands:
     </para>
 
-    <screen><userinput>./configure --prefix=/usr \
+    <screen><userinput>./configure --prefix=/usr                    \
             --with-lib{xml,xslt}-prefix=/usr \
             --docdir=/usr/share/doc/xmlstarlet-&xmlstarlet-version; &amp;&amp;
 make</userinput></screen>
@@ -64,7 +64,7 @@ make</userinput></screen>
       Now, as the &root; user:
     </para>
 
-    <screen role="root"><userinput>make install &amp;&amp;
+    <screen role="root"><userinput>make install                    &amp;&amp;
 ln -sfv xml /usr/bin/xmlstarlet &amp;&amp;
 install -vm644 doc/xmlstarlet-ug.pdf -t /usr/share/doc/xmlstarlet-&xmlstarlet-version;</userinput></screen>
   </sect2>
