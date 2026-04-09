@@ -47,10 +47,9 @@
     <para role="recommended">
       <ulink url="&blfs-svn;/general/desktop-file-utils.html">desktop-file-utils</ulink>,
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
-      <ulink url="&blfs-svn;/general/lua.html">Lua</ulink>,
+      <ulink url="&blfs-svn;/general/lua.html">Lua</ulink>, and
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink> and/or
-      &sdl2; (for the frontends), and
-      <ulink url="&blfs-svn;/server/sqlite.html">SQLite</ulink>
+      &sdl2; (for the frontends)
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
