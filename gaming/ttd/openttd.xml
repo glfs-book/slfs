@@ -92,6 +92,13 @@ ninja</userinput></screen>
 <screen role="root"><userinput>ninja install &amp;&amp;
 mv -v /usr/share/doc/openttd{,-&openttd-version;}</userinput></screen>
 
+    <para>
+      Next, adjust the .desktop file to use the correct path for the openttd
+      program as the &root; user:
+    </para>
+
+<screen role="root"><userinput>sed -i 's:Exec=openttd:Exec=/usr/games/openttd:' /usr/share/applications/openttd.desktop</userinput></screen>
+
     <note><para>
       OpenTTD will install into <filename
       class="directory">/usr/games</filename>.

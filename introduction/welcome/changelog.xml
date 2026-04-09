@@ -43,6 +43,10 @@
       <para>April 8th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - OpenTTD: 15.2 -&gt; 15.3. Fixes
+          <ulink url="&slfs-issues;/629">#629</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - libdatachannel: 0.24.1 -&gt; 0.24.2 (Security
           Update). Fixes <ulink url="&slfs-issues;/620">#620</ulink>.</para>
         </listitem>

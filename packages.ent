@@ -345,7 +345,7 @@ version, so keep this at that. -->
 <!ENTITY jdk-modern                          "21.0.10+6">
 <!ENTITY prism-launcher-version              "10.0.5">
 <!-- TTD -->
-<!ENTITY openttd-version                     "15.2">
+<!ENTITY openttd-version                     "15.3">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->
