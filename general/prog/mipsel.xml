@@ -25,17 +25,17 @@
 
     <para>
       MIPSel is the little-endian (32-bit) variant of MIPS, used by early
-      systems, typically in embedded systems. Video game consoles of that time
-      often used PowerPC, MIPS 64, or MIPS 32 architectures. The toolchain that
-      will be built with the following instructions will aim to target the
+      systems, mainly in embedded environments. Video game consoles of that time
+      often used the PowerPC, MIPS 64, or MIPS 32 architectures. The toolchain
+      that will be built with the following instructions will aim to target the
       latter.
     </para>
 
     <para>
-      The instructions will build a simple cross compiler for MIPSel using
-      Binutils and GCC. Both will be installed in this page. The target is
-      <literal>mipsel-linux-gnu</literal>, which is shorter than a lot of other
-      triplets.
+      The instructions below will build a simple cross compiler for MIPSel
+      using Binutils and GCC. Both will be installed in this page. The target is
+      <literal>mipsel-linux-gnu</literal>, which is shorter than most other
+      target triplets.
     </para>
 
     &long-build-time;
@@ -114,7 +114,7 @@ rm -rf DESTDIR</userinput></screen>
 
     <para>
       <command>rm -v DESTDIR/usr/lib/bfd-plugins/libdep.so</command>:
-      This command removes an library that conflicts with the original library
+      This command removes a library that conflicts with the original library
       provided by the original compilation of
       <ulink url="&lfs-root;/chapter08/binutils.html">Binutils</ulink>.
     </para>
@@ -164,7 +164,8 @@ ln -sfv mipsel-linux-gnu-gcc /usr/bin/mipsel-linux-gnu-cc</userinput></screen>
 
     <para>
       <parameter>--disable-threads</parameter>: This option disables
-      thread support due to building errors in GCC.
+      thread support due to build errors in GCC. Threading support is also
+      unnecessary for this compiler.
     </para>
 
     <para>
