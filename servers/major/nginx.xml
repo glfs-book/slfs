@@ -4,7 +4,8 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY nginx-download "https://github.com/nginx/nginx/releases/download/release-&nginx-version;/nginx-&nginx-version;.tar.gz">
+  <!--<!ENTITY nginx-download "https://github.com/nginx/nginx/releases/download/release-&nginx-version;/nginx-&nginx-version;.tar.gz">-->
+  <!ENTITY nginx-download "https://nginx.org/download/nginx-&nginx-version;.tar.gz">
 ]>
 
 <sect1 id="nginx" xreflabel="NGINX-&nginx-version;">
@@ -128,7 +129,7 @@ install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
     <para>
       <parameter>--prefix=/etc/nginx</parameter>: Unlike other package builds
       that set the prefix to <filename class="directory">/usr</filename>, this
-      prefix is set differently so all the configuration files are put and
+      prefix is set differently so all the configuration files are placed and
       checked in a sane directory structure/location.
     </para>
 
@@ -185,13 +186,13 @@ install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
         Most of the configuration is done in
         <filename>/etc/nginx/nginx.conf</filename>. Paths to content which will
         be served aren't hardcoded, and you can specify where important HTML
-        is. You should read the NGINX <ulink
+        files are. You should read the NGINX <ulink
         url="https://nginx.org/en/docs/beginners_guide.html">beginner's
         guide</ulink> to learn how to configure the NGINX daemon.
       </para>
 
       <para>
-        If you want Apache-styled per-user handing of HTML paths, you can do
+        If you want Apache-styled per-user handling of HTML paths, you can do
         something like this in <filename>/etc/nginx/nginx.conf</filename>:
       </para>
 
@@ -224,6 +225,7 @@ install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
 <literal>[Unit]
 Description=NGINX Web Server
 After=network-online.target remote-fs.target nss-lookup.target
+Conflicts=httpd.service
 
 [Service]
 Type=forking

@@ -43,6 +43,10 @@
       <para>April 8th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - NGINX: 1.29.7 -&gt; 1.29.8 (Security Update). Fixes
+          <ulink url="&slfs-issues;/635">#635</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - OpenTTD: 15.2 -&gt; 15.3. Fixes
           <ulink url="&slfs-issues;/629">#629</ulink>.</para>
         </listitem>
