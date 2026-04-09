@@ -22,9 +22,9 @@
 
     <para>
       The cmark package contains a CommonMark parsing and rendering utility and
-      library in C. BLFS provides the Python version, which the
-      <command>cmark</command> script from it will be moved safely out of the
-      way in this installation.
+      library in C. BLFS provides the Python version, and the
+      <command>cmark</command> script provided by it will be moved safely out
+      of the way in this installation to prevent conflicts.
     </para>
 
     <itemizedlist spacing="compact">
