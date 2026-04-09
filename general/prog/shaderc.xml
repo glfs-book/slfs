@@ -21,13 +21,13 @@
     <title>Introduction to Shaderc</title>
 
     <para>
-      Shaderc provides a suite of software, helping developers transform and
+      Shaderc provides a suite of software that helps developers transform and
       compile GLSL/HLSL/SPIR-V shaders.
     </para>
 
     <para>
       BLFS provides <command>glslc</command> from this package, but not all of
-      the package which some other packages may expect.
+      the libraries which some other packages (such as PCSX2) may expect.
     </para>
 
     <itemizedlist spacing="compact">
