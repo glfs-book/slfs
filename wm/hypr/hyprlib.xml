@@ -47,6 +47,7 @@
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       &gbm;,
       <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
+      <xref linkend="iniparser"/>,
       <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
