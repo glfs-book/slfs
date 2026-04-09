@@ -40,11 +40,19 @@
   <sect2 role="installation">
     <title>Installation of libx86emu</title>
 
+    <note>
+      <para>
+        The build process of this package may output messages about 'cut' and
+        'cat' being unable to find VERSION. These are normal and occur because
+        this package isn't being built from a git repository.
+      </para>
+    </note>
+
     <para>
       Install libx86emu by running the following commands:
     </para>
 
-<screen><userinput>make VERSION=&libx86emu-version; \
+<screen><userinput>make VERSION=&libx86emu-version;     \
      MAJOR_VERSION=&libx86emu-major; \
      shared</userinput></screen>
 
@@ -52,7 +60,7 @@
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>make VERSION=&libx86emu-version; \
+<screen role="root"><userinput>make VERSION=&libx86emu-version;     \
      MAJOR_VERSION=&libx86emu-major; \
      LIBDIR=/usr/lib \
      install</userinput></screen>
