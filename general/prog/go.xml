@@ -69,6 +69,9 @@
   <sect2 role="installation">
     <title>Bootstrapping Go</title>
 
+    <!-- EDITORS NOTE: Please review src/cmd/dist/README to determine the
+    minimum version of Go required for bootstrapping.-->
+
     <para>
       If you haven't installed Go yet, you will need to bootstrap it. GCC-Go is
       unsuitable as it has several issues that prevent it from being able to
@@ -148,7 +151,7 @@ done; exit</userinput></screen>
 
     <para>
       In order to build modern Go, ensure you already have Go installed or
-      boostrapped Go.
+      bootstrapped Go.
     </para>
 
     <para>

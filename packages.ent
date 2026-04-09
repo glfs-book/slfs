@@ -119,7 +119,7 @@ version, so keep this at that. -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20260126">
-<!ENTITY go-version                          "1.26.1">
+<!ENTITY go-version                          "1.26.2">
 <!ENTITY go1_4-version                       "ceb95ea6aef52c1fb472d3539c6ef68670778b5b">
 <!ENTITY go1_17-version                      "15da892a4950a4caac987ee72c632436329f62d5">
 <!ENTITY go1_20-version                      "90a870f1dc49bfcc6ffe95f80fbaf21875198e7a">
