@@ -43,6 +43,10 @@
       <para>April 8th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - platformdirs: 4.9.4 -&gt; 4.9.6. Fixes
+          <ulink url="&slfs-issues;/639">#639</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - Go: 1.26.1. -&gt; 1.26.2 (Security Update). Fixes
           <ulink url="&slfs-issues;/638">#638</ulink>.</para>
         </listitem>
