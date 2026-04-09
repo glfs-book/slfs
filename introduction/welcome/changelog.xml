@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>April 9th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - PrismLauncher: 10.0.5 -&gt; 11.0.0. Fixes
+          <ulink url="&slfs-issues;/640">#640</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 8th, 2026</para>
       <itemizedlist>
         <listitem>
