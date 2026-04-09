@@ -16,7 +16,7 @@
 <!ENTITY libime-kenlm                        "4cb443e60b7bf2c0ddf3c745378f76cb59e254e5">
 <!ENTITY libjuice-version                    "1.7.0">
 <!ENTITY libsrtp-version                     "2.8.0">
-<!ENTITY libdatachannel-version              "0.24.1">
+<!ENTITY libdatachannel-version              "0.24.2">
 <!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
 <!ENTITY libdatachannel-usrsctp              "fec583d54493f879d2ae44a743423bf8a04371ab">
 <!ENTITY libmspack-version                   "1.11">
