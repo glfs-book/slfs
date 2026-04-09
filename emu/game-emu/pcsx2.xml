@@ -91,7 +91,8 @@
     <title>Installation of PCSX2</title>
 
     <para>
-      Adjust where data gets installed to:
+      First, adjust the location that CMake installs data files for this package
+      to be more consistent:
     </para>
 
 <screen remap="pre"><userinput>sed '/CMAKE_INSTALL_FULL_DATADIR/s@/PCSX2\b@/'"pcsx2@" \
@@ -118,30 +119,30 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>ninja install &amp;&amp;
-ln -svf pcsx2-qt /usr/bin/pcsx2 &amp;&amp;
+    <screen role="root"><userinput>ninja install                   &amp;&amp;
+ln -sfv pcsx2-qt /usr/bin/pcsx2 &amp;&amp;
 ln -sfv /usr/share/pcsx2/resources/icons/AppIconLarge.png \
         /usr/share/pixmaps/pcsx2.png</userinput></screen>
 
     <para>
-      Ensure PCSX2 can have net capabilities, as the &root; user:
+      Next, ensure that PCSX2 can have network capabilities as the &root; user:
     </para>
 
 <screen role="root"><userinput>setcap cap_net_admin,cap_net_raw=eip /usr/bin/pcsx2-qt</userinput></screen>
 
     <para>
       If you downloaded the recommended game patch collection, install it in
-      the proper location as the &root; user:
+      the expected location as the &root; user:
     </para>
 
 <screen role="root"><userinput>cp -v ../../patches.zip /usr/share/pcsx2/resources</userinput></screen>
 
     <para>
-      Create a desktop file so it can be launched with launchers, as the &root;
-      user:
+      Finally, create a desktop file so PCSX2 can be launched with launchers
+      as the &root; user:
     </para>
 
-<screen role="root"><userinput>mkdir -pv /usr/share/applications &amp;&amp;
+    <screen role="root"><userinput>mkdir -pv /usr/share/applications               &amp;&amp;
 cat &gt; /usr/share/applications/pcsx2.desktop &lt;&lt; EOF
 <literal>[Desktop Entry]
 Name=PCSX2
