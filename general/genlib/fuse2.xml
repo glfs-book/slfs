@@ -22,7 +22,7 @@
     <para>
       FUSE, or Filesystem in Userspace, allows userspace programs to create
       virtual filesystems. This is a really helpful technology, and the current
-      Fuse version is major version 3. Fuse2 on the otherhand is still used by
+      Fuse version is major version 3. Fuse2 on the other hand is still used by
       AppImages which rely on this technology. You may extract AppImages as you
       wish which would bypass this requirement, but other people opt to just
       install Fuse2 and run the AppImages directly.
