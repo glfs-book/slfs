@@ -123,10 +123,10 @@ ninja</userinput></screen>
       OpenJDK version 20 or above and made it the
       default. After you create an instance, you will need to edit that
       instance, go to the <quote>Settings</quote> section, then tick
-      <quote>Skip Java Compatibility Checks</quote> to avoid Minecraft from
-      refusing to launch. This has to be done for every instance. If you
-      installed <xref linkend="openjdk"/> and made it the default JDK, this
-      doesn't need to be done at all.
+      <quote>Skip Java Compatibility Checks</quote> to allow Minecraft to
+      launch. This has to be done for every instance. If you installed
+      <xref linkend="openjdk"/> and made it the default JDK, this doesn't
+      need to be done at all.
     </para>
 
     <para>
@@ -138,8 +138,8 @@ ninja</userinput></screen>
       ideal setup is to make <xref linkend="openjdk"/> the default JDK, but
       also install <ulink
       url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink> so that the JDK
-      version can be overridden per MC instance. Newer JDK also requires a
-      newer JDK to bootstrap from, so the one provided in this book will not
+      version can be overridden per MC instance. Newer JDKs also require a
+      newer JDK than 17 to bootstrap from, so the one provided in this book will not
       work for newer JDKs. In any case, you will need to copy the same steps in
       the above paragraph, as well as changing the <quote>Java
       Installation</quote> to point to the desired JDK. When installing the
