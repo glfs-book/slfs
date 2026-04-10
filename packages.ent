@@ -59,7 +59,7 @@
 <!-- General Utilities -->
 <!ENTITY cava-version                        "0.10.7">
 <!ENTITY cmark-version                       "0.31.2">
-<!ENTITY htop-version                        "3.4.1">
+<!ENTITY htop-version                        "3.5.0">
 <!ENTITY btop-version                        "1.4.6">
 <!ENTITY cldr-emoji-annotation-version       "38">
 <!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">

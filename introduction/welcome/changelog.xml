@@ -47,6 +47,10 @@
           <ulink url="&slfs-issues;/641">#643</ulink>.</para>
         </listitem>
         <listitem>
+          <para>[tox] - htop: 3.4.1 -&gt; 3.5.0. Fixes
+          <ulink url="&slfs-issues;/640">#642</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - OBS-Studio: 32.1.0 -&gt; 32.1.1. Fixes
           <ulink url="&slfs-issues;/641">#641</ulink>.</para>
         </listitem>

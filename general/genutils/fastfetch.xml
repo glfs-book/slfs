@@ -54,7 +54,6 @@
       &opengl;,
       <ulink url="&glfs-website;/shareddeps/ocl-icd.html">OCL-ICD</ulink>,
       <ulink url="&blfs-svn;/xfce/xfconf.html">Xfconf</ulink>,
-      <ulink url="&blfs-svn;/server/sqlite.html">SQLite</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink> and
       <ulink url="&arch-pkgs;/extra/x86_64/directx-headers/">DirectX-Headers
