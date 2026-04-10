@@ -22,8 +22,9 @@
 
     <para>
       The NGINX HTTP web server is one of the most popular alternatives to
-      Apache while aiming to be high performance, highly configurable, and
-      flexible with a lot of support.
+      Apache while aiming to be highly configurable, flexible, and
+      performant. It also has a lot of support, being backed by F5 on top of
+      having great documentation.
     </para>
 
     <itemizedlist spacing="compact">
