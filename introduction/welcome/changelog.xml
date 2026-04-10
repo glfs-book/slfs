@@ -43,6 +43,10 @@
       <para>April 9th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - m17n-db: 1.8.10 -&gt; 1.8.11. Fixes
+          <ulink url="&slfs-issues;/641">#643</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - htop: 3.4.1 -&gt; 3.5.0. Fixes
           <ulink url="&slfs-issues;/640">#642</ulink>.</para>
         </listitem>
