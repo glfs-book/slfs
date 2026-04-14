@@ -73,7 +73,7 @@
     </para>
 
 <screen><userinput>patch -Np1 -i ../fuse-&fuse2-version;-build_fixes-1.patch &amp;&amp;
-autoreconf -i -I/usr/share/gettext/m4</userinput></screen>
+autoreconf -fi -I/usr/share/gettext/m4</userinput></screen>
 
     <para>
       Install Fuse2 by running the following
