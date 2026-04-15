@@ -38,17 +38,30 @@
       </itemizedlist>
     </listitem>
     -->
+    <listitem>
+      <para>April 15th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Flatpak: 1.16.5 -&gt; 1.16.6. Fixes
+          <ulink url="&slfs-issues;/647">#647</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - OSTree: 2025.7 -&gt; 2026.1. Fixes
+          <ulink url="&slfs-issues;/648">#648</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>April 9th, 2026</para>
       <itemizedlist>
         <listitem>
           <para>[tox] - m17n-db: 1.8.10 -&gt; 1.8.11. Fixes
-          <ulink url="&slfs-issues;/641">#643</ulink>.</para>
+          <ulink url="&slfs-issues;/643">#643</ulink>.</para>
         </listitem>
         <listitem>
           <para>[tox] - htop: 3.4.1 -&gt; 3.5.0. Fixes
-          <ulink url="&slfs-issues;/640">#642</ulink>.</para>
+          <ulink url="&slfs-issues;/642">#642</ulink>.</para>
         </listitem>
         <listitem>
           <para>[renodr] - OBS-Studio: 32.1.0 -&gt; 32.1.1. Fixes
