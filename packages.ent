@@ -343,7 +343,7 @@ version, so keep this at that. -->
 <!-- Let's keep this updated for security reasons.
      - Zeckma -->
 <!ENTITY jdk-modern                          "21.0.10+6">
-<!ENTITY prism-launcher-version              "11.0.0">
+<!ENTITY prism-launcher-version              "11.0.2">
 <!-- TTD -->
 <!ENTITY openttd-version                     "15.3">
 
