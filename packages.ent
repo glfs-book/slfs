@@ -185,7 +185,7 @@ version, so keep this at that. -->
 <!ENTITY libliftoff-version                  "0.5.0">
 <!ENTITY libspng-version                     "0.7.4">
 <!ENTITY libvpl-version                      "2.16.0">
-<!ENTITY intel-onevpl-version                "26.1.5">
+<!ENTITY intel-onevpl-version                "26.1.6">
 <!ENTITY xdg-desktop-portal-hyprland-version "1.3.11">
 <!ENTITY xdg-desktop-portal-wlr-version      "0.8.1">
 <!-- Graphical Toolkits -->
