@@ -38,6 +38,17 @@
       </itemizedlist>
     </listitem>
     -->
+
+    <listitem>
+      <para>April 18th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - asio: 1-36-0 -&gt; 1-38-0 (security). Fixes
+          <ulink url="&slfs-issues;/652">#652</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
     <listitem>
       <para>April 16th, 2026</para>
       <itemizedlist>
