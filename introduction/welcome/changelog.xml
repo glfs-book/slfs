@@ -40,6 +40,32 @@
     -->
 
     <listitem>
+      <para>April 19th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Glaze: 7.3.2 -&gt; 7.3.3. Fixes
+          <ulink url="&slfs-issues;/653">#653</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libsodium: 1.0.21 -&gt; 1.0.22. Fixes
+          <ulink url="&slfs-issues;/654">#654</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - NGINX: 1.29.8 -&gt; 1.30.0. Fixes
+          <ulink url="&slfs-issues;/655">#655</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libjuice: 1.7.0 -&gt; 1.7.1. Fixes
+          <ulink url="&slfs-issues;/657">#657</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xdg-desktop-portal-wlr: 0.8.1 -&gt; 0.8.2. Fixes
+          <ulink url="&slfs-issues;658">#658</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 18th, 2026</para>
       <itemizedlist>
         <listitem>
