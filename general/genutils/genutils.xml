@@ -17,6 +17,7 @@
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cava.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cmark.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="evdevhook2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="htop.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="btop.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cldr-emoji-annotation.xml"/>

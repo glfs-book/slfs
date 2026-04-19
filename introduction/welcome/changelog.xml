@@ -43,6 +43,9 @@
       <para>April 19th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - evdevhook2: Added.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Glaze: 7.3.2 -&gt; 7.3.3. Fixes
           <ulink url="&slfs-issues;/653">#653</ulink>.</para>
         </listitem>

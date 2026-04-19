@@ -59,6 +59,7 @@
 <!-- General Utilities -->
 <!ENTITY cava-version                        "0.10.7">
 <!ENTITY cmark-version                       "0.31.2">
+<!ENTITY evdevhook2-version                  "1.0.2">
 <!ENTITY htop-version                        "3.5.0">
 <!ENTITY btop-version                        "1.4.6">
 <!ENTITY cldr-emoji-annotation-version       "38">

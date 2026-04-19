@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY evdevhook2-download "https://github.com/v1993/evdevhook2/archive/v&evdevhook2-version;/evdevhook2-&evdevhook2-version;.tar.gz">
+]>
+
+<sect1 id="evdevhook2" xreflabel="evdevhook2-&evdevhook2-version;">
+  <?dbhtml filename="evdevhook2.html"?>
+
+  <title>evdevhook2-&evdevhook2-version;</title>
+
+  <indexterm zone="evdevhook2">
+    <primary sortas="a-evdevhook2">evdevhook2</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to evdevhook2</title>
+
+    <para>
+      The evdevhook2 package contains an evdev-based Cemuhook UDP server.
+      Plenty of video game console emulators optionally use a Cemuhook UDP
+      server to retrieve motion data from video game controllers that have
+      gryo sensors. For some controllers, this is required as SDL or Steam
+      Input may map the pitch, yaw, or roll incorrectly, or simply not at all.
+    </para>
+
+    <para>
+      The main Cemuhook UDP server has been depricated since Cemu now has its
+      own methods of handling input properly. Many emulators still want the
+      server, despite this deprecation, so this is a modern solution to the
+      problem.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&evdevhook2-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">evdevhook2 Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
+      <ulink url="&blfs-svn;/x/x7driver.html#xorg-evdev-driver">libevdev</ulink>,
+      <ulink url="&blfs-svn;/gnome/libgee.html">libgee</ulink>, and
+      <ulink url="&blfs-svn;/general/vala.html">Vala</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/upower.html">UPower</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of evdevhook2</title>
+
+    <para>
+      Install evdevhook2 by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+mv -v /usr/share/doc/evdevhook2{,-&evdevhook2-version;}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    &meson-buildtype-release;
+
+    <para>
+      <command>mv -v /usr/share/doc/evdevhook2{,-&evdevhook2-version;}</command>:
+      This command makes the documentation directory versioned to be consistent
+      with the other documentation directories.
+    </para>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring evdevhook2</title>
+
+    <para>
+      Now that evdevhook2 is installed, a normal run of the installed server
+      should suffice, typically. You may wish to configure the server. If so,
+      install it as an unprivileged user:
+    </para>
+
+<screen><userinput>mkdir -pv ~/.config/evdevhook2 &amp;&amp;
+cp -v /usr/share/doc/evdevhook2-&evdevhook2-version;/ExampleConfig.ini \
+      ~/.config/evdevhook2/config.ini</userinput></screen>
+
+    <para>
+      Edit it as you see fit. However, the server won't pick it up unless you
+      pass the path to it as an argument. That means it doesn't matter too much
+      where the configuration file is installed to as long is it can be read
+      from.
+    </para>
+
+  </sect2>
+
+  <sect2 id="evdevhook2-init" revision="systemd">
+    <title>Systemd Unit</title>
+
+    <para>
+      To start the evdevhook2 server whenever the system is booted, install and
+      enable the following Systemd unit as the &root; user:
+    </para>
+
+<screen><userinput>cat &gt; /usr/lib/systemd/system/evdevhook2.service &lt;&lt; "EOF" &amp;&amp;
+<literal>[Unit]
+Description=evdevhook2 Cemuhook UDP server
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/evdevhook2
+
+[Install]
+WantedBy=multi-user.target</literal>
+EOF
+
+systemctl enable evdevhook2</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          evdevhook2
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="evdevhook2-bin">
+        <term><command>evdevhook2</command></term>
+        <listitem>
+          <para>
+            is an evdev-based Cemuhook UDP server
+          </para>
+          <indexterm zone="evdevhook2 evdevhook2-bin">
+            <primary sortas="b-evdevhook2-bin">evdevhook2</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
