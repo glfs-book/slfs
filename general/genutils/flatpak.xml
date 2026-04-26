@@ -69,16 +69,9 @@
 
     <bridgehead renderas="sect4">Recommended Runtime</bridgehead>
     <para role="runtime">
-      &opengl;
-      <footnote><para>
-        While neither Flatpak or apps installed by it link to OpenGL on the
-        system, each app will link against its own runtime/SDK of choice. Most
-        of them use libglvnd. Running a libglvnd linked application on a Mesa
-        OpenGL system is known to fail by failing to create an instance or
-        context. If you haven't already, it's a good idea to switch to libglvnd
-        to ensure compatibility.
-      </para></footnote>
-      and drivers for your GPU(s) for graphics APIs like OpenGL and Vulkan
+      Drivers for your GPU(s) for graphics APIs like OpenGL and Vulkan
+      (&nvidia; or
+      <ulink url="&glfs-website;/shareddeps/mesa.html">Mesa</ulink>)
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
