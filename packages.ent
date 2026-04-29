@@ -140,7 +140,7 @@ version, so keep this at that. -->
 <!-- Python Dependencies -->
 <!ENTITY structlog-version                   "25.5.0">
 <!ENTITY platformdirs-version                "4.9.6">
-<!ENTITY pycurl-version                      "7.45.7">
+<!ENTITY pycurl-version                      "7.46.0">
 <!ENTITY toml-version                        "0.10.2">
 <!ENTITY tornado-version                     "6.5.5">
 <!-- Python Modules -->

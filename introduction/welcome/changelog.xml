@@ -43,6 +43,10 @@
       <para>April 28th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - pycurl: 7.45.7 -&gt; 7.46.0. Fixes
+          <ulink url="&slfs-issues;/680">#680</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - strace: 6.19 -&gt; 7.0. Fixes
           <ulink url="&slfs-issues;/668">#668</ulink>.</para>
         </listitem>
