@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>April 28th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - awww: 0.12.0 -&gt; 0.12.1. Fixes
+          <ulink url="&slfs-issues;/674">#674</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 19th, 2026</para>
       <itemizedlist>
         <listitem>
