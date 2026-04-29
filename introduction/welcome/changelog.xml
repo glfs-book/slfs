@@ -46,6 +46,14 @@
           <para>[tox] - awww: 0.12.0 -&gt; 0.12.1. Fixes
           <ulink url="&slfs-issues;/674">#674</ulink>.</para>
         </listitem>
+        <listitem>
+          <para>[tox] - htop: 3.5.0 -&gt; 3.5.1. Fixes
+          <ulink url="&slfs-issues;/673">#673</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - fastfetch: 2.61.0 -&gt; 2.62.1. Fixes
+          <ulink url="&slfs-issues;/660">#660</ulink>.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 

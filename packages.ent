@@ -60,7 +60,7 @@
 <!ENTITY cava-version                        "0.10.7">
 <!ENTITY cmark-version                       "0.31.2">
 <!ENTITY evdevhook2-version                  "1.0.2">
-<!ENTITY htop-version                        "3.5.0">
+<!ENTITY htop-version                        "3.5.1">
 <!ENTITY btop-version                        "1.4.6">
 <!ENTITY cldr-emoji-annotation-version       "38">
 <!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">
@@ -99,7 +99,7 @@ version, so keep this at that. -->
 <!ENTITY ncdu-version                        "1.22">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.61.0">
+<!ENTITY fastfetch-version                   "2.62.1">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.4">
 <!ENTITY tmux-version                        "3.6a">
