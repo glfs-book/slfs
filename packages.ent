@@ -149,7 +149,7 @@ version, so keep this at that. -->
 <!ENTITY samurai-minor                       "ff9b14">
 <!ENTITY samurai-version                     "ff9b14caa1c27f694a7677f0d5da3e4fff657788">
 <!ENTITY shaderc-version                     "2026.1">
-<!ENTITY strace-version                      "6.19">
+<!ENTITY strace-version                      "7.0">
 <!ENTITY socat-version                       "1.8.1.1">
 <!ENTITY unlambda-version                    "2.0.0">
 <!ENTITY xtrace-minor-version                "ced509">

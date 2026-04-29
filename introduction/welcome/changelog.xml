@@ -43,6 +43,10 @@
       <para>April 28th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - strace: 6.19 -&gt; 7.0. Fixes
+          <ulink url="&slfs-issues;/668">#668</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - awww: 0.12.0 -&gt; 0.12.1. Fixes
           <ulink url="&slfs-issues;/674">#674</ulink>.</para>
         </listitem>
