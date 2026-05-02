@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>May 2nd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - BTOP++: 1.4.6 -&gt; 1.4.7. Fixes
+          <ulink url="&slfs-issues;/686">#686</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>April 28th, 2026</para>
       <itemizedlist>
         <listitem>
