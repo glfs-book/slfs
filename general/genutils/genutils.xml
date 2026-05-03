@@ -39,6 +39,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ostree.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rpmextract.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="scdoc.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="typst.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tmux.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="w3m.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wgetpaste.xml"/>

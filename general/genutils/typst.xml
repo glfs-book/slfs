@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY typst-download "https://github.com/typst/typst/archive/v&typst-version;/typst-&typst-version;.tar.gz">
+]>
+
+<sect1 id="typst" xreflabel="typst-&typst-version;">
+  <?dbhtml filename="typst.html"?>
+
+  <title>typst-&typst-version;</title>
+
+  <indexterm zone="typst">
+    <primary sortas="a-typst">typst</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to typst</title>
+
+    <para>
+      The typst package provides a powerful, easy-to-learn markup-based
+      typesetting system.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&typst-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">typst Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+
+    <para role="required">
+      <ulink url="&blfs-svn;/general/rust.html">rustc</ulink>
+    </para>
+
+    &build-use-internet;
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of typst</title>
+
+    <para>
+      Install typst by executing the following commands:
+    </para>
+
+<screen><userinput>OPENSSL_NO_VENDOR=true GEN_ARTIFACTS=../../target/artifacts/ \
+cargo build -p typst-cli --release</userinput></screen>
+
+    <para>
+      Now as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 target/release/typst -t /usr/bin/ &amp;&amp;
+install -vDm644 target/artifacts/*.1 -t /usr/share/man/man1/</userinput></screen>
+
+    <para>
+      If you wish to install shell completions, execute the relevant commands
+      for your shell(s) as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm644 target/artifacts/typst.bash    /usr/share/bash-completion/completions/typst
+install -vDm644 target/artifacts/_typst     -t /usr/share/zsh/site-functions/
+install -vDm644 target/artifacts/typst.fish -t /usr/share/fish/vendor_completions.d/</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>-p typst-cli</parameter>: This tells <command>cargo</command>
+      to only build the typst-cli package.
+    </para>
+
+    <para>
+      <envar>OPENSSL_NO_VENDOR=true</envar>: This prevents the build system
+      from vendoring OpenSSL.
+    </para>
+
+    <para>
+      <envar>GEN_ARTIFACTS=../../target/artifacts/</envar>: This sets the
+      directory for generated artifacts such as man pages and shell
+      completions.
+    </para>
+
+  </sect2>
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          typst
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="typst-bin">
+        <term><command>typst</command></term>
+        <listitem>
+          <para>
+            is a command line interface to the typesetting system
+          </para>
+          <indexterm zone="typst typst">
+            <primary sortas="b-typst">typst</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
