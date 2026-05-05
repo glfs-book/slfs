@@ -43,6 +43,8 @@
       <para>May 2nd, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - typst: Added. Fixes
+          <ulink url="&slfs-issues;/650">#650</ulink>.</para>
           <para>[tox] - BTOP++: 1.4.6 -&gt; 1.4.7. Fixes
           <ulink url="&slfs-issues;/686">#686</ulink>.</para>
         </listitem>

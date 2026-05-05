@@ -103,6 +103,7 @@ version, so keep this at that. -->
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.4">
 <!ENTITY tmux-version                        "3.6a">
+<!ENTITY typst-version                       "0.14.2">
 <!ENTITY w3m-version                         "0.5.6">
 <!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20260125">
