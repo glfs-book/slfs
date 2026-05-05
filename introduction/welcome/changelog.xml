@@ -43,6 +43,10 @@
       <para>May 5th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - intel-onevpl: 26.1.6 -&gt; 26.2.0. Fixes
+          <ulink url="&slfs-issues;/670">#670</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - Shaderc: 2026.1 -&gt; 2026.2. Fixes
           <ulink url="&slfs-issues;/669">#669</ulink>.</para>
         </listitem>
