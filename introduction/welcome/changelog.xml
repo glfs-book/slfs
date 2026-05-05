@@ -75,7 +75,7 @@
       <para>April 28th, 2026</para>
       <itemizedlist>
         <listitem>
-          <para>[tox] - pycurl: 7.45.7 -&gt; 7.46.0. Fixes
+          <para>[tox] - pycurl: 7.45.7 -&gt; 7.46.0 (Security Update). Fixes
           <ulink url="&slfs-issues;/680">#680</ulink>.</para>
         </listitem>
         <listitem>
