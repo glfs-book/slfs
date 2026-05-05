@@ -40,11 +40,23 @@
     -->
 
     <listitem>
+      <para>May 5th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - OBS-Studio: 32.1.1 -&gt; 32.1.2. Fixes
+          <ulink url="&slfs-issues;/661">#661</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 2nd, 2026</para>
       <itemizedlist>
         <listitem>
           <para>[tox] - typst: Added. Fixes
           <ulink url="&slfs-issues;/650">#650</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - BTOP++: 1.4.6 -&gt; 1.4.7. Fixes
           <ulink url="&slfs-issues;/686">#686</ulink>.</para>
         </listitem>
