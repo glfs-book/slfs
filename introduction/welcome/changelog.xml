@@ -43,6 +43,10 @@
       <para>May 5th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fish: 4.6.0 -&gt; 4.7.0. Fixes
+          <ulink url="&slfs-issues;/690">#690</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - intel-onevpl: 26.1.6 -&gt; 26.2.0. Fixes
           <ulink url="&slfs-issues;/670">#670</ulink>.</para>
         </listitem>
