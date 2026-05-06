@@ -14,15 +14,6 @@ body:
         ### Add package
 
   - type: input
-    id: name
-    attributes:
-      label: Name
-      description: The name of the package.
-      placeholder: Nushell
-    validations:
-      required: true
-
-  - type: input
     id: upstream
     attributes:
       label: Upstream
@@ -56,9 +47,7 @@ body:
     id: dependants
     attributes:
       label: Dependants
-      description: Does anything depend on this package?
-      placeholder: |
-        No
+      description: What depends on this package?
     validations:
       required: false
 
