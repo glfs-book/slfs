@@ -54,7 +54,8 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&arch-pkgs;/core/x86_64/libedit/">editline</ulink>
+      <ulink url="&arch-pkgs;/core/x86_64/libedit/">editline</ulink> and
+      <ulink url="&blfs-svn;/general/json-c.html">JSON-C</ulink>
     </para>
 
   </sect2>

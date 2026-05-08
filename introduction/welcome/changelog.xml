@@ -40,6 +40,56 @@
     -->
 
     <listitem>
+      <para>May 8th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Glaze: 7.3.3 -&gt; 7.5.0. Fixes
+          <ulink url="&slfs-issues;/659">#659</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Mango: 0.12.8 -&gt; 0.12.9. Fixes
+          <ulink url="&slfs-issues;/662">#662</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - FluidSynth: 2.5.3 -&gt; 2.5.4. Fixes
+          <ulink url="&slfs-issues;/663">#663</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - PCSX-Redux: c2ad3b -&gt; 4ad775. Fixes
+          <ulink url="&slfs-issues;/664">#664</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - mGBA: afa6fb -&gt; b19b55. Fixes
+          <ulink url="&slfs-issues;/665">#665</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xdg-desktop-portal-hyprland: 1.3.11 -&gt; 1.3.12.
+          Fixes <ulink url="&slfs-issues;/666">#666</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - aquamarine: 0.10.0 -&gt; 0.11.0. Fixes
+          <ulink url="&slfs-issues;/667">#667</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprwire: 0.3.0 -&gt; 0.3.1. Fixes
+          <ulink url="&slfs-issues;/671">#671</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprwayland-scanner: 0.4.5 -&gt; 0.4.6. Fixes
+          <ulink url="&slfs-issues;/672">#672</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.12.0 -&gt; 0.13.0. Fixes
+          <ulink url="&slfs-issues;/684">#684</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprtoolkit: 0.5.3 -&gt; 0.5.4. Fixes
+          <ulink url="&slfs-issues;/692">#692</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 5th, 2026</para>
       <itemizedlist>
         <listitem>

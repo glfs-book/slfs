@@ -125,8 +125,7 @@ ninja</userinput></screen>
 
 <screen role="root"><userinput>ninja install </userinput><phrase revision="systemd"><userinput>                                               </userinput></phrase><userinput>&amp;&amp;
 install -vDm644 fluidsynth.conf </userinput><phrase revision="systemd"><userinput>      </userinput></phrase><userinput>/etc/fluidsynth</userinput><phrase revision="systemd"><userinput>        &amp;&amp;
-install -vDm644 fluidsynth.service -t /usr/lib/systemd/user/ &amp;&amp;
-install -vDm644 fluidsynth.tmpfiles   /usr/lib/tmpfiles.d/fluidsynth.conf</userinput></phrase></screen>
+install -vDm644 fluidsynth.service -t /usr/lib/systemd/user/</userinput></phrase></screen>
 
     <para>
       In order for FluidSynth to provide instrumentals during MIDI playback, it

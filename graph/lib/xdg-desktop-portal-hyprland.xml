@@ -74,8 +74,7 @@
       Install xdg-desktop-portal-hyprland by running the following commands:
     </para>
 
-<screen revision="sysv"><userinput>rm -rf subprojects           &amp;&amp;
-mkdir build                  &amp;&amp;
+<screen revision="sysv"><userinput>mkdir build                  &amp;&amp;
 cd    build                  &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr \
@@ -85,8 +84,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 
 ninja</userinput></screen>
 
-<screen revision="systemd"><userinput>rm -rf subprojects           &amp;&amp;
-mkdir build                  &amp;&amp;
+<screen revision="systemd"><userinput>mkdir build                  &amp;&amp;
 cd    build                  &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr \
@@ -101,16 +99,6 @@ ninja</userinput></screen>
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
-
-  </sect2>
-
-  <sect2 role="commands">
-    <title>Command Explanations</title>
-
-    <para>
-      <command>rm -rf subprojects</command>: This command removes vendored
-      source code.
-    </para>
 
   </sect2>
 
