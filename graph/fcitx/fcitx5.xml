@@ -24,7 +24,7 @@
       The Fcitx5 package provides an extensible input method framework.
     </para>
 
-    &build-use-internet;
+    &build-use-network;
 
     <itemizedlist spacing="compact">
       <listitem>

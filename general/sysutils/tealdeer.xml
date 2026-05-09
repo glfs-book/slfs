@@ -27,7 +27,7 @@
       simple than what is offered by most man pages.
     </para>
 
-    &build-use-internet;
+    &build-use-network;
 
     <itemizedlist spacing="compact">
       <listitem>

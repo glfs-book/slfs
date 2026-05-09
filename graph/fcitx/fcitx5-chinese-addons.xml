@@ -25,7 +25,7 @@
       Fcitx 5, including IMEs previously bundled with Fcitx 4.
     </para>
 
-    &build-use-internet;
+    &build-use-network;
 
     <itemizedlist spacing="compact">
       <listitem>

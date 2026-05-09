@@ -52,7 +52,7 @@
       <xref linkend="scdoc"/> (to build the man pages)
     </para>
 
-    &build-use-internet;
+    &build-use-network;
 
   </sect2>
 

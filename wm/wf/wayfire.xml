@@ -27,7 +27,7 @@
       multiple perspectives for seeing windows.
     </para>
 
-    &build-use-internet;
+    &build-use-network;
 
     <itemizedlist spacing="compact">
       <listitem>
@@ -64,7 +64,7 @@
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
       <xref linkend="wf-config"/> (if not installed, it will be downloaded from
-      the internet) and
+      the Internet) and
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 

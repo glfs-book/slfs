@@ -29,14 +29,14 @@
   building with multiple processors. See <xref
   linkend='parallel-builds'/> for more information.</para></note>">
 
-<!ENTITY build-use-internet
-  "<note><para>An Internet connection is needed for building this
+<!ENTITY build-use-network
+  "<note><para>A network connection is needed for building this
   package. The system certificate store may need to be set up with
   <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> before
   building this package.</para></note>">
 
-<!ENTITY test-use-internet
-  "<note><para>An Internet connection is needed for some tests of
+<!ENTITY test-use-network
+  "<note><para>A network connection is needed for some tests of
   this package. The system certificate store may need to be set up
   with <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink>
   before testing this package.</para></note>">

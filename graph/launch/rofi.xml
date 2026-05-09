@@ -33,7 +33,7 @@
       version now supports Wayland.
     </para>
 
-    &build-use-internet;
+    &build-use-network;
 
     <itemizedlist spacing="compact">
       <listitem>

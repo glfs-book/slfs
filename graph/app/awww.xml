@@ -25,7 +25,7 @@
       powerful wallpaper daemon for Wayland, controlled at runtime.
     </para>
 
-    &build-use-internet;
+    &build-use-network;
 
     <itemizedlist spacing="compact">
       <listitem>
