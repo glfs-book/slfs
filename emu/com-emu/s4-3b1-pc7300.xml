@@ -43,7 +43,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-1.patch"/>
+          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-2.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -60,7 +60,7 @@
       GCC, and glibc:
     </para>
 
-<screen role="pre"><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-1.patch</userinput></screen>
+<screen role="pre"><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-2.patch</userinput></screen>
 
     <para>
       Compile the kernel module:
