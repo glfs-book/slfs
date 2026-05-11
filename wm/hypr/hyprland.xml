@@ -72,11 +72,13 @@
       (with GObjectIntrospection),
       <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
       <xref linkend="hyprlib"/>,
+      <ulink url="&blfs-svn;/general/lcms2.html">Little CMS</ulink>,
       <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
       <xref linkend="libliftoff"/>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/general/lua.html">Lua</ulink>,
       <ulink url="&blfs-svn;/lxqt/muparser.html">muparser</ulink>,
       &wayland-gl;,
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
@@ -120,35 +122,21 @@
       Extract the udis86 submodule in place:
     </para>
 
-<screen><userinput>tar -xf ../udis86-&hypr-udis86-version;.tar.gz &amp;&amp;
+<screen><userinput remap="pre">tar -xf ../udis86-&hypr-udis86-version;.tar.gz &amp;&amp;
 mv -T udis86-&hypr-udis86-version; subprojects/udis86</userinput></screen>
 
     <para>
-      Ensure that the installed version of glaze can be used:
+      Ensure that the installed version of Glaze can be used:
     </para>
 
-<screen><userinput>cat &gt; glz-version.cpp &lt;&lt; "EOF"
-<literal>#include &lt;glaze/glaze.hpp&gt;
-#include &lt;glaze/version.hpp&gt;
-#include &lt;stdio.h&gt;
-int main() {
-  printf("%i.%i.%i\n", glz::version.major,
-                       glz::version.minor,
-                       glz::version.patch);
-  return 0;
-}</literal>
-EOF
-
-g++ -std=c++23 -o glz-version glz-version.cpp &amp;&amp;
-sed -i "s/glaze\ [0-9][0-9.]*/glaze\ $(./glz-version)/" \
-  hyprpm/CMakeLists.txt &amp;&amp;
-rm -vf glz-version{,.cpp}</userinput></screen>
+<screen><userinput remap="pre">sed -i "s/glaze\ [0-9][0-9.]*...&lt;[0-9][0-9.]*/glaze/" \
+  hyprpm/CMakeLists.txt</userinput></screen>
 
     <important><para>
-      If glaze is installed and you haven't run the above commands, Hyprland,
-      if the installed version doesn't meet the specific version in
-      <filename>hyprpm/CMakeLists.txt</filename>, will completely overwrite the
-      glaze installation with often older files. Run the above commands to
+      If Glaze is installed and you haven't run the above commands, Hyprland,
+      if the installed version doesn't meet the specific version requirements
+      in <filename>hyprpm/CMakeLists.txt</filename>, will completely overwrite
+      the Glaze installation with often older files. Run the above commands to
       prevent that situation.
     </para></important>
 
@@ -212,14 +200,14 @@ ninja</userinput></screen>
     <sect3 id="hyprland-config">
       <title>Config Files</title>
       <para>
-        <filename>~/.config/hypr/hyprland.conf</filename>. The default version
+        <filename>~/.config/hypr/hyprland.lua</filename>. The default version
         is in <filename class="directory">/usr/share/hypr</filename> and will
         not be used and must be copied to
         <filename class="directory">~/.config/hypr</filename>
       </para>
 
       <indexterm zone="hyprland hyprland-config">
-        <primary sortas="e-AA.config">~/.config/hypr/hyprland.conf</primary>
+        <primary sortas="e-AA.lua">~/.config/hypr/hyprland.lua</primary>
       </indexterm>
 
     </sect3>
@@ -231,10 +219,15 @@ ninja</userinput></screen>
       </para>
 
 <screen><userinput>mkdir -pv ~/.config/hypr &amp;&amp;
-cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
+cp /usr/share/hypr/hyprland.lua ~/.config/hypr</userinput></screen>
 
       <para>
         Now inspect the file and make any changes to suit your workflow.
+        The file can be split up into multiple LUA files, as long as the
+        main LUA file is there. For information on how to configure Hyprland,
+        read the
+        <ulink url="https://wiki.hypr.land/Configuring/Start/">Hyprland
+        Wiki</ulink>.
       </para>
 
     </sect3>

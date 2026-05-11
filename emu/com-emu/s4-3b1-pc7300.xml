@@ -60,7 +60,15 @@
       GCC, and glibc:
     </para>
 
-<screen role="pre"><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-&s4-kernel;-1.patch</userinput></screen>
+<screen><userinput remap="pre">patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-&s4-kernel;-1.patch</userinput></screen>
+
+    <para>
+      Under some conditions, <envar>PWD</envar> may not evaluate, leading to
+      the kernel module being unable to be installed. Change it to use
+      <envar>CURDIR</envar> instead:
+    </para>
+
+<screen><userinput remap="pre">sed -i 's/PWD/CURDIR/g' sysv/Makefile.daveb</userinput></screen>
 
     <para>
       Compile the kernel module:
