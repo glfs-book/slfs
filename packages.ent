@@ -153,8 +153,8 @@ version, so keep this at that. -->
 <!ENTITY strace-version                      "7.0">
 <!ENTITY socat-version                       "1.8.1.1">
 <!ENTITY unlambda-version                    "2.0.0">
-<!ENTITY xtrace-minor-version                "ced509">
-<!ENTITY xtrace-version                      "ced509f9760c532e0297fed6cfa07389e2be082a">
+<!ENTITY xtrace-minor-version                "526c77">
+<!ENTITY xtrace-version                      "526c7708eeb6299efd872d181cd431b0853b9ebb">
 <!ENTITY wev-version                         "1.1.0">
 <!-- JAVA -->
 <!ENTITY java-major-version                  "17">

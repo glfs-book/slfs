@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>May 13th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - xtrace: ced509 -&gt; 526c77. Fixes
+          <ulink url="&slfs-issues;/685">#685</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 10th, 2026</para>
       <itemizedlist>
         <listitem>
