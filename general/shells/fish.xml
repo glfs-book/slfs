@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY fish-download "https://github.com/fish-shell/fish-shell/archive/&fish-version;/fish-&fish-version;.tar.gz">
+  <!ENTITY fish-download "https://github.com/fish-shell/fish-shell/releases/download/&fish-version;/fish-&fish-version;.tar.xz">
 ]>
 
 <sect1 id="fish" xreflabel="fish-&fish-version;">
