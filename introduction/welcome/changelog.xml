@@ -43,6 +43,9 @@
       <para>May 15th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - socat: Fix compiling against OpenSSL-4.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - Go: 1.26.2 -&gt; 1.26.3 (Security Update). Fixes
           <ulink url="&slfs-issues;/694">#694</ulink>.</para>
         </listitem>
