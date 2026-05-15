@@ -32,6 +32,16 @@
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&dl-root;/s-nail/s-nail-&s-nail-version;-openssl4_fixes-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
     <bridgehead renderas="sect3">s-nail Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required at runtime</bridgehead>
@@ -51,7 +61,13 @@
     <title>Installation of s-nail</title>
 
     <para>
-      First, configure this package by executing the following command:
+      First, fix compiling this package against OpenSSL-4:
+    </para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../s-nail-&s-nail-version;-openssl4_fixes-1.patch</userinput></screen>
+
+    <para>
+      Next, configure this package by executing the following command:
     </para>
 
 <screen><userinput>VAL_BINDIR=/usr/5bin           \
