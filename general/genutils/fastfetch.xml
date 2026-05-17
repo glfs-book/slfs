@@ -20,8 +20,8 @@
     <title>Introduction to fastfetch</title>
 
     <para>
-      Fastfetch is a maintained, feature-rich and
-      performance oriented system information tool. It is an alternative to
+      Fastfetch is a maintained, feature-rich, and
+      performance-oriented system information tool. It is an alternative to
       <xref linkend="neofetch"/> and written in C.
     </para>
 
@@ -40,6 +40,11 @@
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
 
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="yyjson"/> (or a vendored copy is used)
+    </para>
+
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
@@ -55,9 +60,9 @@
       <ulink url="&glfs-website;/shareddeps/ocl-icd.html">OCL-ICD</ulink>,
       <ulink url="&blfs-svn;/xfce/xfconf.html">Xfconf</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink> and
-      <ulink url="&arch-pkgs;/extra/x86_64/directx-headers/">DirectX-Headers
-      </ulink>
+      <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/directx-headers/">DirectX-Headers</ulink>, and
+      <ulink url="&arch-pkgs;/extra/x86_64/efl/">EFL</ulink>
     </para>
 
   </sect2>
@@ -75,6 +80,7 @@ cd    build &amp;&amp;
 cmake -D CMAKE_INSTALL_PREFIX=/usr    \
       -D CMAKE_BUILD_TYPE=Release     \
       -D BUILD_FLASHFETCH=OFF         \
+      -D ENABLE_SYSTEM_YYJSON=ON      \
       -D PACKAGES_DISABLE_CHOCO=ON    \
       -D PACKAGES_DISABLE_MACPORTS=ON \
       -D PACKAGES_DISABLE_SCOOP=ON    \
@@ -105,6 +111,13 @@ make</userinput></screen>
       <parameter>-D BUILD_FLASHFETCH=OFF</parameter>: This switch disables
       building the historical flashfetch binary. If you need it for any reason,
       set this switch to <parameter>ON</parameter>.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_SYSTEM_YYJSON=ON</parameter>: This switch tells the
+      build system to link against the system install of yyjson instead of the
+      vendored copy. If you wish to use the vendored yyjson, set this switch to
+      <parameter>OFF</parameter>.
     </para>
 
     <para>
