@@ -1,0 +1,42 @@
+Submitted by:            Douglas R. Reno <renodr at linuxfromscratch dot org>
+Date:                    2026-05-15
+Initial Package Version: 14.9.25
+Upstream Status:         Submitted
+Origin:                  Self
+Description:             Fixed building s-nail against OpenSSL-4 by using the
+                         ASN1_STRING_length and ASN1_STRING_get0_data functions.
+
+--- s-nail-14.9.25.orig/src/mx/xtls.c	2024-06-27 14:54:38.000000000 -0500
++++ s-nail-14.9.25.new/src/mx/xtls.c	2026-05-09 20:57:56.181402698 -0500
+@@ -707,7 +707,7 @@ a_xtls_parse_asn1_time(ASN1_TIME const *
+       snprintf(bdat, blen, "%.*s", (int)l, mcp);
+    else {
+       snprintf(bdat, blen, _("Bogus certificate date: %.*s"),
+-         /*is (int)*/atp->length, (char const*)atp->data);
++         /*is (int)*/ASN1_STRING_length(atp), (char const*)ASN1_STRING_get0_data(atp));
+       mcp = NULL;
+    }
+ 
+@@ -1398,9 +1398,9 @@ a_xtls_check_host(struct mx_socket *sop,
+          if(gen->type == GEN_DNS){
+             if(n_poption & n_PO_D_V)
+                n_err(_("Comparing subject_alt_name: need<%s> is<%s>\n"),
+-                  urlp->url_host.s, (char*)gen->d.ia5->data);
++                  urlp->url_host.s, (char*)ASN1_STRING_get0_data(gen->d.ia5));
+             if((rv = n_tls_rfc2595_hostname_match(urlp->url_host.s,
+-                  (char*)gen->d.ia5->data)))
++                  (char*)ASN1_STRING_get0_data(gen->d.ia5))))
+                goto jleave;
+          }
+       }
+@@ -1522,8 +1522,8 @@ smime_verify(struct message *m, int n, a
+             if (gen->type == GEN_EMAIL) {
+                if (n_poption & n_PO_D_V)
+                   n_err(_("Comparing subject_alt_name: need<%s> is<%s>)\n"),
+-                     sender, (char*)gen->d.ia5->data);
+-               if (!su_cs_cmp_case((char*)gen->d.ia5->data, sender))
++                     sender, (char*)ASN1_STRING_get0_data(gen->d.ia5));
++               if (!su_cs_cmp_case((char*)ASN1_STRING_get0_data(gen->d.ia5), sender))
+                   goto jfound;
+             }
+          }

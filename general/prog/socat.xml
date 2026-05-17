@@ -32,6 +32,16 @@
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&dl-root;/socat/socat-&socat-version;-openssl4_fixes-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
     <bridgehead renderas="sect3">socat Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Optional</bridgehead>
@@ -43,6 +53,12 @@
 
   <sect2 role="installation">
     <title>Installation of socat</title>
+
+    <para>
+      First, fix building socat with OpenSSL-4.x:
+    </para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../socat-&socat-version;-openssl4_fixes-1.patch</userinput></screen>
 
     <para>
       Install socat by running the following commands:
