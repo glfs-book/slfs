@@ -203,7 +203,7 @@ version, so keep this at that. -->
 <!ENTITY xcb-imdkit-version                  "1.0.9">
 <!-- Terminal Emulators -->
 <!ENTITY alacritty-version                   "0.17.0">
-<!ENTITY foot-version                        "1.26.1">
+<!ENTITY foot-version                        "1.27.0">
 <!-- Launchers -->
 <!ENTITY rofi-version                        "2.0.0">
 <!ENTITY wofi-version                        "1.5.3">
