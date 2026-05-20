@@ -43,6 +43,10 @@
       <para>May 20th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - hwinfo: 25.2 -&gt; 25.3. Fixes
+          <ulink url="&slfs-issues;/717">#717</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - PCSX-Redux: Fix building with GCC-16.</para>
         </listitem>
         <listitem>
