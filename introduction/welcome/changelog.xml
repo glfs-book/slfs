@@ -40,6 +40,19 @@
     -->
 
     <listitem>
+      <para>May 20th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - FreeBee: Fixed installing the documentation.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - FreeBee: Added a Note that the ROMs ZIP file cannot
+          be downloaded through wget and similar command-line utilities.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 17th, 2026</para>
       <itemizedlist>
         <listitem>

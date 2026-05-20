@@ -55,6 +55,15 @@
       </listitem>
     </itemizedlist>
 
+    <note>
+      <para>
+        Attempting to download the 3b1_roms.zip file through a command line
+        client such as <command>wget</command> may result in a Forbidden error.
+        This file is best downloaded using a graphical web browser such as
+        Firefox.
+      </para>
+    </note>
+
     <bridgehead renderas="sect3">FreeBee Dependencies</bridgehead>
 
     <bridgehead renderas="sect4">Required</bridgehead>
@@ -104,9 +113,9 @@ install -vDm644 freebee.1 tools/makehdimg.1 -t /usr/share/man/man1/</userinput><
       Optionally, install the documentation as the &root; user:
     </para>
 
-<screen role="root" remap="doc"><userinput>install -vDm644 README{,.serial}.md \
-                sample.freebee.toml \
-                doc/3B1\ Memory\ Maps.ods \
+<screen role="root" remap="doc"><userinput>install -vDm644 README{,.serial}.md      \
+                sample.freebee.toml      \
+                doc/3B1\ Memory\ Map.ods \
         -t /usr/share/doc/freebee-&freebee-minor-version;/</userinput></screen>
 
     <para>
@@ -114,9 +123,9 @@ install -vDm644 freebee.1 tools/makehdimg.1 -t /usr/share/man/man1/</userinput><
       &root; user:
     </para>
 
-<screen role="root"><userinput>install -vdm755 /usr/share/freebee/roms &amp;&amp;
+<screen role="root"><userinput>install -vdm755 /usr/share/freebee/roms          &amp;&amp;
 unzip ../3b1_roms.zip -d /usr/share/freebee/roms &amp;&amp;
-rm -vf /usr/share/freebee/roms/*.hex &amp;&amp;
+rm -vf /usr/share/freebee/roms/*.hex  &amp;&amp;
 rm -vf /usr/share/freebee/roms/README &amp;&amp;
 mv -v /usr/share/freebee/roms/14C\ 72-00616.bin /usr/share/freebee/roms/14c.bin &amp;&amp;
 mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin</userinput></screen>
