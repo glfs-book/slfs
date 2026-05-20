@@ -129,7 +129,7 @@ version, so keep this at that. -->
 <!ENTITY go1_24-version                      "96e4e2b1616c3c59577d48abcf2823bf1fdcd2e2">
 <!ENTITY go-last-bs                          "&go1_24-version;">
 <!ENTITY mipsel-binutils-version             "2.46">
-<!ENTITY mipsel-gcc-version                  "15.2.0">
+<!ENTITY mipsel-gcc-version                  "16.1.0">
 <!-- START PYTHON -->
 <!ENTITY python3-major                       "3">
 <!ENTITY python3-minor                       "14">
