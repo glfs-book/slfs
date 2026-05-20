@@ -43,6 +43,10 @@
       <para>May 20th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - tmux: 3.6a -&gt; 3.6b. Fixes
+          <ulink url="&slfs-issues;/718">#718</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - PCSX-Redux: Fix building with GCC-16.</para>
         </listitem>
         <listitem>
