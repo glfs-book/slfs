@@ -43,6 +43,9 @@
       <para>May 20th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - PCSX-Redux: Fix building with GCC-16.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - MIPSel-GCC: 15.2.0 -&gt; 16.1.0. Fixes
           <ulink url="&slfs-issues;/713">#713</ulink>.</para>
         </listitem>

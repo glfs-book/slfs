@@ -213,6 +213,12 @@ mv -T zep-*                                             \
 <screen><userinput>cd pcsx-redux-&pcsx-redux-version;</userinput></screen>
 
     <para>
+      Fix building the zep submodule with GCC-16:
+    </para>
+
+<screen><userinput>sed -i '2i #include &gt;cstdint&lt;' third_party/zep/include/zep/glyph_iterator.h</userinput></screen>
+
+    <para>
       Ensure that the usage of ImageMagick is correct:
     </para>
 
