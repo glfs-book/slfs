@@ -43,6 +43,10 @@
       <para>May 20th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - tmux: 3.6a -&gt; 3.6b. Fixes
+          <ulink url="&slfs-issues;/718">#718</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - hwinfo: 25.2 -&gt; 25.3. Fixes
           <ulink url="&slfs-issues;/717">#717</ulink>.</para>
         </listitem>
