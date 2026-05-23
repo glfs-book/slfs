@@ -6,7 +6,7 @@
 <!ENTITY cglm-version                        "0.9.6">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY glaze-version                       "7.5.0">
+<!ENTITY glaze-version                       "7.7.0">
 <!ENTITY hidapi-version                      "0.15.0">
 <!ENTITY iniparser-version                   "4.2.6">
 <!ENTITY libbacktrace-minor                  "b9e400">
@@ -45,7 +45,7 @@
 <!ENTITY quazip-major                        "1">
 <!ENTITY quazip-version                      "&quazip-major;.5">
 <!ENTITY re2-version                         "2025-11-05">
-<!ENTITY sdbus-cpp-version                   "2.2.1">
+<!ENTITY sdbus-cpp-version                   "2.3.1">
 <!ENTITY sdl2_net-version                    "2.4.0">
 <!ENTITY seatd-version                       "0.9.3">
 <!ENTITY simde-version                       "0.8.2">
@@ -68,7 +68,7 @@
 <!ENTITY fluidsynth-version                  "2.5.4">
 <!ENTITY fs-gcem                             "012ae73c6d0a2cb09ffe86475f5c6fba3926e200">
 <!ENTITY fs-sf2                              "3.1">
-<!ENTITY hwinfo-version                      "25.2">
+<!ENTITY hwinfo-version                      "25.3">
 <!ENTITY imv-version                         "5.0.1">
 <!ENTITY inxi-rev                            "1">
 <!ENTITY inxi-version                        "3.3.40-&inxi-rev;">
@@ -102,7 +102,7 @@ version, so keep this at that. -->
 <!ENTITY fastfetch-version                   "2.63.1">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY scdoc-version                       "1.11.4">
-<!ENTITY tmux-version                        "3.6a">
+<!ENTITY tmux-version                        "3.6b">
 <!ENTITY typst-version                       "0.14.2">
 <!ENTITY w3m-version                         "0.5.6">
 <!ENTITY wgetpaste-version                   "2.34">
