@@ -43,6 +43,10 @@
       <para>May 20th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - Glaze: 7.5.0 -&gt; 7.7.0. Fixes
+          <ulink url="&slfs-issues;/697">#697</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - tmux: 3.6a -&gt; 3.6b. Fixes
           <ulink url="&slfs-issues;/718">#718</ulink>.</para>
         </listitem>
