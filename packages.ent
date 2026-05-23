@@ -46,7 +46,7 @@
 <!ENTITY quazip-version                      "&quazip-major;.5">
 <!ENTITY re2-version                         "2025-11-05">
 <!ENTITY sdbus-cpp-version                   "2.3.1">
-<!ENTITY sdl2_net-version                    "2.2.0">
+<!ENTITY sdl2_net-version                    "2.4.0">
 <!ENTITY seatd-version                       "0.9.3">
 <!ENTITY simde-version                       "0.8.2">
 <!ENTITY tllist-version                      "1.1.0">

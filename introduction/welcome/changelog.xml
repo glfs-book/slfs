@@ -43,6 +43,10 @@
       <para>May 20th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - SDL2_net: 2.2.0 -&gt; 2.4.0. Fixes
+          <ulink url="&slfs-issues;/709">#709</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - Glaze: 7.5.0 -&gt; 7.7.0. Fixes
           <ulink url="&slfs-issues;/697">#697</ulink>.</para>
         </listitem>
