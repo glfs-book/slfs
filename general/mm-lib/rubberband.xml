@@ -85,7 +85,10 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+meson setup --prefix=/usr             \
+            --buildtype=release       \
+            -D default_library=shared \
+            .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
@@ -96,8 +99,7 @@ ninja</userinput></screen>
       Now, as the &root; user:
     </para>
 
-<screen role="root"><userinput>ninja install &amp;&amp;
-rm -vf /usr/lib/librubberband.a</userinput></screen>
+    <screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
 
@@ -107,16 +109,17 @@ rm -vf /usr/lib/librubberband.a</userinput></screen>
     &meson-buildtype-release;
 
     <para>
-      <option>-D resampler=</option>: This option can be used to specify the
+      <parameter>-D default_library=shared=</parameter>: This parameter
+      tells the build system to only install shared libraries instead of
+      static libraries. By default, both types will be installed.
+    </para>
+
+    <para>
+      <option>-D resampler=...</option>: This option can be used to specify the
       resampler to use. By default, it will use the built-in implementation.
       You can specify <option>libsamplerate</option>, <option>speex</option>,
       or <option>speexdsp</option> to override the default. If you are going
       to do this, it is recommended to use <option>libsamplerate</option>.
-    </para>
-
-    <para>
-      <command>rm -vf /usr/lib/librubberband.a</command>: Removes a useless
-      static library.
     </para>
 
   </sect2>
