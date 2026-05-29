@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>May 29th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - NGINX: 1.30.0 -&gt; 1.31.1 (security). Fixes
+          <ulink url="&slfs-issues;/701">#701</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 20th, 2026</para>
       <itemizedlist>
         <listitem>

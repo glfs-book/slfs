@@ -176,7 +176,7 @@ version, so keep this at that. -->
 
 <!-- SERVERS -->
 <!-- Major Servers -->
-<!ENTITY nginx-version                       "1.30.0">
+<!ENTITY nginx-version                       "1.31.1">
 
 <!-- GRAPH -->
 <!-- Graphical Libraries -->
