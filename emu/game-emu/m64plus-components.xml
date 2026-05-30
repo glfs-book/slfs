@@ -41,6 +41,7 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
       &glu;,
       <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
