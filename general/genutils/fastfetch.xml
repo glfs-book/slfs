@@ -57,7 +57,7 @@
       <ulink url="&arch-pkgs;/extra/x86_64/chafa/">Chafa</ulink>,
       <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
       &opengl;,
-      <ulink url="&glfs-website;/shareddeps/ocl-icd.html">OCL-ICD</ulink>,
+      <ulink url="&glfs-website;/shareddeps/opencl-sdk.html">OpenCL-SDK</ulink>,
       <ulink url="&blfs-svn;/xfce/xfconf.html">Xfconf</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink>,
