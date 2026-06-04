@@ -244,7 +244,7 @@ version, so keep this at that. -->
 <!ENTITY hyprtoolkit-version                 "0.5.4">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-guiutils-version           "0.2.1">
-<!ENTITY hyprland-version                    "0.55.0">
+<!ENTITY hyprland-version                    "0.55.2">
 <!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.25.1">
