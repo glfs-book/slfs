@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>June 4th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - ripgrep: Added. Fixes
+          <ulink url="&slfs-issues;/715">#715</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>May 29th, 2026</para>
       <itemizedlist>
         <listitem>
