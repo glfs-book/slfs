@@ -43,6 +43,10 @@
       <para>June 4th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - aquamarine: 0.11.0 -&gt; 0.12.0. Fixes
+          <ulink url="&slfs-issues;/735">#735</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - Glaze: 7.7.0 -&gt; 7.7.1. Fixes
           <ulink url="&slfs-issues;/734">#734</ulink>.</para>
         </listitem>
