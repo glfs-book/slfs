@@ -56,13 +56,19 @@
       <ulink url="&blfs-svn;/general/imagemagick.html">ImageMagick</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/chafa/">Chafa</ulink>,
       <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
+      <ulink url="&blfs-svn;/general/lua.html">Lua</ulink>,
+      <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
+      <ulink url="&blfs-svn;/x/libdrm.html">Libdrm</ulink>,
+      <ulink url="&blfs-svn;/gnome/dconf.html">DConf</ulink>,
       &opengl;,
       <ulink url="&glfs-website;/shareddeps/opencl-sdk.html">OpenCL-SDK</ulink>,
       <ulink url="&blfs-svn;/xfce/xfconf.html">Xfconf</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/directx-headers/">DirectX-Headers</ulink>, and
-      <ulink url="&arch-pkgs;/extra/x86_64/efl/">EFL</ulink>
+      <ulink url="&arch-pkgs;/extra/x86_64/directx-headers/">DirectX-Headers</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/efl/">EFL</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/libvdpau/">libvdpau</ulink>, and
+      <ulink url="https://github.com/quickjs-ng/quickjs">QuickJS</ulink>
     </para>
 
   </sect2>
@@ -126,6 +132,12 @@ make</userinput></screen>
       package managers, only the ones that don't support Linux have been
       disabled. If you'd like to support these package managers, set their
       switches to <parameter>OFF</parameter>.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_{LUA,QUICKJS}=OFF</parameter>: Pass this switch if
+      you have one of these scripting languages installed and wish to disable
+      their use for format strings.
     </para>
 
   </sect2>
