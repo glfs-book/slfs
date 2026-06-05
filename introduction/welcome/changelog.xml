@@ -47,6 +47,14 @@
           <ulink url="&slfs-issues;/715">#715</ulink>.</para>
         </listitem>
         <listitem>
+          <para>[tox] - hwinfo: 25.3 -&gt; 25.4. Fixes
+          <ulink url="&slfs-issues;/747">#747</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - m17n-db: 1.8.11 -&gt; 1.8.12. Fixes
+          <ulink url="&slfs-issues;/744">#744</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - Hyprland: 0.55.0 -&gt; 0.55.2. Fixes
           <ulink url="&slfs-issues;/704">#704</ulink>.</para>
         </listitem>
