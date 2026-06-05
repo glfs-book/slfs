@@ -46,6 +46,22 @@
           <para>[tox] - m17n-db: 1.8.11 -&gt; 1.8.12. Fixes
           <ulink url="&slfs-issues;/744">#744</ulink>.</para>
         </listitem>
+        <listitem>
+          <para>[tox] - Hyprland: 0.55.0 -&gt; 0.55.2. Fixes
+          <ulink url="&slfs-issues;/704">#704</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - aquamarine: 0.11.0 -&gt; 0.12.0. Fixes
+          <ulink url="&slfs-issues;/735">#735</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - Glaze: 7.7.0 -&gt; 7.7.1. Fixes
+          <ulink url="&slfs-issues;/734">#734</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - fastfetch: 2.63.1 -&gt; 2.64.0. Fixes
+          <ulink url="&slfs-issues;/738">#738</ulink>.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
 
