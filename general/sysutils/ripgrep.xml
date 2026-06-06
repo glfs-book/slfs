@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY ripgrep-download-root "https://github.com/burntsushi/ripgrep">
+  <!ENTITY ripgrep-download "&ripgrep-download-root;/archive/&ripgrep-version;/ripgrep-&ripgrep-version;.tar.gz">
+]>
+
+<sect1 id="ripgrep" xreflabel="ripgrep-&ripgrep-version;">
+  <?dbhtml filename="ripgrep.html"?>
+
+  <title>ripgrep-&ripgrep-version;</title>
+
+  <indexterm zone="ripgrep">
+    <primary sortas="a-ripgrep">ripgrep</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to ripgrep</title>
+
+    <para>
+      The ripgrep package provides a recursive <command>grep</command>
+      alternative written in Rust.
+    </para>
+
+    &build-use-network;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&ripgrep-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">ripgrep Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Required</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of ripgrep</title>
+    <para>
+      Install ripgrep by running the following commands:
+    </para>
+
+<screen><userinput>cargo build --profile=release-lto --features=pcre2</userinput></screen>
+
+    <para>
+      To run the test suite, issue:
+      <command>cargo test --features=pcre2</command>.
+    </para>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 target/release-lto/rg -t /usr/bin/</userinput></screen>
+
+    <para>
+      If you want to install the man page, execute the following command as the
+      &root; user:
+    </para>
+
+<screen remap="doc" role="root"><userinput>target/release-lto/rg --generate man | install -vDm644 /dev/stdin /usr/share/man/man1/rg.1</userinput></screen>
+
+    <para>
+      If you wish to install shell completions, execute the relevant commands
+      for your shell(s) as the <systemitem class="username">root</systemitem>
+      user:
+    </para>
+<screen role="root"><userinput>target/release-lto/rg --generate complete-bash | install -vDm644 /dev/stdin /usr/share/bash-completion/completions/rg
+target/release-lto/rg --generate complete-fish | install -vDm644 /dev/stdin /usr/share/fish/vendor_completions.d/rg.fish
+target/release-lto/rg --generate complete-zsh | install -vDm644 /dev/stdin /usr/share/zsh/site-functions/_rg</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>--profile=release-lto</parameter>: Upstream specified build
+      optimizations that might normally be present in the release profile in a
+      custom release-lto profile.
+
+      <footnote><para>
+        These optimizations are defined in <filename>Cargo.toml</filename>. For
+        an explanation of what each does, reference
+        <ulink url="https://doc.rust-lang.org/cargo/reference/profiles.html">The Cargo Book's profiles chapter</ulink>.
+
+        The custom profile is used because the developer often rebuilds ripgrep
+        with baseline release optimizations for development purposes, and LTO
+        slows the build significantly.
+
+        Upstream may have elected to define a release-lto profile following
+        <ulink url="https://doc.rust-lang.org/cargo/reference/profiles.html#custom-profiles">this example</ulink>.
+
+        For more information pertaining to this profile, see
+        <ulink url="https://github.com/BurntSushi/ripgrep/commit/4c953731c4ea06ecce1a6f1e0229f1dc18a967ff">this commit</ulink>
+        and its referenced issues.
+      </para></footnote>
+
+      It's also worth note that upstream builds their release assets with the
+      release-lto profile.
+    </para>
+
+    <para>
+      <parameter>--features=pcre2</parameter>: This parameter links against a
+      PCRE2 library installed in LFS to provide support for features present in
+      the PCRE2 regex engine, including backreferences and look-around. This
+      functionality is exposed through the <parameter>--pcre2</parameter> and
+      <parameter>--engine</parameter> <command>rg</command> flags.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Program</segtitle>
+      <segtitle>Installed Library</segtitle>
+      <segtitle>Installed Directory</segtitle>
+
+      <seglistitem>
+        <seg>
+          ripgrep
+        </seg>
+        <seg>
+          none
+        </seg>
+        <seg>
+          none
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ripgrep-bin">
+        <term><command>ripgrep</command></term>
+        <listitem>
+          <para>
+            is a recursive <command>grep</command> alternative written in Rust
+          </para>
+          <indexterm zone="ripgrep ripgrep-bin">
+            <primary sortas="b-ripgrep-bin">ripgrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
