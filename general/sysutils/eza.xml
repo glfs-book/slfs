@@ -45,7 +45,7 @@
 
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/basinet/curl.html">cURL</ulink> (to download man
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> (to download man
       pages)
     </para>
 
@@ -78,7 +78,7 @@
         the current options either require a lot of packages or a package that
         is big and may in turn require several dependencies.
       </para></footnote>
-      them using <ulink url="&blfs-svn;/basinet/curl.html">cURL</ulink> as the
+      them using <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> as the
       &root; user:
     </para>
 
