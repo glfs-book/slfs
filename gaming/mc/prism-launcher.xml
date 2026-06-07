@@ -100,6 +100,7 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
+CXXFLAGS+=" -Wno-sfinae-incomplete"  \
 cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_BUILD_TYPE=Release    \
       -W no-dev -G Ninja .. &amp;&amp;
@@ -112,6 +113,15 @@ ninja</userinput></screen>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
+  </sect2>
+
+  <sect2 role="commands">
+    <para>
+      <envar>CXXFLAGS+=" -Wno-sfinae-incomplete"</envar>: This disables a
+      warning that gives an error, warning about how some definitions were
+      previously incomplete in an SFINAE (Substitution Failure Is Not An Error)
+      context.
+    </para>
   </sect2>
 
   <sect2 role="configuration">
