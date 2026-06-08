@@ -116,6 +116,7 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
+    <title>Command Explanations</title>
     <para>
       <envar>CXXFLAGS+=" -Wno-sfinae-incomplete"</envar>: This disables a
       warning that gives an error, warning about how some definitions were
