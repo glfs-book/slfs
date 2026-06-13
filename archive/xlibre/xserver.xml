@@ -190,7 +190,7 @@ fi</userinput></screen>
       url="&BLFS76;">BLFS-7.6</ulink> as well, you
       will have to reinstall it. If you installed <ulink
       url="&blfs-svn;/x/mesa.html">Mesa</ulink> and/or <ulink
-      url="&glfs-website;/shareddeps/nvidia.html">NVIDIA</ulink>, you will not
+      url="&glfs-website;/core/nvidia.html">NVIDIA</ulink>, you will not
       need to reinstall them.
     </para>
 

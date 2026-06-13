@@ -60,7 +60,7 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <ulink url="&glfs-website;/shareddeps/glu.html">GLU</ulink>
+      <ulink url="&glfs-website;/core/glu.html">GLU</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>

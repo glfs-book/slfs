@@ -112,7 +112,7 @@
         <listitem>
           <para>
             &cuda; and <ulink
-            url="&glfs-website;/shareddeps/nv-codec-headers.html">nv-codec-headers</ulink>
+            url="&glfs-website;/core/nv-codec-headers.html">nv-codec-headers</ulink>
             (required for NVIDIA hardware encoding)
           </para>
         </listitem>

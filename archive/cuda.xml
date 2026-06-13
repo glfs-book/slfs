@@ -65,7 +65,7 @@
 
     <bridgehead renderas="sect4">Required</bridgehead>
     <para role="required">
-      <ulink url="&glfs-website;/shareddeps/nvidia.html">NVIDIA</ulink>
+      <ulink url="&glfs-website;/core/nvidia.html">NVIDIA</ulink>
     </para>
 
     <bridgehead renderas="sect4">Recommended</bridgehead>

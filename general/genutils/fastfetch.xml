@@ -61,7 +61,7 @@
       <ulink url="&blfs-svn;/x/libdrm.html">Libdrm</ulink>,
       <ulink url="&blfs-svn;/gnome/dconf.html">DConf</ulink>,
       &opengl;,
-      <ulink url="&glfs-website;/shareddeps/opencl-sdk.html">OpenCL-SDK</ulink>,
+      <ulink url="&glfs-website;/core/opencl-sdk.html">OpenCL-SDK</ulink>,
       <ulink url="&blfs-svn;/xfce/xfconf.html">Xfconf</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink>,

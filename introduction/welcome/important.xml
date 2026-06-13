@@ -35,7 +35,7 @@
       <phrase revision="systemd"><ulink
       url="&lfs-website;/slfs/view/12.4-systemd/">SLFS 12.4</ulink></phrase>
       and see how to go about fixing what is broken. See <ulink
-      url="&glfs-website;/shareddeps/aboutgl.html">GLFS: About OpenGL</ulink>
+      url="&glfs-website;/core/aboutgl.html">GLFS: About OpenGL</ulink>
       for more information about why support for Mesa's OpenGL implementations
       have been dropped from both this book and GLFS.
     </para>
