@@ -1,0 +1,50 @@
+Submitted By:            Zeckma <zeckma_DOT_tech_AT_gmail_DOT_com>
+Date:                    2026-05-20
+Initial Package Version: 1.25.1
+Upstream Status:         Not merged yet, suggested, patch derived
+Origin:                  From https://github.com/NLnetLabs/unbound/pull/1437.
+                         Only sldns/str2wire.c and smallapp/unbound-anchor.c
+                         have been modifed. The rest of the PR is for OpenSSL-1
+                         support, and a lot of its hunks fail.
+Description:             This patch makes Unbound compatible with OpenSSL-4.
+                         The PR this patch is derived from is massive and
+                         touches upon the build system, which its main purpose
+                         is for OpenSSL-1 support. Another issue is that
+                         smallapp/unbound-anchor.c has a change which doesn't
+                         use either ASN1_STRING_get0_data or ASN1_STRING_length
+                         although their usage was suggested. It has seemed this
+                         has been thrown to the side for OpenSSL-1 support.
+                         We just need up-to-date usage and a build-success.
+
+diff '--color=auto' -Naurp unbound-1.25.1.orig/sldns/str2wire.c unbound-1.25.1/sldns/str2wire.c
+--- unbound-1.25.1.orig/sldns/str2wire.c	2026-05-20 02:28:35.000000000 -0600
++++ unbound-1.25.1/sldns/str2wire.c	2026-05-20 12:39:26.127996795 -0600
+@@ -1201,7 +1201,7 @@ sldns_str2wire_svcbparam_ipv4hint(const
+ {
+ 	size_t count;
+ 	char ip_str[INET_ADDRSTRLEN+1];
+-	char *next_ip_str;
++	const char *next_ip_str;
+ 	size_t i;
+ 
+ 	for (i = 0, count = 1; val[i]; i++) {
+diff '--color=auto' -Naurp unbound-1.25.1.orig/smallapp/unbound-anchor.c unbound-1.25.1/smallapp/unbound-anchor.c
+--- unbound-1.25.1.orig/smallapp/unbound-anchor.c	2026-05-20 02:28:35.000000000 -0600
++++ unbound-1.25.1/smallapp/unbound-anchor.c	2026-05-20 12:51:35.766587047 -0600
+@@ -1676,10 +1676,12 @@ get_usage_of_ex(X509* cert)
+ 	unsigned long val = 0;
+ 	ASN1_BIT_STRING* s;
+ 	if((s=X509_get_ext_d2i(cert, NID_key_usage, NULL, NULL))) {
+-		if(s->length > 0) {
+-			val = s->data[0];
+-			if(s->length > 1)
+-				val |= s->data[1] << 8;
++		const unsigned char *data = ASN1_STRING_get0_data(s);
++		int len = ASN1_STRING_length(s);
++		if(len > 0) {
++			val = data[0];
++			if(len > 1)
++				val |= data[1] << 8;
+ 		}
+ 		ASN1_BIT_STRING_free(s);
+ 	}

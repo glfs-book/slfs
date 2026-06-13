@@ -43,7 +43,7 @@
       <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <xref linkend="libsodium"/>,
-      <ulink url="&blfs-svn;/server/unbound.html">Unbound</ulink>, and
+      <xref linkend="libunbound"/>, and
       <xref linkend="libzmq"/>
     </para>
 
@@ -58,9 +58,8 @@
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>,
-      <ulink url="&blfs-svn;/general/graphviz.html">Graphviz</ulink>,
-      <ulink url="https://github.com/google/googletest">gtest</ulink>, and
-      <ulink url="https://github.com/miniupnp/miniupnp">miniupnp</ulink>
+      <ulink url="&blfs-svn;/general/graphviz.html">Graphviz</ulink>, and
+      <ulink url="https://github.com/google/googletest">gtest</ulink>
     </para>
 
   </sect2>
@@ -74,11 +73,10 @@
 
 <screen><userinput>cat &gt; monero-list &lt;&lt; "EOF"
 <literal>monero-project/monero/archive/v&monero-version;/monero-&monero-version;.tar.gz
-google/googletest/archive/&monero-gtest;.tar.gz
-miniupnp/miniupnp/archive/&monero-miniupnp;.tar.gz
 tevador/RandomX/archive/&monero-randomx;.tar.gz
 Tencent/rapidjson/archive/&monero-rapidjson;.tar.gz
-monero-project/supercop/archive/&monero-supercop;.tar.gz</literal>
+monero-project/supercop/archive/&monero-supercop;.tar.gz
+trezor/trezor-common/archive/&monero-trezor;.tar.gz</literal>
 EOF</userinput></screen>
 
     <para>
@@ -123,11 +121,10 @@ done</userinput></screen>
       running the following commands:
     </para>
 
-<screen><userinput>mv -T googletest-* monero-&monero-version;/external/gtest     &amp;&amp;
-mv -T miniupnp-*   monero-&monero-version;/external/miniupnp  &amp;&amp;
-mv -T RandomX-*    monero-&monero-version;/external/randomx   &amp;&amp;
-mv -T rapidjson-*  monero-&monero-version;/external/rapidjson &amp;&amp;
-mv -T supercop-*   monero-&monero-version;/external/supercop</userinput></screen>
+<screen><userinput>mv -T RandomX-*      monero-&monero-version;/external/randomx   &amp;&amp;
+mv -T rapidjson-*    monero-&monero-version;/external/rapidjson &amp;&amp;
+mv -T supercop-*     monero-&monero-version;/external/supercop  &amp;&amp;
+mv -T trezor-common* monero-&monero-version;/external/trezor-common</userinput></screen>
 
     <para>
       Now go into the <filename
@@ -135,6 +132,13 @@ mv -T supercop-*   monero-&monero-version;/external/supercop</userinput></screen
     </para>
 
 <screen><userinput>cd monero-&monero-version;</userinput></screen>
+
+    <para>
+      Adapt the package for OpenSSL-4:
+    </para>
+
+<screen><userinput>sed -i 's/X509_NAME \*name/const X509_NAME \*name/g' \
+  contrib/epee/src/net_ssl.cpp</userinput></screen>
 
     <para>
       Ensure Protobuf has the right C++ standard set:

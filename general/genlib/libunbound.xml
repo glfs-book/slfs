@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY unbound-root
+    "https://nlnetlabs.nl/downloads/unbound">
+  <!ENTITY unbound-download
+    "&unbound-root;/unbound-&libunbound-version;.tar.gz">
+]>
+
+<sect1 id="libunbound" xreflabel="libunbound-&libunbound-version;">
+  <?dbhtml filename="libunbound.html"?>
+
+  <title>libunbound from Unbound-&libunbound-version;</title>
+
+  <indexterm zone="libunbound">
+    <primary sortas="a-libunbound">libunbound</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to libunbound</title>
+
+    <para>
+      The libunbound library from the Unbound package provides
+      an API for validating, recursing, and caching DNS addresses. Unbound
+      can provide issues with Systemd, although some packages require the
+      library. BLFS has removed the package from the Systemd edition, leaving
+      packages that need it in the dark. This provides the component that
+      packages need. The daemon itself shouldn't be needed.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&unbound-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&dl-root;/unbound/unbound-&libunbound-version;-openssl4-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">libunbound Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/postlfs/nss.html">NSS</ulink> and
+      <ulink url="&blfs-svn;/general/nspr.html">NSPR</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/basicnet/libevent.html">libevent</ulink> and
+      <ulink url="&blfs-svn;/postlfs/nettle.html">Nettle</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of libunbound</title>
+
+    <para>
+      Make the package compatible with OpenSSL-4 by applying a patch:
+    </para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../unbound-&libunbound-version;-openssl4-1.patch</userinput></screen>
+
+    <para>
+      Install libunbound by running the following commands:
+    </para>
+
+<screen><userinput>CFLAGS+=" -I/usr/include/nss"       \
+CFLAGS+=" -I/usr/include/nspr"      \
+./configure --prefix=/usr           \
+            --sysconfdir=/etc       \
+            --disable-static        \
+            --with-nss              \
+            --with-libunbound-only &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>--with-nss</parameter>: This ensures libunbound is built with
+      NSS.
+    </para>
+
+    <para>
+      <parameter>--with-libunbound-only</parameter>: This ensures only the
+      library is built.
+    </para>
+
+    <para>
+      <option>--with-libevent</option>: This option enables libevent support,
+      which allows for the use of large outgoing port ranges.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Library</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libunbound
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="lib-libunbound">
+        <term><filename class="libraryfile">libunbound</filename></term>
+        <listitem>
+          <para>
+            provides API functions to validate, recurse, and cache DNS
+            addresses
+          </para>
+          <indexterm zone="libunbound lib-libunbound">
+            <primary sortas="c-lib-libunbound">libunbound</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

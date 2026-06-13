@@ -40,6 +40,67 @@
     -->
 
     <listitem>
+      <para>June 13th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - cJSON: Added for Mango.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libunbound: Added for Monero.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Monero: 0.18.4.6 -&gt; 0.18.5.0. Fixes
+          <ulink url="&slfs-issues;/699">#699</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Mango: 0.12.9 -&gt; 0.14.2. Fixes
+          <ulink url="&slfs-issues;/706">#706</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Capstone: 5.0.7 -&gt; 5.0.9 (security). Fixes
+          <ulink url="&slfs-issues;/726">#726</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - tornado: 6.5.5 -&gt; 6.5.7 (security). Fixes
+          <ulink url="&slfs-issues;/728">#728</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - QuaZip: 1.5 -&gt; 1.7.1. Fixes
+          <ulink url="&slfs-issues;/729">#729</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - platformdirs: 4.9.6 -&gt; 4.10.0. Fixes
+          <ulink url="&slfs-issues;/730">#730</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Noise-Suppression: 1.10 -&gt; 1.21. Fixes
+          <ulink url="&slfs-issues;/731">#731</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libjuice: 1.7.1 -&gt; 1.7.2. Fixes
+          <ulink url="&slfs-issues;/732">#732</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libdatachannel: 0.24.2 -&gt; 0.24.3. Fixes
+          <ulink url="&slfs-issues;/733">#733</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - QR-Code-generator-CMake: v1.8.0-cmake4 -&gt;
+          v1.8.0-cmake5. Fixes
+          <ulink url="&slfs-issues;/736">#736</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Go: 1.26.3 -&gt; 1.26.4 (security). Fixes
+          <ulink url="&slfs-issues;/746">#746</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - structlog: 25.5.0 -&gt; 26.1.0. Fixes
+          <ulink url="&slfs-issues;/753">#753</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 10th, 2026</para>
       <itemizedlist>
         <listitem>

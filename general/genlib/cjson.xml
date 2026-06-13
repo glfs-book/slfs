@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY cjson-root
+    "https://github.com/DaveGamble/cJSON/archive">
+  <!ENTITY cjson-download
+    "&cjson-root;/v&cjson-version;/cJSON-&cjson-version;.tar.gz">
+]>
+
+<sect1 id="cjson" xreflabel="cJSON-&cjson-version;">
+  <?dbhtml filename="cjson.html"?>
+
+  <title>cJSON-&cjson-version;</title>
+
+  <indexterm zone="cjson">
+    <primary sortas="a-cjson">cJSON</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to cJSON</title>
+
+    <para>
+      The cJSON (not to be confused with JSON-C which fulfills the same purpose
+      but with a different API) package provides a light-weight JSON parser 
+      ibrary in C.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&cjson-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Required patch:
+          <ulink url="&dl-root;/cJSON/cJSON-&cjson-version;-upstream_fixes-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">cJSON Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of cJSON</title>
+
+    <para>
+      Apply a patch to fix several security vulnerabilties and other issues:
+    </para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../cJSON-&cjson-version;-upstream_fixes-1.patch</userinput></screen>
+
+    <para>
+      Install cJSON by running the following commands:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          None
+        </seg>
+        <seg>
+          libcjson
+        </seg>
+        <seg>
+          /usr/include/cjson and
+          /usr/lib/cmake/cJSON
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libcjson">
+        <term><filename class="libraryfile">libcjson</filename></term>
+        <listitem>
+          <para>
+            provides functions that can parse JSON
+          </para>
+          <indexterm zone="cjson libcjson">
+            <primary sortas="c-libcjson">libcjson</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

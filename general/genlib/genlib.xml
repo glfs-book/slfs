@@ -19,6 +19,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="asio.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="capstone.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cglm.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cjson.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="enet.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fuse2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="glaze.xml"/>
@@ -32,6 +33,7 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libdatachannel.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libmspack.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libsodium.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libunbound.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libutempter.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libx86emu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libzip.xml"/>

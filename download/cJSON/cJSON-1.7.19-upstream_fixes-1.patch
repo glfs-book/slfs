@@ -1,0 +1,112 @@
+Submitted by:            Zeckma
+Date:                    2026-06-13
+Initial Package Version: 1.7.19
+Origin:                  Upstream, up to HEAD
+Upstream Status:         Up to HEAD
+Description:             Fixes several vulnerabilities and updates CMake
+                         minimum version.
+
+diff '--color=auto' -Naurp cJSON-1.7.19/cJSON.c cJSON/cJSON.c
+--- cJSON-1.7.19/cJSON.c	2025-09-09 07:56:10.000000000 -0600
++++ cJSON/cJSON.c	2026-06-13 11:04:59.596074980 -0600
+@@ -410,6 +410,11 @@ loop_end:
+ /* don't ask me, but the original cJSON_SetNumberValue returns an integer or double */
+ CJSON_PUBLIC(double) cJSON_SetNumberHelper(cJSON *object, double number)
+ {
++    if (object == NULL)
++    {
++        return (double)NAN;
++    }
++
+     if (number >= INT_MAX)
+     {
+         object->valueint = INT_MAX;
+@@ -1598,6 +1603,11 @@ static cJSON_bool print_array(const cJSO
+         return false;
+     }
+ 
++    if (output_buffer->depth >= CJSON_NESTING_LIMIT)
++    {
++        return false; /* nesting is too deep */
++    }
++
+     /* Compose the output array. */
+     /* opening square bracket */
+     output_pointer = ensure(output_buffer, 1);
+@@ -1778,6 +1788,11 @@ static cJSON_bool print_object(const cJS
+         return false;
+     }
+ 
++    if (output_buffer->depth >= CJSON_NESTING_LIMIT)
++    {
++        return false; /* nesting is too deep */
++    }
++
+     /* Compose the output: */
+     length = (size_t) (output_buffer->format ? 2 : 1); /* fmt: {\n */
+     output_pointer = ensure(output_buffer, length + 1);
+diff '--color=auto' -Naurp cJSON-1.7.19/cJSON_Utils.c cJSON/cJSON_Utils.c
+--- cJSON-1.7.19/cJSON_Utils.c	2025-09-09 07:56:10.000000000 -0600
++++ cJSON/cJSON_Utils.c	2026-06-13 11:04:59.596708419 -0600
+@@ -906,7 +906,7 @@ static int apply_patch(cJSON *object, co
+     if ((opcode == MOVE) || (opcode == COPY))
+     {
+         cJSON *from = get_object_item(patch, "from", case_sensitive);
+-        if (from == NULL)
++        if (!cJSON_IsString(from))
+         {
+             /* missing "from" for copy/move. */
+             status = 4;
+diff '--color=auto' -Naurp cJSON-1.7.19/CMakeLists.txt cJSON/CMakeLists.txt
+--- cJSON-1.7.19/CMakeLists.txt	2025-09-09 07:56:10.000000000 -0600
++++ cJSON/CMakeLists.txt	2026-06-13 11:04:59.596074980 -0600
+@@ -1,5 +1,5 @@
+ set(CMAKE_LEGACY_CYGWIN_WIN32 0)
+-cmake_minimum_required(VERSION 3.0)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(cJSON
+     VERSION 1.7.19
+diff '--color=auto' -Naurp cJSON-1.7.19/library_config/uninstall.cmake cJSON/library_config/uninstall.cmake
+--- cJSON-1.7.19/library_config/uninstall.cmake	2025-09-09 07:56:10.000000000 -0600
++++ cJSON/library_config/uninstall.cmake	2026-06-13 11:04:59.598962433 -0600
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.5)
++cmake_minimum_required(VERSION 3.5)
+ 
+ set(MANIFEST "${CMAKE_CURRENT_BINARY_DIR}/install_manifest.txt")
+ 
+diff '--color=auto' -Naurp cJSON-1.7.19/README.md cJSON/README.md
+--- cJSON-1.7.19/README.md	2025-09-09 07:56:10.000000000 -0600
++++ cJSON/README.md	2026-06-13 11:04:59.596074980 -0600
+@@ -89,7 +89,7 @@ cJSON is written in ANSI C (C89) in orde
+ 
+ #### CMake
+ 
+-With CMake, cJSON supports a full blown build system. This way you get the most features. CMake with an equal or higher version than 2.8.5 is supported. With CMake it is recommended to do an out of tree build, meaning the compiled files are put in a directory separate from the source files. So in order to build cJSON with CMake on a Unix platform, make a `build` directory and run CMake inside it.
++With CMake, cJSON supports a full blown build system. This way you get the most features. CMake with an equal or higher version than 3.5 is supported. With CMake it is recommended to do an out of tree build, meaning the compiled files are put in a directory separate from the source files. So in order to build cJSON with CMake on a Unix platform, make a `build` directory and run CMake inside it.
+ 
+ ```
+ mkdir build
+diff '--color=auto' -Naurp cJSON-1.7.19/tests/misc_tests.c cJSON/tests/misc_tests.c
+--- cJSON-1.7.19/tests/misc_tests.c	2025-09-09 07:56:10.000000000 -0600
++++ cJSON/tests/misc_tests.c	2026-06-13 11:04:59.600838459 -0600
+@@ -23,6 +23,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <math.h>
+ 
+ #include "unity/examples/unity_config.h"
+ #include "unity/src/unity.h"
+@@ -478,8 +479,8 @@ static void cjson_functions_should_not_c
+     TEST_ASSERT_NULL(cJSON_SetValuestring(corruptedString, "test"));
+     TEST_ASSERT_NULL(cJSON_SetValuestring(item, NULL));
+     cJSON_Minify(NULL);
+-    /* skipped because it is only used via a macro that checks for NULL */
+-    /* cJSON_SetNumberHelper(NULL, 0); */
++    /* cJSON_SetNumberHelper should handle NULL gracefully */
++    TEST_ASSERT_TRUE(isnan(cJSON_SetNumberHelper(NULL, 0)));
+ 
+     /* restore corrupted item2 to delete it */
+     item2->prev = originalPrev;

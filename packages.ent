@@ -2,8 +2,9 @@
 <!-- General Libraries -->
 <!ENTITY anthy-version                       "1:0.4-3">
 <!ENTITY asio-version                        "1-38-0">
-<!ENTITY capstone-version                    "5.0.7">
+<!ENTITY capstone-version                    "5.0.9">
 <!ENTITY cglm-version                        "0.9.6">
+<!ENTITY cjson-version                       "1.7.19">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
 <!ENTITY glaze-version                       "7.7.1">
@@ -14,13 +15,14 @@
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libime-version                      "1.1.14">
 <!ENTITY libime-kenlm                        "4cb443e60b7bf2c0ddf3c745378f76cb59e254e5">
-<!ENTITY libjuice-version                    "1.7.1">
+<!ENTITY libjuice-version                    "1.7.2">
 <!ENTITY libsrtp-version                     "2.8.0">
-<!ENTITY libdatachannel-version              "0.24.2">
+<!ENTITY libdatachannel-version              "0.24.3">
 <!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
 <!ENTITY libdatachannel-usrsctp              "fec583d54493f879d2ae44a743423bf8a04371ab">
 <!ENTITY libmspack-version                   "1.11">
 <!ENTITY libsodium-version                   "1.0.22">
+<!ENTITY libunbound-version                  "1.25.1">
 <!ENTITY libutempter-version                 "1.2.3">
 <!ENTITY libutempter-tag                     "&libutempter-version;-alt1">
 <!ENTITY libx86emu-major                     "3">
@@ -41,9 +43,9 @@
 <!ENTITY plutosvg-version                    "&plutosvg-major;.&plutosvg-minor;">
 <!ENTITY pugixml-version                     "1.15">
 <!ENTITY qrcodegencpp-version                "1.8.0">
-<!ENTITY qrcodegencpp-cmake-version          "1.8.0-cmake4">
+<!ENTITY qrcodegencpp-cmake-version          "1.8.0-cmake5">
 <!ENTITY quazip-major                        "1">
-<!ENTITY quazip-version                      "&quazip-major;.5">
+<!ENTITY quazip-version                      "&quazip-major;.7.1">
 <!ENTITY re2-version                         "2025-11-05">
 <!ENTITY sdbus-cpp-version                   "2.3.1">
 <!ENTITY sdl2_net-version                    "2.4.0">
@@ -87,12 +89,11 @@ version, so keep this at that. -->
 <!ENTITY lotus123-binutils-version           "2.38">
 <!ENTITY lrzsz-version                       "0.12.20">
 <!ENTITY minicom-version                     "2.11.1">
-<!ENTITY monero-version                      "0.18.4.6">
-<!ENTITY monero-gtest                        "b514bdc898e2951020cbdca1304b75f5950d1f59">
-<!ENTITY monero-miniupnp                     "544e6fcc73c5ad9af48a8985c94f0f1d742ef2e0">
+<!ENTITY monero-version                      "0.18.5.0">
 <!ENTITY monero-randomx                      "102f8acf90a7649ada410de5499a7ec62e49e1da">
 <!ENTITY monero-rapidjson                    "129d19ba7f496df5e33658527a7158c79b99c21c">
 <!ENTITY monero-supercop                     "633500ad8c8759995049ccd022107d1fa8a1bbc9">
+<!ENTITY monero-trezor                       "bff7fdfe436c727982cc553bdfb29a9021b423b0">
 <!ENTITY gkermit-version                     "2.01">
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ostree-version                      "2026.1">
@@ -122,7 +123,7 @@ version, so keep this at that. -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20260126">
-<!ENTITY go-version                          "1.26.3">
+<!ENTITY go-version                          "1.26.4">
 <!ENTITY go1_4-version                       "ceb95ea6aef52c1fb472d3539c6ef68670778b5b">
 <!ENTITY go1_17-version                      "15da892a4950a4caac987ee72c632436329f62d5">
 <!ENTITY go1_20-version                      "90a870f1dc49bfcc6ffe95f80fbaf21875198e7a">
@@ -140,11 +141,11 @@ version, so keep this at that. -->
 <!ENTITY python3-lib-suffix                  "cpython-&python3-major;&python3-minor;-&lt;arch&gt;-linux-gnu">
 <!ENTITY python3-site                        "/usr/lib/python&python3-majorver;/site-packages">
 <!-- Python Dependencies -->
-<!ENTITY structlog-version                   "25.5.0">
-<!ENTITY platformdirs-version                "4.9.6">
+<!ENTITY structlog-version                   "26.1.0">
+<!ENTITY platformdirs-version                "4.10.0">
 <!ENTITY pycurl-version                      "7.46.0">
 <!ENTITY toml-version                        "0.10.2">
-<!ENTITY tornado-version                     "6.5.5">
+<!ENTITY tornado-version                     "6.5.7">
 <!-- Python Modules -->
 <!ENTITY nvchecker-version                   "2.20">
 <!-- END PYTHON -->
@@ -171,7 +172,7 @@ version, so keep this at that. -->
 <!ENTITY mksh-version                        "R59c">
 <!-- MM-LIB -->
 <!ENTITY ladspa-sdk-version                  "1.17">
-<!ENTITY noise-suppression-version           "1.10">
+<!ENTITY noise-suppression-version           "1.21">
 <!ENTITY rubberband-version                  "4.0.0">
 <!ENTITY sdl-version                         "1.2.76">
 
@@ -250,7 +251,7 @@ version, so keep this at that. -->
 <!-- i3 -->
 <!ENTITY i3-version                          "4.25.1">
 <!-- Mango -->
-<!ENTITY mango-version                       "0.12.9">
+<!ENTITY mango-version                       "0.14.2">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
 <!-- Wayfire -->
