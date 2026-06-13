@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>June 10th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - yt-dlp: 2026.03.17 -&gt; 2026.06.09. Fixes
+          <ulink url="&slfs-issues;/754">#754</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 6th, 2026</para>
       <itemizedlist>
         <listitem>
