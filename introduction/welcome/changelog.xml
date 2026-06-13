@@ -43,6 +43,10 @@
       <para>June 13th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - cava: 0.10.7 -&gt; 1.0.0. Fixes
+          <ulink url="&slfs-issues;/756">#756</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - cJSON: Added for Mango.</para>
         </listitem>
         <listitem>

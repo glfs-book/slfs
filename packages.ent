@@ -59,7 +59,7 @@
 <!ENTITY yajl-version                        "2.1.0">
 <!ENTITY yyjson-version                      "0.12.0">
 <!-- General Utilities -->
-<!ENTITY cava-version                        "0.10.7">
+<!ENTITY cava-version                        "1.0.0">
 <!ENTITY cmark-version                       "0.31.2">
 <!ENTITY evdevhook2-version                  "1.0.2">
 <!ENTITY htop-version                        "3.5.1">
