@@ -102,6 +102,8 @@ version, so keep this at that. -->
 <!ENTITY neofetch-version                    "7.1.0">
 <!ENTITY fastfetch-version                   "2.64.2">
 <!ENTITY rpmextract-version                  "1.0">
+<!ENTITY rtmpdump-version                    "2.3">
+<!ENTITY rtmpdump-current                    "2.6">
 <!ENTITY scdoc-version                       "1.11.4">
 <!ENTITY tmux-version                        "3.6b">
 <!ENTITY typst-version                       "0.14.2">
