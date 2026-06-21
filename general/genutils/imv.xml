@@ -88,7 +88,13 @@
       directory:
     </para>
 
-<screen><userinput>patch -Np1 -i ../imv-&imv-version;-libexecdir-1.patch</userinput></screen>
+<screen><userinput>patch -Np1 -i ../imv-v&imv-version;-libexecdir-1.patch</userinput></screen>
+
+    <para>
+      Include the stdio header to allow building the librsvg backend:
+    </para>
+
+<screen><userinput>sed -i '6a #include &lt;stdio.h&gt;' src/backend_librsvg.c</userinput></screen>
 
     <para>
       Install imv by running the following commands:
