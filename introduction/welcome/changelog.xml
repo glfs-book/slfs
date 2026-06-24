@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>June 24th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - xdg-desktop-portal-wlr: 0.8.2 -&gt; 0.8.3. Fixes
+          <ulink url="&slfs-issues;/770">#770</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 23rd, 2026</para>
       <itemizedlist>
         <listitem>
