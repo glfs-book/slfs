@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>June 24th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - aquamarine: 0.12.0 -&gt; 0.12.1. Fixes
+          <ulink url="&slfs-issues;/758">#758</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 23rd, 2026</para>
       <itemizedlist>
         <listitem>
