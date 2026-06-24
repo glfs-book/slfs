@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>June 24th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - pugixml: 1.15 -&gt; 1.16. Fixes
+          <ulink url="&slfs-issues;/767">#767</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 23rd, 2026</para>
       <itemizedlist>
         <listitem>
