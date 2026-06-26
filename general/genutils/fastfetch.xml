@@ -42,7 +42,8 @@
 
     <bridgehead renderas="sect4">Recommended</bridgehead>
     <para role="recommended">
-      <xref linkend="yyjson"/> (or a vendored copy is used)
+      <ulink url="&blfs-svn;/general/yyjson.html">yyjson</ulink>
+      (or a vendored copy is used)
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>

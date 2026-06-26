@@ -40,6 +40,46 @@
     -->
 
     <listitem>
+      <para>June 26th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - libliftoff: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - nlohmann-json: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - seatd: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Wayfire and extra plugins: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - wlroots: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xcb-util-errors: Moved to BLFS and GLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xdg-desktop-portal-wlr: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - yyjson: Moved to BLFS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>June 23rd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - intel-onevpl: 26.2.0 -&gt; 26.2.3. Fixes
+          <ulink url="&slfs-issues;/749">#749</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 23rd, 2026</para>
       <itemizedlist>
         <listitem>

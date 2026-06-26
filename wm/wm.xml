@@ -15,6 +15,5 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="i3/i3.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mango/mango.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sxwm/sxwm.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wf/wf.xml"/>
 
 </part>
