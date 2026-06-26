@@ -43,6 +43,10 @@
       <para>June 26th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - uthash: 2.3.0 -&gt; 2.4.0. Fixes
+          <ulink url="&slfs-issues;/787">#787</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libliftoff: Moved to BLFS.</para>
         </listitem>
         <listitem>
