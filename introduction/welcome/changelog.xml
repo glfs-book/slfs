@@ -43,6 +43,10 @@
       <para>June 26th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - socat: 1.8.1.1 -&gt; 1.8.1.3 (security). Fixes
+          <ulink url="&slfs-issues;/785">#785</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libliftoff: Moved to BLFS.</para>
         </listitem>
         <listitem>
