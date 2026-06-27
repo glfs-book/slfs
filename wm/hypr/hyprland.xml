@@ -76,7 +76,7 @@
       <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
-      <xref linkend="libliftoff"/>,
+      <ulink url="&blfs-svn;/general/libliftoff.html">libliftoff</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       <ulink url="&blfs-svn;/general/lua.html">Lua</ulink>,
       <ulink url="&blfs-svn;/lxqt/muparser.html">muparser</ulink>,
@@ -84,7 +84,7 @@
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <xref linkend="re2"/>,
-      <xref linkend="seatd"/>,
+      <ulink url="&blfs-svn;/general/seatd.html">seatd</ulink>,
       <phrase revision="systemd">
       <ulink url="&blfs-svn;/general/systemd.html">Systemd</ulink>,
       </phrase>
@@ -103,8 +103,7 @@
     <para role="recommended">
       <xref linkend="glaze"/> (will be downloaded if not installed),
       <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
-      <xref linkend="xcb-util-errors"/>, and
-      <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
+      and <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
     </para>
 
     <bridgehead renderas="sect4">Optional</bridgehead>

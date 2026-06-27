@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY mtools-download "&gnu-http;/mtools/mtools-&mtools-version;.tar.gz">
+]>
+
+<sect1 id="mtools" xreflabel="Mtools-&mtools-version;">
+  <?dbhtml filename="mtools.html"?>
+
+  <title>Mtools-&mtools-version;</title>
+
+  <indexterm zone="mtools">
+    <primary sortas="a-mtools">Mtools</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Mtools</title>
+
+    <para>
+      The Mtools package provides a set of utilities to access MD-DOS disk
+      contents without mounting the disk.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&mtools-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Mtools Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Mtools</title>
+
+    <para>
+      Install Mtools by running the following commands:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-floppyd &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Command Explanations</title>
+
+    <para>
+      <parameter>--disable-floppyd</parameter>: Disables building the floppy
+      daemon, which requires the Xorg Libraries. If you installed those
+      libraries, you can remove this parameter.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          lz,
+          mattrib,
+          mbadblocks,
+          mcat,
+          mcd,
+          mcheck,
+          mcomp,
+          mcopy,
+          mdel,
+          mdeltree,
+          mdir,
+          mdoctorfat,
+          mdu,
+          mformat,
+          minfo,
+          mkmanifest,
+          mlabel,
+          mmd,
+          mmount,
+          mmove,
+          mpartition,
+          mrd,
+          mren,
+          mshortname,
+          mshowfat,
+          mtools,
+          mtoolstest,
+          mtype,
+          mxtar,
+          mzip,
+          tgz, and
+          uz
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          None
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <para>
+      Most of the tools are variants of what is provided by coreutils and
+      other packages, designed for MS-DOS disk access, and won't be explained
+      here.
+    </para>
+
+  </sect2>
+
+</sect1>

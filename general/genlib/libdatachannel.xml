@@ -64,7 +64,7 @@
     <bridgehead renderas="sect4">Optional</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/postlfs/gnutls.html">GnuTLS</ulink> and
-      <xref linkend="nlohmann-json"/>
+      <ulink url="&blfs-svn;/general/nlohmann-json.html">nlohmann-json</ulink>
     </para>
 
   </sect2>
