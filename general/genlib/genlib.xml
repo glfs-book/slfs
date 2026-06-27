@@ -42,7 +42,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mbedtls.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="minizip.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="msgraph.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nlohmann-json.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="plutosvg.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="pugixml.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="qrcodegencpp.xml"/>
@@ -50,13 +49,11 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="re2.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sdbus-cpp.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sdl2_net.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="seatd.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="simde.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tllist.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tomlplusplus.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="uthash.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="websocketpp.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yajl.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yyjson.xml"/>
 
 </chapter>

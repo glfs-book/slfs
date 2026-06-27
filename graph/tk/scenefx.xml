@@ -46,7 +46,7 @@
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
-      and <xref linkend="wlroots"/>
+      and <ulink url="&blfs-svn;/x/wlroots.html">wlroots</ulink>
     </para>
 
   </sect2>
