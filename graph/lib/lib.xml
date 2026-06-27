@@ -20,10 +20,8 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intel-mediasdk.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intel-onevpl.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libdecor.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libliftoff.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libspng.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libvpl.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xdg-desktop-portal-hyprland.xml"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xdg-desktop-portal-wlr.xml"/>
 
 </chapter>
