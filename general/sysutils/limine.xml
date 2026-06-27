@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY limine-root
+    "https://github.com/Limine-Bootloader/Limine/releases/download">
+  <!ENTITY limine-download
+    "&limine-root;/v&limine-version;/limine-&limine-version;.tar.gz">
+]>
+
+<sect1 id="limine" xreflabel="Limine-&limine-version;">
+  <?dbhtml filename="limine.html"?>
+
+  <title>Limine-&limine-version;</title>
+
+  <indexterm zone="limine">
+    <primary sortas="a-limine">Limine</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduction to Limine</title>
+
+    <para>
+      The Limine package provides a modern bootloader, an alternative to GRUB.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Download: <ulink url="&limine-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Limine Dependencies</bridgehead>
+
+    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <para role="recommended">
+      <xref linkend="mtools"/> and
+      <ulink url="&blfs-svn;/general/nasm.html">NASM</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Optional</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/postlfs/dosfstools.html">dosfstools</ulink> and
+      <ulink url="&blfs-svn;/postlfs/efibootmgr.html">efibootmgr</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Limine</title>
+
+    <para>
+      Install Limine by running the following commands:
+    </para>
+
+<screen><userinput>CC_FOR_TARGET=cc                  \
+LD_FOR_TARGET=ld                  \
+OBJCOPY_FOR_TARGET=objcopy        \
+OBJDUMP_FOR_TARGET=objdump        \
+READELF_FOR_TARGET=readelf        \
+./configure --prefix=/usr         \
+            --enable-bios         \
+            --enable-bios-cd      \
+            --enable-uefi-cd      \
+            --enable-bios-pxe     \
+            --enable-uefi-ia32    \
+            --enable-uefi-x86-64 &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Now, as the &root; user:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+mv -v /usr/share/doc/limine{,-&limine-version;}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Configuring Limine</title>
+
+    <para>
+      Limine has been installed, but like GRUB, that doesn't mean it is
+      completely installed quite yet. During the build process, various images
+      have been built. Depending on the boot firmware, they may be able to be
+      simply copied from one place to another, or you will need to use
+      <command>limine</command> to help aid with the bootloader installation.
+    </para>
+
+    <para>
+      Before complete installation is carried out, it's important to address a
+      limitation but also a benefit of Limine. The focus of Limine is to be
+      small and to not have as much features as GRUB. This means it only
+      supports FAT typed filesystems. EXT4 is not supported. There are a few
+      options for an already made LFS system in which <filename
+      class="directory">/boot</filename> is formatted as EXT4 if it's a
+      separate partition, or if it isn't a separate partition.
+    </para>
+
+    <para>
+      For UEFI systems, this can be circumvented a bit easier, as one could
+      stuff all needed assets, including the kernel, into the ESP. For BIOS,
+      there isn't an option besides creating the <filename
+      class="directory">/boot</filename> partition if it isn't already made,
+      and formatting it as VFAT/FAT-32. This will require <ulink
+      url="&blfs-svn;/postlfs/dosfstools.html">dosfstools</ulink> if you're
+      booted in the LFS target. Back up all of your assets needed for booting
+      and be careful if you need to create the partition.
+    </para>
+
+    <note><para>
+      For UEFI, if you wish to put assets into the ESP, be sure it's big
+      enough. A resize may be required. Ensure it gets mounted at boot
+      by putting an entry in <filename>/etc/fstab</filename>.
+    </para></note>
+
+    <sect3>
+      <title>For UEFI</title>
+
+      <para>
+        For UEFI, the built <filename class="extension">EFI</filename> files
+        can be copied into the standard location. Install the
+        <filename class="extension">EFI</filename> files as the &root; user
+        (replace <literal><replaceable>&lt;ESP&gt;</replaceable></literal>
+        with the ESP location, such as <filename
+        class="directory">/boot/efi</filename>):
+      </para>
+
+<screen role="root"><userinput>mkdir -pv <replaceable>&lt;ESP&gt;</replaceable>/EFI/BOOT &amp;&amp;
+cp -v /usr/share/limine/*.EFI \
+      <replaceable>&lt;ESP&gt;</replaceable>/EFI/BOOT</userinput></screen>
+
+      <para>
+        If you want a non-standard location for the <filename
+        class="extension">EFI</filename> or the UEFI firmware doesn't search
+        that standard location, you will need <ulink
+        url="&blfs-svn;/postlfs/efibootmgr.html">efibootmgr</ulink> if you're
+        booted in the LFS target, and to loosely follow the <ulink
+        url="&lfs-root;/chapter10/grub.html">LFS GRUB Setup</ulink>,
+        <quote>Booting With UEFI</quote> section.
+      </para>
+    </sect3>
+
+    <sect3>
+      <title>For BIOS</title>
+
+      <para>
+        For BIOS, you will need to use the <command>limine</command> utility.
+        Run the following as the &root; user (repace <filename
+        class="directory">/dev/sda</filename> with the disk you want to install
+        the bootloader for):
+      </para>
+
+<screen role="root"><userinput>mkdir -pv /boot/limine &amp;&amp;
+cp /usr/share/limine/limine-bios.sys /boot/limine &amp;&amp;
+limine bios-install /dev/sda</userinput></screen>
+    </sect3>
+
+    <sect3>
+      <title>Creating the Configuration File</title>
+
+      <para>
+        Now the configuration file must be made. <literal>boot()</literal>
+        points to the root of the partition hosting the configuration file.
+        This could be <filename class="directory">/boot</filename>, or it could
+        be the ESP. Thus, the location of the configuration file will vary.
+        You must move the boot assets to the location <literal>boot()</literal>
+        points too, factoring in the sub-directories. Example locations are
+        as follows: <filename>/boot/limine.conf</filename>,
+        <filename>/boot/limine/limine.conf</filename>,
+        <filename>/boot/efi/limine.conf</filename>, and
+        <filename>/boot/efi/EFI/BOOT/limine.conf</filename>.
+        Now create the configuration file as the &root; user:
+      </para>
+
+<screen role="root"><userinput>mkdir -pv <replaceable>&lt;CONF_LOCATION&gt;</replaceable> &amp;&amp;
+cat &gt; <replaceable>&lt;CONF_LOCATION&gt;</replaceable>/limine.conf &lt;&lt; "EOF"
+<literal>timeout: 5
+
+/GNU/Linux
+  protocol: linux
+  path: boot():/vmlinuz-<replaceable>&lt;linux-version&gt;</replaceable>
+  cmdline: root=/dev/sda2 ro</literal>
+EOF</userinput></screen>
+
+      <para>
+        Replace <filename class="directory">/dev/sda2</filename> with the
+        root partition. Like with GRUB, <literal>PARTUUID</literal> can be
+        used instead, and <literal>UUID</literal> under certain conditions.
+      </para>
+
+      <para>
+        To get a better idea of the layout, see the below two snippets.
+      </para>
+
+      <para>
+        For UEFI:
+      </para>
+
+<screen><emphasis role='blue'>/boot</emphasis>
+└── <emphasis role='blue'>efi</emphasis>
+    ├── <emphasis role='blue'>EFI</emphasis>
+    │   └── <emphasis role='blue'>BOOT</emphasis>
+    │       ├── <emphasis role='green'>BOOTIA32.EFI</emphasis>
+    │       ├── <emphasis role='green'>BOOTX64.EFI</emphasis>
+    │       └── limine.conf
+    ├── config-7.0.8
+    ├── System.map-7.0.8
+    └── <emphasis role='green'>vmlinuz-7.0.8</emphasis></screen>
+
+      <para>
+        For BIOS:
+      </para>
+
+<screen><emphasis role='blue'>/boot</emphasis>
+├── <emphasis role='blue'>limine</emphasis>
+│   ├── limine.conf
+│   └── limine-bios.sys
+├── config-7.0.8
+├── System.map-7.0.8
+└── <emphasis role='green'>vmlinuz-7.0.8</emphasis></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Contents</title>
+
+    <segmentedlist>
+      <segtitle>Installed Programs</segtitle>
+      <segtitle>Installed Libraries</segtitle>
+      <segtitle>Installed Directories</segtitle>
+
+      <seglistitem>
+        <seg>
+          limine
+        </seg>
+        <seg>
+          None
+        </seg>
+        <seg>
+          /usr/share/doc/limine-&limine-version; and
+          /usr/share/limine
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="limine-bin">
+        <term><command>limine</command></term>
+        <listitem>
+          <para>
+            is the Limine utility for installing a bootloader
+          </para>
+          <indexterm zone="limine limine">
+            <primary sortas="b-limine">limine</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

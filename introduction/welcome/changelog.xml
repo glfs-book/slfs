@@ -43,6 +43,10 @@
       <para>June 27th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Limine: Added. Fixes
+          <ulink url="&slfs-issues;/217">#217</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Mtools: Added.</para>
         </listitem>
       </itemizedlist>
