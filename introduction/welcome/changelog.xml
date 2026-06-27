@@ -82,6 +82,10 @@
       <para>June 24th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fish: 4.7.1 -&gt; 4.8.0. Fixes
+          <ulink url="&slfs-issues;/760">#760</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - strace: 7.0 -&gt; 7.1. Fixes
           <ulink url="&slfs-issues;/768">#768</ulink>.</para>
         </listitem>
