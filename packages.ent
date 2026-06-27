@@ -236,7 +236,7 @@ version, so keep this at that. -->
 <!ENTITY hyprwire-version                    "0.3.1">
 <!ENTITY hyprcursor-version                  "0.1.13">
 <!ENTITY hyprwayland-scanner-version         "0.4.6">
-<!ENTITY aquamarine-version                  "0.12.0">
+<!ENTITY aquamarine-version                  "0.12.1">
 <!ENTITY hyprgraphics-version                "0.5.1">
 <!ENTITY hyprtoolkit-version                 "0.5.4">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
