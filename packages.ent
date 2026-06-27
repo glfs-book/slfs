@@ -34,7 +34,6 @@
 <!ENTITY mbedtls-version                     "3.6.6">
 <!ENTITY msgraph-version                     "0.3.4">
 <!ENTITY zlib-version                        "1.3.2">
-<!ENTITY nlohmann-json-version               "3.12.0">
 <!ENTITY plutovg-major                       "1">
 <!ENTITY plutovg-minor                       "3.3">
 <!ENTITY plutovg-version                     "&plutovg-major;.&plutovg-minor;">
@@ -49,7 +48,6 @@
 <!ENTITY re2-version                         "2025-11-05">
 <!ENTITY sdbus-cpp-version                   "2.3.1">
 <!ENTITY sdl2_net-version                    "2.4.0">
-<!ENTITY seatd-version                       "0.9.3">
 <!ENTITY simde-version                       "0.8.2">
 <!ENTITY tllist-version                      "1.1.0">
 <!ENTITY tomlplusplus-version                "3.4.0">
@@ -57,7 +55,6 @@
 <!ENTITY websocketpp-version                 "0.8.2">
 <!ENTITY wlr-randr-version                   "0.5.0">
 <!ENTITY yajl-version                        "2.1.0">
-<!ENTITY yyjson-version                      "0.12.0">
 <!-- General Utilities -->
 <!ENTITY cava-version                        "1.0.0">
 <!ENTITY cmark-version                       "0.31.2">
@@ -100,7 +97,7 @@ version, so keep this at that. -->
 <!ENTITY ncdu-version                        "1.22">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.64.2">
+<!ENTITY fastfetch-version                   "2.65.1">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY rtmpdump-version                    "2.3">
 <!ENTITY rtmpdump-current                    "2.6">
@@ -117,6 +114,7 @@ version, so keep this at that. -->
 <!ENTITY eza-version                         "0.23.4">
 <!ENTITY iputils-version                     "20250605">
 <!ENTITY libtree-version                     "3.1.1">
+<!ENTITY mtools-version                      "4.0.49">
 <!ENTITY ripgrep-version                     "15.1.0">
 <!ENTITY tealdeer-version                    "1.8.1">
 <!ENTITY tinyxxd-version                     "1.3.16">
@@ -154,7 +152,7 @@ version, so keep this at that. -->
 <!ENTITY samurai-minor                       "ff9b14">
 <!ENTITY samurai-version                     "ff9b14caa1c27f694a7677f0d5da3e4fff657788">
 <!ENTITY shaderc-version                     "2026.2">
-<!ENTITY strace-version                      "7.0">
+<!ENTITY strace-version                      "7.1">
 <!ENTITY socat-version                       "1.8.1.1">
 <!ENTITY unlambda-version                    "2.0.0">
 <!ENTITY xtrace-minor-version                "526c77">
@@ -188,21 +186,16 @@ version, so keep this at that. -->
 <!ENTITY glfw-version                        "3.4">
 <!ENTITY intel-mediasdk-version              "23.2.2">
 <!ENTITY libdecor-version                    "0.2.5">
-<!ENTITY libliftoff-version                  "0.5.0">
 <!ENTITY libspng-version                     "0.7.4">
 <!ENTITY libvpl-version                      "2.16.0">
 <!ENTITY intel-onevpl-version                "26.2.3">
 <!ENTITY xdg-desktop-portal-hyprland-version "1.3.12">
-<!ENTITY xdg-desktop-portal-wlr-version      "0.8.2">
 <!-- Graphical Toolkits -->
 <!ENTITY printproto-version                  "1.0.5">
 <!ENTITY libxp-version                       "1.0.4">
 <!ENTITY motif-version                       "2.3.8">
 <!ENTITY scenefx-minor                       "0.4">
 <!ENTITY scenefx-version                     "&scenefx-minor;.1">
-<!ENTITY wlroots-minor                       "0.19">
-<!ENTITY wlroots-version                     "&wlroots-minor;.3">
-<!ENTITY xcb-util-errors-version             "1.0.1">
 <!ENTITY xcb-util-xrm-version                "1.3">
 <!ENTITY xcb-imdkit-version                  "1.0.9">
 <!-- Terminal Emulators -->
@@ -256,12 +249,6 @@ version, so keep this at that. -->
 <!ENTITY mango-version                       "0.14.2">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
-<!-- Wayfire -->
-<!ENTITY wf-version                          "0.10.0">
-<!ENTITY wf-config-version                   "&wf-version;">
-<!--<!ENTITY wayfire-version                     "&wf-version;">-->
-<!ENTITY wayfire-version                     "0.10.1">
-<!ENTITY wayfire-plugins-extra-version       "&wf-version;">
 
 <!-- EMULATORS -->
 <!-- Com-Emu -->

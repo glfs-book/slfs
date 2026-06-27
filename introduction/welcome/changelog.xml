@@ -40,11 +40,58 @@
     -->
 
     <listitem>
+      <para>June 27th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Mtools: Added.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>June 26th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - libliftoff: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - nlohmann-json: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - seatd: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Wayfire and extra plugins: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - wlroots: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xcb-util-errors: Moved to BLFS and GLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xdg-desktop-portal-wlr: Moved to BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - yyjson: Moved to BLFS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+    
+    <listitem>
       <para>June 24th, 2026</para>
       <itemizedlist>
         <listitem>
           <para>[tox] - fish: 4.7.1 -&gt; 4.8.0. Fixes
           <ulink url="&slfs-issues;/760">#760</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - strace: 7.0 -&gt; 7.1. Fixes
+          <ulink url="&slfs-issues;/768">#768</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - fastfetch: 2.64.2 -&gt; 2.65.1. Fixes
+          <ulink url="&slfs-issues;/759">#759</ulink>.</para>
         </listitem>
       </itemizedlist>
     </listitem>
