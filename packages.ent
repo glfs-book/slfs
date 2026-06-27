@@ -40,7 +40,7 @@
 <!ENTITY plutosvg-major                      "0">
 <!ENTITY plutosvg-minor                      "0.8">
 <!ENTITY plutosvg-version                    "&plutosvg-major;.&plutosvg-minor;">
-<!ENTITY pugixml-version                     "1.15">
+<!ENTITY pugixml-version                     "1.16">
 <!ENTITY qrcodegencpp-version                "1.8.0">
 <!ENTITY qrcodegencpp-cmake-version          "1.8.0-cmake5">
 <!ENTITY quazip-major                        "1">
