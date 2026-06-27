@@ -154,13 +154,13 @@ cp /etc/dunst/dunstrc ~/.config/dunst</userinput></screen>
 
         <para>
           In some cases, this method is the only method to autostart this
-          program correctly, like when using <xref linkend="wayfire"/>.
-          In essence, if your preferred window manager or compositor has a
-          configuration file and supports autostarting, the general idea is to
-          just have it autostart <command>dunst</command> with no arguments.
-          Every window manager and compositor will handle autostarting
-          differently, but that's the general gist of it. As an example, for
-          <xref linkend="wayfire"/>, it might look something like this:
+          program correctly, like when using Wayfire. In essence, if your
+          preferred window manager or compositor has a configuration file and
+          supports autostarting, the general idea is to just have it autostart
+          <command>dunst</command> with no arguments. Every window manager and
+          compositor will handle autostarting differently, but that's the
+          general gist of it. As an example, for Wayfire, it might look
+          something like this:
         </para>
 
 <screen><emphasis role='purple'>[autostart]</emphasis>
