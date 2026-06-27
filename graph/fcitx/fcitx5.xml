@@ -54,7 +54,7 @@
       <ulink url="&blfs-svn;/general/fmt.html">fmt</ulink>,
       <ulink url="&blfs-svn;/general/json-c.html">JSON-C</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
-      <xref linkend="nlohmann-json"/>,
+      <ulink url="&blfs-svn;/general/nlohmann-json.html">nlohmann-json</ulink>,
       and <xref linkend="xcb-imdkit"/>
     </para>
 
