@@ -40,11 +40,24 @@
     -->
 
     <listitem>
+      <para>June 27th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Mtools: Added.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>June 26th, 2026</para>
       <itemizedlist>
         <listitem>
           <para>[tox] - uthash: 2.3.0 -&gt; 2.4.0. Fixes
           <ulink url="&slfs-issues;/787">#787</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - socat: 1.8.1.1 -&gt; 1.8.1.3 (security). Fixes
+          <ulink url="&slfs-issues;/785">#785</ulink>.</para>
         </listitem>
         <listitem>
           <para>[zeckma] - libliftoff: Moved to BLFS.</para>
@@ -69,6 +82,36 @@
         </listitem>
         <listitem>
           <para>[zeckma] - yyjson: Moved to BLFS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+    
+    <listitem>
+      <para>June 24th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - typst: 0.14.2 -&gt; 0.15.0. Fixes
+          <ulink url="&slfs-issues;/769">#769</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - pugixml: 1.15 -&gt; 1.16. Fixes
+          <ulink url="&slfs-issues;/767">#767</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - aquamarine: 0.12.0 -&gt; 0.12.1. Fixes
+          <ulink url="&slfs-issues;/758">#758</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - fish: 4.7.1 -&gt; 4.8.0. Fixes
+          <ulink url="&slfs-issues;/760">#760</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - strace: 7.0 -&gt; 7.1. Fixes
+          <ulink url="&slfs-issues;/768">#768</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - fastfetch: 2.64.2 -&gt; 2.65.1. Fixes
+          <ulink url="&slfs-issues;/759">#759</ulink>.</para>
         </listitem>
       </itemizedlist>
     </listitem>
