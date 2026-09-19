@@ -43,6 +43,10 @@
       <para>September 18th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[Sicarine] - PrismLauncher: 11.0.3 -&gt; 11.1.0.
+            Fixes <ulink url="&slfs-issues;/910">#910</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[Sicarine] - platformdirs: 4.11.3 -&gt; 4.11.10.
             Fixes <ulink url="&slfs-issues;/908">#908</ulink>.</para>
         </listitem>
