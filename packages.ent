@@ -7,17 +7,17 @@
 <!ENTITY cjson-version                       "1.7.19">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY glaze-version                       "8.0.0">
+<!ENTITY glaze-version                       "9.0.0">
 <!ENTITY hidapi-version                      "0.15.0">
-<!ENTITY iniparser-version                   "4.2.6">
-<!ENTITY jemalloc-version                    "5.3.1">
-<!ENTITY libbacktrace-minor                  "6f8310">
-<!ENTITY libbacktrace-version                "6f8310e238fc3ce68f42f391cbe93fd156bb2c23">
+<!ENTITY iniparser-version                   "4.3.0">
+<!ENTITY jemalloc-version                    "5.4.0">
+<!ENTITY libbacktrace-minor                  "0b9b49">
+<!ENTITY libbacktrace-version                "0b9b49cf4a2c9229fc052d6716e1528b2f23e91a">
 <!ENTITY libev-version                       "4.33">
-<!ENTITY libime-version                      "1.1.15">
+<!ENTITY libime-version                      "1.1.17">
 <!ENTITY libime-kenlm                        "4cb443e60b7bf2c0ddf3c745378f76cb59e254e5">
-<!ENTITY libjuice-version                    "1.7.3">
-<!ENTITY libsrtp-version                     "2.8.0">
+<!ENTITY libjuice-version                    "1.7.4">
+<!ENTITY libsrtp-version                     "2.8.1">
 <!ENTITY libdatachannel-version              "0.24.3">
 <!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
 <!ENTITY libdatachannel-usrsctp              "fec583d54493f879d2ae44a743423bf8a04371ab">
@@ -28,12 +28,12 @@
 <!ENTITY libutempter-tag                     "&libutempter-version;-alt1">
 <!ENTITY libx86emu-major                     "3">
 <!ENTITY libx86emu-version                   "&libx86emu-major;.7">
-<!ENTITY libzip-version                      "1.11.4">
+<!ENTITY libzip-version                      "1.12.1">
 <!ENTITY libzmq-version                      "4.3.5">
-<!ENTITY m17n-version                        "1.8.6">
-<!ENTITY m17n-db-version                     "1.8.14">
+<!ENTITY m17n-version                        "1.8.7">
+<!ENTITY m17n-db-version                     "1.8.15">
 <!ENTITY mbedtls-version                     "3.6.7">
-<!ENTITY msgraph-version                     "0.3.4">
+<!ENTITY msgraph-version                     "0.3.5">
 <!ENTITY zlib-version                        "1.3.2">
 <!ENTITY plutovg-major                       "1">
 <!ENTITY plutovg-minor                       "3.3">
@@ -65,11 +65,11 @@
 <!ENTITY btop-version                        "1.4.7">
 <!ENTITY cldr-emoji-annotation-version       "38">
 <!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">
-<!ENTITY flatpak-version                     "1.18.1">
-<!ENTITY fluidsynth-version                  "2.5.4">
+<!ENTITY flatpak-version                     "1.18.3">
+<!ENTITY fluidsynth-version                  "2.6.1">
 <!ENTITY fs-gcem                             "012ae73c6d0a2cb09ffe86475f5c6fba3926e200">
 <!ENTITY fs-sf2                              "3.1">
-<!ENTITY hwinfo-version                      "25.5">
+<!ENTITY hwinfo-version                      "26.0">
 <!ENTITY imv-version                         "5.0.1">
 <!ENTITY inxi-rev                            "1">
 <!ENTITY inxi-version                        "3.3.41-&inxi-rev;">
@@ -88,7 +88,7 @@ version, so keep this at that. -->
 <!ENTITY lotus123-binutils-version           "2.38">
 <!ENTITY lrzsz-version                       "0.12.20">
 <!ENTITY minicom-version                     "2.11.1">
-<!ENTITY monero-version                      "0.18.5.1">
+<!ENTITY monero-version                      "0.18.5.4">
 <!ENTITY monero-randomx                      "102f8acf90a7649ada410de5499a7ec62e49e1da">
 <!ENTITY monero-rapidjson                    "129d19ba7f496df5e33658527a7158c79b99c21c">
 <!ENTITY monero-supercop                     "633500ad8c8759995049ccd022107d1fa8a1bbc9">
@@ -99,7 +99,7 @@ version, so keep this at that. -->
 <!ENTITY ncdu-version                        "1.22">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">
-<!ENTITY fastfetch-version                   "2.68.1">
+<!ENTITY fastfetch-version                   "2.70.0">
 <!ENTITY rpmextract-version                  "1.0">
 <!ENTITY rtmpdump-version                    "2.3">
 <!ENTITY rtmpdump-current                    "2.6">
@@ -119,7 +119,7 @@ version, so keep this at that. -->
 <!ENTITY iputils-version                     "20250605">
 <!ENTITY jaq-version                         "3.1.1">
 <!ENTITY libtree-version                     "3.1.1">
-<!ENTITY limine-version                      "12.5.2">
+<!ENTITY limine-version                      "12.9.0">
 <!ENTITY mtools-version                      "4.0.49">
 <!ENTITY ripgrep-version                     "15.2.0">
 <!ENTITY tealdeer-version                    "1.9.0">
@@ -130,7 +130,7 @@ version, so keep this at that. -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20260126">
-<!ENTITY go-version                          "1.27.1">
+<!ENTITY go-version                          "1.27.2">
 <!ENTITY go1_4-version                       "ceb95ea6aef52c1fb472d3539c6ef68670778b5b">
 <!ENTITY go1_17-version                      "15da892a4950a4caac987ee72c632436329f62d5">
 <!ENTITY go1_20-version                      "90a870f1dc49bfcc6ffe95f80fbaf21875198e7a">
@@ -150,9 +150,9 @@ version, so keep this at that. -->
 <!-- Python Dependencies -->
 <!ENTITY structlog-version                   "26.1.0">
 <!ENTITY platformdirs-version                "4.11.11">
-<!ENTITY pycurl-version                      "7.47.0">
+<!ENTITY pycurl-version                      "7.48.0">
 <!ENTITY toml-version                        "0.10.2">
-<!ENTITY tornado-version                     "6.5.8">
+<!ENTITY tornado-version                     "6.5.10">
 <!-- Python Modules -->
 <!ENTITY nvchecker-version                   "2.21">
 <!-- END PYTHON -->
@@ -174,7 +174,7 @@ version, so keep this at that. -->
 <!ENTITY openjdk-suffix                      "&java-suffix;">
 <!ENTITY openjdk-build                       "1">
 <!-- Shells -->
-<!ENTITY fish-version                        "4.8.1">
+<!ENTITY fish-version                        "4.9.3">
 <!ENTITY ksh-version                         "1.0.10">
 <!ENTITY mksh-version                        "R59c">
 <!-- Text Editors -->
@@ -187,7 +187,7 @@ version, so keep this at that. -->
 
 <!-- SERVERS -->
 <!-- Major Servers -->
-<!ENTITY nginx-version                       "1.31.3">
+<!ENTITY nginx-version                       "1.31.7">
 
 <!-- GRAPH -->
 <!-- Graphical Libraries -->
@@ -197,7 +197,7 @@ version, so keep this at that. -->
 <!ENTITY libdecor-version                    "0.2.5">
 <!ENTITY libspng-version                     "0.7.4">
 <!ENTITY libvpl-version                      "2.17.0">
-<!ENTITY intel-onevpl-version                "26.3.1">
+<!ENTITY intel-onevpl-version                "26.4.0">
 <!ENTITY xdg-desktop-portal-hyprland-version "1.4.1">
 <!-- Graphical Toolkits -->
 <!ENTITY printproto-version                  "1.0.5">
@@ -209,7 +209,7 @@ version, so keep this at that. -->
 <!ENTITY xcb-imdkit-version                  "1.0.9">
 <!-- Terminal Emulators -->
 <!ENTITY alacritty-version                   "0.17.0">
-<!ENTITY foot-version                        "1.27.0">
+<!ENTITY foot-version                        "1.28.0">
 <!-- Launchers -->
 <!ENTITY rofi-version                        "2.0.0">
 <!ENTITY wofi-version                        "1.5.3">
@@ -224,16 +224,16 @@ version, so keep this at that. -->
 <!ENTITY wbg-version                         "1.3.0">
 <!ENTITY xeyes-version                       "1.3.1">
 <!-- Fcitx -->
-<!ENTITY fcitx5-version                      "5.1.21">
+<!ENTITY fcitx5-version                      "5.1.23">
 <!ENTITY fcitx5-yoga                         "042f5013152eb81c1552dec945b88f7b95ca350f">
-<!ENTITY fcitx5-qt-version                   "5.1.14">
+<!ENTITY fcitx5-qt-version                   "5.1.16">
 <!ENTITY fcitx5-gtk-version                  "5.1.7">
-<!ENTITY fcitx5-lua-version                  "5.0.17">
-<!ENTITY fcitx5-chinese-addons-version       "5.1.13">
-<!ENTITY fcitx5-table-extra-version          "5.1.12">
-<!ENTITY fcitx5-anthy-version                "5.1.10">
-<!ENTITY fcitx5-m17n-version                 "5.1.6">
-<!ENTITY fcitx5-configtool-version           "5.1.14">
+<!ENTITY fcitx5-lua-version                  "5.0.18">
+<!ENTITY fcitx5-chinese-addons-version       "5.1.15">
+<!ENTITY fcitx5-table-extra-version          "5.1.13">
+<!ENTITY fcitx5-anthy-version                "5.1.11">
+<!ENTITY fcitx5-m17n-version                 "5.1.8">
+<!ENTITY fcitx5-configtool-version           "5.1.16">
 
 <!-- WM -->
 <!-- CDE -->
@@ -255,7 +255,7 @@ version, so keep this at that. -->
 <!-- i3 -->
 <!ENTITY i3-version                          "4.25.1">
 <!-- Mango -->
-<!ENTITY mango-version                       "0.16.0">
+<!ENTITY mango-version                       "0.18.1">
 <!-- SXWM -->
 <!ENTITY sxwm-version                        "1.7">
 
@@ -274,9 +274,9 @@ version, so keep this at that. -->
 <!ENTITY p20-emu-version                     "6ed08d6e05c30f75c01803d8acdb7cad274d74da">
 <!-- Game-Emu -->
 <!ENTITY melonds-version                     "1.1">
-<!ENTITY mgba-minor-version                  "afd6f1">
-<!ENTITY mgba-version                        "afd6f14eaf8bd35214ed3fb9dc69a92bfc3877a9">
-<!ENTITY dolphin-version                     "2606a">
+<!ENTITY mgba-minor-version                  "143adf">
+<!ENTITY mgba-version                        "143adf5aa2a60c6036810b0cd72445e13d74b0e6">
+<!ENTITY dolphin-version                     "2609a">
 <!ENTITY dolphin-sfml-external               "0fa201c969e48ecc253581c5841ce73f44d42f49">
 <!ENTITY dolphin-vk-mem-alloc-external       "3bab6924988e5f19bf36586a496156cf72f70d9f">
 <!ENTITY dolphin-cubeb-external              "54217bca3f3e0cd53c073690a23dd25d83557909">
@@ -356,7 +356,7 @@ version, so keep this at that. -->
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->
-<!ENTITY heirloom-ng-version                 "250220">
+<!ENTITY heirloom-ng-version                 "260903">
 <!ENTITY schilytools-version                 "2024-03-21">
 <!ENTITY heirloom-sh-version                 "050706">
 <!ENTITY heirloom-doctools-minor-version     "2e9b0c">

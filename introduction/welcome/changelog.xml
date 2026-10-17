@@ -40,6 +40,156 @@
     -->
 
     <listitem>
+      <para>October 16th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Limine: 12.5.2 -&gt; 12.9.0. Fixes
+          <ulink url="&slfs-issues;/898">#898</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - foot: 1.27.0 -&gt; 1.28.0. Fixes
+          <ulink url="&slfs-issues;/907">#907</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fish: 4.8.1 -&gt; 4.9.3. Fixes
+          <ulink url="&slfs-issues;/913">#913</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Glaze: 8.0.0 -&gt; 9.0.0. Fixes
+          <ulink url="&slfs-issues;/914">#914</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - iniparser: 4.2.6 -&gt; 4.3.0. Fixes
+          <ulink url="&slfs-issues;/915">#915</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - jemalloc: 5.3.1 -&gt; 5.4.0. Fixes
+          <ulink url="&slfs-issues;/916">#916</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Flatpak: 1.18.1 -&gt; 1.18.3. Fixes
+          <ulink url="&slfs-issues;/917">#917</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Mango: 0.16.0 -&gt; 0.18.1. Fixes
+          <ulink url="&slfs-issues;/918">#918</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - pycurl: 7.47.0 -&gt; 7.48.0. Fixes
+          <ulink url="&slfs-issues;/919">#919</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - heirloom-ng: 250220 -&gt; 260903. Fixes
+          <ulink url="&slfs-issues;/920">#920</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - tornado: 6.5.8 -&gt; 6.5.10 (security). Fixes
+          <ulink url="&slfs-issues;/921">#921</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - msgraph: 0.3.4 -&gt; 0.3.5. Fixes
+          <ulink url="&slfs-issues;/922">#922</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - NGINX: 1.31.3 -&gt; 1.31.7 (security). Fixes
+          <ulink url="&slfs-issues;/923">#923</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - FluidSynth: 2.5.4 -&gt; 2.6.1. Fixes
+          <ulink url="&slfs-issues;/924">#924</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Dolphin: 2606a -&gt; 2609a. Fixes
+          <ulink url="&slfs-issues;/925">#925</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fastfetch: 2.68.1 -&gt; 2.70.0. Fixes
+          <ulink url="&slfs-issues;/926">#926</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5: 5.1.21 -&gt; 5.1.23. Fixes
+          <ulink url="&slfs-issues;/927">#927</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx-Qt: 5.1.14 -&gt; 5.1.16. Fixes
+          <ulink url="&slfs-issues;/928">#928</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Lua: 5.0.17 -&gt; 5.0.18. Fixes
+          <ulink url="&slfs-issues;/929">#929</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-chinese-addons: 5.1.13 -&gt; 5.1.15. Fixes
+          <ulink url="&slfs-issues;/930">#930</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-table-extra: 5.1.12 -&gt; 5.1.13. Fixes
+          <ulink url="&slfs-issues;/931">#931</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Anthy: 5.1.10 -&gt; 5.1.11. Fixes
+          <ulink url="&slfs-issues;/932">#932</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-m17n: 5.1.6 -&gt; 5.1.8. Fixes
+          <ulink url="&slfs-issues;/933">#933</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-configtool: 5.1.14 -&gt; 5.1.16. Fixes
+          <ulink url="&slfs-issues;/934">#934</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Go: 1.27.1 -&gt; 1.27.2. Fixes
+          <ulink url="&slfs-issues;/936">#936</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hwinfo: 25.5 -&gt; 26.0. Fixes
+          <ulink url="&slfs-issues;/937">#937</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - intel-onevpl: 26.3.1 -&gt; 26.4.0. Fixes
+          <ulink url="&slfs-issues;/939">#939</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libbacktrace: 6f8310 -&gt; 0b9b49. Fixes
+          <ulink url="&slfs-issues;/940">#940</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libime: 1.1.15 -&gt; 1.1.17. Fixes
+          <ulink url="&slfs-issues;/941">#941</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libjuice: 1.7.3 -&gt; 1.7.4. Fixes
+          <ulink url="&slfs-issues;/942">#942</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libsrtp: 2.8.0 -&gt; 2.8.1. Fixes
+          <ulink url="&slfs-issues;/943">#943</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libzip: 1.11.4 -&gt; 1.12.1. Fixes
+          <ulink url="&slfs-issues;/944">#944</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - m17n-lib: 1.8.6 -&gt; 1.8.7. Fixes
+          <ulink url="&slfs-issues;/946">#946</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - m17n-db: 1.8.14 -&gt; 1.8.15. Fixes
+          <ulink url="&slfs-issues;/947">#947</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - mGBA: afd6f1 -&gt; 143adf. Fixes
+          <ulink url="&slfs-issues;/949">#949</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Monero: 0.18.5.1 -&gt; 0.18.5.4. Fixes
+          <ulink url="&slfs-issues;/950">#950</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 18th, 2026</para>
       <itemizedlist>
         <listitem>
