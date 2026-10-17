@@ -124,13 +124,13 @@ version, so keep this at that. -->
 <!ENTITY ripgrep-version                     "15.2.0">
 <!ENTITY tealdeer-version                    "1.9.0">
 <!ENTITY tinyxxd-version                     "1.3.16">
-<!ENTITY waypipe-version                     "0.11.1">
+<!ENTITY waypipe-version                     "0.11.2">
 <!-- Programming -->
 <!ENTITY autoconf-archive-version            "2024.10.16">
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20260126">
-<!ENTITY go-version                          "1.26.6">
+<!ENTITY go-version                          "1.27.1">
 <!ENTITY go1_4-version                       "ceb95ea6aef52c1fb472d3539c6ef68670778b5b">
 <!ENTITY go1_17-version                      "15da892a4950a4caac987ee72c632436329f62d5">
 <!ENTITY go1_20-version                      "90a870f1dc49bfcc6ffe95f80fbaf21875198e7a">
@@ -149,7 +149,7 @@ version, so keep this at that. -->
 <!ENTITY python3-site                        "/usr/lib/python&python3-majorver;/site-packages">
 <!-- Python Dependencies -->
 <!ENTITY structlog-version                   "26.1.0">
-<!ENTITY platformdirs-version                "4.11.3">
+<!ENTITY platformdirs-version                "4.11.11">
 <!ENTITY pycurl-version                      "7.47.0">
 <!ENTITY toml-version                        "0.10.2">
 <!ENTITY tornado-version                     "6.5.8">
@@ -350,7 +350,7 @@ version, so keep this at that. -->
 <!-- Let's keep this updated for security reasons.
      - Zeckma -->
 <!ENTITY jdk-modern                          "21.0.10+6">
-<!ENTITY prism-launcher-version              "11.0.3">
+<!ENTITY prism-launcher-version              "11.1.0">
 <!-- TTD -->
 <!ENTITY openttd-version                     "15.3">
 

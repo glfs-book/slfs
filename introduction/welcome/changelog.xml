@@ -40,6 +40,28 @@
     -->
 
     <listitem>
+      <para>September 18th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Sicarine] - Go: 1.26.6 -&gt; 1.27.1. Fixes
+          <ulink url="&slfs-issues;/903">#903</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - PrismLauncher: 11.0.3 -&gt; 11.1.0. Fixes
+          <ulink url="&slfs-issues;/910">#910</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - platformdirs: 4.11.3 -&gt; 4.11.11. Fixes
+          <ulink url="&slfs-issues;/908">#908</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - Waypipe: 0.11.1 -&gt; 0.11.2. Fixes
+          <ulink url="&slfs-issues;/904">#904</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>September 3rd, 2026</para>
       <itemizedlist>
         <listitem>
