@@ -1,6 +1,6 @@
 # Contributing
 
-# 1. No AI/LLM Usage
+## 1. No AI/LLM Usage
 This project is strongly against the use of AI and LLMs. The work that built
 and helped this project stay alive is thanks to the efforts of humans and
 human-made tools alone. It should and ought to stay that way. If it is
