@@ -4,16 +4,16 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY unbound-root
+  <!ENTITY libunbound-root
     "https://nlnetlabs.nl/downloads/unbound">
-  <!ENTITY unbound-download
-    "&unbound-root;/unbound-&libunbound-version;.tar.gz">
+  <!ENTITY libunbound-download
+    "&libunbound-root;/unbound-&libunbound-version;.tar.gz">
 ]>
 
 <sect1 id="libunbound" xreflabel="libunbound-&libunbound-version;">
   <?dbhtml filename="libunbound.html"?>
 
-  <title>libunbound from Unbound-&libunbound-version;</title>
+  <title>libunbound-&libunbound-version;</title>
 
   <indexterm zone="libunbound">
     <primary sortas="a-libunbound">libunbound</primary>
@@ -34,7 +34,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download: <ulink url="&unbound-download;"/>
+          Download: <ulink url="&libunbound-download;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -44,7 +44,7 @@
       <listitem>
         <para>
           Required patch:
-          <ulink url="&dl-root;/unbound/unbound-&libunbound-version;-openssl4-1.patch"/>
+          <ulink url="&dl-root;/libunbound/libunbound-&libunbound-version;-openssl4-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -74,7 +74,7 @@
       Make the package compatible with OpenSSL-4 by applying a patch:
     </para>
 
-<screen><userinput remap="pre">patch -Np1 -i ../unbound-&libunbound-version;-openssl4-1.patch</userinput></screen>
+<screen><userinput remap="pre">patch -Np1 -i ../libunbound-&libunbound-version;-openssl4-1.patch</userinput></screen>
 
     <para>
       Install libunbound by running the following commands:

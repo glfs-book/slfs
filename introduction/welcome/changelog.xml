@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>October 23rd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - libunbound: 1.25.1 -&gt; 1.25.2 (security). Fixes
+          <ulink url="&slfs-issues;/965">#965</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>October 16th, 2026</para>
       <itemizedlist>
         <listitem>
