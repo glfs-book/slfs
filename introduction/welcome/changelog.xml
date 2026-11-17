@@ -43,6 +43,10 @@
       <para>November 17th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[Sicarine] - Go: 1.27.2 -&gt; 1.27.3 (security). Fixes
+            <ulink url="&slfs-issues;/964">#964</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[Sicarine] - Waypipe: 0.11.2 -&gt; 0.11.3.</para>
         </listitem>
       </itemizedlist>
