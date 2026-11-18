@@ -43,6 +43,10 @@
       <para>November 17th, 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - OpenJDK: 17.0.20.1-ga -&gt; 17.0.21.1-ga (security).
+          Fixes <ulink url="&slfs-issues;/968">#968</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[Sicarine] - OBS Studio: 32.2.2 -&gt; 33.0.1. Fixes
           <ulink url="&slfs-issues;/966">#966</ulink>.</para>
         </listitem>

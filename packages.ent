@@ -167,12 +167,12 @@ version, so keep this at that. -->
 <!ENTITY wev-version                         "1.1.0">
 <!-- JAVA -->
 <!ENTITY java-major-version                  "17">
-<!ENTITY java-version                        "&java-major-version;.0.20.1">
+<!ENTITY java-version                        "&java-major-version;.0.21.1">
 <!ENTITY java-suffix                         "-ga">
 <!ENTITY openjdk-major-version               "&java-major-version;">
 <!ENTITY openjdk-version                     "&java-version;">
 <!ENTITY openjdk-suffix                      "&java-suffix;">
-<!ENTITY openjdk-build                       "1">
+<!ENTITY openjdk-build                       "2">
 <!-- Shells -->
 <!ENTITY fish-version                        "4.9.3">
 <!ENTITY ksh-version                         "1.0.10">
