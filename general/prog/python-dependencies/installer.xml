@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../../general.ent">
+  %general-entities;
+
+  <!ENTITY installer-download "https://files.pythonhosted.org/packages/source/i/installer/installer-&installer-version;.tar.gz">
+]>
+
+  <sect2 id="installer" xreflabel="installer-&installer-version;">
+
+    <title>installer-&installer-version;</title>
+
+    <indexterm zone="installer">
+      <primary sortas="a-installer">installer</primary>
+    </indexterm>
+
+    <sect3 role="package">
+      <title>Introduction to installer Module</title>
+
+      <para>
+        The installer module contains a low-level library
+        for installing Python packages from a wheel distribution.
+        It provides basic functionality and abstractions for handling
+        wheels and installing packages from wheels.
+      </para>
+
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Download: <ulink url="&installer-download;"/>
+          </para>
+        </listitem>
+      </itemizedlist>
+
+    </sect3>
+
+    <sect3 role="installation">
+      <title>Installation of installer</title>
+
+      <para>Build the module:</para>
+
+      &build-wheel;
+
+      <para>
+        Now, as the &root; user:
+      </para>
+
+<screen role="root"><userinput>&install-wheel; installer</userinput></screen>
+
+    </sect3>
+
+    <sect3 role="commands">
+      &pip3-cmd-explain;
+    </sect3>
+
+    <sect3 role="content">
+      <title>Contents</title>
+
+      <segmentedlist>
+        <segtitle>Installed Programs</segtitle>
+        <segtitle>Installed Libraries</segtitle>
+        <segtitle>Installed Directories</segtitle>
+
+        <seglistitem>
+          <seg>None</seg>
+          <seg>None</seg>
+          <seg>
+            /usr/lib/python&python3-majorver;/site-packages/installer and
+            /usr/lib/python&python3-majorver;/site-packages/installer-&installer-version;.dist-info
+          </seg>
+        </seglistitem>
+      </segmentedlist>
+
+    </sect3>
+
+  </sect2>

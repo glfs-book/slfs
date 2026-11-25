@@ -49,7 +49,12 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          <xref linkend="structlog"/>
+          <xref linkend="installer"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <xref linkend="packageurl-python"/>
         </para>
       </listitem>
       <listitem>
@@ -64,6 +69,16 @@
       </listitem>
       <listitem>
         <para>
+          <xref linkend="python-sbom"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <xref linkend="structlog"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
           <xref linkend="toml"/>
         </para>
       </listitem>
@@ -72,11 +87,19 @@
           <xref linkend="tornado"/>
         </para>
       </listitem>
+      <listitem>
+        <para>
+          <xref linkend="zipremove"/>
+        </para>
+      </listitem>
     </itemizedlist>
   </sect2>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-    href="python-dependencies/structlog.xml"/>
+              href="python-dependencies/installer.xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+              href="python-dependencies/packageurl-python.xml"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
     href="python-dependencies/platformdirs.xml"/>
@@ -85,9 +108,18 @@
     href="python-dependencies/pycurl.xml"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+              href="python-dependencies/python-sbom.xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+              href="python-dependencies/structlog.xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
     href="python-dependencies/toml.xml"/>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
     href="python-dependencies/tornado.xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+              href="python-dependencies/zipremove.xml"/>
 
 </sect1>
