@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../../general.ent">
   %general-entities;
 
-  <!ENTITY zipremove-download "https://files.pythonhosted.org/packages/source/i/zipremove/zipremove-&zipremove-version;.tar.gz">
+  <!ENTITY zipremove-download "https://files.pythonhosted.org/packages/source/z/zipremove/zipremove-&zipremove-version;.tar.gz">
 ]>
 
   <sect2 id="zipremove" xreflabel="zipremove-&zipremove-version;">
