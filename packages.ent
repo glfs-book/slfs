@@ -109,7 +109,7 @@ version, so keep this at that. -->
 <!ENTITY w3m-version                         "0.5.6">
 <!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20260125">
-<!ENTITY yt-dlp-version                      "2026.08.19">
+<!ENTITY yt-dlp-version                      "2026.11.23">
 <!ENTITY xmlstarlet-version                  "1.6.1">
 <!-- System Utilities -->
 <!ENTITY dmidecode-version                   "3.7">

@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>November 22nd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Sicarine] - yt-dlp: 2026.08.19 -&gt; 2026.11.23. Fixes
+            <ulink url="&slfs-issues;/970">#970</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 17th, 2026</para>
       <itemizedlist>
         <listitem>
