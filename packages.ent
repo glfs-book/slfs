@@ -109,7 +109,7 @@ version, so keep this at that. -->
 <!ENTITY w3m-version                         "0.5.6">
 <!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20260125">
-<!ENTITY yt-dlp-version                      "2026.08.19">
+<!ENTITY yt-dlp-version                      "2026.11.23">
 <!ENTITY xmlstarlet-version                  "1.6.1">
 <!-- System Utilities -->
 <!ENTITY dmidecode-version                   "3.7">
@@ -148,11 +148,15 @@ version, so keep this at that. -->
 <!ENTITY python3-lib-suffix                  "cpython-&python3-major;&python3-minor;-&lt;arch&gt;-linux-gnu">
 <!ENTITY python3-site                        "/usr/lib/python&python3-majorver;/site-packages">
 <!-- Python Dependencies -->
-<!ENTITY structlog-version                   "26.1.0">
-<!ENTITY platformdirs-version                "4.13.3">
+<!ENTITY installer-version                   "1.1.0">
+<!ENTITY packageurl-python-version           "0.17.6">
+<!ENTITY platformdirs-version                "4.14.8">
 <!ENTITY pycurl-version                      "7.48.0">
+<!ENTITY python-sbom-version                 "0.5.0">
+<!ENTITY structlog-version                   "26.1.0">
 <!ENTITY toml-version                        "0.10.2">
 <!ENTITY tornado-version                     "6.5.10">
+<!ENTITY zipremove-version                   "0.10.0">
 <!-- Python Modules -->
 <!ENTITY nvchecker-version                   "2.22">
 <!-- END PYTHON -->

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect2 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../../general.ent">
+  %general-entities;
+
+  <!ENTITY python-sbom-download "https://files.pythonhosted.org/packages/source/p/python-sbom/python_sbom-&python-sbom-version;.tar.gz">
+]>
+
+  <sect2 id="python-sbom" xreflabel="python-sbom-&python-sbom-version;">
+
+    <title>python-sbom-&python-sbom-version;</title>
+
+    <indexterm zone="python-sbom">
+      <primary sortas="a-python-sbom">python-sbom</primary>
+    </indexterm>
+
+    <sect3 role="package">
+      <title>Introduction to python-sbom Module</title>
+
+      <para>
+        The python-sbom module can be used to integrate a SBOM into python wheels.
+      </para>
+
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Download: <ulink url="&python-sbom-download;"/>
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <bridgehead renderas="sect4">python-sbom Dependencies</bridgehead>
+
+      <bridgehead renderas="sect5">Required</bridgehead>
+      <para role='required'>
+        <ulink url='&pydep;hatch-fancy-pypi-readme'>hatch-fancy-pypi-readme</ulink>,
+        <ulink url='&pydep;hatch-vcs'>hatch_vcs</ulink>,
+        <ulink url='&pydep;hatchling'>hatchling</ulink>,
+        <xref linkend="installer"/>,
+        <xref linkend="packageurl-python"/>,
+        and <xref linkend="zipremove"/>
+      </para>
+
+    </sect3>
+
+    <sect3 role="installation">
+      <title>Installation of python-sbom</title>
+
+      <para>Build the module:</para>
+
+      &build-wheel;
+
+      <para>
+        Now, as the &root; user:
+      </para>
+
+<screen role="root"><userinput>&install-wheel; python-sbom</userinput></screen>
+
+    </sect3>
+
+    <sect3 role="commands">
+      &pip3-cmd-explain;
+    </sect3>
+
+    <sect3 role="content">
+      <title>Contents</title>
+
+      <segmentedlist>
+        <segtitle>Installed Programs</segtitle>
+        <segtitle>Installed Libraries</segtitle>
+        <segtitle>Installed Directories</segtitle>
+
+        <seglistitem>
+          <seg>None</seg>
+          <seg>None</seg>
+          <seg>
+            /usr/lib/python&python3-majorver;/site-packages/python_sbom and
+            /usr/lib/python&python3-majorver;/site-packages/python_sbom-&python-sbom-version;.dist-info
+          </seg>
+        </seglistitem>
+      </segmentedlist>
+
+    </sect3>
+
+  </sect2>

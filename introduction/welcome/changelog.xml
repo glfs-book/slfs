@@ -40,6 +40,32 @@
     -->
 
     <listitem>
+      <para>November 22nd, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Sicarine] - platformdirs: 4.13.3 -&gt; 4.14.8. Fixes
+            <ulink url="&slfs-issues;/967">#967</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - python-sbom: Added for platformdirs.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - zipremove: Added for python-sbom.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - packageurl-python: Added for python-sbom.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - installer: Added for python-sbom.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - yt-dlp: 2026.08.19 -&gt; 2026.11.23. Fixes
+            <ulink url="&slfs-issues;/970">#970</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>November 17th, 2026</para>
       <itemizedlist>
         <listitem>

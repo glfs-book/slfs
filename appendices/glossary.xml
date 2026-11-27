@@ -356,6 +356,17 @@
       </glossdef>
     </glossentry>
 
+    <glossentry id="gPURL">
+      <glossterm>
+        <acronym>PURL</acronym>
+      </glossterm>
+      <glossdef>
+        <para>
+          Package URL
+        </para>
+      </glossdef>
+    </glossentry>
+
     <glossentry id="gRAM">
       <glossterm>
         <acronym>RAM</acronym>
@@ -374,6 +385,17 @@
       <glossdef>
         <para>
           Read-Only Memory
+        </para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry id="gSBOM">
+      <glossterm>
+        <acronym>SBOM</acronym>
+      </glossterm>
+      <glossdef>
+        <para>
+          Software Bill of Materials
         </para>
       </glossdef>
     </glossentry>

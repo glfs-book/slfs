@@ -36,7 +36,8 @@
 
       <bridgehead renderas="sect5">Required</bridgehead>
       <para role='required'>
-        <ulink url='&pydep;hatch-vcs'>hatch_vcs</ulink>
+        <ulink url='&pydep;hatch-fancy-pypi-readme'>hatch-fancy-pypi-readme</ulink>
+        and <ulink url='&pydep;hatch-vcs'>hatch_vcs</ulink>
       </para>
 
     </sect3>
