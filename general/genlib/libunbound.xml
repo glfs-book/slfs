@@ -39,6 +39,7 @@
       </listitem>
     </itemizedlist>
 
+<!--
     <bridgehead renderas="sect3">Additional Downloads</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -48,6 +49,7 @@
         </para>
       </listitem>
     </itemizedlist>
+-->
 
     <bridgehead renderas="sect3">libunbound Dependencies</bridgehead>
 
@@ -70,11 +72,14 @@
   <sect2 role="installation">
     <title>Installation of libunbound</title>
 
+<!--
     <para>
       Make the package compatible with OpenSSL-4 by applying a patch:
     </para>
 
-<screen><userinput remap="pre">patch -Np1 -i ../libunbound-&libunbound-version;-openssl4-1.patch</userinput></screen>
+<screen><userinput
+  remap="pre">patch -Np1 -i ../libunbound-&libunbound-version;-openssl4-1.patch</userinput></screen>
+-->
 
     <para>
       Install libunbound by running the following commands:
